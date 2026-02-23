@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Technicalwork Materiali</string>
+
+    <!-- Dialogs: Titoli e Messaggi -->
+    <string name="dialog_title_welcome">Benvenuto!</string>
+    <string name="dialog_title_edit_tech_name">Modifica nome tecnico</string>
+    <string name="dialog_msg_enter_tech_name">Inserisci il tuo nome tecnico:</string>
+    <string name="dialog_title_manage_company">Gestione %s</string>
+    <string name="dialog_title_rename_file">Rinomina file fisico</string>
+    <string name="dialog_msg_rename_file">Il file verrà rinominato nello smartphone.</string>
+    <string name="dialog_msg_config_company">Configura il file per %s</string>
+    <string name="dialog_title_unsaved_changes">Modifiche non salvate</string>
+    <string name="dialog_msg_save_before_exit">Vuoi salvare prima di uscire?</string>
+    <string name="dialog_title_reset_file">Reset File</string>
+    <string name="dialog_msg_reset_file">Tutte le modifiche andranno perse. Ripristino il file originale?</string>
+    <string name="dialog_title_invalid_format">Formato non valido</string>
+    <string name="dialog_msg_invalid_format">Il file selezionato non sembra seguire la struttura standard. Vuoi caricare il modello pulito?</string>
+    <string name="dialog_title_delete_row">Elimina riga</string>
+    <string name="dialog_msg_delete_row">Sei sicuro di voler eliminare questa casella?</string>
+    <string name="dialog_title_restore_state">Ripristina stato</string>
+    <string name="dialog_msg_restore_state">Vuoi tornare a questo punto? Le modifiche successive andranno perse.</string>
+
+    <!-- Pulsanti (Buttons/Azioni) -->
+    <string name="btn_save">Salva</string>
+    <string name="btn_cancel">Annulla</string>
+    <string name="btn_rename">Rinomina</string>
+    <string name="btn_new_from_template">Nuovo da Modello</string>
+    <string name="btn_use_existing">Usa Esistente</string>
+    <string name="btn_exit_without_saving">Esci senza salvare</string>
+    <string name="btn_no">No</string>
+    <string name="btn_save_and_exit">Salva ed esci</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_use_template">Usa Modello</string>
+    <string name="btn_delete">Elimina</string>
+    <string name="btn_restore">Ripristina</string>
+
+    <!-- Menu contestuali -->
+    <string name="menu_rename_file">Rinomina File</string>
+    <string name="menu_change_file">Cambia File</string>
+    <string name="menu_reset">Resetta</string>
+
+    <!-- Toast Messages -->
+    <string name="toast_template_created">Modello creato e caricato</string>
+    <string name="toast_template_error">Errore creazione modello</string>
+    <string name="toast_file_not_found">File non trovato</string>
+    <string name="toast_file_renamed">File rinominato correttamente</string>
+    <string name="toast_rename_error">Impossibile rinominare: il sistema o il file non lo consentono.</string>
+    <string name="toast_file_ready_share">File salvato pronto per la condivisione</string>
+    <string name="toast_share_error">Errore condivisione</string>
+    <string name="toast_file_reset">File resettato</string>
+    <string name="toast_no_file_open">Nessun file aperto</string>
+    <string name="toast_file_not_exists">Il file non esiste più nel percorso salvato.</string>
+    <string name="toast_row_deleted">Casella eliminata, file salvato correttamente.</string>
+    <string name="toast_file_saved">File salvato!</string>
+    <string name="toast_save_error">Errore salvataggio</string>
+    <string name="toast_load_error">Errore caricamento</string>
+    <string name="toast_undo">Annullato</string>
+
+    <!-- Altri testi -->
+    <string name="intent_chooser_send">Invia %s</string>
+    <string name="default_company_name">Appalto</string>
+    <string name="default_file_name">File</string>
+    <string name="text_modified">Modificato</string>
+
+</resources>

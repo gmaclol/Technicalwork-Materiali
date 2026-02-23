@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Gemini Dark Palette -->
+    <color name="gemini_bg">#131314</color>
+    <color name="gemini_card_bg">#1E1F22</color>
+    <color name="gemini_accent_blue">#A8C7FA</color>
+    <color name="gemini_accent_red">#F2B8B5</color>
+    <color name="gemini_text_main">#E3E3E3</color>
+    <color name="gemini_text_secondary">#C4C7C5</color>
+    <color name="gemini_border">#444746</color>
+    <color name="gemini_nav_selected">#3D3E40</color>
+    <color name="gemini_button_bg">#333538</color>
+    <color name="gemini_button_icon">#C4C7C5</color>
+    <color name="gemini_destructive">#F2B8B5</color>
+</resources>
