@@ -1,18 +1,18 @@
 [versions]
 agp = "9.0.1"
-coreKtx = "1.10.1"
+coreKtx = "1.13.1"
 junit = "4.13.2"
-junitVersion = "1.1.5"
-espressoCore = "3.5.1"
-appcompat = "1.6.1"
-material = "1.10.0"
-activity = "1.8.0"
-constraintlayout = "2.1.4"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+constraintlayout = "2.2.0"
 poi = "5.5.1"
 desugar_jdk_libs = "2.1.5"
-coroutines = "1.7.3"
-lifecycleRuntime = "2.6.2"
-activityKtx = "1.8.0"
+coroutines = "1.9.0"
+lifecycleRuntime = "2.8.7"
+activityKtx = "1.9.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
