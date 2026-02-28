@@ -13,12 +13,13 @@ class TechFileReader {
      * Legge un file Excel tramite Uri e restituisce una lista di coppie (Nome, Quantità).
      * Scorre tutte le righe del primo foglio, leggendo la colonna 0 come nome e la colonna 1 come quantità.
      * Le righe con la colonna 0 vuota vengono ignorate.
+     * Restituisce null se si verifica un'eccezione reale durante la lettura.
      */
-    fun readMaterials(uri: Uri, context: Context): List<Pair<String, String>> {
+    fun readMaterials(uri: Uri, context: Context): List<Pair<String, String>>? {
         val materialsList = mutableListOf<Pair<String, String>>()
         val dataFormatter = DataFormatter()
 
-        try {
+        return try {
             val inputStream: InputStream? = context.contentResolver.openInputStream(uri)
             inputStream?.use { input ->
                 // Imposto il ratio di sicurezza per file compressi
@@ -38,10 +39,10 @@ class TechFileReader {
                 }
                 workbook.close()
             }
+            materialsList
         } catch (e: Exception) {
             e.printStackTrace()
+            null
         }
-
-        return materialsList
     }
 }
