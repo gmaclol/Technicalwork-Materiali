@@ -19,6 +19,8 @@
     <string name="dialog_msg_delete_row">Sei sicuro di voler eliminare questa casella?</string>
     <string name="dialog_title_restore_state">Ripristina stato</string>
     <string name="dialog_msg_restore_state">Vuoi tornare a questo punto? Le modifiche successive andranno perse.</string>
+    <string name="dialog_title_update_available">Aggiornamento disponibile</string>
+    <string name="dialog_msg_update_available">È disponibile una nuova versione (%1$s). Vuoi aggiornare ora?</string>
 
     <!-- Pulsanti (Buttons/Azioni) -->
     <string name="btn_save">Salva</string>
@@ -33,6 +35,7 @@
     <string name="btn_use_template">Usa Modello</string>
     <string name="btn_delete">Elimina</string>
     <string name="btn_restore">Ripristina</string>
+    <string name="btn_update">Aggiorna</string>
 
     <!-- Menu contestuali -->
     <string name="menu_rename_file">Rinomina File</string>

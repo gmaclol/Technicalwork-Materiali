@@ -210,6 +210,21 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        // Controllo Aggiornamenti
+        val updateManager = UpdateManager(this)
+        lifecycleScope.launch {
+            updateManager.checkForUpdates { versionName, downloadUrl ->
+                AlertDialog.Builder(this@MainActivity)
+                    .setTitle(getString(R.string.dialog_title_update_available))
+                    .setMessage(getString(R.string.dialog_msg_update_available, versionName))
+                    .setPositiveButton(getString(R.string.btn_update)) { _, _ ->
+                        updateManager.downloadAndInstall(downloadUrl)
+                    }
+                    .setNegativeButton(getString(R.string.btn_cancel), null)
+                    .show()
+            }
+        }
     }
 
     private fun handleUiState(state: UiState) {
