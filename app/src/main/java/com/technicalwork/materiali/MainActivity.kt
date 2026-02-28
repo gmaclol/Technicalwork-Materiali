@@ -389,14 +389,14 @@ class MainActivity : AppCompatActivity() {
 
                 if (cbIncludeTechName.isChecked) {
                     getTechnicianName()?.let {
-                        finalName += "_${it.replace(' ', '_')}"
+                        finalName += " $it"
                     }
                 }
 
                 if (cbIncludeDate.isChecked) {
                     val sdf = SimpleDateFormat("dd-MM-yyyy", Locale.ITALY)
                     val currentDate = sdf.format(Date())
-                    finalName += "_$currentDate"
+                    finalName += " $currentDate"
                 }
                 
                 val finalFullName = "$finalName.xlsx"
