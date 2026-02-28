@@ -150,6 +150,18 @@ class MainActivity : AppCompatActivity() {
         val btnResetFile: MaterialButton = findViewById(R.id.navBtnResetFile)
 
         adapter = ExcelDataAdapter(mutableListOf()) {
+            // Callback eseguito quando i dati cambiano (perdita focus, riga aggiunta/rimossa, +/-)
+            val masterList = AssetsHelper().loadMasterList(this)
+            val currentData = adapter.getData().map { Pair(it.label, it.value) }
+            val mergedPairs = MaterialMerger().merge(currentData, masterList)
+            val finalData = mergedPairs.map { ExcelRowData(it.first, it.second) }
+            
+            // Applica il merge reattivo solo se necessario per evitare loop
+            if (finalData != adapter.getData()) {
+                adapter.updateData(finalData)
+            }
+            
+            // Salva sempre lo stato per l'Undo
             viewModel.saveStateForUndo(adapter.getData())
         }
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -167,9 +179,8 @@ class MainActivity : AppCompatActivity() {
         setupCompanyButton(btnSertori, "Sertori")
 
         btnAddRow.setOnClickListener {
-            viewModel.saveStateForUndo(adapter.getData())
             adapter.addRow()
-            recyclerView.smoothScrollToPosition(adapter.itemCount - 1)
+            recyclerView.smoothScrollToPosition(0) // Scorri all'inizio perché aggiungiamo in cima
             drawerLayout.closeDrawer(GravityCompat.START)
         }
 
@@ -590,9 +601,7 @@ class MainActivity : AppCompatActivity() {
             .setTitle(getString(R.string.dialog_title_delete_row))
             .setMessage(getString(R.string.dialog_msg_delete_row))
             .setPositiveButton(getString(R.string.btn_delete)) { _, _ ->
-                viewModel.saveStateForUndo(adapter.getData())
                 adapter.removeRow(position)
-                saveExcelFile(silent = true)
                 Toast.makeText(this, getString(R.string.toast_row_deleted), Toast.LENGTH_SHORT).show()
             }
             .setNegativeButton(getString(R.string.btn_cancel)) { _, _ ->

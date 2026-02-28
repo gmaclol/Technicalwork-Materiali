@@ -40,19 +40,19 @@ class ExcelDataAdapter(
 
         holder.etLabel.removeTextChangedListener(holder.labelWatcher)
         holder.etValue.removeTextChangedListener(holder.valueWatcher)
+        holder.etLabel.onFocusChangeListener = null
+        holder.etValue.onFocusChangeListener = null
 
         holder.etLabel.setText(item.label)
         holder.etValue.setText(item.value)
 
         updateStepButtonsUI(holder, item.value)
 
+        // Aggiorna il modello mentre l'utente scrive, ma NON notifica il cambiamento (evita merge durante digitazione)
         holder.labelWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (item.label != s.toString()) {
-                    item.label = s.toString()
-                    if (!isUpdatingIndividually) onDataChanged()
-                }
+                item.label = s.toString()
             }
             override fun afterTextChanged(s: Editable?) {}
         }
@@ -60,12 +60,8 @@ class ExcelDataAdapter(
         holder.valueWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val newValue = s.toString()
-                if (item.value != newValue) {
-                    item.value = newValue
-                    updateStepButtonsUI(holder, newValue)
-                    if (!isUpdatingIndividually) onDataChanged()
-                }
+                item.value = s.toString()
+                updateStepButtonsUI(holder, item.value)
             }
             override fun afterTextChanged(s: Editable?) {}
         }
@@ -73,11 +69,21 @@ class ExcelDataAdapter(
         holder.etLabel.addTextChangedListener(holder.labelWatcher)
         holder.etValue.addTextChangedListener(holder.valueWatcher)
 
+        // Attiva il merge/undo solo alla perdita del focus
+        val focusListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus && !isUpdatingIndividually) {
+                onDataChanged()
+            }
+        }
+        holder.etLabel.onFocusChangeListener = focusListener
+        holder.etValue.onFocusChangeListener = focusListener
+
         holder.btnPlus.setOnClickListener {
             val currentVal = item.value.toIntOrNull() ?: 0
             val nextVal = currentVal + 1
             isUpdatingIndividually = true
             holder.etValue.setText(nextVal.toString())
+            item.value = nextVal.toString()
             isUpdatingIndividually = false
             onDataChanged()
         }
@@ -87,6 +93,7 @@ class ExcelDataAdapter(
             val nextVal = if (currentVal > 0) currentVal - 1 else 0
             isUpdatingIndividually = true
             holder.etValue.setText(nextVal.toString())
+            item.value = nextVal.toString()
             isUpdatingIndividually = false
             onDataChanged()
         }
@@ -97,18 +104,14 @@ class ExcelDataAdapter(
         val numericVal = value.toIntOrNull()
         val isNumeric = value.isEmpty() || numericVal != null
         
-        // Visibilità pulsanti
         val visibility = if (isNumeric) View.VISIBLE else View.INVISIBLE
         holder.btnMinus.visibility = visibility
         holder.btnPlus.visibility = visibility
 
-        // Stile del numero centrale
         if (numericVal != null && numericVal > 0) {
-            // Numero > 0: Blu Gemini e Grassetto
             holder.etValue.setTextColor(ContextCompat.getColor(context, R.color.gemini_accent_blue))
             holder.etValue.setTypeface(null, Typeface.BOLD)
         } else {
-            // Numero = 0 o Testo: Bianco/Grigio standard
             holder.etValue.setTextColor(ContextCompat.getColor(context, R.color.gemini_text_main))
             holder.etValue.setTypeface(null, Typeface.NORMAL)
         }
@@ -127,8 +130,8 @@ class ExcelDataAdapter(
     }
 
     fun addRow() {
-        dataList.add(ExcelRowData("", ""))
-        notifyItemInserted(dataList.size - 1)
+        dataList.add(0, ExcelRowData("", "")) // Aggiunge in cima per visibilità
+        notifyItemInserted(0)
         onDataChanged()
     }
 
