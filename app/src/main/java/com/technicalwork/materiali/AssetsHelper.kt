@@ -20,7 +20,7 @@ class AssetsHelper {
                 // Verifichiamo se il file esiste aprendolo e chiudendolo subito
                 context.assets.open(specificFile).close()
                 specificFile
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 "lista.txt"
             }
         } else {
