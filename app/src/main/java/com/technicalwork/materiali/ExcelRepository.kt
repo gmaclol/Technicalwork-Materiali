@@ -4,6 +4,7 @@ import android.content.Context
 import android.net.Uri
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import org.apache.poi.openxml4j.util.ZipSecureFile
 import org.apache.poi.ss.usermodel.Cell
 import org.apache.poi.ss.usermodel.DataFormatter
 import org.apache.poi.ss.usermodel.WorkbookFactory
@@ -23,6 +24,7 @@ class ExcelRepository(private val context: Context) {
             val inputStream: InputStream? = context.contentResolver.openInputStream(uri)
             
             inputStream?.use { input ->
+                ZipSecureFile.setMinInflateRatio(0.001)
                 val workbook = WorkbookFactory.create(input)
                 val sheet = workbook.getSheetAt(0)
                 
@@ -56,6 +58,7 @@ class ExcelRepository(private val context: Context) {
     suspend fun saveExcelFile(uri: Uri, data: List<ExcelRowData>): Result<Unit> = withContext(Dispatchers.IO) {
         try {
             val inputStream = context.contentResolver.openInputStream(uri)
+            ZipSecureFile.setMinInflateRatio(0.001)
             val workbook = WorkbookFactory.create(inputStream)
             inputStream?.close()
             
@@ -127,6 +130,7 @@ class ExcelRepository(private val context: Context) {
     suspend fun createFromTemplate(uri: Uri): Result<Unit> = withContext(Dispatchers.IO) {
         try {
             val inputStream = context.assets.open("Sample.xlsx")
+            ZipSecureFile.setMinInflateRatio(0.001)
             val workbook = WorkbookFactory.create(inputStream)
             inputStream.close()
 
