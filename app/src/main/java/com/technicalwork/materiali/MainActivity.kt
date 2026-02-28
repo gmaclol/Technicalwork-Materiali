@@ -82,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
             uri?.let { newUri ->
-                viewModel.createTemplate(newUri) { success ->
+                viewModel.createTemplate(newUri, lastSelectedCompany) { success ->
                     if (success) {
                         lastSelectedCompany?.let { company -> saveCompanyFileUri(company, newUri) }
                         saveLastFileUri(newUri)
@@ -151,7 +151,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter = ExcelDataAdapter(mutableListOf()) {
             // Callback eseguito quando i dati cambiano (perdita focus, riga aggiunta/rimossa, +/-)
-            val masterList = AssetsHelper().loadMasterList(this)
+            val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
             val currentData = adapter.getData().map { Pair(it.label, it.value) }
             val mergedPairs = MaterialMerger().merge(currentData, masterList)
             val finalData = mergedPairs.map { ExcelRowData(it.first, it.second) }
@@ -162,7 +162,7 @@ class MainActivity : AppCompatActivity() {
             }
             
             // Salva sempre lo stato per l'Undo
-            viewModel.saveStateForUndo(adapter.getData())
+            viewModel.saveStateForUndo(finalData)
         }
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
@@ -403,8 +403,8 @@ class MainActivity : AppCompatActivity() {
                 val techMaterials = TechFileReader().readMaterials(uri, this)
                 if (techMaterials == null) throw Exception("Errore lettura Excel")
 
-                // 2. Carica la lista master dagli assets
-                val masterList = AssetsHelper().loadMasterList(this)
+                // 2. Carica la lista master dagli assets (specifica per azienda o fallback)
+                val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
                 Log.d("MASTER_LIST", "Elementi caricati: ${masterList.size} → ${masterList.joinToString()}")
 
                 // 3. Esegue il merge (Tecnico + Master)
@@ -519,7 +519,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun resetCurrentFile() {
         val uri = currentFileUri ?: return
-        viewModel.resetExcelFile(uri)
+        viewModel.resetExcelFile(uri, lastSelectedCompany)
         Toast.makeText(this@MainActivity, getString(R.string.toast_file_reset), Toast.LENGTH_SHORT).show()
         drawerLayout.closeDrawer(GravityCompat.START)
     }
@@ -583,7 +583,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readExcelFile(uri: Uri) {
-        viewModel.loadExcelFile(uri)
+        Log.d("COMPANY_DEBUG", "Company: $lastSelectedCompany")
+        viewModel.loadExcelFile(uri, lastSelectedCompany)
     }
 
     private fun showSampleDialog() {
@@ -655,7 +656,7 @@ class MainActivity : AppCompatActivity() {
     private fun saveExcelFile(silent: Boolean = false, onComplete: (() -> Unit)? = null) {
         val uri = currentFileUri ?: return
         
-        val masterList = AssetsHelper().loadMasterList(this)
+        val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
         val currentData = adapter.getData().map { Pair(it.label, it.value) }
         val mergedPairs = MaterialMerger().merge(currentData, masterList)
         val dataToSave = mergedPairs.map { ExcelRowData(it.first, it.second) }

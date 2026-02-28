@@ -26,10 +26,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     // Undo Stack
     val undoStack = Stack<UndoSnapshot>()
 
-    fun loadExcelFile(uri: Uri) {
+    fun loadExcelFile(uri: Uri, company: String? = null) {
         _uiState.value = UiState.Loading
         viewModelScope.launch {
-            val result = repository.readExcelFile(uri)
+            val result = repository.readExcelFile(uri, company)
             if (result.isSuccess) {
                 val dataList = result.getOrNull() ?: emptyList()
                 
@@ -59,25 +59,25 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun resetExcelFile(uri: Uri) {
+    fun resetExcelFile(uri: Uri, company: String? = null) {
         _uiState.value = UiState.Loading
         viewModelScope.launch {
-            val result = repository.createFromTemplate(uri)
+            val result = repository.createFromTemplate(uri, company)
             if (result.isSuccess) {
                 // Ricarica i dati resettati
-                loadExcelFile(uri)
+                loadExcelFile(uri, company)
             } else {
                 _uiState.value = UiState.Error("Errore reset", false)
             }
         }
     }
 
-    fun createTemplate(uri: Uri, onComplete: ((Boolean) -> Unit)? = null) {
+    fun createTemplate(uri: Uri, company: String? = null, onComplete: ((Boolean) -> Unit)? = null) {
         viewModelScope.launch {
-            val result = repository.createFromTemplate(uri)
+            val result = repository.createFromTemplate(uri, company)
             if (result.isSuccess) {
                 onComplete?.invoke(true)
-                loadExcelFile(uri)
+                loadExcelFile(uri, company)
             } else {
                 onComplete?.invoke(false)
             }

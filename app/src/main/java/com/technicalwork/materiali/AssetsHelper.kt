@@ -7,13 +7,28 @@ import java.io.FileOutputStream
 class AssetsHelper {
 
     /**
-     * Legge il file lista.txt dagli assets e restituisce una lista di stringhe.
-     * Ogni riga del file corrisponde a un elemento della lista. Le righe vuote vengono ignorate.
+     * Legge una lista di materiali dagli assets.
+     * Se [company] è fornito, cerca prima "${company}.txt".
+     * Se non fornito o se il file specifico non esiste, usa "lista.txt" come fallback.
      */
-    fun loadMasterList(context: Context): List<String> {
+    fun loadMasterList(context: Context, company: String? = null): List<String> {
         val list = mutableListOf<String>()
+        
+        val fileName = if (company != null) {
+            val specificFile = "${company}.txt"
+            try {
+                // Verifichiamo se il file esiste aprendolo e chiudendolo subito
+                context.assets.open(specificFile).close()
+                specificFile
+            } catch (e: Exception) {
+                "lista.txt"
+            }
+        } else {
+            "lista.txt"
+        }
+
         try {
-            context.assets.open("lista.txt").bufferedReader().use { reader ->
+            context.assets.open(fileName).bufferedReader().use { reader ->
                 reader.forEachLine { line ->
                     if (line.isNotBlank()) {
                         list.add(line.trim())
