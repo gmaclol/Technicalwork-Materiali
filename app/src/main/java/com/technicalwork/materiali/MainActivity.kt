@@ -35,6 +35,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.activity.viewModels
+import androidx.core.net.toUri
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -425,8 +426,7 @@ class MainActivity : AppCompatActivity() {
                     addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                 }
                 startActivity(Intent.createChooser(shareIntent, getString(R.string.intent_chooser_send, finalFullName)))
-            } catch (e: Exception) {
-                e.printStackTrace()
+            } catch (_: Exception) {
                 Toast.makeText(this, getString(R.string.toast_share_error), Toast.LENGTH_SHORT).show()
             }
         }
@@ -448,7 +448,7 @@ class MainActivity : AppCompatActivity() {
         return try {
             contentResolver.openInputStream(uri)?.use { it.close() }
             true
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             false
         }
     }
@@ -527,7 +527,7 @@ class MainActivity : AppCompatActivity() {
         val uriString = settingsRepository.lastFileUri
 
         uriString?.let {
-            val uri = Uri.parse(it)
+            val uri = it.toUri()
             if (isUriAccessible(uri)) {
                 openExcelFile(uri)
             } else {
@@ -542,19 +542,19 @@ class MainActivity : AppCompatActivity() {
         settingsRepository.lastFileUri = uri.toString()
         try {
             contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-        } catch (e: Exception) {}
+        } catch (_: Exception) {}
     }
 
     private fun saveCompanyFileUri(company: String, uri: Uri) {
         settingsRepository.saveCompanyFileUri(company, uri.toString())
         try {
             contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-        } catch (e: Exception) {}
+        } catch (_: Exception) {}
     }
 
     private fun getCompanyFileUri(company: String): Uri? {
         val uriString = settingsRepository.getCompanyFileUri(company)
-        return uriString?.let { Uri.parse(it) }
+        return uriString?.toUri()
     }
 
     private fun openExcelFile(uri: Uri) {
@@ -576,7 +576,7 @@ class MainActivity : AppCompatActivity() {
                     name = cursor.getString(nameIndex)
                 }
             }
-        } catch (e: Exception) {}
+        } catch (_: Exception) {}
         return name
     }
 
@@ -616,7 +616,7 @@ class MainActivity : AppCompatActivity() {
         updateSaveButtonLook(viewModel.hasUnsavedChanges.value)
         
         val undoItem = menu?.findItem(R.id.action_undo)
-        val undoView = undoItem?.actionView ?: LayoutInflater.from(this).inflate(R.layout.menu_undo_button, null).also {
+        val undoView = undoItem?.actionView ?: LayoutInflater.from(this).inflate(R.layout.menu_undo_button, recyclerView, false).also {
             undoItem?.actionView = it
         }
         undoView.setOnClickListener { performUndo() }
