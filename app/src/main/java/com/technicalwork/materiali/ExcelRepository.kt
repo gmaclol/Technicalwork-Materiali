@@ -2,7 +2,6 @@ package com.technicalwork.materiali
 
 import android.content.Context
 import android.net.Uri
-import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.apache.poi.openxml4j.util.ZipSecureFile
@@ -20,13 +19,11 @@ class ExcelRepository(private val context: Context) {
      * Applica il merge con la lista specifica per [company] (o fallback).
      */
     suspend fun readExcelFile(uri: Uri, company: String? = null): Result<List<ExcelRowData>> = withContext(Dispatchers.IO) {
-        Log.d("REPO_DEBUG", "Inizio lettura file")
         try {
             val dataList = mutableListOf<ExcelRowData>()
             val inputStream: InputStream? = context.contentResolver.openInputStream(uri)
             
             inputStream?.use { input ->
-                Log.d("REPO_DEBUG", "InputStream aperto")
                 ZipSecureFile.setMinInflateRatio(0.001)
                 val workbook = WorkbookFactory.create(input)
                 val sheet = workbook.getSheetAt(0)
@@ -48,10 +45,8 @@ class ExcelRepository(private val context: Context) {
                     dataList.add(ExcelRowData(label, value))
                 }
                 workbook.close()
-                Log.d("REPO_DEBUG", "Righe lette: ${dataList.size}")
 
                 // Applica il merge con la lista specifica (o fallback lista.txt)
-                Log.d("REPO_DEBUG", "Chiamo loadMasterList con company: $company")
                 val masterList = AssetsHelper().loadMasterList(context, company)
                 val techPairs = dataList.map { Pair(it.label, it.value) }
                 val mergedPairs = MaterialMerger().merge(techPairs, masterList)

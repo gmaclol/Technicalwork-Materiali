@@ -11,7 +11,6 @@ import android.provider.DocumentsContract
 import android.provider.OpenableColumns
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -405,7 +404,6 @@ class MainActivity : AppCompatActivity() {
 
                 // 2. Carica la lista master dagli assets (specifica per azienda o fallback)
                 val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
-                Log.d("MASTER_LIST", "Elementi caricati: ${masterList.size} → ${masterList.joinToString()}")
 
                 // 3. Esegue il merge (Tecnico + Master)
                 val mergedList = MaterialMerger().merge(techMaterials, masterList)
@@ -583,7 +581,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readExcelFile(uri: Uri) {
-        Log.d("COMPANY_DEBUG", "Company: $lastSelectedCompany")
         viewModel.loadExcelFile(uri, lastSelectedCompany)
     }
 
