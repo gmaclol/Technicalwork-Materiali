@@ -146,6 +146,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnElecnor: MaterialButton = findViewById(R.id.navBtnElecnor)
         val btnSertori: MaterialButton = findViewById(R.id.navBtnSertori)
+        val btnSirti: MaterialButton = findViewById(R.id.navBtnSirti)
         val btnAddRow: MaterialButton = findViewById(R.id.navBtnAddRow)
         val btnResetFile: MaterialButton = findViewById(R.id.navBtnResetFile)
 
@@ -177,6 +178,7 @@ class MainActivity : AppCompatActivity() {
 
         setupCompanyButton(btnElecnor, "Elecnor")
         setupCompanyButton(btnSertori, "Sertori")
+        setupCompanyButton(btnSirti, "Sirti")
 
         btnAddRow.setOnClickListener {
             adapter.addRow()

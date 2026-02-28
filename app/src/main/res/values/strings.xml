@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Technicalwork Materiali</string>
 
+    <!-- Appalti Names -->
+    <string name="company_sirti">Sirti</string>
+
     <!-- Dialogs: Titoli e Messaggi -->
     <string name="dialog_title_welcome">Benvenuto!</string>
     <string name="dialog_title_edit_tech_name">Modifica nome tecnico</string>

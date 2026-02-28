@@ -14,6 +14,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/gemini_bg"
+            app:elevation="0dp"
             app:title="Editor"
             app:titleCentered="true"
             app:navigationIcon="@android:drawable/ic_menu_sort_by_size"
@@ -25,6 +27,8 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:clipToPadding="false"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp"
             android:paddingBottom="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/toolbar" />
@@ -36,7 +40,7 @@
         android:layout_width="280dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/gemini_card_bg"
+        android:background="@color/gemini_bg"
         app:headerLayout="@layout/nav_header">
 
         <LinearLayout
@@ -71,6 +75,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:text="Sertori"
+                app:icon="@android:drawable/ic_menu_add"
+                app:cornerRadius="28dp"
+                android:textAlignment="viewStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navBtnSirti"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Sirti"
                 app:icon="@android:drawable/ic_menu_add"
                 app:cornerRadius="28dp"
                 android:textAlignment="viewStart" />
