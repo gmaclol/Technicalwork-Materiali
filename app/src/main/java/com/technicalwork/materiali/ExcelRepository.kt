@@ -45,8 +45,16 @@ class ExcelRepository(private val context: Context) {
                     dataList.add(ExcelRowData(label, value))
                 }
                 workbook.close()
+
+                // Applica il merge con lista.txt come unica fonte di verità
+                val masterList = AssetsHelper().loadMasterList(context)
+                val techPairs = dataList.map { Pair(it.label, it.value) }
+                val mergedPairs = MaterialMerger().merge(techPairs, masterList)
+                val finalDataList = mergedPairs.map { ExcelRowData(it.first, it.second) }
+
+                return@withContext Result.success(finalDataList)
             }
-            Result.success(dataList)
+            Result.failure(Exception("Impossibile aprire il file"))
         } catch (e: Exception) {
             Result.failure(e)
         }
@@ -133,6 +141,30 @@ class ExcelRepository(private val context: Context) {
             ZipSecureFile.setMinInflateRatio(0.001)
             val workbook = WorkbookFactory.create(inputStream)
             inputStream.close()
+            val sheet = workbook.getSheetAt(0)
+
+            // Prendo la riga 4 come riferimento per gli stili
+            val styleRow = sheet.getRow(4)
+
+            // Genera le righe dalla 4 in poi leggendo lista.txt
+            val masterList = AssetsHelper().loadMasterList(context)
+            masterList.forEachIndexed { index, name ->
+                val rowIndex = index + 4
+                val row = sheet.getRow(rowIndex) ?: sheet.createRow(rowIndex)
+                
+                val cell0 = row.createCell(0)
+                val cell1 = row.createCell(1)
+                
+                cell0.setCellValue(name)
+                cell1.setCellValue("")
+                
+                // Copia gli stili dalla riga di esempio (riga 4 del template)
+                styleRow?.let { template ->
+                    template.getCell(0)?.let { cell0.cellStyle = it.cellStyle }
+                    template.getCell(1)?.let { cell1.cellStyle = it.cellStyle }
+                    row.height = template.height
+                }
+            }
 
             context.contentResolver.openOutputStream(uri, "rwt")?.use { outputStream ->
                 workbook.write(outputStream)

@@ -11,6 +11,7 @@ import android.provider.DocumentsContract
 import android.provider.OpenableColumns
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -369,8 +370,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val originalFullName = getFileNameFromUri(uri)
                 val baseName = originalFullName.substringBeforeLast('.')
-                val extension = originalFullName.substringAfterLast('.', "")
-
+                
                 // Il nome base deve essere sempre il nome dell'appalto
                 var finalName = lastSelectedCompany ?: baseName
 
@@ -386,13 +386,30 @@ class MainActivity : AppCompatActivity() {
                     finalName += "_$currentDate"
                 }
                 
-                val finalFullName = if (extension.isNotEmpty()) "$finalName.$extension" else finalName
+                val finalFullName = "$finalName.xlsx"
 
-                val tempFile = File(cacheDir, finalFullName)
-                contentResolver.openInputStream(uri)?.use { input ->
-                    tempFile.outputStream().use { output -> input.copyTo(output) }
+                // 1. Legge i materiali dal file del tecnico
+                val techMaterials = TechFileReader().readMaterials(uri, this)
+                if (techMaterials == null) throw Exception("Errore lettura Excel")
+
+                // 2. Carica la lista master dagli assets
+                val masterList = AssetsHelper().loadMasterList(this)
+                Log.d("MASTER_LIST", "Elementi caricati: ${masterList.size} → ${masterList.joinToString()}")
+
+                // 3. Esegue il merge (Tecnico + Master)
+                val mergedList = MaterialMerger().merge(techMaterials, masterList)
+
+                // 4. Scrive il nuovo file Excel basato sul template Sample.xlsx
+                val generatedFile = ExcelWriter().writeOutput(this, mergedList)
+                
+                // 5. Rinomina il file temporaneo per avere il nome finale desiderato
+                val finalFile = File(cacheDir, finalFullName)
+                if (generatedFile.exists()) {
+                    if (finalFile.exists()) finalFile.delete()
+                    generatedFile.renameTo(finalFile)
                 }
-                val contentUri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.fileprovider", tempFile)
+
+                val contentUri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.fileprovider", finalFile)
                 val shareIntent = Intent(Intent.ACTION_SEND).apply {
                     type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                     putExtra(Intent.EXTRA_STREAM, contentUri)
@@ -400,6 +417,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 startActivity(Intent.createChooser(shareIntent, getString(R.string.intent_chooser_send, finalFullName)))
             } catch (e: Exception) {
+                e.printStackTrace()
                 Toast.makeText(this, getString(R.string.toast_share_error), Toast.LENGTH_SHORT).show()
             }
         }
@@ -627,13 +645,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun saveExcelFile(silent: Boolean = false, onComplete: (() -> Unit)? = null) {
         val uri = currentFileUri ?: return
-        viewModel.saveExcelFile(uri, adapter.getData()) { success ->
+        
+        val masterList = AssetsHelper().loadMasterList(this)
+        val currentData = adapter.getData().map { Pair(it.label, it.value) }
+        val mergedPairs = MaterialMerger().merge(currentData, masterList)
+        val dataToSave = mergedPairs.map { ExcelRowData(it.first, it.second) }
+        
+        viewModel.saveExcelFile(uri, dataToSave) { success ->
             if (success) {
                 if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                 saveLastFileUri(uri)
                 onComplete?.invoke()
             } else {
-                if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_LONG).show()
+                if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
             }
         }
     }
