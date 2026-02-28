@@ -18,19 +18,40 @@
         android:baselineAligned="false"
         android:gravity="center_vertical">
 
-        <EditText
-            android:id="@+id/etLabel"
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1.2"
-            android:layout_marginStart="12dp"
-            android:background="@null"
-            android:hint="Etichetta"
-            android:textColor="@color/gemini_text_main"
-            android:textSize="15sp"
-            android:fontFamily="sans-serif-medium"
-            android:inputType="text"
-            android:importantForAutofill="no" />
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tvLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="sans-serif-medium"
+                android:hint="Etichetta"
+                android:textColor="@color/gemini_text_main"
+                android:textSize="15sp"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/etLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:fontFamily="sans-serif-medium"
+                android:hint="Etichetta"
+                android:textColor="@color/gemini_text_main"
+                android:textSize="15sp"
+                android:inputType="text"
+                android:importantForAutofill="no"
+                android:visibility="gone" />
+        </FrameLayout>
 
         <View
             android:layout_width="1dp"

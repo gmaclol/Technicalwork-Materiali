@@ -1,12 +1,15 @@
 package com.technicalwork.materiali
 
+import android.content.Context
 import android.graphics.Typeface
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 import androidx.recyclerview.widget.RecyclerView
@@ -21,6 +24,7 @@ class ExcelDataAdapter(
     private var isUpdatingIndividually = false
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val tvLabel: TextView = view.findViewById(R.id.tvLabel)
         val etLabel: EditText = view.findViewById(R.id.etLabel)
         val etValue: EditText = view.findViewById(R.id.etValue)
         val btnMinus: MaterialButton = view.findViewById(R.id.btnMinus)
@@ -37,18 +41,57 @@ class ExcelDataAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = dataList[position]
+        val context = holder.itemView.context
 
         holder.etLabel.removeTextChangedListener(holder.labelWatcher)
         holder.etValue.removeTextChangedListener(holder.valueWatcher)
         holder.etLabel.onFocusChangeListener = null
         holder.etValue.onFocusChangeListener = null
 
+        // Stato iniziale: Visualizzazione (TextView)
+        holder.tvLabel.visibility = View.VISIBLE
+        holder.etLabel.visibility = View.GONE
+        holder.tvLabel.text = item.label
         holder.etLabel.setText(item.label)
         holder.etValue.setText(item.value)
+        holder.tvLabel.isSelected = true // Attiva Marquee
 
         updateStepButtonsUI(holder, item.value)
 
-        // Aggiorna il modello mentre l'utente scrive, ma NON notifica il cambiamento (evita merge durante digitazione)
+        // Click sulla TextView -> Passa a modalità editing (EditText)
+        holder.tvLabel.setOnClickListener {
+            holder.tvLabel.visibility = View.GONE
+            holder.etLabel.visibility = View.VISIBLE
+            holder.etLabel.requestFocus()
+            
+            // Apre la tastiera automaticamente
+            val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            imm.showSoftInput(holder.etLabel, InputMethodManager.SHOW_IMPLICIT)
+        }
+
+        // Listener per etLabel: torna a TextView alla perdita del focus
+        holder.etLabel.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus && !isUpdatingIndividually) {
+                val nuovoTesto = holder.etLabel.text.toString()
+                item.label = nuovoTesto
+                holder.tvLabel.text = nuovoTesto
+                
+                holder.etLabel.visibility = View.GONE
+                holder.tvLabel.visibility = View.VISIBLE
+                holder.tvLabel.isSelected = true
+                
+                onDataChanged() // Scatena il merge/undo in MainActivity
+            }
+        }
+
+        // Listener per etValue: mantiene il comportamento standard (trigger onDataChanged al focus loss)
+        holder.etValue.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus && !isUpdatingIndividually) {
+                onDataChanged()
+            }
+        }
+
+        // Aggiorna il modello mentre l'utente scrive (senza scatenare merge)
         holder.labelWatcher = object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -68,15 +111,6 @@ class ExcelDataAdapter(
 
         holder.etLabel.addTextChangedListener(holder.labelWatcher)
         holder.etValue.addTextChangedListener(holder.valueWatcher)
-
-        // Attiva il merge/undo solo alla perdita del focus
-        val focusListener = View.OnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus && !isUpdatingIndividually) {
-                onDataChanged()
-            }
-        }
-        holder.etLabel.onFocusChangeListener = focusListener
-        holder.etValue.onFocusChangeListener = focusListener
 
         holder.btnPlus.setOnClickListener {
             val currentVal = item.value.toIntOrNull() ?: 0
