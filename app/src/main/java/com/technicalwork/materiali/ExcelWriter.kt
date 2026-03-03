@@ -17,7 +17,7 @@ class ExcelWriter {
      * 2) Apre il file con supporto per file compressi (ZipSecureFile).
      * 3) Pulisce le righe esistenti dall'indice 4 in poi.
      * 4) Inserisce i nuovi dati (Nome in colonna 0, Quantità in colonna 1).
-     * 5) Salva e restituisce il file.
+     * 5) Salva e restituisce le file.
      */
     fun writeOutput(context: Context, materials: List<Pair<String, String>>): File {
         // 1) Copia Sample.xlsx dagli assets in cache usando AssetsHelper
@@ -36,6 +36,9 @@ class ExcelWriter {
             // 3) Prende il primo foglio
             val sheet = workbook.getSheetAt(0)
             val templateRow = sheet.getRow(4)
+            val templateHeight = templateRow?.height ?: (-1).toShort()
+            val templateStyle0 = templateRow?.getCell(0)?.cellStyle
+            val templateStyle1 = templateRow?.getCell(1)?.cellStyle
 
             // 4) Cancella tutte le righe dall'indice 4 in poi
             val lastRow = sheet.lastRowNum
@@ -52,19 +55,19 @@ class ExcelWriter {
             materials.forEachIndexed { index, pair ->
                 val rowIndex = index + 4
                 val row = sheet.createRow(rowIndex)
-                templateRow?.let { row.height = it.height }
+                if (templateHeight != (-1).toShort()) row.height = templateHeight
                 
                 val cell0 = row.createCell(0)
                 val cell1 = row.createCell(1)
                 
-                templateRow?.getCell(0)?.let { 
+                templateStyle0?.let {
                     val newStyle = workbook.createCellStyle()
-                    newStyle.cloneStyleFrom(it.cellStyle)
-                    cell0.cellStyle = newStyle 
+                    newStyle.cloneStyleFrom(it)
+                    cell0.cellStyle = newStyle
                 }
-                templateRow?.getCell(1)?.let {
+                templateStyle1?.let {
                     val newStyle = workbook.createCellStyle()
-                    newStyle.cloneStyleFrom(it.cellStyle)
+                    newStyle.cloneStyleFrom(it)
                     cell1.cellStyle = newStyle
                 }
                 
@@ -79,7 +82,7 @@ class ExcelWriter {
             workbook.close()
 
         } catch (e: Exception) {
-            e.printStackTrace()
+            throw RuntimeException("ExcelWriter failed: ${e.message}", e)
         }
 
         return targetFile
