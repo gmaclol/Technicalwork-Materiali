@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.content.pm.PackageInfoCompat
+import androidx.core.net.toUri
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -87,7 +88,7 @@ class UpdateManager(private val context: Context) {
         val destination = File(context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "update.apk")
         if (destination.exists()) destination.delete()
 
-        val request = DownloadManager.Request(Uri.parse(downloadUrl))
+        val request = DownloadManager.Request(downloadUrl.toUri())
             .setTitle(context.getString(R.string.app_name))
             .setDescription("Scaricamento aggiornamento...")
             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
@@ -103,7 +104,7 @@ class UpdateManager(private val context: Context) {
                     installApk(destination)
                     try {
                         context.unregisterReceiver(this)
-                    } catch (e: Exception) {}
+                    } catch (_: Exception) {}
                 }
             }
         }
