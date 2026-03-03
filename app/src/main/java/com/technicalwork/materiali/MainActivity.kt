@@ -11,7 +11,6 @@ import android.provider.DocumentsContract
 import android.provider.OpenableColumns
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -410,15 +409,12 @@ class MainActivity : AppCompatActivity() {
 
                 // 1. Legge i materiali dal file del tecnico
                 val techMaterials = adapter.getData().map { Pair(it.label, it.value) }
-                Log.d("SHARE_DEBUG", "Tech materials: ${techMaterials.size} \u2192 ${techMaterials.take(3)}")
 
                 // 2. Carica la lista master dagli assets (specifica per azienda o fallback)
                 val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
-                Log.d("SHARE_DEBUG", "Master list: ${masterList.size} \u2192 ${masterList.take(3)}")
 
                 // 3. Esegue il merge (Tecnico + Master)
                 val mergedList = MaterialMerger().merge(techMaterials, masterList)
-                Log.d("SHARE_DEBUG", "Merged: ${mergedList.size} \u2192 ${mergedList.take(3)}")
 
                 // 4. Scrive il nuovo file Excel basato sul template Sample.xlsx
                 val generatedFile = ExcelWriter().writeOutput(this, mergedList)
@@ -438,7 +434,6 @@ class MainActivity : AppCompatActivity() {
                 }
                 startActivity(Intent.createChooser(shareIntent, getString(R.string.intent_chooser_send, finalFullName)))
             } catch (e: Exception) {
-                Log.e("SHARE_ERROR", "Errore condivisione", e)
                 Toast.makeText(this, getString(R.string.toast_share_error), Toast.LENGTH_SHORT).show()
             }
         }
