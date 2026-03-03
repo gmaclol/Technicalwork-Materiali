@@ -162,6 +162,12 @@ class MainActivity : AppCompatActivity() {
                 adapter.updateData(finalData)
             }
             
+            // Reset safety net su modifica
+            if (viewModel.preRevertSnapshot != null) {
+                viewModel.preRevertSnapshot = null
+                updateUndoButtonLook()
+            }
+            
             // Salva sempre lo stato per l'Undo
             viewModel.saveStateForUndo(finalData)
         }
@@ -486,13 +492,28 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateSaveButtonLook(hasUnsavedChanges: Boolean) {
         saveMenuItem?.actionView?.let { view ->
-            val container = view.findViewById<FrameLayout>(R.id.save_button_container)
+            val hoverBg = view.findViewById<View>(R.id.hover_background)
             val icon = view.findViewById<ImageView>(R.id.save_icon)
             if (hasUnsavedChanges) {
-                container.background = ContextCompat.getDrawable(this, R.drawable.bg_unsaved_save)
+                hoverBg.background = ContextCompat.getDrawable(this, R.drawable.bg_circle_blue)
                 icon.setColorFilter(ContextCompat.getColor(this, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN)
             } else {
-                container.background = null
+                hoverBg.background = null
+                icon.clearColorFilter()
+            }
+        }
+    }
+
+    private fun updateUndoButtonLook() {
+        val undoItem = toolbar.menu.findItem(R.id.action_undo)
+        undoItem?.actionView?.let { view ->
+            val hoverBg = view.findViewById<View>(R.id.hover_background)
+            val icon = view.findViewById<ImageView>(R.id.undo_icon)
+            if (viewModel.preRevertSnapshot != null) {
+                hoverBg.background = ContextCompat.getDrawable(this, R.drawable.bg_circle_red)
+                icon.setColorFilter(ContextCompat.getColor(this, R.color.white), android.graphics.PorterDuff.Mode.SRC_IN)
+            } else {
+                hoverBg.background = null
                 icon.clearColorFilter()
             }
         }
@@ -583,6 +604,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readExcelFile(uri: Uri) {
+        viewModel.currentCompany = lastSelectedCompany
+        lastSelectedCompany?.let { HistoryRepository(this).cleanOldSnapshots(it) }
         viewModel.loadExcelFile(uri, lastSelectedCompany)
     }
 
@@ -626,6 +649,7 @@ class MainActivity : AppCompatActivity() {
             showHistoryBottomSheet()
             true
         }
+        updateUndoButtonLook()
         
         return true
     }
@@ -674,8 +698,17 @@ class MainActivity : AppCompatActivity() {
     // updateCellValue moved to repository
 
     private fun performUndo() {
+        if (viewModel.preRevertSnapshot != null) {
+            adapter.updateData(viewModel.preRevertSnapshot!!)
+            viewModel.preRevertSnapshot = null
+            updateUndoButtonLook()
+            Toast.makeText(this, "Ripristinato stato pre-revert", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val success = viewModel.performUndo { restoredData ->
             adapter.updateData(restoredData)
+            updateUndoButtonLook()
         }
         if (success) {
             Toast.makeText(this, getString(R.string.toast_undo), Toast.LENGTH_SHORT).show()
@@ -695,7 +728,7 @@ class MainActivity : AppCompatActivity() {
             val previousSnapshot = historyList[i+1]
             val diff = calculateDiff(previousSnapshot.data, currentSnapshot.data, currentSnapshot.timestamp)
             if (diff.isNotEmpty()) {
-                displayList.add(HistoryItem(diff, viewModel.undoStack.size - 1 - i))
+                displayList.add(HistoryItem(diff, viewModel.undoStack.size - 1 - i, currentSnapshot.timestamp))
             }
         }
 
@@ -710,16 +743,18 @@ class MainActivity : AppCompatActivity() {
                 holder.tvDiff.text = item.spannableDiff
                 holder.itemView.setOnClickListener {
                     AlertDialog.Builder(this@MainActivity)
-                        .setTitle(getString(R.string.dialog_title_restore_state))
-                        .setMessage(getString(R.string.dialog_msg_restore_state))
-                        .setPositiveButton(getString(R.string.btn_restore)) { _, _ ->
+                        .setTitle("Sei sicuro?")
+                        .setMessage("Vuoi tornare alla modifica delle ${item.timestamp}? Le modifiche successive andranno perse.")
+                        .setPositiveButton("Conferma") { _, _ ->
+                            viewModel.preRevertSnapshot = adapter.getData().map { it.copy() }
                             while (viewModel.undoStack.size > item.stackIndex + 1) viewModel.undoStack.pop()
                             val restoredData = viewModel.undoStack.peek().data.map { it.copy() }
                             adapter.updateData(restoredData)
                             viewModel.markAsUnsaved()
+                            updateUndoButtonLook()
                             dialog.dismiss()
                         }
-                        .setNegativeButton(getString(R.string.btn_cancel), null)
+                        .setNegativeButton("Annulla", null)
                         .show()
                 }
             }
@@ -730,7 +765,7 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private data class HistoryItem(val spannableDiff: SpannableStringBuilder, val stackIndex: Int)
+    private data class HistoryItem(val spannableDiff: SpannableStringBuilder, val stackIndex: Int, val timestamp: String)
     private class HistoryViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         val tvDiff: TextView = v.findViewById(R.id.tvDiff)
     }

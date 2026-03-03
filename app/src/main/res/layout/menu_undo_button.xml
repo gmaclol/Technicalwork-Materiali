@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/undo_button_container"
     android:layout_width="48dp"
-    android:layout_height="match_parent"
+    android:layout_height="48dp"
     android:clickable="true"
     android:focusable="true">
 
+    <View
+        android:id="@+id/hover_background"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_gravity="center" />
+
     <ImageView
         android:id="@+id/undo_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
         android:layout_gravity="center"
+        android:scaleType="centerInside"
         android:src="@android:drawable/ic_menu_revert"
         android:contentDescription="Undo" />
 </FrameLayout>

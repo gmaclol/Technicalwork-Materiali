@@ -16,6 +16,7 @@ import java.util.Stack
 class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     private val repository = ExcelRepository(application)
+    private val historyRepository = HistoryRepository(application)
 
     private val _uiState = MutableStateFlow<UiState>(UiState.Initial)
     val uiState: StateFlow<UiState> = _uiState.asStateFlow()
@@ -25,8 +26,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     // Undo Stack
     val undoStack = Stack<UndoSnapshot>()
+    var currentCompany: String? = null
+    var preRevertSnapshot: List<ExcelRowData>? = null
 
     fun loadExcelFile(uri: Uri, company: String? = null) {
+        currentCompany = company
         _uiState.value = UiState.Loading
         viewModelScope.launch {
             val result = repository.readExcelFile(uri, company)
@@ -34,6 +38,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 val dataList = result.getOrNull() ?: emptyList()
                 
                 undoStack.clear()
+                val saved = historyRepository.loadHistory(company ?: "default")
+                if (saved.isNotEmpty()) undoStack.addAll(saved)
+
                 val timestamp = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
                 undoStack.push(UndoSnapshot(dataList.map { it.copy() }, timestamp))
                 
@@ -90,6 +97,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         
         val timestamp = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
         undoStack.push(UndoSnapshot(snapshotData, timestamp))
+        historyRepository.saveHistory(currentCompany ?: "default", undoStack.toList())
         
         // Limita la dimensione dello stack a 20 elementi (più 1 stato iniziale)
         if (undoStack.size > 21) {
