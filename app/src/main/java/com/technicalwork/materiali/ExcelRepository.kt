@@ -37,17 +37,33 @@ class ExcelRepository(private val context: Context) {
                     return@withContext Result.failure(Exception("Formato file non valido"))
                 }
                 
-                // Parsing righe partendo dalla 4
-                for (i in 4..sheet.lastRowNum) {
+                // 1) Carica masterList e scansiona per trovare l'inizio dati
+                val masterList = AssetsHelper().loadMasterList(context, company)
+                val masterListSet = masterList.map { it.trim().lowercase() }.toSet()
+
+                var startRowIndex = 4
+                for (i in 0..sheet.lastRowNum) {
+                    val row = sheet.getRow(i) ?: continue
+                    val cellText = dataFormatter.formatCellValue(row.getCell(0)).trim().lowercase()
+                    if (cellText.isNotEmpty() && masterListSet.contains(cellText)) {
+                        startRowIndex = i
+                        break
+                    }
+                }
+
+                // Parsing righe partendo da startRowIndex
+                for (i in startRowIndex..sheet.lastRowNum) {
                     val row = sheet.getRow(i) ?: continue
                     val label = dataFormatter.formatCellValue(row.getCell(0))
                     val value = dataFormatter.formatCellValue(row.getCell(1))
-                    dataList.add(ExcelRowData(label, value))
+                    
+                    // 2) Gestione valori zero
+                    val cleanValue = if (value.trim() == "0") "" else value.trim()
+                    dataList.add(ExcelRowData(label, cleanValue))
                 }
                 workbook.close()
 
-                // Applica il merge con la lista specifica (o fallback lista.txt)
-                val masterList = AssetsHelper().loadMasterList(context, company)
+                // Applica il merge
                 val techPairs = dataList.map { Pair(it.label, it.value) }
                 val mergedPairs = MaterialMerger().merge(techPairs, masterList)
                 val finalDataList = mergedPairs.map { ExcelRowData(it.first, it.second) }
