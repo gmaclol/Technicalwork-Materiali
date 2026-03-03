@@ -5,12 +5,14 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.pm.PackageInfoCompat
 import com.google.gson.Gson
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -49,9 +51,14 @@ class UpdateManager(private val context: Context) {
                     val release = gson.fromJson(body, GitHubRelease::class.java)
                     
                     val onlineVersionCode = extractVersionCode(release.tag_name, release.body ?: "")
-                    val currentVersionCode = context.packageManager.getPackageInfo(context.packageName, 0).let {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) it.longVersionCode.toInt() else it.versionCode
+                    
+                    val pInfo = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                        context.packageManager.getPackageInfo(context.packageName, PackageManager.PackageInfoFlags.of(0))
+                    } else {
+                        @Suppress("DEPRECATION")
+                        context.packageManager.getPackageInfo(context.packageName, 0)
                     }
+                    val currentVersionCode = PackageInfoCompat.getLongVersionCode(pInfo).toInt()
 
                     if (onlineVersionCode > currentVersionCode) {
                         val apkAsset = release.assets.find { it.name.endsWith(".apk") }
