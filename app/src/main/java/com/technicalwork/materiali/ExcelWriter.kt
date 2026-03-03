@@ -35,6 +35,7 @@ class ExcelWriter {
 
             // 3) Prende il primo foglio
             val sheet = workbook.getSheetAt(0)
+            val templateRow = sheet.getRow(4)
 
             // 4) Cancella tutte le righe dall'indice 4 in poi
             val lastRow = sheet.lastRowNum
@@ -51,12 +52,24 @@ class ExcelWriter {
             materials.forEachIndexed { index, pair ->
                 val rowIndex = index + 4
                 val row = sheet.createRow(rowIndex)
+                templateRow?.let { row.height = it.height }
                 
-                // Scrive il nome nella colonna 0
-                row.createCell(0).setCellValue(pair.first)
+                val cell0 = row.createCell(0)
+                val cell1 = row.createCell(1)
                 
-                // Scrive la quantità nella colonna 1 (come stringa)
-                row.createCell(1).setCellValue(pair.second)
+                templateRow?.getCell(0)?.let { 
+                    val newStyle = workbook.createCellStyle()
+                    newStyle.cloneStyleFrom(it.cellStyle)
+                    cell0.cellStyle = newStyle 
+                }
+                templateRow?.getCell(1)?.let {
+                    val newStyle = workbook.createCellStyle()
+                    newStyle.cloneStyleFrom(it.cellStyle)
+                    cell1.cellStyle = newStyle
+                }
+                
+                cell0.setCellValue(pair.first)
+                cell1.setCellValue(pair.second)
             }
 
             // 6) Salva il file e lo restituisce
