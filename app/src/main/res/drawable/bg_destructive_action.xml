@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Red Gemini con 90% di opacità (E6) -->
+    <solid android:color="#E6EA4335" />
+    <corners android:radius="12dp" />
+</shape>
