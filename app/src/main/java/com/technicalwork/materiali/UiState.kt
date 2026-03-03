@@ -13,4 +13,8 @@ sealed class UiState {
 /**
  * Fotografia dello stato dei dati in un determinato istante (usato per l'Undo).
  */
-data class UndoSnapshot(val data: List<ExcelRowData>, val timestamp: String)
+data class UndoSnapshot(
+    val data: List<ExcelRowData>,
+    val timestamp: String,
+    val epochMillis: Long = System.currentTimeMillis()
+)
