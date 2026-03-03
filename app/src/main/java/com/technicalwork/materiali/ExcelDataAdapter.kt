@@ -1,14 +1,18 @@
 package com.technicalwork.materiali
 
 import android.content.Context
+import android.graphics.Color
 import android.graphics.Typeface
+import android.graphics.drawable.GradientDrawable
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
@@ -19,11 +23,17 @@ data class ExcelRowData(var label: String, var value: String)
 class ExcelDataAdapter(
     private var dataList: MutableList<ExcelRowData>,
     private val onDataChanged: () -> Unit
-) : RecyclerView.Adapter<ExcelDataAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var isUpdatingIndividually = false
+    private val separatorRegex = Regex("^::.*::$")
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    companion object {
+        private const val VIEW_TYPE_NORMAL = 0
+        private const val VIEW_TYPE_SEPARATOR = 1
+    }
+
+    class NormalViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvLabel: TextView = view.findViewById(R.id.tvLabel)
         val etLabel: EditText = view.findViewById(R.id.etLabel)
         val etValue: EditText = view.findViewById(R.id.etValue)
@@ -33,14 +43,71 @@ class ExcelDataAdapter(
         var valueWatcher: TextWatcher? = null
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_data_row, parent, false)
-        return ViewHolder(view)
+    class SeparatorViewHolder(view: View, val tvSeparator: TextView) : RecyclerView.ViewHolder(view)
+
+    override fun getItemViewType(position: Int): Int {
+        return if (dataList[position].label.trim().matches(separatorRegex)) {
+            VIEW_TYPE_SEPARATOR
+        } else {
+            VIEW_TYPE_NORMAL
+        }
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+        if (viewType == VIEW_TYPE_SEPARATOR) {
+            val context = parent.context
+            val density = context.resources.displayMetrics.density
+            
+            val frameLayout = FrameLayout(context).apply {
+                layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                val verticalPadding = (8 * density).toInt()
+                setPadding(0, verticalPadding, 0, verticalPadding)
+            }
+
+            val textView = TextView(context).apply {
+                layoutParams = FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.WRAP_CONTENT,
+                    FrameLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    gravity = Gravity.CENTER_HORIZONTAL
+                }
+                val hPadding = (12 * density).toInt()
+                val vPadding = (4 * density).toInt()
+                setPadding(hPadding, vPadding, hPadding, vPadding)
+                
+                setTextColor(Color.parseColor("#CC0000"))
+                setTypeface(null, Typeface.BOLD)
+                
+                val backgroundDrawable = GradientDrawable().apply {
+                    setColor(Color.parseColor("#33CC0000"))
+                    cornerRadius = 16 * density
+                }
+                background = backgroundDrawable
+            }
+            frameLayout.addView(textView)
+            return SeparatorViewHolder(frameLayout, textView)
+        } else {
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.item_data_row, parent, false)
+            return NormalViewHolder(view)
+        }
+    }
+
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val item = dataList[position]
+        
+        if (holder is SeparatorViewHolder) {
+            // Rimuove i :: iniziali e finali per la visualizzazione
+            holder.tvSeparator.text = item.label.trim().removeSurrounding("::")
+        } else if (holder is NormalViewHolder) {
+            bindNormalRow(holder, item)
+        }
+    }
+
+    private fun bindNormalRow(holder: NormalViewHolder, item: ExcelRowData) {
         val context = holder.itemView.context
 
         holder.etLabel.removeTextChangedListener(holder.labelWatcher)
@@ -133,7 +200,7 @@ class ExcelDataAdapter(
         }
     }
 
-    private fun updateStepButtonsUI(holder: ViewHolder, value: String) {
+    private fun updateStepButtonsUI(holder: NormalViewHolder, value: String) {
         val context = holder.itemView.context
         val numericVal = value.toIntOrNull()
         val isNumeric = value.isEmpty() || numericVal != null

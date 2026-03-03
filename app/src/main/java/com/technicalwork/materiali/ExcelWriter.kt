@@ -52,9 +52,16 @@ class ExcelWriter {
             }
 
             // 5) Per ogni elemento della lista crea una nuova riga partendo dall'indice 4
-            materials.forEachIndexed { index, pair ->
-                val rowIndex = index + 4
-                val row = sheet.createRow(rowIndex)
+            // SALTA i separatori (pattern ::.*::)
+            val separatorRegex = Regex("^::.*::$")
+            var excelRowIndex = 4
+            
+            materials.forEach { pair ->
+                if (pair.first.trim().matches(separatorRegex)) {
+                    return@forEach // Salta il separatore
+                }
+
+                val row = sheet.createRow(excelRowIndex)
                 if (templateHeight != (-1).toShort()) row.height = templateHeight
                 
                 val cell0 = row.createCell(0)
@@ -73,6 +80,8 @@ class ExcelWriter {
                 
                 cell0.setCellValue(pair.first)
                 cell1.setCellValue(pair.second)
+                
+                excelRowIndex++
             }
 
             // 6) Salva il file e lo restituisce

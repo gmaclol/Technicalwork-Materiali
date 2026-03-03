@@ -13,6 +13,7 @@ import java.io.InputStream
 class ExcelRepository(private val context: Context) {
 
     private val dataFormatter = DataFormatter()
+    private val separatorRegex = Regex("^::.*::$")
 
     /**
      * Legge un file Excel e ne restituisce il contenuto come lista di [ExcelRowData].
@@ -39,7 +40,11 @@ class ExcelRepository(private val context: Context) {
                 
                 // 1) Carica masterList e scansiona per trovare l'inizio dati
                 val masterList = AssetsHelper().loadMasterList(context, company)
-                val masterListSet = masterList.map { it.trim().lowercase() }.toSet()
+                // Escludiamo i separatori dal set per la ricerca del primo materiale reale
+                val masterListSet = masterList
+                    .filter { !it.trim().matches(separatorRegex) }
+                    .map { it.trim().lowercase() }
+                    .toSet()
 
                 var startRowIndex = 4
                 for (i in 0..sheet.lastRowNum) {
@@ -63,7 +68,7 @@ class ExcelRepository(private val context: Context) {
                 }
                 workbook.close()
 
-                // Applica il merge
+                // Applica il merge (che gestisce i separatori dalla masterList)
                 val techPairs = dataList.map { Pair(it.label, it.value) }
                 val mergedPairs = MaterialMerger().merge(techPairs, masterList)
                 val finalDataList = mergedPairs.map { ExcelRowData(it.first, it.second) }
@@ -90,8 +95,13 @@ class ExcelRepository(private val context: Context) {
             val templateRow = if (sheet.lastRowNum >= 6) sheet.getRow(6) else if (sheet.lastRowNum >= 4) sheet.getRow(4) else sheet.getRow(0)
             
             // Popolamento dei dati partendo dalla riga 4 (indice base 0)
-            data.forEachIndexed { index, rowData ->
-                val excelRowIndex = index + 4
+            // SALTA i separatori
+            var excelRowIndex = 4
+            data.forEach { rowData ->
+                if (rowData.label.trim().matches(separatorRegex)) {
+                    return@forEach // Salta scrittura separatore
+                }
+
                 val row = sheet.getRow(excelRowIndex) ?: sheet.createRow(excelRowIndex).apply {
                     if (templateRow != null) height = templateRow.height
                 }
@@ -124,10 +134,11 @@ class ExcelRepository(private val context: Context) {
                 
                 updateCellValue(cell0, rowData.label)
                 updateCellValue(cell1, rowData.value)
+                excelRowIndex++
             }
             
             // Rimozione righe eccedenti in basso
-            val startDeleteIndex = data.size + 4
+            val startDeleteIndex = excelRowIndex
             val lastRowNum = sheet.lastRowNum
             if (lastRowNum >= startDeleteIndex) {
                 for (i in (lastRowNum downTo startDeleteIndex)) {
@@ -165,9 +176,13 @@ class ExcelRepository(private val context: Context) {
 
             // Genera le righe dalla 4 in poi leggendo il file .txt specifico (o fallback)
             val masterList = AssetsHelper().loadMasterList(context, company)
-            masterList.forEachIndexed { index, name ->
-                val rowIndex = index + 4
-                val row = sheet.getRow(rowIndex) ?: sheet.createRow(rowIndex)
+            var excelRowIndex = 4
+            masterList.forEach { name ->
+                if (name.trim().matches(separatorRegex)) {
+                    return@forEach // Salta separatore
+                }
+
+                val row = sheet.getRow(excelRowIndex) ?: sheet.createRow(excelRowIndex)
                 
                 val cell0 = row.createCell(0)
                 val cell1 = row.createCell(1)
@@ -181,6 +196,7 @@ class ExcelRepository(private val context: Context) {
                     template.getCell(1)?.let { cell1.cellStyle = it.cellStyle }
                     row.height = template.height
                 }
+                excelRowIndex++
             }
 
             context.contentResolver.openOutputStream(uri, "rwt")?.use { outputStream ->
