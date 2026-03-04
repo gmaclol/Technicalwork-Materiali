@@ -136,6 +136,11 @@ class MainActivity : AppCompatActivity() {
         cbIncludeTechName.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeTechName = isChecked
         }
+        cbIncludeDate.isChecked = settingsRepository.includeDate
+
+        cbIncludeTechName.setOnCheckedChangeListener { _, isChecked ->
+            settingsRepository.includeTechName = isChecked
+        }
         cbIncludeDate.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeDate = isChecked
         }
@@ -171,6 +176,7 @@ class MainActivity : AppCompatActivity() {
             // Salva sempre lo stato per l'Undo
             viewModel.saveStateForUndo(finalData)
         }
+        adapter.setMasterList(AssetsHelper().loadMasterList(this, lastSelectedCompany))
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
@@ -605,6 +611,7 @@ class MainActivity : AppCompatActivity() {
     private fun readExcelFile(uri: Uri) {
         viewModel.currentCompany = lastSelectedCompany
         lastSelectedCompany?.let { HistoryRepository(this).cleanOldSnapshots(it) }
+        adapter.setMasterList(AssetsHelper().loadMasterList(this, lastSelectedCompany))
         viewModel.loadExcelFile(uri, lastSelectedCompany)
     }
 

@@ -28,6 +28,7 @@ class ExcelDataAdapter(
     private var isUpdatingIndividually = false
     private val separatorRegex = Regex("^::.*::$")
     private val separatorExtraRegex = Regex("^;;.*;;$")
+    private var masterListSet: Set<String> = emptySet()
 
     companion object {
         private const val VIEW_TYPE_NORMAL = 0
@@ -54,6 +55,13 @@ class ExcelDataAdapter(
             label.matches(separatorExtraRegex) -> VIEW_TYPE_SEPARATOR_EXTRA
             else -> VIEW_TYPE_NORMAL
         }
+    }
+
+    fun setMasterList(list: List<String>) {
+        masterListSet = list.filter { 
+            val trimmed = it.trim()
+            !trimmed.matches(separatorRegex) && !trimmed.matches(separatorExtraRegex) 
+        }.map { it.trim().lowercase() }.toSet()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -133,15 +141,23 @@ class ExcelDataAdapter(
 
         updateStepButtonsUI(holder, item.value)
 
-        // Click sulla TextView -> Passa a modalità editing (EditText)
+        // Click sulla TextView -> Logica condizionale per editing nome
+        val isFromMaster = masterListSet.contains(item.label.trim().lowercase())
         holder.tvLabel.setOnClickListener {
-            holder.tvLabel.visibility = View.GONE
-            holder.etLabel.visibility = View.VISIBLE
-            holder.etLabel.requestFocus()
-            
-            // Apre la tastiera automaticamente
-            val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-            imm.showSoftInput(holder.etLabel, InputMethodManager.SHOW_IMPLICIT)
+            if (isFromMaster) {
+                // Riga master: riavvia solo il marquee
+                holder.tvLabel.isSelected = false
+                holder.tvLabel.isSelected = true
+            } else {
+                // Riga extra: apre l'editing
+                holder.tvLabel.visibility = View.GONE
+                holder.etLabel.visibility = View.VISIBLE
+                holder.etLabel.requestFocus()
+                
+                // Apre la tastiera automaticamente
+                val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                imm.showSoftInput(holder.etLabel, InputMethodManager.SHOW_IMPLICIT)
+            }
         }
 
         // Listener per etLabel: torna a TextView alla perdita del focus
