@@ -206,11 +206,12 @@ class ExcelRepository(private val context: Context) {
     }
 
     private fun updateCellValue(cell: Cell, value: String) {
-        val doubleValue = value.toDoubleOrNull()
-        if (doubleValue != null) {
-            cell.setCellValue(doubleValue)
+        val trimmed = value.trim()
+        if (trimmed.isEmpty() || trimmed == "0") {
+            cell.setBlank()
         } else {
-            cell.setCellValue(value)
+            val dv = trimmed.toDoubleOrNull()
+            if (dv != null) cell.setCellValue(dv) else cell.setCellValue(trimmed)
         }
     }
 }
