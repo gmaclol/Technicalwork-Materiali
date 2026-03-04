@@ -13,3 +13,31 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Build outputs
+/app/build
+/app/release
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# Kotlin
+*.kotlin_module
+
+# Android Studio profiling
+*.hprof
+
+# Google Services (se presente)
+google-services.json
+
+# Credenziali e chiavi
+keystore.properties
+signing.properties
+
+# File temporanei Windows
+Thumbs.db
+desktop.ini
+
+# Log
+*.log
