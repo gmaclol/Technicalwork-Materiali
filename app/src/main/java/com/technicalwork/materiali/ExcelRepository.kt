@@ -8,7 +8,6 @@ import org.apache.poi.openxml4j.util.ZipSecureFile
 import org.apache.poi.ss.usermodel.Cell
 import org.apache.poi.ss.usermodel.DataFormatter
 import org.apache.poi.ss.usermodel.WorkbookFactory
-import java.io.InputStream
 
 class ExcelRepository(private val context: Context) {
 
@@ -23,7 +22,7 @@ class ExcelRepository(private val context: Context) {
     suspend fun readExcelFile(uri: Uri, company: String? = null): Result<List<ExcelRowData>> = withContext(Dispatchers.IO) {
         try {
             val dataList = mutableListOf<ExcelRowData>()
-            val inputStream: InputStream? = context.contentResolver.openInputStream(uri)
+            val inputStream = context.contentResolver.openInputStream(uri)
             
             inputStream?.use { input ->
                 ZipSecureFile.setMinInflateRatio(0.001)
@@ -173,7 +172,7 @@ class ExcelRepository(private val context: Context) {
             val sheet = workbook.getSheetAt(0)
 
             // Prendo la riga 4 come riferimento per gli stili prima di cancellare tutto
-            val styleRow = sheet.getRow(4)
+            val referenceRow = sheet.getRow(4)
 
             // 1. Cancella tutte le righe esistenti dalla riga 4 in poi
             val lastRow = sheet.lastRowNum
@@ -200,7 +199,7 @@ class ExcelRepository(private val context: Context) {
                 cell1.setCellValue("")
                 
                 // Copia gli stili dalla riga di esempio (riga 4 del template)
-                styleRow?.let { template ->
+                referenceRow?.let { template ->
                     template.getCell(0)?.let { cell0.cellStyle = it.cellStyle }
                     template.getCell(1)?.let { cell1.cellStyle = it.cellStyle }
                     row.height = template.height
