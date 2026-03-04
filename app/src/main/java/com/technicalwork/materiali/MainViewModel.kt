@@ -69,7 +69,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun resetExcelFile(uri: Uri, company: String? = null) {
         _uiState.value = UiState.Loading
         viewModelScope.launch {
-            val result = repository.createFromTemplate(uri, company)
+            val result = repository.resetToTemplate(uri, company)
             if (result.isSuccess) {
                 // Ricarica i dati resettati
                 loadExcelFile(uri, company)

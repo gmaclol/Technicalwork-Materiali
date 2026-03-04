@@ -13,7 +13,8 @@ import java.io.InputStream
 class ExcelRepository(private val context: Context) {
 
     private val dataFormatter = DataFormatter()
-    private val separatorRegex = Regex("^::.*::$|^;;.*;;$")
+    private val separatorRegex = Regex("^::.*::$")
+    private val separatorExtraRegex = Regex("^;;.*;;$")
 
     /**
      * Legge un file Excel e ne restituisce il contenuto come lista di [ExcelRowData].
@@ -40,6 +41,11 @@ class ExcelRepository(private val context: Context) {
                 
                 // 1) Carica masterList e scansiona per trovare l'inizio dati
                 val masterList = AssetsHelper().loadMasterList(context, company)
+                // Escludiamo i separatori dal set per la ricerca del primo materiale reale
+                val masterListSet = masterList
+                    .filter { !it.trim().matches(separatorRegex) && !it.trim().matches(separatorExtraRegex) }
+                    .map { it.trim().lowercase() }
+                    .toSet()
 
                 var startRowIndex = 4
                 for (i in 4..sheet.lastRowNum) {
@@ -93,7 +99,7 @@ class ExcelRepository(private val context: Context) {
             // SALTA i separatori
             var excelRowIndex = 4
             data.forEach { rowData ->
-                if (rowData.label.trim().matches(separatorRegex)) {
+                if (rowData.label.trim().matches(separatorRegex) || rowData.label.trim().matches(separatorExtraRegex)) {
                     return@forEach // Salta scrittura separatore
                 }
 
@@ -166,14 +172,22 @@ class ExcelRepository(private val context: Context) {
             inputStream.close()
             val sheet = workbook.getSheetAt(0)
 
-            // Prendo la riga 4 come riferimento per gli stili
+            // Prendo la riga 4 come riferimento per gli stili prima di cancellare tutto
             val styleRow = sheet.getRow(4)
+
+            // 1. Cancella tutte le righe esistenti dalla riga 4 in poi
+            val lastRow = sheet.lastRowNum
+            if (lastRow >= 4) {
+                for (i in lastRow downTo 4) {
+                    sheet.getRow(i)?.let { sheet.removeRow(it) }
+                }
+            }
 
             // Genera le righe dalla 4 in poi leggendo il file .txt specifico (o fallback)
             val masterList = AssetsHelper().loadMasterList(context, company)
             var excelRowIndex = 4
             masterList.forEach { name ->
-                if (name.trim().matches(separatorRegex)) {
+                if (name.trim().matches(separatorRegex) || name.trim().matches(separatorExtraRegex)) {
                     return@forEach // Salta separatore
                 }
 
@@ -194,6 +208,76 @@ class ExcelRepository(private val context: Context) {
                 excelRowIndex++
             }
 
+            context.contentResolver.openOutputStream(uri, "rwt")?.use { outputStream ->
+                workbook.write(outputStream)
+                outputStream.flush()
+            }
+            workbook.close()
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    /**
+     * Resetta il file basandosi sul template Sample.xlsx e ricaricando la masterList.
+     */
+    suspend fun resetToTemplate(uri: Uri, company: String?): Result<Unit> = withContext(Dispatchers.IO) {
+        try {
+            val inputStream = context.assets.open("Sample.xlsx")
+            ZipSecureFile.setMinInflateRatio(0.001)
+            val workbook = WorkbookFactory.create(inputStream)
+            inputStream.close()
+            val sheet = workbook.getSheetAt(0)
+
+            // Prendo la riga 4 come riferimento per gli stili (prima di cancellare)
+            val referenceRow = sheet.getRow(4)
+            val templateHeight = referenceRow?.height ?: (-1).toShort()
+            val templateStyle0 = referenceRow?.getCell(0)?.cellStyle
+            val templateStyle1 = referenceRow?.getCell(1)?.cellStyle
+
+            // 1. Cancella tutte le righe esistenti dalla riga 4 in poi
+            val lastRow = sheet.lastRowNum
+            if (lastRow >= 4) {
+                for (i in lastRow downTo 4) {
+                    sheet.getRow(i)?.let { sheet.removeRow(it) }
+                }
+            }
+
+            // 2. Carica masterList
+            val masterList = AssetsHelper().loadMasterList(context, company)
+            var excelRowIndex = 4
+
+            // 3. Scrive le righe saltando i separatori
+            masterList.forEach { name ->
+                if (name.trim().matches(separatorRegex) || name.trim().matches(separatorExtraRegex)) {
+                    return@forEach
+                }
+
+                val row = sheet.createRow(excelRowIndex)
+                if (templateHeight != (-1).toShort()) row.height = templateHeight
+
+                val cell0 = row.createCell(0)
+                val cell1 = row.createCell(1)
+
+                templateStyle0?.let {
+                    val newStyle = workbook.createCellStyle()
+                    newStyle.cloneStyleFrom(it)
+                    cell0.cellStyle = newStyle
+                }
+                templateStyle1?.let {
+                    val newStyle = workbook.createCellStyle()
+                    newStyle.cloneStyleFrom(it)
+                    cell1.cellStyle = newStyle
+                }
+
+                cell0.setCellValue(name)
+                cell1.setCellValue("") // Cella vuota
+                
+                excelRowIndex++
+            }
+
+            // 4. Sovrascrive il file
             context.contentResolver.openOutputStream(uri, "rwt")?.use { outputStream ->
                 workbook.write(outputStream)
                 outputStream.flush()
