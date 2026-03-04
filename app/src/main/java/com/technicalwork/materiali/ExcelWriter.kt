@@ -52,8 +52,8 @@ class ExcelWriter {
             }
 
             // 5) Per ogni elemento della lista crea una nuova riga partendo dall'indice 4
-            // SALTA i separatori (pattern ::.*::)
-            val separatorRegex = Regex("^::.*::$")
+            // SALTA i separatori (pattern ::.*:: e ;;.*;;)
+            val separatorRegex = Regex("^::.*::$|^;;.*;;$")
             var excelRowIndex = 4
             
             materials.forEach { pair ->

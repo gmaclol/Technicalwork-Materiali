@@ -13,7 +13,7 @@ import java.io.InputStream
 class ExcelRepository(private val context: Context) {
 
     private val dataFormatter = DataFormatter()
-    private val separatorRegex = Regex("^::.*::$")
+    private val separatorRegex = Regex("^::.*::$|^;;.*;;$")
 
     /**
      * Legge un file Excel e ne restituisce il contenuto come lista di [ExcelRowData].
@@ -40,17 +40,12 @@ class ExcelRepository(private val context: Context) {
                 
                 // 1) Carica masterList e scansiona per trovare l'inizio dati
                 val masterList = AssetsHelper().loadMasterList(context, company)
-                // Escludiamo i separatori dal set per la ricerca del primo materiale reale
-                val masterListSet = masterList
-                    .filter { !it.trim().matches(separatorRegex) }
-                    .map { it.trim().lowercase() }
-                    .toSet()
 
                 var startRowIndex = 4
-                for (i in 0..sheet.lastRowNum) {
+                for (i in 4..sheet.lastRowNum) {
                     val row = sheet.getRow(i) ?: continue
-                    val cellText = dataFormatter.formatCellValue(row.getCell(0)).trim().lowercase()
-                    if (cellText.isNotEmpty() && masterListSet.contains(cellText)) {
+                    val cellText = dataFormatter.formatCellValue(row.getCell(0)).trim()
+                    if (cellText.isNotEmpty()) {
                         startRowIndex = i
                         break
                     }

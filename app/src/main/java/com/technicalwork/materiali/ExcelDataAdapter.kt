@@ -27,10 +27,12 @@ class ExcelDataAdapter(
 
     private var isUpdatingIndividually = false
     private val separatorRegex = Regex("^::.*::$")
+    private val separatorExtraRegex = Regex("^;;.*;;$")
 
     companion object {
         private const val VIEW_TYPE_NORMAL = 0
         private const val VIEW_TYPE_SEPARATOR = 1
+        private const val VIEW_TYPE_SEPARATOR_EXTRA = 2
     }
 
     class NormalViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -46,15 +48,16 @@ class ExcelDataAdapter(
     class SeparatorViewHolder(view: View, val tvSeparator: TextView) : RecyclerView.ViewHolder(view)
 
     override fun getItemViewType(position: Int): Int {
-        return if (dataList[position].label.trim().matches(separatorRegex)) {
-            VIEW_TYPE_SEPARATOR
-        } else {
-            VIEW_TYPE_NORMAL
+        val label = dataList[position].label.trim()
+        return when {
+            label.matches(separatorRegex) -> VIEW_TYPE_SEPARATOR
+            label.matches(separatorExtraRegex) -> VIEW_TYPE_SEPARATOR_EXTRA
+            else -> VIEW_TYPE_NORMAL
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        if (viewType == VIEW_TYPE_SEPARATOR) {
+        if (viewType == VIEW_TYPE_SEPARATOR || viewType == VIEW_TYPE_SEPARATOR_EXTRA) {
             val context = parent.context
             val density = context.resources.displayMetrics.density
             
@@ -100,8 +103,13 @@ class ExcelDataAdapter(
         val item = dataList[position]
         
         if (holder is SeparatorViewHolder) {
-            // Rimuove i :: iniziali e finali per la visualizzazione
-            holder.tvSeparator.text = item.label.trim().removeSurrounding("::")
+            val viewType = getItemViewType(position)
+            val cleanText = if (viewType == VIEW_TYPE_SEPARATOR_EXTRA) {
+                item.label.trim().removeSurrounding(";;")
+            } else {
+                item.label.trim().removeSurrounding("::")
+            }
+            holder.tvSeparator.text = cleanText
         } else if (holder is NormalViewHolder) {
             bindNormalRow(holder, item)
         }
