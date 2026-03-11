@@ -7,8 +7,6 @@ import android.graphics.Color
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Bundle
-import android.provider.DocumentsContract
-import android.provider.OpenableColumns
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
 import android.view.LayoutInflater
@@ -61,7 +59,8 @@ class MainActivity : AppCompatActivity() {
     private var currentFileUri: Uri? = null
     private val viewModel: MainViewModel by viewModels()
     private lateinit var settingsRepository: SettingsRepository
-    
+    private lateinit var fileStorageManager: FileStorageManager
+
     private var saveMenuItem: MenuItem? = null
     private var lastSelectedCompany: String? = null
 
@@ -100,6 +99,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         settingsRepository = SettingsRepository(this)
+        fileStorageManager = FileStorageManager(this)
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -329,7 +329,7 @@ class MainActivity : AppCompatActivity() {
                     1 -> showChoiceDialog(company)
                     2 -> {
                         val uri = getCompanyFileUri(company)
-                        if (uri != null && isUriAccessible(uri)) {
+                        if (uri != null && fileStorageManager.isUriAccessible(uri)) {
                             currentFileUri = uri
                             showResetConfirmationDialog()
                         } else {
@@ -343,7 +343,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRenameDialog(company: String) {
         val uri = getCompanyFileUri(company) ?: return
-        val currentFullName = getFileNameFromUri(uri)
+        val currentFullName = fileStorageManager.getFileNameFromUri(uri)
         val currentName = currentFullName.substringBeforeLast('.')
         val extension = currentFullName.substringAfterLast('.', "")
         
@@ -367,18 +367,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun performPhysicalRename(company: String, uri: Uri, newName: String) {
-        try {
-            val newUri = DocumentsContract.renameDocument(contentResolver, uri, newName)
+        lifecycleScope.launch {
+            val newUri = fileStorageManager.safeRenameFile(uri, newName)
             if (newUri != null) {
                 saveCompanyFileUri(company, newUri)
                 if (currentFileUri == uri) {
                     openExcelFile(newUri)
                 }
-                Toast.makeText(this, getString(R.string.toast_file_renamed), Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, getString(R.string.toast_file_renamed), Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this@MainActivity, getString(R.string.toast_rename_error), Toast.LENGTH_LONG).show()
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Toast.makeText(this, getString(R.string.toast_rename_error), Toast.LENGTH_LONG).show()
         }
     }
 
@@ -387,7 +386,7 @@ class MainActivity : AppCompatActivity() {
         saveExcelFile(silent = true) {
             Toast.makeText(this, getString(R.string.toast_file_ready_share), Toast.LENGTH_SHORT).show()
             try {
-                val originalFullName = getFileNameFromUri(uri)
+                val originalFullName = fileStorageManager.getFileNameFromUri(uri)
                 val baseName = originalFullName.substringBeforeLast('.')
                 
                 // Il nome base deve essere sempre il nome dell'appalto
@@ -442,21 +441,12 @@ class MainActivity : AppCompatActivity() {
     private fun handleCompanyClick(company: String) {
         lastSelectedCompany = company
         val uri = getCompanyFileUri(company)
-        if (uri != null && isUriAccessible(uri)) {
+        if (uri != null && fileStorageManager.isUriAccessible(uri)) {
             saveLastFileUri(uri)
             openExcelFile(uri)
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             showChoiceDialog(company)
-        }
-    }
-
-    private fun isUriAccessible(uri: Uri): Boolean {
-        return try {
-            contentResolver.openInputStream(uri)?.use { it.close() }
-            true
-        } catch (_: Exception) {
-            false
         }
     }
 
@@ -550,10 +540,10 @@ class MainActivity : AppCompatActivity() {
 
         uriString?.let {
             val uri = it.toUri()
-            if (isUriAccessible(uri)) {
+            if (fileStorageManager.isUriAccessible(uri)) {
                 openExcelFile(uri)
             } else {
-                Toast.makeText(this, "Il file non esiste più nel percorso salvato.", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, getString(R.string.toast_file_not_found), Toast.LENGTH_LONG).show()
                 settingsRepository.clearLastFileUri()
             }
         }
@@ -581,25 +571,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun openExcelFile(uri: Uri) {
         currentFileUri = uri
-        val fileNameWithExt = getFileNameFromUri(uri)
+        val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, getString(R.string.default_file_name))
         val fileName = fileNameWithExt.substringBeforeLast('.')
         tvCurrentFileName.text = lastSelectedCompany ?: getString(R.string.default_company_name)
         toolbar.title = fileName
         readExcelFile(uri)
         forceMediaStoreScan()
-    }
-
-    private fun getFileNameFromUri(uri: Uri): String {
-        var name = getString(R.string.default_file_name)
-        try {
-            contentResolver.query(uri, null, null, null, null)?.use { cursor ->
-                val nameIndex = cursor.getColumnIndex(OpenableColumns.DISPLAY_NAME)
-                if (cursor.moveToFirst()) {
-                    name = cursor.getString(nameIndex)
-                }
-            }
-        } catch (_: Exception) {}
-        return name
     }
 
     private fun readExcelFile(uri: Uri) {
