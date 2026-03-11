@@ -173,6 +173,13 @@ class ExcelRepository(private val context: Context) {
 
             // Prendo la riga 4 come riferimento per gli stili prima di cancellare tutto
             val referenceRow = sheet.getRow(4)
+            val templateHeight = referenceRow?.height ?: -1
+            val templateStyle0 = referenceRow?.getCell(0)?.cellStyle?.let {
+                workbook.createCellStyle().apply { cloneStyleFrom(it) }
+            }
+            val templateStyle1 = referenceRow?.getCell(1)?.cellStyle?.let {
+                workbook.createCellStyle().apply { cloneStyleFrom(it) }
+            }
 
             // 1. Cancella tutte le righe esistenti dalla riga 4 in poi
             val lastRow = sheet.lastRowNum
@@ -199,11 +206,10 @@ class ExcelRepository(private val context: Context) {
                 cell1.setCellValue("")
                 
                 // Copia gli stili dalla riga di esempio (riga 4 del template)
-                referenceRow?.let { template ->
-                    template.getCell(0)?.let { cell0.cellStyle = it.cellStyle }
-                    template.getCell(1)?.let { cell1.cellStyle = it.cellStyle }
-                    row.height = template.height
-                }
+                templateStyle0?.let { cell0.cellStyle = it }
+                templateStyle1?.let { cell1.cellStyle = it }
+                if (templateHeight != (-1).toShort()) row.height = templateHeight.toShort()
+
                 excelRowIndex++
             }
 
