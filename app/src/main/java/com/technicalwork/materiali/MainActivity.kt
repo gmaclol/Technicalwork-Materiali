@@ -795,11 +795,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun forceMediaStoreScan() {
-        MediaScannerConnection.scanFile(
-            this,
-            arrayOf(getExternalFilesDir(null)?.absolutePath ?: return),
-            null,
-            null
-        )
+        val uri = currentFileUri ?: return
+        try {
+            var path: String? = null
+            if (uri.scheme == "file") {
+                path = uri.path
+            } else {
+                contentResolver.query(uri, arrayOf(android.provider.MediaStore.MediaColumns.DATA), null, null, null)?.use { cursor ->
+                    if (cursor.moveToFirst()) {
+                        path = cursor.getString(0)
+                    }
+                }
+            }
+            if (path != null) {
+                MediaScannerConnection.scanFile(this, arrayOf(path), null, null)
+            }
+        } catch (_: Exception) {
+            // Ignore, extraction not supported or permission missing
+        }
     }
 }
