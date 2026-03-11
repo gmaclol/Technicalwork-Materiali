@@ -86,9 +86,7 @@ class FileStorageManager(private val context: Context) {
                     return@withContext originalUri
                 }
             }
-        } catch (e: Exception) {
-            android.util.Log.e("FileStorageManager", "Rename nativo DocumentFile fallito", e)
-        }
+        } catch (_: Exception) {}
 
         // 4. Secondo tentativo (FALLBACK): Copia nella stessa cartella o in Documents
         try {
@@ -134,50 +132,28 @@ class FileStorageManager(private val context: Context) {
                 // 1) Tentativo via ContentResolver
                 try {
                     val rows = contentResolver.delete(originalUri, null, null)
-                    if (rows > 0) {
-                        deleted = true
-                        android.util.Log.d("FileStorageManager", "Originale eliminato via ContentResolver")
-                    }
-                } catch (e: Exception) {
-                    android.util.Log.e("FileStorageManager", "Errore eliminazione via ContentResolver: ${e.message}", e)
-                }
+                    if (rows > 0) deleted = true
+                } catch (_: Exception) {}
 
                 // 2) Tentativo via DocumentFile
                 if (!deleted) {
                     try {
-                        if (originalDoc?.delete() == true) {
-                            deleted = true
-                            android.util.Log.d("FileStorageManager", "Originale eliminato via DocumentFile")
-                        }
-                    } catch (e: Exception) {
-                        android.util.Log.e("FileStorageManager", "Errore eliminazione via DocumentFile: ${e.message}", e)
-                    }
+                        if (originalDoc?.delete() == true) deleted = true
+                    } catch (_: Exception) {}
                 }
 
                 // 3) Tentativo via File (solo se schema file://)
                 if (!deleted && originalUri.scheme == "file") {
                     try {
                         val path = originalUri.path
-                        if (path != null && java.io.File(path).delete()) {
-                            deleted = true
-                            android.util.Log.d("FileStorageManager", "Originale eliminato via java.io.File")
-                        }
-                    } catch (e: Exception) {
-                        android.util.Log.e("FileStorageManager", "Errore eliminazione via java.io.File: ${e.message}", e)
-                    }
+                        if (path != null && java.io.File(path).delete()) deleted = true
+                    } catch (_: Exception) {}
                 }
-                
-                if (!deleted) {
-                    android.util.Log.w("FileStorageManager", "Impossibile eliminare il file originale dopo la copia con nessuno dei metodi")
-                }
-            } catch (e: Exception) {
-                android.util.Log.e("FileStorageManager", "Errore imprevisto durante la sequenza di eliminazione", e)
-            }
+            } catch (_: Exception) {}
 
             return@withContext newUri
 
         } catch (e: Exception) {
-            android.util.Log.e("FileStorageManager", "Fallback copy-and-delete fallito", e)
             return@withContext null
         }
     }
