@@ -39,6 +39,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import java.io.File
@@ -215,6 +216,7 @@ class MainActivity : AppCompatActivity() {
 
         loadLastFile()
         checkTechnicianName()
+        lifecycleScope.launch(Dispatchers.IO) { ListUpdater().syncLists(this@MainActivity) }
 
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
