@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.okhttp)
     implementation(libs.gson)
+    implementation(libs.androidx.documentfile)
     
     coreLibraryDesugaring(libs.desugar.jdk.libs)
     testImplementation(libs.junit)

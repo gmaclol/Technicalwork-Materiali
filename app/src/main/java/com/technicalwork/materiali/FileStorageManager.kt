@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import android.provider.OpenableColumns
 import androidx.core.net.toUri
+import androidx.documentfile.provider.DocumentFile
 
 /**
  * Gestisce tutte le interazioni con il file system, le Uri di Android (Storage Access Framework)
@@ -79,7 +80,7 @@ class FileStorageManager(private val context: Context) {
 
         // 3. Primo tentativo: Rename nativo via DocumentFile
         try {
-            val documentFile = androidx.documentfile.provider.DocumentFile.fromSingleUri(context, originalUri)
+            val documentFile = DocumentFile.fromSingleUri(context, originalUri)
             if (documentFile != null && documentFile.exists()) {
                 val renamed = documentFile.renameTo(finalFilename)
                 if (renamed) {
@@ -90,7 +91,7 @@ class FileStorageManager(private val context: Context) {
 
         // 4. Secondo tentativo (FALLBACK): Copia nella stessa cartella o in Documents
         try {
-            val originalDoc = androidx.documentfile.provider.DocumentFile.fromSingleUri(context, originalUri)
+            val originalDoc = DocumentFile.fromSingleUri(context, originalUri)
             val parentDoc = originalDoc?.parentFile
             var newUri: Uri? = null
             var scanPath: String? = null
