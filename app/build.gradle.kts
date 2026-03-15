@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.technicalwork.materiali"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.technicalwork.materiali"
