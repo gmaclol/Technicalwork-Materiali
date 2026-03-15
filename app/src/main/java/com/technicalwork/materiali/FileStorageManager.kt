@@ -135,38 +135,15 @@ class FileStorageManager(private val context: Context) {
                 // 3) Tentativo via File (solo se schema file://)
                 if (!deleted && originalUri.scheme == "file") {
                     try {
-                        val path = originalUri.path
-                        if (path != null && java.io.File(path).delete()) deleted = true
+                        originalUri.path?.let { java.io.File(it).delete() }
                     } catch (_: Exception) {}
                 }
             } catch (_: Exception) {}
 
             return@withContext newUri
 
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             return@withContext null
-        }
-    }
-
-    fun createIntentForSaveAs(
-        fileName: String,
-        mimeType: String = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    ): Intent {
-        return Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
-            addCategory(Intent.CATEGORY_OPENABLE)
-            type = mimeType
-            putExtra(Intent.EXTRA_TITLE, fileName)
-        }
-    }
-
-    fun createIntentForOpenDocument(
-        mimeType: String = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    ): Intent {
-        return Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-            addCategory(Intent.CATEGORY_OPENABLE)
-            type = mimeType
-            putExtra(Intent.EXTRA_LOCAL_ONLY, true)
-            addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION)
         }
     }
 }
