@@ -30,6 +30,9 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.net.toUri
 import androidx.core.view.GravityCompat
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -101,6 +104,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+
         settingsRepository = SettingsRepository(this)
         fileStorageManager = FileStorageManager(this)
 
@@ -126,6 +131,21 @@ class MainActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerView)
         progressBar = findViewById(R.id.progressBar)
         val navigationView: NavigationView = findViewById(R.id.navigationView)
+
+        ViewCompat.setOnApplyWindowInsetsListener(drawerLayout) { _, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            toolbar.setPadding(0, systemBars.top, 0, 0)
+            recyclerView.setPadding(
+                recyclerView.paddingLeft,
+                recyclerView.paddingTop,
+                recyclerView.paddingRight,
+                systemBars.bottom
+            )
+            recyclerView.clipToPadding = false
+            val navView = findViewById<NavigationView>(R.id.navigationView)
+            navView.setPadding(0, systemBars.top, 0, systemBars.bottom)
+            insets
+        }
         
         val headerView = navigationView.getHeaderView(0)
         tvCurrentFileName = headerView.findViewById(R.id.tvCurrentFileName)
@@ -181,7 +201,7 @@ class MainActivity : AppCompatActivity() {
         val swipeHandler = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             override fun onMove(rv: RecyclerView, vh: RecyclerView.ViewHolder, t: RecyclerView.ViewHolder) = false
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-                showDeleteConfirmation(viewHolder.adapterPosition)
+                showDeleteConfirmation(viewHolder.bindingAdapterPosition)
             }
         }
         ItemTouchHelper(swipeHandler).attachToRecyclerView(recyclerView)
