@@ -17,6 +17,7 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
@@ -57,6 +58,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var toolbar: Toolbar
     private lateinit var cbIncludeTechName: CheckBox
     private lateinit var cbIncludeDate: CheckBox
+    private lateinit var progressBar: ProgressBar
     private var currentFileUri: Uri? = null
     private val viewModel: MainViewModel by viewModels()
     private lateinit var settingsRepository: SettingsRepository
@@ -122,6 +124,7 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout = findViewById(R.id.drawerLayout)
         recyclerView = findViewById(R.id.recyclerView)
+        progressBar = findViewById(R.id.progressBar)
         val navigationView: NavigationView = findViewById(R.id.navigationView)
         
         val headerView = navigationView.getHeaderView(0)
@@ -250,6 +253,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleUiState(state: UiState) {
+        progressBar.visibility = if (state is UiState.Loading) View.VISIBLE else View.GONE
+
         when (state) {
             is UiState.Initial, is UiState.Loading -> { } // future loader
             is UiState.Success -> {
