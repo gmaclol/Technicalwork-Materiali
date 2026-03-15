@@ -43,17 +43,6 @@ class FileStorageManager(private val context: Context) {
         return name
     }
 
-    fun takePersistableUriPermission(uri: Uri) {
-        try {
-            contentResolver.takePersistableUriPermission(
-                uri,
-                Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
-            )
-        } catch (_: Exception) {
-            // Se fallisce, l'Uri potrebbe non essere persistibile (es. cache temporanea)
-        }
-    }
-
     /**
      * Tenta di rinominare un file da un Uri.
      * Se fallisce (come spesso accade per Uri esterni da WhatsApp/Downloads),
@@ -116,7 +105,7 @@ class FileStorageManager(private val context: Context) {
 
             // Copia effettiva del contenuto nel nuovo Uri
             contentResolver.openInputStream(originalUri)?.use { input ->
-                contentResolver.openOutputStream(newUri!!)?.use { output ->
+                contentResolver.openOutputStream(newUri)?.use { output ->
                     input.copyTo(output)
                 }
             } ?: return@withContext null

@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId = "com.technicalwork.materiali"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 3
         versionName = "1.2"
 
