@@ -21,7 +21,9 @@ class FirebaseRepository {
     suspend fun syncToFirestore(
         company: String,
         technicianName: String,
-        materials: List<ExcelRowData>
+        materials: List<ExcelRowData>,
+        lat: Double? = null,
+        lng: Double? = null
     ) {
         if (technicianName.isBlank() || company.isBlank()) return
 
@@ -36,12 +38,16 @@ class FirebaseRepository {
                 }
                 .associate { it.label to it.value }
 
-            val data = hashMapOf(
+            val data = hashMapOf<String, Any>(
                 "tecnico" to technicianName,
                 "ultimo_aggiornamento" to timestamp,
                 "appalto" to company,
                 "materiali" to materialiMap
             )
+
+            // Aggiunta coordinate se presenti
+            lat?.let { data["lat"] = it }
+            lng?.let { data["lng"] = it }
 
             // Salva su Firestore: collection = company, document ID = technicianName
             db.collection(company)

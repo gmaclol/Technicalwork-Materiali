@@ -100,6 +100,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private val requestPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { _ -> }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -270,6 +274,12 @@ class MainActivity : AppCompatActivity() {
                     .show()
             }
         }
+
+        // Richiesta permessi posizione all'avvio
+        requestPermissionLauncher.launch(arrayOf(
+            android.Manifest.permission.ACCESS_FINE_LOCATION,
+            android.Manifest.permission.ACCESS_COARSE_LOCATION
+        ))
     }
 
     private fun handleUiState(state: UiState) {
@@ -445,11 +455,14 @@ class MainActivity : AppCompatActivity() {
                 val company = lastSelectedCompany
                 val techName = getTechnicianName()
                 if (company != null && techName != null) {
+                    val (lat, lng) = getLastLocation()
                     lifecycleScope.launch(Dispatchers.IO) {
                         FirebaseRepository().syncToFirestore(
                             company,
                             techName,
-                            mergedList.map { ExcelRowData(it.first, it.second) }
+                            mergedList.map { ExcelRowData(it.first, it.second) },
+                            lat,
+                            lng
                         )
                     }
                 }
@@ -707,8 +720,9 @@ class MainActivity : AppCompatActivity() {
                 
                 val company = lastSelectedCompany ?: return@saveExcelFile
                 val techName = getTechnicianName() ?: return@saveExcelFile
+                val (lat, lng) = getLastLocation()
                 lifecycleScope.launch(Dispatchers.IO) {
-                    FirebaseRepository().syncToFirestore(company, techName, adapter.getData())
+                    FirebaseRepository().syncToFirestore(company, techName, adapter.getData(), lat, lng)
                 }
 
                 onComplete?.invoke()
@@ -858,6 +872,20 @@ class MainActivity : AppCompatActivity() {
             }
         } catch (_: Exception) {
             // Ignore, extraction not supported or permission missing
+        }
+    }
+
+    private fun getLastLocation(): Pair<Double?, Double?> {
+        return try {
+            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                return null to null
+            }
+            val lm = getSystemService(Context.LOCATION_SERVICE) as android.location.LocationManager
+            val loc = lm.getLastKnownLocation(android.location.LocationManager.GPS_PROVIDER) 
+                      ?: lm.getLastKnownLocation(android.location.LocationManager.NETWORK_PROVIDER)
+            loc?.latitude to loc?.longitude
+        } catch (e: Exception) {
+            null to null
         }
     }
 }
