@@ -442,6 +442,18 @@ class MainActivity : AppCompatActivity() {
                 // 3. Esegue il merge (Tecnico + Master)
                 val mergedList = MaterialMerger().merge(techMaterials, masterList)
 
+                val company = lastSelectedCompany
+                val techName = getTechnicianName()
+                if (company != null && techName != null) {
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        FirebaseRepository().syncToFirestore(
+                            company,
+                            techName,
+                            mergedList.map { ExcelRowData(it.first, it.second) }
+                        )
+                    }
+                }
+
                 // 4. Scrive il nuovo file Excel basato sul template Sample.xlsx
                 val generatedFile = ExcelWriter().writeOutput(this, mergedList)
                 
@@ -692,6 +704,13 @@ class MainActivity : AppCompatActivity() {
             if (success) {
                 if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                 saveLastFileUri(uri)
+                
+                val company = lastSelectedCompany ?: return@saveExcelFile
+                val techName = getTechnicianName() ?: return@saveExcelFile
+                lifecycleScope.launch(Dispatchers.IO) {
+                    FirebaseRepository().syncToFirestore(company, techName, adapter.getData())
+                }
+
                 onComplete?.invoke()
             } else {
                 if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
