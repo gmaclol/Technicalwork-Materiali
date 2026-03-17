@@ -79,7 +79,13 @@ class ExcelWriter {
                 }
                 
                 cell0.setCellValue(pair.first)
-                cell1.setCellValue(pair.second)
+                val cleanValue = pair.second.trim()
+                if (cleanValue.isEmpty() || cleanValue == "0") {
+                    cell1.setBlank()
+                } else {
+                    val dv = cleanValue.toDoubleOrNull()
+                    if (dv != null) cell1.setCellValue(dv) else cell1.setCellValue(cleanValue)
+                }
                 
                 excelRowIndex++
             }
