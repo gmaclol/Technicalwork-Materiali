@@ -178,6 +178,9 @@ class MainActivity : AppCompatActivity() {
         cbIncludeTechName.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeTechName = isChecked
         }
+        cbIncludeDate.setOnClickListener {
+            // Not needed as it is a checkbox with onCheckedChangeListener
+        }
         cbIncludeDate.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeDate = isChecked
         }
@@ -319,6 +322,11 @@ class MainActivity : AppCompatActivity() {
         updateCheckHandler.removeCallbacks(updateCheckRunnable)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        updateCheckHandler.removeCallbacks(updateCheckRunnable)
+    }
+
     private fun checkPendingUpdate(): Boolean {
         val prefs = getSharedPreferences("updates", Context.MODE_PRIVATE)
         val downloadId = prefs.getLong("pending_download_id", -1L)
@@ -327,27 +335,27 @@ class MainActivity : AppCompatActivity() {
         if (downloadId != -1L && pendingPath != null) {
             val manager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
             val query = DownloadManager.Query().setFilterById(downloadId)
-            val cursor = manager.query(query)
             
-            if (cursor.moveToFirst()) {
-                val statusIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)
-                if (statusIndex != -1) {
-                    val status = cursor.getInt(statusIndex)
-                    when (status) {
-                        DownloadManager.STATUS_SUCCESSFUL -> {
-                            prefs.edit().remove("pending_download_id").remove("pending_apk_path").apply()
-                            showInstallDialog(File(pendingPath))
-                            return false
-                        }
-                        DownloadManager.STATUS_FAILED -> {
-                            prefs.edit().remove("pending_download_id").remove("pending_apk_path").apply()
-                            Toast.makeText(this, getString(R.string.toast_update_error), Toast.LENGTH_SHORT).show()
-                            return false
+            manager.query(query)?.use { cursor ->
+                if (cursor.moveToFirst()) {
+                    val statusIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)
+                    if (statusIndex != -1) {
+                        val status = cursor.getInt(statusIndex)
+                        when (status) {
+                            DownloadManager.STATUS_SUCCESSFUL -> {
+                                prefs.edit().remove("pending_download_id").remove("pending_apk_path").apply()
+                                showInstallDialog(File(pendingPath))
+                                return false
+                            }
+                            DownloadManager.STATUS_FAILED -> {
+                                prefs.edit().remove("pending_download_id").remove("pending_apk_path").apply()
+                                Toast.makeText(this, getString(R.string.toast_update_error), Toast.LENGTH_SHORT).show()
+                                return false
+                            }
                         }
                     }
                 }
             }
-            cursor.close()
             return true
         }
         return false

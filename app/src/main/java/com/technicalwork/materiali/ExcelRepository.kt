@@ -40,11 +40,6 @@ class ExcelRepository(private val context: Context) {
                 
                 // 1) Carica masterList e scansiona per trovare l'inizio dati
                 val masterList = AssetsHelper().loadMasterList(context, company)
-                // Escludiamo i separatori dal set per la ricerca del primo materiale reale
-                val masterListSet = masterList
-                    .filter { !it.trim().matches(separatorRegex) && !it.trim().matches(separatorExtraRegex) }
-                    .map { it.trim().lowercase() }
-                    .toSet()
 
                 var startRowIndex = 4
                 for (i in 4..sheet.lastRowNum) {
