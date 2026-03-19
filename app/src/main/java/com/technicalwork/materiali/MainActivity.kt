@@ -556,7 +556,7 @@ class MainActivity : AppCompatActivity() {
                 val baseName = originalFullName.substringBeforeLast('.')
                 
                 // Il nome base deve essere sempre il nome dell'appalto
-                var finalName = if (isConsumoMode) "Consumo" else (lastSelectedCompany ?: baseName)
+                var finalName = if (isConsumoMode) "Materiale di consumo" else (lastSelectedCompany ?: baseName)
 
                 if (cbIncludeTechName.isChecked) {
                     getTechnicianName()?.let {
@@ -573,8 +573,6 @@ class MainActivity : AppCompatActivity() {
                 val finalFullName = "$finalName.xlsx"
 
                 if (isConsumoMode) {
-                    val contentUri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.fileprovider", File(uri.path ?: ""))
-                    // Per il consumo potremmo semplicemente condividere il file salvato
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                         type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                         putExtra(Intent.EXTRA_STREAM, uri)

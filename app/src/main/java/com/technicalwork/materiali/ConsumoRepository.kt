@@ -33,6 +33,9 @@ class ConsumoRepository(private val context: Context) {
                     val row = sheet.getRow(i) ?: continue
                     val label = dataFormatter.formatCellValue(row.getCell(0)).trim()
                     
+                    // Si ferma appena trova una riga di stop
+                    if (isStopRow(label)) break
+
                     if (label.isNotEmpty()) {
                         val value = dataFormatter.formatCellValue(row.getCell(1)).trim()
                         val cleanValue = if (value == "N°") "" else value
@@ -76,6 +79,9 @@ class ConsumoRepository(private val context: Context) {
                 val row = sheet.getRow(i) ?: continue
                 val label = dataFormatter.formatCellValue(row.getCell(0)).trim()
                 
+                // Si ferma appena trova una riga di stop anche in scrittura
+                if (isStopRow(label)) break
+
                 if (label.isNotEmpty()) {
                     if (dataIndex < data.size) {
                         val cellB = row.getCell(1) ?: row.createCell(1)
@@ -104,6 +110,14 @@ class ConsumoRepository(private val context: Context) {
         } catch (e: Exception) {
             Result.failure(e)
         }
+    }
+
+    private fun isStopRow(label: String): Boolean {
+        val upperLabel = label.uppercase()
+        return upperLabel.startsWith("NB:") ||
+                upperLabel.startsWith("E INVIARE") ||
+                upperLabel.startsWith("MI RACCOMANDO") ||
+                upperLabel.startsWith("OGNI VOLTA")
     }
 
     /**
