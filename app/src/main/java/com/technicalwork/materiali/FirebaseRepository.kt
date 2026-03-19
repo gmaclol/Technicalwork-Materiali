@@ -5,6 +5,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.tasks.await
 import java.text.SimpleDateFormat
+import java.util.Calendar
 import java.util.Date
 import java.util.Locale
 
@@ -50,11 +51,48 @@ class FirebaseRepository {
             lat?.let { data["lat"] = it }
             lng?.let { data["lng"] = it }
 
-            // Salva su Firestore: collection = company, document ID = technicianName
+            // 1. Salva documento principale del tecnico
             db.collection(company)
                 .document(technicianName)
                 .set(data, SetOptions.merge())
                 .await()
+
+            // --- LOGICA SNAPSHOT ---
+            val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+
+            // 2. Controllo snapshot di ieri
+            val cal = Calendar.getInstance()
+            cal.add(Calendar.DAY_OF_YEAR, -1)
+            val yesterdayStr = sdf.format(cal.time)
+            val yesterdayDocId = "${technicianName}_$yesterdayStr"
+
+            val snapshotRef = db.collection(company).document(yesterdayDocId)
+            val snapshotDoc = snapshotRef.get().await()
+
+            if (!snapshotDoc.exists()) {
+                // Crea lo snapshot con i dati attuali
+                snapshotRef.set(data, SetOptions.merge()).await()
+            }
+
+            // 3. Eliminazione snapshot più vecchi di 7 giorni
+            cal.time = Date() // torna a oggi
+            cal.add(Calendar.DAY_OF_YEAR, -7)
+            val sevenDaysAgoStr = sdf.format(cal.time)
+            val prefix = "${technicianName}_"
+
+            val allDocs = db.collection(company).get().await()
+            for (doc in allDocs.documents) {
+                val id = doc.id
+                if (id.startsWith(prefix)) {
+                    val datePart = id.removePrefix(prefix)
+                    // Verifica se il formato è yyyy-MM-dd e se è più vecchio di 7 giorni
+                    if (datePart.matches(Regex("""^\d{4}-\d{2}-\d{2}$"""))) {
+                        if (datePart < sevenDaysAgoStr) {
+                            doc.reference.delete().await()
+                        }
+                    }
+                }
+            }
 
         } catch (e: Exception) {
             // Fallisce silenziosamente come richiesto
