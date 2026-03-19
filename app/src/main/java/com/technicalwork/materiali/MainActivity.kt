@@ -251,7 +251,9 @@ class MainActivity : AppCompatActivity() {
             // Salva sempre lo stato per l'Undo
             viewModel.saveStateForUndo(finalData)
         }
-        adapter.setMasterList(AssetsHelper().loadMasterList(this, lastSelectedCompany))
+        if (!isConsumoMode) {
+            adapter.setMasterList(AssetsHelper().loadMasterList(this, lastSelectedCompany))
+        }
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
@@ -573,9 +575,14 @@ class MainActivity : AppCompatActivity() {
                 val finalFullName = "$finalName.xlsx"
 
                 if (isConsumoMode) {
+                    val finalFile = File(cacheDir, finalFullName)
+                    contentResolver.openInputStream(uri)?.use { input ->
+                        finalFile.outputStream().use { output -> input.copyTo(output) }
+                    }
+                    val contentUri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.fileprovider", finalFile)
                     val shareIntent = Intent(Intent.ACTION_SEND).apply {
                         type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                        putExtra(Intent.EXTRA_STREAM, uri)
+                        putExtra(Intent.EXTRA_STREAM, contentUri)
                         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     }
                     startActivity(Intent.createChooser(shareIntent, getString(R.string.intent_chooser_send, finalFullName)))
@@ -851,6 +858,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun readExcelFile(uri: Uri) {
+        if (isConsumoMode) return
         viewModel.currentCompany = lastSelectedCompany
         lastSelectedCompany?.let { HistoryRepository(this).cleanOldSnapshots(it) }
         adapter.setMasterList(AssetsHelper().loadMasterList(this, lastSelectedCompany))
