@@ -66,10 +66,13 @@ class MainActivity : AppCompatActivity() {
     private lateinit var cbIncludeDate: CheckBox
     private lateinit var progressBar: ProgressBar
     private var currentFileUri: Uri? = null
+    private var consumoFileUri: Uri? = null
+    private var isConsumoMode = false
     private val viewModel: MainViewModel by viewModels()
     private lateinit var settingsRepository: SettingsRepository
     private lateinit var fileStorageManager: FileStorageManager
     private lateinit var updateManager: UpdateManager
+    private lateinit var consumoRepository: ConsumoRepository
 
     private var saveMenuItem: MenuItem? = null
     private var lastSelectedCompany: String? = null
@@ -97,6 +100,17 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private val selectConsumoFileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val uri: Uri? = result.data?.data
+            uri?.let { 
+                saveConsumoFileUri(it)
+                openConsumoFile(it)
+                drawerLayout.closeDrawer(GravityCompat.START)
+            }
+        }
+    }
+
     private val createTemplateLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val uri: Uri? = result.data?.data
@@ -115,6 +129,24 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private val createConsumoTemplateLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val uri: Uri? = result.data?.data
+            uri?.let { newUri ->
+                lifecycleScope.launch {
+                    val res = consumoRepository.createFromSample(newUri, getTechnicianName() ?: "")
+                    if (res.isSuccess) {
+                        saveConsumoFileUri(newUri)
+                        openConsumoFile(newUri)
+                        Toast.makeText(this@MainActivity, "File consumi creato", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@MainActivity, "Errore creazione file consumi", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
+    }
+
     private val requestPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
     ) { _ -> }
@@ -127,6 +159,7 @@ class MainActivity : AppCompatActivity() {
 
         settingsRepository = SettingsRepository(this)
         fileStorageManager = FileStorageManager(this)
+        consumoRepository = ConsumoRepository(this)
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -178,9 +211,6 @@ class MainActivity : AppCompatActivity() {
         cbIncludeTechName.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeTechName = isChecked
         }
-        cbIncludeDate.setOnClickListener {
-            // Not needed as it is a checkbox with onCheckedChangeListener
-        }
         cbIncludeDate.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeDate = isChecked
         }
@@ -192,10 +222,15 @@ class MainActivity : AppCompatActivity() {
         val btnElecnor: MaterialButton = findViewById(R.id.navBtnElecnor)
         val btnSertori: MaterialButton = findViewById(R.id.navBtnSertori)
         val btnSirti: MaterialButton = findViewById(R.id.navBtnSirti)
+        val btnConsumo: MaterialButton = findViewById(R.id.navBtnConsumo)
         val btnAddRow: MaterialButton = findViewById(R.id.navBtnAddRow)
         val btnResetFile: MaterialButton = findViewById(R.id.navBtnResetFile)
 
         adapter = ExcelDataAdapter(mutableListOf()) {
+            if (isConsumoMode) {
+                viewModel.saveStateForUndo(adapter.getData())
+                return@ExcelDataAdapter
+            }
             // Callback eseguito quando i dati cambiano (perdita focus, riga aggiunta/rimossa, +/-)
             val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
             val currentData = adapter.getData().map { Pair(it.label, it.value) }
@@ -231,6 +266,10 @@ class MainActivity : AppCompatActivity() {
         setupCompanyButton(btnElecnor, "Elecnor")
         setupCompanyButton(btnSertori, "Sertori")
         setupCompanyButton(btnSirti, "Sirti")
+        
+        btnConsumo.setOnClickListener {
+            handleConsumoClick()
+        }
 
         btnAddRow.setOnClickListener {
             adapter.addRow()
@@ -517,7 +556,7 @@ class MainActivity : AppCompatActivity() {
                 val baseName = originalFullName.substringBeforeLast('.')
                 
                 // Il nome base deve essere sempre il nome dell'appalto
-                var finalName = lastSelectedCompany ?: baseName
+                var finalName = if (isConsumoMode) "Consumo" else (lastSelectedCompany ?: baseName)
 
                 if (cbIncludeTechName.isChecked) {
                     getTechnicianName()?.let {
@@ -532,6 +571,18 @@ class MainActivity : AppCompatActivity() {
                 }
                 
                 val finalFullName = "$finalName.xlsx"
+
+                if (isConsumoMode) {
+                    val contentUri = FileProvider.getUriForFile(this, "${applicationContext.packageName}.fileprovider", File(uri.path ?: ""))
+                    // Per il consumo potremmo semplicemente condividere il file salvato
+                    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+                        type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        putExtra(Intent.EXTRA_STREAM, uri)
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    startActivity(Intent.createChooser(shareIntent, getString(R.string.intent_chooser_send, finalFullName)))
+                    return@saveExcelFile
+                }
 
                 // 1. Legge i materiali dal file del tecnico
                 val techMaterials = adapter.getData().map { Pair(it.label, it.value) }
@@ -590,6 +641,62 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             showChoiceDialog(company)
+        }
+    }
+
+    private fun handleConsumoClick() {
+        val uriString = settingsRepository.consumoFileUri
+        if (uriString != null) {
+            val uri = uriString.toUri()
+            if (fileStorageManager.isUriAccessible(uri)) {
+                openConsumoFile(uri)
+                drawerLayout.closeDrawer(GravityCompat.START)
+                return
+            }
+        }
+        
+        AlertDialog.Builder(this)
+            .setTitle("Materiali di consumo")
+            .setMessage("Seleziona come procedere per il file dei consumi")
+            .setPositiveButton("Nuovo file") { _, _ ->
+                val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
+                    addCategory(Intent.CATEGORY_OPENABLE)
+                    type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                    putExtra(Intent.EXTRA_TITLE, "Consumo.xlsx")
+                }
+                createConsumoTemplateLauncher.launch(intent)
+            }
+            .setNegativeButton("Usa esistente") { _, _ ->
+                val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                    addCategory(Intent.CATEGORY_OPENABLE)
+                    type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                }
+                selectConsumoFileLauncher.launch(intent)
+            }
+            .setNeutralButton(getString(R.string.btn_cancel), null)
+            .show()
+    }
+
+    private fun openConsumoFile(uri: Uri) {
+        isConsumoMode = true
+        currentFileUri = uri
+        consumoFileUri = uri
+        lastSelectedCompany = "Consumo"
+        toolbar.title = "Materiali di consumo"
+        tvCurrentFileName.text = "Materiali di consumo"
+        
+        lifecycleScope.launch {
+            progressBar.visibility = View.VISIBLE
+            val result = consumoRepository.readConsumoFile(uri)
+            progressBar.visibility = View.GONE
+            if (result.isSuccess) {
+                val data = result.getOrNull() ?: emptyList()
+                adapter.updateData(data)
+                viewModel.saveStateForUndo(data)
+                saveConsumoFileUri(uri)
+            } else {
+                Toast.makeText(this@MainActivity, "Errore lettura consumi", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
@@ -672,8 +779,18 @@ class MainActivity : AppCompatActivity() {
 
     private fun resetCurrentFile() {
         val uri = currentFileUri ?: return
-        viewModel.resetExcelFile(uri, lastSelectedCompany)
-        Toast.makeText(this@MainActivity, getString(R.string.toast_file_reset), Toast.LENGTH_SHORT).show()
+        if (isConsumoMode) {
+             lifecycleScope.launch {
+                val res = consumoRepository.createFromSample(uri, getTechnicianName() ?: "")
+                if (res.isSuccess) {
+                    openConsumoFile(uri)
+                    Toast.makeText(this@MainActivity, getString(R.string.toast_file_reset), Toast.LENGTH_SHORT).show()
+                }
+             }
+        } else {
+            viewModel.resetExcelFile(uri, lastSelectedCompany)
+            Toast.makeText(this@MainActivity, getString(R.string.toast_file_reset), Toast.LENGTH_SHORT).show()
+        }
         drawerLayout.closeDrawer(GravityCompat.START)
     }
 
@@ -684,7 +801,11 @@ class MainActivity : AppCompatActivity() {
         uriString?.let {
             val uri = it.toUri()
             if (fileStorageManager.isUriAccessible(uri)) {
-                openExcelFile(uri)
+                if (lastSelectedCompany == "Consumo") {
+                    openConsumoFile(uri)
+                } else {
+                    openExcelFile(uri)
+                }
             } else {
                 Toast.makeText(this, getString(R.string.toast_file_not_found), Toast.LENGTH_LONG).show()
                 settingsRepository.clearLastFileUri()
@@ -707,12 +828,21 @@ class MainActivity : AppCompatActivity() {
         } catch (_: Exception) {}
     }
 
+    private fun saveConsumoFileUri(uri: Uri) {
+        consumoFileUri = uri
+        settingsRepository.consumoFileUri = uri.toString()
+        try {
+            contentResolver.takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+        } catch (_: Exception) {}
+    }
+
     private fun getCompanyFileUri(company: String): Uri? {
         val uriString = settingsRepository.getCompanyFileUri(company)
         return uriString?.toUri()
     }
 
     private fun openExcelFile(uri: Uri) {
+        isConsumoMode = false
         currentFileUri = uri
         val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, getString(R.string.default_file_name))
         val fileName = fileNameWithExt.substringBeforeLast('.')
@@ -799,6 +929,20 @@ class MainActivity : AppCompatActivity() {
     private fun saveExcelFile(silent: Boolean = false, onComplete: (() -> Unit)? = null) {
         val uri = currentFileUri ?: return
         
+        if (isConsumoMode) {
+            lifecycleScope.launch {
+                val result = consumoRepository.saveConsumoFile(uri, adapter.getData(), getTechnicianName() ?: "")
+                if (result.isSuccess) {
+                    if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
+                    saveLastFileUri(uri)
+                    onComplete?.invoke()
+                } else {
+                    if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
+                }
+            }
+            return
+        }
+
         val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
         val currentData = adapter.getData().map { Pair(it.label, it.value) }
         val mergedPairs = MaterialMerger().merge(currentData, masterList)

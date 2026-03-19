@@ -64,6 +64,7 @@
             android:paddingTop="180dp"
             android:paddingHorizontal="16dp">
 
+            <!-- 1) Sezione MODELLI -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -103,12 +104,14 @@
                 app:cornerRadius="28dp"
                 android:textAlignment="viewStart" />
 
+            <!-- 2) Separatore -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/gemini_border"
                 android:layout_marginVertical="16dp" />
 
+            <!-- 3) Aggiungi riga -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/navBtnAddRow"
                 style="@style/Widget.Material3.Button.TextButton"
@@ -121,6 +124,7 @@
                 app:cornerRadius="28dp"
                 android:textAlignment="viewStart" />
 
+            <!-- 4) Reset File -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/navBtnResetFile"
                 style="@style/Widget.Material3.Button.TextButton"
@@ -133,12 +137,32 @@
                 app:cornerRadius="28dp"
                 android:textAlignment="viewStart" />
 
+            <!-- 5) Separatore -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/gemini_border"
                 android:layout_marginVertical="16dp" />
 
+            <!-- 6) Materiali di consumo -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navBtnConsumo"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Materiali di consumo"
+                app:icon="@android:drawable/ic_menu_add"
+                app:cornerRadius="28dp"
+                android:textAlignment="viewStart" />
+
+            <!-- 7) Separatore -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gemini_border"
+                android:layout_marginVertical="16dp" />
+
+            <!-- 8) OPZIONI CONDIVISIONE -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -148,6 +172,7 @@
                 android:textSize="12sp"
                 android:layout_marginBottom="8dp" />
 
+            <!-- 9) Checkbox nome tecnico -->
             <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/cbIncludeTechName"
                 android:layout_width="match_parent"
@@ -156,6 +181,7 @@
                 android:textColor="@color/gemini_text_main"
                 app:buttonTint="@color/gemini_accent_blue" />
 
+            <!-- 10) Checkbox data odierna -->
             <com.google.android.material.checkbox.MaterialCheckBox
                 android:id="@+id/cbIncludeDate"
                 android:layout_width="match_parent"
@@ -164,11 +190,19 @@
                 android:textColor="@color/gemini_text_main"
                 app:buttonTint="@color/gemini_accent_blue" />
 
+            <!-- 11) Separatore -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gemini_border"
+                android:layout_marginVertical="16dp" />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
+            <!-- 12) Sezione TECNICO -->
             <LinearLayout
                 android:id="@+id/layoutTechName"
                 android:layout_width="match_parent"

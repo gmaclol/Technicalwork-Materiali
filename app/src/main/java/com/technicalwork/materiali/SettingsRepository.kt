@@ -33,6 +33,10 @@ class SettingsRepository(context: Context) {
             editor.apply()
         }
 
+    var consumoFileUri: String?
+        get() = prefs.getString("consumo_file_uri", null)
+        set(value) = prefs.edit().putString("consumo_file_uri", value).apply()
+
     fun getCompanyFileUri(company: String): String? {
         return prefs.getString("uri_$company", null)
     }
