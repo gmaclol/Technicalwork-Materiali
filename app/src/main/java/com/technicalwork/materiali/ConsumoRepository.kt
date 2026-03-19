@@ -38,7 +38,7 @@ class ConsumoRepository(private val context: Context) {
 
                     if (label.isNotEmpty()) {
                         val value = dataFormatter.formatCellValue(row.getCell(1)).trim()
-                        val cleanValue = if (value == "N°") "" else value
+                        val cleanValue = if (value == "N°" || value.isBlank()) "" else value.removePrefix("N° ").trim()
                         dataList.add(ExcelRowData(label, cleanValue))
                     }
                 }
@@ -94,7 +94,7 @@ class ConsumoRepository(private val context: Context) {
                             cellB.cellStyle = newStyle
                         }
                         
-                        val valueToWrite = data[dataIndex].value.ifEmpty { "N°" }
+                        val valueToWrite = if (data[dataIndex].value.isEmpty()) "N°" else "N° ${data[dataIndex].value}"
                         cellB.setCellValue(valueToWrite)
                         dataIndex++
                     }
