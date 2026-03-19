@@ -1,5 +1,8 @@
 package com.technicalwork.materiali
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -20,15 +23,29 @@ class FirebaseRepository {
      * Crea/Aggiorna un documento nella collection [company] con ID [technicianName].
      */
     suspend fun syncToFirestore(
+        context: Context,
         company: String,
         technicianName: String,
         materials: List<ExcelRowData>,
         lat: Double? = null,
-        lng: Double? = null
-    ) {
-        if (technicianName.isBlank() || company.isBlank()) return
+        lng: Double? = null,
+        isRetry: Boolean = false
+    ): Boolean {
+        if (technicianName.isBlank() || company.isBlank()) return false
 
-        try {
+        // Controllo Connessione
+        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val capabilities = cm.getNetworkCapabilities(cm.activeNetwork)
+        val isConnected = capabilities?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) == true
+
+        if (!isConnected) {
+            if (!isRetry) {
+                SyncQueue().save(context, company, technicianName, materials, lat, lng)
+            }
+            return false
+        }
+
+        return try {
             val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
 
             // Filtra i materiali escludendo i separatori e crea la mappa
@@ -93,10 +110,13 @@ class FirebaseRepository {
                     }
                 }
             }
-
+            true
         } catch (e: Exception) {
-            // Fallisce silenziosamente come richiesto
             e.printStackTrace()
+            if (!isRetry) {
+                SyncQueue().save(context, company, technicianName, materials, lat, lng)
+            }
+            false
         }
     }
 }

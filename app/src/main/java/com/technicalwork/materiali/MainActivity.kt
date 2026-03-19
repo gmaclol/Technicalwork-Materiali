@@ -307,6 +307,11 @@ class MainActivity : AppCompatActivity() {
                 updateCheckHandler.postDelayed(updateCheckRunnable, 2000)
             }
         }
+
+        // Svuota la coda offline
+        lifecycleScope.launch(Dispatchers.IO) {
+            SyncQueue().flush(this@MainActivity, FirebaseRepository())
+        }
     }
 
     override fun onPause() {
@@ -535,6 +540,7 @@ class MainActivity : AppCompatActivity() {
                     val (lat, lng) = getLastLocation()
                     lifecycleScope.launch(Dispatchers.IO) {
                         FirebaseRepository().syncToFirestore(
+                            this@MainActivity,
                             company,
                             techName,
                             mergedList.map { ExcelRowData(it.first, it.second) },
@@ -799,7 +805,7 @@ class MainActivity : AppCompatActivity() {
                 val techName = getTechnicianName() ?: return@saveExcelFile
                 val (lat, lng) = getLastLocation()
                 lifecycleScope.launch(Dispatchers.IO) {
-                    FirebaseRepository().syncToFirestore(company, techName, adapter.getData(), lat, lng)
+                    FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, adapter.getData(), lat, lng)
                 }
 
                 onComplete?.invoke()
