@@ -25,6 +25,7 @@ class ExcelDataAdapter(
     private val onDataChanged: () -> Unit
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
+    var isConsumoMode = false
     private var isUpdatingIndividually = false
     private val separatorRegex = Regex("^::.*::$")
     private val separatorExtraRegex = Regex("^;;.*;;$")
@@ -139,17 +140,33 @@ class ExcelDataAdapter(
         holder.etValue.setText(item.value)
         holder.tvLabel.isSelected = true // Attiva Marquee
 
+        // Ottimizzazione Marquee e UI per Consumo
+        if (isConsumoMode) {
+            holder.tvLabel.textScaleX = 1f
+            holder.tvLabel.textSize = 14f
+        } else {
+            holder.tvLabel.textScaleX = 1f
+            holder.tvLabel.textSize = 16f
+        }
+
         updateStepButtonsUI(holder, item.value)
 
         // Click sulla TextView -> Logica condizionale per editing nome
         val isFromMaster = masterListSet.contains(item.label.trim().lowercase())
         holder.tvLabel.setOnClickListener {
+            // Se in modalità consumo e NON è "ALTRO:", resetta solo il marquee
+            if (isConsumoMode && !item.label.uppercase().startsWith("ALTRO:")) {
+                holder.tvLabel.isSelected = false
+                holder.tvLabel.isSelected = true
+                return@setOnClickListener
+            }
+
             if (isFromMaster) {
                 // Riga master: riavvia solo il marquee
                 holder.tvLabel.isSelected = false
                 holder.tvLabel.isSelected = true
             } else {
-                // Riga extra: apre l'editing
+                // Riga extra o "ALTRO:": apre l'editing
                 holder.tvLabel.visibility = View.GONE
                 holder.etLabel.visibility = View.VISIBLE
                 holder.etLabel.requestFocus()

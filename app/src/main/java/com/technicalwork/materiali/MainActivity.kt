@@ -186,7 +186,7 @@ class MainActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(drawerLayout) { _, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            toolbar.setPadding(0, systemBars.top, 0, 0)
+            toolbar.setPadding(0, systemBars.top, 0, systemBars.bottom)
             recyclerView.setPadding(
                 recyclerView.paddingLeft,
                 recyclerView.paddingTop,
@@ -667,7 +667,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                     addCategory(Intent.CATEGORY_OPENABLE)
                     type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                    putExtra(Intent.EXTRA_TITLE, "Consumo.xlsx")
+                    putExtra(Intent.EXTRA_TITLE, "Materiali di consumo.xlsx")
                 }
                 createConsumoTemplateLauncher.launch(intent)
             }
@@ -684,11 +684,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun openConsumoFile(uri: Uri) {
         isConsumoMode = true
+        adapter.isConsumoMode = true
         currentFileUri = uri
         consumoFileUri = uri
         lastSelectedCompany = "Consumo"
         toolbar.title = "Materiali di consumo"
         tvCurrentFileName.text = "Materiali di consumo"
+        viewModel.currentCompany = "Consumo"
         
         lifecycleScope.launch {
             progressBar.visibility = View.VISIBLE
@@ -699,6 +701,7 @@ class MainActivity : AppCompatActivity() {
                 adapter.updateData(data)
                 viewModel.saveStateForUndo(data)
                 viewModel.markAsSaved()
+                HistoryRepository(this@MainActivity).cleanOldSnapshots("Consumo")
                 saveConsumoFileUri(uri)
             } else {
                 Toast.makeText(this@MainActivity, "Errore lettura consumi", Toast.LENGTH_SHORT).show()
@@ -849,6 +852,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun openExcelFile(uri: Uri) {
         isConsumoMode = false
+        adapter.isConsumoMode = false
         currentFileUri = uri
         val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, getString(R.string.default_file_name))
         val fileName = fileNameWithExt.substringBeforeLast('.')
