@@ -18,16 +18,17 @@
     <string name="dialog_msg_reset_file">Tutte le modifiche andranno perse. Ripristino il file originale?</string>
     <string name="dialog_title_invalid_format">Formato non valido</string>
     <string name="dialog_msg_invalid_format">Il file selezionato non sembra seguire la struttura standard. Vuoi caricare il modello pulito?</string>
-    <string name="dialog_title_delete_row">Elimina riga</string>
-    <string name="dialog_msg_delete_row">Sei sicuro di voler eliminare questa casella?</string>
-    <string name="dialog_title_restore_state">Ripristina stato</string>
-    <string name="dialog_msg_restore_state">Vuoi tornare a questo punto? Le modifiche successive andranno perse.</string>
     <string name="dialog_title_update_available">Aggiornamento disponibile</string>
     <string name="dialog_msg_update_available">È disponibile una nuova versione (%1$s). Vuoi aggiornare ora?</string>
+    <string name="dialog_title_apk_ready">Aggiornamento pronto</string>
+    <string name="dialog_msg_apk_ready">Il nuovo aggiornamento è stato scaricato. Vuoi installarlo adesso?</string>
+    <string name="dialog_title_delete_row">Elimina riga</string>
+    <string name="dialog_msg_delete_row">Sei sicuro di voler eliminare questa riga?</string>
 
     <!-- Pulsanti (Buttons/Azioni) -->
     <string name="btn_save">Salva</string>
     <string name="btn_cancel">Annulla</string>
+    <string name="btn_after">Dopo</string>
     <string name="btn_rename">Rinomina</string>
     <string name="btn_new_from_template">Nuovo da Modello</string>
     <string name="btn_use_existing">Usa Esistente</string>
@@ -39,6 +40,7 @@
     <string name="btn_delete">Elimina</string>
     <string name="btn_restore">Ripristina</string>
     <string name="btn_update">Aggiorna</string>
+    <string name="btn_install">Installa</string>
 
     <!-- Menu contestuali -->
     <string name="menu_rename_file">Rinomina File</string>
@@ -61,11 +63,14 @@
     <string name="toast_save_error">Errore salvataggio</string>
     <string name="toast_load_error">Errore caricamento</string>
     <string name="toast_undo">Annullato</string>
+    <string name="toast_update_error">Errore durante lo scaricamento dell\'aggiornamento</string>
 
     <!-- Altri testi -->
     <string name="intent_chooser_send">Invia %s</string>
     <string name="default_company_name">Appalto</string>
     <string name="default_file_name">File</string>
     <string name="text_modified">Modificato</string>
+    <string name="text_download_starting">Scaricamento avviato...</string>
+    <string name="text_downloading">Scaricamento aggiornamento...</string>
 
 </resources>

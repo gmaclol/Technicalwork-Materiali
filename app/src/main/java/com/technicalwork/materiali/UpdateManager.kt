@@ -1,16 +1,13 @@
 package com.technicalwork.materiali
 
 import android.app.DownloadManager
-import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import androidx.core.content.pm.PackageInfoCompat
 import androidx.core.net.toUri
@@ -84,7 +81,7 @@ class UpdateManager(private val context: Context) {
         return tagName.replace(Regex("[^0-9]"), "").toIntOrNull() ?: 0
     }
 
-    fun downloadAndInstall(downloadUrl: String) {
+    fun downloadAndInstall(downloadUrl: String, onDownloadStarted: (() -> Unit)? = null) {
         val destination = File(context.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), "update.apk")
         if (destination.exists()) destination.delete()
 
@@ -97,29 +94,18 @@ class UpdateManager(private val context: Context) {
         val manager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
         val downloadId = manager.enqueue(request)
 
-        val onComplete = object : BroadcastReceiver() {
-            override fun onReceive(ctx: Context, intent: Intent) {
-                val id = intent.getLongExtra(DownloadManager.EXTRA_DOWNLOAD_ID, -1)
-                if (id == downloadId) {
-                    installApk(destination)
-                    try {
-                        context.unregisterReceiver(this)
-                    } catch (_: Exception) {}
-                }
-            }
-        }
+        // Salva downloadId e path in SharedPreferences
+        val prefs = context.getSharedPreferences("updates", Context.MODE_PRIVATE)
+        prefs.edit()
+            .putLong("pending_download_id", downloadId)
+            .putString("pending_apk_path", destination.absolutePath)
+            .apply()
         
-        ContextCompat.registerReceiver(
-            context,
-            onComplete,
-            IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE),
-            ContextCompat.RECEIVER_NOT_EXPORTED
-        )
-        
+        onDownloadStarted?.invoke()
         Toast.makeText(context, "Scaricamento avviato...", Toast.LENGTH_SHORT).show()
     }
 
-    private fun installApk(file: File) {
+    fun installApk(file: File) {
         val uri = FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
         val intent = Intent(Intent.ACTION_VIEW).apply {
             setDataAndType(uri, "application/vnd.android.package-archive")
