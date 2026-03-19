@@ -698,6 +698,7 @@ class MainActivity : AppCompatActivity() {
                 val data = result.getOrNull() ?: emptyList()
                 adapter.updateData(data)
                 viewModel.saveStateForUndo(data)
+                viewModel.markAsSaved()
                 saveConsumoFileUri(uri)
             } else {
                 Toast.makeText(this@MainActivity, "Errore lettura consumi", Toast.LENGTH_SHORT).show()
@@ -939,6 +940,7 @@ class MainActivity : AppCompatActivity() {
             lifecycleScope.launch {
                 val result = consumoRepository.saveConsumoFile(uri, adapter.getData(), getTechnicianName() ?: "")
                 if (result.isSuccess) {
+                    viewModel.markAsSaved()
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
                     onComplete?.invoke()

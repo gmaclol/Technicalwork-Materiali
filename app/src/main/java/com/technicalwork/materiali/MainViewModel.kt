@@ -127,6 +127,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    fun markAsSaved() {
+        _hasUnsavedChanges.value = false
+    }
+
     fun clearError() {
         _uiState.value = UiState.Initial
     }
