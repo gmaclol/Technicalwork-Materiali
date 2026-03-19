@@ -703,6 +703,7 @@ class MainActivity : AppCompatActivity() {
                 viewModel.markAsSaved()
                 HistoryRepository(this@MainActivity).cleanOldSnapshots("Consumo")
                 saveConsumoFileUri(uri)
+                saveLastFileUri(uri)
             } else {
                 Toast.makeText(this@MainActivity, "Errore lettura consumi", Toast.LENGTH_SHORT).show()
             }
