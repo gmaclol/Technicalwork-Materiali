@@ -131,6 +131,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _hasUnsavedChanges.value = false
     }
 
+    fun clearState() {
+        _uiState.value = UiState.Initial
+    }
+
     fun clearError() {
         _uiState.value = UiState.Initial
     }

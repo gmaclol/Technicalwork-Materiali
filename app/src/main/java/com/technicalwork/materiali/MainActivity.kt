@@ -462,7 +462,9 @@ class MainActivity : AppCompatActivity() {
         when (state) {
             is UiState.Initial, is UiState.Loading -> { } // future loader
             is UiState.Success -> {
-                adapter.updateData(state.data)
+                if (!isConsumoMode) {
+                    adapter.updateData(state.data)
+                }
             }
             is UiState.Error -> {
                 if (state.isInvalidFormat) {
@@ -733,6 +735,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openConsumoFile(uri: Uri) {
+        viewModel.clearState()
         settingsRepository.lastMode = "consumo"
         isConsumoMode = true
         adapter.isConsumoMode = true
@@ -963,6 +966,7 @@ class MainActivity : AppCompatActivity() {
         val undoView = undoItem?.actionView ?: LayoutInflater.from(this).inflate(R.layout.menu_undo_button, recyclerView, false).also {
             undoItem?.actionView = it
         }
+        undoView.setOnClickListener { performUndo() }
         undoView.setOnClickListener { performUndo() }
         undoView.setOnLongClickListener { 
             showHistoryBottomSheet()
