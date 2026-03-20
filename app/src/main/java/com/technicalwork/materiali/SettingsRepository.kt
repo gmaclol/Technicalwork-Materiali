@@ -37,6 +37,10 @@ class SettingsRepository(context: Context) {
         get() = prefs.getString("consumo_file_uri", null)
         set(value) = prefs.edit().putString("consumo_file_uri", value).apply()
 
+    var lastMode: String
+        get() = prefs.getString("last_mode", "appalto") ?: "appalto"
+        set(value) = prefs.edit().putString("last_mode", value).apply()
+
     fun getCompanyFileUri(company: String): String? {
         return prefs.getString("uri_$company", null)
     }

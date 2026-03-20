@@ -53,7 +53,7 @@ class ConsumoRepository(private val context: Context) {
     /**
      * Salva i dati di consumo nel file esistente.
      * Aggiorna data odierna in A6, tecnico in C6 e i valori in colonna B dalla riga 8.
-     * Se il valore è vuoto scrive "N°". Preserva gli stili esistenti.
+     * Gestisce l'aggiunta di nuove righe se l'utente ne ha create di extra.
      */
     suspend fun saveConsumoFile(uri: Uri, data: List<ExcelRowData>, technicianName: String): Result<Unit> = withContext(Dispatchers.IO) {
         try {
@@ -73,31 +73,64 @@ class ConsumoRepository(private val context: Context) {
             cellA6.setCellValue(today)
             cellC6.setCellValue("TECNICO: $technicianName")
 
-            // Aggiornamento dati (Riga 8 -> Indice 7)
+            // 1. Aggiornamento righe esistenti
             var dataIndex = 0
+            var stopRowIndex = -1
             for (i in 7..sheet.lastRowNum) {
                 val row = sheet.getRow(i) ?: continue
-                val label = dataFormatter.formatCellValue(row.getCell(0)).trim()
+                val labelFromFile = dataFormatter.formatCellValue(row.getCell(0)).trim()
                 
-                // Si ferma appena trova una riga di stop anche in scrittura
-                if (isStopRow(label)) break
+                // Individua la riga di stop (NB:, ecc.)
+                if (isStopRow(labelFromFile)) {
+                    stopRowIndex = i
+                    break
+                }
 
-                if (label.isNotEmpty()) {
+                if (labelFromFile.isNotEmpty()) {
                     if (dataIndex < data.size) {
+                        // Aggiorna il label (necessario per le righe "ALTRO:" riempite)
+                        val cellA = row.getCell(0) ?: row.createCell(0)
+                        cellA.setCellValue(data[dataIndex].label)
+
+                        // Aggiorna il valore in colonna B
                         val cellB = row.getCell(1) ?: row.createCell(1)
-                        
-                        // Preserva stili clonandoli
-                        val oldStyle = cellB.cellStyle
-                        if (oldStyle != null) {
-                            val newStyle = workbook.createCellStyle()
-                            newStyle.cloneStyleFrom(oldStyle)
-                            cellB.cellStyle = newStyle
-                        }
-                        
                         val valueToWrite = if (data[dataIndex].value.isEmpty()) "N°" else "N° ${data[dataIndex].value}"
                         cellB.setCellValue(valueToWrite)
+                        
                         dataIndex++
                     }
+                }
+            }
+
+            // 2. Gestione righe extra aggiunte dall'utente (punto di inserimento: stopRowIndex)
+            if (dataIndex < data.size && stopRowIndex != -1) {
+                val numExtraRows = data.size - dataIndex
+                
+                // Fa spazio nel foglio spostando in basso il blocco finale delle note
+                sheet.shiftRows(stopRowIndex, sheet.lastRowNum, numExtraRows)
+
+                // Recupera stile e altezza dalla riga precedente (l'ultima "ALTRO:") per coerenza visiva
+                val templateRow = sheet.getRow(stopRowIndex - 1)
+                val templateHeight = templateRow?.height ?: sheet.defaultRowHeight
+                val styleA = templateRow?.getCell(0)?.cellStyle
+                val styleB = templateRow?.getCell(1)?.cellStyle
+
+                for (extraIdx in 0 until numExtraRows) {
+                    val newRow = sheet.createRow(stopRowIndex + extraIdx)
+                    newRow.height = templateHeight
+
+                    // Colonna A: Nuovo Label
+                    val cellA = newRow.createCell(0)
+                    cellA.setCellValue(data[dataIndex].label)
+                    if (styleA != null) cellA.cellStyle = styleA
+
+                    // Colonna B: Nuovo Valore
+                    val cellB = newRow.createCell(1)
+                    val valueToWrite = if (data[dataIndex].value.isEmpty()) "N°" else "N° ${data[dataIndex].value}"
+                    cellB.setCellValue(valueToWrite)
+                    if (styleB != null) cellB.cellStyle = styleB
+
+                    dataIndex++
                 }
             }
 

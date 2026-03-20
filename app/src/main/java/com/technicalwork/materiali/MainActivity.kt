@@ -733,6 +733,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openConsumoFile(uri: Uri) {
+        settingsRepository.lastMode = "consumo"
         isConsumoMode = true
         adapter.isConsumoMode = true
         currentFileUri = uri
@@ -745,10 +746,12 @@ class MainActivity : AppCompatActivity() {
         viewModel.currentCompany = "Consumo"
         
         lifecycleScope.launch {
+            val wasConsumoMode = isConsumoMode
             progressBar.visibility = View.VISIBLE
             val result = consumoRepository.readConsumoFile(uri)
             progressBar.visibility = View.GONE
             if (result.isSuccess) {
+                if (!isConsumoMode) return@launch
                 val data = result.getOrNull() ?: emptyList()
                 adapter.updateData(data)
                 viewModel.saveStateForUndo(data)
@@ -864,7 +867,7 @@ class MainActivity : AppCompatActivity() {
         uriString?.let {
             val uri = it.toUri()
             if (fileStorageManager.isUriAccessible(uri)) {
-                if (lastSelectedCompany == "Consumo") {
+                if (settingsRepository.lastMode == "consumo") {
                     openConsumoFile(uri)
                 } else {
                     openExcelFile(uri)
@@ -905,6 +908,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openExcelFile(uri: Uri) {
+        settingsRepository.lastMode = "appalto"
         isConsumoMode = false
         adapter.isConsumoMode = false
         currentFileUri = uri
