@@ -170,6 +170,10 @@ class ExcelDataAdapter(
                 holder.tvLabel.visibility = View.GONE
                 holder.etLabel.visibility = View.VISIBLE
                 holder.etLabel.requestFocus()
+                holder.etLabel.post {
+                    val recyclerView = holder.etLabel.parent?.parent?.parent as? RecyclerView
+                    recyclerView?.smoothScrollToPosition(holder.bindingAdapterPosition)
+                }
                 
                 // Apre la tastiera automaticamente
                 val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -194,6 +198,12 @@ class ExcelDataAdapter(
 
         // Listener per etValue: mantiene il comportamento standard (trigger onDataChanged al focus loss)
         holder.etValue.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                holder.etValue.post {
+                    val recyclerView = holder.etValue.parent?.parent?.parent as? RecyclerView
+                    recyclerView?.smoothScrollToPosition(holder.bindingAdapterPosition)
+                }
+            }
             if (!hasFocus && !isUpdatingIndividually) {
                 onDataChanged()
             }

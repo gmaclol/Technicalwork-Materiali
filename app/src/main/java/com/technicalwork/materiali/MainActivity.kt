@@ -182,8 +182,13 @@ class MainActivity : AppCompatActivity() {
         drawerLayout = findViewById(R.id.drawerLayout)
         recyclerView = findViewById(R.id.recyclerView)
         ViewCompat.setOnApplyWindowInsetsListener(recyclerView) { view, insets ->
-            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
-            if (imeHeight > 0) {
+            val imeInsets = insets.getInsets(WindowInsetsCompat.Type.ime())
+            val navInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars())
+            val bottomPadding = maxOf(imeInsets.bottom, navInsets.bottom)
+            view.setPadding(view.paddingLeft, view.paddingTop, view.paddingRight, bottomPadding)
+            (view as? RecyclerView)?.clipToPadding = false
+
+            if (imeInsets.bottom > 0) {
                 val focusedView = recyclerView.findFocus()
                 focusedView?.let {
                     recyclerView.post {
@@ -200,13 +205,7 @@ class MainActivity : AppCompatActivity() {
         ViewCompat.setOnApplyWindowInsetsListener(drawerLayout) { _, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             toolbar.setPadding(0, systemBars.top, 0, systemBars.bottom)
-            recyclerView.setPadding(
-                recyclerView.paddingLeft,
-                recyclerView.paddingTop,
-                recyclerView.paddingRight,
-                systemBars.bottom
-            )
-            recyclerView.clipToPadding = false
+            // rimosso il setPadding della recyclerView qui perche lo gestiamo sopra con imeInsets
             val navView = findViewById<NavigationView>(R.id.navigationView)
             navView.setPadding(0, systemBars.top, 0, systemBars.bottom)
             insets
