@@ -181,6 +181,19 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout = findViewById(R.id.drawerLayout)
         recyclerView = findViewById(R.id.recyclerView)
+        ViewCompat.setOnApplyWindowInsetsListener(recyclerView) { view, insets ->
+            val imeHeight = insets.getInsets(WindowInsetsCompat.Type.ime()).bottom
+            if (imeHeight > 0) {
+                val focusedView = recyclerView.findFocus()
+                focusedView?.let {
+                    recyclerView.post {
+                        val position = recyclerView.getChildAdapterPosition(recyclerView.findContainingItemView(it) ?: return@post)
+                        if (position != RecyclerView.NO_ID.toInt()) recyclerView.smoothScrollToPosition(position)
+                    }
+                }
+            }
+            insets
+        }
         progressBar = findViewById(R.id.progressBar)
         val navigationView: NavigationView = findViewById(R.id.navigationView)
 
@@ -688,7 +701,9 @@ class MainActivity : AppCompatActivity() {
         currentFileUri = uri
         consumoFileUri = uri
         lastSelectedCompany = "Consumo"
-        toolbar.title = "Materiali di consumo"
+        val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, "Materiali di consumo")
+        val fileName = fileNameWithExt.substringBeforeLast('.')
+        toolbar.title = fileName
         tvCurrentFileName.text = "Materiali di consumo"
         viewModel.currentCompany = "Consumo"
         
