@@ -286,6 +286,36 @@ class MainActivity : AppCompatActivity() {
             handleConsumoClick()
         }
 
+        btnConsumo.setOnLongClickListener {
+            val options = arrayOf(getString(R.string.menu_rename_file), getString(R.string.menu_change_file), "Resetta")
+            AlertDialog.Builder(this)
+                .setTitle("Materiali di consumo")
+                .setItems(options) { _, which ->
+                    when (which) {
+                        0 -> {
+                            val uri = consumoFileUri ?: settingsRepository.consumoFileUri?.toUri()
+                            uri?.let { showRenameDialog("Consumo", it) }
+                        }
+                        1 -> {
+                            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+                                addCategory(Intent.CATEGORY_OPENABLE)
+                                type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                            }
+                            selectConsumoFileLauncher.launch(intent)
+                        }
+                        2 -> {
+                            val uri = consumoFileUri ?: settingsRepository.consumoFileUri?.toUri()
+                            if (uri != null) {
+                                currentFileUri = uri
+                                showResetConfirmationDialog()
+                            }
+                        }
+                    }
+                }
+                .show()
+            true
+        }
+
         btnAddRow.setOnClickListener {
             adapter.addRow()
             recyclerView.smoothScrollToPosition(0) // Scorri all'inizio perché aggiungiamo in cima
@@ -522,8 +552,8 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun showRenameDialog(company: String) {
-        val uri = getCompanyFileUri(company) ?: return
+    private fun showRenameDialog(company: String, providedUri: Uri? = null) {
+        val uri = providedUri ?: getCompanyFileUri(company) ?: return
         val currentFullName = fileStorageManager.getFileNameFromUri(uri)
         val currentName = currentFullName.substringBeforeLast('.')
         val extension = currentFullName.substringAfterLast('.', "")
@@ -551,9 +581,15 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val newUri = fileStorageManager.safeRenameFile(uri, newName)
             if (newUri != null) {
-                saveCompanyFileUri(company, newUri)
+                if (company == "Consumo") {
+                    saveConsumoFileUri(newUri)
+                } else {
+                    saveCompanyFileUri(company, newUri)
+                }
+                
                 if (currentFileUri == uri) {
-                    openExcelFile(newUri)
+                    if (company == "Consumo") openConsumoFile(newUri)
+                    else openExcelFile(newUri)
                 }
                 Toast.makeText(this@MainActivity, getString(R.string.toast_file_renamed), Toast.LENGTH_SHORT).show()
             } else {

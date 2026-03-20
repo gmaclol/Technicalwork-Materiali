@@ -66,7 +66,7 @@ class ExcelDataAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        if (viewType == VIEW_TYPE_SEPARATOR || viewType == VIEW_TYPE_SEPARATOR_EXTRA) {
+        if (viewType == VIEW_TYPE_SEPARATOR || VIEW_TYPE_SEPARATOR_EXTRA == viewType) {
             val context = parent.context
             val density = context.resources.displayMetrics.density
             
@@ -154,8 +154,8 @@ class ExcelDataAdapter(
         // Click sulla TextView -> Logica condizionale per editing nome
         val isFromMaster = masterListSet.contains(item.label.trim().lowercase())
         holder.tvLabel.setOnClickListener {
-            // Se in modalità consumo e NON è "ALTRO:", resetta solo il marquee
-            if (isConsumoMode && !item.label.uppercase().startsWith("ALTRO:")) {
+            // Se in modalità consumo e NON è "ALTRO:" E NON è vuoto, resetta solo il marquee
+            if (isConsumoMode && !item.label.uppercase().startsWith("ALTRO:") && item.label.isNotBlank()) {
                 holder.tvLabel.isSelected = false
                 holder.tvLabel.isSelected = true
                 return@setOnClickListener
