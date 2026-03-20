@@ -53,7 +53,7 @@ class ConsumoRepository(private val context: Context) {
     /**
      * Salva i dati di consumo nel file esistente.
      * Aggiorna data odierna in A6, tecnico in C6 e i valori in colonna B dalla riga 8.
-     * Gestisce l'aggiunta di nuove righe se l'utente ne ha create di extra.
+     * Bug fix: abbina i dati alle righe esistenti tramite LABEL invece che per indice posizionale.
      */
     suspend fun saveConsumoFile(uri: Uri, data: List<ExcelRowData>, technicianName: String): Result<Unit> = withContext(Dispatchers.IO) {
         try {
@@ -73,66 +73,85 @@ class ConsumoRepository(private val context: Context) {
             cellA6.setCellValue(today)
             cellC6.setCellValue("TECNICO: $technicianName")
 
-            // 1. Aggiornamento righe esistenti
-            var dataIndex = 0
+            // --- NUOVA LOGICA DI ABBINAMENTO PER LABEL ---
+
+            // 1. Identificazione dei label già presenti nel file Excel
+            val fileLabels = mutableSetOf<String>()
+            for (i in 7..sheet.lastRowNum) {
+                val row = sheet.getRow(i) ?: continue
+                val label = dataFormatter.formatCellValue(row.getCell(0)).trim()
+                if (isStopRow(label)) break
+                if (label.isNotEmpty()) fileLabels.add(label)
+            }
+
+            // Separa i dati in arrivo in "standard" (label già nel file) ed "extra" (label nuovo)
+            val standardData = data.filter { fileLabels.contains(it.label) }.toMutableList()
+            val extraData = data.filter { !fileLabels.contains(it.label) }.toMutableList()
+
+            // 2. Aggiornamento righe esistenti nel file
             var stopRowIndex = -1
             for (i in 7..sheet.lastRowNum) {
                 val row = sheet.getRow(i) ?: continue
                 val labelFromFile = dataFormatter.formatCellValue(row.getCell(0)).trim()
                 
-                // Individua la riga di stop (NB:, ecc.)
+                // Individua la riga di stop per sapere dove inserire le extra successivamente
                 if (isStopRow(labelFromFile)) {
                     stopRowIndex = i
                     break
                 }
 
                 if (labelFromFile.isNotEmpty()) {
-                    if (dataIndex < data.size) {
-                        // Aggiorna il label (necessario per le righe "ALTRO:" riempite)
-                        val cellA = row.getCell(0) ?: row.createCell(0)
-                        cellA.setCellValue(data[dataIndex].label)
-
-                        // Aggiorna il valore in colonna B
-                        val cellB = row.getCell(1) ?: row.createCell(1)
-                        val valueToWrite = if (data[dataIndex].value.isEmpty()) "N°" else "N° ${data[dataIndex].value}"
+                    // Cerca il primo elemento nei dati standard che ha lo stesso label della riga corrente
+                    val matchIndex = standardData.indexOfFirst { it.label == labelFromFile }
+                    
+                    val cellB = row.getCell(1) ?: row.createCell(1)
+                    if (matchIndex != -1) {
+                        // Trovato: estraiamo il dato e scriviamo il valore
+                        val matchedItem = standardData.removeAt(matchIndex)
+                        val valueToWrite = if (matchedItem.value.isEmpty()) "N°" else "N° ${matchedItem.value}"
                         cellB.setCellValue(valueToWrite)
-                        
-                        dataIndex++
+                    } else {
+                        // Non trovato: azzeriamo il valore per pulire vecchi residui nel file
+                        cellB.setCellValue("N°")
                     }
                 }
             }
 
-            // 2. Gestione righe extra aggiunte dall'utente (punto di inserimento: stopRowIndex)
-            if (dataIndex < data.size && stopRowIndex != -1) {
-                val numExtraRows = data.size - dataIndex
+            // 3. Inserimento righe extra (prima di stopRowIndex)
+            // Uniamo extraData con eventuali elementi standard rimasti (es. se l'utente ha aggiunto 
+            // più righe con lo stesso label di quante ne esistessero nel file originale)
+            val remainingExtra = extraData + standardData
+            
+            if (remainingExtra.isNotEmpty() && stopRowIndex != -1) {
+                val numExtraRows = remainingExtra.size
                 
                 // Fa spazio nel foglio spostando in basso il blocco finale delle note
                 sheet.shiftRows(stopRowIndex, sheet.lastRowNum, numExtraRows)
 
-                // Recupera stile e altezza dalla riga precedente (l'ultima "ALTRO:") per coerenza visiva
+                // Recupera stile e altezza dalla riga precedente per coerenza visiva
                 val templateRow = sheet.getRow(stopRowIndex - 1)
                 val templateHeight = templateRow?.height ?: sheet.defaultRowHeight
                 val styleA = templateRow?.getCell(0)?.cellStyle
                 val styleB = templateRow?.getCell(1)?.cellStyle
 
-                for (extraIdx in 0 until numExtraRows) {
-                    val newRow = sheet.createRow(stopRowIndex + extraIdx)
+                for (idx in remainingExtra.indices) {
+                    val item = remainingExtra[idx]
+                    val newRow = sheet.createRow(stopRowIndex + idx)
                     newRow.height = templateHeight
 
-                    // Colonna A: Nuovo Label
+                    // Colonna A: Label
                     val cellA = newRow.createCell(0)
-                    cellA.setCellValue(data[dataIndex].label)
+                    cellA.setCellValue(item.label)
                     if (styleA != null) cellA.cellStyle = styleA
 
-                    // Colonna B: Nuovo Valore
+                    // Colonna B: Valore
                     val cellB = newRow.createCell(1)
-                    val valueToWrite = if (data[dataIndex].value.isEmpty()) "N°" else "N° ${data[dataIndex].value}"
+                    val valueToWrite = if (item.value.isEmpty()) "N°" else "N° ${item.value}"
                     cellB.setCellValue(valueToWrite)
                     if (styleB != null) cellB.cellStyle = styleB
-
-                    dataIndex++
                 }
             }
+            // --- FINE NUOVA LOGICA ---
 
             context.contentResolver.openOutputStream(uri, "rwt")?.use { outputStream ->
                 workbook.write(outputStream)
