@@ -91,10 +91,10 @@ class FileStorageManager(private val context: Context) {
                 newUri = newDocFile?.uri
             }
 
-            // 3. Fallback finale a DIRECTORY_DOCUMENTS se il parent non è accessibile
+            // 3. Fallback finale a DIRECTORY_DOWNLOADS se il parent non è accessibile
             if (newUri == null) {
                 val publicDir = android.os.Environment.getExternalStoragePublicDirectory(
-                    android.os.Environment.DIRECTORY_DOCUMENTS
+                    android.os.Environment.DIRECTORY_DOWNLOADS
                 )
                 if (!publicDir.exists()) publicDir.mkdirs()
                 
