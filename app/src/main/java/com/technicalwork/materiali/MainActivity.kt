@@ -29,6 +29,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
@@ -153,6 +154,7 @@ class MainActivity : AppCompatActivity() {
     ) { _ -> }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -536,8 +538,8 @@ class MainActivity : AppCompatActivity() {
         val options = arrayOf(getString(R.string.menu_rename_file), getString(R.string.menu_change_file), getString(R.string.menu_reset))
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.dialog_title_manage_company, company))
-            .setItems(options) { _, which ->
-                when (which) {
+            .setItems(options) { _, Creativity ->
+                when (Creativity) {
                     0 -> showRenameDialog(company)
                     1 -> showChoiceDialog(company)
                     2 -> {
