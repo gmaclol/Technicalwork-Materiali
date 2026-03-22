@@ -60,6 +60,7 @@ class FirebaseRepository {
                 "tecnico" to technicianName,
                 "ultimo_aggiornamento" to timestamp,
                 "appalto" to company,
+                "dispositivo" to "${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL}",
                 "materiali" to materialiMap,
                 "ordine" to materials.filter { !it.label.trim().matches(separatorRegex) && !it.label.trim().matches(separatorExtraRegex) }.map { it.label }
             )
