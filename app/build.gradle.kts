@@ -1,6 +1,25 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.services)
+}
+
+// Prova a cercare il file in due posti: root del progetto o cartella app
+var keystorePropertiesFile = rootProject.file("keystore.properties")
+if (!keystorePropertiesFile.exists()) {
+    keystorePropertiesFile = project.file("keystore.properties")
+}
+
+val keystoreProperties = Properties()
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+    println("Keystore properties caricate da: ${keystorePropertiesFile.absolutePath}")
+} else {
+    println("ERRORE: File keystore.properties NON TROVATO!")
+    println("Assicurati che esista in: ${rootProject.file("keystore.properties").absolutePath}")
+    println("Oppure in: ${project.file("keystore.properties").absolutePath}")
 }
 
 android {
@@ -17,9 +36,33 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            val alias = keystoreProperties["keyAlias"] as? String
+            val keyPass = keystoreProperties["keyPassword"] as? String
+            val storePass = keystoreProperties["storePassword"] as? String
+            val storeFileStr = keystoreProperties["storeFile"] as? String
+
+            if (alias != null && keyPass != null && storePass != null && storeFileStr != null) {
+                keyAlias = alias
+                keyPassword = keyPass
+                storePassword = storePass
+                
+                // Cerca il file .jks relativo alla posizione del file .properties
+                val jksFile = keystorePropertiesFile.parentFile.resolve(storeFileStr)
+                if (jksFile.exists()) {
+                    storeFile = jksFile
+                } else {
+                    println("ERRORE: File JKS non trovato in: ${jksFile.absolutePath}")
+                }
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
+            signingConfig = signingConfigs.getByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
