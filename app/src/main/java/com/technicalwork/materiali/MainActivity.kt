@@ -289,7 +289,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnConsumo.setOnLongClickListener {
-            val options = arrayOf(getString(R.string.menu_rename_file), getString(R.string.menu_change_file), "Resetta")
+            val options = arrayOf(getString(R.string.menu_rename_file), getString(R.string.menu_change_file), getString(R.string.menu_reset))
             AlertDialog.Builder(this)
                 .setTitle("Materiali di consumo")
                 .setItems(options) { _, which ->
@@ -715,7 +715,7 @@ class MainActivity : AppCompatActivity() {
         
         AlertDialog.Builder(this)
             .setTitle("Materiali di consumo")
-            .setMessage("Seleziona come procedere per il file dei consumi")
+            .setMessage("Configura il file per i Materiali di consumo")
             .setPositiveButton("Nuovo file") { _, _ ->
                 val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                     addCategory(Intent.CATEGORY_OPENABLE)
@@ -774,7 +774,7 @@ class MainActivity : AppCompatActivity() {
         AlertDialog.Builder(this)
             .setTitle(company)
             .setMessage(getString(R.string.dialog_msg_config_company, company))
-            .setPositiveButton(getString(R.string.btn_new_from_template)) { _, _ ->
+            .setPositiveButton("Nuovo file") { _, _ ->
                 createFileFromTemplate("$company.xlsx")
             }
             .setNegativeButton(getString(R.string.btn_use_existing)) { _, _ ->
