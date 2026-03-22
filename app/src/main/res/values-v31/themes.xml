@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme with splash screen attributes for Android 12+ -->
+    <style name="Theme.MyApplication" parent="Base.Theme.MyApplication">
+        <item name="android:windowSplashScreenBackground">#131313</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+    </style>
+</resources>
