@@ -3,7 +3,6 @@ on:
   push:
     tags:
       - 'v*'
-# Permessi necessari per creare la Release e caricare l'APK
 permissions:
   contents: write
 jobs:
@@ -12,25 +11,31 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      # Step critico: Decodifica il Secret e crea il file JSON nella cartella app
+
       - name: Decode Google Services JSON
         env:
           GOOGLE_SERVICES_BASE64: ${{ secrets.GOOGLE_SERVICES_JSON }}
         run: |
           echo "$GOOGLE_SERVICES_BASE64" | base64 --decode > ${{ github.workspace }}/app/google-services.json
-          echo "Verifica creazione file:"
-          ls -la ${{ github.workspace }}/app/google-services.json
-          cat ${{ github.workspace }}/app/google-services.json | head -3
+
+      - name: Debug - Check files
+        run: |
+          echo "Workspace: ${{ github.workspace }}"
+          ls -la ${{ github.workspace }}/app/
+          cat ${{ github.workspace }}/app/google-services.json | head -5
+
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
+
       - name: Make gradlew executable
         run: chmod +x ./gradlew
-      # Legge la versione dal file build.gradle.kts (Kotlin DSL)
+
       - name: Read version info from build.gradle.kts
         id: version_info
         run: |
@@ -40,12 +45,15 @@ jobs:
           echo "Trovato Version Name: $V_NAME"
           echo "VERSION_CODE=$V_CODE" >> $GITHUB_OUTPUT
           echo "VERSION_NAME=$V_NAME" >> $GITHUB_OUTPUT
+
       - name: Build Debug APK
         run: ./gradlew assembleDebug
+
       - name: Rename APK
         run: |
           mv app/build/outputs/apk/debug/app-debug.apk \
              app/build/outputs/apk/debug/TechnicalworkMateriali-v${{ steps.version_info.outputs.VERSION_NAME }}.apk
+
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
