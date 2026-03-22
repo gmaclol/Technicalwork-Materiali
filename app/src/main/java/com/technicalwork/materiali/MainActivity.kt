@@ -299,11 +299,7 @@ class MainActivity : AppCompatActivity() {
                             uri?.let { showRenameDialog("Consumo", it) }
                         }
                         1 -> {
-                            val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
-                                addCategory(Intent.CATEGORY_OPENABLE)
-                                type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-                            }
-                            selectConsumoFileLauncher.launch(intent)
+                            showConsumoChoiceDialog()
                         }
                         2 -> {
                             val uri = consumoFileUri ?: settingsRepository.consumoFileUri?.toUri()
@@ -713,6 +709,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         
+        showConsumoChoiceDialog()
+    }
+
+    private fun showConsumoChoiceDialog() {
         AlertDialog.Builder(this)
             .setTitle("Materiali di consumo")
             .setMessage("Configura il file per i Materiali di consumo")
