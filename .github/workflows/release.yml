@@ -46,8 +46,8 @@ jobs:
       - name: Read version info from build.gradle.kts
         id: version_info
         run: |
-          V_CODE=$(grep 'versionCode' app/build.gradle.kts | grep -o '[0-9]\+')
-          V_NAME=$(grep 'versionName' app/build.gradle.kts | cut -d '"' -f 2)
+          V_CODE=$(grep 'versionCode =' app/build.gradle.kts | grep -o '[0-9]\+' || grep 'versionCode' app/build.gradle.kts | grep -o '[0-9]\+')
+          V_NAME=$(grep 'versionName =' app/build.gradle.kts | cut -d '"' -f 2 || grep 'versionName' app/build.gradle.kts | cut -d '"' -f 2)
           echo "Trovato Version Code: $V_CODE"
           echo "Trovato Version Name: $V_NAME"
           echo "VERSION_CODE=$V_CODE" >> $GITHUB_OUTPUT
@@ -69,7 +69,8 @@ jobs:
             versionCode: ${{ steps.version_info.outputs.VERSION_CODE }}
             versionName: ${{ steps.version_info.outputs.VERSION_NAME }}
 
-            Aggiornamento automatico TechnicalWork Materiali (Firmato)
+            📦 **Build automatica TechnicalWork Materiali**
+            Questa versione è firmata ufficialmente e pronta per l'installazione.
           files: |
             app/build/outputs/apk/release/TechnicalworkMateriali-v${{ steps.version_info.outputs.VERSION_NAME }}.apk
         env:
