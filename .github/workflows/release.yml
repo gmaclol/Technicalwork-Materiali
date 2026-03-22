@@ -5,6 +5,10 @@ on:
     tags:
       - 'v*'
 
+# FONDAMENTALE: Garantisce al workflow i permessi per creare la release su GitHub
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,17 +29,22 @@ jobs:
       - name: Make gradlew executable
         run: chmod +x ./gradlew
 
-      - name: Read versionCode from build.gradle.kts
-        id: vcode
+      # Estrazione unificata e sicura per file Kotlin DSL (.kts)
+      - name: Read version info from build.gradle.kts
+        id: version_info
         run: |
-          VERSION_CODE=$(grep 'versionCode' app/build.gradle.kts | grep -o '[0-9]\+')
-          echo "VERSION_CODE=$VERSION_CODE" >> $GITHUB_OUTPUT
-
-      - name: Read versionName from build.gradle.kts
-        id: vname
-        run: |
-          VERSION_NAME=$(grep 'versionName' app/build.gradle.kts | grep -o '"[^"]*"' | tr -d '"')
-          echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_OUTPUT
+          # Trova la riga versionCode e prende solo i numeri
+          V_CODE=$(grep 'versionCode' app/build.gradle.kts | grep -o '[0-9]\+')
+          # Trova la riga versionName e prende esattamente il testo tra le virgolette
+          V_NAME=$(grep 'versionName' app/build.gradle.kts | cut -d '"' -f 2)
+          
+          # Stampa i valori nei log di GitHub per debugging visivo
+          echo "Trovato Version Code: $V_CODE"
+          echo "Trovato Version Name: $V_NAME"
+          
+          # Salva le variabili per gli step successivi
+          echo "VERSION_CODE=$V_CODE" >> $GITHUB_OUTPUT
+          echo "VERSION_NAME=$V_NAME" >> $GITHUB_OUTPUT
 
       - name: Build Debug APK
         run: ./gradlew assembleDebug
@@ -43,18 +52,17 @@ jobs:
       - name: Rename APK
         run: |
           mv app/build/outputs/apk/debug/app-debug.apk \
-             app/build/outputs/apk/debug/TechnicalworkMateriali-v${{ steps.vname.outputs.VERSION_NAME }}.apk
+             app/build/outputs/apk/debug/TechnicalworkMateriali-v${{ steps.version_info.outputs.VERSION_NAME }}.apk
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "Release v${{ steps.vname.outputs.VERSION_NAME }}"
+          name: "Release v${{ steps.version_info.outputs.VERSION_NAME }}"
           body: |
-            versionCode: ${{ steps.vcode.outputs.VERSION_CODE }}
-            versionName: ${{ steps.vname.outputs.VERSION_NAME }}
-
-            Aggiornamento automatico TechnicalWork Materiali
+            **Aggiornamento automatico TechnicalWork Materiali**
+            - **Versione:** ${{ steps.version_info.outputs.VERSION_NAME }}
+            - **Build Code:** ${{ steps.version_info.outputs.VERSION_CODE }}
           files: |
-            app/build/outputs/apk/debug/TechnicalworkMateriali-v${{ steps.vname.outputs.VERSION_NAME }}.apk
+            app/build/outputs/apk/debug/TechnicalworkMateriali-v${{ steps.version_info.outputs.VERSION_NAME }}.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
