@@ -41,6 +41,10 @@ class SettingsRepository(context: Context) {
         get() = prefs.getString("last_mode", "appalto") ?: "appalto"
         set(value) = prefs.edit().putString("last_mode", value).apply()
 
+    var lastSyncTimestamp: Long
+        get() = prefs.getLong("last_sync_timestamp", 0L)
+        set(value) = prefs.edit().putLong("last_sync_timestamp", value).apply()
+
     fun getCompanyFileUri(company: String): String? {
         return prefs.getString("uri_$company", null)
     }

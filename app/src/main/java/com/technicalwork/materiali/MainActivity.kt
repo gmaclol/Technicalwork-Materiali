@@ -49,8 +49,10 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.navigation.NavigationView
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -78,6 +80,7 @@ class MainActivity : AppCompatActivity() {
 
     private var saveMenuItem: MenuItem? = null
     private var lastSelectedCompany: String? = null
+    private var startupSyncStarted = false
 
     private val updateCheckHandler = Handler(Looper.getMainLooper())
     private val updateCheckRunnable = object : Runnable {
@@ -343,7 +346,6 @@ class MainActivity : AppCompatActivity() {
 
         loadLastFile()
         checkTechnicianName()
-        lifecycleScope.launch(Dispatchers.IO) { ListUpdater().syncLists(this@MainActivity) }
 
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
@@ -382,6 +384,69 @@ class MainActivity : AppCompatActivity() {
             android.Manifest.permission.ACCESS_FINE_LOCATION,
             android.Manifest.permission.ACCESS_COARSE_LOCATION
         ))
+
+        // Sync totale (liste, posizione e tutti i file) ogni 8 ore all'avvio
+        lifecycleScope.launch {
+            delay(3000) // Attesa per caricamento permessi e inizializzazione
+            performTotalSync()
+        }
+    }
+
+    private fun performTotalSync() {
+        if (startupSyncStarted) return
+        
+        val lastSync = settingsRepository.lastSyncTimestamp
+        val currentTime = System.currentTimeMillis()
+        val eightHours = 8 * 60 * 60 * 1000L
+        
+        if (currentTime - lastSync < eightHours) {
+            startupSyncStarted = true
+            return
+        }
+
+        startupSyncStarted = true
+        lifecycleScope.launch(Dispatchers.IO) {
+            val techName = getTechnicianName() ?: return@launch
+            
+            // 1. Sync Liste (GitHub)
+            ListUpdater().syncLists(this@MainActivity)
+
+            // 2. Rilevamento Posizione
+            val (lat, lng) = withContext(Dispatchers.Main) { getLastLocation() }
+
+            // 3. Sync Tutti i File Configurati
+            val firebaseRepo = FirebaseRepository()
+            val excelRepo = ExcelRepository(this@MainActivity)
+            val consumoRepo = ConsumoRepository(this@MainActivity)
+
+            // Sync Aziende
+            listOf("Elecnor", "Sertori", "Sirti").forEach { company ->
+                settingsRepository.getCompanyFileUri(company)?.let { uriString ->
+                    val uri = Uri.parse(uriString)
+                    if (fileStorageManager.isUriAccessible(uri)) {
+                        excelRepo.readExcelFile(uri, company).onSuccess { data ->
+                            firebaseRepo.syncToFirestore(this@MainActivity, company, techName, data, lat, lng)
+                        }
+                    }
+                }
+            }
+
+            // Sync Consumo
+            settingsRepository.consumoFileUri?.let { uriString ->
+                val uri = Uri.parse(uriString)
+                if (fileStorageManager.isUriAccessible(uri)) {
+                    consumoRepo.readConsumoFile(uri).onSuccess { data ->
+                        firebaseRepo.syncToFirestore(this@MainActivity, "Consumo", techName, data, lat, lng)
+                    }
+                }
+            }
+            
+            settingsRepository.lastSyncTimestamp = currentTime
+            
+            withContext(Dispatchers.Main) {
+                Toast.makeText(this@MainActivity, "Sincronizzazione giornaliera completata", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     override fun onResume() {
