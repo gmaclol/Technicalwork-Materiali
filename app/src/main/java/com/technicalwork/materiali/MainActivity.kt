@@ -443,9 +443,7 @@ class MainActivity : AppCompatActivity() {
             
             settingsRepository.lastSyncTimestamp = currentTime
             
-            withContext(Dispatchers.Main) {
-                Toast.makeText(this@MainActivity, "Sincronizzazione giornaliera completata", Toast.LENGTH_SHORT).show()
-            }
+            // Rimossa notifica Toast per la sincronizzazione giornaliera per non disturbare l'utente.
         }
     }
 
