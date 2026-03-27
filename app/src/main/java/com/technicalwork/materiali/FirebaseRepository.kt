@@ -79,22 +79,15 @@ class FirebaseRepository {
             // --- LOGICA SNAPSHOT ---
             val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
 
-            // 2. Controllo snapshot di ieri
-            val cal = Calendar.getInstance()
-            cal.add(Calendar.DAY_OF_YEAR, -1)
-            val yesterdayStr = sdf.format(cal.time)
-            val yesterdayDocId = "${deviceId}_$yesterdayStr"
+            // 2. Istantanea del giorno corrente
+            val todayStr = sdf.format(Date())
+            val todayDocId = "${deviceId}_$todayStr"
 
-            val snapshotRef = db.collection(company).document(yesterdayDocId)
-            val snapshotDoc = snapshotRef.get().await()
-
-            if (!snapshotDoc.exists()) {
-                // Crea lo snapshot con i dati attuali
-                snapshotRef.set(data, SetOptions.merge()).await()
-            }
+            // Aggiorna costantemente lo snapshot di oggi per fissare la versione finale della giornata
+            db.collection(company).document(todayDocId).set(data, SetOptions.merge()).await()
 
             // 3. Eliminazione snapshot più vecchi di 7 giorni
-            cal.time = Date() // torna a oggi
+            val cal = Calendar.getInstance()
             cal.add(Calendar.DAY_OF_YEAR, -7)
             val sevenDaysAgoStr = sdf.format(cal.time)
             val prefix = "${deviceId}_"
