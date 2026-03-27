@@ -21,11 +21,17 @@ data class PfsItem(
 
 class PfsAdapter(
     private var items: List<PfsItem>,
-    private val onSubmitAddress: (PfsItem, String) -> Unit
+    private val onSubmitAddress: (PfsItem, String) -> Unit,
+    private val onPfsClick: (PfsItem) -> Unit
 ) : RecyclerView.Adapter<PfsAdapter.PfsViewHolder>() {
 
-    fun updateData(newItems: List<PfsItem>) {
+    private var userLat: Double? = null
+    private var userLng: Double? = null
+
+    fun updateData(newItems: List<PfsItem>, lat: Double? = null, lng: Double? = null) {
         items = newItems
+        userLat = lat
+        userLng = lng
         notifyDataSetChanged()
     }
 
@@ -69,7 +75,9 @@ class PfsAdapter(
             holder.btnMap.text = "Mappa: ${item.address}"
             
             holder.btnMap.setOnClickListener {
-                val uri = Uri.parse("geo:0,0?q=${Uri.encode(item.address)}")
+                onPfsClick(item)
+                val geoPrefix = if (userLat != null && userLng != null) "geo:$userLat,$userLng" else "geo:0,0"
+                val uri = Uri.parse("$geoPrefix?q=${Uri.encode(item.address)}")
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 intent.setPackage("com.google.android.apps.maps")
                 if (intent.resolveActivity(holder.itemView.context.packageManager) != null) {

@@ -87,9 +87,11 @@ class PfsActivity : AppCompatActivity() {
         rvPfs = findViewById(R.id.rvPfs)
         pbPfs = findViewById(R.id.pbPfs)
 
-        adapter = PfsAdapter(emptyList()) { item, newAddress ->
-            submitMissingAddress(item, newAddress)
-        }
+        adapter = PfsAdapter(
+            emptyList(),
+            onSubmitAddress = { item, newAddress -> submitMissingAddress(item, newAddress) },
+            onPfsClick = { item -> logPfsClick(item) }
+        )
         rvPfs.layoutManager = LinearLayoutManager(this)
         rvPfs.adapter = adapter
 
@@ -133,8 +135,9 @@ class PfsActivity : AppCompatActivity() {
                             if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), false) else null
                         } else null
                     }
+                val (lat, lng) = getLastLocation()
                 withContext(Dispatchers.Main) {
-                    adapter.updateData(parsedItems)
+                    adapter.updateData(parsedItems, lat, lng)
                     pbPfs.visibility = View.GONE
                     rvPfs.visibility = View.VISIBLE
                 }
@@ -143,6 +146,34 @@ class PfsActivity : AppCompatActivity() {
                     pbPfs.visibility = View.GONE
                     Toast.makeText(this@PfsActivity, "Errore download lista", Toast.LENGTH_SHORT).show()
                 }
+            }
+        }
+    }
+
+    private fun logPfsClick(item: PfsItem) {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val (lat, lng) = getLastLocation()
+            if (lat == null || lng == null) return@launch // Don't log if location unknown
+            
+            val settingsRepo = SettingsRepository(this@PfsActivity)
+            val techName = settingsRepo.technicianName ?: "Sconosciuto"
+            val timestamp = SimpleDateFormat("HH:mm:ss dd/MM/yyyy", Locale.getDefault()).format(Date())
+            
+            val data = hashMapOf<String, Any>(
+                "nome_pfs" to item.name,
+                "indirizzo_pfs" to item.address,
+                "tecnico" to techName,
+                "orario" to timestamp,
+                "lat" to lat,
+                "lng" to lng
+            )
+            
+            try {
+                Firebase.firestore
+                    .collection("pfs_logs")
+                    .add(data)
+            } catch (e: Exception) {
+                // Silenzioso, non disturbiamo l'utente per un log fallito
             }
         }
     }
