@@ -161,6 +161,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
+        
+        // --- ROUTING LOGIC ---
+        val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        val lastActivity = prefs.getString("last_activity", "MainActivity")
+        if (lastActivity == "PfsActivity" && !intent.getBooleanExtra("skip_routing", false)) {
+            val routingIntent = Intent(this, PfsActivity::class.java)
+            routingIntent.putExtra("skip_routing", true)
+            startActivity(routingIntent)
+            finish()
+            return
+        }
+
         setContentView(R.layout.activity_main)
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -221,6 +233,23 @@ class MainActivity : AppCompatActivity() {
         
         val headerView = navigationView.getHeaderView(0)
         tvCurrentFileName = headerView.findViewById(R.id.tvCurrentFileName)
+        
+        val appLogo = headerView.findViewById<ImageView>(R.id.app_logo)
+        val pfsLogo = headerView.findViewById<ImageView>(R.id.pfs_logo)
+        
+        appLogo?.setOnClickListener {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        }
+        
+        pfsLogo?.setOnClickListener {
+            val p = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+            p.edit().putString("last_activity", "PfsActivity").apply()
+            val forwardIntent = Intent(this, PfsActivity::class.java)
+            forwardIntent.putExtra("skip_routing", true)
+            startActivity(forwardIntent)
+            finish()
+        }
+
         tvTechName = findViewById(R.id.tvTechName)
         cbIncludeTechName = findViewById(R.id.cbIncludeTechName)
         cbIncludeDate = findViewById(R.id.cbIncludeDate)
