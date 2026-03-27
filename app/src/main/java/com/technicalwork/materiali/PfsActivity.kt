@@ -13,6 +13,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.button.MaterialButton
+import android.widget.Toast
+import android.view.Menu
+import android.view.MenuItem
 
 class PfsActivity : AppCompatActivity() {
 
@@ -59,6 +63,38 @@ class PfsActivity : AppCompatActivity() {
             resetIntent.putExtra("skip_routing", true)
             startActivity(resetIntent)
             finish()
+        }
+
+        val btnToh1 = findViewById<MaterialButton>(R.id.navBtnToh1)
+        val btnAsti = findViewById<MaterialButton>(R.id.navBtnAsti)
+        val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
+
+        fun selectArea(area: String) {
+            pfsPrefs.edit().putString("pfs_last_area", area).apply()
+            supportActionBar?.title = "PFS - $area"
+            drawerLayout.closeDrawer(GravityCompat.START)
+            // Futura logica di load appalto PFS
+        }
+
+        val lastArea = pfsPrefs.getString("pfs_last_area", "TOH1") ?: "TOH1"
+        supportActionBar?.title = "PFS - $lastArea"
+
+        btnToh1?.setOnClickListener { selectArea("TOH1") }
+        btnAsti?.setOnClickListener { selectArea("Asti") }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.pfs_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_search -> {
+                Toast.makeText(this, "Ricerca in sviluppo...", Toast.LENGTH_SHORT).show()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }

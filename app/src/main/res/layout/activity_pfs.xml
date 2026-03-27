@@ -54,19 +54,36 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="MENU PFS"
+                android:text="Aree PFS"
                 android:textAllCaps="true"
                 android:textColor="@color/gemini_text_secondary"
                 android:textSize="12sp" />
-                
-            <TextView
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navBtnToh1"
+                style="@style/Widget.Material3.Button.TonalButton"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Sezione in costruzione..."
-                android:textColor="@color/gemini_accent_blue"
-                android:textSize="14sp"
-                android:layout_marginTop="24dp"
-                android:gravity="center" />
+                android:layout_height="56dp"
+                android:layout_marginTop="8dp"
+                android:text="TOH1"
+                app:icon="@android:drawable/ic_menu_add"
+                app:cornerRadius="28dp"
+                android:textAlignment="viewStart" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navBtnAsti"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Asti"
+                app:icon="@android:drawable/ic_menu_add"
+                app:cornerRadius="28dp"
+                android:textAlignment="viewStart" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
                 
         </LinearLayout>
         
