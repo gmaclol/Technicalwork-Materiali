@@ -5,11 +5,11 @@ TOH_01/01e14::Via Germonio angolo Viale B. Radich
 TOH_01/01e21::Via Milano altezza civico 74
 TOH_01/01e22::Via Macedonia angolo Via Napoli
 TOH_01/01e23::Via Podgora altezza civico 9
-TOH_01/01e24::Coordinate PFS assenti
+TOH_01/01e24::::Coordinate PFS assenti
 TOH_01/01e31::Via Napoli angolo Via Gregorio Magno
 TOH_01/01e32::Via Gregorio Magno angolo Via Vandalino
 TOH_01/01e33::Via Riesi altezza civico 4 - 8
-TOH_01/01e34::Coordinate PFS assenti
+TOH_01/01e34::::Coordinate PFS assenti
 TOH_01/01e41::Via Natale Palli angolo Via Raffaello
 TOH_01/01e42::Via Raffaello angolo Via Vespucci
 TOH_01/01e43::Via Baracca angolo Via Lamarmora
@@ -21,19 +21,19 @@ TOH_01/01w14::Piazza Papa Giovanni XIII altezza civico 6
 TOH_01/01w21::Via Latina angolo Viale Gamsci
 TOH_01/01w22::Via Roma angolo Via Frejus
 TOH_01/01w23::Via Generale Cantore altezza civico 1
-TOH_01/01w24::Coordinate PFS assenti
+TOH_01/01w24::::Coordinate PFS assenti
 TOH_01/01w31::Via Palli angolo Via Marco Polo
 TOH_01/01w32::Via Baracca altezza civico 22
 TOH_01/01w33::Via Generale Cantore altezza civico 37
-TOH_01/01w34::Coordinate PFS assenti
+TOH_01/01w34::::Coordinate PFS assenti
 TOH_01/01w41::Via Generale Cantore angolo Via Michelangelo
 TOH_01/01w42::Via Cristoforo Colombo angolo Via Lamarmora
 TOH_01/01w43::Via Cristoforo Colombo angolo Via Nazario Sauro
-TOH_01/01w44::Coordinate PFS assenti
+TOH_01/01w44::::Coordinate PFS assenti
 TOH_01/02e11::Via Michelangelo angolo Vicolo Torricelli
 TOH_01/02e12::Viale Giustetti angolo Via Panealbo
 TOH_01/02e13::Via Panealbo angolo Via Giolitti
-TOH_01/02e14::Coordinate PFS assenti
+TOH_01/02e14::::Coordinate PFS assenti
 TOH_01/02e21::Via Frejus altezza civico 29
 TOH_01/02e22::Via S. Rocco angolo Via Frejus
 TOH_01/02e23::Via Garibaldi angolo Via Mazzini
@@ -53,7 +53,7 @@ TOH_01/02w14::Viale Fabrizio de Andrè altezza civico 35
 TOH_01/02w21::Via G. B. de la Salle altezza civico 54
 TOH_01/02w22::Via F. Cravero angolo Piazza Don L. Cocco
 TOH_01/02w23::Via Michiardi angolo Via Generale Perotti
-TOH_01/02w24::Coordinate PFS assenti
+TOH_01/02w24::::Coordinate PFS assenti
 TOH_01/02w31::Via Generale Perotti altezza civico 87
 TOH_01/02w32::Via Olevano angolo Via Fratelli Bandiera
 TOH_01/02w33::Corso M. L. King altezza civico 91
@@ -65,7 +65,7 @@ TOH_01/02w44::Vio Olevano altezza civico 112
 TOH_01/03e11::Via Cravero angolo Via Prospero
 TOH_01/03e12::Via Scoffone angolo Via Prospero
 TOH_01/03e13::Via Scaffone angolo Via Lamarmora
-TOH_01/03e14::Coordinate PFS assenti
+TOH_01/03e14::::Coordinate PFS assenti
 TOH_01/03e21::Via Napoli angolo Via Palermo
 TOH_01/03e22::Via C. Lombroso angolo Via Mantova
 TOH_01/03e23::Via Renzo Cattaneo altezza civico 2A
@@ -102,14 +102,14 @@ TOH_01/04e21::Via Dante Di Nani angolo Via Cavour
 TOH_01/04e22::Via Francesco Martini angolo Via Nino Bixio
 TOH_01/04e23::Via Alcide De Gasperi civico 2
 TOH_01/04e24::Piazza Don Luigi Sturzo angolo Via Vittorio Alfieri
-TOH_01/04e31::Coordinate PFS assenti
-TOH_01/04e32::Coordinate PFS assenti
-TOH_01/04e33::Coordinate PFS assenti
-TOH_01/04e34::Coordinate PFS assenti
-TOH_01/04e41::Coordinate PFS assenti
-TOH_01/04e42::Coordinate PFS assenti
-TOH_01/04e43::Coordinate PFS assenti
-TOH_01/04e44::Coordinate PFS assenti
+TOH_01/04e31::::Coordinate PFS assenti
+TOH_01/04e32::::Coordinate PFS assenti
+TOH_01/04e33::::Coordinate PFS assenti
+TOH_01/04e34::::Coordinate PFS assenti
+TOH_01/04e41::::Coordinate PFS assenti
+TOH_01/04e42::::Coordinate PFS assenti
+TOH_01/04e43::::Coordinate PFS assenti
+TOH_01/04e44::::Coordinate PFS assenti
 TOH_01/04w11::Via Malosnà davanti Piazzale Giorgio Perlasca
 TOH_01/04w12::Guglielmo Marconi alla sinistra del civico 20
 TOH_01/04w13::Via Riesi davanti al civico 5
@@ -118,14 +118,14 @@ TOH_01/04w21::Viale Liguria davanti al civico 12
 TOH_01/04w22::Via Lazio angolo Italo Calvino
 TOH_01/04w23::Via Tetti Valfrè davanti al civico 15
 TOH_01/04w24::Strada Borgaretto angolo Via Papa Giovanni Paolo Secondo
-TOH_01/04w31::Coordinate PFS assenti
-TOH_01/04w32::Coordinate PFS assenti
-TOH_01/04w33::Coordinate PFS assenti
-TOH_01/04w34::Coordinate PFS assenti
-TOH_01/04w41::Coordinate PFS assenti
-TOH_01/04w42::Coordinate PFS assenti
-TOH_01/04w43::Coordinate PFS assenti
-TOH_01/04w44::Coordinate PFS assenti
+TOH_01/04w31::::Coordinate PFS assenti
+TOH_01/04w32::::Coordinate PFS assenti
+TOH_01/04w33::::Coordinate PFS assenti
+TOH_01/04w34::::Coordinate PFS assenti
+TOH_01/04w41::::Coordinate PFS assenti
+TOH_01/04w42::::Coordinate PFS assenti
+TOH_01/04w43::::Coordinate PFS assenti
+TOH_01/04w44::::Coordinate PFS assenti
 TOH_01/05e11::Via Rivoli angolo Via Alberto Nota
 TOH_01/05e12::Via Circonvallazione Interna angolo Via Mollini
 TOH_01/05e13::Via Grazie Deledda 5
@@ -137,15 +137,15 @@ TOH_01/05e24::Via Montegrappa davanti al civico 22
 TOH_01/05e31::Via Fratelli Rosselli angolo Via Dei Fraschei
 TOH_01/05e32::Strada Piossasco 65
 TOH_01/05e33::Via Indro Montanelli 23
-TOH_01/05e34::Coordinate PFS assenti
-TOH_01/05e41::Coordinate PFS assenti
-TOH_01/05e42::Coordinate PFS assenti
-TOH_01/05e43::Coordinate PFS assenti
-TOH_01/05e44::Coordinate PFS assenti
+TOH_01/05e34::::Coordinate PFS assenti
+TOH_01/05e41::::Coordinate PFS assenti
+TOH_01/05e42::::Coordinate PFS assenti
+TOH_01/05e43::::Coordinate PFS assenti
+TOH_01/05e44::::Coordinate PFS assenti
 TOH_01/05w11::Piazza Vittorio Veneto angolo Via San Rocco
 TOH_01/05w12::Via Genova davanti al civico 9
 TOH_01/05w13::Via San Rocco davanti al civico 36
-TOH_01/05w14::Coordinate PFS assenti
+TOH_01/05w14::::Coordinate PFS assenti
 TOH_01/05w21::Strada Volvera angolo Via Castellazzo
 TOH_01/05w22::Via Castellazzo davanti al civico 17
 TOH_01/05w23::Via Trieste davanti al civico 27
@@ -154,22 +154,22 @@ TOH_01/05w31::Via Galileo Ferraris 8
 TOH_01/05w32::Giorgio Amendola angolo Via Luigi Einaudi
 TOH_01/05w33::Via Luigi Einaudi 20B
 TOH_01/05w34::Strada Volvera angolo Via Pietro Nenni
-TOH_01/05w41::Coordinate PFS assenti
-TOH_01/05w42::Coordinate PFS assenti
-TOH_01/05w43::Coordinate PFS assenti
-TOH_01/05w44::Coordinate PFS assenti
+TOH_01/05w41::::Coordinate PFS assenti
+TOH_01/05w42::::Coordinate PFS assenti
+TOH_01/05w43::::Coordinate PFS assenti
+TOH_01/05w44::::Coordinate PFS assenti
 TOH_01/06e11::Via Sestriere 139
 TOH_01/06e12::Via Vajont angolo Via Pellice
 TOH_01/06e13::Via Tevere 104
-TOH_01/06e14::Coordinate PFS assenti
+TOH_01/06e14::::Coordinate PFS assenti
 TOH_01/06e21::Via Sestriere davanti al civico 69
 TOH_01/06e22::Viale San Giovanni Bosco - rotonda Via Tagliamento
 TOH_01/06e23::Via Pellice 45
-TOH_01/06e24::Coordinate PFS assenti
+TOH_01/06e24::::Coordinate PFS assenti
 TOH_01/06e31::Via Salvador Allende angolo Largo Volturno
 TOH_01/06e32::Via Caraglio di fronte al civico 11
 TOH_01/06e33::Via Carso 37A
-TOH_01/06e34::Coordinate PFS assenti
+TOH_01/06e34::::Coordinate PFS assenti
 TOH_01/06e41::Via Camogli angolo Via Varallo
 TOH_01/06e42::Via Sestriere angolo Via Fiano
 TOH_01/06e43::Via Scrivia vicino al civico 18A
@@ -185,7 +185,7 @@ TOH_01/06w24::Strada Antica di Rivoli altezza civico 91
 TOH_01/06w31::Corso Francia davanti al civico 128
 TOH_01/06w32::Corso Francia davanti al civico 138
 TOH_01/06w33::Su Via Ticino altezza Via Fratelli Macario
-TOH_01/06w34::Coordinate PFS assenti
+TOH_01/06w34::::Coordinate PFS assenti
 TOH_01/06w41::Via Pisa 15
 TOH_01/06w42::Via Pisa 7
 TOH_01/06w43::Via Scrivia 18A
@@ -221,7 +221,7 @@ TOH_01/07w34::Via Giuseppe Verdi 34
 TOH_01/07w41::Corso Matteotti angolo Via Tessarin
 TOH_01/07w42::Via Montello davanti al civico 42A
 TOH_01/07w43::Via Giovanni Prati alla destra del civico 5
-TOH_01/07w44::Coordinate PFS assenti
+TOH_01/07w44::::Coordinate PFS assenti
 TOH_01/08e11::Via Gaetano Amati davanti al civico 3
 TOH_01/08e12::Via Alberino Mantovani davanti al civico 8
 TOH_01/08e13::Via Natale Sandrè 28
@@ -257,7 +257,7 @@ TOH_01/08w44::Via Filippo Juvarra Viale Generale Dalla Chiesa
 TOH_01/09e11::Via Verga 5A
 TOH_01/09e12::Via Verga angolo Via Guido Gozzano
 TOH_01/09e13::Via Dante Alighieri angolo Via Alessandro Manzoni
-TOH_01/09e14::Coordinate PFS assenti
+TOH_01/09e14::::Coordinate PFS assenti
 TOH_01/09e21::Via Bengasi 20
 TOH_01/09e22::Via Tripoli angolo Via Somalia
 TOH_01/09e23::Via Lesna angolo Via Somalia
@@ -265,11 +265,11 @@ TOH_01/09e24::Via Giuseppe Di Vittorio angolo Via Grandi
 TOH_01/09e31::Via Crea 43C
 TOH_01/09e32::Via Don Borio 16
 TOH_01/09e33::Strada Moncalieri 102
-TOH_01/09e34::Coordinate PFS assenti
+TOH_01/09e34::::Coordinate PFS assenti
 TOH_01/09e41::Via Paolo Gaidano 179/5/B
 TOH_01/09e42::Via Silvio Allason di fronte al civico 179/19
 TOH_01/09e43::Via Severino Doppi di fronte al civico 26
-TOH_01/09e44::Coordinate PFS assenti
+TOH_01/09e44::::Coordinate PFS assenti
 TOH_1/09w11::Via Bionaz altezza civico 5
 TOH_1/09w12::Via Monginevro angolo Via Monginevro 242
 TOH_1/09w13::Via La Thuile altezza civico 12/A
@@ -277,15 +277,15 @@ TOH_1/09w14::Via Villa Giusti altezza civico 17/A
 TOH_1/09w21::Via S. Maria Mazzarello altezza civico 96/D
 TOH_1/09w22::Via Lesna di fronte al civico 5/A
 TOH_1/09w23::Strada Antica di Grugliasco angolo Via Villa Giusti
-TOH_1/09w24::Coordinate PFS assenti
+TOH_1/09w24::::Coordinate PFS assenti
 TOH_1/09w31::Via Challant davanti al civico 64
 TOH_1/09w32::Via Villa Giusti davanti al civico 43/A
 TOH_1/09w33::Via Villa Giusti angolo Via S. Maria Mazzarello
 TOH_1/09w34::Via Gaetano Casati angolo Via Valsugana
-TOH_1/09w41::Coordinate PFS assenti
-TOH_1/09w42::Coordinate PFS assenti
-TOH_1/09w43::Coordinate PFS assenti
-TOH_1/09w44::Coordinate PFS assenti
+TOH_1/09w41::::Coordinate PFS assenti
+TOH_1/09w42::::Coordinate PFS assenti
+TOH_1/09w43::::Coordinate PFS assenti
+TOH_1/09w44::::Coordinate PFS assenti
 TOH_01/12e11::Via Vandalino angolo Corso Montello
 TOH_01/12e12::Via Crimea angolo Via Plava
 TOH_01/12e13::Via Crimea angolo Via Podgora
@@ -321,15 +321,15 @@ TOH_01/12w44::Via Roma angolo Via Rossini
 TOH_01/13e11::Via Petrarca angolo Corso Francia
 TOH_01/13e12::Via Messina angolo Via Adua
 TOH_01/13e13::Via Enrico De Nicola altezza civico 5
-TOH_01/13e14::Coordinate PFS assenti
+TOH_01/13e14::::Coordinate PFS assenti
 TOH_01/13e21::Via Galvani angolo Via Leopardi
 TOH_01/13e22::Piazza Sandro Pertini altezza civico 2
 TOH_01/13e23::Via Pintor Giaime altezza civico 14
-TOH_01/13e24::Coordinate PFS assenti
+TOH_01/13e24::::Coordinate PFS assenti
 TOH_01/13e31::Via Galvani angolo Via Tasso
 TOH_01/13e32::Via Tasso altezza civico 22C
 TOH_01/13e33::Via Amerigo Vespucci angolo Corso Antony
-TOH_01/13e34::Coordinate PFS assenti
+TOH_01/13e34::::Coordinate PFS assenti
 TOH_01/13e41::Corso Antony angolo Via E. De Amicis
 TOH_01/13e42::Corso Antony altezza civico 33
 TOH_01/13e43::Via Pochettino angolo Via Manzoni
@@ -350,22 +350,22 @@ TOH_01/13w41::Via Trieste angolo Via Foscolo
 TOH_01/13w42::Via XX Settembre angolo Via S. Massimo
 TOH_01/13w43::Via Baracca angolo Via Generale Cantone
 TOH_01/13w44::Via Torino altezza civico 62
-TOH_01/14e11::Coordinate PFS assenti
-TOH_01/14e12::Coordinate PFS assenti
-TOH_01/14e13::Coordinate PFS assenti
-TOH_01/14e14::Coordinate PFS assenti
-TOH_01/14e21::Coordinate PFS assenti
-TOH_01/14e22::Coordinate PFS assenti
-TOH_01/14e23::Coordinate PFS assenti
-TOH_01/14e24::Coordinate PFS assenti
-TOH_01/14e31::Coordinate PFS assenti
-TOH_01/14e32::Coordinate PFS assenti
-TOH_01/14e33::Coordinate PFS assenti
-TOH_01/14e34::Coordinate PFS assenti
-TOH_01/14e41::Coordinate PFS assenti
-TOH_01/14e42::Coordinate PFS assenti
-TOH_01/14e43::Coordinate PFS assenti
-TOH_01/14e44::Coordinate PFS assenti
+TOH_01/14e11::::Coordinate PFS assenti
+TOH_01/14e12::::Coordinate PFS assenti
+TOH_01/14e13::::Coordinate PFS assenti
+TOH_01/14e14::::Coordinate PFS assenti
+TOH_01/14e21::::Coordinate PFS assenti
+TOH_01/14e22::::Coordinate PFS assenti
+TOH_01/14e23::::Coordinate PFS assenti
+TOH_01/14e24::::Coordinate PFS assenti
+TOH_01/14e31::::Coordinate PFS assenti
+TOH_01/14e32::::Coordinate PFS assenti
+TOH_01/14e33::::Coordinate PFS assenti
+TOH_01/14e34::::Coordinate PFS assenti
+TOH_01/14e41::::Coordinate PFS assenti
+TOH_01/14e42::::Coordinate PFS assenti
+TOH_01/14e43::::Coordinate PFS assenti
+TOH_01/14e44::::Coordinate PFS assenti
 TOH_01/14w11::Via Quintino Sella angolo Via Garibaldi
 TOH_01/14w12::Via Audifredi angolo Via Volta
 TOH_01/14w13::Via Colombo angolo Via Audifredi
@@ -393,11 +393,11 @@ TOH_1/16w24::Via delle Pervinche davanti al civico 49
 TOH_1/16w31::Via delle Pervinche davanti al civico 45
 TOH_1/16w32::Via delle Pervinche 21
 TOH_1/16w33::Via delle Verbene 15/L
-TOH_1/16w34::Coordinate PFS assenti
+TOH_1/16w34::::Coordinate PFS assenti
 TOH_1/16w41::Via dei Mughetti tra i civici 13 e 11
 TOH_1/16w42::Via delle Primule vicino incrocio Via delle Glicini
 TOH_1/16w43::Via delle Magnolie di fronte al civico 19/A
-TOH_1/16w44::Coordinate PFS assenti
+TOH_1/16w44::::Coordinate PFS assenti
 TOH_1/17e31::Via Nicomede Bianchi altezza civico 109
 TOH_1/17e32::Corso Bernardino Telesio angolo Via Nicomede Bianchi
 TOH_1/17e33::Via Giovanni Battista Scapacino angolo Via Pietro Cossa
@@ -425,7 +425,7 @@ TOH_1/17w44::Via Andrea Sansovino altezza civico 3/A
 TOH_1/18e11::Via Fidia davanti al civico 22
 TOH_1/18e12::Via Mario Ponzio altezza civico 24
 TOH_1/18e13::Via Quinti Bevilacqua 25/A
-TOH_1/18e14::Coordinate PFS assenti
+TOH_1/18e14::::Coordinate PFS assenti
 TOH_1/18e21::Via Luca della Robbia altezza civico 11/A
 TOH_1/18e22::Via Vandalino angolo Via Francesco De Sanctis
 TOH_1/18e23::Via Arnaz angolo Via Fidia
