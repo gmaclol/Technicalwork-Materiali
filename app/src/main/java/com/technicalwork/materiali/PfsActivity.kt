@@ -3,30 +3,49 @@ package com.technicalwork.materiali
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.ImageView
+import android.widget.ProgressBar
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.navigation.NavigationView
 import com.google.android.material.button.MaterialButton
-import android.widget.Toast
-import android.view.Menu
-import android.view.MenuItem
+import com.google.android.material.navigation.NavigationView
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
+import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class PfsActivity : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
+    private lateinit var rvPfs: RecyclerView
+    private lateinit var pbPfs: ProgressBar
+    private lateinit var adapter: PfsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pfs)
-        
+
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         drawerLayout = findViewById(R.id.drawerLayout)
@@ -65,22 +84,114 @@ class PfsActivity : AppCompatActivity() {
             finish()
         }
 
+        rvPfs = findViewById(R.id.rvPfs)
+        pbPfs = findViewById(R.id.pbPfs)
+
+        adapter = PfsAdapter(emptyList()) { item, newAddress ->
+            submitMissingAddress(item, newAddress)
+        }
+        rvPfs.layoutManager = LinearLayoutManager(this)
+        rvPfs.adapter = adapter
+
         val btnToh1 = findViewById<MaterialButton>(R.id.navBtnToh1)
         val btnAsti = findViewById<MaterialButton>(R.id.navBtnAsti)
         val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
 
-        fun selectArea(area: String) {
-            pfsPrefs.edit().putString("pfs_last_area", area).apply()
-            supportActionBar?.title = "PFS - $area"
-            drawerLayout.closeDrawer(GravityCompat.START)
-            // Futura logica di load appalto PFS
+        val initialArea = pfsPrefs.getString("pfs_last_area", "TOH1") ?: "TOH1"
+        loadArea(initialArea)
+
+        btnToh1?.setOnClickListener { loadArea("TOH1") }
+        btnAsti?.setOnClickListener { loadArea("Asti") }
+    }
+
+    private fun loadArea(area: String) {
+        val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
+        pfsPrefs.edit().putString("pfs_last_area", area).apply()
+        supportActionBar?.title = "PFS - $area"
+        
+        // Non forzare la chiusura se è già chiuso per prevenire comportamenti anomali al primo avvio
+        if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
+             drawerLayout.closeDrawer(GravityCompat.START)
         }
+        
+        lifecycleScope.launch(Dispatchers.IO) {
+            withContext(Dispatchers.Main) { 
+                pbPfs.visibility = View.VISIBLE 
+                rvPfs.visibility = View.GONE
+            }
+            try {
+                val url = URL("https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/$area.txt")
+                val rawText = url.readText()
+                val parsedItems = rawText.lines()
+                    .filter { it.isNotBlank() }
+                    .mapNotNull { line ->
+                        if (line.contains("::::")) {
+                            val parts = line.split("::::")
+                            if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), true) else null
+                        } else if (line.contains("::")) {
+                            val parts = line.split("::")
+                            if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), false) else null
+                        } else null
+                    }
+                withContext(Dispatchers.Main) {
+                    adapter.updateData(parsedItems)
+                    pbPfs.visibility = View.GONE
+                    rvPfs.visibility = View.VISIBLE
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    pbPfs.visibility = View.GONE
+                    Toast.makeText(this@PfsActivity, "Errore download lista", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
 
-        val lastArea = pfsPrefs.getString("pfs_last_area", "TOH1") ?: "TOH1"
-        supportActionBar?.title = "PFS - $lastArea"
+    private fun submitMissingAddress(item: PfsItem, newAddress: String) {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val (lat, lng) = getLastLocation()
+            val settingsRepo = SettingsRepository(this@PfsActivity)
+            val techName = settingsRepo.technicianName ?: "Sconosciuto"
+            val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
+            
+            val data = hashMapOf<String, Any>(
+                "nome_pfs" to item.name,
+                "nuovo_indirizzo" to newAddress,
+                "tecnico" to techName,
+                "orario" to timestamp
+            )
+            lat?.let { data["lat"] = it }
+            lng?.let { data["lng"] = it }
+            
+            try {
+                Firebase.firestore
+                    .collection("pfs_segnalati")
+                    .add(data)
+                    .await()
+                    
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@PfsActivity, "Indirizzo inviato con successo!", Toast.LENGTH_SHORT).show()
+                }
+            } catch (e: Exception) {
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@PfsActivity, "Errore di invio a Firebase", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+    }
 
-        btnToh1?.setOnClickListener { selectArea("TOH1") }
-        btnAsti?.setOnClickListener { selectArea("Asti") }
+    private fun getLastLocation(): Pair<Double?, Double?> {
+        return try {
+            if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                return null to null
+            }
+            val lm = getSystemService(Context.LOCATION_SERVICE) as android.location.LocationManager
+            val loc = lm.getLastKnownLocation(android.location.LocationManager.GPS_PROVIDER) 
+                      ?: lm.getLastKnownLocation(android.location.LocationManager.NETWORK_PROVIDER)
+            loc?.latitude to loc?.longitude
+        } catch (e: Exception) {
+            null to null
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
