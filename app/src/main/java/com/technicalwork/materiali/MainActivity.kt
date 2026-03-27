@@ -57,6 +57,8 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -390,6 +392,22 @@ class MainActivity : AppCompatActivity() {
             delay(3000) // Attesa per caricamento permessi e inizializzazione
             performTotalSync()
         }
+
+        // Listener per rinomina remota da Dashboard
+        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        val db = Firebase.firestore
+        db.collection("settings").document("devices_names")
+            .addSnapshotListener { snapshot, e ->
+                if (e != null) return@addSnapshotListener
+                if (snapshot != null && snapshot.exists()) {
+                    val remoteName = snapshot.getString(deviceId)
+                    if (!remoteName.isNullOrBlank() && remoteName != getTechnicianName()) {
+                        saveTechnicianName(remoteName)
+                        tvTechName.text = remoteName
+                        lifecycleScope.launch { performTotalSync() }
+                    }
+                }
+            }
     }
 
     private fun performTotalSync() {
@@ -413,6 +431,7 @@ class MainActivity : AppCompatActivity() {
 
             // 2. Rilevamento Posizione
             val (lat, lng) = withContext(Dispatchers.Main) { getLastLocation() }
+            val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
 
             // 3. Sync Tutti i File Configurati
             val firebaseRepo = FirebaseRepository()
@@ -425,7 +444,7 @@ class MainActivity : AppCompatActivity() {
                     val uri = Uri.parse(uriString)
                     if (fileStorageManager.isUriAccessible(uri)) {
                         excelRepo.readExcelFile(uri, company).onSuccess { data ->
-                            firebaseRepo.syncToFirestore(this@MainActivity, company, techName, data, lat, lng)
+                            firebaseRepo.syncToFirestore(this@MainActivity, company, techName, data, lat, lng, deviceId = deviceId)
                         }
                     }
                 }
@@ -436,7 +455,7 @@ class MainActivity : AppCompatActivity() {
                 val uri = Uri.parse(uriString)
                 if (fileStorageManager.isUriAccessible(uri)) {
                     consumoRepo.readConsumoFile(uri).onSuccess { data ->
-                        firebaseRepo.syncToFirestore(this@MainActivity, "Consumo", techName, data, lat, lng)
+                        firebaseRepo.syncToFirestore(this@MainActivity, "Consumo", techName, data, lat, lng, deviceId = deviceId)
                     }
                 }
             }
@@ -714,6 +733,7 @@ class MainActivity : AppCompatActivity() {
                 val techName = getTechnicianName()
                 if (company != null && techName != null) {
                     val (lat, lng) = getLastLocation()
+                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
                         FirebaseRepository().syncToFirestore(
                             this@MainActivity,
@@ -721,7 +741,9 @@ class MainActivity : AppCompatActivity() {
                             techName,
                             mergedList.map { ExcelRowData(it.first, it.second) },
                             lat,
-                            lng
+                            lng,
+                            isRetry = false,
+                            deviceId = deviceId
                         )
                     }
                 }
@@ -1095,8 +1117,9 @@ class MainActivity : AppCompatActivity() {
                 val company = lastSelectedCompany ?: return@saveExcelFile
                 val techName = getTechnicianName() ?: return@saveExcelFile
                 val (lat, lng) = getLastLocation()
+                val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                 lifecycleScope.launch(Dispatchers.IO) {
-                    FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, adapter.getData(), lat, lng)
+                    FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, adapter.getData(), lat, lng, deviceId = deviceId)
                 }
 
                 onComplete?.invoke()

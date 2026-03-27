@@ -13,12 +13,13 @@ class SyncQueue {
         val technicianName: String,
         val materials: List<ExcelRowData>,
         val lat: Double?,
-        val lng: Double?
+        val lng: Double?,
+        val deviceId: String
     )
 
-    fun save(context: Context, company: String, technicianName: String, materials: List<ExcelRowData>, lat: Double?, lng: Double?) {
+    fun save(context: Context, company: String, technicianName: String, materials: List<ExcelRowData>, lat: Double?, lng: Double?, deviceId: String) {
         val prefs = context.getSharedPreferences("sync_queue", Context.MODE_PRIVATE)
-        val data = QueuedData(company, technicianName, materials, lat, lng)
+        val data = QueuedData(company, technicianName, materials, lat, lng, deviceId)
         val json = gson.toJson(data)
         prefs.edit().putString("${company}_${technicianName}", json).apply()
     }
@@ -38,7 +39,8 @@ class SyncQueue {
                         data.materials,
                         data.lat,
                         data.lng,
-                        isRetry = true
+                        isRetry = true,
+                        deviceId = data.deviceId
                     )
                     if (success) {
                         prefs.edit().remove(key).apply()

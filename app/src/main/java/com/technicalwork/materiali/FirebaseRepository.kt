@@ -29,7 +29,8 @@ class FirebaseRepository {
         materials: List<ExcelRowData>,
         lat: Double? = null,
         lng: Double? = null,
-        isRetry: Boolean = false
+        isRetry: Boolean = false,
+        deviceId: String
     ): Boolean {
         if (technicianName.isBlank() || company.isBlank()) return false
 
@@ -40,7 +41,7 @@ class FirebaseRepository {
 
         if (!isConnected) {
             if (!isRetry) {
-                SyncQueue().save(context, company, technicianName, materials, lat, lng)
+                SyncQueue().save(context, company, technicianName, materials, lat, lng, deviceId)
             }
             return false
         }
@@ -71,7 +72,7 @@ class FirebaseRepository {
 
             // 1. Salva documento principale del tecnico
             db.collection(company)
-                .document(technicianName)
+                .document(deviceId)
                 .set(data, SetOptions.merge())
                 .await()
 
@@ -82,7 +83,7 @@ class FirebaseRepository {
             val cal = Calendar.getInstance()
             cal.add(Calendar.DAY_OF_YEAR, -1)
             val yesterdayStr = sdf.format(cal.time)
-            val yesterdayDocId = "${technicianName}_$yesterdayStr"
+            val yesterdayDocId = "${deviceId}_$yesterdayStr"
 
             val snapshotRef = db.collection(company).document(yesterdayDocId)
             val snapshotDoc = snapshotRef.get().await()
@@ -96,7 +97,7 @@ class FirebaseRepository {
             cal.time = Date() // torna a oggi
             cal.add(Calendar.DAY_OF_YEAR, -7)
             val sevenDaysAgoStr = sdf.format(cal.time)
-            val prefix = "${technicianName}_"
+            val prefix = "${deviceId}_"
 
             val allDocs = db.collection(company).get().await()
             for (doc in allDocs.documents) {
@@ -115,7 +116,7 @@ class FirebaseRepository {
         } catch (e: Exception) {
             e.printStackTrace()
             if (!isRetry) {
-                SyncQueue().save(context, company, technicianName, materials, lat, lng)
+                SyncQueue().save(context, company, technicianName, materials, lat, lng, deviceId)
             }
             false
         }
