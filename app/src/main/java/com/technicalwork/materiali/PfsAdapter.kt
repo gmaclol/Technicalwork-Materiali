@@ -20,18 +20,32 @@ data class PfsItem(
 )
 
 class PfsAdapter(
-    private var items: List<PfsItem>,
+    private var allItems: List<PfsItem>,
     private val onSubmitAddress: (PfsItem, String) -> Unit,
     private val onPfsClick: (PfsItem) -> Unit
 ) : RecyclerView.Adapter<PfsAdapter.PfsViewHolder>() {
 
+    private var displayItems: List<PfsItem> = allItems
     private var userLat: Double? = null
     private var userLng: Double? = null
 
     fun updateData(newItems: List<PfsItem>, lat: Double? = null, lng: Double? = null) {
-        items = newItems
+        allItems = newItems
+        displayItems = newItems
         userLat = lat
         userLng = lng
+        notifyDataSetChanged()
+    }
+
+    fun filter(query: String) {
+        displayItems = if (query.isBlank()) {
+            allItems
+        } else {
+            allItems.filter { 
+                it.name.contains(query, ignoreCase = true) || 
+                it.address.contains(query, ignoreCase = true)
+            }
+        }
         notifyDataSetChanged()
     }
 
@@ -41,7 +55,7 @@ class PfsAdapter(
     }
 
     override fun onBindViewHolder(holder: PfsViewHolder, position: Int) {
-        val item = items[position]
+        val item = displayItems[position]
         holder.tvPfsName.text = item.name
 
         if (item.isMissing) {
@@ -90,7 +104,7 @@ class PfsAdapter(
         }
     }
 
-    override fun getItemCount() = items.size
+    override fun getItemCount() = displayItems.size
 
     class PfsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val tvPfsName: TextView = view.findViewById(R.id.tvPfsName)

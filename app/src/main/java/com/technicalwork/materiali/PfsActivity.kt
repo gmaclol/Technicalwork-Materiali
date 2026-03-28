@@ -111,7 +111,6 @@ class PfsActivity : AppCompatActivity() {
         pfsPrefs.edit().putString("pfs_last_area", area).apply()
         supportActionBar?.title = "PFS - $area"
         
-        // Non forzare la chiusura se è già chiuso per prevenire comportamenti anomali al primo avvio
         if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
              drawerLayout.closeDrawer(GravityCompat.START)
         }
@@ -121,33 +120,77 @@ class PfsActivity : AppCompatActivity() {
                 pbPfs.visibility = View.VISIBLE 
                 rvPfs.visibility = View.GONE
             }
+            
+            var rawText: String? = null
+            var isOffline = false
+            
             try {
+                // Tenta il download
                 val url = URL("https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/$area.txt")
-                val rawText = url.readText()
-                val parsedItems = rawText.lines()
-                    .filter { it.isNotBlank() }
-                    .mapNotNull { line ->
-                        if (line.contains("::::")) {
-                            val parts = line.split("::::")
-                            if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), true) else null
-                        } else if (line.contains("::")) {
-                            val parts = line.split("::")
-                            if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), false) else null
-                        } else null
+                rawText = url.readText()
+                
+                // Salva cache locale
+                openFileOutput("pfs_cache_$area.txt", Context.MODE_PRIVATE).use { 
+                    it.write(rawText!!.toByteArray()) 
+                }
+            } catch (e: Exception) {
+                // Fallback su cache locale
+                try {
+                    openFileInput("pfs_cache_$area.txt").use {
+                        rawText = it.bufferedReader().readText()
+                        isOffline = true
                     }
+                } catch (ex: Exception) {
+                    rawText = null
+                }
+            }
+
+            if (rawText != null) {
+                val parsedItems = parsePfsList(rawText!!)
                 val (lat, lng) = getLastLocation()
                 withContext(Dispatchers.Main) {
                     adapter.updateData(parsedItems, lat, lng)
                     pbPfs.visibility = View.GONE
                     rvPfs.visibility = View.VISIBLE
+                    if (isOffline) {
+                        Toast.makeText(this@PfsActivity, "Modalità offline: caricata cache locale", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            } catch (e: Exception) {
+            } else {
                 withContext(Dispatchers.Main) {
                     pbPfs.visibility = View.GONE
-                    Toast.makeText(this@PfsActivity, "Errore download lista", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@PfsActivity, "Errore: lista non disponibile offline", Toast.LENGTH_SHORT).show()
                 }
             }
         }
+    }
+
+    private fun parsePfsList(text: String): List<PfsItem> {
+        return text.lines()
+            .filter { it.isNotBlank() }
+            .mapNotNull { line ->
+                if (line.contains("::::")) {
+                    val parts = line.split("::::")
+                    if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), true) else null
+                } else if (line.contains("::")) {
+                    val parts = line.split("::")
+                    if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), false) else null
+                } else null
+            }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Svuota la coda offline al ritorno in attività
+        lifecycleScope.launch(Dispatchers.IO) {
+            PfsSyncQueue().flush(this@PfsActivity)
+        }
+    }
+
+    private fun isNetworkAvailable(): Boolean {
+        val cm = getSystemService(Context.CONNECTIVITY_SERVICE) as android.net.ConnectivityManager
+        val caps = cm.getNetworkCapabilities(cm.activeNetwork)
+        return caps?.hasCapability(android.net.NetworkCapabilities.NET_CAPABILITY_INTERNET) == true
     }
 
     private fun logPfsClick(item: PfsItem) {
@@ -158,17 +201,30 @@ class PfsActivity : AppCompatActivity() {
             val settingsRepo = SettingsRepository(this@PfsActivity)
             val techName = settingsRepo.technicianName ?: "Sconosciuto"
             val timestamp = SimpleDateFormat("HH:mm:ss dd/MM/yyyy", Locale.getDefault()).format(Date())
+            val timestampRaw = System.currentTimeMillis()
             
             val data = hashMapOf<String, Any>(
                 "nome_pfs" to item.name,
                 "indirizzo_pfs" to item.address,
                 "tecnico" to techName,
                 "orario" to timestamp,
+                "timestamp_raw" to timestampRaw,
                 "lat" to lat,
                 "lng" to lng
             )
             
+            if (!isNetworkAvailable()) {
+                PfsSyncQueue().save(this@PfsActivity, "LOG", data)
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@PfsActivity, "Offline: Log salvato in coda", Toast.LENGTH_SHORT).show()
+                }
+                return@launch
+            }
+
             try {
+                // Pulizia preventiva (mantieni max 29 per far spazio al 30esimo)
+                cleanupOldEntries("pfs_logs", techName)
+                
                 Firebase.firestore
                     .collection("pfs_logs")
                     .add(data)
@@ -178,23 +234,56 @@ class PfsActivity : AppCompatActivity() {
         }
     }
 
+    private suspend fun cleanupOldEntries(collection: String, techName: String) {
+        try {
+            val db = Firebase.firestore
+            val snapshots = db.collection(collection)
+                .whereEqualTo("tecnico", techName)
+                .orderBy("timestamp_raw", com.google.firebase.firestore.Query.Direction.ASCENDING)
+                .get()
+                .await()
+
+            if (snapshots.size() >= 30) {
+                // Se abbiamo 30 o più, cancelliamo i più vecchi lasciandone 29
+                val toDeleteCount = snapshots.size() - 29
+                for (i in 0 until toDeleteCount) {
+                    db.collection(collection).document(snapshots.documents[i].id).delete().await()
+                }
+            }
+        } catch (e: Exception) {
+            // Se fallisce il cleanup amen, non blocchiamo l'inserimento
+        }
+    }
+
     private fun submitMissingAddress(item: PfsItem, newAddress: String) {
         lifecycleScope.launch(Dispatchers.IO) {
             val (lat, lng) = getLastLocation()
             val settingsRepo = SettingsRepository(this@PfsActivity)
             val techName = settingsRepo.technicianName ?: "Sconosciuto"
             val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
+            val timestampRaw = System.currentTimeMillis()
             
             val data = hashMapOf<String, Any>(
                 "nome_pfs" to item.name,
                 "nuovo_indirizzo" to newAddress,
                 "tecnico" to techName,
-                "orario" to timestamp
+                "orario" to timestamp,
+                "timestamp_raw" to timestampRaw
             )
             lat?.let { data["lat"] = it }
             lng?.let { data["lng"] = it }
             
+            if (!isNetworkAvailable()) {
+                PfsSyncQueue().save(this@PfsActivity, "SIGNAL", data)
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(this@PfsActivity, "Offline: Segnalazione messa in coda", Toast.LENGTH_SHORT).show()
+                }
+                return@launch
+            }
+
             try {
+                cleanupOldEntries("pfs_segnalati", techName)
+
                 Firebase.firestore
                     .collection("pfs_segnalati")
                     .add(data)
@@ -227,13 +316,28 @@ class PfsActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.pfs_menu, menu)
+        
+        val searchItem = menu.findItem(R.id.action_search)
+        val searchView = searchItem?.actionView as? androidx.appcompat.widget.SearchView
+        
+        searchView?.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                searchView.clearFocus()
+                return true
+            }
+            override fun onQueryTextChange(newText: String?): Boolean {
+                adapter.filter(newText ?: "")
+                return true
+            }
+        })
+        
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_search -> {
-                Toast.makeText(this, "Ricerca in sviluppo...", Toast.LENGTH_SHORT).show()
+            android.R.id.home -> {
+                drawerLayout.openDrawer(GravityCompat.START)
                 true
             }
             else -> super.onOptionsItemSelected(item)
