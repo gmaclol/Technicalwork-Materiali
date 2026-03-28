@@ -62,6 +62,7 @@ class FirebaseRepository {
                 "ultimo_aggiornamento" to timestamp,
                 "appalto" to company,
                 "dispositivo" to "${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL}",
+                "versione_app" to "Ver ${BuildConfig.VERSION_NAME}",
                 "materiali" to materialiMap,
                 "ordine" to materials.filter { !it.label.trim().matches(separatorRegex) && !it.label.trim().matches(separatorExtraRegex) }.map { it.label }
             )
