@@ -196,7 +196,7 @@ TOH_01/07e13::Via Gaetano Amati [di fianco al civico ]146/A
 TOH_01/07e14::Via Flora Pretegiani
 TOH_01/07e21::Corso Giuseppe Garibaldi [di fronte al civico ]63
 TOH_01/07e22::Via Palestro 12
-TOH_01/07e23::Corso Giuseppe Garibaldi [tra i civici ]45 e 47
+TOH_01/07e23::Corso Giuseppe Garibaldi [tra i civici ]45[ e 47]
 TOH_01/07e24::Via Enrico Toti angolo Via Fabio Filzi
 TOH_01/07e31::Via Arduino Iseppon Corso Papa Giovanni XXIII
 TOH_01/07e32::Via IV Novembre 16A
@@ -305,9 +305,9 @@ TOH_01/12e44::Via Antonelli angolo Via Magenta
 TOH_01/12w11::Via Zara [altezza civico ]13
 TOH_01/12w12::Corso Francia [altezza civico ]276
 TOH_01/12w13::Via Alfonso Lamarmora [altezza civico ]15
-TOH_01/12w14::Via Brodolini angolo Via Rossini [Progettato]
+TOH_01/12w14::Via Brodolini angolo Via Rossini Progettato
 TOH_01/12w21::Via Borgone angolo Via Condove
-TOH_01/12w22::Via Villarfocchiardo angolo Via Susa [Progettato]
+TOH_01/12w22::Via Villarfocchiardo angolo Via Susa Progettato
 TOH_01/12w23::Via Borgone angolo Via Rosta
 TOH_01/12w24::Via Salbertrand angolo Via Rosta
 TOH_01/12w31::Via Claviere angolo Via Rosta
@@ -394,7 +394,7 @@ TOH_1/16w31::Via delle Pervinche [davanti al civico ]45
 TOH_1/16w32::Via delle Pervinche 21
 TOH_1/16w33::Via delle Verbene 15/L
 TOH_1/16w34::::Coordinate PFS assenti
-TOH_1/16w41::Via dei Mughetti [tra i civici ]13 e 11
+TOH_1/16w41::Via dei Mughetti [tra i civici ]13[ e 11]
 TOH_1/16w42::Via delle Primule [vicino incrocio Via delle Glicini]
 TOH_1/16w43::Via delle Magnolie [di fronte al civico ]19/A
 TOH_1/16w44::::Coordinate PFS assenti
