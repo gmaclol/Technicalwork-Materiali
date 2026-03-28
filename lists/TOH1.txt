@@ -1,31 +1,30 @@
-
 TOH_01/01e11::Via Rieti angolo Viale B. Radich
 TOH_01/01e12::Via Rieti angolo Viale B. Radich
-TOH_01/01e13::Viale B. Radich altezza civico 24
+TOH_01/01e13::Viale B. Radich [altezza civico ]24
 TOH_01/01e14::Via Germonio angolo Viale B. Radich
-TOH_01/01e21::Via Milano altezza civico 74
+TOH_01/01e21::Via Milano [altezza civico ]74
 TOH_01/01e22::Via Macedonia angolo Via Napoli
-TOH_01/01e23::Via Podgora altezza civico 9
+TOH_01/01e23::Via Podgora [altezza civico ]9
 TOH_01/01e24::::Coordinate PFS assenti
 TOH_01/01e31::Via Napoli angolo Via Gregorio Magno
 TOH_01/01e32::Via Gregorio Magno angolo Via Vandalino
-TOH_01/01e33::Via Riesi altezza civico 4 - 8
+TOH_01/01e33::Via Riesi [altezza civico ]4 - 8
 TOH_01/01e34::::Coordinate PFS assenti
 TOH_01/01e41::Via Natale Palli angolo Via Raffaello
 TOH_01/01e42::Via Raffaello angolo Via Vespucci
 TOH_01/01e43::Via Baracca angolo Via Lamarmora
 TOH_01/01e44::Via Baracca angolo Via Lamarmora
-TOH_01/01w11::Via Andrea Costa altezza civico 21
+TOH_01/01w11::Via Andrea Costa [altezza civico ]21
 TOH_01/01w12::Via Goito angolo Via Leon Tron
-TOH_01/01w13::Via Caustico altezza civico 24
-TOH_01/01w14::Piazza Papa Giovanni XIII altezza civico 6
+TOH_01/01w13::Via Caustico [altezza civico ]24
+TOH_01/01w14::Piazza Papa Giovanni XIII [altezza civico ]6
 TOH_01/01w21::Via Latina angolo Viale Gamsci
 TOH_01/01w22::Via Roma angolo Via Frejus
-TOH_01/01w23::Via Generale Cantore altezza civico 1
+TOH_01/01w23::Via Generale Cantore [altezza civico ]1
 TOH_01/01w24::::Coordinate PFS assenti
 TOH_01/01w31::Via Palli angolo Via Marco Polo
-TOH_01/01w32::Via Baracca altezza civico 22
-TOH_01/01w33::Via Generale Cantore altezza civico 37
+TOH_01/01w32::Via Baracca [altezza civico ]22
+TOH_01/01w33::Via Generale Cantore [altezza civico ]37
 TOH_01/01w34::::Coordinate PFS assenti
 TOH_01/01w41::Via Generale Cantore angolo Via Michelangelo
 TOH_01/01w42::Via Cristoforo Colombo angolo Via Lamarmora
@@ -35,73 +34,73 @@ TOH_01/02e11::Via Michelangelo angolo Vicolo Torricelli
 TOH_01/02e12::Viale Giustetti angolo Via Panealbo
 TOH_01/02e13::Via Panealbo angolo Via Giolitti
 TOH_01/02e14::::Coordinate PFS assenti
-TOH_01/02e21::Via Frejus altezza civico 29
+TOH_01/02e21::Via Frejus [altezza civico ]29
 TOH_01/02e22::Via S. Rocco angolo Via Frejus
 TOH_01/02e23::Via Garibaldi angolo Via Mazzini
-TOH_01/02e24::Via Verdi altezza civico 3
+TOH_01/02e24::Via Verdi [altezza civico ]3
 TOH_01/02e31::Via XX Settembre angolo Via Trento
 TOH_01/02e32::Via C. L. N. angolo Via Pola
-TOH_01/02e33::Via C. L. N. altezza civico 35
+TOH_01/02e33::Via C. L. N. [altezza civico ]35
 TOH_01/02e34::Via C. L. N. angolo Via Leon del Nicaragua
-TOH_01/02e41::Via Duccio Galimberti altezza civico 1
+TOH_01/02e41::Via Duccio Galimberti [altezza civico ]1
 TOH_01/02e42::Via Di Nanni angolo Via Galimberti
-TOH_01/02e43::Corso M. L. King altezza civico 33-43
+TOH_01/02e43::Corso M. L. King [altezza civico ]33-43
 TOH_01/02e44::Via Galimberti angolo Corso M. L. King
-TOH_01/02w11::Viale Fabrizio de Andrè altezza civico 61
-TOH_01/02w12::Via G. B. de la Salle altezza civico 140
+TOH_01/02w11::Viale Fabrizio de Andrè [altezza civico ]61
+TOH_01/02w12::Via G. B. de la Salle [altezza civico ]140
 TOH_01/02w13::Via Rino Gaetano angolo Via Antonio Cotta
-TOH_01/02w14::Viale Fabrizio de Andrè altezza civico 35
-TOH_01/02w21::Via G. B. de la Salle altezza civico 54
+TOH_01/02w14::Viale Fabrizio de Andrè [altezza civico ]35
+TOH_01/02w21::Via G. B. de la Salle [altezza civico ]54
 TOH_01/02w22::Via F. Cravero angolo Piazza Don L. Cocco
 TOH_01/02w23::Via Michiardi angolo Via Generale Perotti
 TOH_01/02w24::::Coordinate PFS assenti
-TOH_01/02w31::Via Generale Perotti altezza civico 87
+TOH_01/02w31::Via Generale Perotti [altezza civico ]87
 TOH_01/02w32::Via Olevano angolo Via Fratelli Bandiera
-TOH_01/02w33::Corso M. L. King altezza civico 91
+TOH_01/02w33::Corso M. L. King [altezza civico ]91
 TOH_01/02w34::Corso F.lli Cervi angolo Via Olevano
-TOH_01/02w41::Via G. A. Michiardi altezza civico 71
-TOH_01/02w42::Corso F.lli Cervi altezza civico 61
-TOH_01/02w43::Via Montanaro altezza civico 19
-TOH_01/02w44::Vio Olevano altezza civico 112
+TOH_01/02w41::Via G. A. Michiardi [altezza civico ]71
+TOH_01/02w42::Corso F.lli Cervi [altezza civico ]61
+TOH_01/02w43::Via Montanaro [altezza civico ]19
+TOH_01/02w44::Vio Olevano [altezza civico ]112
 TOH_01/03e11::Via Cravero angolo Via Prospero
 TOH_01/03e12::Via Scoffone angolo Via Prospero
 TOH_01/03e13::Via Scaffone angolo Via Lamarmora
 TOH_01/03e14::::Coordinate PFS assenti
 TOH_01/03e21::Via Napoli angolo Via Palermo
 TOH_01/03e22::Via C. Lombroso angolo Via Mantova
-TOH_01/03e23::Via Renzo Cattaneo altezza civico 2A
+TOH_01/03e23::Via Renzo Cattaneo [altezza civico ]2A
 TOH_01/03e24::Corso Francia angolo Viale A. Gramsci
 TOH_01/03e31::Via C. Battisti angolo Via XI Febbraio
 TOH_01/03e32::Via Nazario Sauro angolo Via XI Febbraio
 TOH_01/03e33::Via Fiume angolo Via C. Battisti
-TOH_01/03e34::Viale A. Gramsci altezza civico 25
+TOH_01/03e34::Viale A. Gramsci [altezza civico ]25
 TOH_01/03e41::Via C. Battisti angolo Via A. Costa
 TOH_01/03e42::Via C. Battisti angolo Via F. Filzi
 TOH_01/03e43::Via Minghetti angolo Corso Francia
 TOH_01/03e44::Via Antica di Gugliasco angolo Corso Francia
 TOH_01/03w11::Via Col di Lana angolo Via Piave
 TOH_01/03w12::Via C. Battisti angolo Via Marsala
-TOH_01/03w13::Via C. Battisti altezza civico 75
+TOH_01/03w13::Via C. Battisti [altezza civico ]75
 TOH_01/03w14::Via D. Chiesa angolo Via B. Buozzi
-TOH_01/03w21::Corso Francia altezza civico 287
+TOH_01/03w21::Corso Francia [altezza civico ]287
 TOH_01/03w22::Corso Francia angolo Via Frabbrichetta
 TOH_01/03w23::Corso Francia angolo Via Piave
 TOH_01/03w24::Via Isonzo angolo Via Piave
 TOH_01/03w31::Via Novalesa angolo Corso Francia
 TOH_01/03w32::Corso Francia angolo Via Condove
 TOH_01/03w33::Via Ulzio angolo Corso P. Togliatti
-TOH_01/03w34::Via Bardonecchia altezza civico 20
+TOH_01/03w34::Via Bardonecchia [altezza civico ]20
 TOH_01/03w41::Via Chiomonte angolo Via Cesana
-TOH_01/03w42::Via Condove altezza civico 42
-TOH_01/03w43::Via Claviere altezza civico 38
+TOH_01/03w42::Via Condove [altezza civico ]42
+TOH_01/03w43::Via Claviere [altezza civico ]38
 TOH_01/03w44::Via Susa angolo Via Moncenisio
-TOH_01/04e11::Via Rajiv Gandhi vicino al civico 5_sc/h
+TOH_01/04e11::Via Rajiv Gandhi [vicino al civico ]5_sc/h
 TOH_01/04e12::Via Dante Di Nanni 16/9
 TOH_01/04e13::Via Milano incrocio Via Torino
 TOH_01/04e14::Via Belgio angolo Via Regno Unito
 TOH_01/04e21::Via Dante Di Nani angolo Via Cavour
 TOH_01/04e22::Via Francesco Martini angolo Via Nino Bixio
-TOH_01/04e23::Via Alcide De Gasperi civico 2
+TOH_01/04e23::Via Alcide De Gasperi [civico ]2
 TOH_01/04e24::Piazza Don Luigi Sturzo angolo Via Vittorio Alfieri
 TOH_01/04e31::::Coordinate PFS assenti
 TOH_01/04e32::::Coordinate PFS assenti
@@ -111,13 +110,13 @@ TOH_01/04e41::::Coordinate PFS assenti
 TOH_01/04e42::::Coordinate PFS assenti
 TOH_01/04e43::::Coordinate PFS assenti
 TOH_01/04e44::::Coordinate PFS assenti
-TOH_01/04w11::Via Malosnà davanti Piazzale Giorgio Perlasca
-TOH_01/04w12::Guglielmo Marconi alla sinistra del civico 20
-TOH_01/04w13::Via Riesi davanti al civico 5
+TOH_01/04w11::Via Malosnà [davanti Piazzale Giorgio Perlasca]
+TOH_01/04w12::Guglielmo Marconi [alla sinistra del civico ]20
+TOH_01/04w13::Via Riesi [davanti al civico ]5
 TOH_01/04w14::Italo Calvino angolo Via Riesi
-TOH_01/04w21::Viale Liguria davanti al civico 12
+TOH_01/04w21::Viale Liguria [davanti al civico ]12
 TOH_01/04w22::Via Lazio angolo Italo Calvino
-TOH_01/04w23::Via Tetti Valfrè davanti al civico 15
+TOH_01/04w23::Via Tetti Valfrè [davanti al civico ]15
 TOH_01/04w24::Strada Borgaretto angolo Via Papa Giovanni Paolo Secondo
 TOH_01/04w31::::Coordinate PFS assenti
 TOH_01/04w32::::Coordinate PFS assenti
@@ -131,10 +130,10 @@ TOH_01/05e11::Via Rivoli angolo Via Alberto Nota
 TOH_01/05e12::Via Circonvallazione Interna angolo Via Mollini
 TOH_01/05e13::Via Grazie Deledda 5
 TOH_01/05e14::Via Nazario Sauro angolo Via XI Febbraio
-TOH_01/05e21::Via Frejus vicino al civico 9
+TOH_01/05e21::Via Frejus [vicino al civico ]9
 TOH_01/05e22::Via Montenero 17
-TOH_01/05e23::Via Vincenzo Monti vicino al civico 17/2
-TOH_01/05e24::Via Montegrappa davanti al civico 22
+TOH_01/05e23::Via Vincenzo Monti [vicino al civico ]17/2
+TOH_01/05e24::Via Montegrappa [davanti al civico ]22
 TOH_01/05e31::Via Fratelli Rosselli angolo Via Dei Fraschei
 TOH_01/05e32::Strada Piossasco 65
 TOH_01/05e33::Via Indro Montanelli 23
@@ -144,12 +143,12 @@ TOH_01/05e42::::Coordinate PFS assenti
 TOH_01/05e43::::Coordinate PFS assenti
 TOH_01/05e44::::Coordinate PFS assenti
 TOH_01/05w11::Piazza Vittorio Veneto angolo Via San Rocco
-TOH_01/05w12::Via Genova davanti al civico 9
-TOH_01/05w13::Via San Rocco davanti al civico 36
+TOH_01/05w12::Via Genova [davanti al civico ]9
+TOH_01/05w13::Via San Rocco [davanti al civico ]36
 TOH_01/05w14::::Coordinate PFS assenti
 TOH_01/05w21::Strada Volvera angolo Via Castellazzo
-TOH_01/05w22::Via Castellazzo davanti al civico 17
-TOH_01/05w23::Via Trieste davanti al civico 27
+TOH_01/05w22::Via Castellazzo [davanti al civico ]17
+TOH_01/05w23::Via Trieste [davanti al civico ]27
 TOH_01/05w24::Via Della Bassa 8
 TOH_01/05w31::Via Galileo Ferraris 8
 TOH_01/05w32::Giorgio Amendola angolo Via Luigi Einaudi
@@ -163,41 +162,41 @@ TOH_01/06e11::Via Sestriere 139
 TOH_01/06e12::Via Vajont angolo Via Pellice
 TOH_01/06e13::Via Tevere 104
 TOH_01/06e14::::Coordinate PFS assenti
-TOH_01/06e21::Via Sestriere davanti al civico 69
+TOH_01/06e21::Via Sestriere [davanti al civico ]69
 TOH_01/06e22::Viale San Giovanni Bosco - rotonda Via Tagliamento
 TOH_01/06e23::Via Pellice 45
 TOH_01/06e24::::Coordinate PFS assenti
 TOH_01/06e31::Via Salvador Allende angolo Largo Volturno
-TOH_01/06e32::Via Caraglio di fronte al civico 11
+TOH_01/06e32::Via Caraglio [di fronte al civico ]11
 TOH_01/06e33::Via Carso 37A
 TOH_01/06e34::::Coordinate PFS assenti
 TOH_01/06e41::Via Camogli angolo Via Varallo
 TOH_01/06e42::Via Sestriere angolo Via Fiano
-TOH_01/06e43::Via Scrivia vicino al civico 18A
+TOH_01/06e43::Via Scrivia [vicino al civico ]18A
 TOH_01/06e44::Via Bruere 57
 TOH_01/06w11::Via Boves angolo Via Goito
-TOH_01/06w12::Via Dante Di Nanni altezza civico 15
+TOH_01/06w12::Via Dante Di Nanni [altezza civico ]15
 TOH_01/06w13::Via Damaso angolo Via Don Caustico
-TOH_01/06w14::Via Don Caustico altezza civico 131
-TOH_01/06w21::Via Fabbrichetta altezza civico 36
+TOH_01/06w14::Via Don Caustico [altezza civico ]131
+TOH_01/06w21::Via Fabbrichetta [altezza civico ]36
 TOH_01/06w22::Strada Antica di Rivoli angolo Via Giovanni Tobanelli
-TOH_01/06w23::Strada Antica di Rivoli altezza civico 61
-TOH_01/06w24::Strada Antica di Rivoli altezza civico 91
-TOH_01/06w31::Corso Francia davanti al civico 128
-TOH_01/06w32::Corso Francia davanti al civico 138
-TOH_01/06w33::Su Via Ticino altezza Via Fratelli Macario
+TOH_01/06w23::Strada Antica di Rivoli [altezza civico ]61
+TOH_01/06w24::Strada Antica di Rivoli [altezza civico ]91
+TOH_01/06w31::Corso Francia [davanti al civico ]128
+TOH_01/06w32::Corso Francia [davanti al civico ]138
+TOH_01/06w33::Su Via Ticino [altezza Via Fratelli Macario]
 TOH_01/06w34::::Coordinate PFS assenti
 TOH_01/06w41::Via Pisa 15
 TOH_01/06w42::Via Pisa 7
 TOH_01/06w43::Via Scrivia 18A
 TOH_01/06w44::Via I Maggio 68
-TOH_01/07e11::Via Antonio Colombo alla destra del civico 1
+TOH_01/07e11::Via Antonio Colombo [alla destra del civico ]1
 TOH_01/07e12::Corso Giuseppe Garibaldi angolo Viale Delle Industrie
-TOH_01/07e13::Via Gaetano Amati di fianco al civico 146/A
+TOH_01/07e13::Via Gaetano Amati [di fianco al civico ]146/A
 TOH_01/07e14::Via Flora Pretegiani
-TOH_01/07e21::Corso Giuseppe Garibaldi di fronte al civico 63
+TOH_01/07e21::Corso Giuseppe Garibaldi [di fronte al civico ]63
 TOH_01/07e22::Via Palestro 12
-TOH_01/07e23::Corso Giuseppe Garibaldi tra i civici 45 e 47
+TOH_01/07e23::Corso Giuseppe Garibaldi [tra i civici ]45 e 47
 TOH_01/07e24::Via Enrico Toti angolo Via Fabio Filzi
 TOH_01/07e31::Via Arduino Iseppon Corso Papa Giovanni XXIII
 TOH_01/07e32::Via IV Novembre 16A
@@ -207,34 +206,34 @@ TOH_01/07e41::Via Goito 14
 TOH_01/07e42::Via Goito angolo Viale Paolo Emilio Buridani
 TOH_01/07e43::Via Generale Giacomo Medici del Vascello - Via Pietro Trucchi
 TOH_01/07e44::Via Filippo Juvarra 11
-TOH_01/07w11::Via Francesco Petrarca alla destra del civico 100
+TOH_01/07w11::Via Francesco Petrarca [alla destra del civico ]100
 TOH_01/07w12::Via Giovanni Verga angolo Corso Giacomo Puccini
 TOH_01/07w13::Via Donatello angolo Via Giotto
-TOH_01/07w14::Via Donatello di fronte al civico 7A
+TOH_01/07w14::Via Donatello [di fronte al civico ]7A
 TOH_01/07w21::Via Aldo Moro 33
-TOH_01/07w22::Via Don Giovanni Sapino di fronte al civico 75
-TOH_01/07w23::Via Oddo Lucchese alla sinistra del civico 44
+TOH_01/07w22::Via Don Giovanni Sapino [di fronte al civico ]75
+TOH_01/07w23::Via Oddo Lucchese [alla sinistra del civico ]44
 TOH_01/07w24::Corso Machiavelli incrocio Via Primo Barbi Cinti
-TOH_01/07w31::Via Primo Barbi Cinti alla destra del civico 1
+TOH_01/07w31::Via Primo Barbi Cinti [alla destra del civico ]1
 TOH_01/07w32::Via Antonio Sciesa angolo Via Giuseppe Verdi
 TOH_01/07w33::Via Giuseppe Verdi 25
 TOH_01/07w34::Via Giuseppe Verdi 34
 TOH_01/07w41::Corso Matteotti angolo Via Tessarin
-TOH_01/07w42::Via Montello davanti al civico 42A
-TOH_01/07w43::Via Giovanni Prati alla destra del civico 5
+TOH_01/07w42::Via Montello [davanti al civico ]42A
+TOH_01/07w43::Via Giovanni Prati [alla destra del civico ]5
 TOH_01/07w44::::Coordinate PFS assenti
-TOH_01/08e11::Via Gaetano Amati davanti al civico 3
-TOH_01/08e12::Via Alberino Mantovani davanti al civico 8
+TOH_01/08e11::Via Gaetano Amati [davanti al civico ]3
+TOH_01/08e12::Via Alberino Mantovani [davanti al civico ]8
 TOH_01/08e13::Via Natale Sandrè 28
-TOH_01/08e14::Via Alvaro Chelli davanti al civico 11
-TOH_01/08e21::Via Gaetano Amati di fronte al civico 115C
+TOH_01/08e14::Via Alvaro Chelli [davanti al civico ]11
+TOH_01/08e21::Via Gaetano Amati [di fronte al civico ]115C
 TOH_01/08e22::Via Gaetano Amati 124
 TOH_01/08e23::Via Gaetano Amati 200
 TOH_01/08e24::Via Buozzi angolo Via Giuseppe Di Vittorio
-TOH_01/08e31::Via Giuseppe Saragat alla destra del civico 12
+TOH_01/08e31::Via Giuseppe Saragat [alla destra del civico ]12
 TOH_01/08e32::Via Francesca Girotto Via Berenice Bassi
 TOH_01/08e33::Via Giuseppe Di Vittorio incrocio Via Saragat
-TOH_01/08e34::Via Buozzi davanti al civico 6
+TOH_01/08e34::Via Buozzi [davanti al civico ]6
 TOH_01/08e41::Via San Marchese 18/1
 TOH_01/08e42::Via Pietro Motrassino 5A
 TOH_01/08e43::Via Aldo Canale angolo Via Gorizia
@@ -252,7 +251,7 @@ TOH_01/08w32::Via Giosuè Carducci angolo Via Leonardo da Vinci
 TOH_01/08w33::Corso Nicolò Macchiavelli angolo Via Dante Alighieri
 TOH_01/08w34::Via Guido Gozzano 26
 TOH_01/08w41::Via Ugo Foscolo 17
-TOH_01/08w42::Via Zanellato di fronte al civico 55A
+TOH_01/08w42::Via Zanellato [di fronte al civico ]55A
 TOH_01/08w43::Viale Paolo Emilio Buridani 57
 TOH_01/08w44::Via Filippo Juvarra Viale Generale Dalla Chiesa
 TOH_01/09e11::Via Verga 5A
@@ -268,19 +267,19 @@ TOH_01/09e32::Via Don Borio 16
 TOH_01/09e33::Strada Moncalieri 102
 TOH_01/09e34::::Coordinate PFS assenti
 TOH_01/09e41::Via Paolo Gaidano 179/5/B
-TOH_01/09e42::Via Silvio Allason di fronte al civico 179/19
-TOH_01/09e43::Via Severino Doppi di fronte al civico 26
+TOH_01/09e42::Via Silvio Allason [di fronte al civico ]179/19
+TOH_01/09e43::Via Severino Doppi [di fronte al civico ]26
 TOH_01/09e44::::Coordinate PFS assenti
-TOH_1/09w11::Via Bionaz altezza civico 5
+TOH_1/09w11::Via Bionaz [altezza civico ]5
 TOH_1/09w12::Via Monginevro angolo Via Monginevro 242
-TOH_1/09w13::Via La Thuile altezza civico 12/A
-TOH_1/09w14::Via Villa Giusti altezza civico 17/A
-TOH_1/09w21::Via S. Maria Mazzarello altezza civico 96/D
-TOH_1/09w22::Via Lesna di fronte al civico 5/A
+TOH_1/09w13::Via La Thuile [altezza civico ]12/A
+TOH_1/09w14::Via Villa Giusti [altezza civico ]17/A
+TOH_1/09w21::Via S. Maria Mazzarello [altezza civico ]96/D
+TOH_1/09w22::Via Lesna [di fronte al civico ]5/A
 TOH_1/09w23::Strada Antica di Grugliasco angolo Via Villa Giusti
 TOH_1/09w24::::Coordinate PFS assenti
-TOH_1/09w31::Via Challant davanti al civico 64
-TOH_1/09w32::Via Villa Giusti davanti al civico 43/A
+TOH_1/09w31::Via Challant [davanti al civico ]64
+TOH_1/09w32::Via Villa Giusti [davanti al civico ]43/A
 TOH_1/09w33::Via Villa Giusti angolo Via S. Maria Mazzarello
 TOH_1/09w34::Via Gaetano Casati angolo Via Valsugana
 TOH_1/09w41::::Coordinate PFS assenti
@@ -290,8 +289,8 @@ TOH_1/09w44::::Coordinate PFS assenti
 TOH_01/12e11::Via Vandalino angolo Corso Montello
 TOH_01/12e12::Via Crimea angolo Via Plava
 TOH_01/12e13::Via Crimea angolo Via Podgora
-TOH_01/12e14::Via Macedonia altezza civico 5
-TOH_01/12e21::Via Castagnevizza altezza civico 28
+TOH_01/12e14::Via Macedonia [altezza civico ]5
+TOH_01/12e21::Via Castagnevizza [altezza civico ]28
 TOH_01/12e22::Via Castagnevizza angolo Via Montessori
 TOH_01/12e23::Via Pasubio angolo Via Crimea
 TOH_01/12e24::Via Pasubio angolo Corso Francia
@@ -299,58 +298,58 @@ TOH_01/12e31::Via Adamello angolo Corso Torino
 TOH_01/12e32::Via Castagnevizza angolo Corso Francia
 TOH_01/12e33::Corso Francia angolo Via Manzoni
 TOH_01/12e34::Via Manzoni angolo Via Edmondo De Amicis
-TOH_01/12e41::Via Edmondo De Amicis altezza civico 77
-TOH_01/12e42::Via Vittorio Sassi altezza civico 20
+TOH_01/12e41::Via Edmondo De Amicis [altezza civico ]77
+TOH_01/12e42::Via Vittorio Sassi [altezza civico ]20
 TOH_01/12e43::Via Magenta angolo Via Pochettino
 TOH_01/12e44::Via Antonelli angolo Via Magenta
-TOH_01/12w11::Via Zara altezza civico 13
-TOH_01/12w12::Corso Francia altezza civico 276
-TOH_01/12w13::Via Alfonso Lamarmora altezza civico 15
-TOH_01/12w14::Via Brodolini angolo Via Rossini Progettato
+TOH_01/12w11::Via Zara [altezza civico ]13
+TOH_01/12w12::Corso Francia [altezza civico ]276
+TOH_01/12w13::Via Alfonso Lamarmora [altezza civico ]15
+TOH_01/12w14::Via Brodolini angolo Via Rossini [Progettato]
 TOH_01/12w21::Via Borgone angolo Via Condove
-TOH_01/12w22::Via Villarfocchiardo angolo Via Susa Progettato
+TOH_01/12w22::Via Villarfocchiardo angolo Via Susa [Progettato]
 TOH_01/12w23::Via Borgone angolo Via Rosta
 TOH_01/12w24::Via Salbertrand angolo Via Rosta
 TOH_01/12w31::Via Claviere angolo Via Rosta
 TOH_01/12w32::Piazza Pablo Neruda
 TOH_01/12w33::Via De Gasperi angolo Via Gobetti
 TOH_01/12w34::Via Lamarmora angolo Via Gobetti
-TOH_01/12w41::Via G. Verdi altezza civico 56
+TOH_01/12w41::Via G. Verdi [altezza civico ]56
 TOH_01/12w42::Via Donizetti angolo Via Lamarmora
-TOH_01/12w43::Via Roma altezza civico 45
+TOH_01/12w43::Via Roma [altezza civico ]45
 TOH_01/12w44::Via Roma angolo Via Rossini
 TOH_01/13e11::Via Petrarca angolo Corso Francia
 TOH_01/13e12::Via Messina angolo Via Adua
-TOH_01/13e13::Via Enrico De Nicola altezza civico 5
+TOH_01/13e13::Via Enrico De Nicola [altezza civico ]5
 TOH_01/13e14::::Coordinate PFS assenti
 TOH_01/13e21::Via Galvani angolo Via Leopardi
-TOH_01/13e22::Piazza Sandro Pertini altezza civico 2
-TOH_01/13e23::Via Pintor Giaime altezza civico 14
+TOH_01/13e22::Piazza Sandro Pertini [altezza civico ]2
+TOH_01/13e23::Via Pintor Giaime [altezza civico ]14
 TOH_01/13e24::::Coordinate PFS assenti
 TOH_01/13e31::Via Galvani angolo Via Tasso
-TOH_01/13e32::Via Tasso altezza civico 22C
+TOH_01/13e32::Via Tasso [altezza civico ]22C
 TOH_01/13e33::Via Amerigo Vespucci angolo Corso Antony
 TOH_01/13e34::::Coordinate PFS assenti
 TOH_01/13e41::Corso Antony angolo Via E. De Amicis
-TOH_01/13e42::Corso Antony altezza civico 33
+TOH_01/13e42::Corso Antony [altezza civico ]33
 TOH_01/13e43::Via Pochettino angolo Via Manzoni
-TOH_01/13e44::Via Manzoni altezza civico 29
+TOH_01/13e44::Via Manzoni [altezza civico ]29
 TOH_01/13w11::Via Minghetti angolo Via Juvarra
 TOH_01/13w12::Via Minghetti angolo Via Catalani
 TOH_01/13w13::Via Oberdan angolo Via Crispi
-TOH_01/13w14::Via Oberdan altezza civico 8A
+TOH_01/13w14::Via Oberdan [altezza civico ]8A
 TOH_01/13w21::Via Minghetti angolo Piazza della Repubblica
-TOH_01/13w22::Via Minghetti altezza civico 60
+TOH_01/13w22::Via Minghetti [altezza civico ]60
 TOH_01/13w23::Via Cimarosa angolo Viale XXIV Maggio
 TOH_01/13w24::Via Minghetti 44
 TOH_01/13w31::Via Mameli angolo Via Trieste
 TOH_01/13w32::Via XX Settembre angolo Via Mameli
-TOH_01/13w33::Via Richelmy altezza civico 2
+TOH_01/13w33::Via Richelmy [altezza civico ]2
 TOH_01/13w34::Via Trieste angolo Viale XXIV Maggio
 TOH_01/13w41::Via Trieste angolo Via Foscolo
 TOH_01/13w42::Via XX Settembre angolo Via S. Massimo
 TOH_01/13w43::Via Baracca angolo Via Generale Cantone
-TOH_01/13w44::Via Torino altezza civico 62
+TOH_01/13w44::Via Torino [altezza civico ]62
 TOH_01/14e11::::Coordinate PFS assenti
 TOH_01/14e12::::Coordinate PFS assenti
 TOH_01/14e13::::Coordinate PFS assenti
@@ -370,77 +369,77 @@ TOH_01/14e44::::Coordinate PFS assenti
 TOH_01/14w11::Via Quintino Sella angolo Via Garibaldi
 TOH_01/14w12::Via Audifredi angolo Via Volta
 TOH_01/14w13::Via Colombo angolo Via Audifredi
-TOH_01/14w14::Via G. Di Vittorio altezza civico 11
-TOH_01/14w21::Via Alpignano altezza civico 56TER
+TOH_01/14w14::Via G. Di Vittorio [altezza civico ]11
+TOH_01/14w21::Via Alpignano [altezza civico ]56TER
 TOH_01/14w22::Via Alpignano angolo Via Parri
-TOH_01/14w23::Via Parri altezza civico 5A
-TOH_01/14w24::Corso J. F. Kennedy altezza civico 8
-TOH_1/16e31::Via Andrea Sansovino altezza civico 7/A
+TOH_01/14w23::Via Parri [altezza civico ]5A
+TOH_01/14w24::Corso J. F. Kennedy [altezza civico ]8
+TOH_1/16e31::Via Andrea Sansovino [altezza civico ]7/A
 TOH_1/16e32::Via Andrea Sansovino angolo Corso Toscana
 TOH_1/16e33::Viale dei Mughetti angolo Corso Molise
 TOH_1/16e34::Viale dei Mughetti angolo Via delle Pervinche
-TOH_1/16e41::Corso Molise altezza civico 47/A
+TOH_1/16e41::Corso Molise [altezza civico ]47/A
 TOH_1/16e42::Corso Molise 67/A
 TOH_1/16e43::Corso Grosseto 437/B
 TOH_1/16e44::Strada di Altessano angolo Via Andrea Sansovino
-TOH_1/16w11::Via delle Primule altezza civico 12
-TOH_1/16w12::Via delle Primule altezza civico 14G
-TOH_1/16w13::Via delle Primule altezza civico 36
+TOH_1/16w11::Via delle Primule [altezza civico ]12
+TOH_1/16w12::Via delle Primule [altezza civico ]14G
+TOH_1/16w13::Via delle Primule [altezza civico ]36
 TOH_1/16w14::Via delle Primule angolo Viale dei Mughetti
-TOH_1/16w21::Corso Ferrara vicino al civico 51/A
-TOH_1/16w22::Via delle Pervinche alla sinistra del civico 79
+TOH_1/16w21::Corso Ferrara [vicino al civico ]51/A
+TOH_1/16w22::Via delle Pervinche [alla sinistra del civico ]79
 TOH_1/16w23::Via delle Pervinche 63
-TOH_1/16w24::Via delle Pervinche davanti al civico 49
-TOH_1/16w31::Via delle Pervinche davanti al civico 45
+TOH_1/16w24::Via delle Pervinche [davanti al civico ]49
+TOH_1/16w31::Via delle Pervinche [davanti al civico ]45
 TOH_1/16w32::Via delle Pervinche 21
 TOH_1/16w33::Via delle Verbene 15/L
 TOH_1/16w34::::Coordinate PFS assenti
-TOH_1/16w41::Via dei Mughetti tra i civici 13 e 11
-TOH_1/16w42::Via delle Primule vicino incrocio Via delle Glicini
-TOH_1/16w43::Via delle Magnolie di fronte al civico 19/A
+TOH_1/16w41::Via dei Mughetti [tra i civici ]13 e 11
+TOH_1/16w42::Via delle Primule [vicino incrocio Via delle Glicini]
+TOH_1/16w43::Via delle Magnolie [di fronte al civico ]19/A
 TOH_1/16w44::::Coordinate PFS assenti
-TOH_1/17e31::Via Nicomede Bianchi altezza civico 109
+TOH_1/17e31::Via Nicomede Bianchi [altezza civico ]109
 TOH_1/17e32::Corso Bernardino Telesio angolo Via Nicomede Bianchi
 TOH_1/17e33::Via Giovanni Battista Scapacino angolo Via Pietro Cossa
-TOH_1/17e34::Via Giuseppe Giulietti altezza civico 5
+TOH_1/17e34::Via Giuseppe Giulietti [altezza civico ]5
 TOH_1/17e41::Via Giovanni Servais 92/133
 TOH_1/17e42::Strada della Pellerina angolo Via Pietro Cossa
-TOH_1/17e43::Via Giovanni Servais altezza civico 125/A
-TOH_1/17e44::Via Giovanni Servais altezza civico 93/37
+TOH_1/17e43::Via Giovanni Servais [altezza civico ]125/A
+TOH_1/17e44::Via Giovanni Servais [altezza civico ]93/37
 TOH_1/17w11::Strada Antica di Collegno angolo Via Pietro Cossa
 TOH_1/17w12::Strada Antica di Collegno angolo Via G.B. Niccolini
-TOH_1/17w13::Via Sostegno vicino al civico 88
+TOH_1/17w13::Via Sostegno [vicino al civico ]88
 TOH_1/17w14::Via Valentino Carrera angolo Via Masera
 TOH_1/17w21::Via Giovanni Servais angolo Via Francesco Mittone
-TOH_1/17w22::Via Giovanni Servais altezza civico 140/1
+TOH_1/17w22::Via Giovanni Servais [altezza civico ]140/1
 TOH_1/17w23::Via Giovanni Servais 128
-TOH_1/17w24::Via Pietro Cossa altezza civico 121/A
-TOH_1/17w31::Via Giovanni Servais di fronte al civico 200/B
-TOH_1/17w32::Via Giovanni Servais altezza civico 200/E/23
-TOH_1/17w33::Via Carlo Bianco di fronte al civico 1/A
-TOH_1/17w34::Via Servais 20 metri dopo il civico 176/1
-TOH_1/17w41::Strada Pianezza altezza civico 311/10/A
-TOH_1/17w42::Via Pietro Cossa altezza civico 293/29/C
-TOH_1/17w43::Via Pietro Cossa altezza civico 293/6/C
-TOH_1/17w44::Via Andrea Sansovino altezza civico 3/A
-TOH_1/18e11::Via Fidia davanti al civico 22
-TOH_1/18e12::Via Mario Ponzio altezza civico 24
+TOH_1/17w24::Via Pietro Cossa [altezza civico ]121/A
+TOH_1/17w31::Via Giovanni Servais [di fronte al civico ]200/B
+TOH_1/17w32::Via Giovanni Servais [altezza civico ]200/E/23
+TOH_1/17w33::Via Carlo Bianco [di fronte al civico ]1/A
+TOH_1/17w34::Via Servais [20 metri dopo il civico ]176/1
+TOH_1/17w41::Strada Pianezza [altezza civico ]311/10/A
+TOH_1/17w42::Via Pietro Cossa [altezza civico ]293/29/C
+TOH_1/17w43::Via Pietro Cossa [altezza civico ]293/6/C
+TOH_1/17w44::Via Andrea Sansovino [altezza civico ]3/A
+TOH_1/18e11::Via Fidia [davanti al civico ]22
+TOH_1/18e12::Via Mario Ponzio [altezza civico ]24
 TOH_1/18e13::Via Quinti Bevilacqua 25/A
 TOH_1/18e14::::Coordinate PFS assenti
-TOH_1/18e21::Via Luca della Robbia altezza civico 11/A
+TOH_1/18e21::Via Luca della Robbia [altezza civico ]11/A
 TOH_1/18e22::Via Vandalino angolo Via Francesco De Sanctis
 TOH_1/18e23::Via Arnaz angolo Via Fidia
-TOH_1/18e24::Via Luca della Robbia altezza civico 11/A
+TOH_1/18e24::Via Luca della Robbia [altezza civico ]11/A
 TOH_1/18e31::Corso Francia angolo Via Battista Bena
-TOH_1/18e32::Via Mollieres altezza civico 22
-TOH_1/18e33::Via Fidia altezza civico 12
-TOH_1/18e34::Via Pietro Thermignon altezza civico 8
-TOH_1/18e41::Via Sostegno davanti al civico 1/B
+TOH_1/18e32::Via Mollieres [altezza civico ]22
+TOH_1/18e33::Via Fidia [altezza civico ]12
+TOH_1/18e34::Via Pietro Thermignon [altezza civico ]8
+TOH_1/18e41::Via Sostegno [davanti al civico ]1/B
 TOH_1/18e42::Corso Francia 309
 TOH_1/18e43::Via Rochemolles 3/A
-TOH_1/18e44::Via Ludovico Bellardi davanti al civico 9
-TOH_1/18w11::Via Sostegno altezza civico 51A - angolo Giacinto Pacchiotti
-TOH_1/18w12::Via Sostegno alla sinistra del civico 65
+TOH_1/18e44::Via Ludovico Bellardi [davanti al civico ]9
+TOH_1/18w11::Via Sostegno [altezza civico ]51A - angolo Giacinto Pacchiotti
+TOH_1/18w12::Via Sostegno [alla sinistra del civico ]65
 TOH_1/18w13::Via Valentino Carrera 179/34/B
 TOH_1/18w14::Via Sostegno 27/A
 TOH_1/18w21::Corso Francia angolo Edoardo Perroncito
@@ -448,42 +447,42 @@ TOH_1/18w22::Via Thures 10/A
 TOH_1/18w23::Corso Francia 428
 TOH_1/18w24::Via S. Giorgio Canavese angolo Via Val Lagarina
 TOH_1/18w31::Via Val Lagarina angolo Via Vipacco
-TOH_1/18w32::Via Rieti altezza civico 25/A
+TOH_1/18w32::Via Rieti [altezza civico ]25/A
 TOH_1/18w33::Via Anastasio Germonio angolo Via Pietro Abate Chanoux
 TOH_1/18w34::Via Val Lagarina angolo Via Pietro Abate Chanoux
 TOH_1/18w41::Via Eritrea 18bis
 TOH_1/18w42::Corso Francia angolo Via Abate Pietro Chanoux
 TOH_1/18w43::Via Giuseppe Fenoglio 7
 TOH_1/18w44::Corso Marche angolo Corso Francia
-TOH_1/19e11::Via Challant altezza civico 33/A
-TOH_1/19e12::Via Brissogne altezza civico 13
-TOH_1/19e13::Via Bionaz altezza civico 8
+TOH_1/19e11::Via Challant [altezza civico ]33/A
+TOH_1/19e12::Via Brissogne [altezza civico ]13
+TOH_1/19e13::Via Bionaz [altezza civico ]8
 TOH_1/19e14::Via Bard angolo Via Bard 43
-TOH_1/19e21::Strada della Pronda altezza civico 7
+TOH_1/19e21::Strada della Pronda [altezza civico ]7
 TOH_1/19e22::Strada della Pronda angolo Via Postumia
 TOH_1/19e23::Via Monginevro angolo Via Bard
 TOH_1/19e24::Via Monginevro angolo Via Ozieri
 TOH_1/19e31::Via Quinto Bevilacqua angolo Via Mario Ponzio
-TOH_1/19e32::Via Mario Ponzio altezza civico 24
-TOH_1/19e33::Via Monte Cimone altezza civico 23
+TOH_1/19e32::Via Mario Ponzio [altezza civico ]24
+TOH_1/19e33::Via Monte Cimone [altezza civico ]23
 TOH_1/19e34::Via Postumia angolo Via Monte Cimone
 TOH_1/19e41::Via Chambery angolo Via Francesco De Sanctis
-TOH_1/19e42::Via Asiago altezza civico 6
+TOH_1/19e42::Via Asiago [altezza civico ]6
 TOH_1/19e43::Via Chambery angolo Via Cirenaica
-TOH_1/19e44::Via Tarvisio altezza civico 5
-TOH_1/19w11::Via Adamello altezza civico 91
-TOH_1/19w12::Via Vandalino altezza civico 129
-TOH_1/19w13::Via Vandalino altezza civico 145/42
+TOH_1/19e44::Via Tarvisio [altezza civico ]5
+TOH_1/19w11::Via Adamello [altezza civico ]91
+TOH_1/19w12::Via Vandalino [altezza civico ]129
+TOH_1/19w13::Via Vandalino [altezza civico ]145/42
 TOH_1/19w14::Via Val Lagarina angolo Via Premuda
 TOH_1/19w21::Via Asiago 55/D
 TOH_1/19w22::Via Asiago 75/13/A
-TOH_1/19w23::Via Rieti davanti al civico 44
+TOH_1/19w23::Via Rieti [davanti al civico ]44
 TOH_1/19w24::Via Don Leonardo Murialdo 46
 TOH_1/19w31::Via Eritrea angolo Via Vandalino
-TOH_1/19w32::Via Adamello altezza civico 20
-TOH_1/19w33::Via Vandalino altezza civico 69
+TOH_1/19w32::Via Adamello [altezza civico ]20
+TOH_1/19w33::Via Vandalino [altezza civico ]69
 TOH_1/19w34::Via Vandalino angolo Via Vandalino Anastasio
 TOH_1/19w41::Via Chambery 79/1
-TOH_1/19w42::Via Chambery di fronte al civico 93/106
+TOH_1/19w42::Via Chambery [di fronte al civico ]93/106
 TOH_1/19w43::Via Asiago 42bis
-TOH_1/19w44::Via Adamello altezza civico 39/A
+TOH_1/19w44::Via Adamello [altezza civico ]39/A
