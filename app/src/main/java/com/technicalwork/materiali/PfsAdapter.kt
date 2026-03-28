@@ -86,12 +86,18 @@ class PfsAdapter(
         } else {
             holder.llMissingAddress.visibility = View.GONE
             holder.btnMap.visibility = View.VISIBLE
-            holder.btnMap.text = "Mappa: ${item.address}"
+            
+            // Indirizzo da mostrare a schermo pulito (rimuove solo i caratteri '[' e ']')
+            val displayAddress = item.address.replace("[", "").replace("]", "")
+            holder.btnMap.text = "Mappa: $displayAddress"
             
             holder.btnMap.setOnClickListener {
                 onPfsClick(item)
                 val geoPrefix = if (userLat != null && userLng != null) "geo:$userLat,$userLng" else "geo:0,0"
-                val uri = Uri.parse("$geoPrefix?q=${Uri.encode(item.address)}")
+                // Stringa per la ricerca su Google Maps (rimuove sia le quadre che il loro contenuto)
+                val mapsQuery = item.address.replace(Regex("\\[.*?\\]"), "").trim()
+                
+                val uri = Uri.parse("$geoPrefix?q=${Uri.encode(mapsQuery)}")
                 val intent = Intent(Intent.ACTION_VIEW, uri)
                 intent.setPackage("com.google.android.apps.maps")
                 if (intent.resolveActivity(holder.itemView.context.packageManager) != null) {

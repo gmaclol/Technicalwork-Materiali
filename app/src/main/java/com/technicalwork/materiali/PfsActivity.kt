@@ -205,7 +205,7 @@ class PfsActivity : AppCompatActivity() {
             
             val data = hashMapOf<String, Any>(
                 "nome_pfs" to item.name,
-                "indirizzo_pfs" to item.address,
+                "indirizzo_pfs" to item.address.replace("[", "").replace("]", ""),
                 "tecnico" to techName,
                 "orario" to timestamp,
                 "timestamp_raw" to timestampRaw,
