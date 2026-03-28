@@ -1,5 +1,5 @@
 AT_01/01e11::Via Guido Ginella angolo Via delle Corse, Asti
-AT_01/01e12::Via Antico Ippodromo [altezza civico 21], Asti
+AT_01/01e12::Via Antico Ippodromo [altezza civico ]21, Asti
 AT_01/01e13::Via Gian Battista Volpini [altezza civico ]46, Asti
 AT_01/01e14::Viale Pilone angolo Corso Alessandria, Asti
 AT_01/01e21::Via Francesco Cendola angolo Viale Pilone, Asti
