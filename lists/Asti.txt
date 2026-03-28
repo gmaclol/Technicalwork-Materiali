@@ -1,104 +1,104 @@
-AT_01/01e11::Via Guido Ginella angolo Via delle Corse
-AT_01/01e12::Via Antico Ippodromo altezza civico 21
-AT_01/01e13::Via Gian Battista Volpini altezza civico 46
-AT_01/01e14::Viale Pilone angolo Corso Alessandria
-AT_01/01e21::Via Francesco Cendola angolo Viale Pilone
-AT_01/01e22::Corso Alessandria altezza civico 156A
-AT_01/01e23::Via Olof Palme angolo Via Fratelli Kennedy
-AT_01/01e24::Viale Pilone angolo Via al Ponte Verde
-AT_01/01e31::Via Gustavo Fara altezza civico 2B (passo carrabile)
-AT_01/01e32::Viale Pilone angolo Via Solferino
-AT_01/01e33::Via Sardegna angolo Corso Genova
-AT_01/01e34::Via San Giovanni Bosco angolo Via Gioacchino Rossini
-AT_01/01e41::Corso alla Vittoria angolo Via Gioacchino Rossini
-AT_01/01e42::Corso Galileo Ferraris angolo Via Luigi Galvani
-AT_01/01e43::Via Annibale Vigna angolo Corso Pietro Chiesa
-AT_01/01e44::Via Benedetto Viale angolo Via Evangelista Torricelli
-AT_01/01w11::Via Bernardino Pallio 13
-AT_01/01w12::Via Monte Rainero 2A
-AT_01/01w13::Via Malta 9
-AT_01/01w14::Via Zara angolo Via Fiume
-AT_01/01w21::Corso Alessandro Volta angolo Via Malta
-AT_01/01w22::Corso Alessandro Volta angolo Via Giuseppe Bocca
-AT_01/01w23::Via Secondo Arò angolo Via Della Fontana
-AT_01/01w24::Via Del Cavallino angolo Via Secondo Arò
-AT_01/01w31::Corso Luigi Einaudi angolo Corso Alla Vittoria (lato parcheggio)
-AT_01/01w32::Via Secondo Arò angolo Via Della Fontana (lato opposto rispetto a AT_01/01w23)
-AT_01/01w33::Corso Vittorio Alfieri angolo Via Giuseppe Montalenti
-AT_01/01w34::Via San Giovanni Bosco angolo Via Turchi
-AT_01/01w41::Corso della Vittoria angolo Via Matteo Prandone
-AT_01/01w42::Via Montebruno angolo Via Augusto Righi
-AT_01/01w43::Corso Galileo Ferraris angolo Via Cornelia Cotta
-AT_01/01w44::Corso Felice Cavallotti angolo Via Domenico Ratti
-AT_01/02e11::Via Orazio Dogliotti di fronte al civico 25
-AT_01/02e12::Piazza Leonardo da Vinci 32
-AT_01/02e13::Corso Giacomo Matteotti 1
-AT_01/02e14::Via Camillo Benso di Cavour 140
+AT_01/01e11::Via Guido Ginella angolo Via delle Corse, Asti
+AT_01/01e12::Via Antico Ippodromo [altezza civico 21], Asti
+AT_01/01e13::Via Gian Battista Volpini [altezza civico ]46, Asti
+AT_01/01e14::Viale Pilone angolo Corso Alessandria, Asti
+AT_01/01e21::Via Francesco Cendola angolo Viale Pilone, Asti
+AT_01/01e22::Corso Alessandria [altezza civico ]156A, Asti
+AT_01/01e23::Via Olof Palme angolo Via Fratelli Kennedy, Asti
+AT_01/01e24::Viale Pilone angolo Via al Ponte Verde, Asti
+AT_01/01e31::Via Gustavo Fara [altezza civico ]2B[ (passo carrabile)], Asti
+AT_01/01e32::Viale Pilone angolo Via Solferino, Asti
+AT_01/01e33::Via Sardegna angolo Corso Genova, Asti
+AT_01/01e34::Via San Giovanni Bosco angolo Via Gioacchino Rossini, Asti
+AT_01/01e41::Corso alla Vittoria angolo Via Gioacchino Rossini, Asti
+AT_01/01e42::Corso Galileo Ferraris angolo Via Luigi Galvani, Asti
+AT_01/01e43::Via Annibale Vigna angolo Corso Pietro Chiesa, Asti
+AT_01/01e44::Via Benedetto Viale angolo Via Evangelista Torricelli, Asti
+AT_01/01w11::Via Bernardino Pallio 13, Asti
+AT_01/01w12::Via Monte Rainero 2A, Asti
+AT_01/01w13::Via Malta 9, Asti
+AT_01/01w14::Via Zara angolo Via Fiume, Asti
+AT_01/01w21::Corso Alessandro Volta angolo Via Malta, Asti
+AT_01/01w22::Corso Alessandro Volta angolo Via Giuseppe Bocca, Asti
+AT_01/01w23::Via Secondo Arò angolo Via Della Fontana, Asti
+AT_01/01w24::Via Del Cavallino angolo Via Secondo Arò, Asti
+AT_01/01w31::Corso Luigi Einaudi angolo Corso Alla Vittoria[ (lato parcheggio)], Asti
+AT_01/01w32::Via Secondo Arò angolo Via Della Fontana[ (lato opposto rispetto a AT_01/01w23)], Asti
+AT_01/01w33::Corso Vittorio Alfieri angolo Via Giuseppe Montalenti, Asti
+AT_01/01w34::Via San Giovanni Bosco angolo Via Turchi, Asti
+AT_01/01w41::Corso della Vittoria angolo Via Matteo Prandone, Asti
+AT_01/01w42::Via Montebruno angolo Via Augusto Righi, Asti
+AT_01/01w43::Corso Galileo Ferraris angolo Via Cornelia Cotta, Asti
+AT_01/01w44::Corso Felice Cavallotti angolo Via Domenico Ratti, Asti
+AT_01/02e11::Via Orazio Dogliotti [di fronte al civico ]25, Asti
+AT_01/02e12::Piazza Leonardo da Vinci 32, Asti
+AT_01/02e13::Corso Giacomo Matteotti 1, Asti
+AT_01/02e14::Via Camillo Benso di Cavour 140, Asti
 AT_01/02e21::::Coordinate PFS assenti
-AT_01/02e22::Corso Matteotti 19
+AT_01/02e22::Corso Matteotti 19, Asti
 AT_01/02e23::::Coordinate PFS assenti
-AT_01/02e24::Vicolo Giuseppe Bosia angolo Via Guttuari
-AT_01/02e31::Via Nazario Sauro 72
-AT_01/02e32::Di fronte a Corso Matteotti 141
-AT_01/02e33::Sul marciapiede di Corso Matteotti 137
-AT_01/02e34::Via Carlo Lessona angolo Corso Giacomo Matteotti
-AT_01/02e41::Via San Francesco 4
-AT_01/02e42::Via 20 Settembre 91
-AT_01/02e43::Via San Martino 5
-AT_01/02e44::Via Serafino Grassi 61
-AT_01/02w11::Via Giuseppe Verdi 9
-AT_01/02w12::Corso Dante Alighieri 21
-AT_01/02w13::Via Antica Zecca 32
-AT_01/02w14::Via Francesco Morelli 30
-AT_01/02w21::Via Teatro Alfieri 2
-AT_01/02w22::Via Massimo d'Azeglio 28
-AT_01/02w23::Via Giosuè Carducci 291B
-AT_01/02w24::Via Edmondo De Amicis 5A
-AT_01/02w31::Via Ottolenghi angolo Piazza Roma
-AT_01/02w32::Via Cesare Balbo 32
-AT_01/02w33::Via Dei Cappellai 23
-AT_01/02w34::Via Giuseppe Garibaldi 20
-AT_01/02w41::Via Quintino Sella di fronte al civico 12
-AT_01/02w42::Vicolo Giuseppe Vincenzo Cavalleri 3
-AT_01/02w43::Via 20 Settembre 65
-AT_01/02w44::Via Giambattista De Rolandis angolo Via Delle Grazie
-AT_01/03e11::Piazza Giovanni Amendola 197
-AT_01/03e12::Via Croce Verde 6
-AT_01/03e13::Piazzetta Montafia 1
-AT_01/03e14::Viale al Santuario 46
-AT_01/03e21::Via Giovanni Giobert 36
-AT_01/03e22::Via Giosuè Carducci angolo Via Francesco Caracciolo
-AT_01/03e23::Via Giosuè Carducci 87
-AT_01/03e24::Via Giulio Natta di fronte al civico 47
-AT_01/03e31::Corso Vittorio Alfieri di fronte al civico 452
-AT_01/03e32::Via Porta Romana 39
-AT_01/03e33::Corso Don Giovanni Minzoni 151
-AT_01/03e34::Viale dei Partigiani di fronte al civico 116
-AT_01/03e41::Viale dei Partigiani di fronte al civico 114
-AT_01/03e42::Viale dei Partigiani di fronte al civico 83
-AT_01/03e43::Salita Carlo Morra di fronte al civico 59
-AT_01/03e44::Via Alfredo Oriani di fronte al civico 9
-AT_01/03w11::Piazza Catena incrocio Via Cattedrale
-AT_01/03w12::Piazza Paolo Lugano 9
-AT_01/03w13::Via Pietro Micca 46
-AT_01/03w14::Via Pietro Micca angolo Via Giacomo Leopardi
-AT_01/03w21::Corso Dante Alighieri 114
-AT_01/03w22::Corso Dante Alighieri di fronte al civico 114
-AT_01/03w23::Corso Dante Alighieri vicino al civico 86
-AT_01/03w24::Via Antica Certosa 24
-AT_01/03w31::Via Guglielmo Caccia 12
-AT_01/03w32::Corso Dante Alighieri al civico 203
-AT_01/03w33::Corso Dante Alighieri al civico 128
-AT_01/03w34::Via Nicola Brovardi alla sinistra del civico 18
-AT_01/03w41::Via Filippo Corridoni 14
-AT_01/03w42::Corso 25 Aprile 21
-AT_01/03w43::Via Raffaello Sanzio 40
-AT_01/03w44::Via Conte Verde angolo Via Guglielmo Caccia
-AT_01/04e11::Via Conte Verde angolo Via Arduino
-AT_01/04e12::Via Papa Giovanni XXIII angolo Via Carlo Nogaro
-AT_01/04e13::Via Conte Verde 82
-AT_01/04e14::Via Bonifacio Rotario 2
-AT_01/04e21::Via Conte Verde 146
+AT_01/02e24::Vicolo Giuseppe Bosia angolo Via Guttuari, Asti
+AT_01/02e31::Via Nazario Sauro 72, Asti
+AT_01/02e32::[Di fronte a ]Corso Matteotti 141, Asti
+AT_01/02e33::[Sul marciapiede di ]Corso Matteotti 137, Asti
+AT_01/02e34::Via Carlo Lessona angolo Corso Giacomo Matteotti, Asti
+AT_01/02e41::Via San Francesco 4, Asti
+AT_01/02e42::Via 20 Settembre 91, Asti
+AT_01/02e43::Via San Martino 5, Asti
+AT_01/02e44::Via Serafino Grassi 61, Asti
+AT_01/02w11::Via Giuseppe Verdi 9, Asti
+AT_01/02w12::Corso Dante Alighieri 21, Asti
+AT_01/02w13::Via Antica Zecca 32, Asti
+AT_01/02w14::Via Francesco Morelli 30, Asti
+AT_01/02w21::Via Teatro Alfieri 2, Asti
+AT_01/02w22::Via Massimo d'Azeglio 28, Asti
+AT_01/02w23::Via Giosuè Carducci 291B, Asti
+AT_01/02w24::Via Edmondo De Amicis 5A, Asti
+AT_01/02w31::Via Ottolenghi angolo Piazza Roma, Asti
+AT_01/02w32::Via Cesare Balbo 32, Asti
+AT_01/02w33::Via Dei Cappellai 23, Asti
+AT_01/02w34::Via Giuseppe Garibaldi 20, Asti
+AT_01/02w41::Via Quintino Sella [di fronte al civico ]12, Asti
+AT_01/02w42::Vicolo Giuseppe Vincenzo Cavalleri 3, Asti
+AT_01/02w43::Via 20 Settembre 65, Asti
+AT_01/02w44::Via Giambattista De Rolandis angolo Via Delle Grazie, Asti
+AT_01/03e11::Piazza Giovanni Amendola 197, Asti
+AT_01/03e12::Via Croce Verde 6, Asti
+AT_01/03e13::Piazzetta Montafia 1, Asti
+AT_01/03e14::Viale al Santuario 46, Asti
+AT_01/03e21::Via Giovanni Giobert 36, Asti
+AT_01/03e22::Via Giosuè Carducci angolo Via Francesco Caracciolo, Asti
+AT_01/03e23::Via Giosuè Carducci 87, Asti
+AT_01/03e24::Via Giulio Natta [di fronte al civico ]47, Asti
+AT_01/03e31::Corso Vittorio Alfieri [di fronte al civico ]452, Asti
+AT_01/03e32::Via Porta Romana 39, Asti
+AT_01/03e33::Corso Don Giovanni Minzoni 151, Asti
+AT_01/03e34::Viale dei Partigiani [di fronte al civico ]116, Asti
+AT_01/03e41::Viale dei Partigiani [di fronte al civico ]114, Asti
+AT_01/03e42::Viale dei Partigiani [di fronte al civico ]83, Asti
+AT_01/03e43::Salita Carlo Morra [di fronte al civico ]59, Asti
+AT_01/03e44::Via Alfredo Oriani [di fronte al civico ]9, Asti
+AT_01/03w11::Piazza Catena incrocio Via Cattedrale, Asti
+AT_01/03w12::Piazza Paolo Lugano 9, Asti
+AT_01/03w13::Via Pietro Micca 46, Asti
+AT_01/03w14::Via Pietro Micca angolo Via Giacomo Leopardi, Asti
+AT_01/03w21::Corso Dante Alighieri 114, Asti
+AT_01/03w22::Corso Dante Alighieri [di fronte al civico ]114, Asti
+AT_01/03w23::Corso Dante Alighieri [vicino al civico ]86, Asti
+AT_01/03w24::Via Antica Certosa 24, Asti
+AT_01/03w31::Via Guglielmo Caccia 12, Asti
+AT_01/03w32::Corso Dante Alighieri 203, Asti
+AT_01/03w33::Corso Dante Alighieri 128, Asti
+AT_01/03w34::Via Nicola Brovardi [alla sinistra del civico ]18, Asti
+AT_01/03w41::Via Filippo Corridoni 14, Asti
+AT_01/03w42::Corso 25 Aprile 21, Asti
+AT_01/03w43::Via Raffaello Sanzio 40, Asti
+AT_01/03w44::Via Conte Verde angolo Via Guglielmo Caccia, Asti
+AT_01/04e11::Via Conte Verde angolo Via Arduino, Asti
+AT_01/04e12::Via Papa Giovanni XXIII angolo Via Carlo Nogaro, Asti
+AT_01/04e13::Via Conte Verde 82, Asti
+AT_01/04e14::Via Bonifacio Rotario 2, Asti
+AT_01/04e21::Via Conte Verde 146, Asti
 AT_01/04e22::::Coordinate PFS assenti
 AT_01/04e23::::Coordinate PFS assenti
 AT_01/04e24::::Coordinate PFS assenti
@@ -110,37 +110,37 @@ AT_01/04e41::::Coordinate PFS assenti
 AT_01/04e42::::Coordinate PFS assenti
 AT_01/04e43::::Coordinate PFS assenti
 AT_01/04e44::::Coordinate PFS assenti
-AT_01/04w11::Via Sant'Evasio 71
-AT_01/04w12::Vicolo Francesco Gino 104
-AT_01/04w13::Strada Praia 1
-AT_01/04w14::Corso Alessandro Volta angolo Via Pia Secondo
-AT_01/04w21::Corso Alessandro Volta angolo Via Antonio Badoni
-AT_01/04w22::Corso Alessandro Volta angolo Via Vincenzo Cavalla
-AT_01/04w23::Corso Alessandro Volta altezza civico 72
-AT_01/04w24::Strada Valmanera angolo Via Edoardo Giovanelli
-AT_01/04w31::Via Eo Baussano angolo Via Luigi Borsarelli di Rifreddo
-AT_01/04w32::Strada del Fortino angolo Corso Milano
-AT_01/04w33::Strada del Fortino altezza civico 62
-AT_01/04w34::Via Lorenzo Bezzi altezza civico 7
-AT_01/04w41::Via Nicola Brovardi angolo Via Ugo Foscolo
-AT_01/04w42::Via Europa Unita altezza civico 5
-AT_01/04w43::Via Francesco Petrarca altezza civico 61
-AT_01/04w44::Via Giovanni Boccaccio altezza civico 11
-AT_01/05e11::Ingresso di Via Sellai angolo Corso Savona
-AT_01/05e12::Corso Venezia di fronte al civico 69
-AT_01/05e13::Corso Savona 97
-AT_01/05e14::Via Amalfi 13
-AT_01/05e21::Via Trieste incrocio Via Pisa
-AT_01/05e22::Via Carlo Gancia di fronte al civico 47
-AT_01/05e23::Via Del Barcaiolo 14
-AT_01/05e24::Via Carlo Gancia incrocio Via Giovanni Gianotti
-AT_01/05e31::Via Anselmo Torchio di fronte al civico 68
-AT_01/05e32::Via Giacomo Scotti angolo Via Prospero Masoero
-AT_01/05e33::Via Prospero Masoero di fronte al civico 1
-AT_01/05e34::Via Giovanni Sodano angolo Via Giacomo Scotti
-AT_01/05e41::Via Novello Amaglio 6
-AT_01/05e42::Via Anselmo Torchio angolo Via G. Goria
-AT_01/05e43::Via Pietro Chiuminatti angolo Via Giuseppe Cecchin
+AT_01/04w11::Via Sant'Evasio 71, Asti
+AT_01/04w12::Vicolo Francesco Gino 104, Asti
+AT_01/04w13::Strada Praia 1, Asti
+AT_01/04w14::Corso Alessandro Volta angolo Via Pia Secondo, Asti
+AT_01/04w21::Corso Alessandro Volta angolo Via Antonio Badoni, Asti
+AT_01/04w22::Corso Alessandro Volta angolo Via Vincenzo Cavalla, Asti
+AT_01/04w23::Corso Alessandro Volta [altezza civico ]72, Asti
+AT_01/04w24::Strada Valmanera angolo Via Edoardo Giovanelli, Asti
+AT_01/04w31::Via Eo Baussano angolo Via Luigi Borsarelli di Rifreddo, Asti
+AT_01/04w32::Strada del Fortino angolo Corso Milano, Asti
+AT_01/04w33::Strada del Fortino [altezza civico ]62, Asti
+AT_01/04w34::Via Lorenzo Bezzi [altezza civico ]7, Asti
+AT_01/04w41::Via Nicola Brovardi angolo Via Ugo Foscolo, Asti
+AT_01/04w42::Via Europa Unita [altezza civico ]5, Asti
+AT_01/04w43::Via Francesco Petrarca [altezza civico ]61, Asti
+AT_01/04w44::Via Giovanni Boccaccio [altezza civico ]11, Asti
+AT_01/05e11::Ingresso di Via Sellai angolo Corso Savona, Asti
+AT_01/05e12::Corso Venezia [di fronte al civico ]69, Asti
+AT_01/05e13::Corso Savona 97, Asti
+AT_01/05e14::Via Amalfi 13, Asti
+AT_01/05e21::Via Trieste incrocio Via Pisa, Asti
+AT_01/05e22::Via Carlo Gancia [di fronte al civico ]47, Asti
+AT_01/05e23::Via Del Barcaiolo 14, Asti
+AT_01/05e24::Via Carlo Gancia incrocio Via Giovanni Gianotti, Asti
+AT_01/05e31::Via Anselmo Torchio [di fronte al civico ]68, Asti
+AT_01/05e32::Via Giacomo Scotti angolo Via Prospero Masoero, Asti
+AT_01/05e33::Via Prospero Masoero [di fronte al civico ]1, Asti
+AT_01/05e34::Via Giovanni Sodano angolo Via Giacomo Scotti, Asti
+AT_01/05e41::Via Novello Amaglio 6, Asti
+AT_01/05e42::Via Anselmo Torchio angolo Via G. Goria, Asti
+AT_01/05e43::Via Pietro Chiuminatti angolo Via Giuseppe Cecchin, Asti
 AT_01/05e44::::Coordinate PFS assenti
 AT_01/05w11::::Coordinate PFS assenti
 AT_01/05w12::::Coordinate PFS assenti
@@ -158,17 +158,17 @@ AT_01/05w41::::Coordinate PFS assenti
 AT_01/05w42::::Coordinate PFS assenti
 AT_01/05w43::::Coordinate PFS assenti
 AT_01/05w44::::Coordinate PFS assenti
-AT_01/06e11::Corso Torino 87
-AT_01/06e12::Via Gerbi angolo Corso Torino
-AT_01/06e13::Via Silvio Morando 8A
-AT_01/06e14::Via Giuseppe Di Vittorio 11
-AT_01/06e21::Via Giuseppe Gaeta angolo Corso Torino
-AT_01/06e22::Corso Torino 266
-AT_01/06e23::Corso Torino 192
-AT_01/06e24::Via Alfredo Catalani angolo Via Silvio Morando
-AT_01/06e31::Via Carlo Graziani angolo Corso 25 Aprile
-AT_01/06e32::Via Pertile angolo Corso XXV Aprile
-AT_01/06e33::Via Duca d'Aosta angolo Via Bruno Buozzi
+AT_01/06e11::Corso Torino 87, Asti
+AT_01/06e12::Via Gerbi angolo Corso Torino, Asti
+AT_01/06e13::Via Silvio Morando 8A, Asti
+AT_01/06e14::Via Giuseppe Di Vittorio 11, Asti
+AT_01/06e21::Via Giuseppe Gaeta angolo Corso Torino, Asti
+AT_01/06e22::Corso Torino 266, Asti
+AT_01/06e23::Corso Torino 192, Asti
+AT_01/06e24::Via Alfredo Catalani angolo Via Silvio Morando, Asti
+AT_01/06e31::Via Carlo Graziani angolo Corso 25 Aprile, Asti
+AT_01/06e32::Via Pertile angolo Corso XXV Aprile, Asti
+AT_01/06e33::Via Duca d'Aosta angolo Via Bruno Buozzi, Asti
 AT_01/06e34::::Coordinate PFS assenti
 AT_01/06e41::::Coordinate PFS assenti
 AT_01/06e42::::Coordinate PFS assenti
