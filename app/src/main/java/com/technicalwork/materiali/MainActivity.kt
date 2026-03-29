@@ -260,6 +260,7 @@ class MainActivity : AppCompatActivity() {
         cbIncludeTechName.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeTechName = isChecked
         }
+        cbIncludeDate.setOnClickListener { /* per compatibilità UI */ }
         cbIncludeDate.setOnCheckedChangeListener { _, isChecked ->
             settingsRepository.includeDate = isChecked
         }
@@ -612,6 +613,12 @@ class MainActivity : AppCompatActivity() {
                 if (newName.isNotEmpty()) {
                     saveTechnicianName(newName)
                     tvTechName.text = newName
+                    
+                    // Sincronizza immediatamente il nuovo nome su Firebase
+                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        FirebaseRepository().updateTechnicianName(deviceId, newName)
+                    }
                 } else if (!isUpdate) {
                     checkTechnicianName()
                 }

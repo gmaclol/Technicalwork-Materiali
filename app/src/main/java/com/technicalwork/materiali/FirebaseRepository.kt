@@ -115,4 +115,19 @@ class FirebaseRepository {
             false
         }
     }
+
+    /**
+     * Aggiorna solo il nome del tecnico in tutte le collezioni principali.
+     * Utile quando il tecnico si rinomina dal drawer.
+     */
+    fun updateTechnicianName(deviceId: String, newName: String) {
+        val data = hashMapOf<String, Any>("tecnico" to newName)
+        listOf("Elecnor", "Sertori", "Sirti", "Consumo").forEach { company ->
+            try {
+                db.collection(company).document(deviceId).set(data, SetOptions.merge())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
 }
