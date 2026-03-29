@@ -6,9 +6,12 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
@@ -40,6 +43,8 @@ class PfsActivity : AppCompatActivity() {
     private lateinit var rvPfs: RecyclerView
     private lateinit var pbPfs: ProgressBar
     private lateinit var adapter: PfsAdapter
+    private lateinit var tvTechName: TextView
+    private lateinit var settingsRepository: SettingsRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
@@ -48,6 +53,7 @@ class PfsActivity : AppCompatActivity() {
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
+        settingsRepository = SettingsRepository(this)
         drawerLayout = findViewById(R.id.drawerLayout)
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val navigationView = findViewById<NavigationView>(R.id.navigationView)
@@ -84,6 +90,17 @@ class PfsActivity : AppCompatActivity() {
             finish()
         }
 
+        // --- Configurazione Sezione Tecnico nel Drawer ---
+        tvTechName = findViewById(R.id.tvTechName)
+        val layoutTechName = findViewById<View>(R.id.layoutTechName)
+        
+        val currentName = settingsRepository.technicianName
+        tvTechName.text = currentName ?: "Non impostato"
+        
+        layoutTechName?.setOnClickListener {
+            showTechnicianNameDialog()
+        }
+
         rvPfs = findViewById(R.id.rvPfs)
         pbPfs = findViewById(R.id.pbPfs)
 
@@ -104,6 +121,35 @@ class PfsActivity : AppCompatActivity() {
 
         btnToh1?.setOnClickListener { loadArea("TOH1") }
         btnAsti?.setOnClickListener { loadArea("Asti") }
+    }
+
+    private fun showTechnicianNameDialog() {
+        val input = EditText(this)
+        val currentName = settingsRepository.technicianName
+        if (currentName != null) {
+            input.setText(currentName)
+            input.setSelectAllOnFocus(true)
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle(getString(R.string.dialog_title_edit_tech_name))
+            .setMessage(getString(R.string.dialog_msg_enter_tech_name))
+            .setView(input)
+            .setPositiveButton(getString(R.string.btn_save)) { _, _ ->
+                val newName = input.text.toString().trim()
+                if (newName.isNotEmpty()) {
+                    settingsRepository.technicianName = newName
+                    tvTechName.text = newName
+                    
+                    // Sincronizza immediatamente il nuovo nome su Firebase
+                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        FirebaseRepository().updateTechnicianName(deviceId, newName)
+                    }
+                }
+            }
+            .setNegativeButton(getString(R.string.btn_cancel), null)
+            .show()
     }
 
     private fun loadArea(area: String) {
