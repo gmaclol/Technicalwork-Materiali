@@ -165,7 +165,7 @@ AT_01/06e14::Via Giuseppe Di Vittorio 11, Asti
 AT_01/06e21::Via Giuseppe Gaeta angolo Corso Torino, Asti
 AT_01/06e22::Corso Torino 266, Asti
 AT_01/06e23::Corso Torino 192, Asti
-AT_01/06e24::Via Alfredo Catalani angolo Via Silvio Morando, Asti
+AT_01/06e24::Via Alfredo Catalani angolo Via Carlo Graziani, Asti
 AT_01/06e31::Via Carlo Graziani angolo Corso 25 Aprile, Asti
 AT_01/06e32::Via Pertile angolo Corso XXV Aprile, Asti
 AT_01/06e33::Via Duca d'Aosta angolo Via Bruno Buozzi, Asti
