@@ -462,14 +462,21 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-    private fun performTotalSync() {
-        if (startupSyncStarted) return
+    private fun performTotalSync(force: Boolean = false) {
+        if (startupSyncStarted && !force) return
         
         val lastSync = settingsRepository.lastSyncTimestamp
         val currentTime = System.currentTimeMillis()
-        val eightHours = 8 * 60 * 60 * 1000L
         
-        if (currentTime - lastSync < eightHours) {
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        val lastSyncDate = sdf.format(Date(lastSync))
+        val currentDate = sdf.format(Date(currentTime))
+        
+        val isNewDay = lastSyncDate != currentDate
+        val eightHours = 8 * 60 * 60 * 1000L
+        val isOver8Hours = currentTime - lastSync >= eightHours
+        
+        if (!force && !isNewDay && !isOver8Hours) {
             startupSyncStarted = true
             return
         }
@@ -639,9 +646,11 @@ class MainActivity : AppCompatActivity() {
                     tvTechName.text = newName
                     
                     // Sincronizza immediatamente il nuovo nome su Firebase (incluso devices_names con timestamp)
+                    val (lat, lng) = getLastLocation()
                     val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().updateTechnicianName(deviceId, newName)
+                        FirebaseRepository().updateTechnicianName(deviceId, newName, lat, lng)
+                        performTotalSync(force = true)
                     }
                 } else if (!isUpdate) {
                     checkTechnicianName()

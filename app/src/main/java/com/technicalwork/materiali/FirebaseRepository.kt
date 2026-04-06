@@ -118,10 +118,19 @@ class FirebaseRepository {
 
     /**
      * Aggiorna solo il nome del tecnico in tutte le collezioni principali
-     * e nel registro centrale devices_names con timestamp.
+     * e nel registro centrale devices_names con timestamp. Includendo i metadata primari.
      */
-    fun updateTechnicianName(deviceId: String, newName: String) {
-        val data = hashMapOf<String, Any>("tecnico" to newName)
+    fun updateTechnicianName(deviceId: String, newName: String, lat: Double? = null, lng: Double? = null) {
+        val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
+        val data = hashMapOf<String, Any>(
+            "tecnico" to newName,
+            "dispositivo" to "${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL}",
+            "versione_app" to "Ver ${BuildConfig.VERSION_NAME}",
+            "ultimo_aggiornamento" to timestamp
+        )
+        lat?.let { data["lat"] = it }
+        lng?.let { data["lng"] = it }
+
         listOf("Elecnor", "Sertori", "Sirti", "Consumo").forEach { company ->
             try {
                 db.collection(company).document(deviceId).set(data, SetOptions.merge())
