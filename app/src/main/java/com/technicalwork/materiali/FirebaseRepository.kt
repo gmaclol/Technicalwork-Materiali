@@ -117,8 +117,8 @@ class FirebaseRepository {
     }
 
     /**
-     * Aggiorna solo il nome del tecnico in tutte le collezioni principali.
-     * Utile quando il tecnico si rinomina dal drawer.
+     * Aggiorna solo il nome del tecnico in tutte le collezioni principali
+     * e nel registro centrale devices_names con timestamp.
      */
     fun updateTechnicianName(deviceId: String, newName: String) {
         val data = hashMapOf<String, Any>("tecnico" to newName)
@@ -128,6 +128,19 @@ class FirebaseRepository {
             } catch (e: Exception) {
                 e.printStackTrace()
             }
+        }
+        // Aggiorna il registro centrale con timestamp
+        try {
+            val nameData = hashMapOf<String, Any>(
+                deviceId to hashMapOf(
+                    "name" to newName,
+                    "updatedAt" to System.currentTimeMillis()
+                )
+            )
+            db.collection("settings").document("devices_names")
+                .set(nameData, SetOptions.merge())
+        } catch (e: Exception) {
+            e.printStackTrace()
         }
     }
 }

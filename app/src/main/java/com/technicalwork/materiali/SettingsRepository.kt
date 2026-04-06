@@ -18,6 +18,10 @@ class SettingsRepository(context: Context) {
         get() = prefs.getString("technician_name", null)
         set(value) = prefs.edit().putString("technician_name", value).apply()
 
+    var lastNameUpdateTimestamp: Long
+        get() = prefs.getLong("last_name_update_timestamp", 0L)
+        set(value) = prefs.edit().putLong("last_name_update_timestamp", value).apply()
+
     var lastSelectedCompany: String?
         get() = prefs.getString("last_selected_company", null)
         set(value) = prefs.edit().putString("last_selected_company", value).apply()

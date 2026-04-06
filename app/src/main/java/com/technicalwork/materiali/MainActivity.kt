@@ -430,9 +430,31 @@ class MainActivity : AppCompatActivity() {
             .addSnapshotListener { snapshot, e ->
                 if (e != null) return@addSnapshotListener
                 if (snapshot != null && snapshot.exists()) {
-                    val remoteName = snapshot.getString(deviceId)
-                    if (!remoteName.isNullOrBlank() && remoteName != getTechnicianName()) {
+                    val raw = snapshot.get(deviceId)
+                    var remoteName: String? = null
+                    var remoteTimestamp = 0L
+
+                    when (raw) {
+                        is String -> {
+                            // Formato vecchio (solo stringa, nessun timestamp)
+                            remoteName = raw
+                            remoteTimestamp = 0L
+                        }
+                        is Map<*, *> -> {
+                            // Formato nuovo { name: "...", updatedAt: ... }
+                            remoteName = raw["name"] as? String
+                            remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
+                        }
+                    }
+
+                    val localTimestamp = settingsRepository.lastNameUpdateTimestamp
+
+                    if (!remoteName.isNullOrBlank()
+                        && remoteName != getTechnicianName()
+                        && remoteTimestamp > localTimestamp
+                    ) {
                         saveTechnicianName(remoteName)
+                        settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
                         tvTechName.text = remoteName
                         lifecycleScope.launch { performTotalSync() }
                     }
@@ -612,9 +634,11 @@ class MainActivity : AppCompatActivity() {
                 val newName = input.text.toString().trim()
                 if (newName.isNotEmpty()) {
                     saveTechnicianName(newName)
+                    val now = System.currentTimeMillis()
+                    settingsRepository.lastNameUpdateTimestamp = now
                     tvTechName.text = newName
                     
-                    // Sincronizza immediatamente il nuovo nome su Firebase
+                    // Sincronizza immediatamente il nuovo nome su Firebase (incluso devices_names con timestamp)
                     val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
                         FirebaseRepository().updateTechnicianName(deviceId, newName)
