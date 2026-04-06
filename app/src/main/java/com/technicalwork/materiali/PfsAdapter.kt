@@ -87,15 +87,25 @@ class PfsAdapter(
             holder.llMissingAddress.visibility = View.GONE
             holder.btnMap.visibility = View.VISIBLE
             
-            // Indirizzo da mostrare a schermo pulito (rimuove solo i caratteri '[' e ']')
-            val displayAddress = item.address.replace("[", "").replace("]", "")
+            // Logica Nuova:
+            // 1. Estraiamo il contenuto tra parentesi quadre se presente
+            val bracketRegex = Regex("\\[(.*?)\\]")
+            val match = bracketRegex.find(item.address)
+            
+            // 2. Il testo visualizzato esclude le quadre e il loro contenuto
+            val displayAddress = item.address.replace(bracketRegex, "").trim()
             holder.btnMap.text = "Mappa: $displayAddress"
             
             holder.btnMap.setOnClickListener {
                 onPfsClick(item)
                 val geoPrefix = if (userLat != null && userLng != null) "geo:$userLat,$userLng" else "geo:0,0"
-                // Stringa per la ricerca su Google Maps (rimuove sia le quadre che il loro contenuto)
-                val mapsQuery = item.address.replace(Regex("\\[.*?\\]"), "").trim()
+                
+                // 3. La ricerca su Maps usa il contenuto delle quadre se esiste, altrimenti l'indirizzo visibile
+                val mapsQuery = if (match != null) {
+                    match.groupValues[1].trim() 
+                } else {
+                    displayAddress
+                }
                 
                 val uri = Uri.parse("$geoPrefix?q=${Uri.encode(mapsQuery)}")
                 val intent = Intent(Intent.ACTION_VIEW, uri)
