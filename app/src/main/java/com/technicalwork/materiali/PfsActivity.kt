@@ -114,6 +114,7 @@ class PfsActivity : AppCompatActivity() {
 
         val btnToh1 = findViewById<MaterialButton>(R.id.navBtnToh1)
         val btnAsti = findViewById<MaterialButton>(R.id.navBtnAsti)
+        val btnBiella = findViewById<MaterialButton>(R.id.navBtnBiella)
         val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
 
         val initialArea = pfsPrefs.getString("pfs_last_area", "TOH1") ?: "TOH1"
@@ -121,6 +122,7 @@ class PfsActivity : AppCompatActivity() {
 
         btnToh1?.setOnClickListener { loadArea("TOH1") }
         btnAsti?.setOnClickListener { loadArea("Asti") }
+        btnBiella?.setOnClickListener { loadArea("Biella") }
     }
 
     private fun showTechnicianNameDialog() {
