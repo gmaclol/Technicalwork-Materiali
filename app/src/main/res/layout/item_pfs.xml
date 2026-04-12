@@ -69,7 +69,7 @@
                         android:id="@+id/etNewAddress"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Es: Via Roma 10, Milano"
+                        android:hint="Es: 10w33, Via Pullino 22, Rivoli"
                         android:textColor="@color/gemini_text_main"
                         android:inputType="textPostalAddress" />
                 </com.google.android.material.textfield.TextInputLayout>
