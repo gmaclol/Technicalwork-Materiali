@@ -11,18 +11,22 @@ class ListUpdater {
 
     private val client = OkHttpClient()
     private val baseUrl = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/"
-    private val filesToDownload = listOf("lista.txt", "Elecnor.txt", "Sertori.txt", "Sirti.txt")
 
     /**
      * Sincronizza le liste scaricandole da GitHub e salvandole in filesDir/lists/.
      * Fallisce silenziosamente in caso di errori o 404.
      */
-    suspend fun syncLists(context: Context) = withContext(Dispatchers.IO) {
+    suspend fun syncLists(context: Context, companies: List<String>, pfsAreas: List<String>) = withContext(Dispatchers.IO) {
         try {
             val listsDir = File(context.filesDir, "lists")
             if (!listsDir.exists()) {
                 listsDir.mkdirs()
             }
+
+            // Costruisce la lista dei file da scaricare dinamicamente
+            val filesToDownload = mutableListOf("lista.txt")
+            filesToDownload.addAll(companies.map { "$it.txt" })
+            filesToDownload.addAll(pfsAreas.map { "$it.txt" })
 
             filesToDownload.forEach { fileName ->
                 try {

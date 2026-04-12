@@ -98,36 +98,11 @@
                 android:textColor="@color/gemini_text_secondary"
                 android:textSize="12sp" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/navBtnElecnor"
-                style="@style/Widget.Material3.Button.TonalButton"
+            <LinearLayout
+                android:id="@+id/llCompaniesContainer"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:text="Elecnor"
-                app:icon="@android:drawable/ic_menu_add"
-                app:cornerRadius="28dp"
-                android:textAlignment="viewStart" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/navBtnSertori"
-                style="@style/Widget.Material3.Button.TonalButton"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Sertori"
-                app:icon="@android:drawable/ic_menu_add"
-                app:cornerRadius="28dp"
-                android:textAlignment="viewStart" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/navBtnSirti"
-                style="@style/Widget.Material3.Button.TonalButton"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Sirti"
-                app:icon="@android:drawable/ic_menu_add"
-                app:cornerRadius="28dp"
-                android:textAlignment="viewStart" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
 
             <!-- 2) Separatore -->
             <View

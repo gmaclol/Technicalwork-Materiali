@@ -47,6 +47,7 @@ class PfsActivity : AppCompatActivity() {
     private lateinit var adapter: PfsAdapter
     private lateinit var tvTechName: TextView
     private lateinit var settingsRepository: SettingsRepository
+    private lateinit var configManager: ConfigManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
@@ -73,6 +74,9 @@ class PfsActivity : AppCompatActivity() {
         toolbar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
         }
+
+        configManager = ConfigManager(this)
+        setupDynamicDrawer()
 
         val headerView = navigationView.getHeaderView(0)
         val appLogo = headerView.findViewById<ImageView>(R.id.app_logo)
@@ -113,17 +117,14 @@ class PfsActivity : AppCompatActivity() {
         rvPfs.layoutManager = LinearLayoutManager(this)
         rvPfs.adapter = adapter
 
-        val btnToh1 = findViewById<MaterialButton>(R.id.navBtnToh1)
-        val btnAsti = findViewById<MaterialButton>(R.id.navBtnAsti)
-        val btnBiella = findViewById<MaterialButton>(R.id.navBtnBiella)
         val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
 
-        val initialArea = pfsPrefs.getString("pfs_last_area", "TOH1") ?: "TOH1"
+        val areas = configManager.getPfsAreas()
+        val defaultArea = if (areas.isNotEmpty()) areas[0] else "TOH1"
+        val initialArea = pfsPrefs.getString("pfs_last_area", defaultArea) ?: defaultArea
         loadArea(initialArea)
-
-        btnToh1?.setOnClickListener { loadArea("TOH1") }
-        btnAsti?.setOnClickListener { loadArea("Asti") }
-        btnBiella?.setOnClickListener { loadArea("Biella") }
+        
+        // I bottoni delle aree vengono ora generati dinamicamente in setupDynamicDrawer()
     }
 
     private fun showTechnicianNameDialog() {
@@ -148,7 +149,7 @@ class PfsActivity : AppCompatActivity() {
                     @SuppressLint("HardwareIds")
                     val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().updateTechnicianName(deviceId, newName)
+                        FirebaseRepository().updateTechnicianName(deviceId, newName, configManager.getCompanies())
                     }
                 }
             }
@@ -391,6 +392,31 @@ class PfsActivity : AppCompatActivity() {
                 true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+    private fun setupDynamicDrawer() {
+        val container = findViewById<android.widget.LinearLayout>(R.id.llPfsAreasContainer) ?: return
+        container.removeAllViews()
+
+        val areas = configManager.getPfsAreas()
+        
+        areas.forEachIndexed { index, area ->
+            val button = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle)
+            val params = android.widget.LinearLayout.LayoutParams(
+                android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
+                (56 * resources.displayMetrics.density).toInt()
+            )
+            if (index == 0) {
+                params.topMargin = (8 * resources.displayMetrics.density).toInt()
+            }
+            button.layoutParams = params
+            button.text = area
+            button.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_menu_add)
+            button.cornerRadius = (28 * resources.displayMetrics.density).toInt()
+            button.textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+            
+            button.setOnClickListener { loadArea(area) }
+            container.addView(button)
         }
     }
 }

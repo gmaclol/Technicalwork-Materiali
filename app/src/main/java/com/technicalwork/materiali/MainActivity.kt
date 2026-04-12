@@ -89,6 +89,7 @@ class MainActivity : AppCompatActivity() {
     private var startupSyncStarted = false
     private var exchangeListenerRegistration: ListenerRegistration? = null
     private val exchangeRepo = ExchangeRepository()
+    private lateinit var configManager: ConfigManager
 
     private val updateCheckHandler = Handler(Looper.getMainLooper())
     private val updateCheckRunnable = object : Runnable {
@@ -214,6 +215,9 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
+        configManager = ConfigManager(this)
+        setupDynamicDrawer()
+
         drawerLayout = findViewById(R.id.drawerLayout)
         recyclerView = findViewById(R.id.recyclerView)
         ViewCompat.setOnApplyWindowInsetsListener(recyclerView) { view, insets ->
@@ -283,9 +287,6 @@ class MainActivity : AppCompatActivity() {
             showTechnicianNameDialog(true)
         }
 
-        val btnElecnor: MaterialButton = findViewById(R.id.navBtnElecnor)
-        val btnSertori: MaterialButton = findViewById(R.id.navBtnSertori)
-        val btnSirti: MaterialButton = findViewById(R.id.navBtnSirti)
         val btnConsumo: MaterialButton = findViewById(R.id.navBtnConsumo)
         val btnAddRow: MaterialButton = findViewById(R.id.navBtnAddRow)
         val btnResetFile: MaterialButton = findViewById(R.id.navBtnResetFile)
@@ -329,9 +330,7 @@ class MainActivity : AppCompatActivity() {
         }
         ItemTouchHelper(swipeHandler).attachToRecyclerView(recyclerView)
 
-        setupCompanyButton(btnElecnor, "Elecnor")
-        setupCompanyButton(btnSertori, "Sertori")
-        setupCompanyButton(btnSirti, "Sirti")
+        // I bottoni delle aziende vengono ora generati dinamicamente in setupDynamicDrawer()
         
         btnConsumo.setOnClickListener {
             handleConsumoClick()
@@ -491,7 +490,7 @@ class MainActivity : AppCompatActivity() {
             val techName = getTechnicianName() ?: return@launch
             
             // 1. Sync Liste (GitHub)
-            ListUpdater().syncLists(this@MainActivity)
+            ListUpdater().syncLists(this@MainActivity, configManager.getCompanies(), configManager.getPfsAreas())
 
             // 2. Rilevamento Posizione
             val (lat, lng) = withContext(Dispatchers.Main) { getLastLocation() }
@@ -502,8 +501,8 @@ class MainActivity : AppCompatActivity() {
             val excelRepo = ExcelRepository(this@MainActivity)
             val consumoRepo = ConsumoRepository(this@MainActivity)
 
-            // Sync Aziende
-            listOf("Elecnor", "Sertori", "Sirti").forEach { company ->
+            // Sync Aziende (Dinamiche dal Config)
+            configManager.getCompanies().forEach { company ->
                 settingsRepository.getCompanyFileUri(company)?.let { uriString ->
                     val uri = Uri.parse(uriString)
                     if (fileStorageManager.isUriAccessible(uri)) {
@@ -658,7 +657,7 @@ class MainActivity : AppCompatActivity() {
                     val (lat, lng) = getLastLocation()
                     val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().updateTechnicianName(deviceId, newName, lat, lng)
+                        FirebaseRepository().updateTechnicianName(deviceId, newName, configManager.getCompanies(), lat, lng)
                         performTotalSync(force = true)
                     }
                 } else if (!isUpdate) {
@@ -1515,6 +1514,32 @@ class MainActivity : AppCompatActivity() {
                 getString(R.string.exchange_pending_applied, exchange.fromTechName),
                 Toast.LENGTH_LONG
             ).show()
+        }
+    }
+    private fun setupDynamicDrawer() {
+        val container = findViewById<android.widget.LinearLayout>(R.id.llCompaniesContainer) ?: return
+        container.removeAllViews()
+
+        val companies = configManager.getCompanies()
+        val inflater = LayoutInflater.from(this)
+
+        companies.forEachIndexed { index, company ->
+            val button = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle)
+            val params = android.widget.LinearLayout.LayoutParams(
+                android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
+                (56 * resources.displayMetrics.density).toInt()
+            )
+            if (index == 0) {
+                params.topMargin = (8 * resources.displayMetrics.density).toInt()
+            }
+            button.layoutParams = params
+            button.text = company
+            button.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_menu_add)
+            button.cornerRadius = (28 * resources.displayMetrics.density).toInt()
+            button.textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+            
+            setupCompanyButton(button, company)
+            container.addView(button)
         }
     }
 }

@@ -78,36 +78,11 @@
                 android:textColor="@color/gemini_text_secondary"
                 android:textSize="12sp" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/navBtnToh1"
-                style="@style/Widget.Material3.Button.TonalButton"
+            <LinearLayout
+                android:id="@+id/llPfsAreasContainer"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:text="TOH1"
-                app:icon="@android:drawable/ic_menu_add"
-                app:cornerRadius="28dp"
-                android:textAlignment="viewStart" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/navBtnAsti"
-                style="@style/Widget.Material3.Button.TonalButton"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Asti"
-                app:icon="@android:drawable/ic_menu_add"
-                app:cornerRadius="28dp"
-                android:textAlignment="viewStart" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/navBtnBiella"
-                style="@style/Widget.Material3.Button.TonalButton"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:text="Biella"
-                app:icon="@android:drawable/ic_menu_add"
-                app:cornerRadius="28dp"
-                android:textAlignment="viewStart" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
 
             <View
                 android:layout_width="match_parent"
