@@ -1,3 +1,4 @@
+Segnala il PFS mancante!!::::00
 AT_01/01e11::Via Guido Ginella 70 - 72, Asti [44.90197959462473, 8.225926426052874]
 AT_01/01e12::Via Antico Ippodromo, Asti [44.89989521383965, 8.224583584317111]
 AT_01/01e13::Via Gian Battista Volpini, Asti [44.90263075469002, 8.227923034928066]
