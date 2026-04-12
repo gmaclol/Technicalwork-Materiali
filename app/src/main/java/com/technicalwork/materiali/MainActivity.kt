@@ -1501,10 +1501,9 @@ class MainActivity : AppCompatActivity() {
             excelRepo.saveExcelFile(uri, localData)
         }
 
-        // Se l'appalto dello scambio è quello attualmente aperto, ricarica l'adapter
+        // Se l'appalto dello scambio è quello attualmente aperto, ricarica ricarica la view completamente in real-time
         if (company == lastSelectedCompany && currentFileUri == uri) {
-            adapter.updateData(localData)
-            viewModel.saveStateForUndo(localData)
+            viewModel.loadExcelFile(uri, company)
         }
 
         // Sync Firestore

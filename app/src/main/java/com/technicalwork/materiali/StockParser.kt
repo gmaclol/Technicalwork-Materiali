@@ -22,35 +22,43 @@ class StockParser {
         "sp", "s"
     )
 
-    // Pattern: (numero) + (numero) (sinonimo opzionale)
-    // Gruppo 1 = quantità libera, Gruppo 2 = quantità sparata, Gruppo 3 = sinonimo
-    private val regex: Regex by lazy {
+    // Pattern per "X + Y sparato"
+    private val combinedRegex: Regex by lazy {
         val synonymPattern = synonyms.joinToString("|") { Regex.escape(it) }
-        Regex(
-            """^\s*(\d+)\s*\+\s*(\d+)\s*($synonymPattern)\s*$""",
-            RegexOption.IGNORE_CASE
-        )
+        Regex("""^\s*(\d+)\s*\+\s*(\d+)\s*($synonymPattern)[a-zA-Z]*\s*$""", RegexOption.IGNORE_CASE)
+    }
+
+    // Pattern per solo "Y sparato"
+    private val standaloneUsedRegex: Regex by lazy {
+        val synonymPattern = synonyms.joinToString("|") { Regex.escape(it) }
+        Regex("""^\s*(\d+)\s*($synonymPattern)[a-zA-Z]*\s*$""", RegexOption.IGNORE_CASE)
     }
 
     /**
      * Scompone un valore in free + used.
      * - "5 + 2 sparat" → Stock(free=5, used=2, usedSuffix="sparat")
+     * - "4 sparat"     → Stock(free=0, used=4, usedSuffix="sparat")
      * - "10"           → Stock(free=10, used=0)
-     * - ""             → Stock(free=0, used=0)
      */
     fun parse(label: String, value: String): Stock {
         val trimmed = value.trim()
 
-        // Prova il pattern con sinonimo
-        val match = regex.find(trimmed)
-        if (match != null) {
+        // 1. Prova il pattern combinato "X + Y sparato"
+        combinedRegex.find(trimmed)?.let { match ->
             val free = match.groupValues[1].toIntOrNull() ?: 0
             val used = match.groupValues[2].toIntOrNull() ?: 0
             val suffix = match.groupValues[3]
             return Stock(label, free, used, trimmed, suffix)
         }
 
-        // Fallback: valore semplice (intero)
+        // 2. Prova il solo "Y sparato"
+        standaloneUsedRegex.find(trimmed)?.let { match ->
+            val used = match.groupValues[1].toIntOrNull() ?: 0
+            val suffix = match.groupValues[2]
+            return Stock(label, 0, used, trimmed, suffix)
+        }
+
+        // 3. Fallback: valore semplice (intero)
         val numericVal = trimmed.toIntOrNull() ?: 0
         return Stock(label, numericVal, 0, trimmed)
     }
@@ -59,7 +67,8 @@ class StockParser {
      * Verifica se il valore contiene un pattern "sparato".
      */
     fun hasUsedPart(value: String): Boolean {
-        return regex.containsMatchIn(value.trim())
+        val trimmed = value.trim()
+        return combinedRegex.containsMatchIn(trimmed) || standaloneUsedRegex.containsMatchIn(trimmed)
     }
 
     /**

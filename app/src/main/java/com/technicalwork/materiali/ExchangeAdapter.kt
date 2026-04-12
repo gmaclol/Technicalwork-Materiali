@@ -30,8 +30,14 @@ class ExchangeAdapter(
     var isTakingFromA = true
         set(value) {
             field = value
-            // Reset tutte le selezioni al cambio direzione
-            items.forEach { it.selectedFree = 0; it.selectedUsed = 0 }
+            // Se cambiamo tab e torniamo in "Prendi", limitiamo i valori per non superare il tetto massimo del tecnico obbiettivo,
+            // ma NON resettiamo a zero la lista corrente che distruggerebbe il lavoro dell'utente!
+            if (value) {
+                items.forEach { 
+                    if (it.selectedFree > it.availableFree) it.selectedFree = it.availableFree
+                    if (it.selectedUsed > it.availableUsed) it.selectedUsed = it.availableUsed
+                }
+            }
             notifyDataSetChanged()
             onSelectionChanged()
         }
@@ -80,7 +86,7 @@ class ExchangeAdapter(
 
         // --- Pulsanti Free ---
         holder.btnFreePlus.setOnClickListener {
-            val maxFree = if (isTakingFromA) item.availableFree else Int.MAX_VALUE
+            val maxFree = item.availableFree
             if (item.selectedFree < maxFree) {
                 item.selectedFree++
                 holder.tvFreeQty.text = item.selectedFree.toString()
@@ -97,7 +103,7 @@ class ExchangeAdapter(
 
         // --- Pulsanti Used ---
         holder.btnUsedPlus.setOnClickListener {
-            val maxUsed = if (isTakingFromA) item.availableUsed else Int.MAX_VALUE
+            val maxUsed = item.availableUsed
             if (item.selectedUsed < maxUsed) {
                 item.selectedUsed++
                 holder.tvUsedQty.text = item.selectedUsed.toString()

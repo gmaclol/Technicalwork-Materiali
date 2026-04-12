@@ -74,7 +74,8 @@ class ExchangeActivity : AppCompatActivity() {
     private var localTechName: String = ""
     private var currentDirection = ExchangeDirection.B_TAKES_FROM_A
 
-    private lateinit var exchangeAdapter: ExchangeAdapter
+    private lateinit var remoteAdapter: ExchangeAdapter
+    private lateinit var localAdapter: ExchangeAdapter
 
     // Scanner QR launcher
     private val scanLauncher = registerForActivityResult(ScanContract()) { result ->
@@ -147,18 +148,46 @@ class ExchangeActivity : AppCompatActivity() {
         toolbar.title = getString(R.string.exchange_title_generate)
         tvQrSubtitle.text = getString(R.string.exchange_show_qr_company, company)
 
-        // Genera il QR con DeviceID + Company
-        val qrData = JSONObject().apply {
-            put("deviceId", localDeviceId)
-            put("company", company)
-        }.toString()
+        val excelRepo = ExcelRepository(this)
+        val fileStorageManager = FileStorageManager(this)
 
-        val bitmap = generateQrBitmap(qrData, 600)
-        if (bitmap != null) {
-            ivQrCode.setImageBitmap(bitmap)
-        } else {
-            Toast.makeText(this, getString(R.string.exchange_qr_error), Toast.LENGTH_SHORT).show()
-            finish()
+        lifecycleScope.launch {
+            val uriString = settingsRepository.getCompanyFileUri(company)
+            if (uriString != null) {
+                val uri = android.net.Uri.parse(uriString)
+                if (fileStorageManager.isUriAccessible(uri)) {
+                    val result = withContext(Dispatchers.IO) { excelRepo.readExcelFile(uri, company) }
+                    val localData = result.getOrNull()
+                    if (localData != null) {
+                        val (lat, lng) = getLastLocation()
+                        withContext(Dispatchers.IO) {
+                            FirebaseRepository().syncToFirestore(
+                                context = this@ExchangeActivity,
+                                company = company,
+                                technicianName = localTechName,
+                                materials = localData,
+                                lat = lat,
+                                lng = lng,
+                                deviceId = localDeviceId
+                            )
+                        }
+                    }
+                }
+            }
+
+            // Genera il QR con DeviceID + Company
+            val qrData = JSONObject().apply {
+                put("deviceId", localDeviceId)
+                put("company", company)
+            }.toString()
+
+            val bitmap = generateQrBitmap(qrData, 600)
+            if (bitmap != null) {
+                ivQrCode.setImageBitmap(bitmap)
+            } else {
+                Toast.makeText(this@ExchangeActivity, getString(R.string.exchange_qr_error), Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
     }
 
@@ -191,6 +220,7 @@ class ExchangeActivity : AppCompatActivity() {
             setCameraId(0)
             setBeepEnabled(false)
             setOrientationLocked(true)
+            setCaptureActivity(PortraitCaptureActivity::class.java)
         }
         scanLauncher.launch(options)
     }
@@ -224,13 +254,34 @@ class ExchangeActivity : AppCompatActivity() {
                 exchangeRepo.fetchRemoteTechName(remoteCompany, remoteDeviceId) ?: "Tecnico"
             }
 
-            val inventory = withContext(Dispatchers.IO) {
+            var remoteInventory = withContext(Dispatchers.IO) {
                 exchangeRepo.fetchRemoteInventory(remoteCompany, remoteDeviceId)
+            }
+
+            if (remoteInventory == null || remoteInventory.isEmpty()) {
+                remoteInventory = com.technicalwork.materiali.AssetsHelper()
+                    .loadMasterList(this@ExchangeActivity, remoteCompany)
+                    .map { ExcelRowData(it, "") }
+            }
+
+            var localInventory: List<ExcelRowData>? = null
+            val excelRepo = ExcelRepository(this@ExchangeActivity)
+            val uriString = settingsRepository.getCompanyFileUri(remoteCompany)
+            if (uriString != null) {
+                val uri = android.net.Uri.parse(uriString)
+                if (FileStorageManager(this@ExchangeActivity).isUriAccessible(uri)) {
+                    localInventory = withContext(Dispatchers.IO) { excelRepo.readExcelFile(uri, remoteCompany).getOrNull() }
+                }
+            }
+            if (localInventory == null || localInventory.isEmpty()) {
+                localInventory = com.technicalwork.materiali.AssetsHelper()
+                    .loadMasterList(this@ExchangeActivity, remoteCompany)
+                    .map { ExcelRowData(it, "") }
             }
 
             layoutLoading.visibility = View.GONE
 
-            if (inventory == null || inventory.isEmpty()) {
+            if (remoteInventory.isEmpty() && localInventory.isEmpty()) {
                 Toast.makeText(
                     this@ExchangeActivity,
                     getString(R.string.exchange_no_inventory),
@@ -240,11 +291,17 @@ class ExchangeActivity : AppCompatActivity() {
                 return@launch
             }
 
-            showPaniere(inventory)
+            showPaniere(remoteInventory, localInventory)
         }
     }
 
-    private fun showPaniere(inventory: List<ExcelRowData>) {
+    private fun updateConfirmButton() {
+        if (::remoteAdapter.isInitialized && ::localAdapter.isInitialized) {
+            btnConfirmExchange.isEnabled = remoteAdapter.hasSelection() || localAdapter.hasSelection()
+        }
+    }
+
+    private fun showPaniere(remoteInventory: List<ExcelRowData>, localInventory: List<ExcelRowData>) {
         layoutQrDisplay.visibility = View.GONE
         layoutPaniere.visibility = View.VISIBLE
 
@@ -254,36 +311,44 @@ class ExchangeActivity : AppCompatActivity() {
 
         // Converti l'inventario in ExchangeRowData usando StockParser
         val separatorRegex = Regex("^::.*::$|^;;.*;;$")
-        val exchangeRows = inventory
+        
+        val remoteExchangeRows = remoteInventory
             .filter { !it.label.trim().matches(separatorRegex) && it.label.isNotBlank() }
             .map { row ->
                 val stock = parser.parse(row.label, row.value)
-                ExchangeRowData(
-                    label = row.label,
-                    availableFree = stock.free,
-                    availableUsed = stock.used,
-                    hasUsedPart = parser.hasUsedPart(row.value)
-                )
+                ExchangeRowData(row.label, stock.free, stock.used, parser.hasUsedPart(row.value))
             }
-            .filter { it.availableFree > 0 || it.availableUsed > 0 }
+            
+        val localExchangeRows = localInventory
+            .filter { !it.label.trim().matches(separatorRegex) && it.label.isNotBlank() }
+            .map { row ->
+                val stock = parser.parse(row.label, row.value)
+                ExchangeRowData(row.label, stock.free, stock.used, parser.hasUsedPart(row.value))
+            }
 
-        exchangeAdapter = ExchangeAdapter(exchangeRows.toMutableList()) {
-            btnConfirmExchange.isEnabled = exchangeAdapter.hasSelection()
-        }
+        remoteAdapter = ExchangeAdapter(remoteExchangeRows.toMutableList()) { updateConfirmButton() }
+        remoteAdapter.isTakingFromA = true
+
+        localAdapter = ExchangeAdapter(localExchangeRows.toMutableList()) { updateConfirmButton() }
+        localAdapter.isTakingFromA = false
 
         rvExchange.layoutManager = LinearLayoutManager(this)
-        rvExchange.adapter = exchangeAdapter
+        rvExchange.adapter = remoteAdapter
 
         // Toggle Direzione
         toggleDirection.check(R.id.btnTakeFromA)
         toggleDirection.addOnButtonCheckedListener { _, checkedId, isChecked ->
             if (isChecked) {
-                currentDirection = when (checkedId) {
-                    R.id.btnTakeFromA -> ExchangeDirection.B_TAKES_FROM_A
-                    R.id.btnGiveToA -> ExchangeDirection.B_GIVES_TO_A
-                    else -> ExchangeDirection.B_TAKES_FROM_A
+                when (checkedId) {
+                    R.id.btnTakeFromA -> {
+                        currentDirection = ExchangeDirection.B_TAKES_FROM_A
+                        rvExchange.adapter = remoteAdapter
+                    }
+                    R.id.btnGiveToA -> {
+                        currentDirection = ExchangeDirection.B_GIVES_TO_A
+                        rvExchange.adapter = localAdapter
+                    }
                 }
-                exchangeAdapter.isTakingFromA = currentDirection == ExchangeDirection.B_TAKES_FROM_A
             }
         }
 
@@ -294,73 +359,96 @@ class ExchangeActivity : AppCompatActivity() {
     }
 
     private fun showConfirmDialog() {
-        val selectedItems = exchangeAdapter.getSelectedItems()
-        if (selectedItems.isEmpty()) return
+        val takenItems = remoteAdapter.getSelectedItems()
+        val givenItems = localAdapter.getSelectedItems()
+        
+        if (takenItems.isEmpty() && givenItems.isEmpty()) return
 
-        val directionText = if (currentDirection == ExchangeDirection.B_TAKES_FROM_A) {
-            getString(R.string.exchange_confirm_take, remoteTechName)
-        } else {
-            getString(R.string.exchange_confirm_give, remoteTechName)
+        val partsText = mutableListOf<String>()
+        if (takenItems.isNotEmpty()) partsText.add(getString(R.string.exchange_confirm_take, remoteTechName))
+        if (givenItems.isNotEmpty()) partsText.add(getString(R.string.exchange_confirm_give, remoteTechName))
+        val directionText = partsText.joinToString("\n\n")
+
+        val itemsSummary = mutableListOf<String>()
+        if (takenItems.isNotEmpty()) {
+            itemsSummary.add("--- PRENDI ---")
+            itemsSummary.addAll(takenItems.map { item ->
+                val p = mutableListOf<String>()
+                if (item.qtyFree > 0) p.add("${item.qtyFree} liberi")
+                if (item.qtyUsed > 0) p.add("${item.qtyUsed} sparati")
+                "• ${item.label}: ${p.joinToString(", ")}"
+            })
         }
-
-        val itemsSummary = selectedItems.joinToString("\n") { item ->
-            val parts = mutableListOf<String>()
-            if (item.qtyFree > 0) parts.add("${item.qtyFree} liberi")
-            if (item.qtyUsed > 0) parts.add("${item.qtyUsed} sparati")
-            "• ${item.label}: ${parts.joinToString(", ")}"
+        if (givenItems.isNotEmpty()) {
+            itemsSummary.add("--- DAI ---")
+            itemsSummary.addAll(givenItems.map { item ->
+                val p = mutableListOf<String>()
+                if (item.qtyFree > 0) p.add("${item.qtyFree} liberi")
+                if (item.qtyUsed > 0) p.add("${item.qtyUsed} sparati")
+                "• ${item.label}: ${p.joinToString(", ")}"
+            })
         }
 
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.exchange_confirm_title))
-            .setMessage("$directionText\n\n$itemsSummary")
+            .setMessage(directionText + "\n\n" + itemsSummary.joinToString("\n"))
             .setPositiveButton(getString(R.string.exchange_confirm)) { _, _ ->
-                executeExchange(selectedItems)
+                executeCombinedExchange(takenItems, givenItems)
             }
             .setNegativeButton(getString(R.string.btn_cancel), null)
             .show()
     }
 
-    private fun executeExchange(selectedItems: List<ExchangeItem>) {
+    private fun executeCombinedExchange(takenItems: List<ExchangeItem>, givenItems: List<ExchangeItem>) {
         layoutLoading.visibility = View.VISIBLE
 
         lifecycleScope.launch {
-            // Coordinate GPS
             val (lat, lng) = getLastLocation()
+            var allSuccess = true
 
-            val success = withContext(Dispatchers.IO) {
-                exchangeRepo.executeExchange(
-                    fromDeviceId = localDeviceId,
-                    toDeviceId = remoteDeviceId,
-                    fromTechName = localTechName,
-                    toTechName = remoteTechName,
-                    company = remoteCompany,
-                    items = selectedItems,
-                    direction = currentDirection,
-                    lat = lat,
-                    lng = lng
-                )
+            if (takenItems.isNotEmpty()) {
+                val successTake = withContext(Dispatchers.IO) {
+                    exchangeRepo.executeExchange(
+                        fromDeviceId = localDeviceId,
+                        toDeviceId = remoteDeviceId,
+                        fromTechName = localTechName,
+                        toTechName = remoteTechName,
+                        company = remoteCompany,
+                        items = takenItems,
+                        direction = ExchangeDirection.B_TAKES_FROM_A,
+                        lat = lat,
+                        lng = lng
+                    )
+                }
+                if (successTake) updateLocalInventory(takenItems, ExchangeDirection.B_TAKES_FROM_A)
+                allSuccess = allSuccess && successTake
             }
 
-            if (success) {
-                // Aggiorna l'inventario locale di B
-                updateLocalInventory(selectedItems)
+            if (givenItems.isNotEmpty()) {
+                val successGive = withContext(Dispatchers.IO) {
+                    exchangeRepo.executeExchange(
+                        fromDeviceId = localDeviceId,
+                        toDeviceId = remoteDeviceId,
+                        fromTechName = localTechName,
+                        toTechName = remoteTechName,
+                        company = remoteCompany,
+                        items = givenItems,
+                        direction = ExchangeDirection.B_GIVES_TO_A,
+                        lat = lat,
+                        lng = lng
+                    )
+                }
+                if (successGive) updateLocalInventory(givenItems, ExchangeDirection.B_GIVES_TO_A)
+                allSuccess = allSuccess && successGive
+            }
 
-                layoutLoading.visibility = View.GONE
-                Toast.makeText(
-                    this@ExchangeActivity,
-                    getString(R.string.exchange_success),
-                    Toast.LENGTH_LONG
-                ).show()
-
+            layoutLoading.visibility = View.GONE
+            if (allSuccess) {
+                Toast.makeText(this@ExchangeActivity, getString(R.string.exchange_success), Toast.LENGTH_LONG).show()
                 setResult(RESULT_OK)
                 finish()
             } else {
-                layoutLoading.visibility = View.GONE
-                Toast.makeText(
-                    this@ExchangeActivity,
-                    getString(R.string.exchange_error),
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this@ExchangeActivity, getString(R.string.exchange_error), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -370,9 +458,7 @@ class ExchangeActivity : AppCompatActivity() {
      * Se B prende da A → aggiunge ai propri materiali.
      * Se B dà ad A → sottrae dai propri materiali.
      */
-    private suspend fun updateLocalInventory(selectedItems: List<ExchangeItem>) {
-        // Per l'aggiornamento locale, il tecnico B deve avere aperto lo stesso appalto.
-        // Leggiamo il file corrente usando il company e il deviceId locale.
+    private suspend fun updateLocalInventory(selectedItems: List<ExchangeItem>, appliedDirection: ExchangeDirection) {
         val company = remoteCompany
         val localFileUri = settingsRepository.getCompanyFileUri(company) ?: return
 
@@ -383,12 +469,11 @@ class ExchangeActivity : AppCompatActivity() {
 
         val localData = result.getOrNull()?.toMutableList() ?: return
 
-        // Applica le modifiche
         for (item in selectedItems) {
             val index = localData.indexOfFirst { it.label == item.label }
             if (index >= 0) {
                 val stock = parser.parse(localData[index].label, localData[index].value)
-                val newStock = when (currentDirection) {
+                val newStock = when (appliedDirection) {
                     ExchangeDirection.B_TAKES_FROM_A -> {
                         stock.copy(
                             free = stock.free + item.qtyFree,
@@ -405,7 +490,7 @@ class ExchangeActivity : AppCompatActivity() {
                 localData[index] = ExcelRowData(localData[index].label, parser.recompose(newStock))
             }
             // Se il materiale non esiste nella lista di B e B lo sta prendendo, lo aggiunge
-            else if (currentDirection == ExchangeDirection.B_TAKES_FROM_A) {
+            else if (appliedDirection == ExchangeDirection.B_TAKES_FROM_A) {
                 val newValue = if (item.qtyUsed > 0) {
                     "${item.qtyFree} + ${item.qtyUsed} sparat"
                 } else if (item.qtyFree > 0) {
@@ -428,11 +513,12 @@ class ExchangeActivity : AppCompatActivity() {
         val (lat, lng) = getLastLocation()
         withContext(Dispatchers.IO) {
             FirebaseRepository().syncToFirestore(
-                this@ExchangeActivity,
-                company,
-                localTechName,
-                localData,
-                lat, lng,
+                context = this@ExchangeActivity,
+                company = company,
+                technicianName = localTechName,
+                materials = localData,
+                lat = lat,
+                lng = lng,
                 deviceId = localDeviceId
             )
         }

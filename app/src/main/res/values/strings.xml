@@ -76,15 +76,15 @@
     <!-- Scambio Materiale -->
     <string name="exchange_title">Scambio Materiale</string>
     <string name="exchange_subtitle">Scegli come procedere</string>
-    <string name="exchange_generate_qr">Genera QR (Invio)</string>
-    <string name="exchange_scan_qr">Scansiona QR (Ricevo)</string>
+    <string name="exchange_generate_qr">Genera QR (Ricevi)</string>
+    <string name="exchange_scan_qr">Scansiona QR (Invio)</string>
     <string name="exchange_show_qr_title">Il tuo QR Code</string>
     <string name="exchange_show_qr_subtitle">Fai scansionare questo QR al collega</string>
     <string name="exchange_show_qr_company">Appalto: %s</string>
     <string name="exchange_waiting">In attesa di scansione…</string>
     <string name="exchange_title_generate">Genera QR</string>
     <string name="exchange_title_loading">Caricamento…</string>
-    <string name="exchange_title_basket">Paniere Scambio</string>
+    <string name="exchange_title_basket">Scambio Materiali</string>
     <string name="exchange_take">Prendo</string>
     <string name="exchange_give">Do</string>
     <string name="exchange_confirm">Conferma Scambio</string>
