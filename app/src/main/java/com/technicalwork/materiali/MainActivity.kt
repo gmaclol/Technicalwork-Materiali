@@ -90,6 +90,7 @@ class MainActivity : AppCompatActivity() {
     private var exchangeListenerRegistration: ListenerRegistration? = null
     private val exchangeRepo = ExchangeRepository()
     private lateinit var configManager: ConfigManager
+    private var toolbarQrButton: View? = null
 
     private val updateCheckHandler = Handler(Looper.getMainLooper())
     private val updateCheckRunnable = object : Runnable {
@@ -202,7 +203,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
         
         // Setup QR button
-        val toolbarQrButton = toolbar.findViewById<View>(R.id.qr_button_container)
+        toolbarQrButton = toolbar.findViewById(R.id.qr_button_container)
         toolbarQrButton?.setOnClickListener {
             showExchangeChoiceSheet()
         }
@@ -912,6 +913,7 @@ class MainActivity : AppCompatActivity() {
         customToolbarTitle?.text = fileName
         tvCurrentFileName.text = "Materiali di consumo"
         viewModel.currentCompany = "Consumo"
+        toolbarQrButton?.visibility = View.GONE
         
         lifecycleScope.launch {
             progressBar.visibility = View.VISIBLE
@@ -1083,6 +1085,7 @@ class MainActivity : AppCompatActivity() {
         val fileName = fileNameWithExt.substringBeforeLast('.')
         tvCurrentFileName.text = lastSelectedCompany ?: getString(R.string.default_company_name)
         customToolbarTitle?.text = fileName
+        toolbarQrButton?.visibility = View.VISIBLE
         readExcelFile(uri)
         forceMediaStoreScan()
     }
