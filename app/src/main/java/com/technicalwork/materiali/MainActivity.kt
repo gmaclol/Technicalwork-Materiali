@@ -57,6 +57,7 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -83,6 +84,8 @@ class MainActivity : AppCompatActivity() {
     private var saveMenuItem: MenuItem? = null
     private var lastSelectedCompany: String? = null
     private var startupSyncStarted = false
+    private var exchangeListenerRegistration: ListenerRegistration? = null
+    private val exchangeRepo = ExchangeRepository()
 
     private val updateCheckHandler = Handler(Looper.getMainLooper())
     private val updateCheckRunnable = object : Runnable {
@@ -158,6 +161,15 @@ class MainActivity : AppCompatActivity() {
         ActivityResultContracts.RequestMultiplePermissions()
     ) { _ -> }
 
+    private val exchangeActivityLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            // Ricarica il file corrente per riflettere le modifiche post-scambio
+            currentFileUri?.let { uri ->
+                if (isConsumoMode) openConsumoFile(uri) else openExcelFile(uri)
+            }
+        }
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
@@ -183,16 +195,18 @@ class MainActivity : AppCompatActivity() {
 
         toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
         
+        // Setup QR button
+        val toolbarQrButton = toolbar.findViewById<View>(R.id.qr_button_container)
+        toolbarQrButton?.setOnClickListener {
+            showExchangeChoiceSheet()
+        }
+
         // Ottimizzazione Titolo Toolbar
-        toolbar.setTitleTextAppearance(this, androidx.appcompat.R.style.TextAppearance_AppCompat_Widget_ActionBar_Title)
-        val titleView = toolbar.getChildAt(0) as? TextView
+        val titleView = toolbar.findViewById<TextView>(R.id.customToolbarTitle)
         titleView?.let {
-            it.isSingleLine = true
-            it.ellipsize = android.text.TextUtils.TruncateAt.MARQUEE
-            it.marqueeRepeatLimit = -1
             it.isSelected = true // Attiva il marquee
-            it.setPadding(0, 0, 8, 0)
         }
 
         toolbar.setNavigationOnClickListener {
@@ -411,10 +425,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Richiesta permessi posizione all'avvio
+        // Richiesta permessi posizione e camera all'avvio
         requestPermissionLauncher.launch(arrayOf(
             android.Manifest.permission.ACCESS_FINE_LOCATION,
-            android.Manifest.permission.ACCESS_COARSE_LOCATION
+            android.Manifest.permission.ACCESS_COARSE_LOCATION,
+            android.Manifest.permission.CAMERA
         ))
 
         // Sync totale (liste, posizione e tutti i file) ogni 8 ore all'avvio
@@ -460,6 +475,9 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
+
+        // Listener real-time per scambi materiale in arrivo
+        setupExchangeListener(deviceId)
     }
 
     private fun performTotalSync(force: Boolean = false) {
@@ -538,6 +556,9 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch(Dispatchers.IO) {
             SyncQueue().flush(this@MainActivity, FirebaseRepository())
         }
+
+        // Check scambi pendenti al resume
+        processPendingExchanges()
     }
 
     override fun onPause() {
@@ -548,6 +569,7 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         updateCheckHandler.removeCallbacks(updateCheckRunnable)
+        exchangeListenerRegistration?.remove()
     }
 
     private fun checkPendingUpdate(): Boolean {
@@ -900,7 +922,7 @@ class MainActivity : AppCompatActivity() {
         lastSelectedCompany = "Consumo"
         val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, "Materiali di consumo")
         val fileName = fileNameWithExt.substringBeforeLast('.')
-        toolbar.title = fileName
+        findViewById<TextView>(R.id.customToolbarTitle)?.text = fileName
         tvCurrentFileName.text = "Materiali di consumo"
         viewModel.currentCompany = "Consumo"
         
@@ -1074,7 +1096,7 @@ class MainActivity : AppCompatActivity() {
         val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, getString(R.string.default_file_name))
         val fileName = fileNameWithExt.substringBeforeLast('.')
         tvCurrentFileName.text = lastSelectedCompany ?: getString(R.string.default_company_name)
-        toolbar.title = fileName
+        findViewById<TextView>(R.id.customToolbarTitle)?.text = fileName
         readExcelFile(uri)
         forceMediaStoreScan()
     }
@@ -1122,7 +1144,6 @@ class MainActivity : AppCompatActivity() {
         val undoView = undoItem?.actionView ?: LayoutInflater.from(this).inflate(R.layout.menu_undo_button, recyclerView, false).also {
             undoItem?.actionView = it
         }
-        undoView.setOnClickListener { performUndo() }
         undoView.setOnClickListener { performUndo() }
         undoView.setOnLongClickListener { 
             showHistoryBottomSheet()
@@ -1352,6 +1373,155 @@ class MainActivity : AppCompatActivity() {
             loc?.latitude to loc?.longitude
         } catch (e: Exception) {
             null to null
+        }
+    }
+
+    // ==================== SCAMBIO MATERIALE ====================
+
+    private fun showExchangeChoiceSheet() {
+        if (currentFileUri == null) {
+            Toast.makeText(this, getString(R.string.exchange_no_file), Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val dialog = BottomSheetDialog(this)
+        val view = layoutInflater.inflate(R.layout.bottom_sheet_exchange_choice, null)
+
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnGenerateQr).setOnClickListener {
+            dialog.dismiss()
+            val intent = Intent(this, ExchangeActivity::class.java)
+            intent.putExtra(ExchangeActivity.EXTRA_MODE, ExchangeActivity.MODE_GENERATE)
+            exchangeActivityLauncher.launch(intent)
+        }
+
+        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnScanQr).setOnClickListener {
+            dialog.dismiss()
+            val intent = Intent(this, ExchangeActivity::class.java)
+            intent.putExtra(ExchangeActivity.EXTRA_MODE, ExchangeActivity.MODE_SCAN)
+            exchangeActivityLauncher.launch(intent)
+        }
+
+        dialog.setContentView(view)
+        dialog.show()
+    }
+
+    private fun setupExchangeListener(deviceId: String) {
+        exchangeListenerRegistration = exchangeRepo.listenForPendingExchanges(deviceId) { pendingList ->
+            lifecycleScope.launch {
+                for (exchange in pendingList) {
+                    applyExchangeToLocalInventory(exchange)
+                    exchangeRepo.markAsProcessed(exchange.id)
+                }
+            }
+        }
+    }
+
+    private fun processPendingExchanges() {
+        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        lifecycleScope.launch {
+            val pending = withContext(Dispatchers.IO) {
+                exchangeRepo.getPendingExchanges(deviceId)
+            }
+            for (exchange in pending) {
+                applyExchangeToLocalInventory(exchange)
+                withContext(Dispatchers.IO) {
+                    exchangeRepo.markAsProcessed(exchange.id)
+                }
+            }
+        }
+    }
+
+    /**
+     * Applica uno scambio ricevuto all'inventario locale.
+     * Legge il file Excel dell'appalto coinvolto, modifica le quantità, salva.
+     */
+    private suspend fun applyExchangeToLocalInventory(exchange: ExchangeLog) {
+        val company = exchange.company
+        val fileUriString = settingsRepository.getCompanyFileUri(company) ?: return
+        val uri = android.net.Uri.parse(fileUriString)
+
+        if (!fileStorageManager.isUriAccessible(uri)) return
+
+        val excelRepo = ExcelRepository(this)
+        val result = withContext(Dispatchers.IO) { excelRepo.readExcelFile(uri, company) }
+        if (result.isFailure) return
+
+        val localData = result.getOrNull()?.toMutableList() ?: return
+        val parser = StockParser()
+
+        // La direzione è dal punto di vista di B (chi ha scansionato).
+        // Per A (noi), l'effetto è inverso:
+        // Se B ha preso da A → A perde materiale
+        // Se B ha dato ad A → A guadagna materiale
+        val direction = try { ExchangeDirection.valueOf(exchange.direction) } catch (_: Exception) { return }
+
+        val items = exchange.items.mapNotNull { map ->
+            val label = map["label"] as? String ?: return@mapNotNull null
+            val qtyFree = (map["qtyFree"] as? Number)?.toInt() ?: 0
+            val qtyUsed = (map["qtyUsed"] as? Number)?.toInt() ?: 0
+            ExchangeItem(label, qtyFree, qtyUsed)
+        }
+
+        for (item in items) {
+            val index = localData.indexOfFirst { it.label == item.label }
+            if (index >= 0) {
+                val stock = parser.parse(localData[index].label, localData[index].value)
+                val newStock = when (direction) {
+                    ExchangeDirection.B_TAKES_FROM_A -> {
+                        // B ha preso da noi → noi perdiamo
+                        stock.copy(
+                            free = (stock.free - item.qtyFree).coerceAtLeast(0),
+                            used = (stock.used - item.qtyUsed).coerceAtLeast(0)
+                        )
+                    }
+                    ExchangeDirection.B_GIVES_TO_A -> {
+                        // B ci ha dato materiale → noi guadagniamo
+                        stock.copy(
+                            free = stock.free + item.qtyFree,
+                            used = stock.used + item.qtyUsed
+                        )
+                    }
+                }
+                localData[index] = ExcelRowData(localData[index].label, parser.recompose(newStock))
+            } else if (direction == ExchangeDirection.B_GIVES_TO_A) {
+                // Materiale nuovo che B ci ha dato
+                val newValue = if (item.qtyUsed > 0) {
+                    "${item.qtyFree} + ${item.qtyUsed} sparat"
+                } else if (item.qtyFree > 0) {
+                    item.qtyFree.toString()
+                } else ""
+                if (newValue.isNotEmpty()) {
+                    localData.add(ExcelRowData(item.label, newValue))
+                }
+            }
+        }
+
+        // Salva il file Excel locale
+        withContext(Dispatchers.IO) {
+            excelRepo.saveExcelFile(uri, localData)
+        }
+
+        // Se l'appalto dello scambio è quello attualmente aperto, ricarica l'adapter
+        if (company == lastSelectedCompany && currentFileUri == uri) {
+            adapter.updateData(localData)
+            viewModel.saveStateForUndo(localData)
+        }
+
+        // Sync Firestore
+        val techName = getTechnicianName() ?: return
+        val (lat, lng) = getLastLocation()
+        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        withContext(Dispatchers.IO) {
+            FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, localData, lat, lng, deviceId = deviceId)
+        }
+
+        // Notifica l'utente
+        withContext(Dispatchers.Main) {
+            Toast.makeText(
+                this@MainActivity,
+                getString(R.string.exchange_pending_applied, exchange.fromTechName),
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 }

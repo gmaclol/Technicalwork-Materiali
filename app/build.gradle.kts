@@ -100,6 +100,10 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore.ktx)
     
+    // QR Code (Scambio Materiale)
+    implementation(libs.zxing.core)
+    implementation(libs.zxing.embedded)
+    
     coreLibraryDesugaring(libs.desugar.jdk.libs)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

@@ -17,11 +17,29 @@
             android:layout_height="wrap_content"
             android:background="@color/gemini_bg"
             app:elevation="0dp"
-            app:title="Editor"
-            app:titleCentered="true"
             app:navigationIcon="@android:drawable/ic_menu_sort_by_size"
             app:layout_constraintTop_toTopOf="parent"
-            app:menu="@menu/main_menu" />
+            app:menu="@menu/main_menu"
+            app:title="">
+
+            <include layout="@layout/menu_qr_button"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="start|bottom" />
+
+            <TextView
+                android:id="@+id/customToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="center_horizontal|bottom"
+                android:gravity="center"
+                android:text="Editor"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"

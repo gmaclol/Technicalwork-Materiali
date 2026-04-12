@@ -73,4 +73,34 @@
     <string name="text_download_starting">Scaricamento avviato...</string>
     <string name="text_downloading">Scaricamento aggiornamento...</string>
 
+    <!-- Scambio Materiale -->
+    <string name="exchange_title">Scambio Materiale</string>
+    <string name="exchange_subtitle">Scegli come procedere</string>
+    <string name="exchange_generate_qr">Genera QR (Invio)</string>
+    <string name="exchange_scan_qr">Scansiona QR (Ricevo)</string>
+    <string name="exchange_show_qr_title">Il tuo QR Code</string>
+    <string name="exchange_show_qr_subtitle">Fai scansionare questo QR al collega</string>
+    <string name="exchange_show_qr_company">Appalto: %s</string>
+    <string name="exchange_waiting">In attesa di scansione…</string>
+    <string name="exchange_title_generate">Genera QR</string>
+    <string name="exchange_title_loading">Caricamento…</string>
+    <string name="exchange_title_basket">Paniere Scambio</string>
+    <string name="exchange_take">Prendo</string>
+    <string name="exchange_give">Do</string>
+    <string name="exchange_confirm">Conferma Scambio</string>
+    <string name="exchange_confirm_title">Conferma Scambio</string>
+    <string name="exchange_confirm_take">Stai prendendo da %s:</string>
+    <string name="exchange_confirm_give">Stai dando a %s:</string>
+    <string name="exchange_success">Scambio completato!</string>
+    <string name="exchange_error">Errore durante lo scambio</string>
+    <string name="exchange_no_company">Devi aprire un appalto prima di generare il QR</string>
+    <string name="exchange_no_inventory">Inventario del collega non trovato</string>
+    <string name="exchange_self_error">Non puoi scambiare con te stesso</string>
+    <string name="exchange_invalid_qr">QR Code non valido</string>
+    <string name="exchange_scan_cancelled">Scansione annullata</string>
+    <string name="exchange_scan_prompt">Inquadra il QR del collega</string>
+    <string name="exchange_qr_error">Errore generazione QR</string>
+    <string name="exchange_pending_applied">Scambio ricevuto da %s applicato</string>
+    <string name="exchange_no_file">Nessun file aperto. Apri un appalto prima.</string>
+
 </resources>
