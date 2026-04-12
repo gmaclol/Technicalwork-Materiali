@@ -78,13 +78,15 @@ class StockParser {
      *     Stock(free=10, used=0) → "10"
      */
     fun recompose(stock: Stock): String {
-        return if (stock.usedSuffix.isNotEmpty() || stock.used > 0) {
-            val suffix = stock.usedSuffix.ifEmpty { "sparat" }
-            "${stock.free} + ${stock.used} $suffix"
-        } else if (stock.free == 0) {
-            ""
-        } else {
-            stock.free.toString()
+        val hasFree = stock.free > 0
+        val hasUsed = stock.used > 0
+        val suffix = stock.usedSuffix.ifEmpty { "sparat" }
+
+        return when {
+            hasFree && hasUsed -> "${stock.free} + ${stock.used} $suffix"
+            hasUsed -> "${stock.used} $suffix"
+            hasFree -> "${stock.free}"
+            else -> ""
         }
     }
 }
