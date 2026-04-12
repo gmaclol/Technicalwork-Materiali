@@ -1,3 +1,4 @@
+Segnala il PFS mancante!!::::00
 BI_01/01e11::Viale dei Tigli 1, Biella [45.556893159505364, 8.036920890926911]
 BI_01/01e12::Via Ivrea, Biella [45.55728184013317, 8.039146965204269]
 BI_01/01e13::Via Giovan Battista Costanzo 3a, Biella [45.558474856207866, 8.040392658783102]
