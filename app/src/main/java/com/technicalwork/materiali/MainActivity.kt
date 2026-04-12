@@ -1,5 +1,6 @@
 package com.technicalwork.materiali
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DownloadManager
 import android.content.Context
@@ -33,6 +34,7 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
+import androidx.core.content.edit
 import androidx.core.net.toUri
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
@@ -80,6 +82,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fileStorageManager: FileStorageManager
     private lateinit var updateManager: UpdateManager
     private lateinit var consumoRepository: ConsumoRepository
+    private var customToolbarTitle: TextView? = null
 
     private var saveMenuItem: MenuItem? = null
     private var lastSelectedCompany: String? = null
@@ -204,10 +207,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Ottimizzazione Titolo Toolbar
-        val titleView = toolbar.findViewById<TextView>(R.id.customToolbarTitle)
-        titleView?.let {
-            it.isSelected = true // Attiva il marquee
-        }
+        customToolbarTitle = toolbar.findViewById(R.id.customToolbarTitle)
+        customToolbarTitle?.isSelected = true // Attiva il marquee
 
         toolbar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
@@ -240,8 +241,7 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             toolbar.setPadding(0, systemBars.top, 0, systemBars.bottom)
             // rimosso il setPadding della recyclerView qui perche lo gestiamo sopra con imeInsets
-            val navView = findViewById<NavigationView>(R.id.navigationView)
-            navView.setPadding(0, systemBars.top, 0, systemBars.bottom)
+            navigationView.setPadding(0, systemBars.top, 0, systemBars.bottom)
             insets
         }
         
@@ -257,7 +257,7 @@ class MainActivity : AppCompatActivity() {
         
         pfsLogo?.setOnClickListener {
             val p = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-            p.edit().putString("last_activity", "PfsActivity").apply()
+            p.edit { putString("last_activity", "PfsActivity") }
             val forwardIntent = Intent(this, PfsActivity::class.java)
             forwardIntent.putExtra("skip_routing", true)
             startActivity(forwardIntent)
@@ -707,8 +707,8 @@ class MainActivity : AppCompatActivity() {
         val options = arrayOf(getString(R.string.menu_rename_file), getString(R.string.menu_change_file), getString(R.string.menu_reset))
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.dialog_title_manage_company, company))
-            .setItems(options) { _, Creativity ->
-                when (Creativity) {
+            .setItems(options) { _, which ->
+                when (which) {
                     0 -> showRenameDialog(company)
                     1 -> showChoiceDialog(company)
                     2 -> {
@@ -824,6 +824,7 @@ class MainActivity : AppCompatActivity() {
                 val techName = getTechnicianName()
                 if (company != null && techName != null) {
                     val (lat, lng) = getLastLocation()
+                    @SuppressLint("HardwareIds")
                     val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
                         FirebaseRepository().syncToFirestore(
@@ -922,12 +923,11 @@ class MainActivity : AppCompatActivity() {
         lastSelectedCompany = "Consumo"
         val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, "Materiali di consumo")
         val fileName = fileNameWithExt.substringBeforeLast('.')
-        findViewById<TextView>(R.id.customToolbarTitle)?.text = fileName
+        customToolbarTitle?.text = fileName
         tvCurrentFileName.text = "Materiali di consumo"
         viewModel.currentCompany = "Consumo"
         
         lifecycleScope.launch {
-            val wasConsumoMode = isConsumoMode
             progressBar.visibility = View.VISIBLE
             val result = consumoRepository.readConsumoFile(uri)
             progressBar.visibility = View.GONE
@@ -1096,7 +1096,7 @@ class MainActivity : AppCompatActivity() {
         val fileNameWithExt = fileStorageManager.getFileNameFromUri(uri, getString(R.string.default_file_name))
         val fileName = fileNameWithExt.substringBeforeLast('.')
         tvCurrentFileName.text = lastSelectedCompany ?: getString(R.string.default_company_name)
-        findViewById<TextView>(R.id.customToolbarTitle)?.text = fileName
+        customToolbarTitle?.text = fileName
         readExcelFile(uri)
         forceMediaStoreScan()
     }
@@ -1207,6 +1207,7 @@ class MainActivity : AppCompatActivity() {
                 val company = lastSelectedCompany ?: return@saveExcelFile
                 val techName = getTechnicianName() ?: return@saveExcelFile
                 val (lat, lng) = getLastLocation()
+                @SuppressLint("HardwareIds")
                 val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                 lifecycleScope.launch(Dispatchers.IO) {
                     FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, adapter.getData(), lat, lng, deviceId = deviceId)
@@ -1416,8 +1417,14 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("HardwareIds")
+    private fun getDeviceID(): String {
+        return android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+    }
+
+    @SuppressLint("HardwareIds")
     private fun processPendingExchanges() {
-        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        val deviceId = getDeviceID()
         lifecycleScope.launch {
             val pending = withContext(Dispatchers.IO) {
                 exchangeRepo.getPendingExchanges(deviceId)

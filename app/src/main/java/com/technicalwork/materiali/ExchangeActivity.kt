@@ -1,5 +1,6 @@
 package com.technicalwork.materiali
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -94,6 +96,7 @@ class ExchangeActivity : AppCompatActivity() {
 
         exchangeRepo = ExchangeRepository()
         settingsRepository = SettingsRepository(this)
+        @SuppressLint("HardwareIds")
         localDeviceId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
         localTechName = settingsRepository.technicianName ?: "Sconosciuto"
 
@@ -154,7 +157,7 @@ class ExchangeActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val uriString = settingsRepository.getCompanyFileUri(company)
             if (uriString != null) {
-                val uri = android.net.Uri.parse(uriString)
+                val uri = uriString.toUri()
                 if (fileStorageManager.isUriAccessible(uri)) {
                     val result = withContext(Dispatchers.IO) { excelRepo.readExcelFile(uri, company) }
                     val localData = result.getOrNull()
@@ -206,7 +209,6 @@ class ExchangeActivity : AppCompatActivity() {
             }
             bitmap
         } catch (e: Exception) {
-            e.printStackTrace()
             null
         }
     }
@@ -238,7 +240,7 @@ class ExchangeActivity : AppCompatActivity() {
             }
 
             loadRemoteInventory()
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             Toast.makeText(this, getString(R.string.exchange_invalid_qr), Toast.LENGTH_SHORT).show()
             finish()
         }
@@ -268,7 +270,7 @@ class ExchangeActivity : AppCompatActivity() {
             val excelRepo = ExcelRepository(this@ExchangeActivity)
             val uriString = settingsRepository.getCompanyFileUri(remoteCompany)
             if (uriString != null) {
-                val uri = android.net.Uri.parse(uriString)
+                val uri = uriString.toUri()
                 if (FileStorageManager(this@ExchangeActivity).isUriAccessible(uri)) {
                     localInventory = withContext(Dispatchers.IO) { excelRepo.readExcelFile(uri, remoteCompany).getOrNull() }
                 }
@@ -461,8 +463,7 @@ class ExchangeActivity : AppCompatActivity() {
     private suspend fun updateLocalInventory(selectedItems: List<ExchangeItem>, appliedDirection: ExchangeDirection) {
         val company = remoteCompany
         val localFileUri = settingsRepository.getCompanyFileUri(company) ?: return
-
-        val uri = android.net.Uri.parse(localFileUri)
+        val uri = localFileUri.toUri()
         val excelRepo = ExcelRepository(this)
         val result = excelRepo.readExcelFile(uri, company)
         if (result.isFailure) return
@@ -534,7 +535,7 @@ class ExchangeActivity : AppCompatActivity() {
             val loc = lm.getLastKnownLocation(android.location.LocationManager.GPS_PROVIDER)
                 ?: lm.getLastKnownLocation(android.location.LocationManager.NETWORK_PROVIDER)
             loc?.latitude to loc?.longitude
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             null to null
         }
     }

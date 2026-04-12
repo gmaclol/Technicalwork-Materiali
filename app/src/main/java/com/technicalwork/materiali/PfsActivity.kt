@@ -1,5 +1,6 @@
 package com.technicalwork.materiali
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -15,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
+import androidx.core.content.edit
 import androidx.core.view.GravityCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -82,8 +84,7 @@ class PfsActivity : AppCompatActivity() {
 
         appLogo?.setOnClickListener {
             val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-            prefs.edit().putString("last_activity", "MainActivity").apply()
-            
+            prefs.edit { putString("last_activity", "MainActivity") }
             val resetIntent = Intent(this, MainActivity::class.java)
             resetIntent.putExtra("skip_routing", true)
             startActivity(resetIntent)
@@ -144,6 +145,7 @@ class PfsActivity : AppCompatActivity() {
                     tvTechName.text = newName
                     
                     // Sincronizza immediatamente il nuovo nome su Firebase
+                    @SuppressLint("HardwareIds")
                     val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
                         FirebaseRepository().updateTechnicianName(deviceId, newName)
@@ -156,7 +158,7 @@ class PfsActivity : AppCompatActivity() {
 
     private fun loadArea(area: String) {
         val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
-        pfsPrefs.edit().putString("pfs_last_area", area).apply()
+        pfsPrefs.edit { putString("pfs_last_area", area) }
         supportActionBar?.title = "PFS - $area"
         
         if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -181,14 +183,14 @@ class PfsActivity : AppCompatActivity() {
                 openFileOutput("pfs_cache_$area.txt", Context.MODE_PRIVATE).use { 
                     it.write(rawText!!.toByteArray()) 
                 }
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 // Fallback su cache locale
                 try {
                     openFileInput("pfs_cache_$area.txt").use {
                         rawText = it.bufferedReader().readText()
                         isOffline = true
                     }
-                } catch (ex: Exception) {
+                } catch (_: Exception) {
                     rawText = null
                 }
             }
@@ -276,7 +278,7 @@ class PfsActivity : AppCompatActivity() {
                 Firebase.firestore
                     .collection("pfs_logs")
                     .add(data)
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 // Silenzioso, non disturbiamo l'utente per un log fallito
             }
         }
@@ -298,7 +300,7 @@ class PfsActivity : AppCompatActivity() {
                     db.collection(collection).document(snapshots.documents[i].id).delete().await()
                 }
             }
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             // Se fallisce il cleanup amen, non blocchiamo l'inserimento
         }
     }
@@ -340,7 +342,7 @@ class PfsActivity : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     Toast.makeText(this@PfsActivity, "Indirizzo inviato con successo!", Toast.LENGTH_SHORT).show()
                 }
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 withContext(Dispatchers.Main) {
                     Toast.makeText(this@PfsActivity, "Errore di invio a Firebase", Toast.LENGTH_SHORT).show()
                 }
@@ -357,7 +359,7 @@ class PfsActivity : AppCompatActivity() {
             val loc = lm.getLastKnownLocation(android.location.LocationManager.GPS_PROVIDER) 
                       ?: lm.getLastKnownLocation(android.location.LocationManager.NETWORK_PROVIDER)
             loc?.latitude to loc?.longitude
-        } catch (e: Exception) {
+        } catch (_: Exception) {
             null to null
         }
     }
