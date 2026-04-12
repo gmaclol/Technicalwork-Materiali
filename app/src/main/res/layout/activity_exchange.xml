@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gemini_bg"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarExchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gemini_bg"
+        app:elevation="0dp"
+        app:title="Scambio Materiale"
+        app:titleCentered="true"
+        app:navigationIcon="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Stato: QR GENERATO (Tecnico A) -->
+    <LinearLayout
+        android:id="@+id/layoutQrDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="32dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarExchange"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exchange_show_qr_title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/gemini_text_main"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvQrSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exchange_show_qr_subtitle"
+            android:textSize="14sp"
+            android:textColor="@color/gemini_text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <ImageView
+            android:id="@+id/ivQrCode"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="QR Code"
+            android:background="@color/white"
+            android:padding="8dp" />
+
+        <ProgressBar
+            android:id="@+id/progressQr"
+            style="@style/Widget.Material3.CircularProgressIndicator"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:indeterminateTint="@color/gemini_accent_blue"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvQrStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exchange_waiting"
+            android:textSize="14sp"
+            android:textColor="@color/gemini_text_secondary"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+
+    <!-- Stato: PANIERE (lista materiali da scambiare) -->
+    <LinearLayout
+        android:id="@+id/layoutPaniere"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/toolbarExchange"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Header con info tecnico remoto -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/gemini_card_bg">
+
+            <TextView
+                android:id="@+id/tvRemoteTechName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/gemini_accent_blue" />
+
+            <TextView
+                android:id="@+id/tvRemoteCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/gemini_text_secondary"
+                android:layout_marginTop="2dp" />
+
+            <!-- Toggle Direzione -->
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleDirection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:singleSelection="true"
+                app:selectionRequired="true">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTakeFromA"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/exchange_take"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGiveToA"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/exchange_give"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gemini_border" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvExchange"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="80dp" />
+
+        <!-- Bottone conferma fisso in basso -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnConfirmExchange"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="16dp"
+            android:text="@string/exchange_confirm"
+            android:textSize="16sp"
+            app:cornerRadius="28dp"
+            android:enabled="false" />
+
+    </LinearLayout>
+
+    <!-- Loading overlay -->
+    <FrameLayout
+        android:id="@+id/layoutLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ProgressBar
+            style="@style/Widget.Material3.CircularProgressIndicator"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/gemini_accent_blue" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
