@@ -490,6 +490,9 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch(Dispatchers.IO) {
             val techName = getTechnicianName() ?: return@launch
             
+            // 0. Fetch Configurazione Remota (per nuovi appalti/aree)
+            configManager.fetchRemoteConfig()
+            
             // 1. Sync Liste (GitHub)
             ListUpdater().syncLists(this@MainActivity, configManager.getCompanies(), configManager.getPfsAreas())
 

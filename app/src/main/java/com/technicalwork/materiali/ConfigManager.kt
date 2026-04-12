@@ -2,6 +2,9 @@ package com.technicalwork.materiali
 
 import android.content.Context
 import com.google.gson.Gson
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import java.io.File
 import java.io.InputStreamReader
 
 data class AppConfig(
@@ -12,14 +15,34 @@ data class AppConfig(
 class ConfigManager(private val context: Context) {
 
     private val gson = Gson()
+    private val client = OkHttpClient()
+    private val configUrl = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/config.json"
+    private val cacheFile = File(context.filesDir, "config_cache.json")
     private var cachedConfig: AppConfig? = null
 
     /**
-     * Carica la configurazione dal file JSON negli assets.
+     * Carica la configurazione prioritizzando:
+     * 1) Cache locale (file scaricato l'ultima volta)
+     * 2) Assets (default di fabbrica)
      */
     fun getConfig(): AppConfig {
         if (cachedConfig != null) return cachedConfig!!
 
+        // 1. Tenta da Cache
+        if (cacheFile.exists()) {
+            try {
+                cacheFile.inputStream().use { inputStream ->
+                    val reader = InputStreamReader(inputStream)
+                    cachedConfig = gson.fromJson(reader, AppConfig::class.java)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+        if (cachedConfig != null) return cachedConfig!!
+
+        // 2. Tenta da Assets (Fallback)
         return try {
             context.assets.open("config.json").use { inputStream ->
                 val reader = InputStreamReader(inputStream)
@@ -30,6 +53,29 @@ class ConfigManager(private val context: Context) {
         } catch (e: Exception) {
             e.printStackTrace()
             AppConfig()
+        }
+    }
+
+    /**
+     * Scarica la nuova configurazione da GitHub in background.
+     */
+    suspend fun fetchRemoteConfig(): Boolean {
+        return try {
+            val request = Request.Builder().url(configUrl).build()
+            val response = client.newCall(request).execute()
+            if (response.isSuccessful) {
+                val content = response.body?.string()
+                if (!content.isNullOrBlank()) {
+                    cacheFile.writeText(content)
+                    // Invalida cache in memoria per il prossimo utilizzo
+                    cachedConfig = null 
+                    return true
+                }
+            }
+            false
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
         }
     }
 
