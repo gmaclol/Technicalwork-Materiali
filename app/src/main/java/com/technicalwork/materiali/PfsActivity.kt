@@ -202,23 +202,75 @@ class PfsActivity : AppCompatActivity() {
             var isOffline = false
             
             try {
-                // Tenta il download
-                val url = URL("https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/$area.txt")
-                rawText = url.readText()
-                
-                // Salva cache locale
-                openFileOutput("pfs_cache_$area.txt", Context.MODE_PRIVATE).use { 
-                    it.write(rawText!!.toByteArray()) 
+                val cachedFile = java.io.File(filesDir, "Piemonte.json")
+                val inputStream = if (cachedFile.exists()) {
+                    cachedFile.inputStream()
+                } else {
+                    assets.open("Piemonte.json")
                 }
-            } catch (_: Exception) {
-                // Fallback su cache locale
+                val size = inputStream.available()
+                val buffer = ByteArray(size)
+                inputStream.read(buffer)
+                inputStream.close()
+                val jsonString = String(buffer, kotlin.text.Charsets.UTF_8)
+                val json = org.json.JSONObject(jsonString)
+                val piemonte = json.optJSONObject("Piemonte")
+                
+                if (piemonte != null) {
+                    val pfsLines = mutableListOf<String>()
+                    var title = area
+                    
+                    // Check Comuni first
+                    val comuniObj = piemonte.optJSONObject("Comuni")
+                    if (comuniObj?.has(area) == true) {
+                        val array = comuniObj.optJSONArray(area)
+                        array?.let {
+                            for (i in 0 until it.length()) pfsLines.add(it.getString(i))
+                        }
+                        rawText = pfsLines.joinToString("\n")
+                    } else {
+                        // Check Macrozone
+                        val macroObj = piemonte.optJSONObject("Macrozone")
+                        if (macroObj?.has(area) == true) {
+                            val array = macroObj.optJSONArray(area)
+                            array?.let {
+                                for (i in 0 until it.length()) {
+                                    val entry = it.getString(i)
+                                    if (entry.startsWith("<") && entry.endsWith(">")) {
+                                        title = "$area (${entry.removeSurrounding("<", ">")})"
+                                    } else {
+                                        pfsLines.add(entry)
+                                    }
+                                }
+                            }
+                            withContext(Dispatchers.Main) {
+                                tvCustomTitle.text = "PFS - $title"
+                            }
+                            rawText = pfsLines.joinToString("\n")
+                        }
+                    }
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            
+            // Fallback al vecchio metodo .txt per aree non presenti nel JSON
+            if (rawText == null) {
                 try {
-                    openFileInput("pfs_cache_$area.txt").use {
-                        rawText = it.bufferedReader().readText()
-                        isOffline = true
+                    val url = URL("https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/$area.txt")
+                    rawText = url.readText()
+                    openFileOutput("pfs_cache_$area.txt", Context.MODE_PRIVATE).use { 
+                        it.write(rawText!!.toByteArray()) 
                     }
                 } catch (_: Exception) {
-                    rawText = null
+                    try {
+                        openFileInput("pfs_cache_$area.txt").use {
+                            rawText = it.bufferedReader().readText()
+                            isOffline = true
+                        }
+                    } catch (_: Exception) {
+                        rawText = null
+                    }
                 }
             }
 
@@ -424,10 +476,20 @@ class PfsActivity : AppCompatActivity() {
         val container = findViewById<android.widget.LinearLayout>(R.id.llPfsAreasContainer) ?: return
         container.removeAllViews()
 
-        val areas = configManager.getPfsAreas()
+        val areas = configManager.getPfsAreas().toMutableList()
+        val favPrefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
+        val allPrefs = favPrefs.all
+        for ((key, value) in allPrefs) {
+            if (key.startsWith("fav_") && value == true) {
+                val favName = key.removePrefix("fav_")
+                if (!areas.contains(favName)) {
+                    areas.add(favName)
+                }
+            }
+        }
         
         areas.forEachIndexed { index, area ->
-            val button = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle)
+            val button = com.google.android.material.button.MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle)
             val params = android.widget.LinearLayout.LayoutParams(
                 android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
                 (56 * resources.displayMetrics.density).toInt()
@@ -437,7 +499,7 @@ class PfsActivity : AppCompatActivity() {
             }
             button.layoutParams = params
             button.text = area
-            button.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_menu_add)
+            button.icon = androidx.core.content.ContextCompat.getDrawable(this, android.R.drawable.ic_menu_add)
             button.cornerRadius = (28 * resources.displayMetrics.density).toInt()
             button.textAlignment = View.TEXT_ALIGNMENT_VIEW_START
             

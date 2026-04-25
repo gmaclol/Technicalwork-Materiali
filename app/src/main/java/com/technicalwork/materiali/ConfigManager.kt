@@ -80,5 +80,26 @@ class ConfigManager(private val context: Context) {
     }
 
     fun getCompanies(): List<String> = getConfig().companies
-    fun getPfsAreas(): List<String> = getConfig().pfs_areas
+    // Ignoriamo pfs_areas da config.json come richiesto, usiamo i preferiti salvati in GeoNavPrefs
+    fun getPfsAreas(): List<String> = emptyList()
+
+    suspend fun fetchRemotePiemonteJson(): Boolean {
+        val url = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/Regioni/Piemonte.json"
+        val piemonteFile = File(context.filesDir, "Piemonte.json")
+        return try {
+            val request = Request.Builder().url(url).build()
+            val response = client.newCall(request).execute()
+            if (response.isSuccessful) {
+                val content = response.body?.string()
+                if (!content.isNullOrBlank()) {
+                    piemonteFile.writeText(content)
+                    return true
+                }
+            }
+            false
+        } catch (e: Exception) {
+            e.printStackTrace()
+            false
+        }
+    }
 }

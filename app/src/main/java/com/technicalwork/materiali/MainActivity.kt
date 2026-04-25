@@ -192,6 +192,17 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(R.layout.activity_main)
 
+        // Initialize default favorites if not done
+        val geonavPrefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
+        if (!geonavPrefs.getBoolean("favorites_initialized", false)) {
+            geonavPrefs.edit()
+                .putBoolean("fav_TOH_1", true)
+                .putBoolean("fav_Asti", true)
+                .putBoolean("fav_Biella", true)
+                .putBoolean("favorites_initialized", true)
+                .apply()
+        }
+
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
         settingsRepository = SettingsRepository(this)
@@ -448,6 +459,7 @@ class MainActivity : AppCompatActivity() {
                     val raw = snapshot.get(deviceId)
                     var remoteName: String? = null
                     var remoteTimestamp = 0L
+                    var remotePfsAreas: List<String>? = null
 
                     when (raw) {
                         is String -> {
@@ -459,19 +471,34 @@ class MainActivity : AppCompatActivity() {
                             // Formato nuovo { name: "...", updatedAt: ... }
                             remoteName = raw["name"] as? String
                             remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
+                            remotePfsAreas = raw["pfsAreas"] as? List<String>
                         }
                     }
 
                     val localTimestamp = settingsRepository.lastNameUpdateTimestamp
 
-                    if (!remoteName.isNullOrBlank()
-                        && remoteName != getTechnicianName()
-                        && remoteTimestamp > localTimestamp
-                    ) {
-                        saveTechnicianName(remoteName)
-                        settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
-                        tvTechName.text = remoteName
-                        lifecycleScope.launch { performTotalSync() }
+                    if (remoteTimestamp > localTimestamp) {
+                        var updated = false
+                        if (!remoteName.isNullOrBlank() && remoteName != getTechnicianName()) {
+                            saveTechnicianName(remoteName)
+                            tvTechName.text = remoteName
+                            updated = true
+                        }
+                        
+                        if (remotePfsAreas != null) {
+                            val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
+                            val editor = prefs.edit()
+                            prefs.all.keys.filter { it.startsWith("fav_") }.forEach { editor.remove(it) }
+                            remotePfsAreas.forEach { editor.putBoolean("fav_$it", true) }
+                            editor.apply()
+                            setupDynamicDrawer()
+                            updated = true
+                        }
+                        
+                        if (updated) {
+                            settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
+                            lifecycleScope.launch { performTotalSync(force = true) }
+                        }
                     }
                 }
             }
@@ -492,6 +519,9 @@ class MainActivity : AppCompatActivity() {
             
             // 0. Fetch Configurazione Remota (per nuovi appalti/aree)
             configManager.fetchRemoteConfig()
+            
+            // Scarica l'ultimo Piemonte.json
+            configManager.fetchRemotePiemonteJson()
             
             // 1. Sync Liste (GitHub)
             ListUpdater().syncLists(this@MainActivity, configManager.getCompanies(), configManager.getPfsAreas())
@@ -528,6 +558,11 @@ class MainActivity : AppCompatActivity() {
             }
             
             settingsRepository.lastSyncTimestamp = currentTime
+            
+            // Sync Aree PFS (Preferiti)
+            val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
+            val allFavs = prefs.all.filter { it.key.startsWith("fav_") && it.value == true }.map { it.key.removePrefix("fav_") }
+            firebaseRepo.updatePfsAreas(deviceId, allFavs)
             
             // Rimossa notifica Toast per la sincronizzazione giornaliera per non disturbare l'utente.
         }

@@ -154,7 +154,12 @@ class GeoNavActivity : AppCompatActivity() {
         lifecycleScope.launch(Dispatchers.IO) {
             withContext(Dispatchers.Main) { pbGeoNav.visibility = View.VISIBLE }
             try {
-                val jsonString = assets.open("Piemonte.json").bufferedReader().use { it.readText() }
+                val cachedFile = java.io.File(filesDir, "Piemonte.json")
+                val jsonString = if (cachedFile.exists()) {
+                    cachedFile.inputStream().bufferedReader().use { it.readText() }
+                } else {
+                    assets.open("Piemonte.json").bufferedReader().use { it.readText() }
+                }
                 fullData = JSONObject(jsonString)
                 withContext(Dispatchers.Main) {
                     displayList.add(TreeItem("Piemonte", 0, TreeType.REGION))
@@ -404,7 +409,17 @@ class GeoNavActivity : AppCompatActivity() {
         val container = findViewById<android.widget.LinearLayout>(R.id.llPfsAreasContainer) ?: return
         container.removeAllViews()
 
-        val areas = configManager.getPfsAreas()
+        val areas = configManager.getPfsAreas().toMutableList()
+        val favPrefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
+        val allPrefs = favPrefs.all
+        for ((key, value) in allPrefs) {
+            if (key.startsWith("fav_") && value == true) {
+                val favName = key.removePrefix("fav_")
+                if (!areas.contains(favName)) {
+                    areas.add(favName)
+                }
+            }
+        }
         
         areas.forEachIndexed { index, area ->
             val button = com.google.android.material.button.MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle)
@@ -430,6 +445,10 @@ class GeoNavActivity : AppCompatActivity() {
                 finish()
             }
             container.addView(button)
+        }
+
+        findViewById<android.view.View>(R.id.btnGeoNav)?.setOnClickListener {
+            drawerLayout.closeDrawer(androidx.core.view.GravityCompat.START)
         }
     }
 
@@ -515,6 +534,14 @@ class GeoNavActivity : AppCompatActivity() {
                     val newFav = !sharedPrefs.getBoolean("fav_${cleanName}", false)
                     sharedPrefs.edit().putBoolean("fav_${cleanName}", newFav).apply()
                     adapter.notifyItemChanged(currentPos)
+                    setupDynamicDrawer()
+                    
+                    val allFavs = sharedPrefs.all.filter { it.key.startsWith("fav_") && it.value == true }.map { it.key.removePrefix("fav_") }
+                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        FirebaseRepository().updatePfsAreas(deviceId, allFavs)
+                        settingsRepository.lastNameUpdateTimestamp = System.currentTimeMillis()
+                    }
                 }
             } else {
                 holder.ivTrailingStar.visibility = View.GONE

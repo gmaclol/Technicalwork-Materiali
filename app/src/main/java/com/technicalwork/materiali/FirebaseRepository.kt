@@ -155,4 +155,23 @@ class FirebaseRepository {
             e.printStackTrace()
         }
     }
+
+    /**
+     * Aggiorna le aree PFS salvate per questo dispositivo
+     */
+    fun updatePfsAreas(deviceId: String, pfsAreas: List<String>) {
+        val timestamp = System.currentTimeMillis()
+        try {
+            val nameData = hashMapOf<String, Any>(
+                deviceId to hashMapOf(
+                    "pfsAreas" to pfsAreas,
+                    "updatedAt" to timestamp
+                )
+            )
+            db.collection("settings").document("devices_names")
+                .set(nameData, SetOptions.merge())
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
 }
