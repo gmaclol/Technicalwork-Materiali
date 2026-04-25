@@ -21,6 +21,16 @@
             app:navigationIcon="@android:drawable/ic_menu_sort_by_size"
             app:layout_constraintTop_toTopOf="parent">
 
+            <ImageView
+                android:id="@+id/btnFilterRegions"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="end"
+                android:padding="16dp"
+                android:src="@android:drawable/ic_menu_manage"
+                app:tint="@color/gemini_text_main"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
             <TextView
                 android:id="@+id/customToolbarTitle"
                 android:layout_width="wrap_content"

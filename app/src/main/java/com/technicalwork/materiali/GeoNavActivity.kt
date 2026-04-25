@@ -116,6 +116,10 @@ class GeoNavActivity : AppCompatActivity() {
             drawerLayout.openDrawer(GravityCompat.START)
         }
 
+        findViewById<android.widget.ImageView>(R.id.btnFilterRegions)?.setOnClickListener {
+            showFilterDialog()
+        }
+
         etSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -150,28 +154,84 @@ class GeoNavActivity : AppCompatActivity() {
         return false
     }
 
+    private fun showFilterDialog() {
+        val regions = configManager.ITALIAN_REGIONS.toTypedArray()
+        val checkedItems = BooleanArray(regions.size) { i ->
+            sharedPrefs.getBoolean("filter_${regions[i]}", true)
+        }
+
+        androidx.appcompat.app.AlertDialog.Builder(this)
+            .setTitle("Filtra Regioni")
+            .setMultiChoiceItems(regions, checkedItems) { _, which, isChecked ->
+                checkedItems[which] = isChecked
+            }
+            .setPositiveButton("Salva") { _, _ ->
+                val editor = sharedPrefs.edit()
+                for (i in regions.indices) {
+                    editor.putBoolean("filter_${regions[i]}", checkedItems[i])
+                }
+                editor.apply()
+                
+                // Ricarica i dati con i nuovi filtri
+                displayList.clear()
+                treeStateList.clear()
+                adapter.notifyDataSetChanged()
+                loadJsonData()
+            }
+            .setNegativeButton("Annulla", null)
+            .show()
+    }
+
     private fun loadJsonData() {
         lifecycleScope.launch(Dispatchers.IO) {
             withContext(Dispatchers.Main) { pbGeoNav.visibility = View.VISIBLE }
             try {
-                // Forza scaricamento aggiornamenti da GitHub
-                configManager.fetchRemotePiemonteJson()
+                // Forza scaricamento aggiornamenti da GitHub per tutte le regioni
+                configManager.fetchRemoteRegionsJson()
 
-                val cachedFile = java.io.File(filesDir, "Piemonte.json")
-                val jsonString = if (cachedFile.exists()) {
-                    cachedFile.inputStream().bufferedReader().use { it.readText() }
-                } else {
-                    assets.open("Piemonte.json").bufferedReader().use { it.readText() }
+                fullData = org.json.JSONObject()
+                val regionsAdded = mutableListOf<String>()
+
+                for (region in configManager.ITALIAN_REGIONS) {
+                    if (!sharedPrefs.getBoolean("filter_$region", true)) continue
+
+                    val cachedFile = java.io.File(filesDir, "$region.json")
+                    var jsonString: String? = null
+
+                    if (cachedFile.exists()) {
+                        jsonString = cachedFile.inputStream().bufferedReader().use { it.readText() }
+                    } else {
+                        try {
+                            jsonString = assets.open("$region.json").bufferedReader().use { it.readText() }
+                        } catch (e: Exception) {
+                            // File non presente negli assets, continuiamo
+                        }
+                    }
+
+                    if (jsonString != null) {
+                        try {
+                            val regionJson = org.json.JSONObject(jsonString)
+                            val regionObj = regionJson.optJSONObject(region)
+                            if (regionObj != null) {
+                                fullData?.put(region, regionObj)
+                                regionsAdded.add(region)
+                            }
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                        }
+                    }
                 }
-                fullData = JSONObject(jsonString)
+
                 withContext(Dispatchers.Main) {
-                    displayList.add(TreeItem("Piemonte", 0, TreeType.REGION))
-                    adapter.notifyItemInserted(0)
+                    regionsAdded.forEachIndexed { index, regionName ->
+                        displayList.add(TreeItem(regionName, 0, TreeType.REGION))
+                        adapter.notifyItemInserted(index)
+                    }
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
                 withContext(Dispatchers.Main) {
-                    Toast.makeText(this@GeoNavActivity, "Errore: ${e.message}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@GeoNavActivity, "Errore caricamento dati", Toast.LENGTH_SHORT).show()
                 }
             } finally {
                 withContext(Dispatchers.Main) { pbGeoNav.visibility = View.GONE }
@@ -195,35 +255,38 @@ class GeoNavActivity : AppCompatActivity() {
         }
 
         val filtered = mutableListOf<TreeItem>()
-        fullData?.optJSONObject("Piemonte")?.let { piemonte ->
-            val comuni = piemonte.optJSONObject("Comuni")
-            comuni?.keys()?.forEach { comune ->
-                val arr = comuni.optJSONArray(comune)
-                if (comune.contains(query, ignoreCase = true)) {
-                    filtered.add(TreeItem(comune, 0, TreeType.COMUNE_DIRECT, hasChildren = true))
-                } else if (arr != null) {
-                    for (i in 0 until arr.length()) {
-                        val pfsStr = arr.getString(i)
-                        if (pfsStr.contains(query, ignoreCase = true)) {
-                            filtered.add(TreeItem(pfsStr, 0, TreeType.PFS, hasChildren = false))
+        fullData?.let { data ->
+            data.keys().forEach { regionName ->
+                val regionObj = data.optJSONObject(regionName) ?: return@forEach
+                val comuni = regionObj.optJSONObject("Comuni")
+                comuni?.keys()?.forEach { comune ->
+                    val arr = comuni.optJSONArray(comune)
+                    if (comune.contains(query, ignoreCase = true)) {
+                        filtered.add(TreeItem(comune, 0, TreeType.COMUNE_DIRECT, hasChildren = true))
+                    } else if (arr != null) {
+                        for (i in 0 until arr.length()) {
+                            val pfsStr = arr.getString(i)
+                            if (pfsStr.contains(query, ignoreCase = true)) {
+                                filtered.add(TreeItem(pfsStr, 0, TreeType.PFS, hasChildren = false))
+                            }
                         }
                     }
                 }
-            }
-            val macrozone = piemonte.optJSONObject("Macrozone")
-            macrozone?.keys()?.forEach { macro ->
-                val arr = macrozone.optJSONArray(macro)
-                if (arr != null) {
-                    for (i in 0 until arr.length()) {
-                        val entry = arr.getString(i)
-                        if (entry.startsWith("<") && entry.endsWith(">")) {
-                            val clean = entry.removeSurrounding("<", ">")
-                            if (clean.contains(query, ignoreCase = true)) {
-                                filtered.add(TreeItem(macro, 0, TreeType.MACROZONE, hasChildren = false))
-                            }
-                        } else {
-                            if (entry.contains(query, ignoreCase = true)) {
-                                filtered.add(TreeItem(entry, 0, TreeType.PFS, hasChildren = false))
+                val macrozone = regionObj.optJSONObject("Macrozone")
+                macrozone?.keys()?.forEach { macro ->
+                    val arr = macrozone.optJSONArray(macro)
+                    if (arr != null) {
+                        for (i in 0 until arr.length()) {
+                            val entry = arr.getString(i)
+                            if (entry.startsWith("<") && entry.endsWith(">")) {
+                                val clean = entry.removeSurrounding("<", ">")
+                                if (clean.contains(query, ignoreCase = true)) {
+                                    filtered.add(TreeItem(macro, 0, TreeType.MACROZONE, hasChildren = false))
+                                }
+                            } else {
+                                if (entry.contains(query, ignoreCase = true)) {
+                                    filtered.add(TreeItem(entry, 0, TreeType.PFS, hasChildren = false))
+                                }
                             }
                         }
                     }

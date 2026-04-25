@@ -202,51 +202,64 @@ class PfsActivity : AppCompatActivity() {
             var isOffline = false
             
             try {
-                val cachedFile = java.io.File(filesDir, "Piemonte.json")
-                val inputStream = if (cachedFile.exists()) {
-                    cachedFile.inputStream()
-                } else {
-                    assets.open("Piemonte.json")
-                }
-                val size = inputStream.available()
-                val buffer = ByteArray(size)
-                inputStream.read(buffer)
-                inputStream.close()
-                val jsonString = String(buffer, kotlin.text.Charsets.UTF_8)
-                val json = org.json.JSONObject(jsonString)
-                val piemonte = json.optJSONObject("Piemonte")
-                
-                if (piemonte != null) {
-                    val pfsLines = mutableListOf<String>()
-                    var title = area
-                    
-                    // Check Comuni first
-                    val comuniObj = piemonte.optJSONObject("Comuni")
-                    if (comuniObj?.has(area) == true) {
-                        val array = comuniObj.optJSONArray(area)
-                        array?.let {
-                            for (i in 0 until it.length()) pfsLines.add(it.getString(i))
-                        }
-                        rawText = pfsLines.joinToString("\n")
+                for (region in configManager.ITALIAN_REGIONS) {
+                    val cachedFile = java.io.File(filesDir, "$region.json")
+                    var jsonString: String? = null
+
+                    if (cachedFile.exists()) {
+                        jsonString = cachedFile.inputStream().bufferedReader().use { it.readText() }
                     } else {
-                        // Check Macrozone
-                        val macroObj = piemonte.optJSONObject("Macrozone")
-                        if (macroObj?.has(area) == true) {
-                            val array = macroObj.optJSONArray(area)
-                            array?.let {
-                                for (i in 0 until it.length()) {
-                                    val entry = it.getString(i)
-                                    if (entry.startsWith("<") && entry.endsWith(">")) {
-                                        title = "$area (${entry.removeSurrounding("<", ">")})"
-                                    } else {
-                                        pfsLines.add(entry)
+                        try {
+                            jsonString = assets.open("$region.json").bufferedReader().use { it.readText() }
+                        } catch (e: Exception) {
+                            // File not found in assets
+                        }
+                    }
+
+                    if (jsonString != null) {
+                        val json = org.json.JSONObject(jsonString)
+                        val regionObj = json.optJSONObject(region)
+                        
+                        if (regionObj != null) {
+                            val pfsLines = mutableListOf<String>()
+                            var title = area
+                            var found = false
+                            
+                            // Check Comuni first
+                            val comuniObj = regionObj.optJSONObject("Comuni")
+                            if (comuniObj?.has(area) == true) {
+                                val array = comuniObj.optJSONArray(area)
+                                array?.let {
+                                    for (i in 0 until it.length()) pfsLines.add(it.getString(i))
+                                }
+                                rawText = pfsLines.joinToString("\n")
+                                found = true
+                            } else {
+                                // Check Macrozone
+                                val macroObj = regionObj.optJSONObject("Macrozone")
+                                if (macroObj?.has(area) == true) {
+                                    val array = macroObj.optJSONArray(area)
+                                    array?.let {
+                                        for (i in 0 until it.length()) {
+                                            val entry = it.getString(i)
+                                            if (entry.startsWith("<") && entry.endsWith(">")) {
+                                                title = "$area (${entry.removeSurrounding("<", ">")})"
+                                            } else {
+                                                pfsLines.add(entry)
+                                            }
+                                        }
                                     }
+                                    withContext(Dispatchers.Main) {
+                                        tvCustomTitle.text = "PFS - $title"
+                                    }
+                                    rawText = pfsLines.joinToString("\n")
+                                    found = true
                                 }
                             }
-                            withContext(Dispatchers.Main) {
-                                tvCustomTitle.text = "PFS - $title"
+                            
+                            if (found) {
+                                break // Found the area, stop searching other regions
                             }
-                            rawText = pfsLines.joinToString("\n")
                         }
                     }
                 }

@@ -6,6 +6,9 @@ import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.File
 import java.io.InputStreamReader
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 
 data class AppConfig(
     val companies: List<String> = emptyList(),
@@ -83,23 +86,34 @@ class ConfigManager(private val context: Context) {
     // Ignoriamo pfs_areas da config.json come richiesto, usiamo i preferiti salvati in GeoNavPrefs
     fun getPfsAreas(): List<String> = emptyList()
 
-    suspend fun fetchRemotePiemonteJson(): Boolean {
-        val url = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/Regioni/Piemonte.json"
-        val piemonteFile = File(context.filesDir, "Piemonte.json")
-        return try {
-            val request = Request.Builder().url(url).build()
-            val response = client.newCall(request).execute()
-            if (response.isSuccessful) {
-                val content = response.body?.string()
-                if (!content.isNullOrBlank()) {
-                    piemonteFile.writeText(content)
-                    return true
+    val ITALIAN_REGIONS = listOf(
+        "Abruzzo", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", 
+        "Friuli-Venezia Giulia", "Lazio", "Liguria", "Lombardia", "Marche", 
+        "Molise", "Piemonte", "Puglia", "Sardegna", "Sicilia", "Toscana", 
+        "Trentino-Alto Adige", "Umbria", "Valle d'Aosta", "Veneto"
+    )
+
+    suspend fun fetchRemoteRegionsJson() {
+        coroutineScope {
+            ITALIAN_REGIONS.map { region ->
+                launch(Dispatchers.IO) {
+                    val encodedRegion = region.replace(" ", "%20")
+                    val url = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/Regioni/$encodedRegion.json"
+                    val regionFile = File(context.filesDir, "$region.json")
+                    try {
+                        val request = Request.Builder().url(url).build()
+                        val response = client.newCall(request).execute()
+                        if (response.isSuccessful) {
+                            val content = response.body?.string()
+                            if (!content.isNullOrBlank()) {
+                                regionFile.writeText(content)
+                            }
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
                 }
-            }
-            false
-        } catch (e: Exception) {
-            e.printStackTrace()
-            false
+            }.forEach { it.join() }
         }
     }
 }

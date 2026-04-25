@@ -520,8 +520,8 @@ class MainActivity : AppCompatActivity() {
             // 0. Fetch Configurazione Remota (per nuovi appalti/aree)
             configManager.fetchRemoteConfig()
             
-            // Scarica l'ultimo Piemonte.json
-            configManager.fetchRemotePiemonteJson()
+            // Scarica tutti i file .json delle regioni italiane
+            configManager.fetchRemoteRegionsJson()
             
             // 1. Sync Liste (GitHub)
             ListUpdater().syncLists(this@MainActivity, configManager.getCompanies(), configManager.getPfsAreas())
