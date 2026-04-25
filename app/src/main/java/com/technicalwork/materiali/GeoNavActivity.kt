@@ -155,9 +155,24 @@ class GeoNavActivity : AppCompatActivity() {
     }
 
     private fun showFilterDialog() {
-        val regions = configManager.ITALIAN_REGIONS.toTypedArray()
+        val availableRegions = mutableListOf<String>()
+        for (region in configManager.ITALIAN_REGIONS) {
+            val cachedFile = java.io.File(filesDir, "$region.json")
+            if (cachedFile.exists()) {
+                availableRegions.add(region)
+            } else {
+                try {
+                    assets.open("$region.json").use { }
+                    availableRegions.add(region)
+                } catch (e: Exception) {
+                    // File non disponibile
+                }
+            }
+        }
+
+        val regions = availableRegions.toTypedArray()
         val checkedItems = BooleanArray(regions.size) { i ->
-            sharedPrefs.getBoolean("filter_${regions[i]}", true)
+            sharedPrefs.getBoolean("filter_${regions[i]}", regions[i] == "Piemonte")
         }
 
         androidx.appcompat.app.AlertDialog.Builder(this)
@@ -193,7 +208,7 @@ class GeoNavActivity : AppCompatActivity() {
                 val regionsAdded = mutableListOf<String>()
 
                 for (region in configManager.ITALIAN_REGIONS) {
-                    if (!sharedPrefs.getBoolean("filter_$region", true)) continue
+                    if (!sharedPrefs.getBoolean("filter_$region", region == "Piemonte")) continue
 
                     val cachedFile = java.io.File(filesDir, "$region.json")
                     var jsonString: String? = null
@@ -526,7 +541,8 @@ class GeoNavActivity : AppCompatActivity() {
                 ).apply {
                     marginStart = (8 * resources.displayMetrics.density).toInt()
                 }
-                setImageResource(android.R.drawable.btn_star_big_on)
+                setImageResource(android.R.drawable.star_on)
+                setColorFilter(android.graphics.Color.parseColor("#FFD700"))
                 setBackgroundResource(android.R.color.transparent)
                 scaleType = android.widget.ImageView.ScaleType.CENTER_INSIDE
                 

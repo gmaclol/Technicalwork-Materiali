@@ -533,7 +533,8 @@ class PfsActivity : AppCompatActivity() {
                 ).apply {
                     marginStart = (8 * resources.displayMetrics.density).toInt()
                 }
-                setImageResource(android.R.drawable.btn_star_big_on)
+                setImageResource(android.R.drawable.star_on)
+                setColorFilter(android.graphics.Color.parseColor("#FFD700"))
                 setBackgroundResource(android.R.color.transparent)
                 scaleType = android.widget.ImageView.ScaleType.CENTER_INSIDE
                 
