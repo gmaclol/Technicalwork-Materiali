@@ -122,9 +122,20 @@ class PfsActivity : AppCompatActivity() {
         val areas = configManager.getPfsAreas()
         val defaultArea = if (areas.isNotEmpty()) areas[0] else "TOH1"
         val initialArea = pfsPrefs.getString("pfs_last_area", defaultArea) ?: defaultArea
-        loadArea(initialArea)
+        
+        val selectedPfs = intent.getStringExtra("SELECTED_PFS_CONTENT")
+        if (selectedPfs != null) {
+            showSelectedPfs(selectedPfs)
+        } else {
+            loadArea(initialArea)
+        }
         
         // I bottoni delle aree vengono ora generati dinamicamente in setupDynamicDrawer()
+
+        findViewById<MaterialButton>(R.id.btnGeoNav)?.setOnClickListener {
+            val intent = Intent(this, GeoNavActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun showTechnicianNameDialog() {
@@ -155,6 +166,17 @@ class PfsActivity : AppCompatActivity() {
             }
             .setNegativeButton(getString(R.string.btn_cancel), null)
             .show()
+    }
+
+    private fun showSelectedPfs(pfsLine: String) {
+        val parsed = parsePfsList(pfsLine)
+        if (parsed.isNotEmpty()) {
+            supportActionBar?.title = "PFS Selezionato"
+            val (lat, lng) = getLastLocation()
+            adapter.updateData(parsed, lat, lng)
+            pbPfs.visibility = View.GONE
+            rvPfs.visibility = View.VISIBLE
+        }
     }
 
     private fun loadArea(area: String) {
