@@ -33,19 +33,36 @@
 
         <TextView
             android:id="@+id/tvGeoName"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:textColor="@color/gemini_text_main"
             android:textSize="17sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/tvGeoNameMarquee"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/gemini_accent_blue"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:visibility="gone" />
+
         <ImageView
-            android:id="@+id/ivActionIndicator"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
-            android:src="@android:drawable/ic_media_play"
-            app:tint="@color/gemini_text_secondary" />
+            android:id="@+id/ivTrailingStar"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:src="@android:drawable/btn_star_big_off"
+            app:tint="@color/gemini_text_secondary"
+            android:visibility="gone" />
 
     </LinearLayout>
 

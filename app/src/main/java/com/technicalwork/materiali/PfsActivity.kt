@@ -47,6 +47,7 @@ class PfsActivity : AppCompatActivity() {
     private lateinit var adapter: PfsAdapter
     private lateinit var tvTechName: TextView
     private lateinit var settingsRepository: SettingsRepository
+    private lateinit var tvCustomTitle: TextView
     private lateinit var configManager: ConfigManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,7 +70,9 @@ class PfsActivity : AppCompatActivity() {
         }
 
         setSupportActionBar(toolbar)
-        toolbar.setTitleTextAppearance(this, androidx.appcompat.R.style.TextAppearance_AppCompat_Widget_ActionBar_Title)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+        tvCustomTitle = findViewById(R.id.customToolbarTitle)
+        tvCustomTitle.isSelected = true
 
         toolbar.setNavigationOnClickListener {
             drawerLayout.openDrawer(GravityCompat.START)
@@ -171,7 +174,8 @@ class PfsActivity : AppCompatActivity() {
     private fun showSelectedPfs(pfsLine: String) {
         val parsed = parsePfsList(pfsLine)
         if (parsed.isNotEmpty()) {
-            supportActionBar?.title = "PFS Selezionato"
+            val customTitle = intent.getStringExtra("SELECTED_TITLE") ?: "PFS Selezionato"
+            tvCustomTitle.text = customTitle
             val (lat, lng) = getLastLocation()
             adapter.updateData(parsed, lat, lng)
             pbPfs.visibility = View.GONE
@@ -182,7 +186,7 @@ class PfsActivity : AppCompatActivity() {
     private fun loadArea(area: String) {
         val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
         pfsPrefs.edit { putString("pfs_last_area", area) }
-        supportActionBar?.title = "PFS - $area"
+        tvCustomTitle.text = "PFS - $area"
         
         if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
              drawerLayout.closeDrawer(GravityCompat.START)

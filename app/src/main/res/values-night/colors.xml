@@ -12,4 +12,5 @@
     <color name="gemini_button_bg">#333538</color>
     <color name="gemini_button_icon">#C4C7C5</color>
     <color name="gemini_destructive">#F2B8B5</color>
+    <color name="gemini_accent_green">#81C995</color>
 </resources>
