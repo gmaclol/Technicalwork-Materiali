@@ -154,6 +154,9 @@ class GeoNavActivity : AppCompatActivity() {
         lifecycleScope.launch(Dispatchers.IO) {
             withContext(Dispatchers.Main) { pbGeoNav.visibility = View.VISIBLE }
             try {
+                // Forza scaricamento aggiornamenti da GitHub
+                configManager.fetchRemotePiemonteJson()
+
                 val cachedFile = java.io.File(filesDir, "Piemonte.json")
                 val jsonString = if (cachedFile.exists()) {
                     cachedFile.inputStream().bufferedReader().use { it.readText() }
@@ -422,29 +425,65 @@ class GeoNavActivity : AppCompatActivity() {
         }
         
         areas.forEachIndexed { index, area ->
-            val button = com.google.android.material.button.MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle)
-            val params = android.widget.LinearLayout.LayoutParams(
-                android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
-                (56 * resources.displayMetrics.density).toInt()
-            )
-            if (index == 0) {
-                params.topMargin = (8 * resources.displayMetrics.density).toInt()
+            val row = android.widget.LinearLayout(this).apply {
+                orientation = android.widget.LinearLayout.HORIZONTAL
+                layoutParams = android.widget.LinearLayout.LayoutParams(
+                    android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
+                    android.widget.LinearLayout.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    if (index == 0) topMargin = (8 * resources.displayMetrics.density).toInt()
+                    bottomMargin = (4 * resources.displayMetrics.density).toInt()
+                }
+                gravity = android.view.Gravity.CENTER_VERTICAL
             }
-            button.layoutParams = params
-            button.text = area
-            button.icon = androidx.core.content.ContextCompat.getDrawable(this, android.R.drawable.ic_menu_add)
-            button.cornerRadius = (28 * resources.displayMetrics.density).toInt()
-            button.textAlignment = View.TEXT_ALIGNMENT_VIEW_START
-            
-            button.setOnClickListener {
-                val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
-                pfsPrefs.edit().putString("pfs_last_area", area).apply()
-                val intent = Intent(this, PfsActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                startActivity(intent)
-                finish()
+
+            val button = com.google.android.material.button.MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle).apply {
+                layoutParams = android.widget.LinearLayout.LayoutParams(
+                    0,
+                    (56 * resources.displayMetrics.density).toInt(),
+                    1f
+                )
+                text = area
+                cornerRadius = (28 * resources.displayMetrics.density).toInt()
+                textAlignment = View.TEXT_ALIGNMENT_VIEW_START
+                setOnClickListener {
+                    val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
+                    pfsPrefs.edit().putString("pfs_last_area", area).apply()
+                    val intent = Intent(this@GeoNavActivity, PfsActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    startActivity(intent)
+                    finish()
+                }
             }
-            container.addView(button)
+
+            val starBtn = android.widget.ImageButton(this).apply {
+                layoutParams = android.widget.LinearLayout.LayoutParams(
+                    (48 * resources.displayMetrics.density).toInt(),
+                    (48 * resources.displayMetrics.density).toInt()
+                ).apply {
+                    marginStart = (8 * resources.displayMetrics.density).toInt()
+                }
+                setImageResource(android.R.drawable.btn_star_big_on)
+                setBackgroundResource(android.R.color.transparent)
+                scaleType = android.widget.ImageView.ScaleType.CENTER_INSIDE
+                
+                setOnClickListener {
+                    favPrefs.edit().remove("fav_$area").apply()
+                    setupDynamicDrawer()
+                    adapter.notifyDataSetChanged()
+                    
+                    val allFavs = favPrefs.all.filter { it.key.startsWith("fav_") && it.value == true }.map { it.key.removePrefix("fav_") }
+                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        FirebaseRepository().updatePfsAreas(deviceId, allFavs)
+                        SettingsRepository(this@GeoNavActivity).lastNameUpdateTimestamp = System.currentTimeMillis()
+                    }
+                }
+            }
+
+            row.addView(button)
+            row.addView(starBtn)
+            container.addView(row)
         }
 
         findViewById<android.view.View>(R.id.btnGeoNav)?.setOnClickListener {
