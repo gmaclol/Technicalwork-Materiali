@@ -341,9 +341,16 @@ class PfsActivity : AppCompatActivity() {
     }
 
     private fun parsePfsList(text: String): List<PfsItem> {
-        return text.lines()
+        val list = mutableListOf<PfsItem>()
+        // Aggiunge sempre in automatico la riga per segnalare PFS mancanti
+        list.add(PfsItem("Segnala il PFS mancante!!", "00", true))
+        
+        val parsed = text.lines()
             .filter { it.isNotBlank() }
             .mapNotNull { line ->
+                // Evita duplicati se la riga è già presente nel file (es. nei vecchi .txt)
+                if (line.contains("Segnala il PFS mancante!!", ignoreCase = true)) return@mapNotNull null
+                
                 if (line.contains("::::")) {
                     val parts = line.split("::::")
                     if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), true) else null
@@ -352,6 +359,9 @@ class PfsActivity : AppCompatActivity() {
                     if (parts.size >= 2) PfsItem(parts[0].trim(), parts[1].trim(), false) else null
                 } else null
             }
+        
+        list.addAll(parsed)
+        return list
     }
 
     override fun onResume() {
