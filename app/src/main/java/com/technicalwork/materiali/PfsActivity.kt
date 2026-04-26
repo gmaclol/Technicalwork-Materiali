@@ -38,6 +38,7 @@ import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
+import com.google.firebase.firestore.ListenerRegistration
 
 class PfsActivity : AppCompatActivity() {
 
@@ -49,6 +50,7 @@ class PfsActivity : AppCompatActivity() {
     private lateinit var settingsRepository: SettingsRepository
     private lateinit var tvCustomTitle: TextView
     private lateinit var configManager: ConfigManager
+    private var dashboardListener: ListenerRegistration? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
@@ -139,6 +141,37 @@ class PfsActivity : AppCompatActivity() {
             val intent = Intent(this, GeoNavActivity::class.java)
             startActivity(intent)
         }
+
+        setupDashboardListener()
+    }
+
+    private fun setupDashboardListener() {
+        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        dashboardListener = Firebase.firestore.collection("settings").document("devices_names")
+            .addSnapshotListener { snapshot, e ->
+                if (e != null || snapshot == null || !snapshot.exists()) return@addSnapshotListener
+                
+                val raw = snapshot.get(deviceId) as? Map<*, *> ?: return@addSnapshotListener
+                val remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
+                val localTimestamp = settingsRepository.lastNameUpdateTimestamp
+                @Suppress("UNCHECKED_CAST")
+                val remotePfsAreas = raw["pfsAreas"] as? List<String>
+
+                if (remoteTimestamp > localTimestamp && remotePfsAreas != null) {
+                    val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
+                    val editor = prefs.edit()
+                    // Pulizia e ricaricamento preferiti
+                    prefs.all.keys.filter { it.startsWith("fav_") }.forEach { editor.remove(it) }
+                    remotePfsAreas.forEach { editor.putBoolean("fav_$it", true) }
+                    editor.apply()
+                    
+                    settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
+                    
+                    runOnUiThread {
+                        setupDynamicDrawer()
+                    }
+                }
+            }
     }
 
     private fun showTechnicianNameDialog() {
@@ -555,5 +588,10 @@ class PfsActivity : AppCompatActivity() {
             row.addView(starBtn)
             container.addView(row)
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dashboardListener?.remove()
     }
 }

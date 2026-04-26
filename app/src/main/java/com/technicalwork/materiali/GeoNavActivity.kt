@@ -30,6 +30,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 class GeoNavActivity : AppCompatActivity() {
 
@@ -50,6 +53,7 @@ class GeoNavActivity : AppCompatActivity() {
     private val treeStateList = mutableListOf<TreeItem>()
     private val adapter = GeoNavAdapter()
     private var isSearching = false
+    private var dashboardListener: ListenerRegistration? = null
 
     enum class TreeType { REGION, CAT_MACRO, CAT_COMUNI, MACROZONE, COMUNE_IN_MACRO, COMUNE_DIRECT, PFS }
 
@@ -142,6 +146,41 @@ class GeoNavActivity : AppCompatActivity() {
         })
 
         loadJsonData()
+        setupDashboardListener()
+    }
+
+    private fun setupDashboardListener() {
+        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        dashboardListener = Firebase.firestore.collection("settings").document("devices_names")
+            .addSnapshotListener { snapshot, e ->
+                if (e != null || snapshot == null || !snapshot.exists()) return@addSnapshotListener
+                
+                val raw = snapshot.get(deviceId) as? Map<*, *> ?: return@addSnapshotListener
+                val remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
+                val localTimestamp = settingsRepository.lastNameUpdateTimestamp
+                @Suppress("UNCHECKED_CAST")
+                val remotePfsAreas = raw["pfsAreas"] as? List<String>
+
+                if (remoteTimestamp > localTimestamp && remotePfsAreas != null) {
+                    val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
+                    val editor = prefs.edit()
+                    prefs.all.keys.filter { it.startsWith("fav_") }.forEach { editor.remove(it) }
+                    remotePfsAreas.forEach { editor.putBoolean("fav_$it", true) }
+                    editor.apply()
+                    
+                    settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
+                    
+                    runOnUiThread {
+                        setupDynamicDrawer()
+                        adapter.notifyDataSetChanged()
+                    }
+                }
+            }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dashboardListener?.remove()
     }
 
     private fun handleBack(): Boolean {

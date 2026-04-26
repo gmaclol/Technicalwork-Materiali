@@ -471,6 +471,7 @@ class MainActivity : AppCompatActivity() {
                             // Formato nuovo { name: "...", updatedAt: ... }
                             remoteName = raw["name"] as? String
                             remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
+                            @Suppress("UNCHECKED_CAST")
                             remotePfsAreas = raw["pfsAreas"] as? List<String>
                         }
                     }
