@@ -146,32 +146,14 @@ class PfsActivity : AppCompatActivity() {
     }
 
     private fun setupDashboardListener() {
-        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-        dashboardListener = Firebase.firestore.collection("settings").document("devices_names")
-            .addSnapshotListener { snapshot, e ->
-                if (e != null || snapshot == null || !snapshot.exists()) return@addSnapshotListener
-                
-                val raw = snapshot.get(deviceId) as? Map<*, *> ?: return@addSnapshotListener
-                val remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
-                val localTimestamp = settingsRepository.lastNameUpdateTimestamp
-                @Suppress("UNCHECKED_CAST")
-                val remotePfsAreas = raw["pfsAreas"] as? List<String>
-
-                if (remoteTimestamp > localTimestamp && remotePfsAreas != null) {
-                    val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
-                    val editor = prefs.edit()
-                    // Pulizia e ricaricamento preferiti
-                    prefs.all.keys.filter { it.startsWith("fav_") }.forEach { editor.remove(it) }
-                    remotePfsAreas.forEach { editor.putBoolean("fav_$it", true) }
-                    editor.apply()
-                    
-                    settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
-                    
-                    runOnUiThread {
-                        setupDynamicDrawer()
-                    }
-                }
+        dashboardListener = FavoriteManager.attachDashboardListener(
+            context = this,
+            settingsRepo = settingsRepository
+        ) { _, newFavorites ->
+            if (newFavorites != null) {
+                runOnUiThread { setupDynamicDrawer() }
             }
+        }
     }
 
     private fun showTechnicianNameDialog() {
@@ -534,16 +516,13 @@ class PfsActivity : AppCompatActivity() {
 
         val areas = configManager.getPfsAreas().toMutableList()
         val favPrefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
-        val allPrefs = favPrefs.all
-        for ((key, value) in allPrefs) {
+        favPrefs.all.forEach { (key, value) ->
             if (key.startsWith("fav_") && value == true) {
                 val favName = key.removePrefix("fav_")
-                if (!areas.contains(favName)) {
-                    areas.add(favName)
-                }
+                if (!areas.contains(favName)) areas.add(favName)
             }
         }
-        
+
         areas.forEachIndexed { index, area ->
             val row = android.widget.LinearLayout(this).apply {
                 orientation = android.widget.LinearLayout.HORIZONTAL
@@ -580,17 +559,15 @@ class PfsActivity : AppCompatActivity() {
                 setColorFilter(android.graphics.Color.parseColor("#FFD700"))
                 setBackgroundResource(android.R.color.transparent)
                 scaleType = android.widget.ImageView.ScaleType.CENTER_INSIDE
-                
+
                 setOnClickListener {
-                    favPrefs.edit().remove("fav_$area").apply()
+                    FavoriteManager.setFavorite(this@PfsActivity, area, false)
                     setupDynamicDrawer()
-                    
-                    val allFavs = favPrefs.all.filter { it.key.startsWith("fav_") && it.value == true }.map { it.key.removePrefix("fav_") }
-                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().updatePfsAreas(deviceId, allFavs)
-                        SettingsRepository(this@PfsActivity).lastNameUpdateTimestamp = System.currentTimeMillis()
-                    }
+                    FavoriteManager.persistFavoritesToFirebase(
+                        this@PfsActivity,
+                        settingsRepository,
+                        lifecycleScope
+                    )
                 }
             }
 

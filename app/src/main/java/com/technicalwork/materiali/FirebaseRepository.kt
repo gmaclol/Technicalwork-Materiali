@@ -141,18 +141,27 @@ class FirebaseRepository {
                 e.printStackTrace()
             }
         }
-        // Aggiorna il registro centrale con timestamp
+        // Aggiorna il registro centrale con dot-notation per non sovrascrivere altri campi (es. pfsAreas)
         try {
-            val nameData = hashMapOf<String, Any>(
-                deviceId to hashMapOf(
-                    "name" to newName,
-                    "updatedAt" to System.currentTimeMillis()
-                )
-            )
             db.collection("settings").document("devices_names")
-                .set(nameData, SetOptions.merge())
+                .update(
+                    "$deviceId.name", newName,
+                    "$deviceId.updatedAt", System.currentTimeMillis()
+                )
         } catch (e: Exception) {
-            e.printStackTrace()
+            // Se il documento o il campo non esistono ancora, usiamo il set merge come fallback
+            try {
+                val nameData = hashMapOf<String, Any>(
+                    deviceId to hashMapOf(
+                        "name" to newName,
+                        "updatedAt" to System.currentTimeMillis()
+                    )
+                )
+                db.collection("settings").document("devices_names")
+                    .set(nameData, SetOptions.merge())
+            } catch (e2: Exception) {
+                e2.printStackTrace()
+            }
         }
     }
 
@@ -162,16 +171,26 @@ class FirebaseRepository {
     fun updatePfsAreas(deviceId: String, pfsAreas: List<String>) {
         val timestamp = System.currentTimeMillis()
         try {
-            val nameData = hashMapOf<String, Any>(
-                deviceId to hashMapOf(
-                    "pfsAreas" to pfsAreas,
-                    "updatedAt" to timestamp
-                )
-            )
+            // Usa dot-notation per aggiornare solo pfsAreas senza cancellare il 'name'
             db.collection("settings").document("devices_names")
-                .set(nameData, SetOptions.merge())
+                .update(
+                    "$deviceId.pfsAreas", pfsAreas,
+                    "$deviceId.updatedAt", timestamp
+                )
         } catch (e: Exception) {
-            e.printStackTrace()
+            // Se fallisce (magari il campo deviceId non esiste ancora), usiamo il set merge
+            try {
+                val nameData = hashMapOf<String, Any>(
+                    deviceId to hashMapOf(
+                        "pfsAreas" to pfsAreas,
+                        "updatedAt" to timestamp
+                    )
+                )
+                db.collection("settings").document("devices_names")
+                    .set(nameData, SetOptions.merge())
+            } catch (e2: Exception) {
+                e2.printStackTrace()
+            }
         }
     }
 }

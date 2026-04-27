@@ -31,8 +31,6 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
 import com.google.firebase.firestore.ListenerRegistration
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 class GeoNavActivity : AppCompatActivity() {
 
@@ -150,32 +148,17 @@ class GeoNavActivity : AppCompatActivity() {
     }
 
     private fun setupDashboardListener() {
-        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-        dashboardListener = Firebase.firestore.collection("settings").document("devices_names")
-            .addSnapshotListener { snapshot, e ->
-                if (e != null || snapshot == null || !snapshot.exists()) return@addSnapshotListener
-                
-                val raw = snapshot.get(deviceId) as? Map<*, *> ?: return@addSnapshotListener
-                val remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
-                val localTimestamp = settingsRepository.lastNameUpdateTimestamp
-                @Suppress("UNCHECKED_CAST")
-                val remotePfsAreas = raw["pfsAreas"] as? List<String>
-
-                if (remoteTimestamp > localTimestamp && remotePfsAreas != null) {
-                    val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
-                    val editor = prefs.edit()
-                    prefs.all.keys.filter { it.startsWith("fav_") }.forEach { editor.remove(it) }
-                    remotePfsAreas.forEach { editor.putBoolean("fav_$it", true) }
-                    editor.apply()
-                    
-                    settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
-                    
-                    runOnUiThread {
-                        setupDynamicDrawer()
-                        adapter.notifyDataSetChanged()
-                    }
+        dashboardListener = FavoriteManager.attachDashboardListener(
+            context = this,
+            settingsRepo = settingsRepository
+        ) { _, newFavorites ->
+            if (newFavorites != null) {
+                runOnUiThread {
+                    setupDynamicDrawer()
+                    adapter.notifyDataSetChanged()
                 }
             }
+        }
     }
 
     override fun onDestroy() {
@@ -586,16 +569,14 @@ class GeoNavActivity : AppCompatActivity() {
                 scaleType = android.widget.ImageView.ScaleType.CENTER_INSIDE
                 
                 setOnClickListener {
-                    favPrefs.edit().remove("fav_$area").apply()
+                    FavoriteManager.setFavorite(this@GeoNavActivity, area, false)
                     setupDynamicDrawer()
                     adapter.notifyDataSetChanged()
-                    
-                    val allFavs = favPrefs.all.filter { it.key.startsWith("fav_") && it.value == true }.map { it.key.removePrefix("fav_") }
-                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().updatePfsAreas(deviceId, allFavs)
-                        SettingsRepository(this@GeoNavActivity).lastNameUpdateTimestamp = System.currentTimeMillis()
-                    }
+                    FavoriteManager.persistFavoritesToFirebase(
+                        this@GeoNavActivity,
+                        SettingsRepository(this@GeoNavActivity),
+                        lifecycleScope
+                    )
                 }
             }
 
@@ -689,16 +670,15 @@ class GeoNavActivity : AppCompatActivity() {
                     val currentPos = holder.bindingAdapterPosition
                     if (currentPos == RecyclerView.NO_POSITION) return@setOnClickListener
                     val newFav = !sharedPrefs.getBoolean("fav_${cleanName}", false)
-                    sharedPrefs.edit().putBoolean("fav_${cleanName}", newFav).apply()
+                    
+                    FavoriteManager.setFavorite(this@GeoNavActivity, cleanName, newFav)
                     adapter.notifyItemChanged(currentPos)
                     setupDynamicDrawer()
-                    
-                    val allFavs = sharedPrefs.all.filter { it.key.startsWith("fav_") && it.value == true }.map { it.key.removePrefix("fav_") }
-                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().updatePfsAreas(deviceId, allFavs)
-                        settingsRepository.lastNameUpdateTimestamp = System.currentTimeMillis()
-                    }
+                    FavoriteManager.persistFavoritesToFirebase(
+                        this@GeoNavActivity,
+                        settingsRepository,
+                        lifecycleScope
+                    )
                 }
             } else {
                 holder.ivTrailingStar.visibility = View.GONE

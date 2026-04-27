@@ -60,8 +60,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import com.google.firebase.firestore.ListenerRegistration
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
 
@@ -87,6 +85,7 @@ class MainActivity : AppCompatActivity() {
     private var saveMenuItem: MenuItem? = null
     private var lastSelectedCompany: String? = null
     private var startupSyncStarted = false
+    private var favoritesListenerRegistration: com.google.firebase.firestore.ListenerRegistration? = null
     private var exchangeListenerRegistration: ListenerRegistration? = null
     private val exchangeRepo = ExchangeRepository()
     private lateinit var configManager: ConfigManager
@@ -193,15 +192,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Initialize default favorites if not done
-        val geonavPrefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
-        if (!geonavPrefs.getBoolean("favorites_initialized", false)) {
-            geonavPrefs.edit()
-                .putBoolean("fav_TOH_1", true)
-                .putBoolean("fav_Asti", true)
-                .putBoolean("fav_Biella", true)
-                .putBoolean("favorites_initialized", true)
-                .apply()
-        }
+        FavoriteManager.initializeDefaultFavoritesIfNeeded(this)
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
 
@@ -449,124 +440,36 @@ class MainActivity : AppCompatActivity() {
             performTotalSync()
         }
 
-        // Listener per rinomina remota da Dashboard
-        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-        val db = Firebase.firestore
-        db.collection("settings").document("devices_names")
-            .addSnapshotListener { snapshot, e ->
-                if (e != null) return@addSnapshotListener
-                if (snapshot != null && snapshot.exists()) {
-                    val raw = snapshot.get(deviceId)
-                    var remoteName: String? = null
-                    var remoteTimestamp = 0L
-                    var remotePfsAreas: List<String>? = null
-
-                    when (raw) {
-                        is String -> {
-                            // Formato vecchio (solo stringa, nessun timestamp)
-                            remoteName = raw
-                            remoteTimestamp = 0L
-                        }
-                        is Map<*, *> -> {
-                            // Formato nuovo { name: "...", updatedAt: ... }
-                            remoteName = raw["name"] as? String
-                            remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
-                            @Suppress("UNCHECKED_CAST")
-                            remotePfsAreas = raw["pfsAreas"] as? List<String>
-                        }
-                    }
-
-                    val localTimestamp = settingsRepository.lastNameUpdateTimestamp
-
-                    if (remoteTimestamp > localTimestamp) {
-                        var updated = false
-                        if (!remoteName.isNullOrBlank() && remoteName != getTechnicianName()) {
-                            saveTechnicianName(remoteName)
-                            tvTechName.text = remoteName
-                            updated = true
-                        }
-                        
-                        if (remotePfsAreas != null) {
-                            val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
-                            val editor = prefs.edit()
-                            prefs.all.keys.filter { it.startsWith("fav_") }.forEach { editor.remove(it) }
-                            remotePfsAreas.forEach { editor.putBoolean("fav_$it", true) }
-                            editor.apply()
-                            setupDynamicDrawer()
-                            updated = true
-                        }
-                        
-                        if (updated) {
-                            settingsRepository.lastNameUpdateTimestamp = remoteTimestamp
-                            lifecycleScope.launch { performTotalSync(force = true) }
-                        }
-                    }
-                }
+        // Listener per rinomina remota e aggiornamento preferiti PFS dalla Dashboard
+        favoritesListenerRegistration = FavoriteManager.attachDashboardListener(
+            context = this,
+            settingsRepo = settingsRepository
+        ) { newName, newFavorites ->
+            var updated = false
+            if (!newName.isNullOrBlank() && newName != getTechnicianName()) {
+                saveTechnicianName(newName)
+                tvTechName.text = newName
+                updated = true
             }
+            if (newFavorites != null) {
+                setupDynamicDrawer()
+                updated = true
+            }
+            if (updated) {
+                lifecycleScope.launch { performTotalSync(force = true) }
+            }
+        }
 
         // Listener real-time per scambi materiale in arrivo
+        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
         setupExchangeListener(deviceId)
     }
+    
 
     private fun performTotalSync(force: Boolean = false) {
         if (startupSyncStarted && !force) return
-        
-        val currentTime = System.currentTimeMillis()
-        
-        // La sincronizzazione ora avviene ad ogni avvio dell'app per garantire dati sempre freschi.
         startupSyncStarted = true
-        lifecycleScope.launch(Dispatchers.IO) {
-            val techName = getTechnicianName() ?: return@launch
-            
-            // 0. Fetch Configurazione Remota (per nuovi appalti/aree)
-            configManager.fetchRemoteConfig()
-            
-            // Scarica tutti i file .json delle regioni italiane
-            configManager.fetchRemoteRegionsJson()
-            
-            // 1. Sync Liste (GitHub)
-            ListUpdater().syncLists(this@MainActivity, configManager.getCompanies(), configManager.getPfsAreas())
-
-            // 2. Rilevamento Posizione
-            val (lat, lng) = withContext(Dispatchers.Main) { getLastLocation() }
-            val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-
-            // 3. Sync Tutti i File Configurati
-            val firebaseRepo = FirebaseRepository()
-            val excelRepo = ExcelRepository(this@MainActivity)
-            val consumoRepo = ConsumoRepository(this@MainActivity)
-
-            // Sync Aziende (Dinamiche dal Config)
-            configManager.getCompanies().forEach { company ->
-                settingsRepository.getCompanyFileUri(company)?.let { uriString ->
-                    val uri = Uri.parse(uriString)
-                    if (fileStorageManager.isUriAccessible(uri)) {
-                        excelRepo.readExcelFile(uri, company).onSuccess { data ->
-                            firebaseRepo.syncToFirestore(this@MainActivity, company, techName, data, lat, lng, deviceId = deviceId)
-                        }
-                    }
-                }
-            }
-
-            // Sync Consumo
-            settingsRepository.consumoFileUri?.let { uriString ->
-                val uri = Uri.parse(uriString)
-                if (fileStorageManager.isUriAccessible(uri)) {
-                    consumoRepo.readConsumoFile(uri).onSuccess { data ->
-                        firebaseRepo.syncToFirestore(this@MainActivity, "Consumo", techName, data, lat, lng, deviceId = deviceId)
-                    }
-                }
-            }
-            
-            settingsRepository.lastSyncTimestamp = currentTime
-            
-            // Sync Aree PFS (Preferiti)
-            val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
-            val allFavs = prefs.all.filter { it.key.startsWith("fav_") && it.value == true }.map { it.key.removePrefix("fav_") }
-            firebaseRepo.updatePfsAreas(deviceId, allFavs)
-            
-            // Rimossa notifica Toast per la sincronizzazione giornaliera per non disturbare l'utente.
-        }
+        SyncManager(this).performFullSync(lifecycleScope)
     }
 
     override fun onResume() {
@@ -578,7 +481,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Svuota la coda offline
+        // Svuota la coda offline; il sync periodico è già gestito da performTotalSync()
         lifecycleScope.launch(Dispatchers.IO) {
             SyncQueue().flush(this@MainActivity, FirebaseRepository())
         }
@@ -596,6 +499,7 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         updateCheckHandler.removeCallbacks(updateCheckRunnable)
         exchangeListenerRegistration?.remove()
+        favoritesListenerRegistration?.remove()
     }
 
     private fun checkPendingUpdate(): Boolean {
@@ -853,16 +757,7 @@ class MainActivity : AppCompatActivity() {
                     @SuppressLint("HardwareIds")
                     val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                     lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().syncToFirestore(
-                            this@MainActivity,
-                            company,
-                            techName,
-                            mergedList.map { ExcelRowData(it.first, it.second) },
-                            lat,
-                            lng,
-                            isRetry = false,
-                            deviceId = deviceId
-                        )
+                        SyncManager(this@MainActivity).performFullSync(lifecycleScope)
                     }
                 }
 
@@ -1238,7 +1133,7 @@ class MainActivity : AppCompatActivity() {
                 @SuppressLint("HardwareIds")
                 val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
                 lifecycleScope.launch(Dispatchers.IO) {
-                    FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, adapter.getData(), lat, lng, deviceId = deviceId)
+                    SyncManager(this@MainActivity).performFullSync(lifecycleScope)
                 }
 
                 onComplete?.invoke()
