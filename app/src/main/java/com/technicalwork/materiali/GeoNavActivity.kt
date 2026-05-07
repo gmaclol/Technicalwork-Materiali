@@ -60,7 +60,8 @@ class GeoNavActivity : AppCompatActivity() {
         val level: Int,
         val type: TreeType,
         var isExpanded: Boolean = false,
-        var hasChildren: Boolean = true
+        var hasChildren: Boolean = true,
+        var parentRegion: String? = null
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -261,7 +262,7 @@ class GeoNavActivity : AppCompatActivity() {
 
                 withContext(Dispatchers.Main) {
                     regionsAdded.forEachIndexed { index, regionName ->
-                        displayList.add(TreeItem(regionName, 0, TreeType.REGION))
+                        displayList.add(TreeItem(regionName, 0, TreeType.REGION, parentRegion = regionName))
                         adapter.notifyItemInserted(index)
                     }
                 }
@@ -299,12 +300,12 @@ class GeoNavActivity : AppCompatActivity() {
                 comuni?.keys()?.forEach { comune ->
                     val arr = comuni.optJSONArray(comune)
                     if (comune.contains(query, ignoreCase = true)) {
-                        filtered.add(TreeItem(comune, 0, TreeType.COMUNE_DIRECT, hasChildren = true))
+                        filtered.add(TreeItem(comune, 0, TreeType.COMUNE_DIRECT, hasChildren = true, parentRegion = regionName))
                     } else if (arr != null) {
                         for (i in 0 until arr.length()) {
                             val pfsStr = arr.getString(i)
                             if (pfsStr.contains(query, ignoreCase = true)) {
-                                filtered.add(TreeItem(pfsStr, 0, TreeType.PFS, hasChildren = false))
+                                filtered.add(TreeItem(pfsStr, 0, TreeType.PFS, hasChildren = false, parentRegion = regionName))
                             }
                         }
                     }
@@ -318,11 +319,11 @@ class GeoNavActivity : AppCompatActivity() {
                             if (entry.startsWith("<") && entry.endsWith(">")) {
                                 val clean = entry.removeSurrounding("<", ">")
                                 if (clean.contains(query, ignoreCase = true)) {
-                                    filtered.add(TreeItem(macro, 0, TreeType.MACROZONE, hasChildren = false))
+                                    filtered.add(TreeItem(macro, 0, TreeType.MACROZONE, hasChildren = false, parentRegion = regionName))
                                 }
                             } else {
                                 if (entry.contains(query, ignoreCase = true)) {
-                                    filtered.add(TreeItem(entry, 0, TreeType.PFS, hasChildren = false))
+                                    filtered.add(TreeItem(entry, 0, TreeType.PFS, hasChildren = false, parentRegion = regionName))
                                 }
                             }
                         }
@@ -338,19 +339,19 @@ class GeoNavActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
     }
     private fun openComuneInPfsActivity(item: TreeItem, position: Int) {
-        val piemonte = fullData?.optJSONObject("Piemonte")
+        val regionObj = fullData?.optJSONObject(item.parentRegion)
         val pfsLines = mutableListOf<String>()
         var title = ""
 
         if (item.type == TreeType.COMUNE_DIRECT) {
             title = item.text
-            val array = piemonte?.optJSONObject("Comuni")?.optJSONArray(item.text)
+            val array = regionObj?.optJSONObject("Comuni")?.optJSONArray(item.text)
             array?.let {
                 for (i in 0 until it.length()) pfsLines.add(it.getString(i))
             }
         } else if (item.type == TreeType.MACROZONE) {
             val macroName = item.text
-            val array = piemonte?.optJSONObject("Macrozone")?.optJSONArray(macroName)
+            val array = regionObj?.optJSONObject("Macrozone")?.optJSONArray(macroName)
             array?.let {
                 for (i in 0 until it.length()) {
                     val entry = it.getString(i)
@@ -380,36 +381,37 @@ class GeoNavActivity : AppCompatActivity() {
         val children = mutableListOf<TreeItem>()
         val nextLevel = item.level + 1
         
-        val piemonte = fullData?.optJSONObject("Piemonte")
+        val regionObj = fullData?.optJSONObject(item.parentRegion)
+        val pRegion = item.parentRegion
         
         when (item.type) {
             TreeType.REGION -> {
-                children.add(TreeItem("Macrozone", nextLevel, TreeType.CAT_MACRO))
-                children.add(TreeItem("Comuni", nextLevel, TreeType.CAT_COMUNI))
+                children.add(TreeItem("Macrozone", nextLevel, TreeType.CAT_MACRO, parentRegion = pRegion))
+                children.add(TreeItem("Comuni", nextLevel, TreeType.CAT_COMUNI, parentRegion = pRegion))
             }
             TreeType.CAT_MACRO -> {
-                val obj = piemonte?.optJSONObject("Macrozone")
+                val obj = regionObj?.optJSONObject("Macrozone")
                 obj?.keys()?.let { keys ->
                     while (keys.hasNext()) {
-                        children.add(TreeItem(keys.next(), nextLevel, TreeType.MACROZONE, hasChildren = false))
+                        children.add(TreeItem(keys.next(), nextLevel, TreeType.MACROZONE, hasChildren = false, parentRegion = pRegion))
                     }
                 }
                 children.sortBy { it.text }
             }
             TreeType.CAT_COMUNI -> {
-                val obj = piemonte?.optJSONObject("Comuni")
+                val obj = regionObj?.optJSONObject("Comuni")
                 obj?.keys()?.let { keys ->
                     while (keys.hasNext()) {
-                        children.add(TreeItem(keys.next(), nextLevel, TreeType.COMUNE_DIRECT))
+                        children.add(TreeItem(keys.next(), nextLevel, TreeType.COMUNE_DIRECT, parentRegion = pRegion))
                     }
                 }
                 children.sortBy { it.text }
             }
             TreeType.COMUNE_DIRECT -> {
-                val array = piemonte?.optJSONObject("Comuni")?.optJSONArray(item.text)
+                val array = regionObj?.optJSONObject("Comuni")?.optJSONArray(item.text)
                 array?.let {
                     for (i in 0 until it.length()) {
-                        children.add(TreeItem(it.getString(i), nextLevel, TreeType.PFS, hasChildren = false))
+                        children.add(TreeItem(it.getString(i), nextLevel, TreeType.PFS, hasChildren = false, parentRegion = pRegion))
                     }
                 }
             }
@@ -636,7 +638,7 @@ class GeoNavActivity : AppCompatActivity() {
             } else if (item.type == TreeType.MACROZONE) {
                 val macroName = item.text
                 var comuniStr = ""
-                val macrozoneObj = fullData?.optJSONObject("Piemonte")?.optJSONObject("Macrozone")
+                val macrozoneObj = fullData?.optJSONObject(item.parentRegion)?.optJSONObject("Macrozone")
                 val arr = macrozoneObj?.optJSONArray(macroName)
                 if (arr != null && arr.length() > 0) {
                     val firstEntry = arr.getString(0)
