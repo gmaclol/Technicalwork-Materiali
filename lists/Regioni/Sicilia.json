@@ -543,8 +543,6 @@
         "A049_CNO1 :: Via Salvatore Quasimodo, Acquaviva Platani [37.57194786, 13.70021564]",
         "A049_CNO2 :: Via Santa Margherita, Acquaviva Platani [37.57131831, 13.70303341]",
         "A049_CNO3 :: Via Paolo Emiliani Giudici, Acquaviva Platani [37.57129494, 13.70073643]",
-        "A049_CNO3/A049_001 :: Via Cesare Battisti 14, Acquaviva Platani [37.57025169, 13.70265175]",
-        "A049_CNO3/A049_002 :: Via Sandro Pertini, Acquaviva Platani [37.57004839, 13.70132708]",
         "A049_CNO4 :: Via Nunzio Nasi, Acquaviva Platani [37.57179295, 13.70287955]"
       ],
       "Acquedolci": [
@@ -600,10 +598,6 @@
         "A089_CNO24 :: Via Pozzo Nuovo, Agrigento [37.32998007, 13.54695064]",
         "A089_CNO25 :: Via Anna Magnani, Agrigento [37.34776529, 13.60642459]",
         "A089_CNO26 :: Via Giovanni Archeoli Russo, Agrigento [37.27630482, 13.62970147]",
-        "A089_CNO26/A089_021 :: Via Massimo Troisi, Agrigento [37.27553245, 13.6272495]",
-        "A089_CNO26/A089_023 :: Via Massimo Troisi, Agrigento [37.27562848, 13.62782038]",
-        "A089_CNO26/A089_028 :: Via Massimo Troisi, Agrigento [37.27542774, 13.62674589]",
-        "A089_CNO26/A089_033 :: Via Ugo Tognazzi, Agrigento [37.27436816, 13.63007472]",
         "A089_CNO27 :: Strada statale Sud Occidentale Sicula, Agrigento [37.26357098, 13.64957473]",
         "A089_CNO3 :: Via Belvedere (Giardina Gallotti) 5, Agrigento [37.35031619, 13.52413407]",
         "A089_CNO4 :: ~Via Genova (Giardina Gallotti), Agrigento [37.35120434, 13.51993139]",
@@ -758,12 +752,6 @@
         "ME_13/01w12 :: Catalimita, Bafia [38.07642989, 15.20556419]"
       ],
       "Bagheria": [
-        "A546_SS113_14 :: Strada statale Settentrionale Sicula, Bagheria [38.09176082, 13.51095698]",
-        "A546_SS113_158 :: Via Ramacca 139, Bagheria [38.0908307, 13.50603753]",
-        "A546_SS113_SNC5 :: Strada statale Settentrionale Sicula, Bagheria [38.09162106, 13.50998407]",
-        "A546_SS113_SNC9 :: Strada statale Settentrionale Sicula, Bagheria [38.0915817, 13.50909806]",
-        "A546_VICINALE ISIDORO I_1 :: Sant'Isidoro, Bagheria [38.09310834, 13.50622058]",
-        "A546_VICINALE ISIDORO I_2 :: Via Sant'Isidoro Monte, Bagheria [38.09372546, 13.50690795]",
         "I188_CNO2 :: ~Via Giovanni Falcone / Via Francesco Paolo Perez, Bagheria [38.10617899, 13.53310296]"
       ],
       "Baglio Belle Scurati": [
@@ -790,8 +778,7 @@
         "A638_CNO18 :: Via Filippo Juvara, Barcellona Pozzo di Gotto [38.14586604, 15.20980155]",
         "A638_CNO2 :: Via Gala Migliardo, Barcellona Pozzo di Gotto [38.11925033, 15.23273418]",
         "A638_CNO4 :: Via Mercurio, Barcellona Pozzo di Gotto [38.11792179, 15.22845896]",
-        "A638_CNO7 :: Santa Venera Grotta, Barcellona Pozzo di Gotto [38.12553507, 15.21949091]",
-        "ME_ :: Via Barcellona Acquaficara, Barcellona Pozzo di Gotto [38.12987495, 15.21107639]"
+        "A638_CNO7 :: Santa Venera Grotta, Barcellona Pozzo di Gotto [38.12553507, 15.21949091]"
       ],
       "Barrafranca": [
         "A676_CNO1 :: Via Grazia Ferreri 232, Barrafranca [37.38101845, 14.19814103]",
@@ -1034,8 +1021,6 @@
       "Caltagirone": [
         "B428_CNO1 :: Asse di Spina Centrale, Caltagirone [37.24939719, 14.56123697]",
         "B428_CNO2 :: Via Giambattista Nicastro, Caltagirone [37.23184651, 14.5382404]",
-        "B428_CNO2/B428_064 :: Via Pier Paolo Morretta, Caltagirone [37.23044539, 14.53325027]",
-        "B428_CNO2/B428_065 :: Via Fontanelle, Caltagirone [37.2305689, 14.5339412]",
         "B428_CNO3 :: Via Venezia, Caltagirone [37.12955449, 14.58058509]"
       ],
       "Caltanissetta": [
@@ -1080,7 +1065,6 @@
         "B486_CNO14 :: Via Catania, Cammarata [37.63115022, 13.63441105]",
         "B486_CNO15 :: Via Caduti in Guerra, Cammarata [37.6377575, 13.64344105]",
         "B486_CNO16 :: Via Dante Alighieri, Cammarata [37.63174175, 13.63522341]",
-        "B486_CNO16_ :: Via Dante Alighieri, Cammarata [37.63174175, 13.63522341]",
         "B486_CNO17 :: Corso Umberto Primo, Cammarata [37.63434539, 13.63969936]",
         "B486_CNO18 :: Via Padre Girolamo Caruso, Cammarata [37.62948315, 13.63164266]",
         "B486_CNO19 :: SP24-A, Cammarata [37.65089196, 13.67446082]",
@@ -1343,56 +1327,6 @@
         "ME_14/01e12 :: Ruzzolino [38.02781809, 15.18370192]"
       ],
       "Catania": [
-        "C351_ :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42201826, 15.05026984]",
-        "C351_BLOCCO GIANCATA_SNC11 :: Strada Ventiduesima Zona Industriale, Catania [37.42762663, 15.03423426]",
-        "C351_BLOCCO GIANCATA_SNC13 :: Strada Ventiduesima Zona Industriale, Catania [37.42782189, 15.03414902]",
-        "C351_BLOCCO GIANCATA_SNC2 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42668438, 15.03910611]",
-        "C351_BLOCCO GIANCATA_SNC4 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42695567, 15.03804881]",
-        "C351_BLOCCO GIANCATA_SNC5 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42708629, 15.0368731]",
-        "C351_BLOCCO TORRAZZE_SNC2 :: Tangenziale Ovest di Catania, Catania [37.41685255, 15.05612121]",
-        "C351_BLOCCO TORRAZZE_SNC3 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.41493848, 15.05675035]",
-        "C351_BLOCCO TORRAZZE_SNC5 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.4144628, 15.04955685]",
-        "C351_BLOCCO TORRAZZE_SNC6 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.41494708, 15.05355369]",
-        "C351_BLOCCO TORRAZZE_SNC7 :: Tangenziale Ovest di Catania, Catania [37.41513198, 15.0471079]",
-        "C351_PALME TORRAZZE_SNC2 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.41536145, 15.04599879]",
-        "C351_SP69I_SNC :: Via Cosmo Mollica Alagona, Catania [37.4315935, 15.04215536]",
-        "C351_SP69I_SNC3 :: Asse di Spina Nord-Sud, Catania [37.43028598, 15.04217634]",
-        "C351_SS114_6 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43062217, 15.06821664]",
-        "C351_SS114_74 :: Via Enzo Ferrari, Catania [37.43064243, 15.06520118]",
-        "C351_SS114_SNC10 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42881055, 15.06528889]",
-        "C351_SS114_SNC15 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42421335, 15.06830658]",
-        "C351_SS114_SNC17 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42514866, 15.0664583]",
-        "C351_SS114_SNC18 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42388713, 15.06643617]",
-        "C351_SS114_SNC2 :: Strada Primosole, Catania [37.43390555, 15.06549065]",
-        "C351_SS114_SNC23 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42539644, 15.0689869]",
-        "C351_SS114_SNC29 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43068234, 15.06653676]",
-        "C351_SS114_SNC4 :: Strada Primosole, Catania [37.43341364, 15.06556087]",
-        "C351_STRADALE ALFIERI MASARATI_SNC12 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43378121, 15.05189686]",
-        "C351_STRADALE ALFIERI MASARATI_SNC14 :: Strada Alfieri Maserati, Catania [37.43291891, 15.0516164]",
-        "C351_STRADALE ALFIERI MASARATI_SNC4 :: Strada Alfieri Maserati, Catania [37.43122801, 15.0510857]",
-        "C351_STRADALE ALFIERI MASARATI_SNC8 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.4298547, 15.05066296]",
-        "C351_STRADALE ALFIERI MASERATI_SNC10 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43457415, 15.05247897]",
-        "C351_STRADALE DI PRIMOSOLE_46 :: Strada Diciottesima Zona Industriale, Catania [37.44056686, 15.06549666]",
-        "C351_STRADALE DI PRIMOSOLE_SNC10 :: Strada Ventunesima Zona Industriale, Catania [37.43991037, 15.06604739]",
-        "C351_STRADALE DI PRIMOSOLE_SNC13 :: Strada Ventunesima Zona Industriale, Catania [37.43916963, 15.06796573]",
-        "C351_STRADALE DI PRIMOSOLE_SNC15 :: Strada Primosole, Catania [37.44804896, 15.06579823]",
-        "C351_STRADALE DI PRIMOSOLE_SNC19 :: Strada Primosole, Catania [37.44519435, 15.06613681]",
-        "C351_STRADALE DI PRIMOSOLE_SNC2 :: Strada Diciottesima Zona Industriale, Catania [37.44490023, 15.06533141]",
-        "C351_STRADALE DI PRIMOSOLE_SNC4 :: Strada Ventunesima Zona Industriale, Catania [37.43805297, 15.06583088]",
-        "C351_STRADALE EDOARDO BIANCHI_SNC2 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43492699, 15.04676395]",
-        "C351_STRADALE GIOVANNI AGNELLI_1 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43354053, 15.04487161]",
-        "C351_STRADALE GIOVANNI AGNELLI_8 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43296984, 15.04750977]",
-        "C351_STRADALE GIOVANNI AGNELLI_SNC6 :: Strada Giovanni Agnelli, Catania [37.43244984, 15.05059236]",
-        "C351_STRADALE PASSO CAVALIERE_SNC3 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.44424543, 15.03134433]",
-        "C351_STRADALE PASSO CAVALIERE_SNC4 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.44382899, 15.03237539]",
-        "C351_STRADALE PASSO CAVALIERE_SNC5 :: Strada Passo Cavaliere, Catania [37.44224226, 15.0295229]",
-        "C351_STRADALE PRIMOSOLE_SNC :: Strada Decima Zona Industriale, Catania [37.44827455, 15.06533897]",
-        "C351_STRADALE PRIMOSOLE_SNC10 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42004726, 15.0624195]",
-        "C351_STRADALE PRIMOSOLE_SNC2 :: Strada Primosole, Catania [37.42147411, 15.06526627]",
-        "C351_STRADALE PRIMOSOLE_SNC4 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.41952898, 15.06275223]",
-        "C351_STRADALE PRIMOSOLE_SNC8 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.42110898, 15.06239438]",
-        "C351_STRADALE VINCENZO LANCIA_SNC3 :: San Giorgio-Librino-San Giuseppe la Rena-Zia Lisa-Villaggio Sant'Agata, Catania [37.43067372, 15.04750132]",
-        "C351_STRADALE VINCENZO LANCIA_SNC4 :: Strada Giovanni Agnelli, Catania [37.43341373, 15.04691877]",
         "F250_CNO2 :: Via Currolo 37, Catania [37.53808094, 15.04953272]",
         "H940_CNO1 :: Via Sgroppillo / Via Nuovalucello 158, Catania [37.54123136, 15.10623325]",
         "L369_CNO1 :: Via Pietra dell'Ova 185, Catania [37.54167188, 15.09069132]"
@@ -3636,10 +3570,6 @@
         "CT_01/13w43 :: Via Monaci Mantia, San Giovanni la Punta [37.5846272, 15.08560077]",
         "H922_CNO3 :: Via Matilde Serao, San Giovanni la Punta [37.55354981, 15.08788892]",
         "H922_CNO5 :: Villaggio Inchiuso, San Giovanni la Punta [37.58286474, 15.09253501]",
-        "H922_CNO5/H922_004 :: Via Trappeto 33, San Giovanni la Punta [37.57157778, 15.08955599]",
-        "H922_CNO5/H922_110 :: Via Aosta, San Giovanni la Punta [37.59487524, 15.08898278]",
-        "H922_CNO5/H922_212 :: Via Salvo D'Acquisto, San Giovanni la Punta [37.57174854, 15.0994435]",
-        "H922_CNO5/H922_216 :: Via Augusta, San Giovanni la Punta [37.57285565, 15.10029644]",
         "I202_CNO3 :: ~Via Madonna di Fatima / Via Duca degli Abruzzi, San Giovanni la Punta [37.55285576, 15.08741703]"
       ],
       "San Giuseppe Jato": [
