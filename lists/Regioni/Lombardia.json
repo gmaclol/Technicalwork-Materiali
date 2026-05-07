@@ -1679,7 +1679,6 @@
       ],
       "MIH_1": [
         "<Bresso, Cinisello Balsamo, Nova Milanese, Sesto San Giovanni>",
-        "MIH_1/ :: Vicolo Lario 5, Nova Milanese [45.589463, 9.193812352]",
         "MIH_1/01e11 :: Via Ippolito Nievo 48, Sesto San Giovanni [45.53537421, 9.225597768]",
         "MIH_1/01e12 :: Via Ippolito Nievo 1, Sesto San Giovanni [45.53535367, 9.227434605]",
         "MIH_1/01e13 :: Via Fratelli Bandiera, Sesto San Giovanni [45.53464173, 9.22658458]",
@@ -2978,16 +2977,8 @@
         "MN_05/01w11 :: Pioppino, Redondesco [45.15569366, 10.51892073]"
       ],
       "MN_06": [
-        "<Canedole, Castelletto, Castiglione Mantovano, Goito, Malavicina, Marengo, Marmirolo, Pellaloco>",
+        "<Canedole, Castiglione Mantovano, Goito, Malavicina, Marengo, Marmirolo, Pellaloco>",
         "MN_06/01e11 :: Via Riccardo Bacchelli 17, Marengo [45.25528733, 10.73653293]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 11 :: Corte Sei Vie, Castelletto [45.26145109, 10.75310587]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 13 :: Via non definita, Marmirolo [45.28024757, 10.73864142]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 14 :: Via non definita, Marmirolo [45.28122353, 10.73835529]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 15 :: Via non definita, Marmirolo [45.281137, 10.74004051]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 15B :: ~Strada Boschi, Marengo [45.28140233, 10.73239591]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 15C :: Via non definita, Marmirolo [45.28142324, 10.73446745]",
-        "MN_06/01e11_LOCALITA' ROTTA 27 :: Via Rotta, Marengo [45.24984846, 10.7481852]",
-        "MN_06/01e11_LOCALITA' ROTTA 4 :: Via Rotta, Marengo [45.24932984, 10.7494249]",
         "MN_06/01e12 :: Strada Goito, Marmirolo [45.22061543, 10.74918637]",
         "MN_06/01e21 :: Strada Fienili, Castiglione Mantovano [45.2756553, 10.79403992]",
         "MN_06/01e22 :: Via Santa Rita, Pellaloco [45.28419193, 10.81373502]",
@@ -2997,7 +2988,6 @@
         "MN_06/01e32 :: Strada Quistello 129, Malavicina [45.30610847, 10.79732721]",
         "MN_06/01e33 :: Via Gioacchino Rossini 34, Malavicina [45.30496323, 10.79807019]",
         "MN_06/01w11 :: Maglio, Goito [45.21763943, 10.69688739]",
-        "MN_06/01w11_ :: Ronziola, Goito [45.2482931, 10.70892984]",
         "MN_06/01w12 :: Viale Dante Alighieri, Goito [45.25462047, 10.67261388]"
       ],
       "MN_09": [
@@ -5802,7 +5792,6 @@
       ],
       "Bulciago": [
         "B261_CNO2 :: Via Cesare Cantù, Bulciago [45.75474314, 9.294463035]",
-        "B261_CNO2-B261_143_scorta :: Via Portolino, Bulciago [45.75493391, 9.29375028]",
         "B261_CNO3 :: Via Sant'Agostino, Bulciago [45.74968001, 9.294046522]",
         "B261_CNO4 :: ~Via Roma, Bulciago [45.74947087, 9.283241642]",
         "B261_CNO7 :: Via Papa Giovanni Ventitreesimo, Bulciago [45.7575193, 9.290442048]"
@@ -6911,9 +6900,6 @@
         "MI_47/01e32 :: Via Ticino, Castelletto di Cuggiono [45.50561542, 8.80891186]",
         "MI_47/01e33 :: Via Giacomo Leopardi, Castelletto di Cuggiono [45.50767801, 8.809513571]"
       ],
-      "Castelletto": [
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 11 :: Corte Sei Vie, Castelletto [45.26145109, 10.75310587]"
-      ],
       "Castello Cabiaglio": [
         "B312_CNO1 :: Via Roma, Castello Cabiaglio [45.89143014, 8.755881987]",
         "B312_CNO2 :: Via Guglielmo Marconi, Castello Cabiaglio [45.89267592, 8.757836102]"
@@ -7290,12 +7276,6 @@
         "C563_CNO4 :: Via Dante, Cesana Brianza [45.81785266, 9.300450638]",
         "C563_CNO5 :: Via Don Giovanni Minzoni, Cesana Brianza [45.81711569, 9.296387407]",
         "C563_CNO6 :: Via Giuseppe Mazzini, Cesana Brianza [45.81880536, 9.29820196]"
-      ],
-      "Cesano Maderno": [
-        "C566_CORTE 1 GORIZIA_10 :: Via Pasubio, Cesano Maderno [45.62032046, 9.148129546]",
-        "C566_CORTE 2 GAETA_5B :: Piazza Gaeta, Cesano Maderno [45.62420832, 9.169226308]",
-        "C566_SP151_1 :: Via Giovanni de' Medici, Cesano Maderno [45.6351118, 9.16721975]",
-        "C566_SP151_3 :: Via Verbano, Cesano Maderno [45.63401115, 9.169302041]"
       ],
       "Cesole": [
         "E922_CNO17 :: Via Larga, Cesole [45.06304842, 10.64791184]"
@@ -7822,7 +7802,6 @@
         "C820_CNO9 :: Via Piave, Cogliate [45.64356932, 9.096972739]"
       ],
       "Colere": [
-        "C324_CNO37_fittizio :: Strada Statale della Val Seriana, Colere [45.92940203, 10.09535349]",
         "C835_CNO1 :: Valzella, Colere [45.9779007, 10.08439565]",
         "C835_CNO2 :: Via De O, Colere [45.97588906, 10.10023388]",
         "C835_CNO3 :: Via Valle, Colere [45.9734634, 10.0865882]",
@@ -9376,7 +9355,6 @@
         "E078_CNO1 :: Strada Vasto, Goito [45.27781641, 10.61137174]",
         "E078_CNO2 :: SP6, Goito [45.23507139, 10.60276518]",
         "MN_06/01w11 :: Maglio, Goito [45.21763943, 10.69688739]",
-        "MN_06/01w11_ :: Ronziola, Goito [45.2482931, 10.70892984]",
         "MN_06/01w12 :: Viale Dante Alighieri, Goito [45.25462047, 10.67261388]"
       ],
       "Golasecca": [
@@ -10641,10 +10619,7 @@
         "E934_CNO6 :: Vicolo Re, Marcignago [45.25425106, 9.076720662]"
       ],
       "Marengo": [
-        "MN_06/01e11 :: Via Riccardo Bacchelli 17, Marengo [45.25528733, 10.73653293]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 15B :: ~Strada Boschi, Marengo [45.28140233, 10.73239591]",
-        "MN_06/01e11_LOCALITA' ROTTA 27 :: Via Rotta, Marengo [45.24984846, 10.7481852]",
-        "MN_06/01e11_LOCALITA' ROTTA 4 :: Via Rotta, Marengo [45.24932984, 10.7494249]"
+        "MN_06/01e11 :: Via Riccardo Bacchelli 17, Marengo [45.25528733, 10.73653293]"
       ],
       "Maresso": [
         "F248_CNO1 :: Via Alessandro Manzoni 1, Maresso [45.687507, 9.352725098]",
@@ -10669,10 +10644,6 @@
         "E961_CNO3 :: Via Medaglie, Marmentino [45.75319626, 10.27446748]"
       ],
       "Marmirolo": [
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 13 :: Via non definita, Marmirolo [45.28024757, 10.73864142]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 14 :: Via non definita, Marmirolo [45.28122353, 10.73835529]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 15 :: Via non definita, Marmirolo [45.281137, 10.74004051]",
-        "MN_06/01e11_LOCALITA' CAMPAGNAZZA 15C :: Via non definita, Marmirolo [45.28142324, 10.73446745]",
         "MN_06/01e12 :: Strada Goito, Marmirolo [45.22061543, 10.74918637]"
       ],
       "Marnate": [
@@ -10927,9 +10898,6 @@
       "Mignete": [
         "LO_03/01w21 :: Viale Repubblica, Mignete [45.40770279, 9.43750673]",
         "LO_03/01w22 :: Via Lodi, Mignete [45.39551469, 9.43214393]"
-      ],
-      "Milano 3": [
-        "A699_VIA_DELLA_CHIESA_4 :: Via della Chiesa 1, Milano 3 [45.349337, 9.163950681]"
       ],
       "Milano": [
         "MIH_5/20w12 :: Viale 18, Milano [45.52007433, 9.102796487]",
@@ -11739,7 +11707,6 @@
         "F939_CNO2 :: Via Sant'Antonio, Nosate [45.54907839, 8.722848179]"
       ],
       "Nova Milanese": [
-        "MIH_1/ :: Vicolo Lario 5, Nova Milanese [45.589463, 9.193812352]",
         "MIH_1/16w11 :: Via Cristoforo Colombo 12, Nova Milanese [45.58679208, 9.190738785]",
         "MIH_1/16w12 :: Via dell'Assunta, Nova Milanese [45.58784423, 9.187838008]",
         "MIH_1/16w13 :: Via Cristoforo Colombo, Nova Milanese [45.58645868, 9.18871637]",
@@ -11802,9 +11769,6 @@
         "BS_05/03w14 :: Via Giacomo Puccini, Nuvolera [45.53731799, 10.37346845]",
         "BS_05/03w31 :: Via Livelli, Nuvolera [45.51607204, 10.38567968]",
         "F990_CNO1 :: Via Livelli, Nuvolera [45.51608567, 10.38563836]"
-      ],
-      "Offanengo": [
-        "G004_DELLE BATTAGLIE_4 :: Vicolo Cazzulletto, Offanengo [45.38175816, 9.744802441]"
       ],
       "Offlaga": [
         "BS_13/01w11 :: Via Cesare Battisti, Offlaga [45.37753896, 10.08245121]",
@@ -12091,8 +12055,6 @@
         "G213_CNO3 :: Via Francesco Crispi, Padenghe sul Garda [45.51057322, 10.51577514]"
       ],
       "Paderno Dugnano": [
-        "G220_VIA_GORLICH_1 :: Via Erba, Paderno Dugnano [45.57555709, 9.189687702]",
-        "G220_VIA_GORLICH_3 :: Via Erba, Paderno Dugnano [45.57628428, 9.192498458]",
         "MIH_5/10w24 :: Via Cernaia, Paderno Dugnano [45.55473496, 9.154749716]",
         "MI_34/03e43 :: Via San Giuseppe 1, Paderno Dugnano [45.58481285, 9.16223574]",
         "MI_34/03e44 :: Via Giuseppe Mazzini, Paderno Dugnano [45.58532754, 9.16434178]",
@@ -12524,8 +12486,6 @@
       ],
       "Peschiera Borromeo": [
         "MIH_2/09w23 :: Strada Ottava 20, Peschiera Borromeo [45.46930476, 9.308522984]",
-        "MI_37 02e14/PTA_003 :: Via Rodolfo Morandi 2, Peschiera Borromeo [45.44511675, 9.293475338]",
-        "MI_37 02e21/PTA_002 :: Via della Resistenza 35, Peschiera Borromeo [45.44031597, 9.29486281]",
         "MI_37/01w12 :: Via della Liberazione 51, Peschiera Borromeo [45.42761275, 9.312754905]",
         "MI_37/01w22 :: Via Giacomo Matteotti 18, Peschiera Borromeo [45.42920076, 9.306475229]",
         "MI_37/01w24 :: Via Aldo Moro 2, Peschiera Borromeo [45.42774498, 9.307888088]",
@@ -13780,9 +13740,6 @@
         "H815_CNO2 :: Via Gonzaga, San Daniele Po [45.06046089, 10.17856285]",
         "H815_CNO3 :: Via Venticinque Aprile, San Daniele Po [45.06360686, 10.18003602]",
         "H815_CNO4 :: Via Faverzani, San Daniele Po [45.06684277, 10.17594758]"
-      ],
-      "San Donato Milanese": [
-        "H827_VIAACHILLE GRANDI_16 :: Via Achille Grandi 18, San Donato Milanese [45.4053168, 9.260129753]"
       ],
       "San Fermo": [
         "E192_CNO1 :: Via Dei Fiori, San Fermo [45.73325291, 9.955195776]",
@@ -16180,16 +16137,6 @@
         "L866_CNO5 :: Via Piave 16, Viganò [45.72698291, 9.327869454]"
       ],
       "Vigevano": [
-        "L872_VALLETTA FOGLIANO_1/8 :: Via Fratelli Rosselli, Vigevano [45.30777071, 8.851640051]",
-        "L872_VALLETTA FOGLIANO_18 :: Strada Valletta Fogliano, Vigevano [45.30747744, 8.851418655]",
-        "L872_VALLETTA FOGLIANO_43 :: Strada Valletta Fogliano, Vigevano [45.30630831, 8.85014524]",
-        "L872_VALLETTA FOGLIANO_46 :: Strada Valletta Fogliano, Vigevano [45.30705416, 8.851023718]",
-        "L872_VALLETTA FOGLIANO_48 :: Strada Valletta Fogliano, Vigevano [45.30687149, 8.850763532]",
-        "L872_VALLETTA FOGLIANO_50 :: Strada Valletta Fogliano, Vigevano [45.30678229, 8.850630466]",
-        "L872_VALLETTA FOGLIANO_58/6 :: Strada Valletta Fogliano, Vigevano [45.30573685, 8.849440476]",
-        "L872_VALLETTA FOGLIANO_58SNC :: Strada Valletta Fogliano, Vigevano [45.30605567, 8.849868036]",
-        "L872_VALLETTA FOGLIANO_62 :: Strada Valletta Fogliano, Vigevano [45.30554438, 8.849183916]",
-        "L872_VALLETTA FOGLIANO_64C :: Strada Valletta Fogliano, Vigevano [45.30493119, 8.848293504]",
         "PV_03/01w23 :: Via Brigate Partigiane, Vigevano [45.30420793, 8.860229441]",
         "PV_03/01w24 :: ~Via Santa Maria, Vigevano [45.30596015, 8.856454181]",
         "PV_03/01w31 :: Via Raffaello Sanzio, Vigevano [45.30782282, 8.868159849]",
