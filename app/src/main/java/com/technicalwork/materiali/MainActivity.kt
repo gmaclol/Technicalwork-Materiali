@@ -469,7 +469,7 @@ class MainActivity : AppCompatActivity() {
     private fun performTotalSync(force: Boolean = false) {
         if (startupSyncStarted && !force) return
         startupSyncStarted = true
-        SyncManager(this).performFullSync(lifecycleScope)
+        SyncWorker.enqueue(this)
     }
 
     override fun onResume() {
@@ -750,16 +750,8 @@ class MainActivity : AppCompatActivity() {
                 // 3. Esegue il merge (Tecnico + Master)
                 val mergedList = MaterialMerger().merge(techMaterials, masterList)
 
-                val company = lastSelectedCompany
-                val techName = getTechnicianName()
-                if (company != null && techName != null) {
-                    val (lat, lng) = getLastLocation()
-                    @SuppressLint("HardwareIds")
-                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        SyncManager(this@MainActivity).performFullSync(lifecycleScope)
-                    }
-                }
+                // Sync affidabile anche se l'utente esce subito dopo la condivisione
+                SyncWorker.enqueue(this@MainActivity)
 
                 // 4. Scrive il nuovo file Excel basato sul template Sample.xlsx
                 val generatedFile = ExcelWriter().writeOutput(this, mergedList)
@@ -1101,7 +1093,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun saveExcelFile(silent: Boolean = false, onComplete: (() -> Unit)? = null) {
         val uri = currentFileUri ?: return
-        
+
         if (isConsumoMode) {
             lifecycleScope.launch {
                 val result = consumoRepository.saveConsumoFile(uri, adapter.getData(), getTechnicianName() ?: "")
@@ -1110,6 +1102,7 @@ class MainActivity : AppCompatActivity() {
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
                     onComplete?.invoke()
+                    SyncWorker.enqueue(this@MainActivity)
                 } else {
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
                 }
@@ -1117,28 +1110,23 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
-        val currentData = adapter.getData().map { Pair(it.label, it.value) }
-        val mergedPairs = MaterialMerger().merge(currentData, masterList)
-        val dataToSave = mergedPairs.map { ExcelRowData(it.first, it.second) }
-        
-        viewModel.saveExcelFile(uri, dataToSave) { success ->
-            if (success) {
-                if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
-                saveLastFileUri(uri)
-                
-                val company = lastSelectedCompany ?: return@saveExcelFile
-                val techName = getTechnicianName() ?: return@saveExcelFile
-                val (lat, lng) = getLastLocation()
-                @SuppressLint("HardwareIds")
-                val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-                lifecycleScope.launch(Dispatchers.IO) {
-                    SyncManager(this@MainActivity).performFullSync(lifecycleScope)
+        lifecycleScope.launch {
+            val masterList = withContext(Dispatchers.IO) {
+                AssetsHelper().loadMasterList(this@MainActivity, lastSelectedCompany)
+            }
+            val currentData = adapter.getData().map { Pair(it.label, it.value) }
+            val mergedPairs = MaterialMerger().merge(currentData, masterList)
+            val dataToSave = mergedPairs.map { ExcelRowData(it.first, it.second) }
+            
+            viewModel.saveExcelFile(uri, dataToSave) { success ->
+                if (success) {
+                    if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
+                    saveLastFileUri(uri)
+                    onComplete?.invoke()
+                    SyncWorker.enqueue(this@MainActivity)
+                } else {
+                    if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
                 }
-
-                onComplete?.invoke()
-            } else {
-                if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
             }
         }
     }

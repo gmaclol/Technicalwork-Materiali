@@ -103,6 +103,9 @@ dependencies {
     // QR Code (Scambio Materiale)
     implementation(libs.zxing.core)
     implementation(libs.zxing.embedded)
+
+    // WorkManager — sync Firebase affidabile in background
+    implementation(libs.androidx.work.runtime.ktx)
     
     coreLibraryDesugaring(libs.desugar.jdk.libs)
     testImplementation(libs.junit)
