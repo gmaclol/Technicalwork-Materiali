@@ -106,6 +106,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         _hasUnsavedChanges.value = true
     }
 
+    fun clearUndoStack(currentData: List<ExcelRowData>) {
+        undoStack.clear()
+        preRevertSnapshot = null
+        val timestamp = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date())
+        undoStack.push(UndoSnapshot(currentData.map { it.copy() }, timestamp))
+        historyRepository.saveHistory(currentCompany ?: "default", undoStack.toList())
+    }
+
     fun performUndo(onUndoState: (List<ExcelRowData>) -> Unit): Boolean {
         if (undoStack.size > 1) {
             undoStack.pop() // rimuove lo stato corrente

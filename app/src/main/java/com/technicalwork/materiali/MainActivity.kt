@@ -14,6 +14,8 @@ import android.os.Looper
 import android.provider.DocumentsContract
 import android.text.SpannableStringBuilder
 import android.text.style.ForegroundColorSpan
+import android.text.style.RelativeSizeSpan
+import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -1099,6 +1101,8 @@ class MainActivity : AppCompatActivity() {
                 val result = consumoRepository.saveConsumoFile(uri, adapter.getData(), getTechnicianName() ?: "")
                 if (result.isSuccess) {
                     viewModel.markAsSaved()
+                    viewModel.clearUndoStack(adapter.getData())
+                    updateUndoButtonLook()
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
                     onComplete?.invoke()
@@ -1120,6 +1124,8 @@ class MainActivity : AppCompatActivity() {
             
             viewModel.saveExcelFile(uri, dataToSave) { success ->
                 if (success) {
+                    viewModel.clearUndoStack(adapter.getData())
+                    updateUndoButtonLook()
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
                     onComplete?.invoke()
@@ -1159,13 +1165,46 @@ class MainActivity : AppCompatActivity() {
         val historyList = viewModel.undoStack.toList().reversed()
         val displayList = mutableListOf<HistoryItem>()
         
+        val rawDiffs = mutableListOf<Triple<Int, List<DiffItem>, String>>()
         for (i in 0 until historyList.size - 1) {
             val currentSnapshot = historyList[i]
             val previousSnapshot = historyList[i+1]
-            val diff = calculateDiff(previousSnapshot.data, currentSnapshot.data, currentSnapshot.timestamp)
-            if (diff.isNotEmpty()) {
-                displayList.add(HistoryItem(diff, viewModel.undoStack.size - 1 - i, currentSnapshot.timestamp))
+            val diffs = getStructuredDiff(previousSnapshot.data, currentSnapshot.data)
+            if (diffs.isNotEmpty()) {
+                rawDiffs.add(Triple(viewModel.undoStack.size - 1 - i, diffs, currentSnapshot.timestamp))
             }
+        }
+
+        var i = 0
+        while (i < rawDiffs.size) {
+            var endSnapshotIndex = i
+            val accumulatedDiffs = mutableMapOf<String, DiffItem>()
+            rawDiffs[i].second.forEach { accumulatedDiffs[it.label] = it }
+            
+            while (endSnapshotIndex + 1 < rawDiffs.size) {
+                val nextDiffs = rawDiffs[endSnapshotIndex + 1].second
+                val currentLabels = accumulatedDiffs.keys
+                val nextLabels = nextDiffs.map { it.label }.toSet()
+                if (currentLabels == nextLabels) {
+                    nextDiffs.forEach { nd ->
+                        val ext = accumulatedDiffs[nd.label]!!
+                        accumulatedDiffs[nd.label] = DiffItem(nd.label, ext.diff + nd.diff, ext.isTextDiff || nd.isTextDiff, ext.header)
+                    }
+                    endSnapshotIndex++
+                } else {
+                    break
+                }
+            }
+            
+            val targetStackIndex = rawDiffs[endSnapshotIndex].first
+            val timestamp = rawDiffs[i].third
+            
+            val finalDiffs = accumulatedDiffs.values.filter { it.isTextDiff || it.diff != 0 }.toList()
+            if (finalDiffs.isNotEmpty()) {
+                val ssb = formatGroupedDiff(finalDiffs, timestamp)
+                displayList.add(HistoryItem(ssb, targetStackIndex, timestamp))
+            }
+            i = endSnapshotIndex + 1
         }
 
         rvHistory.layoutManager = LinearLayoutManager(this)
@@ -1201,55 +1240,97 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
+    private data class DiffItem(val label: String, val diff: Int, val isTextDiff: Boolean, val header: String?)
     private data class HistoryItem(val spannableDiff: SpannableStringBuilder, val stackIndex: Int, val timestamp: String)
     private class HistoryViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         val tvDiff: TextView = v.findViewById(R.id.tvDiff)
     }
 
-    private fun calculateDiff(old: List<ExcelRowData>, new: List<ExcelRowData>, timestamp: String): SpannableStringBuilder {
-        val ssb = SpannableStringBuilder()
-        val blue = ContextCompat.getColor(this, R.color.gemini_accent_blue)
-        val red = ContextCompat.getColor(this, R.color.gemini_destructive)
-        val gray = Color.GRAY
-
+    private fun getStructuredDiff(old: List<ExcelRowData>, new: List<ExcelRowData>): List<DiffItem> {
         val newMap = new.associateBy { it.label }
         val oldMap = old.associateBy { it.label }
-
         val allLabels = (new.map { it.label } + old.map { it.label }).distinct()
-
+        
+        val diffs = mutableListOf<DiffItem>()
         for (label in allLabels) {
-            if (label.isEmpty()) continue
+            if (label.isEmpty() || label.startsWith("::") || label.startsWith(";;")) continue
             val newValStr = newMap[label]?.value ?: ""
             val oldValStr = oldMap[label]?.value ?: ""
             
             if (newValStr != oldValStr) {
-                val newVal = newValStr.toIntOrNull() ?: 0
-                val oldVal = oldValStr.toIntOrNull() ?: 0
-                val diff = newVal - oldVal
-                
-                if (diff != 0) {
-                    if (ssb.isNotEmpty()) ssb.append("\n\n")
-                    
-                    val start = ssb.length
-                    ssb.append(timestamp).append("  ")
-                    ssb.setSpan(ForegroundColorSpan(gray), start, start + timestamp.length, 0)
-                    
-                    ssb.append(label).append("\n")
-                    val sign = if (diff > 0) "+" else ""
-                    val color = if (diff > 0) blue else red
-                    val diffStr = "$sign$diff"
-                    val startVal = ssb.length
-                    ssb.append(diffStr)
-                    ssb.setSpan(ForegroundColorSpan(color), startVal, ssb.length, 0)
+                val newVal = newValStr.toIntOrNull()
+                val oldVal = oldValStr.toIntOrNull()
+                val header = findHeaderForLabel(new, label) ?: findHeaderForLabel(old, label)
+                if (newVal != null && oldVal != null) {
+                    val diff = newVal - oldVal
+                    if (diff != 0) diffs.add(DiffItem(label, diff, false, header))
                 } else {
-                    if (ssb.isNotEmpty()) ssb.append("\n\n")
-                    val start = ssb.length
-                    ssb.append(timestamp).append("  ")
-                    ssb.setSpan(ForegroundColorSpan(gray), start, start + timestamp.length, 0)
-                    ssb.append(label).append("\n${getString(R.string.text_modified)}")
+                    diffs.add(DiffItem(label, 0, true, header))
                 }
             }
         }
+        return diffs
+    }
+
+    private fun findHeaderForLabel(data: List<ExcelRowData>, targetLabel: String): String? {
+        var lastHeader: String? = null
+        for (row in data) {
+            val l = row.label.trim()
+            if ((l.startsWith("::") && l.endsWith("::")) || (l.startsWith(";;") && l.endsWith(";;"))) {
+                lastHeader = l.removeSurrounding("::").removeSurrounding(";;").trim()
+            }
+            if (row.label == targetLabel) return lastHeader
+        }
+        return null
+    }
+
+    private fun formatGroupedDiff(diffs: List<DiffItem>, timestamp: String): SpannableStringBuilder {
+        val ssb = SpannableStringBuilder()
+        val blue = ContextCompat.getColor(this, R.color.gemini_accent_blue)
+        val red = ContextCompat.getColor(this, R.color.gemini_destructive)
+        val gray = Color.GRAY
+        val headerColor = ContextCompat.getColor(this, R.color.gemini_text_main)
+
+        val byHeader = diffs.groupBy { it.header ?: "Senza Categoria" }
+
+        ssb.append(timestamp).append("\n")
+        ssb.setSpan(ForegroundColorSpan(gray), 0, timestamp.length, 0)
+        ssb.setSpan(RelativeSizeSpan(0.85f), 0, timestamp.length, 0)
+
+        var firstHeader = true
+        for ((header, items) in byHeader) {
+            if (!firstHeader) ssb.append("\n")
+            firstHeader = false
+
+            val startH = ssb.length
+            ssb.append("📁 $header\n")
+            ssb.setSpan(ForegroundColorSpan(headerColor), startH, ssb.length, 0)
+            ssb.setSpan(StyleSpan(android.graphics.Typeface.BOLD), startH, ssb.length, 0)
+            ssb.setSpan(RelativeSizeSpan(0.95f), startH, ssb.length, 0)
+
+            for (item in items) {
+                val startItem = ssb.length
+                ssb.append("  • ").append(item.label)
+                
+                if (item.isTextDiff) {
+                    ssb.append(" : testuale\n")
+                    ssb.setSpan(ForegroundColorSpan(gray), startItem, ssb.length, 0)
+                } else {
+                    val sign = if (item.diff > 0) "+" else ""
+                    val color = if (item.diff > 0) blue else red
+                    val diffStr = "  $sign${item.diff}\n"
+                    val startVal = ssb.length
+                    ssb.append(diffStr)
+                    ssb.setSpan(ForegroundColorSpan(color), startVal, ssb.length, 0)
+                    ssb.setSpan(StyleSpan(android.graphics.Typeface.BOLD), startVal, ssb.length, 0)
+                }
+            }
+        }
+        
+        if (ssb.isNotEmpty() && ssb.last() == '\n') {
+            ssb.delete(ssb.length - 1, ssb.length)
+        }
+        
         return ssb
     }
 

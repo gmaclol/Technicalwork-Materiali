@@ -141,6 +141,24 @@ class FirebaseRepository {
                 e.printStackTrace()
             }
         }
+    }
+
+    /**
+     * Aggiorna solo la versione dell'app nelle collezioni. Utile al riavvio post-update
+     * per far comparire la nuova versione sulla dashboard senza aspettare un salvataggio materiali.
+     */
+    fun updateAppVersionOnly(deviceId: String, companies: List<String>) {
+        val data = hashMapOf<String, Any>("versione_app" to "Ver ${BuildConfig.VERSION_NAME}")
+        val allToUpdate = companies.toMutableList()
+        if (!allToUpdate.contains("Consumo")) allToUpdate.add("Consumo")
+        
+        allToUpdate.forEach { company ->
+            try {
+                db.collection(company).document(deviceId).set(data, SetOptions.merge())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
         // Aggiorna il registro centrale con dot-notation per non sovrascrivere altri campi (es. pfsAreas)
         try {
             db.collection("settings").document("devices_names")

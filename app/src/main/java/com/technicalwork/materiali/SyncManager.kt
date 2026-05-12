@@ -35,6 +35,9 @@ class SyncManager(private val context: Context) {
             val firebaseRepo = FirebaseRepository()
             val excelRepo = ExcelRepository(context)
             val fileStorageManager = FileStorageManager(context)
+            
+            // Invia subito l'aggiornamento versione app in caso di riavvio post-update
+            firebaseRepo.updateAppVersionOnly(deviceId, configManager.getCompanies())
 
             // Aziende
             configManager.getCompanies().forEach { company ->
