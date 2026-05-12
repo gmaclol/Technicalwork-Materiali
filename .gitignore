@@ -45,3 +45,8 @@ desktop.ini
 # Cursor/Agents
 .agents/
 skills-lock.json
+/tasks/lessons.md
+/tasks/decisions.md
+/tasks/struttura.md
+/tasks/todo.md
+org.md

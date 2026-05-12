@@ -51,6 +51,8 @@ class PfsActivity : AppCompatActivity() {
     private lateinit var tvCustomTitle: TextView
     private lateinit var configManager: ConfigManager
     private var dashboardListener: ListenerRegistration? = null
+    // Traccia il comune/area corrente per includerlo automaticamente nelle segnalazioni
+    private var currentArea: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
@@ -191,6 +193,8 @@ class PfsActivity : AppCompatActivity() {
         if (parsed.isNotEmpty()) {
             val customTitle = intent.getStringExtra("SELECTED_TITLE") ?: "PFS Selezionato"
             tvCustomTitle.text = customTitle
+            // Estrae il nome comune dal titolo (es. "PFS - Asti" → "Asti")
+            currentArea = customTitle.removePrefix("PFS - ").trim()
             val (lat, lng) = getLastLocation()
             adapter.updateData(parsed, lat, lng)
             pbPfs.visibility = View.GONE
@@ -199,6 +203,7 @@ class PfsActivity : AppCompatActivity() {
     }
 
     private fun loadArea(area: String) {
+        currentArea = area
         val pfsPrefs = getSharedPreferences("pfs_prefs", Context.MODE_PRIVATE)
         pfsPrefs.edit { putString("pfs_last_area", area) }
         tvCustomTitle.text = "PFS - $area"
@@ -433,6 +438,7 @@ class PfsActivity : AppCompatActivity() {
             val data = hashMapOf<String, Any>(
                 "nome_pfs" to item.name,
                 "nuovo_indirizzo" to newAddress,
+                "comune" to currentArea,
                 "tecnico" to techName,
                 "orario" to timestamp,
                 "timestamp_raw" to timestampRaw

@@ -74,7 +74,7 @@ class FirebaseRepository {
             // 1. Salva documento principale del tecnico
             db.collection(company)
                 .document(deviceId)
-                .set(data, SetOptions.merge())
+                .set(data)
                 .await()
 
             // --- LOGICA SNAPSHOT ---
@@ -85,7 +85,7 @@ class FirebaseRepository {
             val todayDocId = "${deviceId}_$todayStr"
 
             // Aggiorna costantemente lo snapshot di oggi per fissare la versione finale della giornata
-            db.collection(company).document(todayDocId).set(data, SetOptions.merge()).await()
+            db.collection(company).document(todayDocId).set(data).await()
 
             // 3. Eliminazione snapshot più vecchi di 7 giorni
             val cal = Calendar.getInstance()
