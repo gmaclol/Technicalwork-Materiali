@@ -152,7 +152,7 @@ object FavoriteManager {
         val now = System.currentTimeMillis()
 
         scope.launch(Dispatchers.IO) {
-            FirebaseRepository().updatePfsAreas(deviceId, allFavs)
+            FirebaseRepository().updatePfsAreas(deviceId, allFavs, settingsRepo.technicianName)
             settingsRepo.lastNameUpdateTimestamp = now
             SyncManager(context).performFullSync(this)
         }

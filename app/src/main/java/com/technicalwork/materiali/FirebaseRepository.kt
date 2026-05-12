@@ -168,7 +168,7 @@ class FirebaseRepository {
     /**
      * Aggiorna le aree PFS salvate per questo dispositivo
      */
-    fun updatePfsAreas(deviceId: String, pfsAreas: List<String>) {
+    fun updatePfsAreas(deviceId: String, pfsAreas: List<String>, techName: String? = null) {
         val timestamp = System.currentTimeMillis()
         try {
             // Usa dot-notation per aggiornare solo pfsAreas senza cancellare il 'name'
@@ -178,13 +178,18 @@ class FirebaseRepository {
                     "$deviceId.updatedAt", timestamp
                 )
         } catch (e: Exception) {
-            // Se fallisce (magari il campo deviceId non esiste ancora), usiamo il set merge
+            // Se fallisce (magari il campo deviceId non esiste ancora o era una stringa legacy), usiamo il set merge
             try {
+                val devMap = hashMapOf<String, Any>(
+                    "pfsAreas" to pfsAreas,
+                    "updatedAt" to timestamp
+                )
+                if (techName != null) {
+                    devMap["name"] = techName
+                }
+                
                 val nameData = hashMapOf<String, Any>(
-                    deviceId to hashMapOf(
-                        "pfsAreas" to pfsAreas,
-                        "updatedAt" to timestamp
-                    )
+                    deviceId to devMap
                 )
                 db.collection("settings").document("devices_names")
                     .set(nameData, SetOptions.merge())
