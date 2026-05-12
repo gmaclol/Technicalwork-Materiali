@@ -1101,7 +1101,7 @@ class MainActivity : AppCompatActivity() {
                 val result = consumoRepository.saveConsumoFile(uri, adapter.getData(), getTechnicianName() ?: "")
                 if (result.isSuccess) {
                     viewModel.markAsSaved()
-                    viewModel.clearUndoStack(adapter.getData())
+                    viewModel.clearPreRevertSnapshot()
                     updateUndoButtonLook()
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
@@ -1124,7 +1124,7 @@ class MainActivity : AppCompatActivity() {
             
             viewModel.saveExcelFile(uri, dataToSave) { success ->
                 if (success) {
-                    viewModel.clearUndoStack(adapter.getData())
+                    viewModel.clearPreRevertSnapshot()
                     updateUndoButtonLook()
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
