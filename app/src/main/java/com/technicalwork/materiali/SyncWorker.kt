@@ -8,6 +8,8 @@ import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import kotlinx.coroutines.coroutineScope
 
+import androidx.work.Data
+
 /**
  * Worker che esegue il sync Firebase completo in background.
  *
@@ -25,10 +27,15 @@ class SyncWorker(
 
     override suspend fun doWork(): Result {
         return try {
+            val latRaw = inputData.getDouble("lat", Double.NaN)
+            val lngRaw = inputData.getDouble("lng", Double.NaN)
+            val lat = if (latRaw.isNaN()) null else latRaw
+            val lng = if (lngRaw.isNaN()) null else lngRaw
+
             // coroutineScope crea un CoroutineScope dal contesto suspend corrente,
             // che è ciò che performFullSync si aspetta come parametro.
             coroutineScope {
-                SyncManager(applicationContext).performFullSync(this)
+                SyncManager(applicationContext).performFullSync(this, lat, lng)
             }
             Result.success()
         } catch (e: Exception) {
@@ -46,10 +53,19 @@ class SyncWorker(
          * così non si accumulano richieste ridondanti.
          */
         fun enqueue(context: Context) {
+            val (lat, lng) = SyncManager.getLastLocationHelper(context)
+            val dataBuilder = Data.Builder()
+            if (lat != null && lng != null) {
+                dataBuilder.putDouble("lat", lat)
+                dataBuilder.putDouble("lng", lng)
+            }
+
             WorkManager.getInstance(context).enqueueUniqueWork(
                 WORK_NAME,
                 ExistingWorkPolicy.REPLACE,
-                OneTimeWorkRequestBuilder<SyncWorker>().build()
+                OneTimeWorkRequestBuilder<SyncWorker>()
+                    .setInputData(dataBuilder.build())
+                    .build()
             )
         }
     }

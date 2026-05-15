@@ -93,7 +93,13 @@ class FirebaseRepository {
             val sevenDaysAgoStr = sdf.format(cal.time)
             val prefix = "${deviceId}_"
 
-            val allDocs = db.collection(company).get().await()
+            // Ottimizzazione: query solo per i documenti di questo device (prefix query)
+            // Evita di scaricare TUTTA la collection e consumare la Firebase Quota.
+            val allDocs = db.collection(company)
+                .whereGreaterThanOrEqualTo(com.google.firebase.firestore.FieldPath.documentId(), prefix)
+                .whereLessThan(com.google.firebase.firestore.FieldPath.documentId(), prefix + "\uf8ff")
+                .get().await()
+                
             for (doc in allDocs.documents) {
                 val id = doc.id
                 if (id.startsWith(prefix)) {

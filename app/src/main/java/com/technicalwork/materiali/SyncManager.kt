@@ -14,7 +14,23 @@ import kotlinx.coroutines.withContext
  */
 class SyncManager(private val context: Context) {
 
-    fun performFullSync(scope: CoroutineScope) {
+    companion object {
+        fun getLastLocationHelper(context: Context): Pair<Double?, Double?> {
+            return try {
+                if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                    return null to null
+                }
+                val lm = context.getSystemService(Context.LOCATION_SERVICE) as android.location.LocationManager
+                val loc = lm.getLastKnownLocation(android.location.LocationManager.GPS_PROVIDER) 
+                          ?: lm.getLastKnownLocation(android.location.LocationManager.NETWORK_PROVIDER)
+                loc?.latitude to loc?.longitude
+            } catch (e: Exception) {
+                null to null
+            }
+        }
+    }
+
+    fun performFullSync(scope: CoroutineScope, passedLat: Double? = null, passedLng: Double? = null) {
         scope.launch(Dispatchers.IO) {
             val settingsRepo = SettingsRepository(context)
             val configManager = ConfigManager(context)
@@ -26,10 +42,9 @@ class SyncManager(private val context: Context) {
             configManager.fetchRemoteRegionsJson()
             ListUpdater().syncLists(context, configManager.getCompanies(), configManager.getPfsAreas())
 
-            // 2. Rilevamento Posizione
-            val position = withContext(Dispatchers.Main) { getLastLocationHelper(context) }
-            val lat = position.first
-            val lng = position.second
+            // 2. Rilevamento Posizione (usa passata se disponibile)
+            val lat = passedLat ?: getLastLocationHelper(context).first
+            val lng = passedLng ?: getLastLocationHelper(context).second
 
             // 3. Sync di tutti i file Excel (Aziende e Consumo)
             val firebaseRepo = FirebaseRepository()
@@ -67,17 +82,4 @@ class SyncManager(private val context: Context) {
         }
     }
 
-    private fun getLastLocationHelper(context: Context): Pair<Double?, Double?> {
-        return try {
-            if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
-                return null to null
-            }
-            val lm = context.getSystemService(Context.LOCATION_SERVICE) as android.location.LocationManager
-            val loc = lm.getLastKnownLocation(android.location.LocationManager.GPS_PROVIDER) 
-                      ?: lm.getLastKnownLocation(android.location.LocationManager.NETWORK_PROVIDER)
-            loc?.latitude to loc?.longitude
-        } catch (e: Exception) {
-            null to null
-        }
-    }
 }
