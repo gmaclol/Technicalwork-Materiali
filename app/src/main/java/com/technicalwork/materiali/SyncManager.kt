@@ -42,17 +42,43 @@ class SyncManager(private val context: Context) {
             configManager.fetchRemoteRegionsJson()
             ListUpdater().syncLists(context, configManager.getCompanies(), configManager.getPfsAreas())
 
-            // 2. Rilevamento Posizione (usa passata se disponibile)
-            val lat = passedLat ?: getLastLocationHelper(context).first
-            val lng = passedLng ?: getLastLocationHelper(context).second
+            // 2. Rilevamento Posizione
+            // Il worker pre-fetcha con LocationManager (veloce ma spesso null).
+            // Se mancante, usa FusedLocationProviderClient (cache piu' affidabile di Play Services).
+            var lat = passedLat
+            var lng = passedLng
+            if (lat == null || lng == null) {
+                try {
+                    val fusedClient = com.google.android.gms.location.LocationServices
+                        .getFusedLocationProviderClient(context)
+                    val loc = com.google.android.gms.tasks.Tasks.await(
+                        fusedClient.lastLocation, 3, java.util.concurrent.TimeUnit.SECONDS
+                    )
+                    if (loc != null) {
+                        lat = loc.latitude
+                        lng = loc.longitude
+                    }
+                } catch (_: Exception) {
+                    // Fallback finale a LocationManager raw
+                    val (fbLat, fbLng) = getLastLocationHelper(context)
+                    lat = fbLat
+                    lng = fbLng
+                }
+            }
 
             // 3. Sync di tutti i file Excel (Aziende e Consumo)
             val firebaseRepo = FirebaseRepository()
             val excelRepo = ExcelRepository(context)
             val fileStorageManager = FileStorageManager(context)
             
-            // Invia subito l'aggiornamento versione app in caso di riavvio post-update
-            firebaseRepo.updateAppVersionOnly(deviceId, configManager.getCompanies())
+            // Aggiorna versione app solo se effettivamente cambiata dall'ultimo sync
+            val syncPrefs = context.getSharedPreferences("sync_meta", Context.MODE_PRIVATE)
+            val lastSyncedVersion = syncPrefs.getString("last_synced_version", null)
+            val currentVersion = "Ver ${BuildConfig.VERSION_NAME}"
+            if (lastSyncedVersion != currentVersion) {
+                firebaseRepo.updateAppVersionOnly(deviceId, configManager.getCompanies())
+                syncPrefs.edit().putString("last_synced_version", currentVersion).apply()
+            }
 
             // Aziende
             configManager.getCompanies().forEach { company ->
@@ -76,9 +102,9 @@ class SyncManager(private val context: Context) {
                 }
             }
             
-            // 4. Sync Aree PFS (Preferiti)
-            val allFavs = FavoriteManager.getFavorites(context)
-            firebaseRepo.updatePfsAreas(deviceId, allFavs)
+            // 4. PFS Areas: sincronizzate SOLO da FavoriteManager.persistFavoritesToFirebase()
+            // quando l'utente modifica i preferiti, non ad ogni sync periodico.
+            // Questo evita ~1 write/sync su devices_names che triggerava il listener della dashboard.
         }
     }
 

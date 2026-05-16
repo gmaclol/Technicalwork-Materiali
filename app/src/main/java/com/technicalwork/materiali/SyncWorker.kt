@@ -53,7 +53,31 @@ class SyncWorker(
          * così non si accumulano richieste ridondanti.
          */
         fun enqueue(context: Context) {
-            val (lat, lng) = SyncManager.getLastLocationHelper(context)
+            try {
+                if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                    val fusedClient = com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(context)
+                    fusedClient.lastLocation.addOnCompleteListener { task ->
+                        var lat: Double? = null
+                        var lng: Double? = null
+                        if (task.isSuccessful && task.result != null) {
+                            lat = task.result.latitude
+                            lng = task.result.longitude
+                        } else {
+                            val (fbLat, fbLng) = SyncManager.getLastLocationHelper(context)
+                            lat = fbLat
+                            lng = fbLng
+                        }
+                        enqueueWithLocation(context, lat, lng)
+                    }
+                } else {
+                    enqueueWithLocation(context, null, null)
+                }
+            } catch (e: Exception) {
+                enqueueWithLocation(context, null, null)
+            }
+        }
+
+        private fun enqueueWithLocation(context: Context, lat: Double?, lng: Double?) {
             val dataBuilder = Data.Builder()
             if (lat != null && lng != null) {
                 dataBuilder.putDouble("lat", lat)

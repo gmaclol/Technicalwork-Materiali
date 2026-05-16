@@ -117,6 +117,19 @@ object FavoriteManager {
                         remoteTimestamp = (raw["updatedAt"] as? Number)?.toLong() ?: 0L
                         @Suppress("UNCHECKED_CAST")
                         remotePfsAreas = raw["pfsAreas"] as? List<String>
+                        
+                        // Check per Killswitch
+                        val isBanned = raw["banned"] as? Boolean ?: false
+                        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+                        prefs.edit().putBoolean("is_banned", isBanned).apply()
+                        
+                        if (isBanned) {
+                            val intent = android.content.Intent(context, BannedActivity::class.java).apply {
+                                flags = android.content.Intent.FLAG_ACTIVITY_NEW_TASK or android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            }
+                            context.startActivity(intent)
+                            return@addSnapshotListener
+                        }
                     }
                 }
 
@@ -154,7 +167,9 @@ object FavoriteManager {
         scope.launch(Dispatchers.IO) {
             FirebaseRepository().updatePfsAreas(deviceId, allFavs, settingsRepo.technicianName)
             settingsRepo.lastNameUpdateTimestamp = now
-            SyncManager(context).performFullSync(this)
+            // NB: NON triggerare performFullSync qui.
+            // L'unico scopo e' salvare i preferiti su Firestore.
+            // Un fullSync riscriverebbe devices_names causando loop col listener.
         }
     }
 

@@ -99,6 +99,9 @@ dependencies {
     // Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore.ktx)
+
+    // GPS: FusedLocationProviderClient per posizione affidabile
+    implementation("com.google.android.gms:play-services-location:21.3.0")
     
     // QR Code (Scambio Materiale)
     implementation(libs.zxing.core)
