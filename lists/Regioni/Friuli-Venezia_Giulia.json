@@ -1,0 +1,2779 @@
+{
+  "Friuli-Venezia Giulia": {
+    "Macrozone": {
+      "GO_02": [
+        "<Bistrigna, Duino Aurisina, Monfalcone, Ronchi Dei Legionari>",
+        "GO_02/01e11 :: Strada provinciale 34 di Medeazza, Duino Aurisina [45.79602544, 13.60143313]",
+        "GO_02/01w11 :: Via dei Bagni Nuova, Monfalcone [45.78529142, 13.53062355]",
+        "GO_02/01w12 :: Via Gorizia, Monfalcone [45.79848322, 13.5296516]",
+        "GO_02/01w21 :: Via Ponziana 29, Monfalcone [45.80439777, 13.52600019]",
+        "GO_02/01w22 :: Via Aulo Manlio 31, Monfalcone [45.80263148, 13.52508536]",
+        "GO_02/01w23 :: Via Aulo Manlio 10, Monfalcone [45.80390999, 13.52501403]",
+        "GO_02/01w24 :: Via della Crociera 36, Monfalcone [45.80085499, 13.52078728]",
+        "GO_02/01w31 :: Via dei Longobardi, Monfalcone [45.801666, 13.54527704]",
+        "GO_02/01w32 :: Via Giacomo Matteotti, Monfalcone [45.80593405, 13.53961209]",
+        "GO_02/01w33 :: Via Brindisi 12, Monfalcone [45.80427113, 13.53134471]",
+        "GO_02/01w34 :: Via San Polo 146, Monfalcone [45.81105057, 13.52258226]",
+        "GO_02/01w41 :: Via Silvano del Missier, Monfalcone [45.81116998, 13.52023716]",
+        "GO_02/01w42 :: Via Nicolò Costanzi 22, Monfalcone [45.80851611, 13.51412533]",
+        "GO_02/01w43 :: Via Francesco Petrarca 15c, Monfalcone [45.81067457, 13.5123717]",
+        "GO_02/01w44 :: Via Ventiquattro Maggio 23, Monfalcone [45.81320688, 13.51238534]",
+        "GO_02/02w11 :: Via Grado 38, Bistrigna [45.79447396, 13.50352896]",
+        "GO_02/02w12 :: Via Cesare Battisti, Bistrigna [45.80521951, 13.50564193]",
+        "GO_02/02w13 :: Via Edmondo De Amicis 27, Bistrigna [45.80828736, 13.49772473]",
+        "GO_02/02w14 :: Via Staranzano 34d, Ronchi dei Legionari [45.81440976, 13.50449723]",
+        "GO_02/02w21 :: Via dell'Aeroporto 2a, Ronchi dei Legionari [45.82643193, 13.49783467]",
+        "GO_02/02w22 :: Via della Rotonda 1, Ronchi dei Legionari [45.82432731, 13.50896024]",
+        "GO_02/02w31 :: Via Dante Alighieri 10, Ronchi dei Legionari [45.82875962, 13.50164243]",
+        "GO_02/02w32 :: Via Angelo Cernic, Ronchi dei Legionari [45.83458034, 13.49724956]",
+        "GO_02/02w33 :: Via Pietro Micca, Ronchi dei Legionari [45.84023957, 13.49032005]",
+        "GO_02/02w41 :: Viale Giuseppe Garibaldi 22, Ronchi dei Legionari [45.83287067, 13.50731789]",
+        "GO_02/02w42 :: Via dei Granatieri 5, Ronchi dei Legionari [45.83119636, 13.51036286]",
+        "GO_02/02w43 :: Via della Rotonda, Ronchi dei Legionari [45.82789674, 13.51056099]"
+      ],
+      "PN_01": [
+        "<Cordenons, Porcia, Pordenone>",
+        "PN_01/01e11 :: Via Sebastiano Caboto 8, Pordenone [45.9623002, 12.66226594]",
+        "PN_01/01e12 :: Via San Valentino 2, Pordenone [45.96442422, 12.66449207]",
+        "PN_01/01e13 :: Via Monte Nero 5, Pordenone [45.96807952, 12.66612213]",
+        "PN_01/01e14 :: Via Monte Canin 4, Pordenone [45.96867235, 12.66563616]",
+        "PN_01/01e21 :: Via Enrico Fermi 12, Pordenone [45.97026799, 12.67001489]",
+        "PN_01/01e22 :: Via Scipio Slataper 15, Pordenone [45.97293669, 12.67409359]",
+        "PN_01/01e23 :: Vial Grande 8d, Pordenone [45.97531214, 12.6736498]",
+        "PN_01/01e24 :: Via Stradelle 11d, Pordenone [45.97314489, 12.67147544]",
+        "PN_01/01e31 :: Via di Ragogna 1, Pordenone [45.96953651, 12.68052482]",
+        "PN_01/01e32 :: Via Monte Grappa, Pordenone [45.96960502, 12.68271159]",
+        "PN_01/01e33 :: Via Borgo Casoni 20a, Pordenone [45.97261319, 12.67933124]",
+        "PN_01/01e34 :: Via Adamello 7, Pordenone [45.97471422, 12.67801413]",
+        "PN_01/01e41 :: Viale della Libertà 98, Pordenone [45.96575605, 12.67563336]",
+        "PN_01/01e42 :: Via Damiano Chiesa 33, Pordenone [45.96778152, 12.67870477]",
+        "PN_01/01e43 :: Via Zara, Pordenone [45.96978075, 12.67537468]",
+        "PN_01/01e44 :: Via Francesco Baracca 9a, Pordenone [45.96849796, 12.67237671]",
+        "PN_01/01w11 :: Via Antonio Molinari 23a, Pordenone [45.96248185, 12.6607767]",
+        "PN_01/01w12 :: Via Felice Cavallotti 44, Pordenone [45.96122321, 12.66115441]",
+        "PN_01/01w13 :: Via Amerigo Vespucci 12, Pordenone [45.96303446, 12.65918599]",
+        "PN_01/01w14 :: Via Torricella 1, Pordenone [45.96081761, 12.66043148]",
+        "PN_01/01w21 :: Viale Guglielmo Marconi 16, Pordenone [45.962186, 12.65745235]",
+        "PN_01/01w22 :: Largo San Giorgio, Pordenone [45.96035685, 12.65782657]",
+        "PN_01/01w23 :: Viale Trento 6, Pordenone [45.95961343, 12.66260265]",
+        "PN_01/01w24 :: Via Santa Caterina, Pordenone [45.96107782, 12.66244954]",
+        "PN_01/01w31 :: Viale della Libertà 3, Pordenone [45.95948022, 12.66485092]",
+        "PN_01/01w32 :: Via Pietro Pomo 2, Pordenone [45.95955873, 12.66616912]",
+        "PN_01/01w33 :: Via Vallona 19a, Pordenone [45.96138822, 12.6644193]",
+        "PN_01/01w34 :: Via Bartolomeo d'Alviano 2, Pordenone [45.96226239, 12.66821803]",
+        "PN_01/01w41 :: Via Daniele Manin 2, Pordenone [45.96281998, 12.66765025]",
+        "PN_01/01w42 :: Viale della Libertà 44g, Pordenone [45.96394147, 12.67004153]",
+        "PN_01/01w43 :: Via Federico Confalonieri 20, Pordenone [45.96742022, 12.67218091]",
+        "PN_01/01w44 :: Via Goffredo Mameli 11, Pordenone [45.96459405, 12.6673979]",
+        "PN_01/02e11 :: Via Marco Polo 14, Pordenone [45.9631502, 12.6581405]",
+        "PN_01/02e12 :: Via San Quirino 24a, Pordenone [45.96664313, 12.65928777]",
+        "PN_01/02e13 :: Via Grado 1f, Pordenone [45.96674359, 12.6569008]",
+        "PN_01/02e14 :: Via Antonio Molinari 41, Pordenone [45.96448239, 12.65693063]",
+        "PN_01/02e21 :: Viale Venezia, Pordenone [45.97213347, 12.66383571]",
+        "PN_01/02e22 :: Via Leo Girolami 1, Pordenone [45.97168747, 12.66021131]",
+        "PN_01/02e23 :: Via Fratelli Rosselli 2, Pordenone [45.97092436, 12.65940923]",
+        "PN_01/02e24 :: Via Interna 42, Pordenone [45.97410931, 12.6584017]",
+        "PN_01/02e31 :: Viale Rotto 2a, Pordenone [45.97051622, 12.65470774]",
+        "PN_01/02e32 :: Via San Quirino 72, Pordenone [45.97321388, 12.65335575]",
+        "PN_01/02e33 :: Via San Quirino 17, Pordenone [45.96881661, 12.65632324]",
+        "PN_01/02e34 :: Via Julia 2, Pordenone [45.96941599, 12.65084452]",
+        "PN_01/02e41 :: Via del Fante 27, Pordenone [45.96542749, 12.65209506]",
+        "PN_01/02e42 :: Via del Fante 11, Pordenone [45.96388142, 12.65003101]",
+        "PN_01/02e43 :: Largo San Giovanni 20, Pordenone [45.96293551, 12.65475282]",
+        "PN_01/02e44 :: Via Antonio Molinari 57, Pordenone [45.96389155, 12.65534511]",
+        "PN_01/02w11 :: Via Ungaresca 62, Pordenone [45.97287387, 12.64704001]",
+        "PN_01/02w12 :: Via Divisione Mario Modotti 11, Pordenone [45.97129683, 12.64867554]",
+        "PN_01/02w13 :: Via dell'Autiere 39, Pordenone [45.97012899, 12.64632804]",
+        "PN_01/02w14 :: Via dell'Autiere 18, Pordenone [45.96822773, 12.64833773]",
+        "PN_01/02w21 :: Via Nicoletta 32, Pordenone [45.96847472, 12.64299463]",
+        "PN_01/02w22 :: Via Marostica 8, Pordenone [45.96680043, 12.64163741]",
+        "PN_01/02w23 :: Via Gerolamo Rorario 17, Pordenone [45.96558542, 12.63934877]",
+        "PN_01/02w24 :: Via Planton 39, Pordenone [45.97070251, 12.64013909]",
+        "PN_01/02w31 :: Via Aprilia 2, Pordenone [45.9695472, 12.63743552]",
+        "PN_01/02w32 :: Via Bassano 1, Pordenone [45.96922169, 12.63573655]",
+        "PN_01/02w33 :: Via Belluno 1, Pordenone [45.96745345, 12.63252543]",
+        "PN_01/02w34 :: Via del Troi 6, Pordenone [45.96657429, 12.63845114]",
+        "PN_01/02w41 :: Via Maggiore 101, Pordenone [45.96308716, 12.64008489]",
+        "PN_01/02w42 :: Via Maniago 2, Pordenone [45.9644724, 12.64616779]",
+        "PN_01/02w43 :: Viale Michelangelo Grigoletti 74, Pordenone [45.9652674, 12.64284163]",
+        "PN_01/02w44 :: Via del Carabiniere 13, Pordenone [45.96694973, 12.64564551]",
+        "PN_01/03e11 :: Via Giovan Battista Damiani 2b, Pordenone [45.95783247, 12.65638223]",
+        "PN_01/03e12 :: Via San Giorgio 1, Pordenone [45.96013467, 12.65713531]",
+        "PN_01/03e13 :: Corso Giuseppe Garibaldi 43c, Pordenone [45.9609468, 12.65617547]",
+        "PN_01/03e14 :: Via Benedetto Cairoli 11, Pordenone [45.96145182, 12.65705278]",
+        "PN_01/03e21 :: Viale Cossetti 14b, Pordenone [45.9585732, 12.66219191]",
+        "PN_01/03e22 :: Vicolo delle Acque, Pordenone [45.95741916, 12.66006938]",
+        "PN_01/03e23 :: Via Giuseppe Galvani 8, Pordenone [45.95734449, 12.65761186]",
+        "PN_01/03e24 :: Via Roma, Pordenone [45.95678774, 12.66164491]",
+        "PN_01/03e31 :: Viale Franco Martelli 47, Pordenone [45.95644118, 12.66447564]",
+        "PN_01/03e32 :: Viale Cossetti, Pordenone [45.95887481, 12.66290461]",
+        "PN_01/03e33 :: Via del Maglio 6, Pordenone [45.95773122, 12.6673428]",
+        "PN_01/03e34 :: Via Revedole 2, Pordenone [45.95720172, 12.67072515]",
+        "PN_01/03e41 :: Via Guglielmo Oberdan 65, Pordenone [45.95702463, 12.65479278]",
+        "PN_01/03e42 :: Piazzale Filanda Marcolin, Pordenone [45.95365157, 12.65901599]",
+        "PN_01/03e43 :: Corso Vittorio Emanuele Secondo 40a, Pordenone [45.95634171, 12.65972647]",
+        "PN_01/03e44 :: Vicolo del Molino 4, Pordenone [45.95547741, 12.6616869]",
+        "PN_01/03w11 :: Via Giovanni da Udine 1, Pordenone [45.96450749, 12.63311538]",
+        "PN_01/03w12 :: Via Maestri Zanelli, Pordenone [45.96409379, 12.63757819]",
+        "PN_01/03w13 :: Via della Ferriera 56, Pordenone [45.96110948, 12.64546988]",
+        "PN_01/03w14 :: Via Codroipo 1, Pordenone [45.96241034, 12.64824474]",
+        "PN_01/03w21 :: Via Tolmezzo 7, Pordenone [45.96109386, 12.65141266]",
+        "PN_01/03w22 :: Via Luigi De Paoli 19, Pordenone [45.9602097, 12.65457249]",
+        "PN_01/03w23 :: Via Guglielmo Oberdan 7, Pordenone [45.9616348, 12.65440456]",
+        "PN_01/03w24 :: Via Rotate 5, Pordenone [45.96327263, 12.65022339]",
+        "PN_01/03w31 :: Via Cappuccini 63, Pordenone [45.95521927, 12.64541678]",
+        "PN_01/03w32 :: Via Cappuccini 87, Pordenone [45.95890184, 12.64205869]",
+        "PN_01/03w33 :: Via Gradisca 1, Pordenone [45.95954299, 12.64157257]",
+        "PN_01/03w34 :: Via Latisana 3, Pordenone [45.958014, 12.64693131]",
+        "PN_01/03w41 :: Via dello Stadio 2, Pordenone [45.95709179, 12.65180213]",
+        "PN_01/03w42 :: Via Cappuccini 11, Pordenone [45.9546066, 12.65404537]",
+        "PN_01/03w43 :: Via Reghena 14, Pordenone [45.95250815, 12.65430481]",
+        "PN_01/03w44 :: Via Cappuccini 49, Pordenone [45.95432039, 12.64862319]",
+        "PN_01/04e11 :: Via Dogana 16, Pordenone [45.94775352, 12.65764932]",
+        "PN_01/04e12 :: Via Pietro Del Zoccolo 17, Pordenone [45.94733236, 12.66070003]",
+        "PN_01/04e13 :: Via Italo Svevo 1a, Pordenone [45.94482875, 12.66214487]",
+        "PN_01/04e14 :: Via Pomponio Amalteo 36, Pordenone [45.94314976, 12.6601563]",
+        "PN_01/04e21 :: Via Carlo Goldoni 12, Pordenone [45.94142872, 12.66951656]",
+        "PN_01/04e22 :: Via Ada Negri 23, Pordenone [45.94049348, 12.66674405]",
+        "PN_01/04e23 :: Via Giacomo Leopardi 19, Pordenone [45.94146477, 12.66805492]",
+        "PN_01/04e24 :: Via Giovanni Pascoli 1, Pordenone [45.94415298, 12.66755405]",
+        "PN_01/04e31 :: Via Ugo Foscolo, Pordenone [45.94402183, 12.66565012]",
+        "PN_01/04e32 :: Via Vecchia di Corva 18, Pordenone [45.94590164, 12.66443359]",
+        "PN_01/04e33 :: Via Lignano 24, Pordenone [45.94825513, 12.6660777]",
+        "PN_01/04e34 :: Via Mestre, Pordenone [45.95184686, 12.66368281]",
+        "PN_01/04e41 :: Via Nuova di Corva 47, Pordenone [45.94809841, 12.66669315]",
+        "PN_01/04e42 :: Via Udine 80, Pordenone [45.94975191, 12.67422174]",
+        "PN_01/04e43 :: Via Nuova di Corva 2, Pordenone [45.95230058, 12.67005781]",
+        "PN_01/04e44 :: Via San Giuliano 21, Pordenone [45.95216737, 12.6678529]",
+        "PN_01/05e11 :: Via Dogana 25, Pordenone [45.94699252, 12.65682868]",
+        "PN_01/05e12 :: Via Bruno Buozzi 1a, Pordenone [45.94571592, 12.65590892]",
+        "PN_01/05e21 :: Via Valle, Pordenone [45.92849074, 12.63951402]",
+        "PN_01/05e22 :: Via del Passo 3, Pordenone [45.92600172, 12.63461107]",
+        "PN_01/05w11 :: Via Aristide Gabelli, Porcia [45.96711127, 12.62674594]",
+        "PN_01/05w12 :: Via del Porto 2, Porcia [45.96834466, 12.62754976]",
+        "PN_01/05w21 :: Via Roveredo, Porcia [45.96957745, 12.61349265]",
+        "PN_01/05w22 :: Rorai Piccolo, Porcia [45.96921051, 12.60313946]",
+        "PN_01/05w23 :: Via Roveredo 61, Porcia [45.97636743, 12.61490673]",
+        "PN_01/05w24 :: Località Borgonuovo - Via Mantova 2, Porcia [45.9766526, 12.61697351]",
+        "PN_01/05w31 :: Via Antonio De Pellegrini, Porcia [45.9585579, 12.60841191]",
+        "PN_01/05w32 :: Via Marco Vietti 2, Porcia [45.96074526, 12.61133053]",
+        "PN_01/05w33 :: Via Gandin, Porcia [45.94409331, 12.59664469]",
+        "PN_01/05w41 :: Rorai Piccolo, Porcia [45.95737042, 12.61894179]",
+        "PN_01/05w42 :: Via Colombera 23, Porcia [45.95452204, 12.61829001]",
+        "PN_01/05w43 :: Via delle Rive 1, Porcia [45.94836875, 12.61740115]",
+        "PN_01/05w51 :: Via Rio Collicelli 1, Porcia [45.95496911, 12.62307325]",
+        "PN_01/05w52 :: Via Goffredo Mameli 1, Porcia [45.95954324, 12.62995438]",
+        "PN_01/05w53 :: Via Cartiera 24, Porcia [45.95956117, 12.63093157]",
+        "PN_01/06e11 :: Via Antonio Canaletto 4b, Pordenone [45.95338602, 12.67231253]",
+        "PN_01/06e21 :: Via Frazione Villanova 50, Pordenone [45.93612805, 12.68230713]",
+        "PN_01/06e22 :: Via Pravolton 3a, Pordenone [45.94825339, 12.68901624]",
+        "PN_01/06e23 :: Via Musile 13, Pordenone [45.95438892, 12.69365051]",
+        "PN_01/06e24 :: Via Prasecco 46a, Pordenone [45.95161491, 12.6807939]",
+        "PN_01/06w11 :: Via Maestra 187, Cordenons [45.98444007, 12.68384097]",
+        "PN_01/06w12 :: Via Stradelle 184, Cordenons [45.97920986, 12.68574314]",
+        "PN_01/06w13 :: Via Nogaredo 8, Cordenons [45.97443903, 12.68356126]",
+        "PN_01/06w14 :: Via delle Acque 2, Cordenons [45.97443395, 12.6864188]",
+        "PN_01/06w21 :: Via Stradelle 124, Cordenons [45.98196038, 12.6894546]",
+        "PN_01/06w22 :: Via Giuseppe Nannavecchia 22, Cordenons [45.98272173, 12.69339098]",
+        "PN_01/06w23 :: Vial di Sclavons 53, Cordenons [45.98196589, 12.69432315]",
+        "PN_01/06w24 :: Via Braida Foenis 52, Cordenons [45.97090401, 12.69688144]",
+        "PN_01/06w31 :: Via Maestra 169, Cordenons [45.98648768, 12.68780365]",
+        "PN_01/06w32 :: Via Alcide De Gasperi 21, Cordenons [45.98905894, 12.69369831]",
+        "PN_01/06w33 :: Via Romano Sartori 1, Cordenons [45.98975608, 12.69668925]",
+        "PN_01/06w34 :: Via Cesare Battisti 11, Cordenons [45.99406112, 12.71009746]"
+      ],
+      "PN_05": [
+        "<Azzano Decimo, Chions, Fiume Veneto, Pasiano Di Pordenone, Prata Di Pordenone>",
+        "PN_05/01e11 :: Via Fiumicino 2a, Azzano Decimo [45.89309298, 12.69748512]",
+        "PN_05/01e12 :: Via Nuova Fratte 119, Azzano Decimo [45.89098981, 12.7040786]",
+        "PN_05/01e13 :: Via dei Frassini 1, Azzano Decimo [45.88766778, 12.707071]",
+        "PN_05/01e14 :: Via dei Gelsi 4, Azzano Decimo [45.88466979, 12.71075455]",
+        "PN_05/01e21 :: Viale Primo Maggio, Azzano Decimo [45.8831937, 12.71749519]",
+        "PN_05/01e22 :: Via Pradat Candie 79, Azzano Decimo [45.88093481, 12.70166655]",
+        "PN_05/01e23 :: Viale Rimembranze 91, Azzano Decimo [45.8852295, 12.69938551]",
+        "PN_05/01e24 :: Viale Rimembranze, Azzano Decimo [45.88698932, 12.69065106]",
+        "PN_05/01e31 :: Via Crosera, Azzano Decimo [45.89126534, 12.69103984]",
+        "PN_05/01e32 :: Via Piave 4b, Azzano Decimo [45.89064312, 12.67138007]",
+        "PN_05/01e33 :: Via Armentera 80, Azzano Decimo [45.89824413, 12.65798426]",
+        "PN_05/01e34 :: Via Corva 100c, Azzano Decimo [45.90608492, 12.66956186]",
+        "PN_05/01e41 :: Via Arrigo Boito, Azzano Decimo [45.91379024, 12.66198505]",
+        "PN_05/01e42 :: Via Alessandro Manzoni, Azzano Decimo [45.9153211, 12.6582231]",
+        "PN_05/01e43 :: Via Fautario 15, Azzano Decimo [45.91421929, 12.65696518]",
+        "PN_05/01e44 :: Via Centrale 21, Azzano Decimo [45.91473828, 12.66191994]",
+        "PN_05/01e51 :: Via Fagnigola 4, Chions [45.84624032, 12.70190139]",
+        "PN_05/02e11 :: Via Pizzati 10, Fiume Veneto [45.90038118, 12.73434152]",
+        "PN_05/02e12 :: Via Nazario Sauro, Fiume Veneto [45.91128274, 12.76589837]",
+        "PN_05/02e21 :: Viale Trento 67a, Fiume Veneto [45.92615883, 12.74620703]",
+        "PN_05/02e22 :: Via Praderoni, Fiume Veneto [45.92917406, 12.74393498]",
+        "PN_05/02e23 :: Via Suor Serafina Gregoris, Fiume Veneto [45.93109437, 12.73591039]",
+        "PN_05/02e31 :: Viale Trieste, Fiume Veneto [45.92689368, 12.7318564]",
+        "PN_05/02e32 :: Via Giovanni Ventitreesimo, Fiume Veneto [45.92963425, 12.72587786]",
+        "PN_05/02e33 :: Via Policreta 6a, Fiume Veneto [45.93790585, 12.72782919]",
+        "PN_05/02e34 :: Via Pian di Pan 50a, Fiume Veneto [45.94204771, 12.72396036]",
+        "PN_05/02w11 :: Via dei donatori, Pasiano di Pordenone [45.89055484, 12.61224371]",
+        "PN_05/02w12 :: Via Friuli 100, Prata di Pordenone [45.8765962, 12.56871862]"
+      ],
+      "PN_09": [
+        "<Fontanafredda, Fratta, Sacile>",
+        "PN_09/01e11 :: Via Francesco Amalteo 21, Sacile [45.95774068, 12.51046734]",
+        "PN_09/01e12 :: Via Antonio Gramsci 1, Sacile [45.95984939, 12.51018145]",
+        "PN_09/01e13 :: Via Pier Giuseppe Piccin 2b, Sacile [45.95694774, 12.50231862]",
+        "PN_09/01e14 :: Via Prati di Santa Croce, Sacile [45.9616397, 12.51910696]",
+        "PN_09/01e21 :: Via Virgilio Fasan 1, Sacile [45.95090445, 12.49888989]",
+        "PN_09/01e22 :: Via Ronche 8, Sacile [45.95771145, 12.49360165]",
+        "PN_09/01e31 :: Via San Francesco 1c, Sacile [45.94389104, 12.49314641]",
+        "PN_09/01e32 :: Borgo Schiavoi, Sacile [45.93819978, 12.49774931]",
+        "PN_09/01e33 :: Via Francenigo, Sacile [45.93368648, 12.50192761]",
+        "PN_09/01e41 :: Via Salvo D'Acquisto 9, Sacile [45.94595021, 12.50674355]",
+        "PN_09/01e42 :: Piazza Molise, Sacile [45.94775319, 12.51201359]",
+        "PN_09/01e43 :: Strada Casut 16, Sacile [45.93261341, 12.53626303]",
+        "PN_09/01w11 :: ~Via San Michele, Fratta [45.95849885, 12.4620936]",
+        "PN_09/02e11 :: Via Palmanova 1, Fontanafredda [45.95276595, 12.53658781]"
+      ],
+      "PN_10": [
+        "<Pordenone, San Quirino, Sedrano>",
+        "PN_10/01w11 :: Piazza Roma, Sedrano [46.03570986, 12.67979295]",
+        "PN_10/01w12 :: Via Roveredo 2, Pordenone [45.98688611, 12.63972346]",
+        "PN_10/05e19 :: Via Pravisiel, San Quirino [46.03533601, 12.67385595]"
+      ],
+      "PN_11": [
+        "<Casarsa Della Delizia / Cjasarse, San Vito Al Tagliamento / San Vît Dal Tiliment>",
+        "PN_11/01e11 :: Via Trieste 11, San Vito al Tagliamento / San Vît dal Tiliment [45.91685818, 12.87183274]",
+        "PN_11/01e12 :: Via Virginia Tonelli 'Luisa' 14, San Vito al Tagliamento / San Vît dal Tiliment [45.9154976, 12.87842792]",
+        "PN_11/01e13 :: Via Madonna di Rosa, San Vito al Tagliamento / San Vît dal Tiliment [45.91870837, 12.86705827]",
+        "PN_11/01e14 :: Viale Divisione Garibaldi 8/4, San Vito al Tagliamento / San Vît dal Tiliment [45.91059397, 12.87041558]",
+        "PN_11/01e21 :: Piazzale Taliano Linteris 7, San Vito al Tagliamento / San Vît dal Tiliment [45.91270522, 12.85509684]",
+        "PN_11/01e22 :: Via Giuseppe Giusti 6, San Vito al Tagliamento / San Vît dal Tiliment [45.91064589, 12.84821536]",
+        "PN_11/01e23 :: Via Savorgnano 20b, San Vito al Tagliamento / San Vît dal Tiliment [45.90812095, 12.85635552]",
+        "PN_11/01e24 :: Via dello Sport, San Vito al Tagliamento / San Vît dal Tiliment [45.91607813, 12.84374321]",
+        "PN_11/01e31 :: Piazzale Ermes di Colloredo 3, San Vito al Tagliamento / San Vît dal Tiliment [45.92479788, 12.84352722]",
+        "PN_11/01e32 :: Via San Carlo, San Vito al Tagliamento / San Vît dal Tiliment [45.92684955, 12.84069792]",
+        "PN_11/01w11 :: Via Versutta 21, Casarsa della Delizia / Cjasarse [45.94167839, 12.84093127]"
+      ],
+      "TS_03": [
+        "<Muggia, San Dorligo Della Valle, Trieste>",
+        "TS_03/02w11 :: SP12c, San Dorligo della Valle [45.60527222, 13.85093413]",
+        "TS_03/02w12 :: Prebeneg, San Dorligo della Valle [45.60066142, 13.85913691]",
+        "TS_03/02w13 :: SP11, San Dorligo della Valle [45.6076541, 13.85647405]",
+        "TS_03/02w14 :: SP11, San Dorligo della Valle [45.6141008, 13.85841263]",
+        "TS_03/02w22 :: SP20, San Dorligo della Valle [45.61489185, 13.82858122]",
+        "TS_03/02w23 :: Via Edoardo Gardoni 15, Trieste [45.61588528, 13.83015388]",
+        "TS_03/02w31 :: Via di Zaule 83, Muggia [45.60237642, 13.80613573]",
+        "TS_03/02w32 :: Via Flavia di Aquilinia, Muggia [45.60095578, 13.80527112]",
+        "TS_03/02w33 :: Via Flavia di Stramare, Muggia [45.59698034, 13.80462289]",
+        "TS_03/02w34 :: Via Flavia di Stramare, Muggia [45.58793515, 13.80338124]",
+        "TS_03/02w41 :: Via del Fugnan 4, Muggia [45.59870663, 13.76667032]",
+        "TS_03/02w42 :: Via dei Berzulla 2, Muggia [45.59873128, 13.76663567]",
+        "TS_03/02w43 :: Via Natale Colarich 91d, Muggia [45.59144708, 13.77573795]",
+        "TS_03/02w51 :: Salita delle Mura 5, Muggia [45.60407703, 13.76511692]",
+        "TS_03/02w52 :: Strada per Fontanella 1, Muggia [45.60546322, 13.75185856]",
+        "TS_03/02w61 :: Francovez, San Dorligo della Valle [45.60773312, 13.81909792]"
+      ],
+      "TS_99": [
+        "<Monrupino, Rupinpiccolo>",
+        "TS_99/01e11 :: Col, Monrupino [45.71651663, 13.80528927]",
+        "TS_99/01w11 :: Strada regionale Trieste 8 di Monrupino, Rupinpiccolo [45.73190581, 13.74818918]"
+      ],
+      "UD_01": [
+        "<Adegliacco, Basaldella, Cavalicco, Colugna, Passons, Udine>",
+        "UD_01/01e11 :: Via Piave, Udine [46.0621639, 13.24021473]",
+        "UD_01/01e12 :: Via Bertaldia 72a, Udine [46.06043336, 13.24674294]",
+        "UD_01/01e13 :: Via Vincenzo Manzini, Udine [46.06098254, 13.24446238]",
+        "UD_01/01e14 :: Via Larga, Udine [46.06037894, 13.24386831]",
+        "UD_01/01e21 :: Via Buttrio 1, Udine [46.06052319, 13.24801705]",
+        "UD_01/01e22 :: Viale Ungheria 131, Udine [46.05874009, 13.24509831]",
+        "UD_01/01e23 :: Via Giuseppe Parini 12, Udine [46.05958134, 13.24565459]",
+        "UD_01/01e24 :: Via Vincenzo Manzini 49, Udine [46.05842134, 13.24765744]",
+        "UD_01/01e31 :: Largo delle Grazie 7, Udine [46.06772038, 13.23898866]",
+        "UD_01/01e32 :: Via Treppo 10a, Udine [46.06446024, 13.24069537]",
+        "UD_01/01e33 :: Via generale Antonio Chinotto 15, Udine [46.06375725, 13.24441163]",
+        "UD_01/01e34 :: Via Trento 9, Udine [46.06537817, 13.2431456]",
+        "UD_01/01e41 :: Via Duino, Udine [46.07013527, 13.24511514]",
+        "UD_01/01e42 :: Via Cividale 59, Udine [46.06936288, 13.24836492]",
+        "UD_01/01e43 :: Via Bersaglio 32, Udine [46.0682208, 13.24367229]",
+        "UD_01/01e44 :: Via Cividale 31, Udine [46.06888713, 13.24684538]",
+        "UD_01/01w11 :: Via Daniele Manin 13, Udine [46.06375999, 13.23734695]",
+        "UD_01/01w12 :: Via Bonaldo Stringher, Udine [46.06181127, 13.23602418]",
+        "UD_01/01w13 :: Via Artico di Prampero 13, Udine [46.061191, 13.23809043]",
+        "UD_01/01w14 :: Via Vittorio Veneto 46, Udine [46.06188715, 13.2390819]",
+        "UD_01/01w21 :: Largo Antonio Bardelli 17, Udine [46.06169279, 13.2321555]",
+        "UD_01/01w22 :: Via Paolo Canciani 1, Udine [46.06278991, 13.23331253]",
+        "UD_01/01w23 :: Via Cecilia Deganutti 21, Udine [46.06445066, 13.23185397]",
+        "UD_01/01w24 :: Via Cavour 13, Udine [46.0621593, 13.23428138]",
+        "UD_01/01w31 :: Via Raimondo D'Aronco 18, Udine [46.06519989, 13.23182874]",
+        "UD_01/01w32 :: Via del Monte 2, Udine [46.06378469, 13.23444675]",
+        "UD_01/01w33 :: Via Paolo Sarpi, Udine [46.06433662, 13.23322671]",
+        "UD_01/01w34 :: Largo dei Pecile, Udine [46.06454428, 13.23221003]",
+        "UD_01/01w41 :: Piazza Primo Maggio, Udine [46.06484004, 13.23760541]",
+        "UD_01/01w42 :: Via Liruti, Udine [46.06781214, 13.23571904]",
+        "UD_01/01w43 :: Via Cicogna 52, Udine [46.0686144, 13.23276549]",
+        "UD_01/01w44 :: Vicolo della Banca 3, Udine [46.065836, 13.23428862]",
+        "UD_01/02e11 :: Via Giosuè Carducci 36, Udine [46.05958995, 13.24028645]",
+        "UD_01/02e12 :: Via della Rosta 7, Udine [46.05951468, 13.24114949]",
+        "UD_01/02e13 :: Via Aquileia 31, Udine [46.06015773, 13.24161026]",
+        "UD_01/02e14 :: Via Zoletti 2a, Udine [46.05966488, 13.24252275]",
+        "UD_01/02e21 :: Via Roma 64, Udine [46.05646493, 13.24190269]",
+        "UD_01/02e22 :: Viale Giacomo Leopardi 118, Udine [46.05823817, 13.24143567]",
+        "UD_01/02e23 :: Via Roma 6a, Udine [46.05762535, 13.24117899]",
+        "UD_01/02e24 :: Via Aquileia, Udine [46.05855466, 13.24398396]",
+        "UD_01/02e31 :: Via Romeo Battistig 27, Udine [46.05711591, 13.24005494]",
+        "UD_01/02e32 :: Via Teobaldo Ciconi 16, Udine [46.05761337, 13.23800066]",
+        "UD_01/02e33 :: Via Ippolito Nievo 21, Udine [46.05647916, 13.2370439]",
+        "UD_01/02e34 :: Viale Europa Unita, Udine [46.05565769, 13.23804039]",
+        "UD_01/02e41 :: Via Grazzano 74, Udine [46.05695575, 13.23118202]",
+        "UD_01/02e42 :: Via Cussignacco 44, Udine [46.05795477, 13.23493504]",
+        "UD_01/02e43 :: Viale delle Ferriere 2, Udine [46.05549339, 13.23648593]",
+        "UD_01/02e44 :: Via Cisis 46, Udine [46.05581315, 13.23265244]",
+        "UD_01/02w11 :: Via Caltanissetta 3, Udine [46.05153519, 13.22970134]",
+        "UD_01/02w12 :: Via Grazzano 152, Udine [46.0555872, 13.23022503]",
+        "UD_01/02w13 :: Piazzale Gio Batta Cella, Udine [46.05388381, 13.22917937]",
+        "UD_01/02w14 :: Via Santo Stefano, Udine [46.04998879, 13.22760735]",
+        "UD_01/02w21 :: Via Pozzuolo 60, Udine [46.05158976, 13.22638394]",
+        "UD_01/02w22 :: Via Paolo Fistulario 17, Udine [46.04831848, 13.22500172]",
+        "UD_01/02w23 :: Via San Osvaldo 42/6, Udine [46.04747115, 13.2213818]",
+        "UD_01/02w24 :: Via Modica 18, Udine [46.04853898, 13.22870681]",
+        "UD_01/02w31 :: Via Attimis 1, Udine [46.04418805, 13.21716788]",
+        "UD_01/02w32 :: Via Basaldella 158, Udine [46.03897555, 13.21768712]",
+        "UD_01/02w33 :: Via Pozzuolo 111, Udine [46.04681895, 13.22160476]",
+        "UD_01/02w34 :: Via 3 novembre 1918 6, Udine [46.04389632, 13.22151363]",
+        "UD_01/02w41 :: Via Bicinicco 5, Udine [46.03795063, 13.23356654]",
+        "UD_01/02w42 :: Via Pozzuolo 269, Udine [46.04072524, 13.22173782]",
+        "UD_01/02w43 :: Via San Pietro 28, Udine [46.04574829, 13.22798848]",
+        "UD_01/02w44 :: Via Pocenia 41, Udine [46.04429561, 13.22853113]",
+        "UD_01/03e11 :: Piazzale 26 luglio 1866 19, Udine [46.06029548, 13.22791857]",
+        "UD_01/03e12 :: Viale del Ledra 19a, Udine [46.06161261, 13.22803751]",
+        "UD_01/03e13 :: Via Marco Volpe 16, Udine [46.06210982, 13.22914241]",
+        "UD_01/03e14 :: Via Podgora 13, Udine [46.05854575, 13.22301108]",
+        "UD_01/03e21 :: Via Bezzecca 92, Udine [46.06457452, 13.22461257]",
+        "UD_01/03e22 :: Via Galileo Galilei 22, Udine [46.06629737, 13.22301646]",
+        "UD_01/03e23 :: Via Quarto 17, Udine [46.06207929, 13.22197337]",
+        "UD_01/03e24 :: Viale del Ledra 22, Udine [46.06267687, 13.22765914]",
+        "UD_01/03e31 :: Via Casarsa 1, Udine [46.05773711, 13.21852298]",
+        "UD_01/03e32 :: Via Dalmazio Birago 53, Udine [46.0574411, 13.21261748]",
+        "UD_01/03e33 :: Viale Firenze, Udine [46.05925193, 13.21970036]",
+        "UD_01/03e34 :: Via Enrico Toti 9, Udine [46.05533072, 13.21227735]",
+        "UD_01/03e41 :: Via San Rocco, Udine [46.05146872, 13.20990423]",
+        "UD_01/03e42 :: Via Pertoldo 8, Udine [46.05165783, 13.21111179]",
+        "UD_01/03e43 :: Via Francesco Baracca 2, Udine [46.05272102, 13.21455204]",
+        "UD_01/03e44 :: Via Pellegrino Secondo, Udine [46.05017349, 13.21401022]",
+        "UD_01/03w11 :: Largo Antonio Bardelli, Udine [46.06176997, 13.23262998]",
+        "UD_01/03w12 :: Via Francesco Crispi 67, Udine [46.05939596, 13.23679344]",
+        "UD_01/03w13 :: Piazza Giuseppe Garibaldi, Udine [46.05953995, 13.23345411]",
+        "UD_01/03w14 :: Via Poscolle 26, Udine [46.0612367, 13.23118114]",
+        "UD_01/03w21 :: Vicolo del Paradiso 1, Udine [46.05862435, 13.23197552]",
+        "UD_01/03w22 :: Via Poscolle, Udine [46.06110877, 13.23084146]",
+        "UD_01/03w23 :: Viale Venezia, Udine [46.05932547, 13.22628562]",
+        "UD_01/03w24 :: Viale Giuseppe Duodo 87, Udine [46.05990258, 13.22872327]",
+        "UD_01/03w31 :: Viale Giuseppe Duodo, Udine [46.05641323, 13.22908582]",
+        "UD_01/03w32 :: Via San Rocco 37, Udine [46.05794015, 13.22548579]",
+        "UD_01/03w33 :: Via della Cisterna, Udine [46.05797195, 13.22953085]",
+        "UD_01/03w34 :: Via Volturno 43, Udine [46.0559871, 13.22774722]",
+        "UD_01/03w41 :: Via Cecilia Gradenigo Sabbadini 55, Udine [46.05607515, 13.22381973]",
+        "UD_01/03w42 :: Via Nervesa 21, Udine [46.05531804, 13.21958638]",
+        "UD_01/03w43 :: Via della Roggia 19, Udine [46.05429995, 13.22191666]",
+        "UD_01/03w44 :: Via della Valle 5b, Udine [46.05465458, 13.22003328]",
+        "UD_01/04e11 :: Via Planis 105, Udine [46.07585071, 13.24783238]",
+        "UD_01/04e12 :: Via Monte Nero 45, Udine [46.07422056, 13.24334093]",
+        "UD_01/04e13 :: Via Planis 77, Udine [46.07393405, 13.24598098]",
+        "UD_01/04e14 :: Via Planis 30, Udine [46.07119534, 13.24190281]",
+        "UD_01/04e21 :: Via Tarvisio 2, Udine [46.07276713, 13.23553897]",
+        "UD_01/04e22 :: Via Codroipo 24, Udine [46.07166217, 13.23541062]",
+        "UD_01/04e23 :: Via Isonzo 2, Udine [46.07269467, 13.23928958]",
+        "UD_01/04e24 :: Via Lodovico Uccellis 1, Udine [46.07047258, 13.23576949]",
+        "UD_01/04e31 :: Via Ermes di Colloredo 42, Udine [46.07166858, 13.23250633]",
+        "UD_01/04e32 :: Viale San Daniele 47, Udine [46.07113306, 13.23356515]",
+        "UD_01/04e33 :: Via Tiberio Deciani 1, Udine [46.06929829, 13.23390948]",
+        "UD_01/04e34 :: Via della Vittoria 8, Udine [46.07035636, 13.23509212]",
+        "UD_01/04e41 :: Via Nimis 64, Udine [46.07652673, 13.23002502]",
+        "UD_01/04e42 :: Via Nimis 11, Udine [46.07533153, 13.23418521]",
+        "UD_01/04e43 :: Via Faedis 45, Udine [46.07749092, 13.23171033]",
+        "UD_01/04e44 :: Via Tolmezzo 16, Udine [46.07719121, 13.2345851]",
+        "UD_01/04w11 :: Via Francesco Mantica 40, Udine [46.06804103, 13.22985455]",
+        "UD_01/04w12 :: Via Anton Lazzaro Moro 38, Udine [46.06904313, 13.22951308]",
+        "UD_01/04w13 :: Via Tiberio Deciani 107, Udine [46.06869097, 13.23032189]",
+        "UD_01/04w14 :: Via Divisione Julia 32, Udine [46.06977026, 13.23192481]",
+        "UD_01/04w21 :: Via Marco Volpe, Udine [46.06523828, 13.22681403]",
+        "UD_01/04w22 :: Via Fabio Asquini 11, Udine [46.06483338, 13.23043798]",
+        "UD_01/04w23 :: Via Superiore 47, Udine [46.06748047, 13.22840128]",
+        "UD_01/04w24 :: Via Villalta 59, Udine [46.06628074, 13.22744433]",
+        "UD_01/04w31 :: Via Arturo Malignani 1, Udine [46.06944681, 13.22700131]",
+        "UD_01/04w32 :: Viale Leonardo da Vinci 25, Udine [46.06847274, 13.22313915]",
+        "UD_01/04w33 :: Via padre Reginaldo Giuliani, Udine [46.07258238, 13.22380172]",
+        "UD_01/04w34 :: Via Alessandro Volta 1, Udine [46.07018917, 13.22464985]",
+        "UD_01/04w41 :: Via Pordenone 47, Udine [46.07279665, 13.23222007]",
+        "UD_01/04w42 :: Via Moggio, Udine [46.07402285, 13.2329484]",
+        "UD_01/04w43 :: Via Pontebba, Udine [46.07418582, 13.22780993]",
+        "UD_01/04w44 :: Via Pordenone 89, Udine [46.07252505, 13.2291825]",
+        "UD_01/05e11 :: Via Martignacco 111, Udine [46.07373356, 13.22032908]",
+        "UD_01/05e12 :: Via del Cotonificio 49, Udine [46.07656755, 13.22101737]",
+        "UD_01/05e13 :: Via Angelo Angeli 56, Udine [46.07074494, 13.21965333]",
+        "UD_01/05e14 :: Via Angelo Angeli 11, Udine [46.07008167, 13.22115861]",
+        "UD_01/05e21 :: Via Gherardo Freschi, Udine [46.08055337, 13.21893086]",
+        "UD_01/05e22 :: Via Gherardo Freschi 30, Udine [46.08197862, 13.22088788]",
+        "UD_01/05e23 :: Via Friuli, Udine [46.08270925, 13.22324678]",
+        "UD_01/05e24 :: Via Gherardo Freschi, Udine [46.08058793, 13.2191328]",
+        "UD_01/05e31 :: Via Colugna 189, Udine [46.0867052, 13.21495237]",
+        "UD_01/05e32 :: Via Colugna 149, Udine [46.08501398, 13.21835473]",
+        "UD_01/05e33 :: Via Buia 19, Udine [46.08561078, 13.22564141]",
+        "UD_01/05e34 :: Via Colugna 81, Udine [46.08261517, 13.22378345]",
+        "UD_01/05e41 :: Via Fagagna 35, Udine [46.08358388, 13.210703]",
+        "UD_01/05e42 :: Via Bergamo 45, Udine [46.0840769, 13.20533725]",
+        "UD_01/05e43 :: Via Brescia 13, Udine [46.08577055, 13.2008675]",
+        "UD_01/05e44 :: Via Sondrio 77, Udine [46.08615197, 13.20448234]",
+        "UD_01/05w11 :: Via Francesco Dormisch 117, Udine [46.0721256, 13.21648679]",
+        "UD_01/05w12 :: Via Luigi Galvani 37, Udine [46.06918402, 13.21737254]",
+        "UD_01/05w13 :: Via della Faula 93, Udine [46.07121572, 13.21347704]",
+        "UD_01/05w14 :: Via Gian Battista Natolini 19, Udine [46.07035121, 13.21515583]",
+        "UD_01/05w21 :: Via Chisimaio 23, Udine [46.07124003, 13.21054995]",
+        "UD_01/05w22 :: Via Pio Vittorio Ferrari 32, Udine [46.07241867, 13.20721887]",
+        "UD_01/05w23 :: Via San Domenico 7, Udine [46.0683476, 13.21051377]",
+        "UD_01/05w24 :: Via Latina, Udine [46.06960326, 13.20956867]",
+        "UD_01/05w31 :: Via Val Raccolana, Udine [46.0747937, 13.20945415]",
+        "UD_01/05w32 :: Piazzale Repubblica Argentina, Udine [46.07729748, 13.20215951]",
+        "UD_01/05w33 :: Piazzale Berengario I, Udine [46.07302898, 13.20458796]",
+        "UD_01/05w34 :: Via Massimo Misani 17, Udine [46.07197168, 13.20513512]",
+        "UD_01/05w41 :: Via Mantova, Udine [46.07892674, 13.20894652]",
+        "UD_01/05w42 :: Via Val di Resia 11, Udine [46.07647535, 13.20693277]",
+        "UD_01/05w43 :: Viale Pier Paolo Pasolini, Udine [46.07689036, 13.21283784]",
+        "UD_01/05w44 :: Piazzale Carnia 19, Udine [46.07518496, 13.2105014]",
+        "UD_01/05w51 :: Via Cotonificio 10, Passons [46.07754945, 13.18506894]",
+        "UD_01/06e11 :: Via Brigata Re 3, Udine [46.0720601, 13.25547918]",
+        "UD_01/06e12 :: Via Tagliamento 16, Udine [46.07409639, 13.25045204]",
+        "UD_01/06e13 :: Via Pisino 1, Udine [46.07005327, 13.25006145]",
+        "UD_01/06e14 :: Via dello Stella 23, Udine [46.07204428, 13.24980737]",
+        "UD_01/06e21 :: Via Pola 28, Udine [46.06561915, 13.2476842]",
+        "UD_01/06e22 :: Via Arturo Zardini 8, Udine [46.06860518, 13.25182776]",
+        "UD_01/06e23 :: Via Pola 109, Udine [46.0672626, 13.25256813]",
+        "UD_01/06e24 :: Via Vittorio Alfieri 47, Udine [46.06287285, 13.24684152]",
+        "UD_01/06e31 :: Via Piazza d'Armi 72, Udine [46.06529389, 13.25387463]",
+        "UD_01/06e32 :: Via del Bon 101, Udine [46.06376304, 13.2542102]",
+        "UD_01/06e33 :: Via del Bon 3, Udine [46.0633374, 13.24760114]",
+        "UD_01/06e34 :: Via del Bon 138, Udine [46.06458054, 13.25741215]",
+        "UD_01/06e41 :: Via Valeggio, Udine [46.06101338, 13.25204447]",
+        "UD_01/06e42 :: Casali Osellin, Udine [46.06203467, 13.25249913]",
+        "UD_01/06e43 :: Via Buttrio 131, Udine [46.05815857, 13.25456765]",
+        "UD_01/06e44 :: Via Monzambano 68, Udine [46.06234114, 13.25965238]",
+        "UD_01/06e51 :: Via Prasingel 4, Udine [46.05454698, 13.25941283]",
+        "UD_01/06e52 :: Via Buttrio 307, Udine [46.05078624, 13.2659479]",
+        "UD_01/06e53 :: Via Odorico Susanna 65, Udine [46.0505136, 13.25979618]",
+        "UD_01/06w11 :: Via Aiello 26, Udine [46.05633475, 13.25133622]",
+        "UD_01/06w12 :: Via Varese 33, Udine [46.05447622, 13.24134623]",
+        "UD_01/06w13 :: Via Pradamano 4a, Udine [46.05597752, 13.24765799]",
+        "UD_01/06w14 :: Via del Vascello, Udine [46.05517782, 13.24592026]",
+        "UD_01/06w21 :: Via Bernardo De Rubeis, Udine [46.05454366, 13.23714922]",
+        "UD_01/06w22 :: Via Marsala, Udine [46.05185923, 13.23844304]",
+        "UD_01/06w23 :: Via della Bainsizza 24, Udine [46.04892799, 13.23937515]",
+        "UD_01/06w24 :: Via Generale Carlo Zucchi 36, Udine [46.0493389, 13.24299662]",
+        "UD_01/06w31 :: Viale Palmanova, Udine [46.05373333, 13.24660914]",
+        "UD_01/06w32 :: Via Luca Carlevaris, Udine [46.0527904, 13.24800742]",
+        "UD_01/06w33 :: Via della Madonnetta 53, Udine [46.04969993, 13.24520043]",
+        "UD_01/06w34 :: Viale Palmanova 139, Udine [46.04885839, 13.24873026]",
+        "UD_01/06w41 :: Via Pradamano 63, Udine [46.05246144, 13.25596581]",
+        "UD_01/06w42 :: Via Arnaldo Piutti, Udine [46.05130605, 13.25499147]",
+        "UD_01/06w43 :: Via Monfalcone 2, Udine [46.05473937, 13.24989609]",
+        "UD_01/06w44 :: Piazzale Giovanni Battista Cavalcaselle 12, Udine [46.05310526, 13.25191675]",
+        "UD_01/06w51 :: Via Gervasutta 87, Udine [46.04406555, 13.23671623]",
+        "UD_01/06w52 :: Via Veneto 23, Udine [46.03810397, 13.24902909]",
+        "UD_01/06w53 :: Via Sant'Ulderico 4, Udine [46.03291303, 13.25650031]",
+        "UD_01/07e11 :: Via Codroipo 85, Udine [46.07477141, 13.23918652]",
+        "UD_01/07e12 :: Via Tarcento 26, Udine [46.07602963, 13.23559776]",
+        "UD_01/07e13 :: Via Monte Rombon 53, Udine [46.07685013, 13.23910085]",
+        "UD_01/07e14 :: Via Monte Grappa 5, Udine [46.07739388, 13.23700865]",
+        "UD_01/07e21 :: Via Giuseppe Marcotti 18, Udine [46.08022032, 13.23575021]",
+        "UD_01/07e22 :: Via Fernando Franzolini 26, Udine [46.08010669, 13.23852929]",
+        "UD_01/07e23 :: Via Monte Grappa 42, Udine [46.07707433, 13.2408771]",
+        "UD_01/07e24 :: Via Monte Ortigara 27, Udine [46.07795805, 13.2374547]",
+        "UD_01/07e31 :: Via Monte Cimone 3, Udine [46.08156677, 13.24455689]",
+        "UD_01/07e32 :: Via Medea 2, Udine [46.08120796, 13.23994911]",
+        "UD_01/07e33 :: Via Monte San Gabriele 52, Udine [46.08175007, 13.24269305]",
+        "UD_01/07e34 :: Via Giovanni Battista Tiepolo 80, Udine [46.07719844, 13.24421788]",
+        "UD_01/07e41 :: Via Reana 12, Udine [46.08096513, 13.23273639]",
+        "UD_01/07e42 :: Via Monte Vodice 2, Udine [46.08301927, 13.23384413]",
+        "UD_01/07e43 :: Via Colugna, Udine [46.07903033, 13.23300253]",
+        "UD_01/07e44 :: Via Tricesimo 3, Udine [46.07930682, 13.23453997]",
+        "UD_01/07w11 :: Via Biella 4, Udine [46.08849044, 13.24323924]",
+        "UD_01/07w12 :: Via Torino 48, Udine [46.08690936, 13.23818863]",
+        "UD_01/07w13 :: Via Molin Nuovo 38, Udine [46.08911486, 13.23930351]",
+        "UD_01/07w14 :: Piazzale Dora Bassi, Udine [46.09672936, 13.23937816]",
+        "UD_01/07w21 :: Via Saluzzo 12, Udine [46.08781096, 13.23645871]",
+        "UD_01/07w22 :: Via Tricesimo 111, Udine [46.08979907, 13.23235675]",
+        "UD_01/07w23 :: Via Piemonte, Udine [46.08646806, 13.23281954]",
+        "UD_01/07w24 :: Via Aosta 4, Udine [46.08391717, 13.2359029]",
+        "UD_01/07w31 :: Via Tavagnacco 92, Udine [46.09254688, 13.22829845]",
+        "UD_01/07w32 :: Via Tavagnacco 12a, Udine [46.08864053, 13.22954674]",
+        "UD_01/07w33 :: Via Feletto 154, Udine [46.08751099, 13.22864602]",
+        "UD_01/07w34 :: Via del Tunnel 1, Udine [46.08474301, 13.23162275]",
+        "UD_01/07w41 :: Via del Tunnel 28, Udine [46.08410093, 13.22959438]",
+        "UD_01/07w42 :: Via Moimacco 22, Udine [46.0835258, 13.22730588]",
+        "UD_01/08e11 :: Via Monte Forno 9, Udine [46.08386753, 13.2437103]",
+        "UD_01/08e12 :: Viale Vât 56, Udine [46.08502999, 13.24427239]",
+        "UD_01/08e13 :: Via Pallanza 15, Udine [46.09000234, 13.24471799]",
+        "UD_01/08e14 :: Via Emilia 10a, Udine [46.08801361, 13.24910799]",
+        "UD_01/08e21 :: Via Fermo Solari, Udine [46.09748285, 13.25835081]",
+        "UD_01/08e22 :: Via Liguria 208, Udine [46.10116831, 13.26244632]",
+        "UD_01/08e23 :: Via Liguria 321, Udine [46.10332867, 13.26880528]",
+        "UD_01/08e24 :: Via Bariglaria 258, Udine [46.09281104, 13.26734315]",
+        "UD_01/08e31 :: Via Emilia 62, Udine [46.08834434, 13.26014111]",
+        "UD_01/08e32 :: Via Emilia 101, Udine [46.09131269, 13.27022962]",
+        "UD_01/08e33 :: Via Bariglaria 197, Udine [46.08939091, 13.26964916]",
+        "UD_01/08e34 :: Via Bariglaria, Udine [46.07848092, 13.27609969]",
+        "UD_01/08e41 :: Viale Divisione Garibaldi-Osoppo 34, Udine [46.07838761, 13.27035528]",
+        "UD_01/08e42 :: Via Cefalonia 34, Udine [46.07963249, 13.26977654]",
+        "UD_01/08w11 :: Via delle Acque 56, Udine [46.07676425, 13.25218171]",
+        "UD_01/08w12 :: Via Riccardo di Giusto 140, Udine [46.07954442, 13.25959893]",
+        "UD_01/08w13 :: Via Gio Batta Periz 9, Udine [46.07850522, 13.25973288]",
+        "UD_01/08w14 :: Via Luigi Sbaiz 5, Udine [46.07701167, 13.26111202]",
+        "UD_01/08w21 :: Via Vittorio Cadel 28, Udine [46.07919718, 13.26609159]",
+        "UD_01/08w22 :: Viale Divisione Garibaldi-Osoppo 11, Udine [46.07729921, 13.26752126]",
+        "UD_01/08w23 :: Via Cividale 410, Udine [46.072283, 13.26233946]",
+        "UD_01/08w24 :: Via Adige, Udine [46.07460819, 13.25720324]",
+        "UD_01/08w31 :: Via Morosina 29, Udine [46.07028248, 13.26829952]",
+        "UD_01/08w32 :: Via Cividale 482, Udine [46.07306403, 13.26632565]",
+        "UD_01/08w33 :: Via Cividale 598, Udine [46.07501244, 13.27349655]",
+        "UD_01/08w34 :: Via Tolmino 13, Udine [46.0750594, 13.27925227]",
+        "UD_01/08w41 :: Via Antonio Carneo, Udine [46.07595771, 13.27883404]",
+        "UD_01/08w42 :: Via Venezuela 2, Udine [46.07824094, 13.27828219]",
+        "UD_01/08w43 :: Via Cividale 716a, Udine [46.0757448, 13.27989412]",
+        "UD_01/08w44 :: Via Cividale, Udine [46.07575744, 13.28380453]",
+        "UD_01/11w11 :: Via Latina 1/24, Udine [46.06823724, 13.2100071]",
+        "UD_01/12e11 :: Via Adriatica, Basaldella [46.0315334, 13.21743285]",
+        "UD_01/15e11 :: Via Cividina 41, Udine [46.09899459, 13.235491]",
+        "UD_01/15e12 :: Via Dante Alighieri 73, Cavalicco [46.11003857, 13.23506327]",
+        "UD_01/15e13 :: Via Giosuè Carducci 2, Adegliacco [46.11390934, 13.23449707]",
+        "UD_01/15e14 :: Via Santa Fosca 4, Adegliacco [46.11561014, 13.23865169]",
+        "UD_01/15e21 :: Via Giulio Cesare 32, Cavalicco [46.10613223, 13.21876692]",
+        "UD_01/15e22 :: Viale Trieste 45, Adegliacco [46.12502447, 13.21456946]",
+        "UD_01/15e23 :: Via Roma 70, Cavalicco [46.11506274, 13.20354527]",
+        "UD_01/15e31 :: Via Cadore 30, Colugna [46.09528682, 13.2139579]",
+        "UD_01/15e32 :: Via Ventiquattro Maggio 52, Cavalicco [46.10591871, 13.21525213]",
+        "UD_01/15e33 :: Via Belluno 28, Colugna [46.10771306, 13.21376501]",
+        "UD_01/15e41 :: Via Cesare Battisti 11, Colugna [46.09137201, 13.20079343]",
+        "UD_01/15e42 :: Via Cesare Battisti 62, Colugna [46.09329251, 13.19963577]"
+      ],
+      "UD_02": [
+        "<Gemona Del Friuli, Osoppo>",
+        "UD_02/01e11 :: Via Santa Lucia 4, Gemona del Friuli [46.2720991, 13.13079894]",
+        "UD_02/01e12 :: Via Cassinis 9, Gemona del Friuli [46.26974905, 13.13322291]",
+        "UD_02/01e13 :: Via Vuarbe 6, Gemona del Friuli [46.2711458, 13.14247155]",
+        "UD_02/01e14 :: Via Rio Petri, Gemona del Friuli [46.25996917, 13.14742681]",
+        "UD_02/01e21 :: Via Giovanni Falcone 4/1, Gemona del Friuli [46.27436857, 13.12545025]",
+        "UD_02/01e22 :: Via Osoppo 105, Gemona del Friuli [46.26938522, 13.12347696]",
+        "UD_02/01e31 :: Via Trasaghis 19, Gemona del Friuli [46.27926857, 13.12365525]",
+        "UD_02/01e32 :: Via Trasaghis 190, Gemona del Friuli [46.28083612, 13.11508722]",
+        "UD_02/01e33 :: Via del Lavoro 7, Gemona del Friuli [46.28257697, 13.10872375]",
+        "UD_02/01e34 :: Via Armentaressa 79, Gemona del Friuli [46.27427125, 13.11343762]",
+        "UD_02/01e41 :: Via Osoppo 258, Gemona del Friuli [46.26634673, 13.10907282]",
+        "UD_02/01e42 :: Via Marzârs, Gemona del Friuli [46.2550551, 13.11338056]",
+        "UD_02/01e43 :: Via Campo 128, Gemona del Friuli [46.25254025, 13.11633818]",
+        "UD_02/01e44 :: Via Molinut 5, Gemona del Friuli [46.24940514, 13.11591458]",
+        "UD_02/01e51 :: Via degli Artigiani 1, Osoppo [46.26752502, 13.09135947]",
+        "UD_02/01w11 :: Via dai Fors 4, Gemona del Friuli [46.27308881, 13.14127674]",
+        "UD_02/01w12 :: Via Salcons, Gemona del Friuli [46.27644132, 13.13479904]",
+        "UD_02/01w13 :: Via Dante Alighieri 212, Gemona del Friuli [46.27442929, 13.12888044]",
+        "UD_02/01w14 :: Via Pace da Gemona 14, Gemona del Friuli [46.27895749, 13.12944468]",
+        "UD_02/01w21 :: Salita del Castello 1, Gemona del Friuli [46.27636607, 13.14050913]",
+        "UD_02/01w22 :: Via Artico di Prampero 15, Gemona del Friuli [46.27811618, 13.13742964]",
+        "UD_02/01w23 :: Piazzetta Antonio Celotti, Gemona del Friuli [46.27802186, 13.13935734]",
+        "UD_02/01w24 :: Piazzetta Valentino Baldissera 6, Gemona del Friuli [46.27786438, 13.14096229]",
+        "UD_02/01w31 :: Via Soprio 9, Gemona del Friuli [46.28929134, 13.12876521]",
+        "UD_02/01w32 :: Via Gleseute 120, Gemona del Friuli [46.28833931, 13.1384247]",
+        "UD_02/01w33 :: Via Scugjelars 44, Gemona del Friuli [46.2817909, 13.14061564]",
+        "UD_02/01w34 :: Via Bersaglio, Gemona del Friuli [46.28247352, 13.13438474]",
+        "UD_02/01w41 :: Via Nazionale 1, Gemona del Friuli [46.29790922, 13.11890239]",
+        "UD_02/01w42 :: Via Turisello 83, Gemona del Friuli [46.29048061, 13.11514559]"
+      ],
+      "UD_13": [
+        "<Latisana, San Michele Al Tagliamento>",
+        "UD_13/01e11 :: Via Lignano Nord 136, Latisana [45.75349614, 13.03260494]",
+        "UD_13/02e11 :: Via Brigolo Alto, San Michele al Tagliamento [45.70053079, 13.024937]",
+        "UD_13/02w11 :: Via San Mauretto, San Michele al Tagliamento [45.79612077, 12.96454478]",
+        "UD_13/02w21 :: Via Malafesta, San Michele al Tagliamento [45.82565092, 12.9669897]"
+      ],
+      "UD_15": [
+        "<Malborghetto Valbruna, Pontebba>",
+        "UD_15/01e11 :: Via Giuseppe Verdi 7, Pontebba [46.50778074, 13.30634621]",
+        "UD_15/01e12 :: Piazzale Cesare Battisti, Pontebba [46.50751705, 13.31076845]",
+        "UD_15/01e13 :: Frazione Laglesie San Leopoldo 31, Pontebba [46.50983982, 13.34724613]",
+        "UD_15/01e21 :: Piazza Giuseppe Garibaldi 6, Pontebba [46.50654617, 13.30439636]",
+        "UD_15/01e22 :: Piazza Dante Alighieri 16, Pontebba [46.50592381, 13.30573566]",
+        "UD_15/01e23 :: Via Guglielmo Marconi 48, Pontebba [46.50253677, 13.30417817]",
+        "UD_15/01e24 :: Via Cavour 23, Pontebba [46.49959381, 13.30077704]",
+        "UD_15/02e11 :: Borgo Alto 20, Malborghetto Valbruna [46.50255498, 13.37879762]",
+        "UD_15/02e12 :: Via Bamberga 45, Malborghetto Valbruna [46.50693183, 13.43743857]",
+        "UD_15/02e13 :: Piazza dell'Agricoltura 3, Malborghetto Valbruna [46.51235526, 13.4731939]"
+      ],
+      "UD_16": [
+        "<Carpeneto, Sammardenchia, Selvuzzis, Terenzano>",
+        "UD_16/01e11 :: Via Giuseppe Ellero, Terenzano [46.00676218, 13.21358005]",
+        "UD_16/01e12 :: Via Giuseppe Verdi, Terenzano [46.0062895, 13.21895913]",
+        "UD_16/01e13 :: Via Roma 51, Terenzano [46.00342716, 13.21725903]",
+        "UD_16/01e14 :: Via Giuseppe Verdi, Terenzano [46.00631231, 13.21895594]",
+        "UD_16/01e21 :: Piazza Ventiquattro Maggio 1, Sammardenchia [45.98453613, 13.22654215]",
+        "UD_16/01e22 :: Via Divisione Julia 25, Sammardenchia [45.98522223, 13.23049463]",
+        "UD_16/01e23 :: Piazza del Consiglio 7, Carpeneto [45.99505865, 13.17448802]",
+        "UD_16/01e31 :: Via Enrico Fermi, Selvuzzis [45.993032, 13.30733311]"
+      ],
+      "UD_18": [
+        "<Bevorchians, Dogna, Moggio Udinese, Pioverno  Di Sopra, Povici Di Sotto, Pradis, Raccolana, Resia / Rezija>",
+        "UD_18/01e11 :: Viale Udine, Povici di sotto [46.39379291, 13.22075848]",
+        "UD_18/01e12 :: Viale Udine 19, Povici di sotto [46.39378024, 13.22080598]",
+        "UD_18/01w11 :: Via Rute, Moggio Udinese [46.40516249, 13.18750578]",
+        "UD_18/01w21 :: SP112, Pradis [46.43344723, 13.19902671]",
+        "UD_18/01w31 :: Strada vicinale Galizzis 16, Bevorchians [46.4856159, 13.19186552]",
+        "UD_18/01w41 :: Via Antonio Bidernuccio, Pioverno  di Sopra [46.33639359, 13.14035738]",
+        "UD_18/02e11 :: Via Stazione, Dogna [46.44936542, 13.31701259]",
+        "UD_18/03e11 :: Via Roma, Raccolana [46.40893744, 13.31143299]",
+        "UD_18/04e11 :: SP42, Resia / Rezija [46.37678639, 13.27853687]"
+      ],
+      "UD_23": [
+        "<Tolmezzo, Verzegnis>",
+        "UD_23/01e11 :: Via Carso 21, Tolmezzo [46.42811998, 13.05631157]",
+        "UD_23/01e12 :: Cazzaso, Tolmezzo [46.42513538, 12.99303988]",
+        "UD_23/01e13 :: Piazza Indipendenza 8, Tolmezzo [46.43177049, 12.99412335]",
+        "UD_23/01w11 :: Via Sella Chianzutan 7, Verzegnis [46.35931855, 12.94142761]"
+      ],
+      "UD_99": [
+        "<Bueriis, Buja, Firmano, Leproso, Madonna, Pontebba, Rivignano Teor / Rivignan Teôr>",
+        "UD_99/01e11 :: Via Vidisêt, Buja [46.19943393, 13.11795102]",
+        "UD_99/01e21 :: Via Bosso 1, Madonna [46.2240169, 13.12471068]",
+        "UD_99/01w11 :: Studena Alta, Pontebba [46.51610424, 13.28764989]",
+        "UD_99/02e11 :: Via Vittorio Emanuele Terzo 59a, Rivignano Teor / Rivignan Teôr [45.81563304, 13.08104802]",
+        "UD_99/02w11 :: Via Nazionale 76, Bueriis [46.22082313, 13.17936058]",
+        "UD_99/03w11 :: Via San Paolino, Firmano [46.06947041, 13.3876141]",
+        "UD_99/03w21 :: Via Pietro Zorutti 12, Leproso [46.03599388, 13.39282438]"
+      ]
+    },
+    "Comuni": {
+      "Adegliacco": [
+        "L065_CNO1 :: Via dell'Asilo, Adegliacco [46.12793284, 13.21103471]",
+        "L065_CNO2 :: Via Madonnina 1, Adegliacco [46.12720209, 13.21472146]",
+        "UD_01/15e13 :: Via Giosuè Carducci 2, Adegliacco [46.11390934, 13.23449707]",
+        "UD_01/15e14 :: Via Santa Fosca 4, Adegliacco [46.11561014, 13.23865169]",
+        "UD_01/15e22 :: Viale Trieste 45, Adegliacco [46.12502447, 13.21456946]"
+      ],
+      "Alnicco": [
+        "E982_CNO6 :: Via Vicort 23, Alnicco [46.10457845, 13.16725545]",
+        "E982_CNO7 :: Via Giuseppe Garibaldi, Alnicco [46.10444077, 13.16197384]"
+      ],
+      "Amaro": [
+        "A254_CNO1 :: Via San Francesco 35, Amaro [46.37351637, 13.08978358]",
+        "A254_CNO2 :: Via Fontana 2, Amaro [46.37417746, 13.09486622]",
+        "A254_CNO3 :: Borç de Mufe, Amaro [46.37362224, 13.10007739]"
+      ],
+      "Ampezzo": [
+        "A267_CNO1 :: Zona Industriale, Ampezzo [46.41417029, 12.80211591]",
+        "A267_CNO2 :: Via Nazionale 196, Ampezzo [46.41723631, 12.79042094]",
+        "A267_CNO3 :: Via Nazionale, Ampezzo [46.41605193, 12.79590261]",
+        "A267_CNO4 :: Via Nazionale 132, Ampezzo [46.41645607, 12.79255208]"
+      ],
+      "Andreis": [
+        "A283_CNO2 :: Via Centrale, Andreis [46.20043173, 12.61401142]",
+        "A283_CNO3 :: Via Cesare Battisti, Andreis [46.2006418, 12.61443835]"
+      ],
+      "Anduins": [
+        "M085_CNO1 :: Via Roma 39, Anduins [46.23330927, 12.9565521]"
+      ],
+      "Aquileia": [
+        "A346_CNO1 :: Corso Antonio Gramsci 8, Aquileia [45.7636273, 13.36632899]",
+        "A346_CNO2 :: Via Bolivia, Aquileia [45.77651888, 13.36799528]",
+        "A346_CNO3 :: Via Eugenio Curiel, Aquileia [45.76727621, 13.36939372]",
+        "A346_CNO4 :: Via Anna Frank, Aquileia [45.76081948, 13.36799869]",
+        "A346_CNO5 :: Viale Paludo del Rosario 2, Aquileia [45.75855391, 13.36773918]",
+        "A346_CNO6 :: Via San Girolamo 1g, Aquileia [45.76789976, 13.36076002]",
+        "A346_CNO7 :: Piazza San Giovanni, Aquileia [45.76633327, 13.36411695]",
+        "A346_CNO8 :: Via Giovanni Minut 14, Aquileia [45.76455248, 13.36910622]"
+      ],
+      "Ara Grande": [
+        "L421_CNO2 :: Via San Bartolomeo 41, Ara Grande [46.15976669, 13.17830213]"
+      ],
+      "Ara Piccola": [
+        "L421_CNO4 :: Via San Giovanni 11, Ara Piccola [46.15772646, 13.18859447]"
+      ],
+      "Arta Terme": [
+        "A447_CNO10 :: Frazione Piedim, Arta Terme [46.4695649, 13.0643756]",
+        "A447_CNO2 :: Viale Martiri per la Libertà 3, Arta Terme [46.48664533, 13.01585541]",
+        "A447_CNO3 :: Via Salano, Arta Terme [46.48677095, 13.01761333]",
+        "A447_CNO4 :: Via Guglielmo Marconi 0, Arta Terme [46.48541563, 13.01333277]",
+        "A447_CNO6 :: Avosacco, Arta Terme [46.48177267, 13.02054027]",
+        "A447_CNO7 :: Via Nazionale Arta 23, Arta Terme [46.47007044, 13.02574873]",
+        "A447_CNO8 :: Via Giosuè Carducci 0, Arta Terme [46.47673821, 13.02198889]",
+        "A447_CNO9 :: Via Avosacco 0, Arta Terme [46.47713045, 13.02186094]"
+      ],
+      "Artegna": [
+        "A448_CNO1 :: Casali Orvenco 8, Artegna [46.25517989, 13.14671979]"
+      ],
+      "Arzenutto": [
+        "H999_CNO1 :: Piazza Umberto Primo, Arzenutto [46.02132753, 12.86334838]",
+        "H999_CNO2 :: Via Armentarezza 4, Arzenutto [46.01682201, 12.86339967]"
+      ],
+      "Attimis": [
+        "A491_CNO1 :: Via dottor Giovanni Marcolina 35, Attimis [46.18632314, 13.30726263]",
+        "A491_CNO3 :: Via Vogara 8/6, Attimis [46.19032304, 13.31102879]",
+        "A491_CNO4 :: Piazza Aldo Moro, Attimis [46.18880971, 13.30519466]"
+      ],
+      "Aurava": [
+        "H891_CNO10 :: Via Sopraorti 12, Aurava [46.04551489, 12.87143382]",
+        "H891_CNO8 :: Via Richinvelda 12, Aurava [46.04572876, 12.86586361]"
+      ],
+      "Aviano  Davian": [
+        "A516_CNO2 :: Via della Maddalena 37, Aviano / Davian [46.05864065, 12.5736631]"
+      ],
+      "Avoltri": [
+        "D718_CNO1 :: Via Belluno, Avoltri [46.58557916, 12.77344975]",
+        "D718_CNO2 :: Corso Italia 29, Avoltri [46.5846676, 12.78001318]"
+      ],
+      "Azzano Decimo": [
+        "PN_05/01e11 :: Via Fiumicino 2a, Azzano Decimo [45.89309298, 12.69748512]",
+        "PN_05/01e12 :: Via Nuova Fratte 119, Azzano Decimo [45.89098981, 12.7040786]",
+        "PN_05/01e13 :: Via dei Frassini 1, Azzano Decimo [45.88766778, 12.707071]",
+        "PN_05/01e14 :: Via dei Gelsi 4, Azzano Decimo [45.88466979, 12.71075455]",
+        "PN_05/01e21 :: Viale Primo Maggio, Azzano Decimo [45.8831937, 12.71749519]",
+        "PN_05/01e22 :: Via Pradat Candie 79, Azzano Decimo [45.88093481, 12.70166655]",
+        "PN_05/01e23 :: Viale Rimembranze 91, Azzano Decimo [45.8852295, 12.69938551]",
+        "PN_05/01e24 :: Viale Rimembranze, Azzano Decimo [45.88698932, 12.69065106]",
+        "PN_05/01e31 :: Via Crosera, Azzano Decimo [45.89126534, 12.69103984]",
+        "PN_05/01e32 :: Via Piave 4b, Azzano Decimo [45.89064312, 12.67138007]",
+        "PN_05/01e33 :: Via Armentera 80, Azzano Decimo [45.89824413, 12.65798426]",
+        "PN_05/01e34 :: Via Corva 100c, Azzano Decimo [45.90608492, 12.66956186]",
+        "PN_05/01e41 :: Via Arrigo Boito, Azzano Decimo [45.91379024, 12.66198505]",
+        "PN_05/01e42 :: Via Alessandro Manzoni, Azzano Decimo [45.9153211, 12.6582231]",
+        "PN_05/01e43 :: Via Fautario 15, Azzano Decimo [45.91421929, 12.65696518]",
+        "PN_05/01e44 :: Via Centrale 21, Azzano Decimo [45.91473828, 12.66191994]"
+      ],
+      "Azzida": [
+        "I092_CNO1 :: Via Zona Industriale, Azzida [46.11494196, 13.48274257]",
+        "I092_CNO2 :: Via Francesco Musoni, Azzida [46.12527942, 13.48676246]",
+        "I092_CNO3 :: Via Algida, Azzida [46.11880279, 13.48914492]",
+        "I092_CNO4 :: Via Vernasso, Azzida [46.12312782, 13.47784983]",
+        "I092_CNO5 :: Viale Azzida 10, Azzida [46.12377504, 13.48458155]"
+      ],
+      "Bagnaria Arsa": [
+        "A553_CNO1 :: Piazza Sant'Andrea 3, Bagnaria Arsa [45.88753539, 13.30176652]",
+        "A553_CNO2 :: Via Mulino delle Tolle 4, Bagnaria Arsa [45.8873387, 13.30575268]",
+        "A553_CNO3 :: Via Giuseppe Verdi 4, Bagnaria Arsa [45.88676893, 13.30621697]",
+        "A553_CNO4 :: Via Ventiquattro Maggio 22a, Bagnaria Arsa [45.88190211, 13.28520749]",
+        "A553_CNO5 :: Piazza San Giorgio 1, Bagnaria Arsa [45.8835562, 13.28533211]",
+        "A553_CNO6 :: Via Roggia La Castra 2, Bagnaria Arsa [45.84660276, 13.29882343]",
+        "A553_CNO7 :: Via Tarvisio, Bagnaria Arsa [45.83744108, 13.30235967]"
+      ],
+      "Bagnarola": [
+        "I686_CNO10 :: Via Vissignano 12, Bagnarola [45.87187341, 12.86197663]",
+        "I686_CNO11 :: Via Borgo di Sotto 8, Bagnarola [45.86617229, 12.8597673]",
+        "I686_CNO3 :: Via Teglio 45, Bagnarola [45.86766291, 12.85780557]",
+        "I686_CNO6 :: Via Monte Santo 35, Bagnarola [45.86692361, 12.86574289]"
+      ],
+      "Barazzetto": [
+        "D085_CNO4 :: Via del Collegio 9, Barazzetto [46.06024218, 13.02698617]"
+      ],
+      "Barcis": [
+        "A640_CNO1 :: Salita Giosuè Carducci, Barcis [46.19101119, 12.55911541]",
+        "A640_CNO2 :: Via Vittorio Veneto 49, Barcis [46.19126166, 12.56455922]"
+      ],
+      "Basaldella": [
+        "B536_CNO1 :: Via Cussignacco, Basaldella [46.02854914, 13.21570656]",
+        "B536_CNO4 :: Via Adriatica, Basaldella [46.03155163, 13.21741896]",
+        "B536_CNO5 :: Via Adriatica 111, Basaldella [46.02503385, 13.21458634]",
+        "UD_01/12e11 :: Via Adriatica, Basaldella [46.0315334, 13.21743285]"
+      ],
+      "Belgrado": [
+        "L686_CNO3 :: Via Belgrado, Belgrado [45.89303388, 12.96783812]"
+      ],
+      "Bevorchians": [
+        "UD_18/01w31 :: Strada vicinale Galizzis 16, Bevorchians [46.4856159, 13.19186552]"
+      ],
+      "Billerio": [
+        "E820_CNO2 :: Borgo Foranesi, Billerio [46.22206471, 13.19606939]"
+      ],
+      "Bistrigna": [
+        "GO_02/02w11 :: Via Grado 38, Bistrigna [45.79447396, 13.50352896]",
+        "GO_02/02w12 :: Via Cesare Battisti, Bistrigna [45.80521951, 13.50564193]",
+        "GO_02/02w13 :: Via Edmondo De Amicis 27, Bistrigna [45.80828736, 13.49772473]"
+      ],
+      "Blessano": [
+        "A700_CNO1 :: Via Damiano Chiesa 40, Blessano [46.04060153, 13.1067531]",
+        "A700_CNO3 :: Via Camillo Benso Conte di Cavour 39, Blessano [46.03796741, 13.10261885]"
+      ],
+      "Bonzicco": [
+        "D300_CNO1 :: Via Giuseppe Garibaldi, Bonzicco [46.08557237, 12.93868371]"
+      ],
+      "Borgo Ampiano": [
+        "G680_CNO5 :: Borgo Ampiano 59, Borgo Ampiano [46.17075, 12.89611379]"
+      ],
+      "Bottenicco": [
+        "F275_CNO1 :: Via Cividale 16, Bottenicco [46.09198104, 13.39590807]"
+      ],
+      "Brazzacco": [
+        "F760_CNO1 :: Strada dei Fabbri 3, Brazzacco [46.12192844, 13.16019981]"
+      ],
+      "Brugnera": [
+        "B215_CNO2 :: Via Levada, Brugnera [45.92466912, 12.57510688]",
+        "B215_CNO4 :: Via Conedera 80, Brugnera [45.92183675, 12.56778974]",
+        "B215_CNO6 :: Via Cesare Battisti 6, Brugnera [45.87774001, 12.53605421]",
+        "B215_CNO7 :: Via Santa Margherita 25, Brugnera [45.92328345, 12.57157295]",
+        "B215_CNO8 :: Via Nene 3, Brugnera [45.92383632, 12.56334868]",
+        "B215_CNO9 :: Via Casut di Tamai 5, Brugnera [45.92214836, 12.5583931]"
+      ],
+      "Bueriis": [
+        "E820_CNO1 :: Via Julia Augusta 57, Bueriis [46.2123484, 13.17622599]",
+        "E820_CNO3 :: Via Julia Augusta 2, Bueriis [46.21503285, 13.18112752]",
+        "UD_99/02w11 :: Via Nazionale 76, Bueriis [46.22082313, 13.17936058]"
+      ],
+      "Buja": [
+        "UD_99/01e11 :: Via Vidisêt, Buja [46.19943393, 13.11795102]"
+      ],
+      "Campo Sacro": [
+        "I715_CNO1 :: Devincina, Campo Sacro [45.71011798, 13.73541999]"
+      ],
+      "Campolongo Tapogliano": [
+        "M311_CNO1 :: Piazzale Esercito, Campolongo Tapogliano [45.87774806, 13.39822778]"
+      ],
+      "Caporiacco": [
+        "C885_CNO5 :: Via San Ellero, Caporiacco [46.14692878, 13.1023221]"
+      ],
+      "Capriva Del Friuli": [
+        "B712_CNO1 :: Via Roma 3, Capriva del Friuli [45.94228899, 13.51420722]",
+        "B712_CNO2 :: Via Michelangelo Buonarroti 13, Capriva del Friuli [45.94313203, 13.51578405]",
+        "B712_CNO3 :: Via Giosuè Carducci 2, Capriva del Friuli [45.94016403, 13.51397413]",
+        "B712_CNO4 :: Via Giuseppe Garibaldi, Capriva del Friuli [45.93912419, 13.51382634]"
+      ],
+      "Cargnacco": [
+        "G966_CNO1 :: Via Buttrio 45, Cargnacco [46.00568921, 13.23757212]"
+      ],
+      "Carlino": [
+        "B788_CNO4 :: Strada Bosco Bando, Carlino [45.77276348, 13.16705253]",
+        "B788_CNO5 :: Via San Giorgio di Nogaro, Carlino [45.80462511, 13.19298439]"
+      ],
+      "Carpeneto": [
+        "UD_16/01e23 :: Piazza del Consiglio 7, Carpeneto [45.99505865, 13.17448802]"
+      ],
+      "Casarsa Della Delizia  Cjasarse": [
+        "PN_11/01w11 :: Via Versutta 21, Casarsa della Delizia / Cjasarse [45.94167839, 12.84093127]"
+      ],
+      "Casette": [
+        "I686_CNO14 :: Via Cordovado, Casette [45.85208161, 12.8815867]"
+      ],
+      "Casiacco": [
+        "M085_CNO2 :: Piazza Vittoria, Casiacco [46.22035962, 12.95339854]",
+        "M085_CNO3 :: Via Jacopo Ortis, Casiacco [46.2279406, 12.93950431]"
+      ],
+      "Castellerio": [
+        "G238_CNO1 :: Via Udine, Castellerio [46.1212134, 13.19014609]",
+        "G238_CNO10 :: Via Pazzan 16, Castellerio [46.12559233, 13.18916879]",
+        "G238_CNO4 :: Marolins, Castellerio [46.1239761, 13.18741033]",
+        "G238_CNO8 :: Via Colloredo 25, Castellerio [46.12534294, 13.18471085]"
+      ],
+      "Castelliere": [
+        "F144_CNO13 :: Via Divisione Julia, Castelliere [46.05325649, 13.05552866]",
+        "F144_CNO8 :: Via Roma 7, Castelliere [46.05017482, 13.04087007]"
+      ],
+      "Castello": [
+        "G891_CNO1 :: Via Pre Zaneto 1, Castello [45.85983663, 13.21948841]",
+        "G891_CNO3 :: Via Udine 74, Castello [45.85469414, 13.21346249]",
+        "G891_CNO4 :: Via Pre Zaneto 10a, Castello [45.86063162, 13.21781308]",
+        "G891_CNO5 :: Via Luigi Cadorna 33, Castello [45.85710153, 13.2182518]"
+      ],
+      "Castelnovo Del Friuli": [
+        "C217_CNO1 :: Località Paludea 2, Castelnovo del Friuli [46.19915168, 12.90067313]"
+      ],
+      "Cavalicco": [
+        "UD_01/15e12 :: Via Dante Alighieri 73, Cavalicco [46.11003857, 13.23506327]",
+        "UD_01/15e21 :: Via Giulio Cesare 32, Cavalicco [46.10613223, 13.21876692]",
+        "UD_01/15e23 :: Via Roma 70, Cavalicco [46.11506274, 13.20354527]",
+        "UD_01/15e32 :: Via Ventiquattro Maggio 52, Cavalicco [46.10591871, 13.21525213]"
+      ],
+      "Cercivento": [
+        "C494_CNO1 :: ~Via Plan da Farie, Cercivento [46.52533023, 12.99862913]",
+        "C494_CNO2 :: Via di Sot 85, Cercivento [46.52745163, 12.99391029]",
+        "C494_CNO3 :: Via di Sot 23, Cercivento [46.52705918, 12.98849255]"
+      ],
+      "Cerneglons": [
+        "H229_CNO13 :: Strada Oselin, Cerneglons [46.06991911, 13.30833692]",
+        "H229_CNO17 :: Via Luigi Miani 15, Cerneglons [46.05437737, 13.31042426]",
+        "H229_CNO3 :: Via Manzanesia 5, Cerneglons [46.05049052, 13.30917653]"
+      ],
+      "Cesclans": [
+        "C389_CNO1 :: Via Pietro Zorutti 25, Cesclans [46.36799708, 13.04142087]",
+        "C389_CNO2 :: Via Pietro Zorutti 19, Cesclans [46.36819229, 13.04096977]"
+      ],
+      "Chiaicis": [
+        "L801_CNO1 :: Via Serena 2, Chiaicis [46.38420302, 12.9771321]"
+      ],
+      "Chiaulis": [
+        "L801_CNO3 :: Via degli Artigiani, Chiaulis [46.38779859, 12.99035318]"
+      ],
+      "Chions": [
+        "C640_CNO10 :: Via Vittorio Veneto, Chions [45.86842814, 12.76779071]",
+        "C640_CNO2 :: Via Friuli, Chions [45.86201388, 12.75224492]",
+        "C640_CNO3 :: Via San Marco 4, Chions [45.86323562, 12.75684056]",
+        "C640_CNO5 :: Via Zara 5, Chions [45.8441098, 12.71197408]",
+        "C640_CNO6 :: Via Giuseppe Garibaldi 11, Chions [45.8485114, 12.70979757]",
+        "C640_CNO7 :: Via Giuseppe Verdi 1, Chions [45.84684678, 12.71421571]",
+        "C640_CNO8 :: SP1, Chions [45.86011582, 12.74985375]",
+        "C640_CNO9 :: Via Isonzo, Chions [45.84545678, 12.71444795]",
+        "PN_05/01e51 :: Via Fagnigola 4, Chions [45.84624032, 12.70190139]"
+      ],
+      "Chiopris Viscone": [
+        "C641_CNO1 :: Via Fausto Coppi 10, Chiopris Viscone [45.92766883, 13.40276073]",
+        "C641_CNO2 :: Via Palmarina, Chiopris Viscone [45.92818377, 13.38369494]"
+      ],
+      "Ciago": [
+        "F089_CNO3 :: Borgo Pitagora, Ciago [46.22416082, 12.7655091]"
+      ],
+      "Ciconicco": [
+        "E982_CNO10 :: Via Faugnacco 13, Ciconicco [46.09129141, 13.12956132]"
+      ],
+      "Cimolais": [
+        "C699_CNO1 :: Via Roma, Cimolais [46.28701841, 12.43350953]",
+        "C699_CNO2 :: SR251, Cimolais [46.28526263, 12.44526201]",
+        "C699_CNO3 :: Via Roma 13, Cimolais [46.28664024, 12.43783672]"
+      ],
+      "Cisterna": [
+        "D085_CNO1 :: Via di Mariane 1, Cisterna [46.08848224, 12.98851302]",
+        "D085_CNO2 :: Via dei Gelsi 35, Cisterna [46.08499159, 12.99022132]",
+        "D085_CNO5 :: SR464, Cisterna [46.08187779, 12.98842751]"
+      ],
+      "Clauiano": [
+        "L438_CNO1 :: Via Borgo San Martino 38, Clauiano [45.933065, 13.33456841]",
+        "L438_CNO2 :: Via San Marco 31d, Clauiano [45.93069211, 13.33582018]"
+      ],
+      "Claut": [
+        "C790_CNO2 :: Via Antonio Giordani, Claut [46.26866427, 12.51442249]",
+        "C790_CNO3 :: Via Leonardo da Vinci, Claut [46.2675624, 12.51868392]",
+        "C790_CNO5 :: Via Antonio Giordani, Claut [46.26731945, 12.51399135]"
+      ],
+      "Clauzetto": [
+        "C791_CNO2 :: Via Gio Maria Fabricio 33, Clauzetto [46.22818866, 12.91714255]",
+        "C791_CNO3 :: Via Luigi Blarasin 1, Clauzetto [46.22903484, 12.91451727]",
+        "PN_07/01w11 :: Via Ventiquattro Maggio 2, Clauzetto [46.22904523, 12.91480075]"
+      ],
+      "Coderno": [
+        "I562_CNO3 :: Via della Giustizia 6, Coderno [46.03053594, 12.99056592]",
+        "I562_CNO5 :: Via Dante Alighieri 15, Coderno [46.02656863, 12.98936056]"
+      ],
+      "Codroipo  Codroip": [
+        "UD_08/01e11 :: Via Marinut 1, Codroipo / Codroip [45.9582294, 12.97307958]",
+        "UD_08/01e12 :: Via Ermes di Colloredo 76, Codroipo / Codroip [45.94455824, 12.96527154]",
+        "UD_08/01e13 :: Via Erminia 2, Codroipo / Codroip [45.91930605, 12.99224486]",
+        "UD_08/01e21 :: Casali Barazzat, Codroipo / Codroip [45.96110506, 12.97954768]",
+        "UD_08/01e22 :: Via Asilo 1, Codroipo / Codroip [45.97476042, 12.97274255]",
+        "UD_08/01e23 :: Via Codroipo 49, Codroipo / Codroip [45.95617181, 12.94003151]",
+        "UD_08/01e24 :: Piazza del Carmine, Codroipo / Codroip [45.95410559, 12.9323512]",
+        "UD_08/01e31 :: Via Carnia 1, Codroipo / Codroip [45.95983869, 12.98547863]",
+        "UD_08/01e32 :: Via Paolo Diacono 1, Codroipo / Codroip [45.96179139, 12.98940457]",
+        "UD_08/01e33 :: Via Luca Monverde 30, Codroipo / Codroip [45.95874702, 12.99389016]",
+        "UD_08/01e34 :: Via Circonvallazione Est 44, Codroipo / Codroip [45.95745125, 12.9909263]",
+        "UD_08/01e41 :: Via Santa Cecilia 87, Codroipo / Codroip [45.95748802, 13.02087199]",
+        "UD_08/01e42 :: Piazza delle Scuole 8, Codroipo / Codroip [45.95419792, 13.0210284]",
+        "UD_08/01e43 :: Via Rivolto 13, Codroipo / Codroip [45.94894147, 13.01484966]",
+        "UD_08/01e44 :: Via del Ledra 10, Codroipo / Codroip [45.94651199, 13.02223784]",
+        "UD_08/01w11 :: Piazza Aquileia 1, Codroipo / Codroip [45.96523407, 13.00469116]",
+        "UD_08/01w12 :: Via Udine 27, Codroipo / Codroip [45.96666088, 13.00786647]",
+        "UD_08/01w13 :: Via Ferrovia 14a, Codroipo / Codroip [45.99514597, 13.02796755]"
+      ],
+      "Colgallo": [
+        "L421_CNO1 :: Via Ugo Foscolo 16, Colgallo [46.15778246, 13.21409519]",
+        "L421_CNO3 :: Piazza Libertà, Colgallo [46.16054212, 13.21549832]"
+      ],
+      "Colle": [
+        "A354_CNO1 :: Piazza 4 Novembre 1, Colle [46.16188308, 12.81006291]"
+      ],
+      "Colloredo Di Monte Albano": [
+        "C885_CNO1 :: Via Laibacco, Colloredo di Monte Albano [46.16393178, 13.13601633]",
+        "C885_CNO2 :: Via Ippolito Nievo 75, Colloredo di Monte Albano [46.16137486, 13.13429614]"
+      ],
+      "Colloredo Di Prato": [
+        "G352_CNO3 :: Via del Forno 52, Colloredo di Prato [46.04927154, 13.13551309]",
+        "G352_CNO4 :: Via Udine 44, Colloredo di Prato [46.05165635, 13.14504537]"
+      ],
+      "Coltura": [
+        "G780_CNO1 :: Via Polcenigo, Coltura [46.03284114, 12.50363414]"
+      ],
+      "Colugna": [
+        "UD_01/15e31 :: Via Cadore 30, Colugna [46.09528682, 13.2139579]",
+        "UD_01/15e33 :: Via Belluno 28, Colugna [46.10771306, 13.21376501]",
+        "UD_01/15e41 :: Via Cesare Battisti 11, Colugna [46.09137201, 13.20079343]",
+        "UD_01/15e42 :: Via Cesare Battisti 62, Colugna [46.09329251, 13.19963577]"
+      ],
+      "Comeglians": [
+        "C918_CNO1 :: SR465, Comeglians [46.51758596, 12.87336541]",
+        "C918_CNO2 :: Via Statale 4h, Comeglians [46.51268983, 12.86625393]"
+      ],
+      "Cordenons": [
+        "PN_01/06w11 :: Via Maestra 187, Cordenons [45.98444007, 12.68384097]",
+        "PN_01/06w12 :: Via Stradelle 184, Cordenons [45.97920986, 12.68574314]",
+        "PN_01/06w13 :: Via Nogaredo 8, Cordenons [45.97443903, 12.68356126]",
+        "PN_01/06w14 :: Via delle Acque 2, Cordenons [45.97443395, 12.6864188]",
+        "PN_01/06w21 :: Via Stradelle 124, Cordenons [45.98196038, 12.6894546]",
+        "PN_01/06w22 :: Via Giuseppe Nannavecchia 22, Cordenons [45.98272173, 12.69339098]",
+        "PN_01/06w23 :: Vial di Sclavons 53, Cordenons [45.98196589, 12.69432315]",
+        "PN_01/06w24 :: Via Braida Foenis 52, Cordenons [45.97090401, 12.69688144]",
+        "PN_01/06w31 :: Via Maestra 169, Cordenons [45.98648768, 12.68780365]",
+        "PN_01/06w32 :: Via Alcide De Gasperi 21, Cordenons [45.98905894, 12.69369831]",
+        "PN_01/06w33 :: Via Romano Sartori 1, Cordenons [45.98975608, 12.69668925]",
+        "PN_01/06w34 :: Via Cesare Battisti 11, Cordenons [45.99406112, 12.71009746]"
+      ],
+      "Corgnolo": [
+        "G891_CNO2 :: Via Porpetto 10, Corgnolo [45.86715982, 13.19828121]"
+      ],
+      "Cormons": [
+        "GO_04/01e11 :: Foro Boario, Cormons [45.96032064, 13.46504947]",
+        "GO_04/01e12 :: Via Faet, Cormons [45.95672821, 13.48384389]",
+        "GO_04/01e13 :: Via Filanda, Cormons [45.95482724, 13.46569697]",
+        "GO_04/01e14 :: Via Primo Maggio 9, Cormons [45.95436324, 13.46334426]",
+        "GO_04/01e21 :: Via Collio, Cormons [45.9756695, 13.45384777]"
+      ],
+      "Cornino": [
+        "D700_CNO8 :: Via Muris 8, Cornino [46.22357123, 13.00443092]"
+      ],
+      "Cosa": [
+        "H891_CNO4 :: Via San Antonio, Cosa [46.05679441, 12.89092858]"
+      ],
+      "Crauglio": [
+        "I404_CNO2 :: Via Gradisca 2, Crauglio [45.88136015, 13.38240283]"
+      ],
+      "Doberdò Del Lago": [
+        "D312_CNO1 :: Via Guglielmo Marconi 1, Doberdò del Lago [45.8420536, 13.53900994]",
+        "D312_CNO2 :: Via Antonio Gramsci 7, Doberdò del Lago [45.84898877, 13.53820907]"
+      ],
+      "Dogna": [
+        "D316_CNO1 :: Via Montasio, Dogna [46.44697555, 13.31571069]",
+        "UD_18/02e11 :: Via Stazione, Dogna [46.44936542, 13.31701259]"
+      ],
+      "Dolegna Del Collio": [
+        "D321_CNO1 :: Piazza del Municipio 9, Dolegna del Collio [46.03202823, 13.48017131]"
+      ],
+      "Domanins": [
+        "H891_CNO1 :: Via Selva di Sotto, Domanins [46.02481639, 12.82199136]",
+        "H891_CNO3 :: Via Belvedere 20, Domanins [46.02701689, 12.82829723]"
+      ],
+      "Drenchia": [
+        "D366_CNO1 :: Oznebrida, Drenchia [46.16926929, 13.61082465]"
+      ],
+      "Duino Aurisina": [
+        "D383_CNO2 :: Prepotto, Duino Aurisina [45.76353374, 13.69478987]",
+        "D383_CNO3 :: San Giovanni di Duino, Duino Aurisina [45.7882153, 13.59336523]",
+        "GO_02/01e11 :: Strada provinciale 34 di Medeazza, Duino Aurisina [45.79602544, 13.60143313]"
+      ],
+      "Enemonzo": [
+        "D408_CNO1 :: Via Borta 1a, Enemonzo [46.40997273, 12.8795644]",
+        "D408_CNO2 :: Via Nazionale, Enemonzo [46.40978738, 12.89221275]",
+        "D408_CNO3 :: Via Nazionale 105a, Enemonzo [46.40998721, 12.87619968]"
+      ],
+      "Erto E Casso": [
+        "D426_CNO1 :: San Martino, Erto e Casso [46.27859494, 12.37350212]",
+        "D426_CNO2 :: Via Stortan 27, Erto e Casso [46.27836074, 12.37191637]",
+        "PN_06/01w11 :: Via de la Creus, Erto e Casso [46.27761417, 12.3697067]",
+        "PN_06/01w21 :: Via dell'Esempon, Erto e Casso [46.27222587, 12.36525421]"
+      ],
+      "Faedis": [
+        "D455_CNO1 :: Piazza Gemellaggio Vittorio Veneto, Faedis [46.13080825, 13.36245882]",
+        "D455_CNO2 :: Via dei Molini 65, Faedis [46.15177538, 13.34805009]",
+        "D455_CNO3 :: Via abate Jacopo Cavalli 7, Faedis [46.12809894, 13.36165453]",
+        "D455_CNO4 :: Via Soffumbergo, Faedis [46.12972758, 13.35620165]",
+        "D455_CNO5 :: Via Udine 43, Faedis [46.15066329, 13.34407429]",
+        "D455_CNO6 :: Via Stentarie, Faedis [46.15257222, 13.34385164]"
+      ],
+      "Fanna": [
+        "D487_CNO2 :: Via Paiani 26, Fanna [46.18222467, 12.75060675]",
+        "D487_CNO3 :: Via Monte Raut 1, Fanna [46.18285503, 12.74627243]",
+        "D487_CNO4 :: Via Montelieto 29, Fanna [46.18616275, 12.75387593]",
+        "D487_CNO5 :: Via Montelieto 71, Fanna [46.18715557, 12.75568127]"
+      ],
+      "Farla": [
+        "E833_CNO10 :: Via Guglielmo Marconi 1b, Farla [46.18554531, 13.06428352]",
+        "E833_CNO11 :: Via Deveacco 39, Farla [46.18118076, 13.0635053]",
+        "E833_CNO13 :: Via Borgo David 1, Farla [46.17921724, 13.06796754]",
+        "E833_CNO14 :: Via Pietro Zorutti, Farla [46.18549082, 13.06746065]",
+        "E833_CNO15 :: Via Milano 11, Farla [46.18216988, 13.0648974]",
+        "E833_CNO6 :: Via San Daniele 15, Farla [46.17031804, 13.06378403]",
+        "E833_CNO8 :: Via Sondrio 10, Farla [46.18339224, 13.0734441]"
+      ],
+      "Farra D'Isonzo": [
+        "D504_CNO1 :: Via Gorizia, Farra d'Isonzo [45.90330818, 13.51923775]",
+        "D504_CNO2 :: Via Pietro Zorutti, Farra d'Isonzo [45.90721657, 13.51693143]",
+        "D504_CNO3 :: Via Venticinque Aprile 2, Farra d'Isonzo [45.90938459, 13.5172294]",
+        "D504_CNO4 :: Via Dante Alighieri 32/8, Farra d'Isonzo [45.90670323, 13.51879367]",
+        "D504_CNO5 :: Via Gorizia, Farra d'Isonzo [45.91353153, 13.55898408]"
+      ],
+      "Fauglis": [
+        "E083_CNO4 :: Via Gorizia 51, Fauglis [45.8996859, 13.24218207]",
+        "E083_CNO5 :: Via Torviscosa 22, Fauglis [45.89436142, 13.24094347]",
+        "E083_CNO6 :: Via Filippo Corridoni 5, Fauglis [45.88989939, 13.25717477]",
+        "E083_CNO7 :: Via Gorizia 25, Fauglis [45.89885623, 13.23898501]",
+        "E083_CNO8 :: Via Quattro Novembre 83, Fauglis [45.89070614, 13.2609094]",
+        "E083_CNO9 :: Via Trieste 11, Fauglis [45.89764004, 13.23708032]"
+      ],
+      "Felettis": [
+        "A855_CNO1 :: Via Udine 44a, Felettis [45.91897307, 13.25802241]",
+        "A855_CNO4 :: Via Santa Maria 23, Felettis [45.93069035, 13.25490825]"
+      ],
+      "Firmano": [
+        "H029_CNO1 :: Via Fiore dei Liberi 10, Firmano [46.06044461, 13.394802]",
+        "UD_99/03w11 :: Via San Paolino, Firmano [46.06947041, 13.3876141]"
+      ],
+      "Fiume Veneto": [
+        "PN_05/02e11 :: Via Pizzati 10, Fiume Veneto [45.90038118, 12.73434152]",
+        "PN_05/02e12 :: Via Nazario Sauro, Fiume Veneto [45.91128274, 12.76589837]",
+        "PN_05/02e21 :: Viale Trento 67a, Fiume Veneto [45.92615883, 12.74620703]",
+        "PN_05/02e22 :: Via Praderoni, Fiume Veneto [45.92917406, 12.74393498]",
+        "PN_05/02e23 :: Via Suor Serafina Gregoris, Fiume Veneto [45.93109437, 12.73591039]",
+        "PN_05/02e31 :: Viale Trieste, Fiume Veneto [45.92689368, 12.7318564]",
+        "PN_05/02e32 :: Via Giovanni Ventitreesimo, Fiume Veneto [45.92963425, 12.72587786]",
+        "PN_05/02e33 :: Via Policreta 6a, Fiume Veneto [45.93790585, 12.72782919]",
+        "PN_05/02e34 :: Via Pian di Pan 50a, Fiume Veneto [45.94204771, 12.72396036]"
+      ],
+      "Flagogna": [
+        "D700_CNO10 :: Via Cornino 11, Flagogna [46.2236812, 12.97714409]",
+        "D700_CNO4 :: Via Caravel, Flagogna [46.22387554, 12.96930631]",
+        "D700_CNO6 :: Via Giuseppe Garibaldi, Flagogna [46.20934165, 12.96214632]",
+        "D700_CNO7 :: Via Val 36, Flagogna [46.22152555, 12.97043719]",
+        "D700_CNO9 :: Via Stazione 8, Flagogna [46.20638733, 12.96071628]"
+      ],
+      "Flaibano": [
+        "D630_CNO1 :: Via Giuseppe Garibaldi 9, Flaibano [46.05744571, 12.98474814]",
+        "D630_CNO2 :: Via Camillo Benso conte di Cavour 58, Flaibano [46.05920114, 12.97963353]",
+        "D630_CNO4 :: Via Roma 53a, Flaibano [46.05434543, 12.98187078]"
+      ],
+      "Flambro": [
+        "L039_CNO1 :: Via Beato Bertrando 2, Flambro [45.93494072, 13.09724647]",
+        "L039_CNO2 :: Via Savorgnan 35, Flambro [45.93422789, 13.09984244]",
+        "L039_CNO3 :: Via Cortina 5, Flambro [45.93504199, 13.09159345]"
+      ],
+      "Fogliano Redipuglia": [
+        "D645_CNO1 :: Via Terza Armata 51, Fogliano Redipuglia [45.84733799, 13.4879715]",
+        "D645_CNO2 :: Via delle Scuole, Fogliano Redipuglia [45.86349295, 13.4857198]",
+        "D645_CNO3 :: Via Doberdò 34, Fogliano Redipuglia [45.86466382, 13.48459359]",
+        "D645_CNO4 :: Via Terza Armata 51, Fogliano Redipuglia [45.84760915, 13.48769729]"
+      ],
+      "Fontanafredda": [
+        "PN_09/02e11 :: Via Palmanova 1, Fontanafredda [45.95276595, 12.53658781]"
+      ],
+      "Formeaso": [
+        "M200_CNO1 :: Via Giulio Cesare 10, Formeaso [46.46182907, 13.02628201]",
+        "M200_CNO2 :: Via Giulio Cesare, Formeaso [46.4609489, 13.0263391]"
+      ],
+      "Forni Avoltri": [
+        "D718_CNO3 :: Via Tors 20, Forni Avoltri [46.58251559, 12.84044974]"
+      ],
+      "Forni Di Sopra": [
+        "D719_CNO1 :: Via Dante Alighieri 21, Forni di Sopra [46.41679632, 12.58605496]",
+        "D719_CNO2 :: Piazza del Comune 3, Forni di Sopra [46.42503339, 12.57948112]",
+        "D719_CNO3 :: Via Nazionale 234, Forni di Sopra [46.42211876, 12.58216332]",
+        "D719_CNO4 :: Via Sottobalcons 1, Forni di Sopra [46.42477912, 12.57475917]",
+        "D719_CNO5 :: Via Tagliamento 1, Forni di Sopra [46.42406937, 12.57908822]",
+        "D719_CNO6 :: SS52, Forni di Sopra [46.41178722, 12.59171475]",
+        "D719_CNO7 :: Via Tiviei 1, Forni di Sopra [46.42510593, 12.58140229]",
+        "D719_CNO8 :: Via Cimacuta 1, Forni di Sopra [46.42453489, 12.57744232]"
+      ],
+      "Forni Di Sotto": [
+        "D720_CNO1 :: SS52, Forni di Sotto [46.39523877, 12.67842252]",
+        "D720_CNO2 :: SS52, Forni di Sotto [46.39412076, 12.6721689]",
+        "D720_CNO3 :: Borgo Vico, Forni di Sotto [46.39229286, 12.66768758]"
+      ],
+      "Fraforeano": [
+        "H533_CNO3 :: Via Divisione Julia 32, Fraforeano [45.81233421, 12.99936652]"
+      ],
+      "Fratta": [
+        "PN_09/01w11 :: ~Via San Michele, Fratta [45.95849885, 12.4620936]"
+      ],
+      "Frisanco": [
+        "D804_CNO1 :: Via della Pace, Frisanco [46.21286713, 12.72429324]",
+        "D804_CNO2 :: Via Maniago 6, Frisanco [46.21544281, 12.70744832]",
+        "D804_CNO3 :: Borgo Cudili 2, Frisanco [46.20592212, 12.71605896]"
+      ],
+      "Galleriano": [
+        "E553_CNO4 :: Via Dolina 2, Galleriano [45.96649166, 13.11665086]",
+        "E553_CNO7 :: Via San Giovanni 2, Galleriano [45.96437726, 13.11150805]"
+      ],
+      "Gemona Del Friuli": [
+        "UD_02/01e11 :: Via Santa Lucia 4, Gemona del Friuli [46.2720991, 13.13079894]",
+        "UD_02/01e12 :: Via Cassinis 9, Gemona del Friuli [46.26974905, 13.13322291]",
+        "UD_02/01e13 :: Via Vuarbe 6, Gemona del Friuli [46.2711458, 13.14247155]",
+        "UD_02/01e14 :: Via Rio Petri, Gemona del Friuli [46.25996917, 13.14742681]",
+        "UD_02/01e21 :: Via Giovanni Falcone 4/1, Gemona del Friuli [46.27436857, 13.12545025]",
+        "UD_02/01e22 :: Via Osoppo 105, Gemona del Friuli [46.26938522, 13.12347696]",
+        "UD_02/01e31 :: Via Trasaghis 19, Gemona del Friuli [46.27926857, 13.12365525]",
+        "UD_02/01e32 :: Via Trasaghis 190, Gemona del Friuli [46.28083612, 13.11508722]",
+        "UD_02/01e33 :: Via del Lavoro 7, Gemona del Friuli [46.28257697, 13.10872375]",
+        "UD_02/01e34 :: Via Armentaressa 79, Gemona del Friuli [46.27427125, 13.11343762]",
+        "UD_02/01e41 :: Via Osoppo 258, Gemona del Friuli [46.26634673, 13.10907282]",
+        "UD_02/01e42 :: Via Marzârs, Gemona del Friuli [46.2550551, 13.11338056]",
+        "UD_02/01e43 :: Via Campo 128, Gemona del Friuli [46.25254025, 13.11633818]",
+        "UD_02/01e44 :: Via Molinut 5, Gemona del Friuli [46.24940514, 13.11591458]",
+        "UD_02/01w11 :: Via dai Fors 4, Gemona del Friuli [46.27308881, 13.14127674]",
+        "UD_02/01w12 :: Via Salcons, Gemona del Friuli [46.27644132, 13.13479904]",
+        "UD_02/01w13 :: Via Dante Alighieri 212, Gemona del Friuli [46.27442929, 13.12888044]",
+        "UD_02/01w14 :: Via Pace da Gemona 14, Gemona del Friuli [46.27895749, 13.12944468]",
+        "UD_02/01w21 :: Salita del Castello 1, Gemona del Friuli [46.27636607, 13.14050913]",
+        "UD_02/01w22 :: Via Artico di Prampero 15, Gemona del Friuli [46.27811618, 13.13742964]",
+        "UD_02/01w23 :: Piazzetta Antonio Celotti, Gemona del Friuli [46.27802186, 13.13935734]",
+        "UD_02/01w24 :: Piazzetta Valentino Baldissera 6, Gemona del Friuli [46.27786438, 13.14096229]",
+        "UD_02/01w31 :: Via Soprio 9, Gemona del Friuli [46.28929134, 13.12876521]",
+        "UD_02/01w32 :: Via Gleseute 120, Gemona del Friuli [46.28833931, 13.1384247]",
+        "UD_02/01w33 :: Via Scugjelars 44, Gemona del Friuli [46.2817909, 13.14061564]",
+        "UD_02/01w34 :: Via Bersaglio, Gemona del Friuli [46.28247352, 13.13438474]",
+        "UD_02/01w41 :: Via Nazionale 1, Gemona del Friuli [46.29790922, 13.11890239]",
+        "UD_02/01w42 :: Via Turisello 83, Gemona del Friuli [46.29048061, 13.11514559]"
+      ],
+      "Glaunicco": [
+        "B483_CNO1 :: Via Hermes di Colloredo, Glaunicco [45.92684703, 12.94961796]"
+      ],
+      "Gonars": [
+        "E083_CNO10 :: Via Paradiso 1, Gonars [45.8981971, 13.22750891]",
+        "E083_CNO2 :: Via Edmondo De Amicis 9, Gonars [45.89602966, 13.23443942]",
+        "E083_CNO3 :: Piazza Giulio Cesare, Gonars [45.89707799, 13.23222497]"
+      ],
+      "Gorizia": [
+        "GO_01/01e11 :: Via Gioachino Rossini 22, Gorizia [45.93830261, 13.61627221]",
+        "GO_01/01e12 :: Via Duca d'Aosta 48a, Gorizia [45.93849917, 13.61874143]",
+        "GO_01/01e13 :: Piazza San Francesco d'Assisi, Gorizia [45.93926509, 13.62142231]",
+        "GO_01/01e14 :: Via del Faiti 19a, Gorizia [45.93616806, 13.62183215]",
+        "GO_01/01e21 :: Via Vincenzo Bellini 20, Gorizia [45.93944037, 13.61691369]",
+        "GO_01/01e22 :: Viale Ventiquattro Maggio 16b, Gorizia [45.9402265, 13.61990885]",
+        "GO_01/01e23 :: Via Generale Cascino 18b, Gorizia [45.9411807, 13.62057819]",
+        "GO_01/01e24 :: Via Riccardo Pitteri 3, Gorizia [45.94020628, 13.61437955]",
+        "GO_01/01e31 :: Corso Italia 182, Gorizia [45.93875965, 13.61249554]",
+        "GO_01/01e32 :: Corso Italia 228, Gorizia [45.93667005, 13.61035667]",
+        "GO_01/01e33 :: Via Duca d'Aosta 98, Gorizia [45.93643962, 13.61476429]",
+        "GO_01/01e34 :: Via Trento 2, Gorizia [45.93654069, 13.61102836]",
+        "GO_01/01e41 :: Via Trieste 2, Gorizia [45.93536041, 13.6131714]",
+        "GO_01/01e42 :: Via Eleonora Duse 1, Gorizia [45.93419086, 13.61606274]",
+        "GO_01/01e43 :: Via Gian Lorenzo Cipriani 47, Gorizia [45.93295063, 13.61849575]",
+        "GO_01/01e44 :: Via Fratelli Cossar 26, Gorizia [45.93154016, 13.62078066]",
+        "GO_01/01w11 :: Via Carnia 5, Gorizia [45.93743292, 13.60734136]",
+        "GO_01/01w12 :: Via Lungo Isonzo Argentina 117, Gorizia [45.93482767, 13.60080076]",
+        "GO_01/01w13 :: Via Udine 122, Gorizia [45.93509152, 13.5667696]",
+        "GO_01/01w14 :: Viale Fatebenefratelli 15, Gorizia [45.93726076, 13.60808109]",
+        "GO_01/01w15 :: Via Antonio Smareglia 1, Gorizia [45.94260262, 13.60651406]",
+        "GO_01/01w16 :: Via dei Leoni, Gorizia [45.94081406, 13.60874283]",
+        "GO_01/01w17 :: Via Ugo Pellis 2, Gorizia [45.9389312, 13.60897325]",
+        "GO_01/01w21 :: Via Giovanni De Brignoli 3, Gorizia [45.93370387, 13.61326572]",
+        "GO_01/01w22 :: Via Fratelli Rosselli 2, Gorizia [45.93027678, 13.6131088]",
+        "GO_01/01w23 :: Via Papa Giovanni ventitreesimo 4, Gorizia [45.92871698, 13.6154426]",
+        "GO_01/01w24 :: Via Terza Armata, Gorizia [45.92431575, 13.61641197]",
+        "GO_01/01w31 :: Via del Faiti 61d, Gorizia [45.93068982, 13.62187772]",
+        "GO_01/01w32 :: Via Gian Battista Garzarolli 58, Gorizia [45.9341011, 13.62380068]",
+        "GO_01/01w33 :: Via Max Fabiani 5, Gorizia [45.92933497, 13.62007952]",
+        "GO_01/01w34 :: Via Arturo Toscanini 20, Gorizia [45.92920045, 13.61677802]",
+        "GO_01/01w41 :: Via Antonio Baiamonti 32, Gorizia [45.93842156, 13.62398157]",
+        "GO_01/01w42 :: Via Gian Battista Garzarolli 11, Gorizia [45.93663569, 13.62629855]",
+        "GO_01/01w43 :: Via Antonio Lasciac 2, Gorizia [45.93757512, 13.62532372]",
+        "GO_01/01w44 :: Via Vittorio Veneto 138, Gorizia [45.93530443, 13.63061479]",
+        "GO_01/02w12 :: Via Licinio 42, Gorizia [45.93186205, 13.56827321]"
+      ],
+      "Gradisca D'Isonzo": [
+        "E124_CNO1 :: Borgo Trevisan 2, Gradisca d'Isonzo [45.89177933, 13.4763453]",
+        "E124_CNO2 :: SR305;SR351, Gradisca d'Isonzo [45.88012899, 13.48395024]",
+        "E124_CNO3 :: Via Roma 22, Gradisca d'Isonzo [45.89385574, 13.49427166]",
+        "GO_05/01w11 :: Via Giovanni Pian, Gradisca d'Isonzo [45.88689151, 13.49034073]",
+        "GO_05/01w12 :: Via Aquileia 63, Gradisca d'Isonzo [45.88467962, 13.48610882]",
+        "GO_05/01w13 :: Via Papalina 2, Gradisca d'Isonzo [45.89034199, 13.49557834]",
+        "GO_05/01w14 :: Via Eugenio Dal Ben 18, Gradisca d'Isonzo [45.88613109, 13.49428456]",
+        "GO_05/01w21 :: Via Aquileia, Gradisca d'Isonzo [45.88257768, 13.48155361]"
+      ],
+      "Gradisca": [
+        "I562_CNO8 :: Via Trento 2, Gradisca [46.01464943, 12.97502951]"
+      ],
+      "Grado": [
+        "E125_CNO1 :: SP19, Grado [45.68255433, 13.4149891]"
+      ],
+      "Grimacco": [
+        "E179_CNO1 :: SP45, Grimacco [46.15432092, 13.5783951]"
+      ],
+      "Grions Del Torre": [
+        "G949_CNO15 :: Via Giovanni Battista Maddalena 26, Grions del Torre [46.0920975, 13.29293873]",
+        "G949_CNO16 :: Via Divisione Julia, Grions del Torre [46.12044606, 13.3018315]",
+        "G949_CNO18 :: Via della Repubblica 56, Grions del Torre [46.10396886, 13.31092721]",
+        "G949_CNO20 :: Via Venticinque Aprile 6a, Grions del Torre [46.1185467, 13.29921343]",
+        "G949_CNO22 :: Via San Clemente 1b, Grions del Torre [46.11784224, 13.29817297]",
+        "G949_CNO26 :: Via Zorutti 23, Grions del Torre [46.10658569, 13.30496166]"
+      ],
+      "Grions": [
+        "I562_CNO1 :: Piazza Vittorio Emanuele Terzo, Grions [46.03765323, 12.9698091]"
+      ],
+      "Gris": [
+        "A855_CNO2 :: Via dei Gelsi 8, Gris [45.92816862, 13.23567927]",
+        "A855_CNO3 :: Via Roma 19, Gris [45.93348127, 13.25159876]"
+      ],
+      "Interneppo": [
+        "A983_CNO2 :: Via Roma, Interneppo [46.31625183, 13.10153944]",
+        "A983_CNO3 :: Piazza Yitzhak Rabin, Interneppo [46.31533554, 13.1062908]",
+        "A983_CNO9 :: Via Lago, Interneppo [46.32636954, 13.08170667]"
+      ],
+      "Intissans": [
+        "L801_CNO2 :: Marzovallis, Intissans [46.38290851, 12.99189833]"
+      ],
+      "Invillino": [
+        "L909_CNO1 :: Via Divisione Julia 11, Invillino [46.41245989, 12.91729662]",
+        "L909_CNO2 :: Viale della Repubblica 35, Invillino [46.41107203, 12.92851935]",
+        "L909_CNO3 :: Viale della Vittoria 1, Invillino [46.414388, 12.92148857]",
+        "L909_CNO4 :: Via Armando Diaz 7, Invillino [46.40795192, 12.93662631]",
+        "L909_CNO5 :: Piazza Mercato 4, Invillino [46.41702469, 12.92267764]",
+        "L909_CNO6 :: Via Roma, Invillino [46.41578388, 12.92458492]"
+      ],
+      "Joannis": [
+        "A103_CNO1 :: Via Giuseppe Mazzini 4d, Joannis [45.87518186, 13.34404454]"
+      ],
+      "Latisana": [
+        "E473_CNO1 :: Via Tisanella, Latisana [45.77580652, 13.00614957]",
+        "E473_CNO2 :: Via Divisione Julia, Latisana [45.7213102, 13.04886827]",
+        "E473_CNO3 :: Via Aquileia 12, Latisana [45.78351483, 12.99481257]",
+        "E473_CNO4 :: Via Umberto Casasola 17, Latisana [45.77005528, 13.02017008]",
+        "E473_CNO5 :: Via Trieste, Latisana [45.79295261, 13.0196048]",
+        "UD_13/01e11 :: Via Lignano Nord 136, Latisana [45.75349614, 13.03260494]"
+      ],
+      "Lauco": [
+        "E476_CNO1 :: SR355, Lauco [46.43220663, 12.9129555]",
+        "E476_CNO2 :: Via Capoluogo, Lauco [46.42391848, 12.93330444]",
+        "E476_CNO3 :: Trava, Lauco [46.4372862, 12.90359655]",
+        "E476_CNO4 :: Allegnidis, Lauco [46.4326557, 12.94467727]"
+      ],
+      "Lavariano": [
+        "F756_CNO1 :: Via Battiferro 22, Lavariano [45.95642373, 13.22963278]",
+        "F756_CNO11 :: Via Risano 2, Lavariano [45.95666105, 13.22846447]"
+      ],
+      "Leproso": [
+        "UD_99/03w21 :: Via Pietro Zorutti 12, Leproso [46.03599388, 13.39282438]"
+      ],
+      "Lestizza": [
+        "E553_CNO8 :: Via Nicolò Fabris 7, Lestizza [45.9551532, 13.14347329]"
+      ],
+      "Lignano Sabbiadoro": [
+        "E584_CNO1 :: Cammino del Pensiero, Lignano Sabbiadoro [45.65257741, 13.09766886]",
+        "E584_CNO10 :: Lungomare Riccardo Riva 15, Lignano Sabbiadoro [45.65144969, 13.09992863]",
+        "E584_CNO11 :: Via Casa Bianca 40, Lignano Sabbiadoro [45.66463964, 13.07112935]",
+        "E584_CNO12 :: Viale delle Arti 2c, Lignano Sabbiadoro [45.65760309, 13.09791101]",
+        "E584_CNO13 :: Calle Johann Wolfgang von Goethe 3, Lignano Sabbiadoro [45.65182113, 13.09351709]",
+        "E584_CNO14 :: Calle Moliere 3, Lignano Sabbiadoro [45.65828966, 13.09650009]",
+        "E584_CNO2 :: Corso delle Nazioni, Lignano Sabbiadoro [45.65532714, 13.09763]",
+        "E584_CNO3 :: Viale Adriatico, Lignano Sabbiadoro [45.65090965, 13.09561198]",
+        "E584_CNO4 :: Via Solferino 1, Lignano Sabbiadoro [45.66511966, 13.0701226]",
+        "E584_CNO5 :: Viale Europa 148, Lignano Sabbiadoro [45.6710209, 13.09527159]",
+        "E584_CNO6 :: Corso dei Continenti 129, Lignano Sabbiadoro [45.65464819, 13.09410957]",
+        "E584_CNO7 :: Cammino del Pensiero, Lignano Sabbiadoro [45.65642357, 13.09935629]",
+        "E584_CNO9 :: Viale della Scultura 4, Lignano Sabbiadoro [45.65330068, 13.10016467]"
+      ],
+      "Lovaria": [
+        "G969_CNO1 :: Via Torricelle 6, Lovaria [46.030678, 13.29717847]",
+        "G969_CNO10 :: Via Giuseppe Garibaldi 92, Lovaria [46.03765107, 13.30608024]",
+        "G969_CNO2 :: Via Giuseppe Garibaldi 1, Lovaria [46.03389825, 13.30622041]",
+        "G969_CNO4 :: Piazza Arturo Zardini, Lovaria [46.03050339, 13.30733449]",
+        "G969_CNO5 :: Via Chino Ermacora 65, Lovaria [46.03478388, 13.30402494]",
+        "G969_CNO7 :: Via Nazionale 76, Lovaria [46.01996998, 13.28524983]",
+        "G969_CNO8 :: Via Giovanni Marinelli 15, Lovaria [46.03159526, 13.30374532]",
+        "G969_CNO9 :: Via della Libertà 68, Lovaria [46.01702616, 13.30349758]"
+      ],
+      "Lumignacco": [
+        "G389_CNO2 :: Via Giovanni Pascoli 22, Lumignacco [45.99548239, 13.24485573]",
+        "G389_CNO3 :: Via Vincenzo Bellini 36, Lumignacco [45.99897649, 13.2465842]"
+      ],
+      "Madonna": [
+        "B259_CNO1 :: Via monsignor Saverio Beinat 23, Madonna [46.20734498, 13.10733633]",
+        "B259_CNO2 :: Via Madonna 105, Madonna [46.22376356, 13.11897301]",
+        "B259_CNO3 :: Via Cjagjalòt 2, Madonna [46.22423046, 13.11272186]",
+        "UD_99/01e21 :: Via Bosso 1, Madonna [46.2240169, 13.12471068]"
+      ],
+      "Madrisio": [
+        "D461_CNO3 :: Via Farla 39, Madrisio [46.12491626, 13.05584922]",
+        "D461_CNO4 :: Via Battaglia 48, Madrisio [46.1189122, 13.05732341]",
+        "L686_CNO5 :: Via Santa Radegonda 4, Madrisio [45.86324016, 12.98406629]"
+      ],
+      "Magredis": [
+        "G949_CNO21 :: Via Ugo Foscolo, Magredis [46.13151134, 13.29849087]",
+        "G949_CNO23 :: Via Antonio Fabris 4, Magredis [46.14360978, 13.30519735]",
+        "G949_CNO30 :: Via delle Scuole 12, Magredis [46.14132048, 13.30395191]"
+      ],
+      "Majano": [
+        "E833_CNO12 :: Via Ciro di Pers 18, Majano [46.18465048, 13.07024]"
+      ],
+      "Malborghetto Valbruna": [
+        "E847_CNO2 :: Via Alpi Giulie 2, Malborghetto Valbruna [46.49099389, 13.49171547]",
+        "E847_CNO3 :: Via Lussari, Malborghetto Valbruna [46.49329443, 13.4907724]",
+        "E847_CNO4 :: Via Alpi Giulie 46, Malborghetto Valbruna [46.48730102, 13.48958904]",
+        "E847_CNO5 :: Via Fella 6, Malborghetto Valbruna [46.50293533, 13.40290044]",
+        "UD_15/02e11 :: Borgo Alto 20, Malborghetto Valbruna [46.50255498, 13.37879762]",
+        "UD_15/02e12 :: Via Bamberga 45, Malborghetto Valbruna [46.50693183, 13.43743857]",
+        "UD_15/02e13 :: Piazza dell'Agricoltura 3, Malborghetto Valbruna [46.51235526, 13.4731939]"
+      ],
+      "Malisana": [
+        "L309_CNO2 :: Via Zumello, Malisana [45.81460981, 13.26202618]",
+        "L309_CNO3 :: Viale Guglielmo Marconi, Malisana [45.82203409, 13.27524747]",
+        "L309_CNO4 :: Via Resi Marinotti 7, Malisana [45.82448481, 13.27575108]",
+        "L309_CNO5 :: Via Elio Vittorini, Malisana [45.82294815, 13.27418974]",
+        "L309_CNO6 :: Via della Sorgente, Malisana [45.82192918, 13.27538098]"
+      ],
+      "Maniago": [
+        "E889_CNO2 :: Via dei Mazzoli 4, Maniago [46.14587744, 12.74478393]"
+      ],
+      "Marano Lagunare": [
+        "E910_CNO1 :: Piazza Risanamento 13, Marano Lagunare [45.76481102, 13.16765185]",
+        "E910_CNO2 :: Via San Vito 30, Marano Lagunare [45.76020708, 13.16545354]",
+        "E910_CNO3 :: Via Pietro Giusti 1, Marano Lagunare [45.76792225, 13.1678294]",
+        "E910_CNO4 :: Via Udine 22/1, Marano Lagunare [45.76651188, 13.16805577]",
+        "E910_CNO5 :: Via Unità d'Italia 1, Marano Lagunare [45.76182774, 13.16561631]",
+        "E910_CNO6 :: Via Armando Diaz, Marano Lagunare [45.76369813, 13.16742982]"
+      ],
+      "Mariano Del Friuli": [
+        "E952_CNO2 :: Via Leonardo da Vinci 26, Mariano del Friuli [45.915626, 13.46249083]",
+        "E952_CNO3 :: Via D'Olea, Mariano del Friuli [45.91371976, 13.45937509]",
+        "E952_CNO4 :: Via Campo Sportivo, Mariano del Friuli [45.91976025, 13.48220347]",
+        "E952_CNO5 :: Via Dionoro 2, Mariano del Friuli [45.91718662, 13.45769971]"
+      ],
+      "Martignacco": [
+        "E982_CNO17 :: Via Udine 185, Martignacco [46.08877474, 13.15023412]",
+        "E982_CNO3 :: Via Primo Maggio 7, Martignacco [46.07501153, 13.13950961]",
+        "E982_CNO4 :: Via del Poan 1, Martignacco [46.07360172, 13.12900464]"
+      ],
+      "Medea": [
+        "F081_CNO1 :: Corso Friuli 7, Medea [45.91623917, 13.42262947]",
+        "F081_CNO2 :: Via Fornace, Medea [45.91731589, 13.4237189]",
+        "F081_CNO3 :: Via Ventiquattro Maggio, Medea [45.91716866, 13.42661224]"
+      ],
+      "Meduno": [
+        "F089_CNO2 :: Borgo Mesinis, Meduno [46.18829627, 12.81218457]"
+      ],
+      "Mels": [
+        "C885_CNO3 :: Via della Filanda 2, Mels [46.17636652, 13.10868237]",
+        "C885_CNO4 :: Via della Filanda, Mels [46.17746854, 13.11298017]"
+      ],
+      "Mereto Di Capitolo": [
+        "I248_CNO2 :: Via Claujano 1, Mereto di Capitolo [45.92250681, 13.29575977]",
+        "I248_CNO3 :: Piazza Divisione Julia, Mereto di Capitolo [45.93314216, 13.28853646]",
+        "I248_CNO4 :: Via Aquileia 10, Mereto di Capitolo [45.93214391, 13.29196327]",
+        "I248_CNO6 :: Via Simonetti 1, Mereto di Capitolo [45.93407647, 13.28781412]"
+      ],
+      "Mezzomonte": [
+        "G780_CNO2 :: Vicolo Buset 1, Mezzomonte [46.04993703, 12.49454851]"
+      ],
+      "Moggio Udinese": [
+        "F266_CNO3 :: Via Guglielmo Marconi, Moggio Udinese [46.41257582, 13.19849745]",
+        "F266_CNO5 :: Via Molini, Moggio Udinese [46.40300394, 13.19195195]",
+        "UD_18/01w11 :: Via Rute, Moggio Udinese [46.40516249, 13.18750578]"
+      ],
+      "Monfalcone": [
+        "GO_02/01w11 :: Via dei Bagni Nuova, Monfalcone [45.78529142, 13.53062355]",
+        "GO_02/01w12 :: Via Gorizia, Monfalcone [45.79848322, 13.5296516]",
+        "GO_02/01w21 :: Via Ponziana 29, Monfalcone [45.80439777, 13.52600019]",
+        "GO_02/01w22 :: Via Aulo Manlio 31, Monfalcone [45.80263148, 13.52508536]",
+        "GO_02/01w23 :: Via Aulo Manlio 10, Monfalcone [45.80390999, 13.52501403]",
+        "GO_02/01w24 :: Via della Crociera 36, Monfalcone [45.80085499, 13.52078728]",
+        "GO_02/01w31 :: Via dei Longobardi, Monfalcone [45.801666, 13.54527704]",
+        "GO_02/01w32 :: Via Giacomo Matteotti, Monfalcone [45.80593405, 13.53961209]",
+        "GO_02/01w33 :: Via Brindisi 12, Monfalcone [45.80427113, 13.53134471]",
+        "GO_02/01w34 :: Via San Polo 146, Monfalcone [45.81105057, 13.52258226]",
+        "GO_02/01w41 :: Via Silvano del Missier, Monfalcone [45.81116998, 13.52023716]",
+        "GO_02/01w42 :: Via Nicolò Costanzi 22, Monfalcone [45.80851611, 13.51412533]",
+        "GO_02/01w43 :: Via Francesco Petrarca 15c, Monfalcone [45.81067457, 13.5123717]",
+        "GO_02/01w44 :: Via Ventiquattro Maggio 23, Monfalcone [45.81320688, 13.51238534]"
+      ],
+      "Monrupino": [
+        "F378_CNO2 :: Col, Monrupino [45.72233361, 13.79416675]",
+        "F378_CNO4 :: SR58, Monrupino [45.69672106, 13.82501877]",
+        "F378_CNO5 :: ~SP8, Monrupino [45.72299338, 13.78286698]",
+        "TS_99/01e11 :: Col, Monrupino [45.71651663, 13.80528927]"
+      ],
+      "Monteaperta": [
+        "G736_CNO3 :: Via Monteaperta 84, Monteaperta [46.2726841, 13.31279876]"
+      ],
+      "Montemaggiore": [
+        "G736_CNO1 :: Via Taipana, Montemaggiore [46.24983303, 13.34249337]"
+      ],
+      "Montenars": [
+        "F574_CNO1 :: Via Bulons 12, Montenars [46.25794573, 13.18309157]",
+        "F574_CNO2 :: Via Zampariul 41, Montenars [46.25224905, 13.16562358]"
+      ],
+      "Moraro": [
+        "F710_CNO1 :: Via Francesco Petrarca 21, Moraro [45.9300347, 13.49471631]",
+        "F710_CNO2 :: Via Goffredo Mameli 10, Moraro [45.93120156, 13.4978994]"
+      ],
+      "Morsano Al Tagliamento": [
+        "F750_CNO1 :: Via Latisana 33, Morsano al Tagliamento [45.85743956, 12.93076168]",
+        "F750_CNO2 :: Via dell'Argine 1, Morsano al Tagliamento [45.84724745, 12.96618374]",
+        "F750_CNO3 :: Via Roma 30, Morsano al Tagliamento [45.86010299, 12.92769789]",
+        "F750_CNO4 :: Via San Paolo 48, Morsano al Tagliamento [45.85975397, 12.93186981]",
+        "F750_CNO5 :: Via Milano 10, Morsano al Tagliamento [45.8636529, 12.92473362]",
+        "F750_CNO6 :: Via Ettore Valentinis, Morsano al Tagliamento [45.85973451, 12.92962881]"
+      ],
+      "Morsano Di Strada": [
+        "C327_CNO1 :: Via Trieste 1, Morsano di Strada [45.90455604, 13.21628753]",
+        "C327_CNO2 :: Vicolo Fratelli Basaldella, Morsano di Strada [45.90373002, 13.21519006]"
+      ],
+      "Mortegliano": [
+        "F756_CNO10 :: Piazzale Carlo Alberto dalla Chiesa, Mortegliano [45.94272026, 13.17252705]",
+        "F756_CNO13 :: Via Nuova 10, Mortegliano [45.94719092, 13.17538552]",
+        "F756_CNO2 :: Via Venticinque Aprile, Mortegliano [45.94963354, 13.17509825]",
+        "F756_CNO3 :: Via Gorizia 2, Mortegliano [45.93920053, 13.17303169]",
+        "F756_CNO4 :: Via Martini 14, Mortegliano [45.9422007, 13.17417224]",
+        "F756_CNO5 :: Via Trenta Ottobre 24, Mortegliano [45.94642276, 13.17080626]",
+        "F756_CNO6 :: Vicolo Campo Sportivo 6, Mortegliano [45.9459233, 13.17451238]",
+        "F756_CNO7 :: Via Flumignano 1, Mortegliano [45.94128061, 13.16659355]",
+        "F756_CNO8 :: Via Lestizza 1, Mortegliano [45.95033858, 13.16923961]",
+        "F756_CNO9 :: Piazzale Udine 5, Mortegliano [45.94669156, 13.17835094]"
+      ],
+      "Moruzzo": [
+        "F760_CNO4 :: Via Muriacco 4, Moruzzo [46.12126752, 13.12327121]"
+      ],
+      "Mossa": [
+        "F767_CNO1 :: Via XXIV Maggio 96, Mossa [45.93828113, 13.54725836]",
+        "F767_CNO2 :: Via Blanchis 1, Mossa [45.93876705, 13.55010551]",
+        "F767_CNO3 :: Via Blanchis 5b, Mossa [45.94001858, 13.54983099]",
+        "F767_CNO4 :: giardini, Mossa [45.93476054, 13.54753362]"
+      ],
+      "Muggia": [
+        "F795_CNO1 :: Strada per Chiampore, Muggia [45.59933434, 13.74220906]",
+        "F795_CNO2 :: Strada per Chiampore 6, Muggia [45.60799181, 13.74965173]",
+        "F795_CNO3 :: Strada per Chiampore 27f, Muggia [45.60587054, 13.74706927]",
+        "F795_CNO4 :: Darsella di San Bartolomeo, Muggia [45.60002891, 13.73113306]",
+        "TS_03/02w31 :: Via di Zaule 83, Muggia [45.60237642, 13.80613573]",
+        "TS_03/02w32 :: Via Flavia di Aquilinia, Muggia [45.60095578, 13.80527112]",
+        "TS_03/02w33 :: Via Flavia di Stramare, Muggia [45.59698034, 13.80462289]",
+        "TS_03/02w34 :: Via Flavia di Stramare, Muggia [45.58793515, 13.80338124]",
+        "TS_03/02w41 :: Via del Fugnan 4, Muggia [45.59870663, 13.76667032]",
+        "TS_03/02w42 :: Via dei Berzulla 2, Muggia [45.59873128, 13.76663567]",
+        "TS_03/02w43 :: Via Natale Colarich 91d, Muggia [45.59144708, 13.77573795]",
+        "TS_03/02w51 :: Salita delle Mura 5, Muggia [45.60407703, 13.76511692]",
+        "TS_03/02w52 :: Strada per Fontanella 1, Muggia [45.60546322, 13.75185856]"
+      ],
+      "Muris": [
+        "H161_CNO1 :: Via Osoppo 61, Muris [46.19082885, 13.00150478]",
+        "H161_CNO3 :: Via Ca' Buttazzoni 42, Muris [46.17230323, 12.98064231]",
+        "H161_CNO5 :: Via Volontari della Libertà 18, Muris [46.18328226, 12.96700297]",
+        "H161_CNO6 :: Via Muris 51, Muris [46.18570621, 12.98524617]",
+        "H161_CNO8 :: Via Villuzza 5, Muris [46.17740952, 12.9754382]",
+        "H161_CNO9 :: Via San Daniele 5, Muris [46.17737219, 12.9794461]"
+      ],
+      "Muzzana Del Turgnano": [
+        "F832_CNO1 :: Via Palazzolo 10, Muzzana del Turgnano [45.81528559, 13.12042032]",
+        "F832_CNO2 :: Via Maggiore 1, Muzzana del Turgnano [45.81553496, 13.12543409]",
+        "F832_CNO3 :: Via Roma, Muzzana del Turgnano [45.81716036, 13.12696396]",
+        "F832_CNO4 :: Via Roma, Muzzana del Turgnano [45.81783685, 13.12972116]",
+        "F832_CNO5 :: Via Molino, Muzzana del Turgnano [45.81848269, 13.12915798]",
+        "F832_CNO6 :: Via Castions 3, Muzzana del Turgnano [45.81872925, 13.13234944]"
+      ],
+      "Nespoledo": [
+        "E553_CNO1 :: Via Galleriano 7, Nespoledo [45.98181427, 13.09440057]",
+        "E553_CNO2 :: Via Vittorio Veneto 33, Nespoledo [45.98175928, 13.08833038]"
+      ],
+      "Nogaredo Al Torre": [
+        "I404_CNO1 :: Via Cividale, Nogaredo al Torre [45.89563423, 13.37014294]",
+        "I404_CNO3 :: Via Remis 28, Nogaredo al Torre [45.91952004, 13.36406178]"
+      ],
+      "Nogaredo Di Corno": [
+        "D085_CNO3 :: Via del Ponte 2, Nogaredo di Corno [46.07009164, 13.0253619]"
+      ],
+      "Ontagnano": [
+        "E083_CNO1 :: Piazza Cesare Battisti 15b, Ontagnano [45.900415, 13.27552906]"
+      ],
+      "Orgnese": [
+        "C385_CNO1 :: Via Duchessa d'Aosta 31, Orgnese [46.19193665, 12.77637215]"
+      ],
+      "Orsaria": [
+        "H029_CNO2 :: Via Monte Grappa 4, Orsaria [46.0394109, 13.38085247]",
+        "H029_CNO3 :: Piazza della Concordia, Orsaria [46.03774169, 13.38257273]"
+      ],
+      "Orzano": [
+        "H229_CNO12 :: Casali Battiferro, Orzano [46.07121053, 13.32727262]",
+        "H229_CNO14 :: Via Pietro Zorutti 1, Orzano [46.08436935, 13.31904266]",
+        "H229_CNO16 :: Via della Stazione 59, Orzano [46.08158057, 13.3207455]",
+        "H229_CNO18 :: Strada per Orzano 1, Orzano [46.08319581, 13.3242009]",
+        "H229_CNO7 :: Via Premariacco 2, Orzano [46.06581254, 13.34383396]"
+      ],
+      "Osoppo": [
+        "G163_CNO1 :: Via degli Artigiani 19, Osoppo [46.26937496, 13.09408803]",
+        "UD_02/01e51 :: Via degli Artigiani 1, Osoppo [46.26752502, 13.09135947]"
+      ],
+      "Ovaro": [
+        "G198_CNO1 :: Via Ex Ferrovia 33, Ovaro [46.48293718, 12.86661736]",
+        "G198_CNO2 :: Entrampo, Ovaro [46.50586862, 12.8588278]",
+        "G198_CNO3 :: Via Caduti Due Maggio 102, Ovaro [46.4819393, 12.86620339]",
+        "G198_CNO4 :: Via Carnia Libera 16, Ovaro [46.48641568, 12.86486813]"
+      ],
+      "Palazzolo Dello Stella": [
+        "G268_CNO1 :: Via dei Bini, Palazzolo dello Stella [45.80402392, 13.08170963]",
+        "G268_CNO6 :: Via Fornace del Privilegio, Palazzolo dello Stella [45.79760859, 13.04470538]"
+      ],
+      "Palmanova": [
+        "G284_CNO1 :: Via Molin 12, Palmanova [45.90765415, 13.31249378]",
+        "G284_CNO10 :: Via Corner 18, Palmanova [45.9048203, 13.30810282]",
+        "G284_CNO11 :: Via Corner 1, Palmanova [45.90569704, 13.30796942]",
+        "G284_CNO12 :: Viale della Stazione, Palmanova [45.90710377, 13.29791702]",
+        "G284_CNO2 :: Contrada Garzoni 8a, Palmanova [45.90567775, 13.31298211]",
+        "G284_CNO3 :: Via Loredan 3b, Palmanova [45.90246611, 13.30837392]",
+        "G284_CNO4 :: Contrada Grimani, Palmanova [45.90601026, 13.30537738]",
+        "G284_CNO5 :: Viale Santa Giustina 7, Palmanova [45.9050875, 13.3005048]",
+        "G284_CNO6 :: Via Renier 8, Palmanova [45.90557331, 13.31438798]",
+        "G284_CNO7 :: Ciclovia AlpeAdria (Sentiero degli Spalti), Palmanova [45.89871998, 13.30970232]",
+        "G284_CNO8 :: Contrada Savorgnan 18a, Palmanova [45.90384365, 13.30517569]",
+        "G284_CNO9 :: Via Camilo Benso conte di Cavour 10a, Palmanova [45.90413776, 13.31281039]"
+      ],
+      "Paluzza": [
+        "G300_CNO10 :: Via Pal Piccolo 33, Paluzza [46.53063062, 13.01553042]",
+        "G300_CNO5 :: Via Villa 2, Paluzza [46.53667466, 13.01403208]",
+        "G300_CNO6 :: Via Muses 2, Paluzza [46.56477533, 13.00835025]",
+        "G300_CNO7 :: Via Monte Tersadia 74, Paluzza [46.52960049, 13.01989412]",
+        "G300_CNO8 :: Via Nazionale 2, Paluzza [46.52455105, 13.01031842]",
+        "G300_CNO9 :: Via Nazionale, Paluzza [46.58115313, 13.00610065]"
+      ],
+      "Pantianicco": [
+        "F144_CNO14 :: Via Caterina Percoto 26, Pantianicco [46.02223759, 13.03634553]",
+        "F144_CNO2 :: Via Caterina Percoto 6, Pantianicco [46.02231606, 13.03499936]"
+      ],
+      "Pasiano Di Pordenone": [
+        "G353_CNO1 :: Via Cornizzai 74, Pasiano di Pordenone [45.8595964, 12.59132746]",
+        "G353_CNO2 :: Via Galoppat 65b, Pasiano di Pordenone [45.868213, 12.6217148]",
+        "PN_05/02w11 :: Via dei donatori, Pasiano di Pordenone [45.89055484, 12.61224371]"
+      ],
+      "Passons": [
+        "UD_01/05w51 :: Via Cotonificio 10, Passons [46.07754945, 13.18506894]"
+      ],
+      "Paularo": [
+        "G381_CNO1 :: Via della Scuola, Paularo [46.51614283, 13.12888876]",
+        "G381_CNO4 :: Trelli, Paularo [46.49898584, 13.10189096]",
+        "G381_CNO6 :: Via Giovanni Gortani 1, Paularo [46.50314411, 13.11063161]"
+      ],
+      "Peci": [
+        "I479_CNO1 :: Via Josip Vilfan 2, Peci [45.90211285, 13.57068683]",
+        "I479_CNO2 :: Via Primo Maggio 21, Peci [45.90938059, 13.57967088]"
+      ],
+      "Pers": [
+        "E833_CNO1 :: Via Delle Torbiere 1, Pers [46.17798881, 13.09104626]",
+        "E833_CNO7 :: Via Faross, Pers [46.19497881, 13.0837444]"
+      ],
+      "Perteole": [
+        "H629_CNO2 :: Via Giuseppe Garibaldi 4, Perteole [45.84992561, 13.37680338]",
+        "H629_CNO4 :: Via Rolando Cian 4, Perteole [45.84190974, 13.39771149]",
+        "H629_CNO5 :: Via Giuseppe Verdi 89, Perteole [45.85147305, 13.38431246]",
+        "H629_CNO6 :: Via Roma 3a, Perteole [45.83828313, 13.40019451]",
+        "H629_CNO7 :: Via Volontari della Libertà 28, Perteole [45.84953109, 13.37327775]"
+      ],
+      "Piancada": [
+        "G268_CNO2 :: Via della Laguna 145, Piancada [45.78101776, 13.08465448]",
+        "G268_CNO3 :: Via Fornaci 25, Piancada [45.80047613, 13.08445477]",
+        "G268_CNO4 :: Via Fornaci 27, Piancada [45.80041517, 13.0845064]",
+        "G268_CNO5 :: Via della Laguna 8, Piancada [45.78955845, 13.08465851]"
+      ],
+      "Pinedo": [
+        "C790_CNO6 :: Zona Industriale Pinedo, Pinedo [46.26760072, 12.46330211]"
+      ],
+      "Pioverno  Di Sopra": [
+        "UD_18/01w41 :: Via Antonio Bidernuccio, Pioverno  di Sopra [46.33639359, 13.14035738]"
+      ],
+      "Pioverno": [
+        "L743_CNO1 :: Strada del Fortino, Pioverno [46.33475273, 13.13567274]"
+      ],
+      "Plaino": [
+        "G238_CNO2 :: Via dei Castagni, Plaino [46.09831642, 13.18547001]",
+        "G238_CNO3 :: Via Colugna, Plaino [46.10038394, 13.1810893]",
+        "G238_CNO5 :: Via dell'Asilo, Plaino [46.11115274, 13.18281393]",
+        "G238_CNO9 :: Via Zampis, Plaino [46.1092058, 13.18092361]"
+      ],
+      "Plasencis": [
+        "F144_CNO11 :: Via Aquileia 31, Plasencis [46.06201186, 13.08391471]",
+        "F144_CNO12 :: Via Duca d'Aosta 68, Plasencis [46.06695507, 13.07834216]"
+      ],
+      "Pontebba": [
+        "G831_CNO3 :: Studena Alta, Pontebba [46.51610891, 13.28763111]",
+        "UD_15/01e11 :: Via Giuseppe Verdi 7, Pontebba [46.50778074, 13.30634621]",
+        "UD_15/01e12 :: Piazzale Cesare Battisti, Pontebba [46.50751705, 13.31076845]",
+        "UD_15/01e13 :: Frazione Laglesie San Leopoldo 31, Pontebba [46.50983982, 13.34724613]",
+        "UD_15/01e21 :: Piazza Giuseppe Garibaldi 6, Pontebba [46.50654617, 13.30439636]",
+        "UD_15/01e22 :: Piazza Dante Alighieri 16, Pontebba [46.50592381, 13.30573566]",
+        "UD_15/01e23 :: Via Guglielmo Marconi 48, Pontebba [46.50253677, 13.30417817]",
+        "UD_15/01e24 :: Via Cavour 23, Pontebba [46.49959381, 13.30077704]",
+        "UD_99/01w11 :: Studena Alta, Pontebba [46.51610424, 13.28764989]"
+      ],
+      "Porcia": [
+        "PN_01/05w11 :: Via Aristide Gabelli, Porcia [45.96711127, 12.62674594]",
+        "PN_01/05w12 :: Via del Porto 2, Porcia [45.96834466, 12.62754976]",
+        "PN_01/05w21 :: Via Roveredo, Porcia [45.96957745, 12.61349265]",
+        "PN_01/05w22 :: Rorai Piccolo, Porcia [45.96921051, 12.60313946]",
+        "PN_01/05w23 :: Via Roveredo 61, Porcia [45.97636743, 12.61490673]",
+        "PN_01/05w24 :: Località Borgonuovo - Via Mantova 2, Porcia [45.9766526, 12.61697351]",
+        "PN_01/05w31 :: Via Antonio De Pellegrini, Porcia [45.9585579, 12.60841191]",
+        "PN_01/05w32 :: Via Marco Vietti 2, Porcia [45.96074526, 12.61133053]",
+        "PN_01/05w33 :: Via Gandin, Porcia [45.94409331, 12.59664469]",
+        "PN_01/05w41 :: Rorai Piccolo, Porcia [45.95737042, 12.61894179]",
+        "PN_01/05w42 :: Via Colombera 23, Porcia [45.95452204, 12.61829001]",
+        "PN_01/05w43 :: Via delle Rive 1, Porcia [45.94836875, 12.61740115]",
+        "PN_01/05w51 :: Via Rio Collicelli 1, Porcia [45.95496911, 12.62307325]",
+        "PN_01/05w52 :: Via Goffredo Mameli 1, Porcia [45.95954324, 12.62995438]",
+        "PN_01/05w53 :: Via Cartiera 24, Porcia [45.95956117, 12.63093157]"
+      ],
+      "Pordenone": [
+        "PN_01/01e11 :: Via Sebastiano Caboto 8, Pordenone [45.9623002, 12.66226594]",
+        "PN_01/01e12 :: Via San Valentino 2, Pordenone [45.96442422, 12.66449207]",
+        "PN_01/01e13 :: Via Monte Nero 5, Pordenone [45.96807952, 12.66612213]",
+        "PN_01/01e14 :: Via Monte Canin 4, Pordenone [45.96867235, 12.66563616]",
+        "PN_01/01e21 :: Via Enrico Fermi 12, Pordenone [45.97026799, 12.67001489]",
+        "PN_01/01e22 :: Via Scipio Slataper 15, Pordenone [45.97293669, 12.67409359]",
+        "PN_01/01e23 :: Vial Grande 8d, Pordenone [45.97531214, 12.6736498]",
+        "PN_01/01e24 :: Via Stradelle 11d, Pordenone [45.97314489, 12.67147544]",
+        "PN_01/01e31 :: Via di Ragogna 1, Pordenone [45.96953651, 12.68052482]",
+        "PN_01/01e32 :: Via Monte Grappa, Pordenone [45.96960502, 12.68271159]",
+        "PN_01/01e33 :: Via Borgo Casoni 20a, Pordenone [45.97261319, 12.67933124]",
+        "PN_01/01e34 :: Via Adamello 7, Pordenone [45.97471422, 12.67801413]",
+        "PN_01/01e41 :: Viale della Libertà 98, Pordenone [45.96575605, 12.67563336]",
+        "PN_01/01e42 :: Via Damiano Chiesa 33, Pordenone [45.96778152, 12.67870477]",
+        "PN_01/01e43 :: Via Zara, Pordenone [45.96978075, 12.67537468]",
+        "PN_01/01e44 :: Via Francesco Baracca 9a, Pordenone [45.96849796, 12.67237671]",
+        "PN_01/01w11 :: Via Antonio Molinari 23a, Pordenone [45.96248185, 12.6607767]",
+        "PN_01/01w12 :: Via Felice Cavallotti 44, Pordenone [45.96122321, 12.66115441]",
+        "PN_01/01w13 :: Via Amerigo Vespucci 12, Pordenone [45.96303446, 12.65918599]",
+        "PN_01/01w14 :: Via Torricella 1, Pordenone [45.96081761, 12.66043148]",
+        "PN_01/01w21 :: Viale Guglielmo Marconi 16, Pordenone [45.962186, 12.65745235]",
+        "PN_01/01w22 :: Largo San Giorgio, Pordenone [45.96035685, 12.65782657]",
+        "PN_01/01w23 :: Viale Trento 6, Pordenone [45.95961343, 12.66260265]",
+        "PN_01/01w24 :: Via Santa Caterina, Pordenone [45.96107782, 12.66244954]",
+        "PN_01/01w31 :: Viale della Libertà 3, Pordenone [45.95948022, 12.66485092]",
+        "PN_01/01w32 :: Via Pietro Pomo 2, Pordenone [45.95955873, 12.66616912]",
+        "PN_01/01w33 :: Via Vallona 19a, Pordenone [45.96138822, 12.6644193]",
+        "PN_01/01w34 :: Via Bartolomeo d'Alviano 2, Pordenone [45.96226239, 12.66821803]",
+        "PN_01/01w41 :: Via Daniele Manin 2, Pordenone [45.96281998, 12.66765025]",
+        "PN_01/01w42 :: Viale della Libertà 44g, Pordenone [45.96394147, 12.67004153]",
+        "PN_01/01w43 :: Via Federico Confalonieri 20, Pordenone [45.96742022, 12.67218091]",
+        "PN_01/01w44 :: Via Goffredo Mameli 11, Pordenone [45.96459405, 12.6673979]",
+        "PN_01/02e11 :: Via Marco Polo 14, Pordenone [45.9631502, 12.6581405]",
+        "PN_01/02e12 :: Via San Quirino 24a, Pordenone [45.96664313, 12.65928777]",
+        "PN_01/02e13 :: Via Grado 1f, Pordenone [45.96674359, 12.6569008]",
+        "PN_01/02e14 :: Via Antonio Molinari 41, Pordenone [45.96448239, 12.65693063]",
+        "PN_01/02e21 :: Viale Venezia, Pordenone [45.97213347, 12.66383571]",
+        "PN_01/02e22 :: Via Leo Girolami 1, Pordenone [45.97168747, 12.66021131]",
+        "PN_01/02e23 :: Via Fratelli Rosselli 2, Pordenone [45.97092436, 12.65940923]",
+        "PN_01/02e24 :: Via Interna 42, Pordenone [45.97410931, 12.6584017]",
+        "PN_01/02e31 :: Viale Rotto 2a, Pordenone [45.97051622, 12.65470774]",
+        "PN_01/02e32 :: Via San Quirino 72, Pordenone [45.97321388, 12.65335575]",
+        "PN_01/02e33 :: Via San Quirino 17, Pordenone [45.96881661, 12.65632324]",
+        "PN_01/02e34 :: Via Julia 2, Pordenone [45.96941599, 12.65084452]",
+        "PN_01/02e41 :: Via del Fante 27, Pordenone [45.96542749, 12.65209506]",
+        "PN_01/02e42 :: Via del Fante 11, Pordenone [45.96388142, 12.65003101]",
+        "PN_01/02e43 :: Largo San Giovanni 20, Pordenone [45.96293551, 12.65475282]",
+        "PN_01/02e44 :: Via Antonio Molinari 57, Pordenone [45.96389155, 12.65534511]",
+        "PN_01/02w11 :: Via Ungaresca 62, Pordenone [45.97287387, 12.64704001]",
+        "PN_01/02w12 :: Via Divisione Mario Modotti 11, Pordenone [45.97129683, 12.64867554]",
+        "PN_01/02w13 :: Via dell'Autiere 39, Pordenone [45.97012899, 12.64632804]",
+        "PN_01/02w14 :: Via dell'Autiere 18, Pordenone [45.96822773, 12.64833773]",
+        "PN_01/02w21 :: Via Nicoletta 32, Pordenone [45.96847472, 12.64299463]",
+        "PN_01/02w22 :: Via Marostica 8, Pordenone [45.96680043, 12.64163741]",
+        "PN_01/02w23 :: Via Gerolamo Rorario 17, Pordenone [45.96558542, 12.63934877]",
+        "PN_01/02w24 :: Via Planton 39, Pordenone [45.97070251, 12.64013909]",
+        "PN_01/02w31 :: Via Aprilia 2, Pordenone [45.9695472, 12.63743552]",
+        "PN_01/02w32 :: Via Bassano 1, Pordenone [45.96922169, 12.63573655]",
+        "PN_01/02w33 :: Via Belluno 1, Pordenone [45.96745345, 12.63252543]",
+        "PN_01/02w34 :: Via del Troi 6, Pordenone [45.96657429, 12.63845114]",
+        "PN_01/02w41 :: Via Maggiore 101, Pordenone [45.96308716, 12.64008489]",
+        "PN_01/02w42 :: Via Maniago 2, Pordenone [45.9644724, 12.64616779]",
+        "PN_01/02w43 :: Viale Michelangelo Grigoletti 74, Pordenone [45.9652674, 12.64284163]",
+        "PN_01/02w44 :: Via del Carabiniere 13, Pordenone [45.96694973, 12.64564551]",
+        "PN_01/03e11 :: Via Giovan Battista Damiani 2b, Pordenone [45.95783247, 12.65638223]",
+        "PN_01/03e12 :: Via San Giorgio 1, Pordenone [45.96013467, 12.65713531]",
+        "PN_01/03e13 :: Corso Giuseppe Garibaldi 43c, Pordenone [45.9609468, 12.65617547]",
+        "PN_01/03e14 :: Via Benedetto Cairoli 11, Pordenone [45.96145182, 12.65705278]",
+        "PN_01/03e21 :: Viale Cossetti 14b, Pordenone [45.9585732, 12.66219191]",
+        "PN_01/03e22 :: Vicolo delle Acque, Pordenone [45.95741916, 12.66006938]",
+        "PN_01/03e23 :: Via Giuseppe Galvani 8, Pordenone [45.95734449, 12.65761186]",
+        "PN_01/03e24 :: Via Roma, Pordenone [45.95678774, 12.66164491]",
+        "PN_01/03e31 :: Viale Franco Martelli 47, Pordenone [45.95644118, 12.66447564]",
+        "PN_01/03e32 :: Viale Cossetti, Pordenone [45.95887481, 12.66290461]",
+        "PN_01/03e33 :: Via del Maglio 6, Pordenone [45.95773122, 12.6673428]",
+        "PN_01/03e34 :: Via Revedole 2, Pordenone [45.95720172, 12.67072515]",
+        "PN_01/03e41 :: Via Guglielmo Oberdan 65, Pordenone [45.95702463, 12.65479278]",
+        "PN_01/03e42 :: Piazzale Filanda Marcolin, Pordenone [45.95365157, 12.65901599]",
+        "PN_01/03e43 :: Corso Vittorio Emanuele Secondo 40a, Pordenone [45.95634171, 12.65972647]",
+        "PN_01/03e44 :: Vicolo del Molino 4, Pordenone [45.95547741, 12.6616869]",
+        "PN_01/03w11 :: Via Giovanni da Udine 1, Pordenone [45.96450749, 12.63311538]",
+        "PN_01/03w12 :: Via Maestri Zanelli, Pordenone [45.96409379, 12.63757819]",
+        "PN_01/03w13 :: Via della Ferriera 56, Pordenone [45.96110948, 12.64546988]",
+        "PN_01/03w14 :: Via Codroipo 1, Pordenone [45.96241034, 12.64824474]",
+        "PN_01/03w21 :: Via Tolmezzo 7, Pordenone [45.96109386, 12.65141266]",
+        "PN_01/03w22 :: Via Luigi De Paoli 19, Pordenone [45.9602097, 12.65457249]",
+        "PN_01/03w23 :: Via Guglielmo Oberdan 7, Pordenone [45.9616348, 12.65440456]",
+        "PN_01/03w24 :: Via Rotate 5, Pordenone [45.96327263, 12.65022339]",
+        "PN_01/03w31 :: Via Cappuccini 63, Pordenone [45.95521927, 12.64541678]",
+        "PN_01/03w32 :: Via Cappuccini 87, Pordenone [45.95890184, 12.64205869]",
+        "PN_01/03w33 :: Via Gradisca 1, Pordenone [45.95954299, 12.64157257]",
+        "PN_01/03w34 :: Via Latisana 3, Pordenone [45.958014, 12.64693131]",
+        "PN_01/03w41 :: Via dello Stadio 2, Pordenone [45.95709179, 12.65180213]",
+        "PN_01/03w42 :: Via Cappuccini 11, Pordenone [45.9546066, 12.65404537]",
+        "PN_01/03w43 :: Via Reghena 14, Pordenone [45.95250815, 12.65430481]",
+        "PN_01/03w44 :: Via Cappuccini 49, Pordenone [45.95432039, 12.64862319]",
+        "PN_01/04e11 :: Via Dogana 16, Pordenone [45.94775352, 12.65764932]",
+        "PN_01/04e12 :: Via Pietro Del Zoccolo 17, Pordenone [45.94733236, 12.66070003]",
+        "PN_01/04e13 :: Via Italo Svevo 1a, Pordenone [45.94482875, 12.66214487]",
+        "PN_01/04e14 :: Via Pomponio Amalteo 36, Pordenone [45.94314976, 12.6601563]",
+        "PN_01/04e21 :: Via Carlo Goldoni 12, Pordenone [45.94142872, 12.66951656]",
+        "PN_01/04e22 :: Via Ada Negri 23, Pordenone [45.94049348, 12.66674405]",
+        "PN_01/04e23 :: Via Giacomo Leopardi 19, Pordenone [45.94146477, 12.66805492]",
+        "PN_01/04e24 :: Via Giovanni Pascoli 1, Pordenone [45.94415298, 12.66755405]",
+        "PN_01/04e31 :: Via Ugo Foscolo, Pordenone [45.94402183, 12.66565012]",
+        "PN_01/04e32 :: Via Vecchia di Corva 18, Pordenone [45.94590164, 12.66443359]",
+        "PN_01/04e33 :: Via Lignano 24, Pordenone [45.94825513, 12.6660777]",
+        "PN_01/04e34 :: Via Mestre, Pordenone [45.95184686, 12.66368281]",
+        "PN_01/04e41 :: Via Nuova di Corva 47, Pordenone [45.94809841, 12.66669315]",
+        "PN_01/04e42 :: Via Udine 80, Pordenone [45.94975191, 12.67422174]",
+        "PN_01/04e43 :: Via Nuova di Corva 2, Pordenone [45.95230058, 12.67005781]",
+        "PN_01/04e44 :: Via San Giuliano 21, Pordenone [45.95216737, 12.6678529]",
+        "PN_01/05e11 :: Via Dogana 25, Pordenone [45.94699252, 12.65682868]",
+        "PN_01/05e12 :: Via Bruno Buozzi 1a, Pordenone [45.94571592, 12.65590892]",
+        "PN_01/05e21 :: Via Valle, Pordenone [45.92849074, 12.63951402]",
+        "PN_01/05e22 :: Via del Passo 3, Pordenone [45.92600172, 12.63461107]",
+        "PN_01/06e11 :: Via Antonio Canaletto 4b, Pordenone [45.95338602, 12.67231253]",
+        "PN_01/06e21 :: Via Frazione Villanova 50, Pordenone [45.93612805, 12.68230713]",
+        "PN_01/06e22 :: Via Pravolton 3a, Pordenone [45.94825339, 12.68901624]",
+        "PN_01/06e23 :: Via Musile 13, Pordenone [45.95438892, 12.69365051]",
+        "PN_01/06e24 :: Via Prasecco 46a, Pordenone [45.95161491, 12.6807939]",
+        "PN_10/01w12 :: Via Roveredo 2, Pordenone [45.98688611, 12.63972346]"
+      ],
+      "Postoncicco": [
+        "H999_CNO3 :: Via Stazione 5, Postoncicco [46.02054644, 12.87518664]"
+      ],
+      "Povici Di Sotto": [
+        "H244_CNO1 :: Via Povici di Sotto 2, Povici di sotto [46.38765927, 13.22112656]",
+        "UD_18/01e11 :: Viale Udine, Povici di sotto [46.39379291, 13.22075848]",
+        "UD_18/01e12 :: Viale Udine 19, Povici di sotto [46.39378024, 13.22080598]"
+      ],
+      "Pozzecco": [
+        "A810_CNO1 :: Via Nespoledo, Pozzecco [45.958518, 13.09309931]",
+        "A810_CNO2 :: Piazza Scuole 5/2, Pozzecco [45.95882129, 13.08899946]"
+      ],
+      "Pozzo": [
+        "H891_CNO2 :: Via Alessandro Manzoni 34, Pozzo [46.04920112, 12.8889897]"
+      ],
+      "Pradamano": [
+        "G969_CNO6 :: Via Chino Ermacora 5, Pradamano [46.03339475, 13.30120582]"
+      ],
+      "Pradielis": [
+        "E760_CNO2 :: Crastie, Pradielis [46.2810261, 13.26333149]"
+      ],
+      "Pradis Di Sopra": [
+        "C791_CNO1 :: Via Pradis di Sopra 61a, Pradis di Sopra [46.24551973, 12.90663415]"
+      ],
+      "Pradis": [
+        "F266_CNO1 :: Via Fontana, Pradis [46.40818323, 13.19574715]",
+        "F266_CNO2 :: Via Roma, Pradis [46.41016555, 13.19722656]",
+        "F266_CNO4 :: Via don Domenico Tessitori, Pradis [46.40639258, 13.18886856]",
+        "UD_18/01w21 :: SP112, Pradis [46.43344723, 13.19902671]"
+      ],
+      "Prata Di Pordenone": [
+        "PN_05/02w12 :: Via Friuli 100, Prata di Pordenone [45.8765962, 12.56871862]"
+      ],
+      "Prato Carnico": [
+        "H002_CNO1 :: SR465, Prato Carnico [46.52209207, 12.77274065]",
+        "H002_CNO2 :: Pradumbli, Prato Carnico [46.52013974, 12.80946984]",
+        "H002_CNO3 :: SR465, Prato Carnico [46.52109829, 12.78118057]",
+        "H002_CNO4 :: Pieria 93a, Prato Carnico [46.52053155, 12.80323922]"
+      ],
+      "Pravisdomini": [
+        "H010_CNO2 :: Via Attilio Basso 9, Pravisdomini [45.82021743, 12.66996478]",
+        "H010_CNO3 :: Via Strada Taiariol 1, Pravisdomini [45.7999991, 12.67940951]",
+        "H010_CNO4 :: Panigai, Pravisdomini [45.81461539, 12.68055664]"
+      ],
+      "Precenicco": [
+        "H014_CNO1 :: Via Braidate 1, Precenicco [45.79897707, 13.0732076]",
+        "H014_CNO2 :: Via Pio Paschini 46, Precenicco [45.78760406, 13.07669533]",
+        "H014_CNO3 :: Piazzetta del Borgo, Precenicco [45.78879071, 13.07671175]"
+      ],
+      "Preone": [
+        "H038_CNO1 :: Piazza Maina, Preone [46.39349973, 12.86640273]",
+        "H038_CNO2 :: Via delle Scuole, Preone [46.3953636, 12.86789734]"
+      ],
+      "Prepotto": [
+        "H040_CNO1 :: Via Roma 58, Prepotto [46.04241679, 13.47707947]"
+      ],
+      "Primulacco": [
+        "G949_CNO17 :: Via Giuseppe Verdi 1, Primulacco [46.14445648, 13.27453301]"
+      ],
+      "Priola": [
+        "L018_CNO1 :: Via Liberazione 48, Priola [46.51329663, 12.99337688]",
+        "L018_CNO2 :: Piazzale 22 luglio 1944 1, Priola [46.51380003, 12.99036205]",
+        "L018_CNO3 :: Via Liberazione 2, Priola [46.51396784, 12.99064187]",
+        "L018_CNO4 :: Via dei Molini 40, Priola [46.50901917, 12.99611108]"
+      ],
+      "Prossenicco": [
+        "G736_CNO4 :: Via Brigata Alpina Julia, Prossenicco [46.2265769, 13.4060324]"
+      ],
+      "Pulfero": [
+        "H089_CNO1 :: Via Nazionale, Pulfero [46.17331595, 13.48555678]"
+      ],
+      "Racchiuso": [
+        "A491_CNO2 :: Via Canalutto, Racchiuso [46.1667717, 13.32562578]"
+      ],
+      "Raccolana": [
+        "C656_CNO1 :: Via G. della Mea, Raccolana [46.40786199, 13.31451923]",
+        "C656_CNO4 :: SP76, Raccolana [46.40410519, 13.31696577]",
+        "UD_18/03e11 :: Via Roma, Raccolana [46.40893744, 13.31143299]"
+      ],
+      "Ragogna": [
+        "H161_CNO7 :: Via Castellario 7b, Ragogna [46.16784021, 12.98566262]"
+      ],
+      "Ramuscello": [
+        "I686_CNO2 :: Via Silvio Pellico, Ramuscello [45.87682567, 12.88630641]",
+        "I686_CNO4 :: Via Divisione Julia 1, Ramuscello [45.88386447, 12.8866524]"
+      ],
+      "Raspano": [
+        "B994_CNO1 :: Via Borgo Bello 1, Raspano [46.19219985, 13.17542703]",
+        "B994_CNO2 :: Viale Libertà 57, Raspano [46.19203924, 13.16526723]"
+      ],
+      "Rauscedo": [
+        "H891_CNO5 :: Via la Viuzza 2, Rauscedo [46.03707815, 12.82561212]",
+        "H891_CNO6 :: Via Udine 8, Rauscedo [46.03996959, 12.83018846]",
+        "H891_CNO7 :: Via del Sile 24, Rauscedo [46.04104978, 12.83581817]",
+        "H891_CNO9 :: Via della Chiesa 2, Rauscedo [46.03907723, 12.82740992]"
+      ],
+      "Ravascletto": [
+        "H196_CNO2 :: Via Santo Spirito 25, Ravascletto [46.52445781, 12.92130185]",
+        "H196_CNO3 :: Vicolo Genzianella 2, Ravascletto [46.52443866, 12.92259521]",
+        "H196_CNO4 :: Via Belvedere, Ravascletto [46.52475517, 12.9176581]",
+        "H196_CNO5 :: Via dal Riflorì 4, Ravascletto [46.52656185, 12.92110941]"
+      ],
+      "Raveo": [
+        "H200_CNO1 :: Via Provinciale 8, Raveo [46.43368719, 12.87262183]",
+        "H200_CNO2 :: Via Roma 20/3, Raveo [46.43516643, 12.87164197]"
+      ],
+      "Ravosa": [
+        "G949_CNO28 :: Via Ippolito Nievo 9, Ravosa [46.14910378, 13.29768887]"
+      ],
+      "Reana Del Rojale  Reane Dal Roiâl": [
+        "H206_CNO1 :: Via Chiararis 2, Reana del Rojale / Reane dal Roiâl [46.17575779, 13.24413055]",
+        "H206_CNO2 :: Via San Gervasio 6, Reana del Rojale / Reane dal Roiâl [46.17228455, 13.24301639]"
+      ],
+      "Remanzacco": [
+        "H229_CNO15 :: Via Ziracco, Remanzacco [46.0873415, 13.32301297]",
+        "H229_CNO19 :: Via Treppo, Remanzacco [46.08531423, 13.32466458]",
+        "H229_CNO20 :: Via Giuseppe Marchetti 22, Remanzacco [46.0902185, 13.32468161]",
+        "H229_CNO21 :: Via Guglielmo Marconi 36, Remanzacco [46.08627812, 13.32770955]",
+        "H229_CNO4 :: Vicolo Giacomo Dri 1, Remanzacco [46.08456047, 13.31455593]"
+      ],
+      "Resia  Rezija": [
+        "UD_18/04e11 :: SP42, Resia / Rezija [46.37678639, 13.27853687]"
+      ],
+      "Rigolato": [
+        "H289_CNO1 :: Frazione Ludaria, Rigolato [46.55395677, 12.84620073]",
+        "H289_CNO2 :: Via della Vittoria, Rigolato [46.55227362, 12.85183333]",
+        "H289_CNO3 :: Via della Repubblica 51, Rigolato [46.55004468, 12.85382218]"
+      ],
+      "Rio": [
+        "G381_CNO2 :: Via Nisola, Rio [46.53142895, 13.11703914]",
+        "G381_CNO3 :: Via Roma 87, Rio [46.52655533, 13.12033878]",
+        "G381_CNO5 :: Via Jacopo Linussio 12, Rio [46.53488424, 13.11619693]",
+        "G381_CNO7 :: Via Montello 50, Rio [46.52913897, 13.11819081]",
+        "G381_CNO8 :: Via Monte Pizzul 17, Rio [46.53950192, 13.12696098]"
+      ],
+      "Risano": [
+        "G389_CNO1 :: Via Lumignacco 24, Risano [45.97480154, 13.25020872]",
+        "G389_CNO4 :: Via della Stazione 26, Risano [45.97557842, 13.25991101]"
+      ],
+      "Rive D'Arcano": [
+        "H347_CNO1 :: Via Roma 47, Rive d'Arcano [46.12553404, 13.02927393]",
+        "H347_CNO2 :: Via Principale 36/2, Rive d'Arcano [46.12277316, 13.04871282]"
+      ],
+      "Rivignano Teor  Rivignan Teôr": [
+        "M317_CNO2 :: Via Nazionale Nord 26, Rivignano Teor / Rivignan Teôr [45.84988174, 13.06756103]",
+        "M317_CNO3 :: Via Gioachino Rossini 2, Rivignano Teor / Rivignan Teôr [45.88300578, 13.07245033]",
+        "M317_CNO4 :: Via Scuole 1, Rivignano Teor / Rivignan Teôr [45.86963215, 13.09103357]",
+        "M317_CNO5 :: Via Rive 1, Rivignano Teor / Rivignan Teôr [45.82143247, 13.08188267]",
+        "UD_99/02e11 :: Via Vittorio Emanuele Terzo 59a, Rivignano Teor / Rivignan Teôr [45.81563304, 13.08104802]"
+      ],
+      "Rivis": [
+        "I562_CNO6 :: Via Nazionale 30, Rivis [46.01238194, 12.94086318]"
+      ],
+      "Rivoli": [
+        "E833_CNO16 :: Via Rivoli 83, Rivoli [46.21797005, 13.06661256]"
+      ],
+      "Romans D'Isonzo": [
+        "H514_CNO2 :: Viale Palmanova 1, Romans d'Isonzo [45.89971704, 13.41574589]"
+      ],
+      "Romans": [
+        "L686_CNO1 :: Via Strangulin 9, Romans [45.89978683, 13.0213724]",
+        "L686_CNO4 :: Via Punt dal Crep 12, Romans [45.89331208, 13.00447251]"
+      ],
+      "Ronchi Dei Legionari": [
+        "GO_02/02w14 :: Via Staranzano 34d, Ronchi dei Legionari [45.81440976, 13.50449723]",
+        "GO_02/02w21 :: Via dell'Aeroporto 2a, Ronchi dei Legionari [45.82643193, 13.49783467]",
+        "GO_02/02w22 :: Via della Rotonda 1, Ronchi dei Legionari [45.82432731, 13.50896024]",
+        "GO_02/02w31 :: Via Dante Alighieri 10, Ronchi dei Legionari [45.82875962, 13.50164243]",
+        "GO_02/02w32 :: Via Angelo Cernic, Ronchi dei Legionari [45.83458034, 13.49724956]",
+        "GO_02/02w33 :: Via Pietro Micca, Ronchi dei Legionari [45.84023957, 13.49032005]",
+        "GO_02/02w41 :: Viale Giuseppe Garibaldi 22, Ronchi dei Legionari [45.83287067, 13.50731789]",
+        "GO_02/02w42 :: Via dei Granatieri 5, Ronchi dei Legionari [45.83119636, 13.51036286]",
+        "GO_02/02w43 :: Via della Rotonda, Ronchi dei Legionari [45.82789674, 13.51056099]"
+      ],
+      "Ronchis": [
+        "H533_CNO1 :: Via Bolzedo 1, Ronchis [45.8043834, 12.99538798]",
+        "H533_CNO2 :: Via Giovanni Guerin, Ronchis [45.80635889, 12.99688783]",
+        "H533_CNO4 :: Via Maggiore 35, Ronchis [45.8093106, 12.99334765]",
+        "H533_CNO5 :: Via Maggiore 11, Ronchis [45.80906455, 12.99508123]"
+      ],
+      "Ruda": [
+        "H629_CNO1 :: Via Torre 6, Ruda [45.83871914, 13.40575146]",
+        "H629_CNO3 :: Via Antonio Gramsci 1, Ruda [45.8372132, 13.40174785]"
+      ],
+      "Rupinpiccolo": [
+        "I715_CNO2 :: SP8, Rupinpiccolo [45.73511177, 13.74750944]",
+        "TS_99/01w11 :: Strada regionale Trieste 8 di Monrupino, Rupinpiccolo [45.73190581, 13.74818918]"
+      ],
+      "Saccudello": [
+        "C993_CNO1 :: Via Antonio Freschi 21, Saccudello [45.84525058, 12.88577645]",
+        "C993_CNO2 :: Borgo Madonna, Saccudello [45.84872221, 12.8817456]",
+        "C993_CNO3 :: Vicolo Rivis 12, Saccudello [45.84156729, 12.88102841]",
+        "C993_CNO4 :: Via Roma 15, Saccudello [45.84301178, 12.87851124]",
+        "C993_CNO5 :: Via Saccudello, Saccudello [45.85263218, 12.88630331]",
+        "C993_CNO6 :: Borgo Madonna, Saccudello [45.84908678, 12.88419522]"
+      ],
+      "Sacile": [
+        "H657_CNO1 :: Strada Ponte Francenigo 12a, Sacile [45.91137254, 12.5142555]",
+        "H657_CNO2 :: Via San Giovanni di Livenza, Sacile [45.91284988, 12.51644718]",
+        "PN_09/01e11 :: Via Francesco Amalteo 21, Sacile [45.95774068, 12.51046734]",
+        "PN_09/01e12 :: Via Antonio Gramsci 1, Sacile [45.95984939, 12.51018145]",
+        "PN_09/01e13 :: Via Pier Giuseppe Piccin 2b, Sacile [45.95694774, 12.50231862]",
+        "PN_09/01e14 :: Via Prati di Santa Croce, Sacile [45.9616397, 12.51910696]",
+        "PN_09/01e21 :: Via Virgilio Fasan 1, Sacile [45.95090445, 12.49888989]",
+        "PN_09/01e22 :: Via Ronche 8, Sacile [45.95771145, 12.49360165]",
+        "PN_09/01e31 :: Via San Francesco 1c, Sacile [45.94389104, 12.49314641]",
+        "PN_09/01e32 :: Borgo Schiavoi, Sacile [45.93819978, 12.49774931]",
+        "PN_09/01e33 :: Via Francenigo, Sacile [45.93368648, 12.50192761]",
+        "PN_09/01e41 :: Via Salvo D'Acquisto 9, Sacile [45.94595021, 12.50674355]",
+        "PN_09/01e42 :: Piazza Molise, Sacile [45.94775319, 12.51201359]",
+        "PN_09/01e43 :: Strada Casut 16, Sacile [45.93261341, 12.53626303]"
+      ],
+      "Sagrado  Sagrât  Zegraj": [
+        "H665_CNO2 :: Piazza Giuseppe Mazzini, Sagrado / Sagrât / Zegraj [45.87517556, 13.48584889]",
+        "H665_CNO3 :: Via Giacomo Puccini, Sagrado / Sagrât / Zegraj [45.87387361, 13.48017356]",
+        "H665_CNO5 :: Via Guglielmo Marconi 5, Sagrado / Sagrât / Zegraj [45.87482082, 13.48033598]"
+      ],
+      "Salt": [
+        "G949_CNO27 :: Via Verona, Salt [46.11532152, 13.283621]",
+        "G949_CNO29 :: Piazza San Martino, Salt [46.11365335, 13.28459201]"
+      ],
+      "Sammardenchia": [
+        "UD_16/01e21 :: Piazza Ventiquattro Maggio 1, Sammardenchia [45.98453613, 13.22654215]",
+        "UD_16/01e22 :: Via Divisione Julia 25, Sammardenchia [45.98522223, 13.23049463]"
+      ],
+      "San Dorligo Della Valle": [
+        "D324_CNO10 :: Francovez, San Dorligo della Valle [45.60658382, 13.80920019]",
+        "D324_CNO3 :: Crociata, San Dorligo della Valle [45.59277916, 13.83659731]",
+        "D324_CNO4 :: SP20, San Dorligo della Valle [45.62647811, 13.84141518]",
+        "D324_CNO5 :: Moccò, San Dorligo della Valle [45.62475192, 13.86245383]",
+        "D324_CNO6 :: SP20, San Dorligo della Valle [45.62236093, 13.83671914]",
+        "D324_CNO7 :: Strada regionale Trieste 12b della Rosandra, San Dorligo della Valle [45.60295796, 13.84273729]",
+        "D324_CNO8 :: Moccò, San Dorligo della Valle [45.62458311, 13.85887713]",
+        "D324_CNO9 :: Prebeneg, San Dorligo della Valle [45.58688919, 13.84801677]",
+        "TS_03/02w11 :: SP12c, San Dorligo della Valle [45.60527222, 13.85093413]",
+        "TS_03/02w12 :: Prebeneg, San Dorligo della Valle [45.60066142, 13.85913691]",
+        "TS_03/02w13 :: SP11, San Dorligo della Valle [45.6076541, 13.85647405]",
+        "TS_03/02w14 :: SP11, San Dorligo della Valle [45.6141008, 13.85841263]",
+        "TS_03/02w22 :: SP20, San Dorligo della Valle [45.61489185, 13.82858122]",
+        "TS_03/02w61 :: Francovez, San Dorligo della Valle [45.60773312, 13.81909792]"
+      ],
+      "San Floriano Del Collio": [
+        "H845_CNO1 :: Bivio, San Floriano del Collio [45.97838372, 13.58440067]"
+      ],
+      "San Foca": [
+        "I136_CNO2 :: Piazza Giuseppe Garibaldi 2, San Foca [46.05879072, 12.69213783]",
+        "I136_CNO7 :: Via Casagrande 33, San Foca [46.06041321, 12.69496804]"
+      ],
+      "San Gervasio": [
+        "B788_CNO1 :: Via Canonica 1, San Gervasio [45.80240421, 13.18710033]",
+        "B788_CNO2 :: Via San Gervasio 21, San Gervasio [45.8028868, 13.18270425]",
+        "B788_CNO6 :: Via quattro Novembre 2, San Gervasio [45.80826668, 13.16521616]"
+      ],
+      "San Giovanni Al Natisone": [
+        "H906_CNO1 :: Via Dolegnano di Sotto 36, San Giovanni al Natisone [45.98134944, 13.42543485]",
+        "H906_CNO2 :: Via Dolegnano di Sotto 1, San Giovanni al Natisone [45.98544703, 13.42635036]"
+      ],
+      "San Giovanni In Colle": [
+        "D461_CNO5 :: Via del Tennis, San Giovanni in Colle [46.1161447, 13.07622492]"
+      ],
+      "San Leonardo Valcellina": [
+        "F596_CNO1 :: Via Galet 1, San Leonardo Valcellina [46.09643352, 12.68431679]",
+        "F596_CNO2 :: Via John Fitzgerald Kennedy 1a, San Leonardo Valcellina [46.09685587, 12.68055325]",
+        "PN_99/01e11 :: Via Partidor 3, San Leonardo Valcellina [46.09938298, 12.68762966]",
+        "PN_99/01e21 :: Via Circonvallazione 32, San Leonardo Valcellina [46.09378161, 12.67230413]"
+      ],
+      "San Leonardo": [
+        "H951_CNO1 :: Via Cemur 12, San Leonardo [46.11560672, 13.50527809]",
+        "H951_CNO2 :: SP45, San Leonardo [46.12087212, 13.52192938]"
+      ],
+      "San Lorenzo Isontino": [
+        "H964_CNO1 :: Via Farra 20, San Lorenzo Isontino [45.92739045, 13.52422353]",
+        "H964_CNO2 :: Via Boschetto 3a, San Lorenzo Isontino [45.93284305, 13.52699128]",
+        "H964_CNO3 :: Via Gavinana 20, San Lorenzo Isontino [45.92901795, 13.52717731]",
+        "H964_CNO4 :: Via Udine 13, San Lorenzo Isontino [45.93055622, 13.52645994]"
+      ],
+      "San Lorenzo": [
+        "I562_CNO2 :: Via Chino Ermacora 4, San Lorenzo [45.99777988, 12.99798627]",
+        "I562_CNO7 :: Via dei Molini 16, San Lorenzo [46.00166423, 12.99859607]"
+      ],
+      "San Marco": [
+        "F144_CNO10 :: Via Fabio Simonutti 6, San Marco [46.05581904, 13.0795621]"
+      ],
+      "San Michele Al Tagliamento": [
+        "UD_13/02e11 :: Via Brigolo Alto, San Michele al Tagliamento [45.70053079, 13.024937]",
+        "UD_13/02w11 :: Via San Mauretto, San Michele al Tagliamento [45.79612077, 12.96454478]",
+        "UD_13/02w21 :: Via Malafesta, San Michele al Tagliamento [45.82565092, 12.9669897]"
+      ],
+      "San Odorico Al Tagliamento": [
+        "D630_CNO3 :: Via Piave 8, San Odorico al Tagliamento [46.04538099, 12.93194724]"
+      ],
+      "San Pier D'Isonzo": [
+        "I082_CNO1 :: Via Venticinque Aprile 9, San Pier d'Isonzo [45.84523045, 13.4618915]",
+        "I082_CNO2 :: Via Roma 32, San Pier d'Isonzo [45.84604931, 13.46042793]",
+        "I082_CNO3 :: Via Eugenio Curiel 15, San Pier d'Isonzo [45.84902701, 13.46273127]",
+        "I082_CNO4 :: Via della Montagnola 1, San Pier d'Isonzo [45.84511212, 13.47134708]",
+        "I082_CNO5 :: Via Aquileia 83, San Pier d'Isonzo [45.8420544, 13.4422831]"
+      ],
+      "San Pietro Al Natisone": [
+        "I092_CNO6 :: SS54, San Pietro al Natisone [46.14765773, 13.48948812]"
+      ],
+      "San Quirino": [
+        "I136_CNO1 :: Via Mason 96, San Quirino [46.02934338, 12.67615104]",
+        "I136_CNO6 :: Via Armenteressa 4, San Quirino [46.03391124, 12.68258691]",
+        "I136_CNO9 :: Via Pravisiel, San Quirino [46.0353309, 12.67384802]",
+        "PN_10/05e19 :: Via Pravisiel, San Quirino [46.03533601, 12.67385595]"
+      ],
+      "San Rocco": [
+        "D700_CNO3 :: Via Vidoni 4, San Rocco [46.22721815, 12.99641858]"
+      ],
+      "San Vidotto": [
+        "B483_CNO2 :: Via Roma 8, San Vidotto [45.92646587, 12.94380081]"
+      ],
+      "San Vito Al Tagliamento  San Vît Dal Tiliment": [
+        "PN_11/01e11 :: Via Trieste 11, San Vito al Tagliamento / San Vît dal Tiliment [45.91685818, 12.87183274]",
+        "PN_11/01e12 :: Via Virginia Tonelli 'Luisa' 14, San Vito al Tagliamento / San Vît dal Tiliment [45.9154976, 12.87842792]",
+        "PN_11/01e13 :: Via Madonna di Rosa, San Vito al Tagliamento / San Vît dal Tiliment [45.91870837, 12.86705827]",
+        "PN_11/01e14 :: Viale Divisione Garibaldi 8/4, San Vito al Tagliamento / San Vît dal Tiliment [45.91059397, 12.87041558]",
+        "PN_11/01e21 :: Piazzale Taliano Linteris 7, San Vito al Tagliamento / San Vît dal Tiliment [45.91270522, 12.85509684]",
+        "PN_11/01e22 :: Via Giuseppe Giusti 6, San Vito al Tagliamento / San Vît dal Tiliment [45.91064589, 12.84821536]",
+        "PN_11/01e23 :: Via Savorgnano 20b, San Vito al Tagliamento / San Vît dal Tiliment [45.90812095, 12.85635552]",
+        "PN_11/01e24 :: Via dello Sport, San Vito al Tagliamento / San Vît dal Tiliment [45.91607813, 12.84374321]",
+        "PN_11/01e31 :: Piazzale Ermes di Colloredo 3, San Vito al Tagliamento / San Vît dal Tiliment [45.92479788, 12.84352722]",
+        "PN_11/01e32 :: Via San Carlo, San Vito al Tagliamento / San Vît dal Tiliment [45.92684955, 12.84069792]"
+      ],
+      "Sant'Andrat Del Cormor": [
+        "L039_CNO4 :: Via Camillo Benso conte di Cavour 44, Sant'Andrat del Cormor [45.92013238, 13.15468259]"
+      ],
+      "Santa Margherita Del Gruagno": [
+        "E982_CNO11 :: Via Cividina 100, Santa Margherita del Gruagno [46.09926869, 13.14216238]",
+        "E982_CNO14 :: Via Semide 1, Santa Margherita del Gruagno [46.09631047, 13.13879286]",
+        "E982_CNO5 :: Via Casali Lavia 92, Santa Margherita del Gruagno [46.10309716, 13.13942285]",
+        "E982_CNO8 :: Via Cividina 280, Santa Margherita del Gruagno [46.1017025, 13.15651851]",
+        "E982_CNO9 :: Via Cividina 183, Santa Margherita del Gruagno [46.10082843, 13.1497667]",
+        "F760_CNO2 :: Via della Rotonda, Santa Margherita del Gruagno [46.12078593, 13.12815442]",
+        "F760_CNO3 :: Telezae, Santa Margherita del Gruagno [46.11785329, 13.16385535]"
+      ],
+      "Santa Maria Di Sclaunicco": [
+        "E553_CNO3 :: Via Isonzo 54, Santa Maria di Sclaunicco [45.97320412, 13.16251708]",
+        "E553_CNO5 :: Via Mortegliano 18, Santa Maria di Sclaunicco [45.96906141, 13.15977039]",
+        "E553_CNO6 :: Via Montello 48, Santa Maria di Sclaunicco [45.96894435, 13.15526395]",
+        "E553_CNO9 :: Via Santa Maria 3, Santa Maria di Sclaunicco [45.95827068, 13.14108343]"
+      ],
+      "Santa Marizza": [
+        "L686_CNO2 :: Via del Bosco, Santa Marizza [45.88557892, 12.99531377]"
+      ],
+      "Sappada": [
+        "I421_CNO1 :: Borgata Cima Sappada, Sappada [46.56925815, 12.72140584]",
+        "I421_CNO10 :: Borgata Bach, Sappada [46.566559, 12.68579657]",
+        "I421_CNO11 :: Borgata Bach, Sappada [46.56546365, 12.68738446]",
+        "I421_CNO2 :: Borgata Lerpa, Sappada [46.56604524, 12.66625673]",
+        "I421_CNO3 :: Borgata Lerpa, Sappada [46.56495291, 12.67060118]",
+        "I421_CNO4 :: Borgata Palù 183, Sappada [46.56680633, 12.68684273]",
+        "I421_CNO5 :: Borgata Fontana, Sappada [46.56838248, 12.69867515]",
+        "I421_CNO6 :: Borgata Mulbach, Sappada [46.56720365, 12.6899351]",
+        "I421_CNO7 :: Borgata Palù, Sappada [46.56407418, 12.67894639]",
+        "I421_CNO8 :: Borgata Granvilla, Sappada [46.56497133, 12.67714593]",
+        "I421_CNO9 :: Borgata Soravia, Sappada [46.5694432, 12.70199138]"
+      ],
+      "Sauris Di Sopra": [
+        "I464_CNO1 :: SP73, Sauris di Sopra [46.46550058, 12.69398796]",
+        "I464_CNO2 :: SP73, Sauris di Sopra [46.46672933, 12.70826741]"
+      ],
+      "Savogna": [
+        "I478_CNO1 :: Via John Fitzgerald Kennedy 3, Savogna [46.15621097, 13.52876187]"
+      ],
+      "Savorgnano Del Torre": [
+        "G949_CNO19 :: Via Generale Cantore 2, Savorgnano del Torre [46.16505685, 13.26516942]",
+        "G949_CNO24 :: Via Principale 4, Savorgnano del Torre [46.16392944, 13.26913605]",
+        "G949_CNO25 :: Via Maurino 1a, Savorgnano del Torre [46.1633155, 13.26981033]"
+      ],
+      "Sclaunicco": [
+        "E553_CNO10 :: Via San Giovanni Bosco, Sclaunicco [45.97592279, 13.13923811]",
+        "E553_CNO11 :: Via Basiliano 19/1, Sclaunicco [45.98026557, 13.13667157]"
+      ],
+      "Sedrano": [
+        "I136_CNO10 :: Via Braida 1, Sedrano [46.05239571, 12.66957945]",
+        "I136_CNO4 :: Via Passeggio della Roggia, Sedrano [46.0379176, 12.67842184]",
+        "I136_CNO5 :: Piazza Roma, Sedrano [46.03577602, 12.67965604]",
+        "I136_CNO8 :: Via della Chiesa 39, Sedrano [46.05390855, 12.66192311]",
+        "PN_10/01w11 :: Piazza Roma, Sedrano [46.03570986, 12.67979295]"
+      ],
+      "Selvuzzis": [
+        "UD_16/01e31 :: Via Enrico Fermi, Selvuzzis [45.993032, 13.30733311]"
+      ],
+      "Sesto Al Reghena": [
+        "I686_CNO13 :: Via Zona Industriale, Sesto al Reghena [45.85422066, 12.80910202]",
+        "I686_CNO5 :: Via Giotto di Bondone 86, Sesto al Reghena [45.85502249, 12.80373986]",
+        "I686_CNO7 :: Via Levada 25, Sesto al Reghena [45.84744334, 12.81942149]",
+        "I686_CNO8 :: Via Zanardini 6, Sesto al Reghena [45.84671828, 12.81607425]"
+      ],
+      "Silvella": [
+        "I405_CNO1 :: Via Plasencis 10, Silvella [46.09062384, 13.06809759]",
+        "I405_CNO2 :: Via San Daniele 102, Silvella [46.09430427, 13.06395455]",
+        "I405_CNO3 :: Via Divisione Julia 1, Silvella [46.08841464, 13.04751886]",
+        "I405_CNO4 :: Via Divisione Julia 22, Silvella [46.09045544, 13.05563559]"
+      ],
+      "Socchieve": [
+        "I777_CNO1 :: Via Roma 1, Socchieve [46.4026345, 12.82543609]",
+        "I777_CNO2 :: Nonta, Socchieve [46.39686672, 12.84852668]"
+      ],
+      "Somplago": [
+        "C389_CNO3 :: Via Alessandro Volta 21, Somplago [46.34256187, 13.06821553]"
+      ],
+      "Spilimbergo": [
+        "I904_CNO1 :: Via Antonio Bozzer 3, Spilimbergo [46.08422537, 12.8708264]",
+        "I904_CNO2 :: Via Monte Hermada 5, Spilimbergo [46.08780418, 12.86865588]",
+        "PN_12/01e11 :: Via della Roggia 11b, Spilimbergo [46.11593043, 12.90309615]",
+        "PN_12/01e12 :: Via Marco Ciriani 4, Spilimbergo [46.1151124, 12.90129701]",
+        "PN_12/01e13 :: Via Venticinque Aprile 16, Spilimbergo [46.10727892, 12.90416804]",
+        "PN_12/01e14 :: Via Case Sparse Gradisca 17, Spilimbergo [46.08465222, 12.89986098]",
+        "PN_12/01e21 :: Via Renzo de Felice 4, Spilimbergo [46.11954401, 12.89955331]",
+        "PN_12/01e22 :: Via Filanda Vecchia 9, Spilimbergo [46.11894586, 12.90211055]",
+        "PN_12/01e23 :: Via Antonio Andreuzzi 2, Spilimbergo [46.11636128, 12.89919675]",
+        "PN_12/01e24 :: Via Ostolidi, Spilimbergo [46.12976153, 12.90084783]",
+        "PN_12/01e31 :: ~Via generale Luigi Cadorna, Spilimbergo [46.12418176, 12.88322906]",
+        "PN_12/01e32 :: Via Michelangelo Buonarroti 35, Spilimbergo [46.11586964, 12.8938369]",
+        "PN_12/01e33 :: Via Cavalleggeri di Saluzzo 12, Spilimbergo [46.10858888, 12.87006344]"
+      ],
+      "Stregna": [
+        "I974_CNO1 :: Zamir, Stregna [46.12580431, 13.56364897]"
+      ],
+      "Susans": [
+        "E833_CNO2 :: Via degli Artigiani 6, Susans [46.181555, 13.05555185]",
+        "E833_CNO3 :: Via dei Borghi 16, Susans [46.19281739, 13.04768416]",
+        "E833_CNO4 :: Via San Donato milanese 2, Susans [46.17830921, 13.03701904]",
+        "E833_CNO5 :: Via Pietro Zorutti 25, Susans [46.18938105, 13.06906501]",
+        "E833_CNO9 :: Via del Castello, Susans [46.18794918, 13.05233209]"
+      ],
+      "Tarcento": [
+        "L050_CNO1 :: Via Belvedere 44a, Tarcento [46.21643155, 13.24472033]"
+      ],
+      "Tarvisio": [
+        "L057_CNO10 :: Via Duomo, Tarvisio [46.51079556, 13.53314092]",
+        "L057_CNO11 :: Via Valcanale, Tarvisio [46.50932859, 13.53022936]",
+        "L057_CNO2 :: Via C. B. Cavour, Tarvisio [46.49629828, 13.65992155]",
+        "L057_CNO5 :: Via Giuseppe Garibaldi, Tarvisio [46.44218503, 13.57220856]",
+        "L057_CNO6 :: Überwasser - Oltreaqua - Sant'Antonio, Tarvisio [46.50353391, 13.62382035]",
+        "L057_CNO7 :: SS54, Tarvisio [46.43970647, 13.57097908]",
+        "L057_CNO9 :: Via Molino, Tarvisio [46.50844968, 13.52239372]",
+        "UD_24/01e11 :: Via Roma, Tarvisio [46.50528805, 13.57650589]",
+        "UD_24/01e12 :: Via Romana, Tarvisio [46.50620176, 13.57680123]",
+        "UD_24/01e13 :: Via Romana, Tarvisio [46.50611977, 13.58827052]",
+        "UD_24/01e14 :: Via Romana, Tarvisio [46.51309, 13.60407656]",
+        "UD_24/01e21 :: Via Giuseppe Parini, Tarvisio [46.50546118, 13.56983973]",
+        "UD_24/01e22 :: Via Priesnig, Tarvisio [46.50210982, 13.57055049]",
+        "UD_24/01e23 :: SS13, Tarvisio [46.50656407, 13.56181096]",
+        "UD_24/01e24 :: Via Alpi Giulie 49, Tarvisio [46.50646659, 13.55226125]",
+        "UD_24/01e31 :: Via Vittorio Veneto, Tarvisio [46.50398526, 13.58359158]",
+        "UD_24/01e32 :: Via Vittorio Veneto 162, Tarvisio [46.50433437, 13.58076234]",
+        "UD_24/01e33 :: Via Ludmilla Tarmann, Tarvisio [46.50447287, 13.57594849]",
+        "UD_24/01e34 :: Via Dante Alighieri, Tarvisio [46.50471038, 13.59314322]"
+      ],
+      "Terenzano": [
+        "UD_16/01e11 :: Via Giuseppe Ellero, Terenzano [46.00676218, 13.21358005]",
+        "UD_16/01e12 :: Via Giuseppe Verdi, Terenzano [46.0062895, 13.21895913]",
+        "UD_16/01e13 :: Via Roma 51, Terenzano [46.00342716, 13.21725903]",
+        "UD_16/01e14 :: Via Giuseppe Verdi, Terenzano [46.00631231, 13.21895594]"
+      ],
+      "Terzo D'Aquileia": [
+        "L144_CNO1 :: Via Eugenio Curiel 60, Terzo d'Aquileia [45.80433506, 13.34330053]",
+        "L144_CNO2 :: Via 25 aprile, Terzo d'Aquileia [45.80022038, 13.34342086]",
+        "L144_CNO3 :: Viale 20 settembre, Terzo d'Aquileia [45.79967978, 13.33786232]",
+        "L144_CNO4 :: Via Mezzana, Terzo d'Aquileia [45.79854213, 13.33801827]",
+        "L144_CNO5 :: Via della Fontana, Terzo d'Aquileia [45.80160698, 13.34456082]",
+        "L144_CNO6 :: Piazza Libertà, Terzo d'Aquileia [45.79859559, 13.35009222]"
+      ],
+      "Tesis": [
+        "M096_CNO1 :: Via della Roggia, Tesis [46.11162803, 12.7892684]",
+        "M096_CNO2 :: Via Arba 14, Tesis [46.11426468, 12.78913004]"
+      ],
+      "Tissano": [
+        "I248_CNO1 :: Via Borgo di Sopra, Tissano [45.955938, 13.26708094]"
+      ],
+      "Tolmezzo": [
+        "L195_CNO1 :: Via Mignezza, Tolmezzo [46.44735206, 13.0404969]",
+        "L195_CNO2 :: Piazza Caduti della Libertà, Tolmezzo [46.45420493, 13.03715172]",
+        "UD_23/01e11 :: Via Carso 21, Tolmezzo [46.42811998, 13.05631157]",
+        "UD_23/01e12 :: Cazzaso, Tolmezzo [46.42513538, 12.99303988]",
+        "UD_23/01e13 :: Piazza Indipendenza 8, Tolmezzo [46.43177049, 12.99412335]"
+      ],
+      "Tomba": [
+        "F144_CNO9 :: Piazza Gian Domenico Bertoli 9, Tomba [46.04993935, 13.04199755]"
+      ],
+      "Torreano": [
+        "L246_CNO1 :: Via delle Scuole, Torreano [46.13096722, 13.43379795]",
+        "L246_CNO2 :: Via Pietro Zorutti 1b, Torreano [46.11800331, 13.4068102]",
+        "L246_CNO3 :: Viale John Fitzgerald Kennedy 1, Torreano [46.11214731, 13.40872962]",
+        "L246_CNO4 :: Via Mosedai 16, Torreano [46.12606254, 13.42870613]",
+        "L246_CNO5 :: Via Ronchis 4, Torreano [46.11989453, 13.42117406]"
+      ],
+      "Torsa": [
+        "G743_CNO1 :: Roveredo, Torsa [45.87372998, 13.11554103]",
+        "G743_CNO2 :: Via Leonardo da Vinci 2, Torsa [45.87724163, 13.11766443]",
+        "G743_CNO3 :: Via Venezia 33, Torsa [45.87489174, 13.11758055]"
+      ],
+      "Torviscosa": [
+        "L309_CNO1 :: Fornelli di Sopra, Torviscosa [45.82837381, 13.28070885]"
+      ],
+      "Tramonti Di Sopra": [
+        "L324_CNO1 :: Via Tramonti di Sotto 1, Tramonti di Sopra [46.30786895, 12.78915381]"
+      ],
+      "Tramonti Di Sotto": [
+        "L325_CNO1 :: Strada Provinciale 54 di Chievolis, Tramonti di Sotto [46.25299226, 12.73952506]",
+        "L325_CNO2 :: Via Tramit 4, Tramonti di Sotto [46.28407469, 12.79543511]",
+        "L325_CNO3 :: Via Pielli 2, Tramonti di Sotto [46.29755449, 12.80079896]"
+      ],
+      "Trasaghis": [
+        "L335_CNO1 :: Via Griffen 14, Trasaghis [46.279699, 13.07350413]",
+        "L335_CNO2 :: Via Rojatas 1, Trasaghis [46.3148724, 13.05294901]",
+        "L335_CNO3 :: Via Borgo Genio 2, Trasaghis [46.31740576, 13.05420036]",
+        "L335_CNO4 :: Via Campolongo 1, Trasaghis [46.25725858, 13.04100617]",
+        "L335_CNO5 :: Via Nazionale 15, Trasaghis [46.31766723, 13.05228883]",
+        "L335_CNO6 :: Via Maggiore 20, Trasaghis [46.29199747, 13.05083784]",
+        "L335_CNO7 :: Via dei Lecci 1, Trasaghis [46.28318006, 13.08896674]",
+        "L335_CNO8 :: Via dei Brancs 10, Trasaghis [46.32340567, 13.06425588]"
+      ],
+      "Trieste": [
+        "L424_CNO10 :: SP1, Trieste [45.64481924, 13.862487]",
+        "L424_CNO11 :: Altipiano Ovest, Trieste [45.70293555, 13.73338356]",
+        "L424_CNO13 :: Altipiano Est, Trieste [45.65913163, 13.83995575]",
+        "L424_CNO2 :: Via Srečko Kosovel 13, Trieste [45.64214791, 13.86327378]",
+        "L424_CNO3 :: Altipiano Ovest, Trieste [45.70817769, 13.73445976]",
+        "L424_CNO4 :: Strada Lucaviz, Trieste [45.70569345, 13.73204509]",
+        "L424_CNO7 :: SP19, Trieste [45.66409937, 13.84885574]",
+        "L424_CNO8 :: SP1, Trieste [45.65710867, 13.8393586]",
+        "L424_CNO9 :: Via San Nazario 80, Trieste [45.70210932, 13.73825785]",
+        "TS_01/01e11 :: Via Tibullo 2, Trieste [45.65703218, 13.78241863]",
+        "TS_01/01e12 :: Via Catullo 6, Trieste [45.65731549, 13.78257575]",
+        "TS_01/01e13 :: Via del Coroneo 34, Trieste [45.6561327, 13.78228822]",
+        "TS_01/01e14 :: Via del Coroneo 38, Trieste [45.65619415, 13.7826831]",
+        "TS_01/01e21 :: Vicolo del Castagneto 2, Trieste [45.65647861, 13.78653415]",
+        "TS_01/01e22 :: Via Fabio Severo 63a, Trieste [45.65635188, 13.78645847]",
+        "TS_01/01e23 :: Via Fabio Severo 64, Trieste [45.65647178, 13.78660348]",
+        "TS_01/01e24 :: Vicolo del Castagneto 10, Trieste [45.65684076, 13.78669973]",
+        "TS_01/01e31 :: Via Antonio Stoppani 4, Trieste [45.65584466, 13.78523701]",
+        "TS_01/01e32 :: Via San Francesco d'Assisi 70, Trieste [45.6561606, 13.78437536]",
+        "TS_01/01e33 :: Via del Ronco 8, Trieste [45.65588267, 13.78378481]",
+        "TS_01/01e34 :: Via Luigi Galvani 3, Trieste [45.65546418, 13.78655607]",
+        "TS_01/01e41 :: Via Galileo Galilei 10, Trieste [45.6556264, 13.78717647]",
+        "TS_01/01e42 :: Via di Cologna 14, Trieste [45.65535927, 13.78775467]",
+        "TS_01/01e43 :: Via Galileo Galilei 22, Trieste [45.65429796, 13.78757364]",
+        "TS_01/01e44 :: Via di Cologna 1, Trieste [45.65423706, 13.78586512]",
+        "TS_01/01w11 :: Via del Coroneo 19, Trieste [45.65436295, 13.77981549]",
+        "TS_01/01w12 :: Via Francesco Rismondo 8, Trieste [45.65456912, 13.78113542]",
+        "TS_01/01w13 :: Via Marco Tullio Cicerone, Trieste [45.65387814, 13.77826354]",
+        "TS_01/01w14 :: Barriera Nuova, Trieste [45.65541625, 13.77853864]",
+        "TS_01/01w21 :: Via Pierluigi da Palestrina 12, Trieste [45.65245356, 13.77939801]",
+        "TS_01/01w22 :: Via Pierluigi da Palestrina 4, Trieste [45.65309439, 13.77884813]",
+        "TS_01/01w23 :: Via San Francesco d'Assisi 9b, Trieste [45.65264579, 13.77821655]",
+        "TS_01/01w24 :: Via Cesare Battisti 1, Trieste [45.65182909, 13.77834571]",
+        "TS_01/01w31 :: Via Ruggero Timeus 2, Trieste [45.65169495, 13.78006121]",
+        "TS_01/01w32 :: Viale Venti Settembre 11, Trieste [45.65167808, 13.7793163]",
+        "TS_01/01w33 :: Viale Venti Settembre 26, Trieste [45.65224942, 13.78154665]",
+        "TS_01/01w34 :: Via Francesco Crispi 26, Trieste [45.65125749, 13.78035331]",
+        "TS_01/01w41 :: Via Cesare Battisti 26/1, Trieste [45.65341462, 13.78209135]",
+        "TS_01/01w42 :: Via Cesare Battisti 26c, Trieste [45.65357358, 13.78193197]",
+        "TS_01/01w43 :: Via Guido Zanetti, Trieste [45.65307081, 13.78084502]",
+        "TS_01/01w44 :: Via Guido Zanetti, Trieste [45.65380807, 13.78008667]",
+        "TS_01/02e11 :: Salita a Conconello 1, Trieste [45.66725824, 13.78791268]",
+        "TS_01/02e12 :: Via dei Giaggioli 31, Trieste [45.66590089, 13.78394702]",
+        "TS_01/02e13 :: Strada Provinciale 35 di Opicina, Trieste [45.6785555, 13.80361709]",
+        "TS_01/02e21 :: Via del Sommacco 1, Trieste [45.66742133, 13.79885092]",
+        "TS_01/02e22 :: Via dei Baiardi 97, Trieste [45.66788254, 13.79790287]",
+        "TS_01/02e23 :: Via Alfonso Valerio 79, Trieste [45.66209887, 13.80466274]",
+        "TS_01/02e24 :: Via Alfonso Valerio 79, Trieste [45.66207543, 13.80471112]",
+        "TS_01/02w11 :: Via Cesare dell'Acqua, Trieste [45.63022518, 13.80369638]",
+        "TS_01/02w12 :: Via Brigata Casale 142, Trieste [45.63479875, 13.80753418]",
+        "TS_01/02w13 :: Strada di Fiume 124, Trieste [45.63762422, 13.8016806]",
+        "TS_01/02w21 :: Via dei Moreri 6, Trieste [45.66698533, 13.77256603]",
+        "TS_01/02w22 :: Via dei Moreri 140, Trieste [45.66846543, 13.77460391]",
+        "TS_01/02w23 :: Via dei Moreri 25/1, Trieste [45.66863376, 13.77584744]",
+        "TS_01/02w24 :: Via Sara Davis 3, Trieste [45.66491634, 13.77234939]",
+        "TS_01/02w31 :: Strada del Friuli, Trieste [45.6794752, 13.76221522]",
+        "TS_01/02w32 :: Via Giuseppe Bernardi 1, Trieste [45.68526809, 13.75686483]",
+        "TS_01/02w33 :: Strada Costiera, Trieste [45.70676415, 13.71613883]",
+        "TS_01/02w34 :: Strada Costiera 16, Trieste [45.71098323, 13.71330013]",
+        "TS_02/01e11 :: Via Flavia 56, Trieste [45.62024799, 13.80965111]",
+        "TS_02/01e12 :: Via Giuseppe Di Vittorio 3/2, Trieste [45.62124012, 13.80978609]",
+        "TS_02/01e13 :: Via Giuseppe Di Vittorio 6, Trieste [45.62204535, 13.80819937]",
+        "TS_02/01e14 :: Via Giuseppe Di Vittorio, Trieste [45.62237704, 13.80732085]",
+        "TS_02/01e21 :: Via Giacomo Puccini 2, Trieste [45.6233408, 13.79976498]",
+        "TS_02/01e22 :: Via Pietro Mascagni 18, Trieste [45.62267466, 13.80059695]",
+        "TS_02/01e23 :: Via Pietro Mascagni 1/5, Trieste [45.62156414, 13.80031394]",
+        "TS_02/01e24 :: Via Bernardo Benussi 2, Trieste [45.62226598, 13.80553059]",
+        "TS_02/01e31 :: Via Di Giarizzole 13, Trieste [45.6198431, 13.79777286]",
+        "TS_02/01e32 :: Piazzale di Giarizzole, Trieste [45.62175611, 13.79612138]",
+        "TS_02/01e33 :: Via Cesare Rossi 27, Trieste [45.62019942, 13.79421054]",
+        "TS_02/01e34 :: Via Cesare Rossi 33/4, Trieste [45.61946175, 13.79223771]",
+        "TS_02/01e41 :: Via San Pantaleone 22, Trieste [45.62177206, 13.79522711]",
+        "TS_02/01e42 :: Strada Vecchia dell'Istria, Trieste [45.62249621, 13.79816895]",
+        "TS_02/01e43 :: Strada Vecchia dell'Istria 64, Trieste [45.62375912, 13.79647705]",
+        "TS_02/01e44 :: Via Fianona 17, Trieste [45.62605651, 13.79526756]",
+        "TS_02/01w11 :: Via Silvio Negri 1, Trieste [45.62648109, 13.81004318]",
+        "TS_02/01w12 :: Via Monte Peralba 19, Trieste [45.62772466, 13.81891437]",
+        "TS_02/01w13 :: Via Monte Mangart, Trieste [45.62852005, 13.81979323]",
+        "TS_02/01w14 :: Via delle Alpi Giulie, Trieste [45.63036848, 13.82158271]",
+        "TS_02/01w21 :: Erta di Sant'Anna 30, Trieste [45.62625211, 13.8089634]",
+        "TS_02/01w22 :: Via Lorenzo da Ponte 2, Trieste [45.62414907, 13.80943884]",
+        "TS_02/01w23 :: Via Antonio Vivaldi 1, Trieste [45.62535902, 13.80501474]",
+        "TS_02/01w24 :: Via Arcangelo Corelli 14, Trieste [45.62499859, 13.8049421]",
+        "TS_02/01w31 :: Via Bernardo Benussi 4, Trieste [45.62359097, 13.80521946]",
+        "TS_02/01w32 :: Via Giacomo Puccini 52, Trieste [45.62341698, 13.80367975]",
+        "TS_02/01w33 :: Via Giovanni Paisiello 5/20, Trieste [45.62439476, 13.80313223]",
+        "TS_02/01w34 :: Via Domenico Cimarosa 3, Trieste [45.62401728, 13.80329715]",
+        "TS_02/01w41 :: Via Gerolamo Frescobaldi 4, Trieste [45.62581533, 13.80327581]",
+        "TS_02/01w42 :: Via Gerolamo Frescobaldi, Trieste [45.62557617, 13.80117261]",
+        "TS_02/01w43 :: Via Giovanni Paisiello, Trieste [45.6246557, 13.79911117]",
+        "TS_02/01w44 :: Via Riccardo Zandonai 8, Trieste [45.62384814, 13.7993252]",
+        "TS_03/02w23 :: Via Edoardo Gardoni 15, Trieste [45.61588528, 13.83015388]"
+      ],
+      "Turriaco": [
+        "L474_CNO1 :: Via Guglielmo Marconi 11, Turriaco [45.82031576, 13.44774322]",
+        "L474_CNO2 :: Via Roma 18, Turriaco [45.82144517, 13.44241649]",
+        "L474_CNO3 :: Via don Francesco Cosani 32, Turriaco [45.82330964, 13.44871947]",
+        "L474_CNO4 :: Via Aquileia 38, Turriaco [45.81734153, 13.44370888]",
+        "L474_CNO5 :: Via Guglielmo Oberdan 53, Turriaco [45.8219525, 13.44668357]",
+        "L474_CNO6 :: Via Piave 21, Turriaco [45.82431255, 13.4416829]",
+        "L474_CNO7 :: Via Guglielmo Marconi 14, Turriaco [45.82031204, 13.44950368]"
+      ],
+      "Turrida": [
+        "I562_CNO4 :: Via Solferino 24, Turrida [46.02929547, 12.93539749]"
+      ],
+      "Udine": [
+        "L483_CNO1 :: Via Manzano, Udine [46.01208724, 13.26713411]",
+        "UD_01/01e11 :: Via Piave, Udine [46.0621639, 13.24021473]",
+        "UD_01/01e12 :: Via Bertaldia 72a, Udine [46.06043336, 13.24674294]",
+        "UD_01/01e13 :: Via Vincenzo Manzini, Udine [46.06098254, 13.24446238]",
+        "UD_01/01e14 :: Via Larga, Udine [46.06037894, 13.24386831]",
+        "UD_01/01e21 :: Via Buttrio 1, Udine [46.06052319, 13.24801705]",
+        "UD_01/01e22 :: Viale Ungheria 131, Udine [46.05874009, 13.24509831]",
+        "UD_01/01e23 :: Via Giuseppe Parini 12, Udine [46.05958134, 13.24565459]",
+        "UD_01/01e24 :: Via Vincenzo Manzini 49, Udine [46.05842134, 13.24765744]",
+        "UD_01/01e31 :: Largo delle Grazie 7, Udine [46.06772038, 13.23898866]",
+        "UD_01/01e32 :: Via Treppo 10a, Udine [46.06446024, 13.24069537]",
+        "UD_01/01e33 :: Via generale Antonio Chinotto 15, Udine [46.06375725, 13.24441163]",
+        "UD_01/01e34 :: Via Trento 9, Udine [46.06537817, 13.2431456]",
+        "UD_01/01e41 :: Via Duino, Udine [46.07013527, 13.24511514]",
+        "UD_01/01e42 :: Via Cividale 59, Udine [46.06936288, 13.24836492]",
+        "UD_01/01e43 :: Via Bersaglio 32, Udine [46.0682208, 13.24367229]",
+        "UD_01/01e44 :: Via Cividale 31, Udine [46.06888713, 13.24684538]",
+        "UD_01/01w11 :: Via Daniele Manin 13, Udine [46.06375999, 13.23734695]",
+        "UD_01/01w12 :: Via Bonaldo Stringher, Udine [46.06181127, 13.23602418]",
+        "UD_01/01w13 :: Via Artico di Prampero 13, Udine [46.061191, 13.23809043]",
+        "UD_01/01w14 :: Via Vittorio Veneto 46, Udine [46.06188715, 13.2390819]",
+        "UD_01/01w21 :: Largo Antonio Bardelli 17, Udine [46.06169279, 13.2321555]",
+        "UD_01/01w22 :: Via Paolo Canciani 1, Udine [46.06278991, 13.23331253]",
+        "UD_01/01w23 :: Via Cecilia Deganutti 21, Udine [46.06445066, 13.23185397]",
+        "UD_01/01w24 :: Via Cavour 13, Udine [46.0621593, 13.23428138]",
+        "UD_01/01w31 :: Via Raimondo D'Aronco 18, Udine [46.06519989, 13.23182874]",
+        "UD_01/01w32 :: Via del Monte 2, Udine [46.06378469, 13.23444675]",
+        "UD_01/01w33 :: Via Paolo Sarpi, Udine [46.06433662, 13.23322671]",
+        "UD_01/01w34 :: Largo dei Pecile, Udine [46.06454428, 13.23221003]",
+        "UD_01/01w41 :: Piazza Primo Maggio, Udine [46.06484004, 13.23760541]",
+        "UD_01/01w42 :: Via Liruti, Udine [46.06781214, 13.23571904]",
+        "UD_01/01w43 :: Via Cicogna 52, Udine [46.0686144, 13.23276549]",
+        "UD_01/01w44 :: Vicolo della Banca 3, Udine [46.065836, 13.23428862]",
+        "UD_01/02e11 :: Via Giosuè Carducci 36, Udine [46.05958995, 13.24028645]",
+        "UD_01/02e12 :: Via della Rosta 7, Udine [46.05951468, 13.24114949]",
+        "UD_01/02e13 :: Via Aquileia 31, Udine [46.06015773, 13.24161026]",
+        "UD_01/02e14 :: Via Zoletti 2a, Udine [46.05966488, 13.24252275]",
+        "UD_01/02e21 :: Via Roma 64, Udine [46.05646493, 13.24190269]",
+        "UD_01/02e22 :: Viale Giacomo Leopardi 118, Udine [46.05823817, 13.24143567]",
+        "UD_01/02e23 :: Via Roma 6a, Udine [46.05762535, 13.24117899]",
+        "UD_01/02e24 :: Via Aquileia, Udine [46.05855466, 13.24398396]",
+        "UD_01/02e31 :: Via Romeo Battistig 27, Udine [46.05711591, 13.24005494]",
+        "UD_01/02e32 :: Via Teobaldo Ciconi 16, Udine [46.05761337, 13.23800066]",
+        "UD_01/02e33 :: Via Ippolito Nievo 21, Udine [46.05647916, 13.2370439]",
+        "UD_01/02e34 :: Viale Europa Unita, Udine [46.05565769, 13.23804039]",
+        "UD_01/02e41 :: Via Grazzano 74, Udine [46.05695575, 13.23118202]",
+        "UD_01/02e42 :: Via Cussignacco 44, Udine [46.05795477, 13.23493504]",
+        "UD_01/02e43 :: Viale delle Ferriere 2, Udine [46.05549339, 13.23648593]",
+        "UD_01/02e44 :: Via Cisis 46, Udine [46.05581315, 13.23265244]",
+        "UD_01/02w11 :: Via Caltanissetta 3, Udine [46.05153519, 13.22970134]",
+        "UD_01/02w12 :: Via Grazzano 152, Udine [46.0555872, 13.23022503]",
+        "UD_01/02w13 :: Piazzale Gio Batta Cella, Udine [46.05388381, 13.22917937]",
+        "UD_01/02w14 :: Via Santo Stefano, Udine [46.04998879, 13.22760735]",
+        "UD_01/02w21 :: Via Pozzuolo 60, Udine [46.05158976, 13.22638394]",
+        "UD_01/02w22 :: Via Paolo Fistulario 17, Udine [46.04831848, 13.22500172]",
+        "UD_01/02w23 :: Via San Osvaldo 42/6, Udine [46.04747115, 13.2213818]",
+        "UD_01/02w24 :: Via Modica 18, Udine [46.04853898, 13.22870681]",
+        "UD_01/02w31 :: Via Attimis 1, Udine [46.04418805, 13.21716788]",
+        "UD_01/02w32 :: Via Basaldella 158, Udine [46.03897555, 13.21768712]",
+        "UD_01/02w33 :: Via Pozzuolo 111, Udine [46.04681895, 13.22160476]",
+        "UD_01/02w34 :: Via 3 novembre 1918 6, Udine [46.04389632, 13.22151363]",
+        "UD_01/02w41 :: Via Bicinicco 5, Udine [46.03795063, 13.23356654]",
+        "UD_01/02w42 :: Via Pozzuolo 269, Udine [46.04072524, 13.22173782]",
+        "UD_01/02w43 :: Via San Pietro 28, Udine [46.04574829, 13.22798848]",
+        "UD_01/02w44 :: Via Pocenia 41, Udine [46.04429561, 13.22853113]",
+        "UD_01/03e11 :: Piazzale 26 luglio 1866 19, Udine [46.06029548, 13.22791857]",
+        "UD_01/03e12 :: Viale del Ledra 19a, Udine [46.06161261, 13.22803751]",
+        "UD_01/03e13 :: Via Marco Volpe 16, Udine [46.06210982, 13.22914241]",
+        "UD_01/03e14 :: Via Podgora 13, Udine [46.05854575, 13.22301108]",
+        "UD_01/03e21 :: Via Bezzecca 92, Udine [46.06457452, 13.22461257]",
+        "UD_01/03e22 :: Via Galileo Galilei 22, Udine [46.06629737, 13.22301646]",
+        "UD_01/03e23 :: Via Quarto 17, Udine [46.06207929, 13.22197337]",
+        "UD_01/03e24 :: Viale del Ledra 22, Udine [46.06267687, 13.22765914]",
+        "UD_01/03e31 :: Via Casarsa 1, Udine [46.05773711, 13.21852298]",
+        "UD_01/03e32 :: Via Dalmazio Birago 53, Udine [46.0574411, 13.21261748]",
+        "UD_01/03e33 :: Viale Firenze, Udine [46.05925193, 13.21970036]",
+        "UD_01/03e34 :: Via Enrico Toti 9, Udine [46.05533072, 13.21227735]",
+        "UD_01/03e41 :: Via San Rocco, Udine [46.05146872, 13.20990423]",
+        "UD_01/03e42 :: Via Pertoldo 8, Udine [46.05165783, 13.21111179]",
+        "UD_01/03e43 :: Via Francesco Baracca 2, Udine [46.05272102, 13.21455204]",
+        "UD_01/03e44 :: Via Pellegrino Secondo, Udine [46.05017349, 13.21401022]",
+        "UD_01/03w11 :: Largo Antonio Bardelli, Udine [46.06176997, 13.23262998]",
+        "UD_01/03w12 :: Via Francesco Crispi 67, Udine [46.05939596, 13.23679344]",
+        "UD_01/03w13 :: Piazza Giuseppe Garibaldi, Udine [46.05953995, 13.23345411]",
+        "UD_01/03w14 :: Via Poscolle 26, Udine [46.0612367, 13.23118114]",
+        "UD_01/03w21 :: Vicolo del Paradiso 1, Udine [46.05862435, 13.23197552]",
+        "UD_01/03w22 :: Via Poscolle, Udine [46.06110877, 13.23084146]",
+        "UD_01/03w23 :: Viale Venezia, Udine [46.05932547, 13.22628562]",
+        "UD_01/03w24 :: Viale Giuseppe Duodo 87, Udine [46.05990258, 13.22872327]",
+        "UD_01/03w31 :: Viale Giuseppe Duodo, Udine [46.05641323, 13.22908582]",
+        "UD_01/03w32 :: Via San Rocco 37, Udine [46.05794015, 13.22548579]",
+        "UD_01/03w33 :: Via della Cisterna, Udine [46.05797195, 13.22953085]",
+        "UD_01/03w34 :: Via Volturno 43, Udine [46.0559871, 13.22774722]",
+        "UD_01/03w41 :: Via Cecilia Gradenigo Sabbadini 55, Udine [46.05607515, 13.22381973]",
+        "UD_01/03w42 :: Via Nervesa 21, Udine [46.05531804, 13.21958638]",
+        "UD_01/03w43 :: Via della Roggia 19, Udine [46.05429995, 13.22191666]",
+        "UD_01/03w44 :: Via della Valle 5b, Udine [46.05465458, 13.22003328]",
+        "UD_01/04e11 :: Via Planis 105, Udine [46.07585071, 13.24783238]",
+        "UD_01/04e12 :: Via Monte Nero 45, Udine [46.07422056, 13.24334093]",
+        "UD_01/04e13 :: Via Planis 77, Udine [46.07393405, 13.24598098]",
+        "UD_01/04e14 :: Via Planis 30, Udine [46.07119534, 13.24190281]",
+        "UD_01/04e21 :: Via Tarvisio 2, Udine [46.07276713, 13.23553897]",
+        "UD_01/04e22 :: Via Codroipo 24, Udine [46.07166217, 13.23541062]",
+        "UD_01/04e23 :: Via Isonzo 2, Udine [46.07269467, 13.23928958]",
+        "UD_01/04e24 :: Via Lodovico Uccellis 1, Udine [46.07047258, 13.23576949]",
+        "UD_01/04e31 :: Via Ermes di Colloredo 42, Udine [46.07166858, 13.23250633]",
+        "UD_01/04e32 :: Viale San Daniele 47, Udine [46.07113306, 13.23356515]",
+        "UD_01/04e33 :: Via Tiberio Deciani 1, Udine [46.06929829, 13.23390948]",
+        "UD_01/04e34 :: Via della Vittoria 8, Udine [46.07035636, 13.23509212]",
+        "UD_01/04e41 :: Via Nimis 64, Udine [46.07652673, 13.23002502]",
+        "UD_01/04e42 :: Via Nimis 11, Udine [46.07533153, 13.23418521]",
+        "UD_01/04e43 :: Via Faedis 45, Udine [46.07749092, 13.23171033]",
+        "UD_01/04e44 :: Via Tolmezzo 16, Udine [46.07719121, 13.2345851]",
+        "UD_01/04w11 :: Via Francesco Mantica 40, Udine [46.06804103, 13.22985455]",
+        "UD_01/04w12 :: Via Anton Lazzaro Moro 38, Udine [46.06904313, 13.22951308]",
+        "UD_01/04w13 :: Via Tiberio Deciani 107, Udine [46.06869097, 13.23032189]",
+        "UD_01/04w14 :: Via Divisione Julia 32, Udine [46.06977026, 13.23192481]",
+        "UD_01/04w21 :: Via Marco Volpe, Udine [46.06523828, 13.22681403]",
+        "UD_01/04w22 :: Via Fabio Asquini 11, Udine [46.06483338, 13.23043798]",
+        "UD_01/04w23 :: Via Superiore 47, Udine [46.06748047, 13.22840128]",
+        "UD_01/04w24 :: Via Villalta 59, Udine [46.06628074, 13.22744433]",
+        "UD_01/04w31 :: Via Arturo Malignani 1, Udine [46.06944681, 13.22700131]",
+        "UD_01/04w32 :: Viale Leonardo da Vinci 25, Udine [46.06847274, 13.22313915]",
+        "UD_01/04w33 :: Via padre Reginaldo Giuliani, Udine [46.07258238, 13.22380172]",
+        "UD_01/04w34 :: Via Alessandro Volta 1, Udine [46.07018917, 13.22464985]",
+        "UD_01/04w41 :: Via Pordenone 47, Udine [46.07279665, 13.23222007]",
+        "UD_01/04w42 :: Via Moggio, Udine [46.07402285, 13.2329484]",
+        "UD_01/04w43 :: Via Pontebba, Udine [46.07418582, 13.22780993]",
+        "UD_01/04w44 :: Via Pordenone 89, Udine [46.07252505, 13.2291825]",
+        "UD_01/05e11 :: Via Martignacco 111, Udine [46.07373356, 13.22032908]",
+        "UD_01/05e12 :: Via del Cotonificio 49, Udine [46.07656755, 13.22101737]",
+        "UD_01/05e13 :: Via Angelo Angeli 56, Udine [46.07074494, 13.21965333]",
+        "UD_01/05e14 :: Via Angelo Angeli 11, Udine [46.07008167, 13.22115861]",
+        "UD_01/05e21 :: Via Gherardo Freschi, Udine [46.08055337, 13.21893086]",
+        "UD_01/05e22 :: Via Gherardo Freschi 30, Udine [46.08197862, 13.22088788]",
+        "UD_01/05e23 :: Via Friuli, Udine [46.08270925, 13.22324678]",
+        "UD_01/05e24 :: Via Gherardo Freschi, Udine [46.08058793, 13.2191328]",
+        "UD_01/05e31 :: Via Colugna 189, Udine [46.0867052, 13.21495237]",
+        "UD_01/05e32 :: Via Colugna 149, Udine [46.08501398, 13.21835473]",
+        "UD_01/05e33 :: Via Buia 19, Udine [46.08561078, 13.22564141]",
+        "UD_01/05e34 :: Via Colugna 81, Udine [46.08261517, 13.22378345]",
+        "UD_01/05e41 :: Via Fagagna 35, Udine [46.08358388, 13.210703]",
+        "UD_01/05e42 :: Via Bergamo 45, Udine [46.0840769, 13.20533725]",
+        "UD_01/05e43 :: Via Brescia 13, Udine [46.08577055, 13.2008675]",
+        "UD_01/05e44 :: Via Sondrio 77, Udine [46.08615197, 13.20448234]",
+        "UD_01/05w11 :: Via Francesco Dormisch 117, Udine [46.0721256, 13.21648679]",
+        "UD_01/05w12 :: Via Luigi Galvani 37, Udine [46.06918402, 13.21737254]",
+        "UD_01/05w13 :: Via della Faula 93, Udine [46.07121572, 13.21347704]",
+        "UD_01/05w14 :: Via Gian Battista Natolini 19, Udine [46.07035121, 13.21515583]",
+        "UD_01/05w21 :: Via Chisimaio 23, Udine [46.07124003, 13.21054995]",
+        "UD_01/05w22 :: Via Pio Vittorio Ferrari 32, Udine [46.07241867, 13.20721887]",
+        "UD_01/05w23 :: Via San Domenico 7, Udine [46.0683476, 13.21051377]",
+        "UD_01/05w24 :: Via Latina, Udine [46.06960326, 13.20956867]",
+        "UD_01/05w31 :: Via Val Raccolana, Udine [46.0747937, 13.20945415]",
+        "UD_01/05w32 :: Piazzale Repubblica Argentina, Udine [46.07729748, 13.20215951]",
+        "UD_01/05w33 :: Piazzale Berengario I, Udine [46.07302898, 13.20458796]",
+        "UD_01/05w34 :: Via Massimo Misani 17, Udine [46.07197168, 13.20513512]",
+        "UD_01/05w41 :: Via Mantova, Udine [46.07892674, 13.20894652]",
+        "UD_01/05w42 :: Via Val di Resia 11, Udine [46.07647535, 13.20693277]",
+        "UD_01/05w43 :: Viale Pier Paolo Pasolini, Udine [46.07689036, 13.21283784]",
+        "UD_01/05w44 :: Piazzale Carnia 19, Udine [46.07518496, 13.2105014]",
+        "UD_01/06e11 :: Via Brigata Re 3, Udine [46.0720601, 13.25547918]",
+        "UD_01/06e12 :: Via Tagliamento 16, Udine [46.07409639, 13.25045204]",
+        "UD_01/06e13 :: Via Pisino 1, Udine [46.07005327, 13.25006145]",
+        "UD_01/06e14 :: Via dello Stella 23, Udine [46.07204428, 13.24980737]",
+        "UD_01/06e21 :: Via Pola 28, Udine [46.06561915, 13.2476842]",
+        "UD_01/06e22 :: Via Arturo Zardini 8, Udine [46.06860518, 13.25182776]",
+        "UD_01/06e23 :: Via Pola 109, Udine [46.0672626, 13.25256813]",
+        "UD_01/06e24 :: Via Vittorio Alfieri 47, Udine [46.06287285, 13.24684152]",
+        "UD_01/06e31 :: Via Piazza d'Armi 72, Udine [46.06529389, 13.25387463]",
+        "UD_01/06e32 :: Via del Bon 101, Udine [46.06376304, 13.2542102]",
+        "UD_01/06e33 :: Via del Bon 3, Udine [46.0633374, 13.24760114]",
+        "UD_01/06e34 :: Via del Bon 138, Udine [46.06458054, 13.25741215]",
+        "UD_01/06e41 :: Via Valeggio, Udine [46.06101338, 13.25204447]",
+        "UD_01/06e42 :: Casali Osellin, Udine [46.06203467, 13.25249913]",
+        "UD_01/06e43 :: Via Buttrio 131, Udine [46.05815857, 13.25456765]",
+        "UD_01/06e44 :: Via Monzambano 68, Udine [46.06234114, 13.25965238]",
+        "UD_01/06e51 :: Via Prasingel 4, Udine [46.05454698, 13.25941283]",
+        "UD_01/06e52 :: Via Buttrio 307, Udine [46.05078624, 13.2659479]",
+        "UD_01/06e53 :: Via Odorico Susanna 65, Udine [46.0505136, 13.25979618]",
+        "UD_01/06w11 :: Via Aiello 26, Udine [46.05633475, 13.25133622]",
+        "UD_01/06w12 :: Via Varese 33, Udine [46.05447622, 13.24134623]",
+        "UD_01/06w13 :: Via Pradamano 4a, Udine [46.05597752, 13.24765799]",
+        "UD_01/06w14 :: Via del Vascello, Udine [46.05517782, 13.24592026]",
+        "UD_01/06w21 :: Via Bernardo De Rubeis, Udine [46.05454366, 13.23714922]",
+        "UD_01/06w22 :: Via Marsala, Udine [46.05185923, 13.23844304]",
+        "UD_01/06w23 :: Via della Bainsizza 24, Udine [46.04892799, 13.23937515]",
+        "UD_01/06w24 :: Via Generale Carlo Zucchi 36, Udine [46.0493389, 13.24299662]",
+        "UD_01/06w31 :: Viale Palmanova, Udine [46.05373333, 13.24660914]",
+        "UD_01/06w32 :: Via Luca Carlevaris, Udine [46.0527904, 13.24800742]",
+        "UD_01/06w33 :: Via della Madonnetta 53, Udine [46.04969993, 13.24520043]",
+        "UD_01/06w34 :: Viale Palmanova 139, Udine [46.04885839, 13.24873026]",
+        "UD_01/06w41 :: Via Pradamano 63, Udine [46.05246144, 13.25596581]",
+        "UD_01/06w42 :: Via Arnaldo Piutti, Udine [46.05130605, 13.25499147]",
+        "UD_01/06w43 :: Via Monfalcone 2, Udine [46.05473937, 13.24989609]",
+        "UD_01/06w44 :: Piazzale Giovanni Battista Cavalcaselle 12, Udine [46.05310526, 13.25191675]",
+        "UD_01/06w51 :: Via Gervasutta 87, Udine [46.04406555, 13.23671623]",
+        "UD_01/06w52 :: Via Veneto 23, Udine [46.03810397, 13.24902909]",
+        "UD_01/06w53 :: Via Sant'Ulderico 4, Udine [46.03291303, 13.25650031]",
+        "UD_01/07e11 :: Via Codroipo 85, Udine [46.07477141, 13.23918652]",
+        "UD_01/07e12 :: Via Tarcento 26, Udine [46.07602963, 13.23559776]",
+        "UD_01/07e13 :: Via Monte Rombon 53, Udine [46.07685013, 13.23910085]",
+        "UD_01/07e14 :: Via Monte Grappa 5, Udine [46.07739388, 13.23700865]",
+        "UD_01/07e21 :: Via Giuseppe Marcotti 18, Udine [46.08022032, 13.23575021]",
+        "UD_01/07e22 :: Via Fernando Franzolini 26, Udine [46.08010669, 13.23852929]",
+        "UD_01/07e23 :: Via Monte Grappa 42, Udine [46.07707433, 13.2408771]",
+        "UD_01/07e24 :: Via Monte Ortigara 27, Udine [46.07795805, 13.2374547]",
+        "UD_01/07e31 :: Via Monte Cimone 3, Udine [46.08156677, 13.24455689]",
+        "UD_01/07e32 :: Via Medea 2, Udine [46.08120796, 13.23994911]",
+        "UD_01/07e33 :: Via Monte San Gabriele 52, Udine [46.08175007, 13.24269305]",
+        "UD_01/07e34 :: Via Giovanni Battista Tiepolo 80, Udine [46.07719844, 13.24421788]",
+        "UD_01/07e41 :: Via Reana 12, Udine [46.08096513, 13.23273639]",
+        "UD_01/07e42 :: Via Monte Vodice 2, Udine [46.08301927, 13.23384413]",
+        "UD_01/07e43 :: Via Colugna, Udine [46.07903033, 13.23300253]",
+        "UD_01/07e44 :: Via Tricesimo 3, Udine [46.07930682, 13.23453997]",
+        "UD_01/07w11 :: Via Biella 4, Udine [46.08849044, 13.24323924]",
+        "UD_01/07w12 :: Via Torino 48, Udine [46.08690936, 13.23818863]",
+        "UD_01/07w13 :: Via Molin Nuovo 38, Udine [46.08911486, 13.23930351]",
+        "UD_01/07w14 :: Piazzale Dora Bassi, Udine [46.09672936, 13.23937816]",
+        "UD_01/07w21 :: Via Saluzzo 12, Udine [46.08781096, 13.23645871]",
+        "UD_01/07w22 :: Via Tricesimo 111, Udine [46.08979907, 13.23235675]",
+        "UD_01/07w23 :: Via Piemonte, Udine [46.08646806, 13.23281954]",
+        "UD_01/07w24 :: Via Aosta 4, Udine [46.08391717, 13.2359029]",
+        "UD_01/07w31 :: Via Tavagnacco 92, Udine [46.09254688, 13.22829845]",
+        "UD_01/07w32 :: Via Tavagnacco 12a, Udine [46.08864053, 13.22954674]",
+        "UD_01/07w33 :: Via Feletto 154, Udine [46.08751099, 13.22864602]",
+        "UD_01/07w34 :: Via del Tunnel 1, Udine [46.08474301, 13.23162275]",
+        "UD_01/07w41 :: Via del Tunnel 28, Udine [46.08410093, 13.22959438]",
+        "UD_01/07w42 :: Via Moimacco 22, Udine [46.0835258, 13.22730588]",
+        "UD_01/08e11 :: Via Monte Forno 9, Udine [46.08386753, 13.2437103]",
+        "UD_01/08e12 :: Viale Vât 56, Udine [46.08502999, 13.24427239]",
+        "UD_01/08e13 :: Via Pallanza 15, Udine [46.09000234, 13.24471799]",
+        "UD_01/08e14 :: Via Emilia 10a, Udine [46.08801361, 13.24910799]",
+        "UD_01/08e21 :: Via Fermo Solari, Udine [46.09748285, 13.25835081]",
+        "UD_01/08e22 :: Via Liguria 208, Udine [46.10116831, 13.26244632]",
+        "UD_01/08e23 :: Via Liguria 321, Udine [46.10332867, 13.26880528]",
+        "UD_01/08e24 :: Via Bariglaria 258, Udine [46.09281104, 13.26734315]",
+        "UD_01/08e31 :: Via Emilia 62, Udine [46.08834434, 13.26014111]",
+        "UD_01/08e32 :: Via Emilia 101, Udine [46.09131269, 13.27022962]",
+        "UD_01/08e33 :: Via Bariglaria 197, Udine [46.08939091, 13.26964916]",
+        "UD_01/08e34 :: Via Bariglaria, Udine [46.07848092, 13.27609969]",
+        "UD_01/08e41 :: Viale Divisione Garibaldi-Osoppo 34, Udine [46.07838761, 13.27035528]",
+        "UD_01/08e42 :: Via Cefalonia 34, Udine [46.07963249, 13.26977654]",
+        "UD_01/08w11 :: Via delle Acque 56, Udine [46.07676425, 13.25218171]",
+        "UD_01/08w12 :: Via Riccardo di Giusto 140, Udine [46.07954442, 13.25959893]",
+        "UD_01/08w13 :: Via Gio Batta Periz 9, Udine [46.07850522, 13.25973288]",
+        "UD_01/08w14 :: Via Luigi Sbaiz 5, Udine [46.07701167, 13.26111202]",
+        "UD_01/08w21 :: Via Vittorio Cadel 28, Udine [46.07919718, 13.26609159]",
+        "UD_01/08w22 :: Viale Divisione Garibaldi-Osoppo 11, Udine [46.07729921, 13.26752126]",
+        "UD_01/08w23 :: Via Cividale 410, Udine [46.072283, 13.26233946]",
+        "UD_01/08w24 :: Via Adige, Udine [46.07460819, 13.25720324]",
+        "UD_01/08w31 :: Via Morosina 29, Udine [46.07028248, 13.26829952]",
+        "UD_01/08w32 :: Via Cividale 482, Udine [46.07306403, 13.26632565]",
+        "UD_01/08w33 :: Via Cividale 598, Udine [46.07501244, 13.27349655]",
+        "UD_01/08w34 :: Via Tolmino 13, Udine [46.0750594, 13.27925227]",
+        "UD_01/08w41 :: Via Antonio Carneo, Udine [46.07595771, 13.27883404]",
+        "UD_01/08w42 :: Via Venezuela 2, Udine [46.07824094, 13.27828219]",
+        "UD_01/08w43 :: Via Cividale 716a, Udine [46.0757448, 13.27989412]",
+        "UD_01/08w44 :: Via Cividale, Udine [46.07575744, 13.28380453]",
+        "UD_01/11w11 :: Via Latina 1/24, Udine [46.06823724, 13.2100071]",
+        "UD_01/15e11 :: Via Cividina 41, Udine [46.09899459, 13.235491]"
+      ],
+      "Vajont": [
+        "M265_CNO1 :: Viale Santi Gervasio e Protasio 1, Vajont [46.14503558, 12.69511757]"
+      ],
+      "Valeriano": [
+        "G680_CNO1 :: Via generale Antonio Cantore, Valeriano [46.16910187, 12.92069416]",
+        "G680_CNO2 :: Via Venti Settembre 72, Valeriano [46.18318109, 12.94508196]",
+        "G680_CNO3 :: Via Venti Settembre 86b, Valeriano [46.18282007, 12.94414526]",
+        "G680_CNO4 :: Via Roma, Valeriano [46.16827655, 12.91751141]"
+      ],
+      "Valvasone Arzene": [
+        "M346_CNO1 :: Via Sant'Elena 76, Valvasone Arzene [45.99675969, 12.86010026]",
+        "M346_CNO2 :: Via Trento, Valvasone Arzene [45.9953282, 12.86811069]",
+        "M346_CNO3 :: Via Trieste 9c, Valvasone Arzene [45.9932204, 12.86731979]",
+        "M346_CNO4 :: Piazza Mercato 12, Valvasone Arzene [45.99644654, 12.86243462]",
+        "M346_CNO5 :: Via Trieste 27, Valvasone Arzene [45.99154693, 12.86675461]",
+        "M346_CNO6 :: Via del Mattino, Valvasone Arzene [45.99865452, 12.85632117]",
+        "M346_CNO7 :: Via Vecchia Postale 11, Valvasone Arzene [45.98480806, 12.83376796]",
+        "M346_CNO8 :: Via della Villa 72/2, Valvasone Arzene [45.99630987, 12.85083963]",
+        "M346_CNO9 :: Via Sant'Elena 2, Valvasone Arzene [46.00116672, 12.84716227]"
+      ],
+      "Variano": [
+        "A700_CNO2 :: Via Torino 11, Variano [46.02739901, 13.10882955]",
+        "A700_CNO4 :: Via Trieste 24, Variano [46.02681108, 13.11688011]"
+      ],
+      "Vedronza": [
+        "E760_CNO3 :: Crastie, Vedronza [46.26747437, 13.25999385]"
+      ],
+      "Vendoglio": [
+        "L382_CNO2 :: Via Centa, Vendoglio [46.19028506, 13.15648925]",
+        "L382_CNO3 :: Via Moretti 6, Vendoglio [46.18403072, 13.15472653]"
+      ],
+      "Versiola": [
+        "I686_CNO12 :: Via Piave, Versiola [45.85524386, 12.84984313]"
+      ],
+      "Verzegnis": [
+        "UD_23/01w11 :: Via Sella Chianzutan 7, Verzegnis [46.35931855, 12.94142761]"
+      ],
+      "Villa Santina": [
+        "L909_CNO7 :: Borgo Moia, Villa Santina [46.42064936, 12.9106941]"
+      ],
+      "Villalta": [
+        "D461_CNO1 :: Via della Chiesa 29, Villalta [46.10395567, 13.11516287]",
+        "D461_CNO2 :: Via Molini sul Ledra 6, Villalta [46.09682338, 13.11492345]",
+        "E982_CNO12 :: Via San Daniele 1, Villalta [46.09490062, 13.13042696]",
+        "E982_CNO13 :: Via Santa Maria Maggiore 1, Villalta [46.09799907, 13.13443227]",
+        "E982_CNO15 :: Via Gabriele D'Annunzio 14, Villalta [46.09583811, 13.13567208]",
+        "E982_CNO16 :: Via San Biagio 39, Villalta [46.0913023, 13.13693669]"
+      ],
+      "Villanova Delle Grotte": [
+        "E760_CNO4 :: Lusevera, Villanova delle Grotte [46.25431217, 13.27969737]"
+      ],
+      "Zampis": [
+        "G238_CNO6 :: Via Divisione Julia, Zampis [46.12159408, 13.18120083]",
+        "G238_CNO7 :: Via Pietro Zorutti 1, Zampis [46.12542557, 13.18236207]"
+      ],
+      "Zeglianutto": [
+        "L382_CNO1 :: Via Giuseppe Verdi, Zeglianutto [46.20070078, 13.15383867]",
+        "L382_CNO4 :: Via Dante Alighieri 49/1, Zeglianutto [46.19262321, 13.15475687]"
+      ],
+      "Zellina": [
+        "H895_CNO1 :: Via Boscat 1, Zellina [45.83368386, 13.18455058]"
+      ],
+      "Zovello": [
+        "H196_CNO1 :: Via Prepaulin 9, Zovello [46.52668095, 12.94492511]"
+      ]
+    }
+  }
+}

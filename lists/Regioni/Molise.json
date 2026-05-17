@@ -1,0 +1,1130 @@
+{
+  "Molise": {
+    "Comuni": {
+      "Acquaviva Collecroce": [
+        "A050_CNO1 :: Via Gabriele Pepe, Acquaviva Collecroce [41.86708411, 14.74691056]",
+        "A050_CNO2 :: via Olmo, Acquaviva Collecroce [41.8672873, 14.74740342]"
+      ],
+      "Acquaviva D'Isernia": [
+        "A051_CNO1 :: ~Raccordo SS17 dell'Appennino Abruzzese e Appulo Sannitico, Acquaviva d'Isernia [41.67054721, 14.14390801]",
+        "A051_CNO2 :: ~Raccordo SS17 dell'Appennino Abruzzese e Appulo Sannitico, Acquaviva d'Isernia [41.67268704, 14.1494712]"
+      ],
+      "Agnone": [
+        "A080_CNO1 :: Via Padre Matteo da Agnone, Agnone [41.81076027, 14.38109105]",
+        "A080_CNO10 :: Via Pasquale ed Ettore Marinelli, Agnone [41.8113578, 14.37398462]",
+        "A080_CNO11 :: Via Aquilonia, Agnone [41.8087036, 14.37398363]",
+        "A080_CNO12 :: Viale de Horatiis, Agnone [41.80915638, 14.3756734]",
+        "A080_CNO13 :: Via Fanti Manfredo, Agnone [41.80881001, 14.37187935]",
+        "A080_CNO14 :: Via Monsignor Pascucci, Agnone [41.80721733, 14.37479707]",
+        "A080_CNO2 :: Corso Giuseppe Garibaldi, Agnone [41.80336665, 14.36530305]",
+        "A080_CNO3 :: Corso Vittorio Emanuele 199, Agnone [41.80744158, 14.3711649]",
+        "A080_CNO4 :: Strada Comunale Agnone Castelverrino, Agnone [41.80707845, 14.36692369]",
+        "A080_CNO5 :: Viale Castelnuovo, Agnone [41.81332538, 14.38339944]",
+        "A080_CNO6 :: Strada Comunale Agnone Castelverrino, Agnone [41.80786017, 14.36871282]",
+        "A080_CNO7 :: Via Valle di San Lorenzo, Agnone [41.80997762, 14.3800133]",
+        "A080_CNO8 :: Corso Giuseppe Garibaldi, Agnone [41.80589156, 14.36656894]",
+        "A080_CNO9 :: Via Gioberti, Agnone [41.80577686, 14.36522352]"
+      ],
+      "Bagnoli Del Trigno": [
+        "A567_CNO2 :: SP74, Bagnoli del Trigno [41.7035178, 14.45573962]",
+        "A567_CNO3 :: Via Guglielmo Marconi, Bagnoli del Trigno [41.70579465, 14.45974444]",
+        "A567_CNO4 :: Vicolo del Muretto, Bagnoli del Trigno [41.70321128, 14.45697425]",
+        "A567_CNO5 :: ~Via Guglielmo Marconi, Bagnoli del Trigno [41.70243587, 14.45750731]",
+        "A567_CNO6 :: Via Guglielmo Marconi, Bagnoli del Trigno [41.70618524, 14.45971834]",
+        "A567_CNO7 :: Strada Provinciale 69 Trignina, Bagnoli del Trigno [41.70456155, 14.46224739]",
+        "A567_CNO8 :: ~SP74, Bagnoli del Trigno [41.70433635, 14.45543608]"
+      ],
+      "Baranello": [
+        "A616_CNO1 :: Strada Provinciale 49 dir/B Bojano - Baranello, Baranello [41.52149026, 14.57715958]",
+        "A616_CNO2 :: Via del Municipio, Baranello [41.52681935, 14.56006437]",
+        "A616_CNO3 :: Via Alessandro Volta, Baranello [41.52739883, 14.55628133]",
+        "A616_CNO4 :: Strada Provinciale 49 dir/B Bojano - Baranello, Baranello [41.51788218, 14.59234961]",
+        "A616_CNO5 :: Via Fosse, Baranello [41.52684031, 14.5560278]"
+      ],
+      "Belmonte Del Sannio": [
+        "A761_CNO1 :: Via Cardarelli, Belmonte del Sannio [41.82291116, 14.42176045]",
+        "A761_CNO2 :: Via Roma 5, Belmonte del Sannio [41.82523326, 14.42358431]",
+        "A761_CNO3 :: Via Cardarelli, Belmonte del Sannio [41.82436533, 14.42253727]"
+      ],
+      "Bojano": [
+        "A930_CNO1 :: Corso Francesco Amatuzio, Bojano [41.48730987, 14.47405743]",
+        "A930_CNO10 :: Piazza Roma, Bojano [41.48309811, 14.47174777]",
+        "A930_CNO11 :: Civita Superiore, Bojano [41.48265685, 14.47102369]",
+        "A930_CNO12 :: Via dei Frentani, Bojano [41.48569262, 14.47526117]",
+        "A930_CNO13 :: Pincere, Bojano [41.49113289, 14.45116116]",
+        "A930_CNO14 :: Strada Provinciale 97 Bojano - Castellone - San Massimo, Bojano [41.49630744, 14.44614307]",
+        "A930_CNO15 :: Via Gino Di Biase 18, Bojano [41.48795003, 14.47297858]",
+        "A930_CNO16 :: Via dei Sanniti, Bojano [41.48545308, 14.47626091]",
+        "A930_CNO17 :: Via Gino Di Biase 18, Bojano [41.48782248, 14.47315355]",
+        "A930_CNO18 :: Strada Provinciale 97 Bojano - Castellone - San Massimo, Bojano [41.48494699, 14.46114067]",
+        "A930_CNO20 :: Via San Bartolomeo, Bojano [41.48532926, 14.46759937]",
+        "A930_CNO21 :: Via Molise, Bojano [41.48789184, 14.47880569]",
+        "A930_CNO22 :: Corso Francesco Amatuzio, Bojano [41.48412739, 14.47241737]",
+        "A930_CNO23 :: Via Insorti d'Ungheria, Bojano [41.48152272, 14.46939545]",
+        "A930_CNO24 :: Via Francesco Cavadini, Bojano [41.4820334, 14.47368065]",
+        "A930_CNO25 :: Via Calderari, Bojano [41.48738392, 14.46750515]",
+        "A930_CNO3 :: Via Filomeno Gianfrancesco, Bojano [41.48480554, 14.46908968]",
+        "A930_CNO4 :: Località Stroffellini, Bojano [41.48516444, 14.48163505]",
+        "A930_CNO5 :: Salita San Giovanni, Bojano [41.48307396, 14.46750752]",
+        "A930_CNO6 :: Via Biferno, Bojano [41.48117556, 14.47545597]",
+        "A930_CNO7 :: Corso Don Albino Jovich, Bojano [41.5002743, 14.48930586]",
+        "A930_CNO8 :: Via Giuseppe Gentile, Bojano [41.48296999, 14.47484439]",
+        "A930_CNO9 :: Massari, Bojano [41.49913879, 14.48878679]"
+      ],
+      "Bonefro": [
+        "A971_CNO1 :: ~Via Caduti di Via Fani, Bonefro [41.70555128, 14.93056509]",
+        "A971_CNO3 :: ~Strada Provinciale 63 Cerrosecco, Bonefro [41.70509797, 14.9361468]",
+        "A971_CNO5 :: Via XX Settembre, Bonefro [41.70344195, 14.93487108]",
+        "A971_CNO6 :: Via XX Settembre, Bonefro [41.70179253, 14.93303848]",
+        "A971_CNO7 :: ~Strada Provinciale 63 Cerrosecco, Bonefro [41.70491303, 14.93419952]",
+        "A971_CNO8 :: Via Caduti di Via Fani, Bonefro [41.70347219, 14.93296366]",
+        "A971_CNO9 :: ~Strada Provinciale 63 Cerrosecco, Bonefro [41.70813117, 14.93700344]"
+      ],
+      "Busso": [
+        "B295_CNO1 :: Via Caduti di Marcinelle, Busso [41.55492683, 14.56275774]",
+        "B295_CNO2 :: Piazza Nicola Santangelo, Busso [41.55630287, 14.55976617]",
+        "B295_CNO3 :: Piazza Nicola Santangelo, Busso [41.55600431, 14.56160985]",
+        "B295_CNO4 :: ~Strada Provinciale 42 Cipranense, Busso [41.55593557, 14.55714254]"
+      ],
+      "Campitello Matese": [
+        "I023_CNO3 :: Strada Provinciale 106 di Campitello, Campitello Matese [41.461666, 14.39342497]",
+        "I023_CNO4 :: ~Strada Provinciale 106 di Campitello, Campitello Matese [41.46330619, 14.39062397]",
+        "I023_CNO8 :: ~Strada Provinciale 106 di Campitello, Campitello Matese [41.46231952, 14.39581036]",
+        "I023_CNO9 :: Strada Provinciale 106 di Campitello, Campitello Matese [41.4627331, 14.38971679]"
+      ],
+      "Campobasso": [
+        "B519_CNO10 :: San Pietro, Campobasso [41.54584976, 14.70533325]",
+        "B519_CNO11 :: ~Contrada Lupara, Campobasso [41.56174076, 14.70631168]",
+        "B519_CNO12 :: Contrada Polese, Campobasso [41.54453311, 14.71856458]",
+        "B519_CNO7 :: Contrada San Giovanni dei Gelsi, Campobasso [41.55789871, 14.69209023]",
+        "B519_CNO8 :: Contrada San Giovanni dei Gelsi, Campobasso [41.54787673, 14.6965397]",
+        "B519_CNO9 :: Contrada Feudo, Campobasso [41.58044987, 14.70027264]",
+        "CB_01/01e11 :: Via Monte Grappa, Campobasso [41.56225043, 14.67517409]",
+        "CB_01/01e12 :: Via Monte San Gabriele, Campobasso [41.56149052, 14.6718567]",
+        "CB_01/01e13 :: Via Monte Grappa 26, Campobasso [41.5622655, 14.67273999]",
+        "CB_01/01e14 :: Via Montello, Campobasso [41.5638312, 14.67254715]",
+        "CB_01/01e21 :: Viale Ventiquattro Maggio, Campobasso [41.56320287, 14.6705937]",
+        "CB_01/01e22 :: Via Insorti d'Ungheria 2, Campobasso [41.56125519, 14.66766569]",
+        "CB_01/01e23 :: Piazza San Francesco d'Assisi, Campobasso [41.56103538, 14.66909044]",
+        "CB_01/01e24 :: Via Venticinque Aprile, Campobasso [41.56213325, 14.66952388]",
+        "CB_01/01e31 :: Via Giuseppe Zurlo 20, Campobasso [41.55945767, 14.66242884]",
+        "CB_01/01e32 :: Via Giuseppe Garibaldi 1, Campobasso [41.55865474, 14.66401464]",
+        "CB_01/01e33 :: Via Umberto Primo, Campobasso [41.56008005, 14.66429854]",
+        "CB_01/01e34 :: Via Giuseppe Garibaldi 7, Campobasso [41.56063262, 14.66469059]",
+        "CB_01/01e41 :: Via Giuseppe Garibaldi 27, Campobasso [41.56100029, 14.66299656]",
+        "CB_01/01e42 :: Via Sant'Antonio dei Lazzari, Campobasso [41.56402606, 14.66317775]",
+        "CB_01/01e43 :: Via Alfredo Trombetta, Campobasso [41.56353412, 14.66764201]",
+        "CB_01/01e44 :: Via Insorti d'Ungheria, Campobasso [41.5628408, 14.6639157]",
+        "CB_01/01w11 :: Via Piave, Campobasso [41.56438901, 14.67346276]",
+        "CB_01/01w12 :: Via Benedetto Croce, Campobasso [41.56656023, 14.67259201]",
+        "CB_01/01w13 :: Viale Ventiquattro Maggio, Campobasso [41.56500358, 14.67147576]",
+        "CB_01/01w14 :: Via Carlo Maranelli, Campobasso [41.56533146, 14.67035117]",
+        "CB_01/01w21 :: Via Antonio Gramsci, Campobasso [41.56730208, 14.67571115]",
+        "CB_01/01w22 :: Contrada Colle dell'Orso, Campobasso [41.56723237, 14.68751148]",
+        "CB_01/01w23 :: ~SS710, Campobasso [41.56731371, 14.68291011]",
+        "CB_01/01w24 :: Via Benedetto Croce, Campobasso [41.56631501, 14.67527245]",
+        "CB_01/01w31 :: Via Luigi Einaudi, Campobasso [41.56873644, 14.67385392]",
+        "CB_01/01w32 :: Via Alcide De Gasperi, Campobasso [41.56823689, 14.67710206]",
+        "CB_01/01w33 :: Via Antonio Gramsci, Campobasso [41.57013651, 14.67576173]",
+        "CB_01/01w34 :: Via Alcide De Gasperi, Campobasso [41.57050267, 14.67497332]",
+        "CB_01/01w41 :: Via Quattro Novembre, Campobasso [41.56888487, 14.67248863]",
+        "CB_01/01w42 :: Via Sant'Antonio dei Lazzari, Campobasso [41.56721557, 14.66533032]",
+        "CB_01/01w43 :: Via Vincenzo Tiberio, Campobasso [41.56381134, 14.66198713]",
+        "CB_01/01w44 :: Via Vincenzo Tiberio, Campobasso [41.5654076, 14.66037051]",
+        "CB_01/02e11 :: Via delle Frasche, Campobasso [41.5614551, 14.67511092]",
+        "CB_01/02e12 :: Via Giambattista Vico, Campobasso [41.55656154, 14.66490219]",
+        "CB_01/02e13 :: Via Giambattista Vico, Campobasso [41.55753261, 14.66629577]",
+        "CB_01/02e14 :: Via San Giovanni, Campobasso [41.55980398, 14.67061469]",
+        "CB_01/02e21 :: Via San Giovanni, Campobasso [41.55763755, 14.67376263]",
+        "CB_01/02e22 :: Via Campania, Campobasso [41.55754559, 14.68224978]",
+        "CB_01/02e23 :: Piazza Molise, Campobasso [41.55936943, 14.67611096]",
+        "CB_01/02e24 :: Via Campania, Campobasso [41.55802942, 14.67741877]",
+        "CB_01/02e31 :: Via Toscana, Campobasso [41.55127657, 14.67630307]",
+        "CB_01/02e32 :: Via Umbria, Campobasso [41.55245692, 14.67757204]",
+        "CB_01/02e33 :: Via Marche, Campobasso [41.55352384, 14.67860684]",
+        "CB_01/02e34 :: Via San Giovanni, Campobasso [41.55531108, 14.67727018]",
+        "CB_01/02e41 :: Via San Giovanni, Campobasso [41.55282564, 14.68104253]",
+        "CB_01/02e42 :: Via Sicilia, Campobasso [41.56147462, 14.68137618]",
+        "CB_01/02e43 :: Via Puglia, Campobasso [41.56007346, 14.68069147]",
+        "CB_01/02e44 :: Via Sardegna, Campobasso [41.56019941, 14.6834703]",
+        "CB_01/02w11 :: Viale Alessandro Manzoni, Campobasso [41.54372817, 14.67084826]",
+        "CB_01/02w12 :: Viale Alessandro Manzoni, Campobasso [41.54830482, 14.66871633]",
+        "CB_01/02w13 :: Via Giovanni Verga, Campobasso [41.54984845, 14.6659111]",
+        "CB_01/02w14 :: Vazzieri, Campobasso [41.54897812, 14.6692208]",
+        "CB_01/02w21 :: Via Giosuè Carducci, Campobasso [41.547873, 14.67087362]",
+        "CB_01/02w22 :: Via Giosuè Carducci, Campobasso [41.54576905, 14.67117145]",
+        "CB_01/02w23 :: Via Giuseppe Ungaretti, Campobasso [41.54814526, 14.67332599]",
+        "CB_01/02w24 :: Via Giuseppe Ungaretti, Campobasso [41.54689757, 14.67389256]",
+        "CB_01/02w31 :: Via Cesare Gazzani, Campobasso [41.55445555, 14.66366024]",
+        "CB_01/02w32 :: Via Gaetano Scardocchia, Campobasso [41.55216909, 14.66981269]",
+        "CB_01/02w33 :: Via Luigi Pirandello, Campobasso [41.54952643, 14.67225298]",
+        "CB_01/02w34 :: Via Luigi Pirandello, Campobasso [41.5501629, 14.67147267]",
+        "CB_01/02w41 :: Via Liguria, Campobasso [41.55534092, 14.67058077]",
+        "CB_01/02w42 :: Via Lombardia, Campobasso [41.55576736, 14.67248488]",
+        "CB_01/02w43 :: Via Toscana, Campobasso [41.5532776, 14.67340733]",
+        "CB_01/02w44 :: Via Emilia, Campobasso [41.55384642, 14.67525601]",
+        "CB_01/03e11 :: Piazza Vittorio Emanuele Secondo 11, Campobasso [41.55851116, 14.66036803]",
+        "CB_01/03e12 :: Corso Francesco Bucci, Campobasso [41.55811868, 14.6612377]",
+        "CB_01/03e13 :: Via Camillo Benso Conte di Cavour 52, Campobasso [41.55711409, 14.66150593]",
+        "CB_01/03e14 :: Via Camillo Benso Conte di Cavour 52, Campobasso [41.5562897, 14.66078714]",
+        "CB_01/03e21 :: Via Monsignor Secondo Bologna, Campobasso [41.55334193, 14.66121782]",
+        "CB_01/03e22 :: Via Giovanni Pascoli, Campobasso [41.55235407, 14.66221186]",
+        "CB_01/03e23 :: Via Giacomo Leopardi, Campobasso [41.55028861, 14.66497262]",
+        "CB_01/03e24 :: Via Monsignor Secondo Bologna, Campobasso [41.55032741, 14.66293513]",
+        "CB_01/03e31 :: Via Conte Rosso 19, Campobasso [41.54990764, 14.65956035]",
+        "CB_01/03e32 :: Via Nicola Neri, Campobasso [41.54912485, 14.66351535]",
+        "CB_01/03e33 :: Viale Principe di Piemonte 47, Campobasso [41.55179437, 14.66029003]",
+        "CB_01/03e34 :: Via Papa Giovanni Ventitreesimo, Campobasso [41.54979845, 14.6613223]",
+        "CB_01/03e41 :: Via Agostino De Pretis, Campobasso [41.54833643, 14.65243319]",
+        "CB_01/03e42 :: Via Agostino De Pretis, Campobasso [41.54981885, 14.65708493]",
+        "CB_01/03e43 :: Via Agostino De Pretis, Campobasso [41.55143722, 14.65888672]",
+        "CB_01/03e44 :: Viale Principe di Piemonte 3, Campobasso [41.55360043, 14.65853899]",
+        "CB_01/03w11 :: Via Giuseppe Garibaldi 120, Campobasso [41.56328345, 14.66006839]",
+        "CB_01/03w12 :: Via Antonio Cardarelli, Campobasso [41.5626324, 14.66091885]",
+        "CB_01/03w13 :: Via Ferrari, Campobasso [41.56106034, 14.65987042]",
+        "CB_01/03w14 :: Via Larino, Campobasso [41.56153763, 14.66133352]",
+        "CB_01/03w21 :: Vicoletto Sant'Andrea, Campobasso [41.56203818, 14.6583601]",
+        "CB_01/03w22 :: Via Sant'Antonio Abate, Campobasso [41.56079996, 14.65642446]",
+        "CB_01/03w23 :: Via Sant'Antonio Abate 16, Campobasso [41.56115345, 14.65889027]",
+        "CB_01/03w24 :: Via Guglielmo Marconi, Campobasso [41.56032634, 14.65834838]",
+        "CB_01/03w31 :: Via Giovanni Romagnoli, Campobasso [41.55719926, 14.65802681]",
+        "CB_01/03w32 :: Via Trento 3, Campobasso [41.55858726, 14.65555299]",
+        "CB_01/03w33 :: Via Roma, Campobasso [41.55970026, 14.65805031]",
+        "CB_01/03w34 :: Via Torino 4, Campobasso [41.55949568, 14.65659063]",
+        "CB_01/03w41 :: Viale Duca d'Aosta, Campobasso [41.55233051, 14.65768977]",
+        "CB_01/03w42 :: Via Zara, Campobasso [41.55682205, 14.65567784]",
+        "CB_01/03w43 :: Via Giacinto Albino 11, Campobasso [41.55564744, 14.65882463]",
+        "CB_01/03w44 :: Piazza della Repubblica, Campobasso [41.55624121, 14.65704472]",
+        "CB_01/04w11 :: Viale del Castello 68, Campobasso [41.56344849, 14.65798569]",
+        "CB_01/04w12 :: Via Giuseppe Garibaldi 136, Campobasso [41.56418159, 14.65941294]",
+        "CB_01/04w13 :: Via Giuseppe Garibaldi 194, Campobasso [41.56629612, 14.65473748]",
+        "CB_01/04w14 :: Via Vincenzo Tiberio, Campobasso [41.56556794, 14.65837052]",
+        "CB_01/04w21 :: Via Sant'Antonio Abate, Campobasso [41.56604332, 14.65027923]",
+        "CB_01/04w22 :: Contrada Conocchiole, Campobasso [41.56988519, 14.6515704]",
+        "CB_01/04w23 :: Via Sant'Antonio Abate, Campobasso [41.5660347, 14.64878395]",
+        "CB_01/04w31 :: Via Firenze, Campobasso [41.56056722, 14.65597359]",
+        "CB_01/04w32 :: Conocchiole, Campobasso [41.56040082, 14.65269758]",
+        "CB_01/04w33 :: Via Monforte 63, Campobasso [41.55996276, 14.65402866]",
+        "CB_01/04w34 :: Via Sant'Antonio Abate, Campobasso [41.56111981, 14.65432386]",
+        "CB_01/05e11 :: Via Colle delle Api, Campobasso [41.57653321, 14.67509372]",
+        "CB_01/05e12 :: Via Colle delle Api, Campobasso [41.58679993, 14.67256312]",
+        "CB_01/05e13 :: Via Enrico de Capoa, Campobasso [41.58820722, 14.66559641]"
+      ],
+      "Campochiaro": [
+        "B522_CNO1 :: Via Palizzi, Campochiaro [41.44951659, 14.50580163]",
+        "B522_CNO2 :: Campochiaro, Campochiaro [41.44778668, 14.50883768]",
+        "B522_CNO3 :: ~Strada Provinciale 67 di Campochiaro, Campochiaro [41.45032259, 14.51419707]"
+      ],
+      "Campodipietra": [
+        "B528_CNO1 :: Strada Provinciale 56 dir/C Galdina, Campodipietra [41.55626673, 14.73576298]",
+        "B528_CNO2 :: Via Molise, Campodipietra [41.55507948, 14.74540956]",
+        "B528_CNO3 :: Strada Comunale Campobasso-Toro, Campodipietra [41.56315, 14.71582806]",
+        "B528_CNO4 :: Via Olmo D'Ettoro, Campodipietra [41.55675245, 14.74321212]",
+        "B528_CNO5 :: Via Pozzi, Campodipietra [41.55707156, 14.74644849]",
+        "B528_CNO6 :: Via Marchisi, Campodipietra [41.55872191, 14.74545677]",
+        "B528_CNO7 :: Largo della Porta, Campodipietra [41.55798025, 14.74847935]"
+      ],
+      "Campolieto": [
+        "B544_CNO2 :: ~Strada Provinciale 56 dir/A Galdina, Campolieto [41.63563406, 14.76682366]",
+        "B544_CNO4 :: Piazza San Giovanni in Galdo, Campolieto [41.63438781, 14.76605317]",
+        "B544_CNO5 :: Via non definita, Campolieto [41.6325563, 14.76551907]"
+      ],
+      "Campomarino": [
+        "B550_CNO10 :: Via Gaetano Salvemini, Campomarino [41.95733691, 15.0464791]",
+        "B550_CNO12 :: Via Alcide De Gasperi, Campomarino [41.95557746, 15.04448016]",
+        "B550_CNO13 :: Via della Resistenza, Campomarino [41.96334738, 15.0481659]",
+        "B550_CNO14 :: Via del Mare, Campomarino [41.89769882, 15.07775537]",
+        "B550_CNO15 :: Strada Provinciale 128 del Rettifilo, Campomarino [41.93883127, 15.06462964]",
+        "B550_CNO3 :: Via Brindisi, Campomarino [41.96272487, 15.04723383]",
+        "B550_CNO4 :: Via Favorita, Campomarino [41.95266119, 15.02898138]",
+        "B550_CNO5 :: Via Giuseppe Ungaretti, Campomarino [41.95803334, 15.03485539]",
+        "B550_CNO6 :: Via Salvador Allende, Campomarino [41.96077354, 15.04994821]",
+        "B550_CNO8 :: Case FIAT, Campomarino [41.95866831, 15.04546223]",
+        "B550_CNO9 :: Colle Lame, Campomarino [41.95446817, 15.02792956]"
+      ],
+      "Cantalupo Nel Sannio": [
+        "B630_CNO1 :: Via Campo dei Fiori, Cantalupo nel Sannio [41.52257739, 14.39190209]",
+        "B630_CNO2 :: Strada Provinciale Volturno Pentrica, Cantalupo nel Sannio [41.52688927, 14.39158865]",
+        "B630_CNO3 :: Via Muro della Porta, Cantalupo nel Sannio [41.52186404, 14.39332097]",
+        "B630_CNO4 :: Vico Storto, Cantalupo nel Sannio [41.52213034, 14.39194774]"
+      ],
+      "Capracotta": [
+        "B682_CNO1 :: Via Monte Capraro, Capracotta [41.832594, 14.26295706]",
+        "B682_CNO2 :: Via Leonardo Falconi, Capracotta [41.83548627, 14.26854127]",
+        "B682_CNO3 :: ~Via Vallesorda, Capracotta [41.82978702, 14.2641286]",
+        "B682_CNO4 :: Piazza Stanislao Falconi 4, Capracotta [41.83378592, 14.26415973]",
+        "B682_CNO5 :: ~Via San Giovanni, Capracotta [41.83567952, 14.26650337]",
+        "B682_CNO6 :: Via Michelangelo, Capracotta [41.83559556, 14.26672605]",
+        "B682_CNO7 :: Via Trigno, Capracotta [41.83376999, 14.26685143]",
+        "B682_CNO8 :: Via Pescara, Capracotta [41.83620806, 14.26748081]",
+        "B682_CNO9 :: Via Vallesorda, Capracotta [41.83200698, 14.26373393]"
+      ],
+      "Carovilli": [
+        "B810_CNO1 :: Strada Comunale di Castiglione, Carovilli [41.7146974, 14.29782701]",
+        "B810_CNO2 :: Castiglione di Carovilli, Carovilli [41.71307112, 14.29327415]",
+        "B810_CNO3 :: Via non definita, Carovilli [41.7156211, 14.28877162]",
+        "B810_CNO4 :: SP86, Carovilli [41.71058061, 14.2981775]",
+        "B810_CNO5 :: Castiglione di Carovilli, Carovilli [41.7135889, 14.29470662]"
+      ],
+      "Carpinone": [
+        "B830_CNO1 :: Corso Aquilonia, Carpinone [41.59196186, 14.3251613]",
+        "B830_CNO2 :: Corso Umberto, Carpinone [41.59317821, 14.32549022]",
+        "B830_CNO3 :: ~Via Fontanelle, Carpinone [41.59002953, 14.32073605]",
+        "B830_CNO4 :: Via Nicola Falcone, Carpinone [41.59236834, 14.32488447]",
+        "B830_CNO5 :: Corso Aquilonia, Carpinone [41.59016719, 14.32626471]",
+        "B830_CNO6 :: Strada Statale 85 Venafrana vecchio tratto, Carpinone [41.5970378, 14.28172571]"
+      ],
+      "Casacalenda": [
+        "B858_CNO1 :: Corso Vittorio Emanuele Terzo, Casacalenda [41.73973986, 14.85219904]",
+        "B858_CNO10 :: Strada Statale 87 Sannitica 1, Casacalenda [41.73849397, 14.84633399]",
+        "B858_CNO2 :: Via non definita, Casacalenda [41.73914514, 14.85228085]",
+        "B858_CNO3 :: Corso Roma 53, Casacalenda [41.7402394, 14.8480798]",
+        "B858_CNO4 :: Corso Vittorio Emanuele Terzo 9, Casacalenda [41.74102317, 14.85026618]",
+        "B858_CNO5 :: ~Via Armando Dìaz, Casacalenda [41.74013783, 14.84660858]",
+        "B858_CNO6 :: ~Via Masciotta, Casacalenda [41.74158259, 14.84786726]",
+        "B858_CNO7 :: Via Giuseppe Garibaldi, Casacalenda [41.74168076, 14.84964086]",
+        "B858_CNO8 :: ~Via Trieste, Casacalenda [41.74250524, 14.84731633]",
+        "B858_CNO9 :: Corso Alcide De Gasperi, Casacalenda [41.73545293, 14.84516895]"
+      ],
+      "Casalciprano": [
+        "B466_CNO4 :: ~Strada Provinciale 42 Cipranense, Casalciprano [41.57705738, 14.47741005]",
+        "B871_CNO1 :: Strada Provinciale 43 Diramazione Cipranense 26, Casalciprano [41.58174746, 14.5288188]",
+        "B871_CNO2 :: ~Strada Provinciale 43 Diramazione Cipranense, Casalciprano [41.57882218, 14.52716356]",
+        "B871_CNO3 :: ~Strada Provinciale 43 Diramazione Cipranense, Casalciprano [41.58017132, 14.52792229]"
+      ],
+      "Castel Del Giudice": [
+        "C082_CNO2 :: Via Roma, Castel del Giudice [41.85454522, 14.23105576]",
+        "C082_CNO3 :: Via Torino di Sangro, Castel del Giudice [41.8544324, 14.23340506]",
+        "C082_CNO4 :: Via Fontana Vecchia, Castel del Giudice [41.85517259, 14.23062081]"
+      ],
+      "Castel San Vincenzo": [
+        "C270_CNO1 :: Via non definita, Castel San Vincenzo [41.65502954, 14.06165108]",
+        "C270_CNO2 :: Castellone, Castel San Vincenzo [41.65618328, 14.06417537]",
+        "C270_CNO3 :: SP per Castel San Vincenzo, Castel San Vincenzo [41.65486268, 14.06335598]"
+      ],
+      "Castelbottaccio": [
+        "C066_CNO1 :: Strada Provinciale 73 dir/B Bifernina, Castelbottaccio [41.75325737, 14.70670238]",
+        "C066_CNO2 :: ~Via Vittorio Emanuele, Castelbottaccio [41.75299549, 14.70647156]",
+        "C066_CNO3 :: ~Corso Umberto Primo, Castelbottaccio [41.75175165, 14.7040553]"
+      ],
+      "Castellino Del Biferno": [
+        "C175_CNO1 :: Via Roma, Castellino del Biferno [41.70195726, 14.73102847]",
+        "C175_CNO2 :: Via Colle, Castellino del Biferno [41.70191495, 14.73269682]"
+      ],
+      "Castelmauro": [
+        "C197_CNO1 :: Corso Umberto Primo, Castelmauro [41.82827647, 14.71010395]",
+        "C197_CNO2 :: Padronati, Castelmauro [41.82568018, 14.7121424]",
+        "C197_CNO3 :: Viale delle Acacie, Castelmauro [41.83020761, 14.70935497]",
+        "C197_CNO4 :: Viale delle Acacie, Castelmauro [41.82944935, 14.71039718]",
+        "C197_CNO5 :: Fonticella, Castelmauro [41.83085522, 14.70826519]",
+        "C197_CNO6 :: Strada Statale 157 della Valle del Biferno, Castelmauro [41.8285391, 14.71109865]"
+      ],
+      "Castelnuovo Al Volturno": [
+        "H458_CNO1 :: Via Charles Moulin, Castelnuovo al Volturno [41.62189651, 14.04483937]"
+      ],
+      "Castelpetroso": [
+        "C246_CNO1 :: Guasto, Castelpetroso [41.55805182, 14.32073331]",
+        "C246_CNO2 :: Indiprete, Castelpetroso [41.55712928, 14.34256819]",
+        "C246_CNO4 :: Indiprete, Castelpetroso [41.54827372, 14.33793534]",
+        "C246_CNO5 :: Via Fiume, Castelpetroso [41.55780568, 14.32264474]",
+        "C246_CNO6 :: Indiprete, Castelpetroso [41.55149268, 14.34053477]",
+        "C246_CNO7 :: Pastena, Castelpetroso [41.55298123, 14.32533167]",
+        "C246_CNO8 :: Casale, Castelpetroso [41.55990955, 14.34677766]",
+        "C246_CNO9 :: Indiprete, Castelpetroso [41.54028217, 14.34066886]"
+      ],
+      "Castelpizzuto": [
+        "C247_CNO1 :: Strada Provinciale 21 Isernia - Castelpizzuto, Castelpizzuto [41.52049628, 14.29281984]"
+      ],
+      "Castelverrino": [
+        "C200_CNO1 :: Via Sandro Pertini, Castelverrino [41.76784583, 14.39699255]"
+      ],
+      "Castropignano": [
+        "C346_CNO1 :: Strada Provinciale 169 Molesana, Castropignano [41.61898405, 14.56033916]",
+        "C346_CNO2 :: Roccaspromonte, Castropignano [41.62034576, 14.56234972]",
+        "C346_CNO3 :: Strada Provinciale 169 Molesana, Castropignano [41.61899228, 14.56034679]",
+        "C346_CNO4 :: Strada Provinciale 169 Molesana, Castropignano [41.61776087, 14.55847802]"
+      ],
+      "Cerasuolo": [
+        "D595_CNO3 :: Lagoni, Cerasuolo [41.55146704, 14.04641546]",
+        "D595_CNO4 :: Lagoni, Cerasuolo [41.58499242, 14.0203645]"
+      ],
+      "Cercemaggiore": [
+        "C486_CNO1 :: Convento, Cercemaggiore [41.45908856, 14.71466101]",
+        "C486_CNO2 :: ~Caselvatico, Cercemaggiore [41.44362857, 14.73219859]",
+        "C486_CNO3 :: Viale Regina Margherita, Cercemaggiore [41.46243085, 14.72638133]",
+        "C486_CNO4 :: Via non definita, Cercemaggiore [41.44576014, 14.73160957]",
+        "C486_CNO5 :: Convento, Cercemaggiore [41.45989004, 14.7220914]",
+        "C486_CNO6 :: Strada Provinciale 122 Di Florio - Capoiaccio, Cercemaggiore [41.43229517, 14.75233802]",
+        "C486_CNO7 :: Convento, Cercemaggiore [41.46594851, 14.71548699]",
+        "C486_CNO8 :: Via Roma, Cercemaggiore [41.45953203, 14.72061621]",
+        "C486_CNO9 :: Convento, Cercemaggiore [41.4616389, 14.72403355]"
+      ],
+      "Cercepiccola": [
+        "C488_CNO1 :: ~Corso Vittorio Emanuele III, Cercepiccola [41.46003574, 14.66331973]",
+        "C488_CNO2 :: Via non definita, Cercepiccola [41.45952513, 14.66585564]"
+      ],
+      "Cerro Al Volturno": [
+        "C534_CNO1 :: Raccordo SS17 dell'Appennino Abruzzese e Appulo Sannitico, Cerro al Volturno [41.65584023, 14.10079095]",
+        "C534_CNO2 :: Via Regina Elena 47, Cerro al Volturno [41.6657885, 14.10453527]",
+        "C534_CNO3 :: Piano d'Ischia-Mancini, Cerro al Volturno [41.66791039, 14.1115143]",
+        "C534_CNO4 :: Petrara, Cerro al Volturno [41.64377608, 14.10460703]",
+        "C534_CNO5 :: Raccordo SS17 dell'Appennino Abruzzese e Appulo Sannitico 1, Cerro al Volturno [41.65384607, 14.10295338]"
+      ],
+      "Chiauci": [
+        "C620_CNO1 :: ~Via San Sebastiano, Chiauci [41.6775302, 14.38501858]",
+        "C620_CNO2 :: Via Dante Alighieri, Chiauci [41.67766117, 14.38448175]",
+        "C620_CNO3 :: Via Trigno, Chiauci [41.67769672, 14.38720582]"
+      ],
+      "Civitacampomarano": [
+        "C764_CNO1 :: Strada Statale 157 della Valle del Biferno, Civitacampomarano [41.77998352, 14.68922023]",
+        "C764_CNO2 :: Strada Statale 157 della Valle del Biferno, Civitacampomarano [41.77982787, 14.68958245]"
+      ],
+      "Civitanova Del Sannio": [
+        "C769_CNO1 :: Strada del Morricone del Pesco, Civitanova del Sannio [41.66947943, 14.40204578]",
+        "C769_CNO2 :: Via non definita, Civitanova del Sannio [41.6686259, 14.4048338]",
+        "C769_CNO3 :: ~Strada del Morricone del Pesco, Civitanova del Sannio [41.66698378, 14.40480449]"
+      ],
+      "Colle D'Anchise": [
+        "C854_CNO1 :: Via non definita, Colle d'Anchise [41.50763466, 14.5168532]",
+        "C854_CNO2 :: ~Strada Provinciale 49 dir/A Bojano - Baranello, Colle d'Anchise [41.5096264, 14.51908062]"
+      ],
+      "Colletorto": [
+        "C875_CNO1 :: ~Via Macarico, Colletorto [41.66218304, 14.96630753]",
+        "C875_CNO2 :: ~Corso Vittorio Emanuele, Colletorto [41.66384165, 14.97110165]",
+        "C875_CNO3 :: Via Guglielmo Marconi, Colletorto [41.66456003, 14.97321525]",
+        "C875_CNO4 :: Via Guglielmo Marconi, Colletorto [41.66231956, 14.97334867]",
+        "C875_CNO5 :: ~Via Guglielmo Marconi, Colletorto [41.66462415, 14.97026985]",
+        "C875_CNO6 :: Via Lamarmora, Colletorto [41.66290863, 14.96718962]",
+        "C875_CNO7 :: ~Corso Vittorio Emanuele, Colletorto [41.66342765, 14.97353811]",
+        "C875_CNO8 :: Corso Vittorio Emanuele, Colletorto [41.66375852, 14.96905181]"
+      ],
+      "Colli A Volturno": [
+        "C878_CNO1 :: ~Strada provinciale 1 Vandra, Colli a Volturno [41.5993771, 14.10390526]",
+        "C878_CNO2 :: ~Strada provinciale 1 Vandra, Colli a Volturno [41.59833464, 14.10360615]",
+        "C878_CNO3 :: Strada Statale 158 della Valle del Volturno, Colli a Volturno [41.59803096, 14.10192652]",
+        "C878_CNO4 :: ~Via Molise, Colli a Volturno [41.60110254, 14.10589048]",
+        "C878_CNO5 :: Strada provinciale 1 Vandra, Colli a Volturno [41.59465482, 14.11749]"
+      ],
+      "Conca Casale": [
+        "C941_CNO1 :: ~Strada provinciale Conca Casale, Conca Casale [41.49408643, 14.0070541]"
+      ],
+      "Duronia": [
+        "C772_CNO1 :: Agostino, Duronia [41.66051985, 14.45951259]",
+        "C772_CNO2 :: Scafieri-Valle del Colle, Duronia [41.64837772, 14.48398333]",
+        "C772_CNO3 :: Agostino, Duronia [41.65925616, 14.45820932]",
+        "C772_CNO4 :: Strada Provinciale 46 Molisana, Duronia [41.65769057, 14.46108366]"
+      ],
+      "Ferrazzano": [
+        "B519_CNO6 :: Viale Mimosa, Ferrazzano [41.54123791, 14.6716187]",
+        "D550_CNO1 :: Via Santa Croce, Ferrazzano [41.53155319, 14.67336244]",
+        "D550_CNO2 :: Via Federico Baranello, Ferrazzano [41.52911507, 14.66956444]",
+        "D550_CNO3 :: Strada Provinciale 58 di Ferrazzano, Ferrazzano [41.53337877, 14.66751927]",
+        "D550_CNO4 :: Via Leonardo da Vinci, Ferrazzano [41.54070845, 14.66552371]",
+        "D550_CNO5 :: Via Guglielmo Marconi, Ferrazzano [41.53029975, 14.6726366]",
+        "D550_CNO7 :: Via Federico Baranello, Ferrazzano [41.52912509, 14.66957386]"
+      ],
+      "Filignano": [
+        "D595_CNO1 :: Via dei Pozzi, Filignano [41.56871041, 14.0510429]",
+        "D595_CNO14 :: Valerio, Filignano [41.54561013, 14.05861286]",
+        "D595_CNO2 :: Valerio, Filignano [41.54558753, 14.05862482]"
+      ],
+      "Forlì Del Sannio": [
+        "D703_CNO1 :: SP11, Forlì del Sannio [41.69443682, 14.17924667]",
+        "D703_CNO2 :: Via non definita, Forlì del Sannio [41.69552855, 14.17768556]",
+        "D703_CNO3 :: Via non definita, Forlì del Sannio [41.69534475, 14.17806753]"
+      ],
+      "Fornelli": [
+        "D715_CNO1 :: SP24, Fornelli [41.61187783, 14.14018646]",
+        "D715_CNO2 :: Via Belvedere, Fornelli [41.60685516, 14.14046211]",
+        "D715_CNO3 :: SP24 14, Fornelli [41.60511832, 14.13908784]",
+        "D715_CNO4 :: SP24, Fornelli [41.60205263, 14.14272904]"
+      ],
+      "Fossalto": [
+        "D737_CNO1 :: Via Umberto Primo, Fossalto [41.67317606, 14.54509373]",
+        "D737_CNO2 :: Via Umberto Primo, Fossalto [41.67316979, 14.54507864]",
+        "D737_CNO3 :: Sant'Agnese di Fossalto, Fossalto [41.67397896, 14.55264349]",
+        "D737_CNO4 :: FOSSALTO, Fossalto [41.67376933, 14.5481002]"
+      ],
+      "Frosolone": [
+        "D811_CNO1 :: San Pietro in Valle, Frosolone [41.60430083, 14.49261295]",
+        "D811_CNO10 :: ~Strada Provinciale 2 Molesana, Frosolone [41.60053795, 14.44764976]",
+        "D811_CNO11 :: ~Strada Provinciale 2 Molesana, Frosolone [41.60054848, 14.44764811]",
+        "D811_CNO2 :: Via non definita, Frosolone [41.60063747, 14.45343024]",
+        "D811_CNO3 :: San Pietro in Valle, Frosolone [41.6038232, 14.48510547]",
+        "D811_CNO4 :: Corso Vittorio Emanuele 6, Frosolone [41.59982789, 14.44796096]",
+        "D811_CNO5 :: Via Filangieri, Frosolone [41.6004883, 14.45172707]",
+        "D811_CNO6 :: San Pietro in Valle, Frosolone [41.603461, 14.48203233]",
+        "D811_CNO7 :: ~Strada Provinciale 2 Molesana, Frosolone [41.59996605, 14.44565959]",
+        "D811_CNO8 :: ~Strada Provinciale Frosolone-Sessano, Frosolone [41.60030154, 14.44006249]",
+        "D811_CNO9 :: San Pietro in Valle, Frosolone [41.60425067, 14.47428193]"
+      ],
+      "Gambatesa": [
+        "D896_CNO1 :: Via S. Angelo, Gambatesa [41.50903752, 14.91367387]",
+        "D896_CNO2 :: Via San Nicola, Gambatesa [41.5096148, 14.91537336]",
+        "D896_CNO3 :: Via Aldo Moro, Gambatesa [41.50694211, 14.90907373]",
+        "D896_CNO4 :: Corso Roma, Gambatesa [41.5113931, 14.91202363]",
+        "D896_CNO5 :: Via Nazionale Sannitica 70, Gambatesa [41.50817555, 14.91112391]",
+        "D896_CNO6 :: Via Del Lavatoio, Gambatesa [41.5102344, 14.91248608]",
+        "G609_CNO8 :: ~Strada statale 645 Fondo Valle del Tappino, Gambatesa [41.54193936, 14.88175895]"
+      ],
+      "Gildone": [
+        "E030_CNO1 :: Villaggio San Sebastiano, Gildone [41.50827, 14.73945233]",
+        "E030_CNO2 :: Villaggio San Sebastiano, Gildone [41.50946035, 14.73939135]",
+        "E030_CNO3 :: Villaggio San Sebastiano, Gildone [41.51006004, 14.7397434]",
+        "E030_CNO4 :: Villaggio San Sebastiano, Gildone [41.50393326, 14.72862961]"
+      ],
+      "Guardialfiera": [
+        "E244_CNO1 :: Via Adelchi Bucci 14, Guardialfiera [41.80473341, 14.79278063]",
+        "E244_CNO2 :: Via Adelchi Bucci, Guardialfiera [41.80220601, 14.79312727]",
+        "E244_CNO3 :: Difesa dei Bovi, Guardialfiera [41.80242987, 14.7923032]",
+        "E244_CNO4 :: Via Antonio d'Elesis, Guardialfiera [41.80444425, 14.79360819]"
+      ],
+      "Guardiaregia": [
+        "E248_CNO3 :: Strada Provinciale 164 della Valle del Volturno, Guardiaregia [41.44083481, 14.54568146]",
+        "E248_CNO4 :: Formelle, Guardiaregia [41.44051441, 14.55146205]",
+        "E248_CNO5 :: Via Castello, Guardiaregia [41.43534945, 14.54135515]",
+        "E248_CNO6 :: Formelle, Guardiaregia [41.43494802, 14.54249242]"
+      ],
+      "Guglionesi": [
+        "E259_CNO1 :: ~Via Francia, Guglionesi [41.92629405, 14.91893572]",
+        "E259_CNO2 :: Via Francesco Petrarca, Guglionesi [41.92420174, 14.917197]"
+      ],
+      "Isernia": [
+        "IS_01/01e11 :: Piazza del Purgatorio, Isernia [41.58745468, 14.22578407]",
+        "IS_01/01e12 :: Vico S. Antonio, Isernia [41.58817619, 14.22595241]",
+        "IS_01/01e13 :: Piazza Andrea d'Isernia, Isernia [41.58992611, 14.22725424]",
+        "IS_01/01e14 :: Vico secondo Fascitelli, Isernia [41.59203207, 14.22787485]",
+        "IS_01/01e21 :: Piazza Venti Settembre, Isernia [41.59086001, 14.22749061]",
+        "IS_01/01e22 :: Vico Pentri 33, Isernia [41.59152823, 14.22818476]",
+        "IS_01/01e23 :: Via John Fitzgerald Kennedy 12, Isernia [41.59215212, 14.23019576]",
+        "IS_01/01e24 :: Via John Fitzgerald Kennedy, Isernia [41.59313845, 14.23231853]",
+        "IS_01/01e31 :: Via Santo Spirito 22, Isernia [41.59302709, 14.23447353]",
+        "IS_01/01e32 :: Via Giuseppe Saragat, Isernia [41.59425067, 14.23589192]",
+        "IS_01/01e33 :: Via Formichelli, Isernia [41.59495845, 14.23551269]",
+        "IS_01/01e34 :: Via Erennio Ponzio, Isernia [41.5940176, 14.23246324]",
+        "IS_01/01e41 :: Via Piemonte, Isernia [41.59637603, 14.23963472]",
+        "IS_01/01e42 :: Via Laurelli, Isernia [41.59495929, 14.23761891]",
+        "IS_01/01e43 :: Corso Risorgimento, Isernia [41.59573359, 14.23711173]",
+        "IS_01/01e44 :: San Lazzaro, Isernia [41.59718148, 14.24033548]",
+        "IS_01/01w11 :: Via Guglielmo Senerchia, Isernia [41.59655974, 14.23367596]",
+        "IS_01/01w12 :: Via Piave, Isernia [41.5964946, 14.23144842]",
+        "IS_01/01w13 :: Via Mario Farinacci, Isernia [41.5959976, 14.23263608]",
+        "IS_01/01w14 :: Via Occidentale, Isernia [41.59452564, 14.2295747]",
+        "IS_01/01w21 :: Via Gorizia, Isernia [41.59961635, 14.23559426]",
+        "IS_01/01w22 :: San Lazzaro, Isernia [41.59979355, 14.23324663]",
+        "IS_01/01w23 :: Via Pietro Patriarca, Isernia [41.59770405, 14.23440192]",
+        "IS_01/01w24 :: Via Pietro Patriarca, Isernia [41.59812284, 14.23369238]",
+        "IS_01/01w31 :: Viale Gabriele Veneziale, Isernia [41.59960012, 14.24281619]",
+        "IS_01/01w32 :: Via Libero Testa, Isernia [41.60006386, 14.23908851]",
+        "IS_01/01w33 :: Corso Giuseppe Garibaldi, Isernia [41.60131297, 14.23853337]",
+        "IS_01/01w34 :: Via Francesco Petrarca, Isernia [41.60004731, 14.23724402]",
+        "IS_01/01w41 :: Viale Gabriele Veneziale, Isernia [41.60001994, 14.2409462]",
+        "IS_01/01w42 :: Via Molise, Isernia [41.59631151, 14.23714248]",
+        "IS_01/01w43 :: Via Pio la Torre, Isernia [41.59856164, 14.23964217]",
+        "IS_01/01w44 :: San Lazzaro, Isernia [41.59778731, 14.23938537]",
+        "IS_01/02e11 :: Corso Risorgimento, Isernia [41.59801441, 14.24304604]",
+        "IS_01/02e12 :: Corso Risorgimento, Isernia [41.59777281, 14.24379353]",
+        "IS_01/02e13 :: Via San Leucio, Isernia [41.59685855, 14.24670734]",
+        "IS_01/02e14 :: Via San Leucio, Isernia [41.59715353, 14.24983385]",
+        "IS_01/02e21 :: Via Andrea Palladio 3, Isernia [41.60418291, 14.23953152]",
+        "IS_01/02e22 :: Viale dei Pentri, Isernia [41.60203558, 14.2421402]",
+        "IS_01/02e23 :: San Lazzaro, Isernia [41.60148718, 14.24745148]",
+        "IS_01/02e24 :: Viale dei Pentri 215/217, Isernia [41.59985392, 14.24618364]",
+        "IS_01/02e31 :: Via Giulio Tedeschi, Isernia [41.60630844, 14.23821948]",
+        "IS_01/02e32 :: San Lazzaro, Isernia [41.60892399, 14.23387163]",
+        "IS_01/02e33 :: Via Caravaggio, Isernia [41.60917925, 14.23678191]",
+        "IS_01/02e34 :: Via Mozart, Isernia [41.60753868, 14.2327315]",
+        "IS_01/02e41 :: Via Buccigrossi, Isernia [41.61068083, 14.23705548]",
+        "IS_01/02e42 :: Via Venditti, Isernia [41.61047558, 14.23563513]"
+      ],
+      "Jelsi": [
+        "E381_CNO1 :: ~Strada Provinciale 162 dir/A ex SS 17 dell'Appennino Abruzzese ed Appulo-Sannitico, Jelsi [41.5187862, 14.79530457]",
+        "E381_CNO2 :: Strada Provinciale 162 dir/A ex SS 17 dell'Appennino Abruzzese ed Appulo-Sannitico, Jelsi [41.51936023, 14.79596108]",
+        "E381_CNO3 :: ~Strada Provinciale 162 dir/A ex SS 17 dell'Appennino Abruzzese ed Appulo-Sannitico, Jelsi [41.51774852, 14.7982348]",
+        "E381_CNO4 :: Strada Provinciale 162 dir/A ex SS 17 dell'Appennino Abruzzese ed Appulo-Sannitico, Jelsi [41.51787616, 14.79869904]",
+        "E381_CNO5 :: Strada Provinciale 162 dir/A ex SS 17 dell'Appennino Abruzzese ed Appulo-Sannitico, Jelsi [41.51773452, 14.79954762]"
+      ],
+      "Limosano": [
+        "E599_CNO1 :: Limosano, Limosano [41.67236007, 14.62731056]",
+        "E599_CNO2 :: Limosano, Limosano [41.67300446, 14.62590779]",
+        "E599_CNO3 :: Limosano, Limosano [41.67668747, 14.62168796]",
+        "E599_CNO4 :: Strada Provinciale 73 dir/E Bifernina, Limosano [41.67748229, 14.62042028]"
+      ],
+      "Longano": [
+        "E669_CNO1 :: le Pagliare, Longano [41.52126694, 14.24534858]",
+        "E669_CNO2 :: Strada Provinciale 21 Isernia - Castelpizzuto, Longano [41.52215042, 14.24623648]",
+        "E669_CNO3 :: Strada Provinciale 21 Isernia - Castelpizzuto, Longano [41.52213176, 14.24621991]"
+      ],
+      "Lucito": [
+        "E722_CNO1 :: Lucito [41.73449664, 14.68810757]",
+        "E722_CNO2 :: Lucito [41.73198204, 14.68735874]",
+        "E722_CNO3 :: Lucito [41.7319264, 14.68806314]",
+        "E722_CNO4 :: Via Germano di Carlo 5 [41.73184702, 14.68818461]"
+      ],
+      "Lupara": [
+        "E748_CNO1 :: Via Nicola Suriani 12, Lupara [41.76201858, 14.73377441]",
+        "E748_CNO2 :: Via Nicola Suriani, Lupara [41.7617617, 14.73288299]",
+        "E748_CNO3 :: Via Nicola Suriani, Lupara [41.76218642, 14.73340465]"
+      ],
+      "Macchia D'Isernia": [
+        "E778_CNO1 :: ~Via Marconi, Macchia d'Isernia [41.56261891, 14.16904675]",
+        "E778_CNO2 :: ~Strada Statale 85 Venafrana, Macchia d'Isernia [41.56106053, 14.176282]",
+        "E778_CNO3 :: ~Traversa III Marconi, Macchia d'Isernia [41.5616027, 14.16983904]"
+      ],
+      "Macchia Valfortore": [
+        "E780_CNO1 :: Via Molise, Macchia Valfortore [41.59342094, 14.91153143]",
+        "E780_CNO2 :: Via Molise, Macchia Valfortore [41.59341292, 14.91152748]",
+        "E780_CNO3 :: ~Via Giulio Cesare, Macchia Valfortore [41.59762601, 14.91176218]"
+      ],
+      "Macchiagodena": [
+        "E779_CNO1 :: Caporio, Macchiagodena [41.55233265, 14.39780501]",
+        "E779_CNO2 :: Gentile, Macchiagodena [41.55540071, 14.427152]",
+        "E779_CNO3 :: Piazza Ottavio De Salvio, Macchiagodena [41.55950993, 14.40589344]",
+        "E779_CNO4 :: Barile, Macchiagodena [41.55420419, 14.41568049]",
+        "E779_CNO5 :: Barile, Macchiagodena [41.55324417, 14.42647413]",
+        "E779_CNO6 :: Via Giuseppe Garibaldi 15, Macchiagodena [41.56004827, 14.40809087]"
+      ],
+      "Mafalda": [
+        "E799_CNO1 :: Via Costarella, Mafalda [41.94280558, 14.71644035]",
+        "E799_CNO2 :: Mafalda, Mafalda [41.94246229, 14.7182817]",
+        "E799_CNO3 :: Corso Europa, Mafalda [41.93988654, 14.70909949]",
+        "E799_CNO4 :: Corso Europa, Mafalda [41.94175664, 14.71475624]",
+        "E799_CNO5 :: Via Asia, Mafalda [41.93975786, 14.70659662]"
+      ],
+      "Matrice": [
+        "F055_CNO1 :: Via Calvario, Matrice [41.61478386, 14.70936299]",
+        "F055_CNO2 :: Via Quattro Novembre, Matrice [41.61263366, 14.71120835]",
+        "F055_CNO3 :: Via Federico Sbrocca, Matrice [41.61262586, 14.71093714]",
+        "F055_CNO4 :: Largo Madre Speranza, Matrice [41.61985959, 14.69837792]"
+      ],
+      "Mirabello Sannitico": [
+        "F233_CNO1 :: Piazza Vittorio Verdone, Mirabello Sannitico [41.51614073, 14.67443924]",
+        "F233_CNO2 :: Via Piane, Mirabello Sannitico [41.51840336, 14.66331283]",
+        "F233_CNO3 :: Via dei Sanniti, Mirabello Sannitico [41.51860819, 14.66637323]",
+        "F233_CNO4 :: Strada interpoderale San Giorgio, Mirabello Sannitico [41.51127049, 14.67465251]",
+        "F233_CNO44 :: Via Firenze, Mirabello Sannitico [41.51522194, 14.67195082]",
+        "F233_CNO5 :: Via Foggia, Mirabello Sannitico [41.51612992, 14.67443689]",
+        "F233_CNO6 :: Via Firenze, Mirabello Sannitico [41.51521041, 14.67195016]"
+      ],
+      "Miranda": [
+        "F239_CNO1 :: Via Alfonso Patriarca, Miranda [41.64205979, 14.24744267]",
+        "F239_CNO2 :: Corso Belvedere, Miranda [41.64186285, 14.24861952]",
+        "F239_CNO3 :: ~Via Alfonso Patriarca, Miranda [41.6425642, 14.24774839]"
+      ],
+      "Molise": [
+        "F294_CNO1 :: Colle Sidonio, Molise [41.63115195, 14.49294018]",
+        "F294_CNO2 :: Colle Sidonio, Molise [41.63120385, 14.49378183]"
+      ],
+      "Monacilioni": [
+        "F322_CNO1 :: Corso Umberto I, Monacilioni [41.61042848, 14.80863919]",
+        "F322_CNO2 :: ~Strada Provinciale 72 Tappina, Monacilioni [41.61040713, 14.8114697]"
+      ],
+      "Montagano": [
+        "F391_CNO1 :: Via Adriatica, Montagano [41.64570279, 14.67492379]",
+        "F391_CNO2 :: Via Adriatica, Montagano [41.64698452, 14.67350492]",
+        "F391_CNO3 :: Via Roma, Montagano [41.64762294, 14.67142015]",
+        "F391_CNO4 :: Via Roma, Montagano [41.64739143, 14.67200926]",
+        "F391_CNO5 :: Corso Umberto Primo, Montagano [41.64421249, 14.67648978]"
+      ],
+      "Montaquila": [
+        "F429_CNO1 :: Via Veneziano, Montaquila [41.52057473, 14.12834557]",
+        "F429_CNO2 :: Via Francesco Jovine, Montaquila [41.55315335, 14.11543841]",
+        "F429_CNO3 :: Via Donatello, Montaquila [41.52200964, 14.12602985]",
+        "F429_CNO4 :: Via Aldo Moro, Montaquila [41.56624301, 14.11305056]",
+        "F429_CNO5 :: Strada Comunale Santa Lucia, Montaquila [41.52920068, 14.12720696]",
+        "F429_CNO6 :: Via Roma, Montaquila [41.5662604, 14.11476883]"
+      ],
+      "Montecilfone": [
+        "F475_CNO1 :: Via Roma 95, Montecilfone [41.90190671, 14.83567155]",
+        "F475_CNO2 :: Corso Skanderbeg, Montecilfone [41.90323278, 14.83694321]",
+        "F475_CNO3 :: Via Gabriele Pepe, Montecilfone [41.90490836, 14.83680716]",
+        "F475_CNO4 :: Via Roma 95, Montecilfone [41.90185032, 14.83654225]",
+        "F475_CNO5 :: Via Roma, Montecilfone [41.90178622, 14.83815358]"
+      ],
+      "Montefalcone Nel Sannio": [
+        "F495_CNO1 :: Strada Provinciale 78 dir/A Appulo-Chietina, Montefalcone nel Sannio [41.86475855, 14.63861369]",
+        "F495_CNO2 :: Jermana, Montefalcone nel Sannio [41.8639518, 14.63857752]",
+        "F495_CNO3 :: Jermana, Montefalcone nel Sannio [41.86471802, 14.64180281]",
+        "F495_CNO4 :: Via Vincenzo Roberti, Montefalcone nel Sannio [41.8666686, 14.64033261]",
+        "F495_CNO5 :: Strada Provinciale 78 dir/A Appulo-Chietina, Montefalcone nel Sannio [41.86864528, 14.63863517]"
+      ],
+      "Montelongo": [
+        "F548_CNO1 :: Via non definita, Montelongo [41.73752448, 14.95179952]",
+        "F548_CNO2 :: Via non definita, Montelongo [41.73752395, 14.95182128]"
+      ],
+      "Montemitro": [
+        "F569_CNO1 :: Via Makarska, Montemitro [41.88810689, 14.64670534]",
+        "F569_CNO2 :: Via Makarska, Montemitro [41.88812678, 14.6466992]"
+      ],
+      "Montenero Di Bisaccia": [
+        "F576_CNO1 :: Montenero di Bisaccia, Montenero di Bisaccia [41.96058181, 14.78391145]",
+        "F576_CNO10 :: Montenero di Bisaccia, Montenero di Bisaccia [41.95511245, 14.78052468]",
+        "F576_CNO11 :: Montenero di Bisaccia, Montenero di Bisaccia [41.95851754, 14.77990277]",
+        "F576_CNO12 :: Piazza della Libertà 33, Montenero di Bisaccia [41.95762165, 14.78060451]",
+        "F576_CNO13 :: Via Ugo Foscolo, Montenero di Bisaccia [41.955925, 14.78297181]",
+        "F576_CNO14 :: Via Vittorio Argentieri, Montenero di Bisaccia [41.96448668, 14.7813867]",
+        "F576_CNO15 :: Montenero di Bisaccia, Montenero di Bisaccia [41.9696363, 14.77835574]",
+        "F576_CNO16 :: Montenero di Bisaccia, Montenero di Bisaccia [41.95756358, 14.77953598]",
+        "F576_CNO17 :: Via Vittorio Argentieri, Montenero di Bisaccia [41.9622679, 14.78403801]",
+        "F576_CNO2 :: Via Vittorio Argentieri, Montenero di Bisaccia [41.95974642, 14.78265365]",
+        "F576_CNO3 :: Via del Mercato, Montenero di Bisaccia [41.95762272, 14.78230033]",
+        "F576_CNO4 :: Montenero di Bisaccia, Montenero di Bisaccia [41.96659176, 14.77790555]",
+        "F576_CNO5 :: Montenero di Bisaccia, Montenero di Bisaccia [41.95996875, 14.78149568]",
+        "F576_CNO6 :: Via Gabriele D'Annunzio, Montenero di Bisaccia [41.95383534, 14.78161632]",
+        "F576_CNO7 :: Montenero di Bisaccia, Montenero di Bisaccia [41.95550859, 14.77997649]",
+        "F576_CNO8 :: Strada Statale 157 della Valle del Biferno, Montenero di Bisaccia [41.97384421, 14.78040129]",
+        "F576_CNO9 :: Montenero di Bisaccia, Montenero di Bisaccia [41.95709806, 14.78271201]"
+      ],
+      "Montenero Val Cocchiara": [
+        "F580_CNO1 :: Via Nostra Signora Lourdes, Montenero Val Cocchiara [41.71519993, 14.06863823]",
+        "F580_CNO2 :: ~Via Carlo Alberto, Montenero Val Cocchiara [41.71599683, 14.06664903]",
+        "F580_CNO3 :: Via non definita, Montenero Val Cocchiara [41.71841413, 14.0664009]",
+        "F580_CNO4 :: SP Montenero Val Cocchiara, Montenero Val Cocchiara [41.71624036, 14.07280942]"
+      ],
+      "Monteroduni": [
+        "F601_CNO1 :: Via Sant'Eusanio, Monteroduni [41.52935381, 14.15396804]",
+        "F601_CNO10 :: Piazza G. Russo 12, Monteroduni [41.52229174, 14.17886902]",
+        "F601_CNO11 :: Via Estramurale del Sole, Monteroduni [41.52178385, 14.17647952]",
+        "F601_CNO6 :: Via Sant'Eusanio, Monteroduni [41.52895754, 14.14949439]",
+        "F601_CNO7 :: Vico quindicesimo del Sole, Monteroduni [41.5234412, 14.17487751]",
+        "F601_CNO8 :: Via Estramurale del Nord, Monteroduni [41.52288469, 14.17712019]",
+        "F601_CNO9 :: Via Scipione D'Afflitto, Monteroduni [41.52186377, 14.17781759]"
+      ],
+      "Montorio Nei Frentani": [
+        "F689_CNO1 :: ~Strada Provinciale 78 Appulo-Chietina, Montorio nei Frentani [41.75928006, 14.93265482]",
+        "F689_CNO2 :: ~Strada Provinciale 78 Appulo-Chietina, Montorio nei Frentani [41.75776069, 14.93189077]",
+        "F689_CNO3 :: Strada Provinciale 78 Appulo-Chietina, Montorio nei Frentani [41.75943489, 14.93234574]"
+      ],
+      "Morrone Del Sannio": [
+        "F748_CNO1 :: Via non definita, Morrone del Sannio [41.71088513, 14.78203416]",
+        "F748_CNO2 :: ~Strada Provinciale 64 di Morrone del Sannio, Morrone del Sannio [41.71057584, 14.78399041]",
+        "F748_CNO3 :: Via non definita, Morrone del Sannio [41.71162503, 14.77933573]",
+        "F748_CNO4 :: ~Strada Provinciale 157 della Valle del Biferno, Morrone del Sannio [41.71299999, 14.77564225]",
+        "F748_CNO5 :: Strada Provinciale 64 di Morrone del Sannio, Morrone del Sannio [41.71151663, 14.78591965]"
+      ],
+      "Oratino": [
+        "G086_CNO1 :: Via Gioco, Oratino [41.58298538, 14.58429361]",
+        "G086_CNO2 :: Strada Provinciale 48 di Oratino, Oratino [41.58550497, 14.58815197]",
+        "G086_CNO3 :: Strada Comunale per Oratino, Oratino [41.58082859, 14.60402057]",
+        "G086_CNO4 :: Via Regina Margherita, Oratino [41.58505285, 14.58498192]"
+      ],
+      "Palata": [
+        "G257_CNO1 :: ~Piazza San Rocco, Palata [41.89022382, 14.78396833]",
+        "G257_CNO2 :: ~Via Gabriele D'Annunzio, Palata [41.88612722, 14.78835812]",
+        "G257_CNO3 :: Strada Provinciale 168 Termolese, Palata [41.88682484, 14.79133536]",
+        "G257_CNO4 :: Piazza San Rocco, Palata [41.8894905, 14.78444837]",
+        "G257_CNO5 :: ~Piazza San Rocco, Palata [41.89007521, 14.78473099]",
+        "G257_CNO6 :: ~Via San Rocco, Palata [41.8868124, 14.78431962]",
+        "G257_CNO7 :: Via non definita, Palata [41.8913125, 14.78634713]"
+      ],
+      "Pesche": [
+        "G486_CNO1 :: Via non definita, Pesche [41.60968498, 14.28305866]",
+        "G486_CNO2 :: Via Mastropietro, Pesche [41.60734708, 14.27695738]",
+        "G486_CNO3 :: Via non definita, Pesche [41.60323412, 14.27269203]",
+        "G486_CNO4 :: Via Nuova Zelanda, Pesche [41.61012416, 14.28375168]"
+      ],
+      "Pescolanciano": [
+        "G495_CNO1 :: ~Strada comunale Fonte Vecchia, Pescolanciano [41.68157051, 14.33915844]",
+        "G495_CNO2 :: Via Giuseppe Garibaldi, Pescolanciano [41.67867324, 14.33654594]",
+        "G495_CNO3 :: Via dei Mille, Pescolanciano [41.67956302, 14.33454999]",
+        "G495_CNO4 :: Via Carlo Pisacane, Pescolanciano [41.67917846, 14.33625349]"
+      ],
+      "Pescopennataro": [
+        "G497_CNO1 :: Strada Provinciale Istonio-Sangrina, Pescopennataro [41.87705889, 14.29327682]",
+        "G497_CNO2 :: Via Torino, Pescopennataro [41.87775141, 14.29313108]"
+      ],
+      "Petacciato": [
+        "G506_CNO1 :: Petacciato scalo, Petacciato [42.03241057, 14.85039658]",
+        "G506_CNO2 :: ~Via Napoli, Petacciato [42.00537933, 14.86057484]",
+        "G506_CNO3 :: Petacciato scalo, Petacciato [42.03242424, 14.85038108]"
+      ],
+      "Petrella Tifernina": [
+        "G512_CNO1 :: ~Via Regina Elena, Petrella Tifernina [41.69207178, 14.69676604]",
+        "G512_CNO2 :: Corso Vittorio Emanuele Terzo 140, Petrella Tifernina [41.69038606, 14.6964005]",
+        "G512_CNO3 :: Piazza Umberto Primo, Petrella Tifernina [41.69143258, 14.69507519]",
+        "G512_CNO4 :: Corso Vittorio Emanuele Terzo, Petrella Tifernina [41.69226358, 14.69406798]",
+        "G512_CNO5 :: Via Pioppo 54, Petrella Tifernina [41.69187497, 14.6973779]"
+      ],
+      "Pettoranello Del Molise": [
+        "G523_CNO1 :: Pantaniello, Pettoranello del Molise [41.58773579, 14.27674586]",
+        "G523_CNO2 :: Piazza Guglielmo Marconi, Pettoranello del Molise [41.57353037, 14.27643062]"
+      ],
+      "Pietrabbondante": [
+        "G606_CNO1 :: SP71, Pietrabbondante [41.74799187, 14.38612088]",
+        "G606_CNO2 :: Mincariello, Pietrabbondante [41.74402398, 14.38270678]",
+        "G606_CNO3 :: SP69-dir, Pietrabbondante [41.74764941, 14.38185191]"
+      ],
+      "Pietracatella": [
+        "G609_CNO1 :: Via Fontanelle 19, Pietracatella [41.58056598, 14.8730968]",
+        "G609_CNO2 :: Via San Nicola, Pietracatella [41.58006991, 14.87119941]",
+        "G609_CNO3 :: ~Via Donato Maria D'Amico, Pietracatella [41.58177019, 14.8758519]",
+        "G609_CNO4 :: Via Roma, Pietracatella [41.58161214, 14.87331787]",
+        "G609_CNO5 :: Via Fontanelle, Pietracatella [41.58044313, 14.87416828]",
+        "G609_CNO6 :: Via Guglielmo Marconi, Pietracatella [41.58108939, 14.87196657]"
+      ],
+      "Pietracupa": [
+        "G610_CNO1 :: Taverna, Pietracupa [41.68247577, 14.52122811]",
+        "G610_CNO2 :: Via Sandro Pertini, Pietracupa [41.68254008, 14.51797532]",
+        "G610_CNO3 :: Via Sandro Pertini, Pietracupa [41.6825321, 14.51796288]"
+      ],
+      "Pizzone": [
+        "G727_CNO1 :: Via Vittorio Emanuele III, Pizzone [41.66686518, 14.03587399]",
+        "G727_CNO2 :: Via non definita, Pizzone [41.66629744, 14.03596558]"
+      ],
+      "Poggio Sannita": [
+        "B317_CNO1 :: Strada Provinciale 73 Diramazione Poggio Sannita, Poggio Sannita [41.78077367, 14.41470185]",
+        "B317_CNO2 :: ~Corso Umberto Primo, Poggio Sannita [41.77931759, 14.41301713]",
+        "B317_CNO3 :: Corso Vittorio Emanuele Terzo, Poggio Sannita [41.77784247, 14.41287825]",
+        "B317_CNO4 :: Via non definita, Poggio Sannita [41.77516811, 14.411161]"
+      ],
+      "Portocannone": [
+        "G910_CNO1 :: Via Garibaldi, Portocannone [41.91716246, 15.00949749]",
+        "G910_CNO2 :: Via Garibaldi, Portocannone [41.91305555, 15.00797469]",
+        "G910_CNO3 :: Borgo Costantinopoli, Portocannone [41.91288665, 15.00840285]",
+        "G910_CNO4 :: Strada Provinciale 130 Portocannone - Nuova Cliternia, Portocannone [41.91431052, 15.01471231]",
+        "G910_CNO5 :: Via Garibaldi, Portocannone [41.91453833, 15.00905457]",
+        "G910_CNO6 :: Via Garibaldi, Portocannone [41.91472418, 15.00959903]",
+        "G910_CNO7 :: Borgo Costantinopoli, Portocannone [41.9143327, 15.01017042]",
+        "G910_CNO8 :: Borgo Costantinopoli, Portocannone [41.91534693, 15.01031323]"
+      ],
+      "Provvidenti": [
+        "H083_CNO1 :: ~Strada Provinciale 65 di Provvidenti, Provvidenti [41.71875372, 14.82269667]"
+      ],
+      "Riccia": [
+        "H273_CNO10 :: Via Bartolomeo Zaburri, Riccia [41.48630195, 14.83620668]",
+        "H273_CNO11 :: Via Gabriele Pepe, Riccia [41.48502963, 14.83611214]",
+        "H273_CNO12 :: Via della Libertà, Riccia [41.48533027, 14.83384099]",
+        "H273_CNO13 :: Largo Casale, Riccia [41.48827202, 14.83270072]",
+        "H273_CNO14 :: Via Feudo, Riccia [41.4841445, 14.83356061]",
+        "H273_CNO15 :: Traversa via Calemme, Riccia [41.48193794, 14.83192483]",
+        "H273_CNO16 :: Viale Pietro Sedati, Riccia [41.47964463, 14.82968823]",
+        "H273_CNO18 :: Strada Statale 212 della Val Fortore, Riccia [41.46518426, 14.84249002]",
+        "H273_CNO20 :: Escamare Casa Cantoniera, Riccia [41.45861016, 14.82690742]",
+        "H273_CNO21 :: Via Santa Barbara, Riccia [41.48794199, 14.8339402]",
+        "H273_CNO5 :: Sabatella, Riccia [41.47807672, 14.83694533]",
+        "H273_CNO6 :: Riccia, Riccia [41.48242068, 14.83663485]",
+        "H273_CNO7 :: Largo Airella, Riccia [41.4824335, 14.83501708]",
+        "H273_CNO8 :: Piazza Umberto I, Riccia [41.4834482, 14.83591358]",
+        "H273_CNO9 :: Via Trono, Riccia [41.4838883, 14.83730601]"
+      ],
+      "Rionero Sannitico": [
+        "H308_CNO1 :: Strada Statale 17 dell'Appennino Abruzzese e Appulo Sannitico, Rionero Sannitico [41.71178947, 14.14095159]",
+        "H308_CNO2 :: ~Strada Statale 17 dell'Appennino Abruzzese e Appulo Sannitico, Rionero Sannitico [41.7136983, 14.13595805]",
+        "H308_CNO3 :: Strada Statale 17 dell'Appennino Abruzzese e Appulo Sannitico 71, Rionero Sannitico [41.71305256, 14.1397332]",
+        "H308_CNO4 :: Montalto, Rionero Sannitico [41.74219554, 14.15634548]",
+        "H308_CNO5 :: ~Strada Statale 17 dell'Appennino Abruzzese e Appulo Sannitico, Rionero Sannitico [41.71018957, 14.14244487]"
+      ],
+      "Ripabottoni": [
+        "H311_CNO1 :: ~Corso Vittorio Emanuele III, Ripabottoni [41.68867402, 14.80665043]",
+        "H311_CNO2 :: Strada Provinciale 71 Castellina, Ripabottoni [41.69061689, 14.81014224]",
+        "H311_CNO3 :: ~Corso Vittorio Emanuele III, Ripabottoni [41.6886808, 14.80666207]"
+      ],
+      "Ripalimosani": [
+        "H313_CNO1 :: Via San Martino, Ripalimosani [41.61250982, 14.66589978]",
+        "H313_CNO10 :: Strada Provinciale 59 di Ripalimosani, Ripalimosani [41.59611664, 14.66315926]",
+        "H313_CNO2 :: Contrada Peschio, Ripalimosani [41.61149384, 14.66581393]",
+        "H313_CNO3 :: Viale Unità d'Italia 16, Ripalimosani [41.59059752, 14.66938836]",
+        "H313_CNO4 :: Via San Rocco, Ripalimosani [41.60966336, 14.66209647]",
+        "H313_CNO5 :: Piazza San Michele, Ripalimosani [41.61231402, 14.66485135]",
+        "H313_CNO8 :: Via Antonio Gramsci, Ripalimosani [41.60798149, 14.6613427]",
+        "H313_CNO9 :: Strada Provinciale 90 di Santo Stefano, Ripalimosani [41.59942428, 14.65675579]"
+      ],
+      "Roccamandolfi": [
+        "H420_CNO1 :: Via Cancello, Roccamandolfi [41.49271478, 14.34796582]",
+        "H420_CNO2 :: Via Roma, Roccamandolfi [41.49326279, 14.35024404]",
+        "H420_CNO3 :: Strada Provinciale Volturno Pentrica 45, Roccamandolfi [41.4957351, 14.35254362]",
+        "H420_CNO4 :: Corso Umberto, Roccamandolfi [41.4951389, 14.35201464]"
+      ],
+      "Roccasicura": [
+        "H445_CNO1 :: SP86, Roccasicura [41.69713035, 14.23188218]",
+        "H445_CNO2 :: Via non definita, Roccasicura [41.69806595, 14.23210647]",
+        "H445_CNO3 :: Via non definita, Roccasicura [41.69705826, 14.2331843]"
+      ],
+      "Roccavivara": [
+        "H454_CNO1 :: Via Vittorio Veneto, Roccavivara [41.83477195, 14.60118486]",
+        "H454_CNO2 :: Colle Liscia, Roccavivara [41.8380504, 14.59767451]",
+        "H454_CNO3 :: Via Colle Terra Santa, Roccavivara [41.83269143, 14.59892081]"
+      ],
+      "Rocchetta A Volturno": [
+        "H458_CNO2 :: Via Baccareccia, Rocchetta a Volturno [41.62765401, 14.07132049]",
+        "H458_CNO3 :: Via Acqua Nascosa, Rocchetta a Volturno [41.62075887, 14.086882]",
+        "H458_CNO4 :: Via Bacino, Rocchetta a Volturno [41.62333381, 14.08780428]"
+      ],
+      "Rotello": [
+        "H589_CNO1 :: Viale della Vittoria, Rotello [41.74680118, 15.00487969]",
+        "H589_CNO2 :: ~Piazza Antonio Gramsci, Rotello [41.74795667, 15.00485355]",
+        "H589_CNO3 :: Via Guglielmo Marconi, Rotello [41.75037091, 15.00413075]",
+        "H589_CNO4 :: Via Maresciallo Diaz, Rotello [41.74718465, 15.00587315]",
+        "H589_CNO5 :: Piazza Antonio Gramsci, Rotello [41.74854623, 15.00556164]"
+      ],
+      "Salcito": [
+        "H693_CNO1 :: Via IV Novembre, Salcito [41.74672832, 14.50916229]",
+        "H693_CNO2 :: ~Viale Giovanni Quartullo, Salcito [41.74743936, 14.50957132]",
+        "H693_CNO3 :: Via IV Novembre, Salcito [41.74669525, 14.50936844]",
+        "H693_CNO4 :: Strada Provinciale 15 dir/A var di Salcito, Salcito [41.74498473, 14.51342877]"
+      ],
+      "San Biase": [
+        "H782_CNO1 :: Pinciare, San Biase [41.71450372, 14.58948904]",
+        "H782_CNO2 :: Pinciare, San Biase [41.71449272, 14.58948406]"
+      ],
+      "San Felice Del Molise": [
+        "H833_CNO1 :: Montagna, San Felice del Molise [41.89096612, 14.69994102]",
+        "H833_CNO2 :: Montagna, San Felice del Molise [41.89007779, 14.70187463]",
+        "H833_CNO3 :: Montagna, San Felice del Molise [41.89010431, 14.70583393]"
+      ],
+      "San Giacomo Degli Schiavoni": [
+        "H867_CNO1 :: Via Modigliani, San Giacomo degli Schiavoni [41.95928764, 14.9448653]",
+        "H867_CNO2 :: Corso Umberto Primo, San Giacomo degli Schiavoni [41.96408983, 14.94671064]",
+        "H867_CNO3 :: ~Via Tevere, San Giacomo degli Schiavoni [41.96122385, 14.94481801]",
+        "H867_CNO4 :: Via Roma, San Giacomo degli Schiavoni [41.96482452, 14.94639143]"
+      ],
+      "San Giovanni In Galdo": [
+        "H920_CNO1 :: Via Ventiquattro Maggio, San Giovanni in Galdo [41.58660662, 14.74528478]",
+        "H920_CNO2 :: Strada Provinciale 56 dir/B Galdina, San Giovanni in Galdo [41.59139914, 14.75216228]"
+      ],
+      "San Giuliano Del Sannio": [
+        "H928_CNO1 :: Via Vittorio Emanuele III, San Giuliano del Sannio [41.45582215, 14.63953837]",
+        "H928_CNO2 :: ~Strada Provinciale 53 Sannitica, San Giuliano del Sannio [41.45351038, 14.635018]",
+        "H928_CNO3 :: ~Strada Provinciale 54 di Cercepiccola, San Giuliano del Sannio [41.45658142, 14.6431024]",
+        "H928_CNO4 :: Strada Provinciale 69 Sepinese, San Giuliano del Sannio [41.45826251, 14.64173191]",
+        "H928_CNO5 :: Via Roma, San Giuliano del Sannio [41.45752601, 14.64168149]",
+        "H928_CNO6 :: Via Roma, San Giuliano del Sannio [41.4563984, 14.6398727]"
+      ],
+      "San Giuliano Di Puglia": [
+        "H929_CNO1 :: Via Aldo Moro, San Giuliano di Puglia [41.68483422, 14.9633229]",
+        "H929_CNO2 :: Via Colori della Vita, San Giuliano di Puglia [41.68784784, 14.95902536]",
+        "H929_CNO4 :: Via Portapiedi, San Giuliano di Puglia [41.68351417, 14.96601517]",
+        "H929_CNO5 :: Borgo, San Giuliano di Puglia [41.68672964, 14.96356862]"
+      ],
+      "San Massimo": [
+        "I023_CNO1 :: Cerreto, San Massimo [41.49843383, 14.41318337]",
+        "I023_CNO10 :: Strada Provinciale 38 di San Massimo, San Massimo [41.50079354, 14.41399476]",
+        "I023_CNO2 :: Cerreto, San Massimo [41.49362512, 14.41141579]"
+      ],
+      "San Pietro Avellana": [
+        "I096_CNO1 :: SP87 3, San Pietro Avellana [41.78923847, 14.18277835]",
+        "I096_CNO2 :: ~Via San Rocco, San Pietro Avellana [41.78788818, 14.18379076]",
+        "I096_CNO3 :: Via San Rocco, San Pietro Avellana [41.79079343, 14.18316333]"
+      ],
+      "San Polo Matese": [
+        "I122_CNO1 :: Sorbo-San Michele, San Polo Matese [41.47418659, 14.51172165]"
+      ],
+      "Sant'Agapito": [
+        "I189_CNO1 :: Strada Comunale Sant'Agàpito-Temennotte, Sant'Agapito [41.54377876, 14.22159125]",
+        "I189_CNO2 :: Via Giovanni XXIII, Sant'Agapito [41.55869227, 14.21763758]",
+        "I189_CNO3 :: Colanonni, Sant'Agapito [41.54203001, 14.22242603]",
+        "I189_CNO4 :: Colanonni, Sant'Agapito [41.54514911, 14.22216421]"
+      ],
+      "Sant'Angelo Del Pesco": [
+        "I282_CNO1 :: Piazza dei Caduti, Sant'Angelo del Pesco [41.88313081, 14.25560314]",
+        "I282_CNO2 :: Casale dei Mughetti, Sant'Angelo del Pesco [41.87992588, 14.24874169]"
+      ],
+      "Sant'Angelo Limosano": [
+        "I289_CNO1 :: Rampa Vittorio Emanuele III, Sant'Angelo Limosano [41.69212459, 14.603004]",
+        "I289_CNO2 :: Pozzomoro, Sant'Angelo Limosano [41.68993565, 14.60376681]",
+        "I289_CNO3 :: Via Antonio Segni, Sant'Angelo Limosano [41.69287616, 14.60410805]"
+      ],
+      "Sant'Elena Sannita": [
+        "B466_CNO1 :: Via non definita, Sant'Elena Sannita [41.57224742, 14.46875179]",
+        "B466_CNO2 :: ~Strada Provinciale 57 Cipranense, Sant'Elena Sannita [41.57450476, 14.46798685]",
+        "B466_CNO3 :: ~Strada Provinciale 57 Cipranense, Sant'Elena Sannita [41.57506166, 14.46932883]"
+      ],
+      "Sant'Elia A Pianisi": [
+        "I320_CNO1 :: Via Francesco Cristinziani, Sant'Elia a Pianisi [41.62210152, 14.87342564]",
+        "I320_CNO2 :: Via Giudice Caracciolo, Sant'Elia a Pianisi [41.61981266, 14.87990051]",
+        "I320_CNO3 :: Via Bologna, Sant'Elia a Pianisi [41.61976405, 14.87355529]",
+        "I320_CNO4 :: Via Pomario, Sant'Elia a Pianisi [41.62053778, 14.87472015]",
+        "I320_CNO5 :: Corso Umberto Primo, Sant'Elia a Pianisi [41.62074779, 14.87551438]",
+        "I320_CNO6 :: Corso Vittorio Emanuale Terzo, Sant'Elia a Pianisi [41.62129269, 14.87092748]",
+        "I320_CNO7 :: Via Giuseppe Tiburzio, Sant'Elia a Pianisi [41.62224539, 14.87517683]",
+        "I320_CNO8 :: Via Sant'Antonio Abate, Sant'Elia a Pianisi [41.62301805, 14.87645555]"
+      ],
+      "Santa Croce Di Magliano": [
+        "I181_CNO1 :: Via Enrico De Nicola, Santa Croce di Magliano [41.70854262, 14.98084251]",
+        "I181_CNO10 :: Via Umberto Primo, Santa Croce di Magliano [41.71106225, 14.99257317]",
+        "I181_CNO11 :: Via Venti Settembre, Santa Croce di Magliano [41.7124909, 14.99338956]",
+        "I181_CNO12 :: Via Venezia, Santa Croce di Magliano [41.71318094, 14.98510881]",
+        "I181_CNO13 :: Via Palermo, Santa Croce di Magliano [41.71300172, 14.9883061]",
+        "I181_CNO14 :: Via Ciavolla, Santa Croce di Magliano [41.71202966, 14.99095006]",
+        "I181_CNO2 :: Via Giosuè Carducci, Santa Croce di Magliano [41.71134296, 14.98796491]",
+        "I181_CNO3 :: Via del Borgo Casale, Santa Croce di Magliano [41.71274819, 14.99033991]",
+        "I181_CNO4 :: Via Primo Maggio, Santa Croce di Magliano [41.71252667, 14.99356253]",
+        "I181_CNO5 :: Via Casale, Santa Croce di Magliano [41.71322856, 14.99329897]",
+        "I181_CNO6 :: Via Cavalcanti, Santa Croce di Magliano [41.7109937, 14.99007165]",
+        "I181_CNO7 :: Via Umberto Primo, Santa Croce di Magliano [41.71139316, 14.99385222]",
+        "I181_CNO8 :: Viale delle Acacie, Santa Croce di Magliano [41.71167352, 14.9837041]",
+        "I181_CNO9 :: Via Cupello, Santa Croce di Magliano [41.70999433, 14.98349057]"
+      ],
+      "Santa Maria Del Molise": [
+        "C246_CNO3 :: Bertoni, Santa Maria del Molise [41.55428847, 14.35374031]",
+        "I238_CNO1 :: Bertoni, Santa Maria del Molise [41.55262603, 14.36873324]",
+        "I238_CNO2 :: Bertoni, Santa Maria del Molise [41.55263374, 14.37115987]"
+      ],
+      "Scapoli": [
+        "I507_CNO1 :: Via non definita, Scapoli [41.61567217, 14.05758184]",
+        "I507_CNO2 :: ~SP per Castel San Vincenzo, Scapoli [41.61548723, 14.0591063]",
+        "I507_CNO3 :: Via non definita, Scapoli [41.60307814, 14.05705009]"
+      ],
+      "Sepino": [
+        "I618_CNO1 :: Petrilli, Sepino [41.41384285, 14.61610109]",
+        "I618_CNO2 :: Strada Provinciale 50 di Sepino, Sepino [41.41372208, 14.65630187]",
+        "I618_CNO3 :: Macchie di Sepino, Sepino [41.40626021, 14.62062348]",
+        "I618_CNO4 :: Petrilli, Sepino [41.40790423, 14.6181987]",
+        "I618_CNO5 :: Largo San Nicola, Sepino [41.40874892, 14.62069478]",
+        "I618_CNO6 :: Petrilli, Sepino [41.40668467, 14.61729144]"
+      ],
+      "Sessano Del Molise": [
+        "I679_CNO1 :: Pantaniello, Sessano del Molise [41.63772432, 14.32858989]",
+        "I679_CNO2 :: Via Roma, Sessano del Molise [41.63962487, 14.33071615]",
+        "I679_CNO3 :: Via della Madonna, Sessano del Molise [41.6369701, 14.33244326]"
+      ],
+      "Sesto Campano": [
+        "I682_CNO1 :: Via Pedemontana, Sesto Campano [41.44002927, 14.0419563]",
+        "I682_CNO2 :: Via Giardino, Sesto Campano [41.42092648, 14.08345146]",
+        "I682_CNO3 :: Salita Belvedere, Sesto Campano [41.42154319, 14.07690475]",
+        "I682_CNO4 :: Corso Giacomo Sedati, Sesto Campano [41.4195326, 14.08933545]",
+        "I682_CNO5 :: Strada Provinciale 6 Belvedere, Sesto Campano [41.42659989, 14.07207341]",
+        "I682_CNO6 :: Via Cannavinelle, Sesto Campano [41.4196191, 14.07787638]"
+      ],
+      "Spinete": [
+        "I910_CNO1 :: Piana, Spinete [41.55346496, 14.48388277]",
+        "I910_CNO2 :: Piana, Spinete [41.55587784, 14.49504412]",
+        "I910_CNO4 :: Strada Provinciale 35 di Macchie, Spinete [41.54744011, 14.50162727]",
+        "I910_CNO5 :: Pietroneri, Spinete [41.5447268, 14.48707253]",
+        "I910_CNO6 :: Strada Provinciale 33 Anniballi - Iacovantuono, Spinete [41.54027515, 14.48714537]"
+      ],
+      "Tavenna": [
+        "L069_CNO1 :: Via Roma, Tavenna [41.90942625, 14.76003626]",
+        "L069_CNO2 :: Via Roma, Tavenna [41.90941979, 14.76004798]",
+        "L069_CNO3 :: ~Via Circonvallazione, Tavenna [41.90783478, 14.76446863]"
+      ],
+      "Termoli": [
+        "CB_02/01e11 :: Via Martiri della Resistenza, Termoli [41.99800657, 14.99378566]",
+        "CB_02/01e12 :: Via Mascilongo, Termoli [41.99950572, 14.99133392]",
+        "CB_02/01e13 :: Via Nicola Mascilongo 34, Termoli [42.00103963, 14.98934693]",
+        "CB_02/01e14 :: Via Inghilterra, Termoli [41.99956775, 14.98998025]",
+        "CB_02/01e21 :: Vico Nazario Sauro 54, Termoli [41.99762859, 14.99615209]",
+        "CB_02/01e22 :: Via Gabriele Pepe 33, Termoli [41.99948485, 14.99667069]",
+        "CB_02/01e23 :: Corso Nazionale, Termoli [41.99983362, 14.99527836]",
+        "CB_02/01e24 :: Corso Umberto I 19, Termoli [42.00072096, 14.99383054]",
+        "CB_02/01e31 :: Via Duca degli Abruzzi 30, Termoli [42.00183532, 14.99219586]",
+        "CB_02/01e32 :: Via Giuseppe Mazzini 1, Termoli [42.0029802, 14.9907292]",
+        "CB_02/01e33 :: Via del Ciclismo, Termoli [42.00346664, 14.98704427]",
+        "CB_02/01e34 :: Via dello Sport, Termoli [42.00290791, 14.98823402]",
+        "CB_02/01e41 :: Via Maratona, Termoli [42.00239125, 14.98417379]",
+        "CB_02/01e42 :: Via Montecarlo, Termoli [42.00133509, 14.9857503]",
+        "CB_02/01e43 :: Via San Marino, Termoli [42.00054369, 14.98806252]",
+        "CB_02/01e44 :: Via Austria, Termoli [41.99977284, 14.98742019]",
+        "CB_02/01w11 :: Via Madonna delle Grazie, Termoli [41.99849173, 14.98889797]",
+        "CB_02/01w12 :: Via Alcide De Gasperi 5, Termoli [41.99747315, 14.99041368]",
+        "CB_02/01w13 :: Via America, Termoli [41.9975917, 14.98360112]",
+        "CB_02/01w14 :: Via Perù, Termoli [41.99931576, 14.98447413]",
+        "CB_02/01w21 :: Via Martiri della Resistenza 21, Termoli [41.99862088, 14.99189851]",
+        "CB_02/01w22 :: Via del Molinello, Termoli [41.99580772, 14.99109501]",
+        "CB_02/01w23 :: Via De Nicola, Termoli [41.99690115, 14.99159846]",
+        "CB_02/01w24 :: Via Panama 30r, Termoli [41.99632621, 14.98883472]",
+        "CB_02/01w31 :: Via Giappone 20, Termoli [41.99466601, 14.98857737]",
+        "CB_02/01w32 :: Via Asia 81, Termoli [41.99141771, 14.98538421]",
+        "CB_02/01w33 :: Via India, Termoli [41.99439633, 14.98396211]",
+        "CB_02/01w34 :: Via Asia 3e, Termoli [41.99375614, 14.98593662]",
+        "CB_02/01w41 :: Via Stati Uniti, Termoli [41.99748194, 14.98198975]",
+        "CB_02/01w42 :: Via America, Termoli [41.99835561, 14.98228894]",
+        "CB_02/01w43 :: Via America, Termoli [42.00024582, 14.9818297]",
+        "CB_02/01w44 :: Via America, Termoli [42.00069557, 14.98214146]",
+        "CB_02/01w51 :: Via Cina, Termoli [41.9952062, 14.98599401]",
+        "CB_02/02e11 :: Via Rio Vivo 38, Termoli [41.99786919, 14.99731034]",
+        "CB_02/02e12 :: Corso Vittorio Emanuele Terzo 86, Termoli [42.0000058, 14.99735516]",
+        "CB_02/02e13 :: Corso Umberto I 101, Termoli [42.00047952, 14.99651632]",
+        "CB_02/02e14 :: Corso Vittorio Emanuele Terzo 58, Termoli [42.00153781, 14.99741691]",
+        "CB_02/02e21 :: Via Belvedere 32, Termoli [42.00254888, 14.99746807]",
+        "CB_02/02e22 :: Via Alfano, Termoli [42.00174854, 14.99658422]",
+        "CB_02/02e23 :: Via Venti Settembre 41a, Termoli [42.00143844, 14.99435717]",
+        "CB_02/02e24 :: Via Adriatica, Termoli [42.00249373, 14.99432121]",
+        "CB_02/02e31 :: Via Nino Bixio, Termoli [42.00354103, 14.99187215]",
+        "CB_02/02e32 :: Via Quattro Novembre, Termoli [42.0034518, 14.99359915]",
+        "CB_02/02e33 :: Via Sannitica, Termoli [42.00271975, 14.99532474]",
+        "CB_02/02e34 :: Via Roma 9, Termoli [42.00372148, 14.99612743]",
+        "CB_02/02e41 :: Via Pustierla, Termoli [42.00428281, 14.99734386]",
+        "CB_02/02e42 :: Largo Giannelli, Termoli [42.00514797, 14.99745491]",
+        "CB_02/02e43 :: Piazza Bisceglie, Termoli [42.00495957, 14.99833739]",
+        "CB_02/02w11 :: Contrada Porticone e Villaggio Valentino, Termoli [41.9917195, 14.97753709]",
+        "CB_02/02w12 :: Via Tevere, Termoli [41.99077813, 14.97796601]",
+        "CB_02/02w13 :: Via Arno, Termoli [41.99010184, 14.98100311]",
+        "CB_02/02w14 :: Via Trigno, Termoli [41.98834141, 14.98090236]",
+        "CB_02/02w21 :: Via Sandro Pertini, Termoli [41.98942544, 14.97110797]",
+        "CB_02/02w22 :: Via Fortore, Termoli [41.98944609, 14.97344532]",
+        "CB_02/02w23 :: Via Biferno, Termoli [41.98792261, 14.97333598]",
+        "CB_02/02w24 :: Via Biferno, Termoli [41.98744187, 14.97543661]",
+        "CB_02/02w31 :: Via Como, Termoli [41.99167273, 14.9717549]",
+        "CB_02/02w32 :: Via Torino, Termoli [41.9903312, 14.96864956]",
+        "CB_02/02w33 :: Via Catania, Termoli [41.9921967, 14.96728137]",
+        "CB_02/02w34 :: Via Torino, Termoli [41.99590293, 14.97008648]",
+        "CB_02/02w41 :: Via Venezia, Termoli [41.99541849, 14.97589086]",
+        "CB_02/02w42 :: Via Verona, Termoli [41.99412192, 14.97464997]",
+        "CB_02/02w43 :: Via Venezia, Termoli [41.9965701, 14.97285204]",
+        "CB_02/02w44 :: Via del Mare, Termoli [41.99843787, 14.9713771]",
+        "L113_CNO1 :: Via del Mare, Termoli [41.9974813, 14.9707224]",
+        "L113_CNO2 :: Via Madonna delle Grazie, Termoli [41.99875417, 14.98968057]",
+        "L113_CNO3 :: Via Asia 3e, Termoli [41.99412206, 14.98577415]",
+        "L113_CNO4 :: Viale Padre Pio, Termoli [41.98841123, 14.99389431]"
+      ],
+      "Torella Del Sannio": [
+        "L215_CNO1 :: ~Via Giuseppe Garibaldi, Torella del Sannio [41.63839611, 14.51890803]",
+        "L215_CNO2 :: ~Via Vittorio Emanuele III, Torella del Sannio [41.63937458, 14.52064175]",
+        "L215_CNO3 :: ~Via Vittorio Emanuele III, Torella del Sannio [41.6393643, 14.52063835]"
+      ],
+      "Toro": [
+        "L230_CNO1 :: Viale San Francesco, Toro [41.57389971, 14.76604078]",
+        "L230_CNO2 :: Via Pozzillo, Toro [41.57231532, 14.76443744]",
+        "L230_CNO3 :: Via Pozzillo, Toro [41.57105468, 14.76580301]"
+      ],
+      "Trivento": [
+        "L435_CNO1 :: Scalinata San Nicola, Trivento [41.7832258, 14.55106874]",
+        "L435_CNO10 :: Piazza Fontana 19, Trivento [41.78103174, 14.55185298]",
+        "L435_CNO11 :: Contrada Pontoni, Trivento [41.80069657, 14.60574423]",
+        "L435_CNO12 :: Strada Provinciale 77 Chietina, Trivento [41.7969837, 14.55871574]",
+        "L435_CNO2 :: Fontane, Trivento [41.77677855, 14.55106969]",
+        "L435_CNO3 :: Via San Giovanni Colle, Trivento [41.7744225, 14.54963169]",
+        "L435_CNO4 :: Via Iconicella, Trivento [41.77398221, 14.55003676]",
+        "L435_CNO5 :: Contrada Sant'Aniello, Trivento [41.76114714, 14.61696344]",
+        "L435_CNO6 :: Via Trignina, Trivento [41.78389159, 14.55210742]",
+        "L435_CNO7 :: Via Piano, Trivento [41.78496083, 14.55091992]",
+        "L435_CNO8 :: Via Piano, Trivento [41.78496129, 14.55090006]",
+        "L435_CNO9 :: Corso Guglielmo Marconi, Trivento [41.77980962, 14.5527103]"
+      ],
+      "Tufara": [
+        "L458_CNO1 :: Strada Provinciale 61 del Fortore, Tufara [41.4824089, 14.94567397]",
+        "L458_CNO2 :: Strada Provinciale 61 del Fortore 14, Tufara [41.48197933, 14.94583424]",
+        "L458_CNO3 :: Strada Provinciale 61 del Fortore, Tufara [41.48194765, 14.94743785]"
+      ],
+      "Ururi": [
+        "L505_CNO1 :: Corso Matteotti 3, Ururi [41.81563089, 15.01977065]",
+        "L505_CNO2 :: 16' Traversa Provinciale, Ururi [41.81764707, 15.01619593]",
+        "L505_CNO3 :: Via J. F. Kennedy, Ururi [41.81448437, 15.01950544]",
+        "L505_CNO4 :: Via Trinità, Ururi [41.81590819, 15.01280761]",
+        "L505_CNO5 :: 8' Traversa Provinciale, Ururi [41.81671383, 15.01449349]",
+        "L505_CNO6 :: Via Trinità, Ururi [41.81590594, 15.01279557]",
+        "L505_CNO7 :: Via Commerciale 58, Ururi [41.81480927, 15.00902176]",
+        "L505_CNO8 :: 2' Vico di Tillo, Ururi [41.81582224, 15.01457528]"
+      ],
+      "Vastogirardi": [
+        "L696_CNO1 :: ~Via Giuseppe Garibaldi, Vastogirardi [41.77472285, 14.26074506]",
+        "L696_CNO2 :: Via Giuseppe Garibaldi, Vastogirardi [41.77387021, 14.25958885]",
+        "L696_CNO3 :: Via degli Abruzzi, Vastogirardi [41.77499606, 14.25804144]"
+      ],
+      "Vinchiaturo": [
+        "M057_CNO1 :: Via Giuseppe Mazzini, Vinchiaturo [41.49401744, 14.58741804]",
+        "M057_CNO10 :: Strada Provinciale 53 Sannitica, Vinchiaturo [41.4939114, 14.58960063]",
+        "M057_CNO11 :: Strada Statale 87 Sannitica, Vinchiaturo [41.47942685, 14.57450123]",
+        "M057_CNO2 :: Monteverde, Vinchiaturo [41.49132021, 14.62004776]",
+        "M057_CNO3 :: ~Strada Statale 87 Sannitica, Vinchiaturo [41.47578581, 14.5669461]",
+        "M057_CNO4 :: ~Strada Provinciale 53 Sannitica, Vinchiaturo [41.49347974, 14.59029639]",
+        "M057_CNO5 :: Corso Umberto, Vinchiaturo [41.49312717, 14.59173333]",
+        "M057_CNO6 :: Via Walter Del Basso, Vinchiaturo [41.49257361, 14.58647458]",
+        "M057_CNO7 :: ~Via Giuseppe Mazzini, Vinchiaturo [41.49453598, 14.58608567]",
+        "M057_CNO8 :: Via non definita, Vinchiaturo [41.47013206, 14.57387393]",
+        "M057_CNO9 :: Via non definita, Vinchiaturo [41.49072779, 14.59261643]"
+      ]
+    }
+  }
+}
