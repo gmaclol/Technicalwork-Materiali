@@ -34,11 +34,11 @@ class BannedActivity : AppCompatActivity() {
             .addSnapshotListener { snapshot, e ->
                 if (e != null || snapshot == null || !snapshot.exists()) return@addSnapshotListener
                 
-                val raw = snapshot.get(deviceId)
+                val raw = snapshot.data?.get(deviceId)
                 val isBanned = (raw as? Map<*, *>)?.get("banned") as? Boolean ?: false
                 
                 // Se non è bannato o se il dispositivo è stato cancellato dal db (raw == null)
-                if (!isBanned || raw == null) {
+                if (raw == null || !isBanned) {
                     val prefs = getSharedPreferences("GeoNavPrefs", Context.MODE_PRIVATE)
                     prefs.edit().putBoolean("is_banned", false).apply()
                     
