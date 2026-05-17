@@ -224,62 +224,78 @@ class PfsActivity : AppCompatActivity() {
             try {
                 for (region in configManager.ITALIAN_REGIONS) {
                     val cachedFile = java.io.File(filesDir, "$region.json")
-                    var jsonString: String? = null
-
+                    var inputStream: java.io.InputStream? = null
+                    
                     if (cachedFile.exists()) {
-                        jsonString = cachedFile.inputStream().bufferedReader().use { it.readText() }
+                        inputStream = cachedFile.inputStream()
                     } else {
                         try {
-                            jsonString = assets.open("$region.json").bufferedReader().use { it.readText() }
+                            inputStream = assets.open("$region.json")
                         } catch (e: Exception) {
                             // File not found in assets
                         }
                     }
 
-                    if (jsonString != null) {
-                        val json = org.json.JSONObject(jsonString)
-                        val regionObj = json.optJSONObject(region)
-                        
-                        if (regionObj != null) {
-                            val pfsLines = mutableListOf<String>()
-                            var title = area
-                            var found = false
-                            
-                            // Check Comuni first
-                            val comuniObj = regionObj.optJSONObject("Comuni")
-                            if (comuniObj?.has(area) == true) {
-                                val array = comuniObj.optJSONArray(area)
-                                array?.let {
-                                    for (i in 0 until it.length()) pfsLines.add(it.getString(i))
-                                }
-                                rawText = pfsLines.joinToString("\n")
-                                found = true
-                            } else {
-                                // Check Macrozone
-                                val macroObj = regionObj.optJSONObject("Macrozone")
-                                if (macroObj?.has(area) == true) {
-                                    val array = macroObj.optJSONArray(area)
-                                    array?.let {
-                                        for (i in 0 until it.length()) {
-                                            val entry = it.getString(i)
-                                            if (entry.startsWith("<") && entry.endsWith(">")) {
-                                                title = "$area (${entry.removeSurrounding("<", ">")})"
+                    if (inputStream != null) {
+                        var found = false
+                        try {
+                            android.util.JsonReader(java.io.InputStreamReader(inputStream, "UTF-8")).use { reader ->
+                                reader.beginObject()
+                                while (reader.hasNext()) {
+                                    val topLevelKey = reader.nextName()
+                                    if (topLevelKey == region) {
+                                        reader.beginObject()
+                                        searchLoop@ while (reader.hasNext()) {
+                                            val sectionKey = reader.nextName()
+                                            if (sectionKey == "Comuni" || sectionKey == "Macrozone") {
+                                                reader.beginObject()
+                                                while (reader.hasNext()) {
+                                                    val cityName = reader.nextName()
+                                                    if (cityName == area) {
+                                                        val pfsLines = mutableListOf<String>()
+                                                        var title = area
+                                                        
+                                                        reader.beginArray()
+                                                        while (reader.hasNext()) {
+                                                            val entry = reader.nextString()
+                                                            if (sectionKey == "Macrozone" && entry.startsWith("<") && entry.endsWith(">")) {
+                                                                title = "$area (${entry.removeSurrounding("<", ">")})"
+                                                            } else {
+                                                                pfsLines.add(entry)
+                                                            }
+                                                        }
+                                                        reader.endArray()
+                                                        
+                                                        if (sectionKey == "Macrozone") {
+                                                            withContext(Dispatchers.Main) {
+                                                                tvCustomTitle.text = "PFS - $title"
+                                                            }
+                                                        }
+                                                        
+                                                        rawText = pfsLines.joinToString("\n")
+                                                        found = true
+                                                        break@searchLoop
+                                                    } else {
+                                                        reader.skipValue()
+                                                    }
+                                                }
+                                                reader.endObject()
                                             } else {
-                                                pfsLines.add(entry)
+                                                reader.skipValue()
                                             }
                                         }
+                                        break
+                                    } else {
+                                        reader.skipValue()
                                     }
-                                    withContext(Dispatchers.Main) {
-                                        tvCustomTitle.text = "PFS - $title"
-                                    }
-                                    rawText = pfsLines.joinToString("\n")
-                                    found = true
                                 }
                             }
-                            
-                            if (found) {
-                                break // Found the area, stop searching other regions
-                            }
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                        }
+                        
+                        if (found) {
+                            break // Found the area, stop searching other regions
                         }
                     }
                 }
