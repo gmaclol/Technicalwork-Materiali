@@ -128,14 +128,14 @@ class PfsActivity : AppCompatActivity() {
 
         val areas = configManager.getPfsAreas()
         val defaultArea = if (areas.isNotEmpty()) areas[0] else "TOH1"
-        val initialArea = pfsPrefs.getString("pfs_last_area", defaultArea) ?: defaultArea
+        var initialArea = pfsPrefs.getString("pfs_last_area", defaultArea) ?: defaultArea
         
-        val selectedPfs = intent.getStringExtra("SELECTED_PFS_CONTENT")
-        if (selectedPfs != null) {
-            showSelectedPfs(selectedPfs)
-        } else {
-            loadArea(initialArea)
+        val selectedAreaExtra = intent.getStringExtra("SELECTED_AREA")
+        if (selectedAreaExtra != null) {
+            initialArea = selectedAreaExtra
         }
+        
+        loadArea(initialArea)
         
         // I bottoni delle aree vengono ora generati dinamicamente in setupDynamicDrawer()
 
@@ -188,19 +188,6 @@ class PfsActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun showSelectedPfs(pfsLine: String) {
-        val parsed = parsePfsList(pfsLine)
-        if (parsed.isNotEmpty()) {
-            val customTitle = intent.getStringExtra("SELECTED_TITLE") ?: "PFS Selezionato"
-            tvCustomTitle.text = customTitle
-            // Estrae il nome comune dal titolo (es. "PFS - Asti" → "Asti")
-            currentArea = customTitle.removePrefix("PFS - ").trim()
-            val (lat, lng) = getLastLocation()
-            adapter.updateData(parsed, lat, lng)
-            pbPfs.visibility = View.GONE
-            rvPfs.visibility = View.VISIBLE
-        }
-    }
 
     private fun loadArea(area: String) {
         currentArea = area

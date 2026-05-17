@@ -339,41 +339,11 @@ class GeoNavActivity : AppCompatActivity() {
         adapter.notifyDataSetChanged()
     }
     private fun openComuneInPfsActivity(item: TreeItem, position: Int) {
-        val regionObj = fullData?.optJSONObject(item.parentRegion)
-        val pfsLines = mutableListOf<String>()
-        var title = ""
-
-        if (item.type == TreeType.COMUNE_DIRECT) {
-            title = item.text
-            val array = regionObj?.optJSONObject("Comuni")?.optJSONArray(item.text)
-            array?.let {
-                for (i in 0 until it.length()) pfsLines.add(it.getString(i))
-            }
-        } else if (item.type == TreeType.MACROZONE) {
-            val macroName = item.text
-            val array = regionObj?.optJSONObject("Macrozone")?.optJSONArray(macroName)
-            array?.let {
-                for (i in 0 until it.length()) {
-                    val entry = it.getString(i)
-                    if (entry.startsWith("<") && entry.endsWith(">")) {
-                        title = "$macroName (${entry.removeSurrounding("<", ">")})"
-                    } else {
-                        pfsLines.add(entry)
-                    }
-                }
-            }
-            if (title.isEmpty()) title = macroName
+        val areaName = item.text
+        val intent = Intent(this, PfsActivity::class.java).apply {
+            putExtra("SELECTED_AREA", areaName)
         }
-
-        if (pfsLines.isNotEmpty()) {
-            val intent = Intent(this, PfsActivity::class.java).apply {
-                putExtra("SELECTED_PFS_CONTENT", pfsLines.joinToString("\n"))
-                putExtra("SELECTED_TITLE", "PFS - $title")
-            }
-            startActivity(intent)
-        } else {
-            Toast.makeText(this, "Nessun PFS trovato per questo comune", Toast.LENGTH_SHORT).show()
-        }
+        startActivity(intent)
     }
 
     private fun expandItem(item: TreeItem, position: Int) {
