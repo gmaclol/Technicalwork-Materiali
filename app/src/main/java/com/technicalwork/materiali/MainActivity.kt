@@ -80,7 +80,6 @@ class MainActivity : AppCompatActivity() {
     private val viewModel: MainViewModel by viewModels()
     private lateinit var settingsRepository: SettingsRepository
     private lateinit var fileStorageManager: FileStorageManager
-    private lateinit var updateManager: UpdateManager
     private lateinit var consumoRepository: ConsumoRepository
     private var customToolbarTitle: TextView? = null
 
@@ -93,16 +92,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var configManager: ConfigManager
     private var toolbarQrButton: View? = null
 
-    private val updateCheckHandler = Handler(Looper.getMainLooper())
-    private val updateCheckRunnable = object : Runnable {
-        override fun run() {
-            checkPendingUpdate()
-            val prefs = getSharedPreferences("updates", Context.MODE_PRIVATE)
-            if (prefs.contains("pending_download_id")) {
-                updateCheckHandler.postDelayed(this, 2000)
-            }
-        }
-    }
+    // updateCheckHandler è stato spostato in MyApplication
 
     private val selectFileLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
@@ -412,22 +402,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        // Controllo Aggiornamenti
-        updateManager = UpdateManager(this)
-        lifecycleScope.launch {
-            updateManager.checkForUpdates { versionName, downloadUrl ->
-                AlertDialog.Builder(this@MainActivity)
-                    .setTitle(getString(R.string.dialog_title_update_available))
-                    .setMessage(getString(R.string.dialog_msg_update_available, versionName))
-                    .setPositiveButton(getString(R.string.btn_update)) { _, _ ->
-                        updateManager.downloadAndInstall(downloadUrl, onDownloadStarted = {
-                            updateCheckHandler.postDelayed(updateCheckRunnable, 2000)
-                        })
-                    }
-                    .setNegativeButton(getString(R.string.btn_after), null)
-                    .show()
-            }
-        }
+        // Il Controllo Aggiornamenti globale è ora gestito in MyApplication
 
         // Richiesta permessi posizione e camera all'avvio
         requestPermissionLauncher.launch(arrayOf(
@@ -472,13 +447,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        if (checkPendingUpdate()) {
-            val prefs = getSharedPreferences("updates", Context.MODE_PRIVATE)
-            if (prefs.contains("pending_download_id")) {
-                updateCheckHandler.postDelayed(updateCheckRunnable, 2000)
-            }
-        }
-
+        
         // Svuota la coda offline; il sync periodico è già gestito da performTotalSync()
         lifecycleScope.launch(Dispatchers.IO) {
             SyncQueue().flush(this@MainActivity, FirebaseRepository())
@@ -490,60 +459,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
-        updateCheckHandler.removeCallbacks(updateCheckRunnable)
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        updateCheckHandler.removeCallbacks(updateCheckRunnable)
         exchangeListenerRegistration?.remove()
         favoritesListenerRegistration?.remove()
     }
 
-    private fun checkPendingUpdate(): Boolean {
-        val prefs = getSharedPreferences("updates", Context.MODE_PRIVATE)
-        val downloadId = prefs.getLong("pending_download_id", -1L)
-        val pendingPath = prefs.getString("pending_apk_path", null)
-
-        if (downloadId != -1L && pendingPath != null) {
-            val manager = getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
-            val query = DownloadManager.Query().setFilterById(downloadId)
-            
-            manager.query(query)?.use { cursor ->
-                if (cursor.moveToFirst()) {
-                    val statusIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS)
-                    if (statusIndex != -1) {
-                        val status = cursor.getInt(statusIndex)
-                        when (status) {
-                            DownloadManager.STATUS_SUCCESSFUL -> {
-                                prefs.edit().remove("pending_download_id").remove("pending_apk_path").apply()
-                                showInstallDialog(File(pendingPath))
-                                return false
-                            }
-                            DownloadManager.STATUS_FAILED -> {
-                                prefs.edit().remove("pending_download_id").remove("pending_apk_path").apply()
-                                Toast.makeText(this, getString(R.string.toast_update_error), Toast.LENGTH_SHORT).show()
-                                return false
-                            }
-                        }
-                    }
-                }
-            }
-            return true
-        }
-        return false
-    }
-
-    private fun showInstallDialog(file: File) {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.dialog_title_apk_ready))
-            .setMessage(getString(R.string.dialog_msg_apk_ready))
-            .setCancelable(false)
-            .setPositiveButton(getString(R.string.btn_install)) { _, _ ->
-                updateManager.installApk(file)
-            }
-            .show()
-    }
 
     private fun handleUiState(state: UiState) {
         progressBar.visibility = if (state is UiState.Loading) View.VISIBLE else View.GONE
