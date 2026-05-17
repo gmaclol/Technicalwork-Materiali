@@ -436,11 +436,7 @@ class MainActivity : AppCompatActivity() {
             android.Manifest.permission.CAMERA
         ))
 
-        // Sync totale (liste, posizione e tutti i file) ogni 8 ore all'avvio
-        lifecycleScope.launch {
-            delay(3000) // Attesa per caricamento permessi e inizializzazione
-            performTotalSync()
-        }
+        // L'aggiornamento posizione e presenza all'avvio è ora gestito globalmente da MyApplication
 
         // Listener per rinomina remota e aggiornamento preferiti PFS dalla Dashboard
         favoritesListenerRegistration = FavoriteManager.attachDashboardListener(

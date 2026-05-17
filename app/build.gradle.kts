@@ -91,6 +91,7 @@ dependencies {
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation("androidx.lifecycle:lifecycle-process:2.7.0")
     implementation(libs.androidx.activity.ktx)
     implementation(libs.okhttp)
     implementation(libs.gson)
