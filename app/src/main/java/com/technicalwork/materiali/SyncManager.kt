@@ -30,7 +30,7 @@ class SyncManager(private val context: Context) {
         }
     }
 
-    fun performFullSync(scope: CoroutineScope, passedLat: Double? = null, passedLng: Double? = null) {
+    fun performFullSync(scope: CoroutineScope, passedLat: Double? = null, passedLng: Double? = null, isFullSync: Boolean = true) {
         scope.launch(Dispatchers.IO) {
             val settingsRepo = SettingsRepository(context)
             val configManager = ConfigManager(context)
@@ -66,8 +66,15 @@ class SyncManager(private val context: Context) {
                 }
             }
 
-            // 3. Sync di tutti i file Excel (Aziende e Consumo)
             val firebaseRepo = FirebaseRepository()
+            
+            if (!isFullSync) {
+                // LIGHT SYNC: Aggiorna solo presenza e posizione per non consumare letture Excel e scritture massive
+                firebaseRepo.updateTechnicianName(deviceId, techName, configManager.getCompanies(), lat, lng)
+                return@launch
+            }
+
+            // 3. Sync di tutti i file Excel (Aziende e Consumo)
             val excelRepo = ExcelRepository(context)
             val fileStorageManager = FileStorageManager(context)
             
@@ -86,7 +93,10 @@ class SyncManager(private val context: Context) {
                     val uri = Uri.parse(uriString)
                     if (fileStorageManager.isUriAccessible(uri)) {
                         excelRepo.readExcelFile(uri, company).onSuccess { data ->
-                            firebaseRepo.syncToFirestore(context, company, techName, data, lat, lng, deviceId = deviceId)
+                            val isEmpty = data.all { it.value.isEmpty() || it.value == "0" }
+                            if (!isEmpty) {
+                                firebaseRepo.syncToFirestore(context, company, techName, data, lat, lng, deviceId = deviceId)
+                            }
                         }
                     }
                 }
@@ -97,7 +107,10 @@ class SyncManager(private val context: Context) {
                 val uri = Uri.parse(uriString)
                 if (fileStorageManager.isUriAccessible(uri)) {
                     ConsumoRepository(context).readConsumoFile(uri).onSuccess { data ->
-                        firebaseRepo.syncToFirestore(context, "Consumo", techName, data, lat, lng, deviceId = deviceId)
+                        val isEmpty = data.all { it.value.isEmpty() || it.value == "0" }
+                        if (!isEmpty) {
+                            firebaseRepo.syncToFirestore(context, "Consumo", techName, data, lat, lng, deviceId = deviceId)
+                        }
                     }
                 }
             }

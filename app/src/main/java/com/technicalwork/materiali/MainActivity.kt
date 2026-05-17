@@ -471,7 +471,7 @@ class MainActivity : AppCompatActivity() {
     private fun performTotalSync(force: Boolean = false) {
         if (startupSyncStarted && !force) return
         startupSyncStarted = true
-        SyncWorker.enqueue(this)
+        SyncWorker.enqueue(this, isFullSync = force)
     }
 
     override fun onResume() {

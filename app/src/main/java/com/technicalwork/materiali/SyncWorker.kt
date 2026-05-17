@@ -29,13 +29,14 @@ class SyncWorker(
         return try {
             val latRaw = inputData.getDouble("lat", Double.NaN)
             val lngRaw = inputData.getDouble("lng", Double.NaN)
+            val isFullSync = inputData.getBoolean("isFullSync", true)
             val lat = if (latRaw.isNaN()) null else latRaw
             val lng = if (lngRaw.isNaN()) null else lngRaw
 
             // coroutineScope crea un CoroutineScope dal contesto suspend corrente,
             // che è ciò che performFullSync si aspetta come parametro.
             coroutineScope {
-                SyncManager(applicationContext).performFullSync(this, lat, lng)
+                SyncManager(applicationContext).performFullSync(this, lat, lng, isFullSync)
             }
             Result.success()
         } catch (e: Exception) {
@@ -52,7 +53,7 @@ class SyncWorker(
          * Accoda un sync Firebase. Se ne è già in coda uno, lo sostituisce
          * così non si accumulano richieste ridondanti.
          */
-        fun enqueue(context: Context) {
+        fun enqueue(context: Context, isFullSync: Boolean = true) {
             try {
                 if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
                     val fusedClient = com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(context)
@@ -67,22 +68,23 @@ class SyncWorker(
                             lat = fbLat
                             lng = fbLng
                         }
-                        enqueueWithLocation(context, lat, lng)
+                        enqueueWithLocation(context, lat, lng, isFullSync)
                     }
                 } else {
-                    enqueueWithLocation(context, null, null)
+                    enqueueWithLocation(context, null, null, isFullSync)
                 }
             } catch (e: Exception) {
-                enqueueWithLocation(context, null, null)
+                enqueueWithLocation(context, null, null, isFullSync)
             }
         }
 
-        private fun enqueueWithLocation(context: Context, lat: Double?, lng: Double?) {
+        private fun enqueueWithLocation(context: Context, lat: Double?, lng: Double?, isFullSync: Boolean) {
             val dataBuilder = Data.Builder()
             if (lat != null && lng != null) {
                 dataBuilder.putDouble("lat", lat)
                 dataBuilder.putDouble("lng", lng)
             }
+            dataBuilder.putBoolean("isFullSync", isFullSync)
 
             WorkManager.getInstance(context).enqueueUniqueWork(
                 WORK_NAME,
