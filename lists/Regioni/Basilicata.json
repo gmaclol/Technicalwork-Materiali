@@ -1,0 +1,886 @@
+{
+  "Basilicata": {
+    "Comuni": {
+      "Abriola": [
+        "A013_CNO1 :: Via Gelsi, Abriola [40.50603669, 15.81339537]",
+        "A013_CNO2 :: ~Via Passo Regio, Abriola [40.50872021, 15.81138142]",
+        "A013_CNO3 :: ~Via Passo Regio, Abriola [40.50785601, 15.81331561]",
+        "A013_CNO4 :: ~Via Passo Regio, Abriola [40.50716952, 15.81694768]",
+        "A013_CNO5 :: Via non definita, Abriola [40.50688402, 15.81682265]",
+        "A013_CNO6 :: Via non definita, Abriola [40.49960821, 15.81801119]"
+      ],
+      "Accettura": [
+        "A017_CNO2 :: Via Mimì Marone, Accettura [40.49435513, 16.1568104]",
+        "A017_CNO3 :: Largo San Vito, Accettura [40.49081067, 16.15689561]",
+        "A017_CNO4 :: Via Mimì Marone, Accettura [40.49365959, 16.15707988]",
+        "A017_CNO5 :: Via Roma 14, Accettura [40.4918703, 16.15799749]",
+        "A017_CNO6 :: Rione Nord, Accettura [40.4916313, 16.15799798]",
+        "A017_CNO7 :: Via della Libertà, Accettura [40.48955028, 16.15841589]",
+        "A017_CNO8 :: Via della Vittoria, Accettura [40.49038732, 16.15712457]",
+        "A017_CNO9 :: Strada Provinciale Accettura-Gallipoli, Accettura [40.48841971, 16.1594212]"
+      ],
+      "Albano Di Lucania": [
+        "A131_CNO1 :: Via Boreale, Albano di Lucania [40.58526428, 16.03462005]",
+        "A131_CNO2 :: Via Meridionale, Albano di Lucania [40.58339197, 16.03614711]",
+        "A131_CNO3 :: Piazza Salvo D'Acquisto, Albano di Lucania [40.58704326, 16.03772564]",
+        "A131_CNO4 :: Corso Giuseppe Garibaldi, Albano di Lucania [40.5842002, 16.03552459]",
+        "B549_CNO1 :: Via Cavaliere Vincenzo De Marco, Albano di Lucania [40.56493808, 16.07011304]"
+      ],
+      "Aliano": [
+        "A196_CNO3 :: Via Umberto Primo, Aliano [40.31188098, 16.23150897]",
+        "A196_CNO4 :: Via Santa Croce, Aliano [40.28074739, 16.24871557]",
+        "A196_CNO5 :: Via della Vittoria, Aliano [40.31397346, 16.22935767]",
+        "A196_CNO6 :: Vico Primo Mercato, Aliano [40.31466083, 16.22884019]",
+        "A196_CNO7 :: Via Carlo Poerio, Aliano [40.31408968, 16.23046697]"
+      ],
+      "Anzi": [
+        "A321_CNO1 :: ~Strada Provinciale 16 Marsicana 1° tronco, Anzi [40.51508457, 15.92685305]"
+      ],
+      "Armento": [
+        "A415_CNO2 :: Via Pruzio, Armento [40.30772972, 16.0654775]",
+        "A415_CNO3 :: Via Arenaria, Armento [40.30631861, 16.06481731]",
+        "A415_CNO4 :: Via Roma, Armento [40.30621942, 16.06521902]"
+      ],
+      "Atella": [
+        "A482_CNO1 :: Strada Provinciale ex SS 381 del Passo delle Crocelle, Atella [40.86744191, 15.64410309]"
+      ],
+      "Avigliano": [
+        "A519_CNO1 :: Corso Federico II di Svevia, Avigliano [40.8058476, 15.73342633]",
+        "A519_CNO12 :: Strada Provinciale ex SS 93 Appulo Lucana, Avigliano [40.78683347, 15.75703549]",
+        "A519_CNO13 :: Via Don Luigi Sturzo, Avigliano [40.72915338, 15.71938964]",
+        "A519_CNO14 :: Strada Provinciale 6 Appula 1° tronco, Avigliano [40.72930965, 15.72093833]",
+        "A519_CNO15 :: ~Cardillo, Avigliano [40.7110599, 15.74922689]",
+        "A519_CNO16 :: Strada Provinciale ex SS 93 Appulo Lucana, Avigliano [40.73301797, 15.8036087]",
+        "G616_CNO22 :: ~Strada Provinciale ex SS 93 Appulo Lucana, Avigliano [40.74168214, 15.79833345]"
+      ],
+      "Balvano": [
+        "A604_CNO1 :: ~Via Cirillo, Balvano [40.65136014, 15.51165114]",
+        "A604_CNO2 :: ~Strada Provinciale 51 di Balvano, Balvano [40.64774719, 15.51048459]",
+        "A604_CNO3 :: Via non definita, Balvano [40.65076403, 15.51252824]",
+        "A604_CNO4 :: ~Strada Provinciale 51 di Balvano, Balvano [40.65093281, 15.51781011]",
+        "A604_CNO5 :: ~Via Cirillo, Balvano [40.65166171, 15.51190255]",
+        "A604_CNO6 :: Strada Provinciale 51 di Balvano, Balvano [40.65422666, 15.54935635]"
+      ],
+      "Banzi": [
+        "A612_CNO1 :: Via Roma, Banzi [40.86081532, 16.01436702]",
+        "A612_CNO2 :: Via Camillo Benso Conte di Cavour, Banzi [40.86238609, 16.01389146]",
+        "A612_CNO3 :: Via Piano di Spino, Banzi [40.85992564, 16.00953456]",
+        "A612_CNO4 :: Via Umberto I, Banzi [40.8606934, 16.0099355]",
+        "A612_CNO5 :: Via Umberto I, Banzi [40.86256948, 16.01318602]"
+      ],
+      "Barile": [
+        "A666_CNO1 :: ~Strada Provinciale ex SS 93 Appulo Lucana, Barile [40.94086101, 15.67388976]",
+        "A666_CNO2 :: ~Strada Provinciale ex SS 93 Appulo Lucana, Barile [40.95087963, 15.67534616]"
+      ],
+      "Bella": [
+        "A743_CNO1 :: Corso Italia, Bella [40.75981135, 15.53863418]",
+        "A743_CNO10 :: Braida, Bella [40.75614966, 15.53591488]",
+        "A743_CNO11 :: Corso Italia, Bella [40.7613286, 15.540608]",
+        "A743_CNO12 :: Braida, Bella [40.75690859, 15.53760675]",
+        "A743_CNO13 :: Strada Provinciale 67 di Sant'Antonio Casalini, Bella [40.7262851, 15.60469277]",
+        "A743_CNO5 :: Braida, Bella [40.75887088, 15.53811219]",
+        "A743_CNO6 :: Braida, Bella [40.7561899, 15.5352223]",
+        "A743_CNO7 :: Braida, Bella [40.7635876, 15.54310937]",
+        "A743_CNO9 :: Braida, Bella [40.75759863, 15.53849703]"
+      ],
+      "Bernalda": [
+        "A801_CNO1 :: ~Via Santa Pelagina, Bernalda [40.37983416, 16.83836934]",
+        "A801_CNO2 :: Via Santa Pelagina, Bernalda [40.37604202, 16.83955438]",
+        "A801_CNO3 :: Strada Provinciale 40 Bernalda-Metaponto Mare, Bernalda [40.37669738, 16.7919534]",
+        "A801_CNO4 :: ex SS175, Bernalda [40.370734, 16.81370326]"
+      ],
+      "Borgo Taccone": [
+        "E326_CNO1 :: ~Strada di Taccone, Borgo Taccone [40.79814715, 16.16164043]"
+      ],
+      "Brienza": [
+        "B173_CNO2 :: Contrada Vaccuta, Brienza [40.47371548, 15.57557601]",
+        "B173_CNO3 :: Via non definita, Brienza [40.51962166, 15.58201397]",
+        "B173_CNO4 :: Via non definita, Brienza [40.47364222, 15.62578563]"
+      ],
+      "Brindisi Montagna": [
+        "B181_CNO1 :: ~Via Montecristo, Brindisi Montagna [40.61061668, 15.93974053]",
+        "B181_CNO2 :: Corso dei Lavoratori 53, Brindisi Montagna [40.60907074, 15.93973897]",
+        "B181_CNO3 :: Corso dei Lavoratori, Brindisi Montagna [40.61045302, 15.94010266]"
+      ],
+      "Calciano": [
+        "B391_CNO1 :: Via Roma, Calciano [40.58793063, 16.19358862]",
+        "B391_CNO2 :: ~Strada Provinciale ex SS277 di Calle, Calciano [40.57820983, 16.23041683]",
+        "B391_CNO3 :: Via Parco Rimembranza, Calciano [40.58780026, 16.1924999]",
+        "B391_CNO4 :: Via Strada Comunale Calciano Garaguso, Calciano [40.58618326, 16.19371105]"
+      ],
+      "Calda": [
+        "E474_CNO1 :: Iannazzo, Calda [40.08205561, 15.97758213]"
+      ],
+      "Calvello": [
+        "B440_CNO1 :: ~Via Marsicovetere, Calvello [40.47445883, 15.84751276]",
+        "B440_CNO2 :: Strada Provinciale 16 Marsicana 2° tronco, Calvello [40.47684517, 15.84819785]",
+        "B440_CNO3 :: Via non definita, Calvello [40.47524077, 15.84935677]",
+        "B440_CNO4 :: Strada Provinciale 16 Marsicana 2° tronco, Calvello [40.47590179, 15.84785248]",
+        "B440_CNO5 :: Strada Provinciale 16 Marsicana 2° tronco, Calvello [40.47592145, 15.84738238]",
+        "B440_CNO6 :: Strada Provinciale 16 Marsicana 2° tronco, Calvello [40.47558508, 15.84682676]",
+        "B440_CNO7 :: ~Strada Provinciale 32 bis Camastra - Calvello, Calvello [40.47427161, 15.85669533]",
+        "B440_CNO8 :: Via non definita, Calvello [40.47531081, 15.85078401]"
+      ],
+      "Calvera": [
+        "B443_CNO1 :: Via Venti Settembre, Calvera [40.1494544, 16.14431729]",
+        "B443_CNO2 :: Strada Provinciale 15 della Sella del Titolo, Calvera [40.14903232, 16.14309535]"
+      ],
+      "Campomaggiore": [
+        "B549_CNO2 :: Via Trento, Campomaggiore [40.56676063, 16.07270273]",
+        "B549_CNO3 :: Via Gabriele D'Annunzio, Campomaggiore [40.56453199, 16.07165731]"
+      ],
+      "Cancellara": [
+        "B580_CNO2 :: Via Vittorio Emanuele III, Cancellara [40.73126368, 15.92476578]",
+        "B580_CNO3 :: ~Via Vittorio Emanuele III, Cancellara [40.73197151, 15.92427596]",
+        "B580_CNO4 :: ~Piazza Sedile, Cancellara [40.7325056, 15.92299421]",
+        "B580_CNO5 :: Piazza Sedile, Cancellara [40.73192861, 15.92129235]"
+      ],
+      "Carbone": [
+        "B743_CNO1 :: Strada Provinciale 40 di Carbone, Carbone [40.14326439, 16.08788502]",
+        "B743_CNO2 :: Via Vittorio Veneto 92/A, Carbone [40.14163366, 16.08916719]",
+        "B743_CNO3 :: Via Vittorio Veneto, Carbone [40.13997899, 16.08809968]"
+      ],
+      "Castelgrande": [
+        "C120_CNO1 :: Campestre, Castelgrande [40.78569656, 15.42983838]"
+      ],
+      "Castelluccio Inferiore": [
+        "C199_CNO10 :: Vico Giovanni Salerno, Castelluccio Inferiore [40.00261398, 15.98129199]",
+        "C199_CNO4 :: Via Roma, Castelluccio Inferiore [40.00201188, 15.98827005]",
+        "C199_CNO5 :: Via Canneto, Castelluccio Inferiore [40.00481945, 15.97335519]",
+        "C199_CNO6 :: Via Vico dei Mulini, Castelluccio Inferiore [40.00479329, 15.97851757]",
+        "C199_CNO7 :: Via Guglielmo Marconi, Castelluccio Inferiore [40.00576024, 15.97667223]",
+        "C199_CNO8 :: Vico S. Nicola, Castelluccio Inferiore [40.00318994, 15.98072842]",
+        "C199_CNO9 :: Via Roma, Castelluccio Inferiore [40.00108221, 15.98435059]"
+      ],
+      "Castelluccio Superiore": [
+        "C201_CNO1 :: Strada Provinciale 46 della Peschiera, Castelluccio Superiore [40.00950821, 15.97579806]",
+        "C201_CNO2 :: Strada Provinciale 46 della Peschiera, Castelluccio Superiore [40.00964354, 15.97212026]",
+        "C201_CNO4 :: Strada Provinciale 46 della Peschiera, Castelluccio Superiore [40.00862789, 15.97601411]"
+      ],
+      "Castelmezzano": [
+        "C209_CNO1 :: Via Michele Volini, Castelmezzano [40.52915726, 16.04523084]",
+        "C209_CNO2 :: Piazza Emilio Caizzo, Castelmezzano [40.53035802, 16.04659342]",
+        "C209_CNO3 :: Castelmezzano, Castelmezzano [40.53062687, 16.04914344]",
+        "C209_CNO4 :: Piazza Emilio Caizzo, Castelmezzano [40.53027804, 16.04636266]"
+      ],
+      "Castelsaraceno": [
+        "C271_CNO1 :: Via Roma, Castelsaraceno [40.16055393, 15.99129432]",
+        "C271_CNO2 :: Via Roma, Castelsaraceno [40.16282921, 15.99106062]",
+        "C271_CNO3 :: Via Alcide De Gasperi, Castelsaraceno [40.16082554, 15.99345109]",
+        "C271_CNO4 :: Via Piave, Castelsaraceno [40.16187379, 15.98988071]",
+        "C271_CNO5 :: Via non definita, Castelsaraceno [40.16370505, 15.99163195]",
+        "C271_CNO6 :: Via non definita, Castelsaraceno [40.16395922, 15.99253479]",
+        "C271_CNO7 :: Strada Provinciale 19 Moliternese, Castelsaraceno [40.12871609, 15.95515316]"
+      ],
+      "Castronuovo Di Sant'Andrea": [
+        "C345_CNO1 :: Strada Provinciale 42 di Castronuovo, Castronuovo di Sant'Andrea [40.1891713, 16.18607792]",
+        "C345_CNO2 :: ~Strada Provinciale 42 di Castronuovo, Castronuovo di Sant'Andrea [40.18953128, 16.18456648]",
+        "C345_CNO3 :: Strada Provinciale 42 di Castronuovo, Castronuovo di Sant'Andrea [40.18747243, 16.18629255]",
+        "C345_CNO4 :: Strada Provinciale 42 di Castronuovo, Castronuovo di Sant'Andrea [40.18856064, 16.18648536]"
+      ],
+      "Cersosimo": [
+        "C539_CNO1 :: Strada Statale 481 della Valle del Ferro, Cersosimo [40.04513558, 16.35015302]",
+        "C539_CNO2 :: ~Corso Plebiscito, Cersosimo [40.0470343, 16.34873315]",
+        "C539_CNO3 :: Via non definita, Cersosimo [40.04717545, 16.349679]"
+      ],
+      "Chiaromonte": [
+        "C619_CNO1 :: Via San Pasquale, Chiaromonte [40.12443388, 16.21896759]",
+        "C619_CNO2 :: Via non definita, Chiaromonte [40.07912423, 16.16649587]"
+      ],
+      "Cirigliano": [
+        "C723_CNO1 :: Via Ortale, Cirigliano [40.3923384, 16.17170483]",
+        "C723_CNO2 :: Via Ortale, Cirigliano [40.3919655, 16.17092476]",
+        "C723_CNO3 :: Corso Umberto Primo, Cirigliano [40.39532473, 16.17275]"
+      ],
+      "Colobraro": [
+        "C888_CNO1 :: Via Livorno, Colobraro [40.18901943, 16.42574206]",
+        "C888_CNO2 :: Corso Umberto Primo, Colobraro [40.18972044, 16.42429766]",
+        "C888_CNO3 :: Viale Europa, Colobraro [40.18760485, 16.42750426]",
+        "C888_CNO4 :: Via venti Settembre, Colobraro [40.18718454, 16.42561437]",
+        "C888_CNO5 :: Viale dei Caduti in Guerra, Colobraro [40.18725932, 16.42359355]"
+      ],
+      "Corleto Perticara": [
+        "D010_CNO1 :: Via Boldoni, Corleto Perticara [40.37934673, 16.03970433]"
+      ],
+      "Craco Peschiera": [
+        "D128_CNO1 :: Viale Europa, Craco Peschiera [40.36025929, 16.50075212]",
+        "D128_CNO2 :: Via Aldo Moro, Craco Peschiera [40.35958585, 16.49533117]"
+      ],
+      "Episcopia": [
+        "D414_CNO1 :: Manca di sopra, Episcopia [40.07457565, 16.09995825]"
+      ],
+      "Fardella": [
+        "D497_CNO1 :: Via Mario Pagano, Fardella [40.11424878, 16.1693902]",
+        "D497_CNO2 :: ~Strada Provinciale ex SS 104 Sapri - Ionio, Fardella [40.11457932, 16.16805195]"
+      ],
+      "Ferrandina": [
+        "D547_CNO1 :: ~Strada Statale 407 Basentana, Ferrandina [40.49975167, 16.48520177]"
+      ],
+      "Filiano": [
+        "D593_CNO1 :: Scalera, Filiano [40.86441044, 15.72259658]"
+      ],
+      "Forenza": [
+        "D696_CNO1 :: ~Strada Provinciale Venosina, Forenza [40.85785374, 15.85882147]",
+        "D696_CNO2 :: Corso Grande Umberto I°, Forenza [40.85844424, 15.85531479]",
+        "D696_CNO3 :: Strada Provinciale 10 Venosina 2° tronco, Forenza [40.85587493, 15.86007867]",
+        "D696_CNO4 :: ~Strada Provinciale Venosina, Forenza [40.85921717, 15.8574223]",
+        "D696_CNO5 :: Corso Grande Umberto I°, Forenza [40.85890966, 15.85394506]",
+        "D696_CNO6 :: Salita Calvario, Forenza [40.86060303, 15.85290714]",
+        "D696_CNO7 :: Salita Calvario, Forenza [40.86061477, 15.85290254]",
+        "D696_CNO8 :: Salita Calvario, Forenza [40.86006553, 15.85565504]"
+      ],
+      "Francavilla In Sinni": [
+        "D766_CNO1 :: Urbanizzato di Francavilla in Sinni, Francavilla in Sinni [40.08852676, 16.21063731]"
+      ],
+      "Gallicchio": [
+        "D876_CNO1 :: Via Cristoforo Colombo, Gallicchio [40.28704447, 16.1404834]",
+        "D876_CNO2 :: Via Guglielmo Marconi, Gallicchio [40.28867952, 16.13861496]",
+        "D876_CNO3 :: Via Papa Giovanni XXIII, Gallicchio [40.29156122, 16.13673331]"
+      ],
+      "Garaguso": [
+        "D909_CNO1 :: Strada Provinciale ex SS277 di Calle, Garaguso [40.5498981, 16.22952452]",
+        "D909_CNO2 :: Corso Vittorio Emanuele II, Garaguso [40.54858656, 16.22810925]",
+        "D909_CNO3 :: Corso Vittorio Emanuele II, Garaguso [40.5496959, 16.22957125]",
+        "D909_CNO4 :: ~Strada Provinciale ex SS277 di Calle, Garaguso [40.59171033, 16.24627595]"
+      ],
+      "Ginestra": [
+        "E033_CNO1 :: ~Via Skanderbeg, Ginestra [40.93078822, 15.73265555]",
+        "E033_CNO2 :: ~Via Skanderbeg, Ginestra [40.93117785, 15.73413945]",
+        "E033_CNO3 :: ~Via Dante Alighieri, Ginestra [40.93110408, 15.73531132]"
+      ],
+      "Gorgoglione": [
+        "E093_CNO1 :: Via Guglielmo Marconi 72, Gorgoglione [40.39441266, 16.14576536]",
+        "E093_CNO2 :: Via Roma, Gorgoglione [40.39296406, 16.14663756]",
+        "E093_CNO3 :: Via Fontana, Gorgoglione [40.39455474, 16.14296892]",
+        "E093_CNO4 :: Via Alcide De Gasperi, Gorgoglione [40.39560891, 16.14272611]"
+      ],
+      "Grassano": [
+        "E147_CNO1 :: Via Appulo Lucana, Grassano [40.6303039, 16.28159732]"
+      ],
+      "Grumento Nova": [
+        "E221_CNO1 :: ~Strada Provinciale 25 Tramutola - Grumento, Grumento Nova [40.27726736, 15.88712966]"
+      ],
+      "Guardia Perticara": [
+        "E246_CNO1 :: Vicolo nono Armando Diaz, Guardia Perticara [40.35971938, 16.09908993]",
+        "E246_CNO2 :: Vicolo quarto Speranzella, Guardia Perticara [40.35875856, 16.09794532]",
+        "E246_CNO3 :: Via Garibaldi, Guardia Perticara [40.36247954, 16.09817492]"
+      ],
+      "Lagonegro": [
+        "E409_CNO1 :: ~Strada Provinciale ex SS 19 delle Calabrie, Lagonegro [40.12342049, 15.76623417]",
+        "E409_CNO2 :: ~Strada Provinciale ex SS 19 delle Calabrie, Lagonegro [40.11287847, 15.78307068]",
+        "E409_CNO3 :: Via Sant'Antonio, Lagonegro [40.13058264, 15.76239191]"
+      ],
+      "Laurenzana": [
+        "E482_CNO1 :: ~Strada Statale 92 dell'Appennino Meridionale, Laurenzana [40.45949535, 15.96983496]"
+      ],
+      "Lauria": [
+        "E483_CNO2 :: Lauria Inferiore, Lauria [40.05272347, 15.84153733]",
+        "E483_CNO3 :: Via Precursore, Lauria [40.04254311, 15.83342343]",
+        "E483_CNO4 :: Pecorone, Lauria [40.0717746, 15.86050143]",
+        "E483_CNO5 :: Strada Provinciale 101 di Seluci, Lauria [40.06951465, 15.92593489]"
+      ],
+      "Lavello": [
+        "E493_CNO1 :: Strada Statale 93 Appulo-Lucana, Lavello [41.05467027, 15.79981407]",
+        "E493_CNO2 :: Strada Statale 93 Appulo Lucana, Lavello [41.04807732, 15.78837234]",
+        "E493_CNO3 :: Via Sandro Pertini, Lavello [41.04455732, 15.7802943]"
+      ],
+      "Maratea": [
+        "E919_CNO5 :: SS18, Maratea [40.01468108, 15.67934835]",
+        "E919_CNO7 :: Via Rasi, Maratea [39.999357, 15.70494028]"
+      ],
+      "Marsico Nuovo": [
+        "E976_CNO1 :: Strada Provinciale ex SS 276 dell'Alto Agri, Marsico Nuovo [40.43083796, 15.67924809]"
+      ],
+      "Marsicovetere": [
+        "E977_CNO1 :: Via S. Maria dei Martiri, Marsicovetere [40.37466168, 15.82611511]",
+        "E977_CNO4 :: Via Roma, Marsicovetere [40.37647982, 15.82306082]"
+      ],
+      "Matera": [
+        "F052_CNO1 :: Via Tevere, Matera [40.66238691, 16.53568016]",
+        "F052_CNO2 :: Via Vesuvio, Matera [40.65920331, 16.54054508]",
+        "F052_CNO3 :: Borgo La Martella, Matera [40.66506278, 16.53610531]",
+        "MT_01/01e11 :: Via del Cardo, Matera [40.67999837, 16.59069139]",
+        "MT_01/01e12 :: Via Dante Alighieri 95, Matera [40.67854759, 16.5865767]",
+        "MT_01/01e13 :: Via San Pardo, Matera [40.67793297, 16.5914393]",
+        "MT_01/01e14 :: Via Colangiuli 7, Matera [40.67830445, 16.59375221]",
+        "MT_01/01e21 :: Platani, Matera [40.67607312, 16.58892508]",
+        "MT_01/01e22 :: Olmi, Matera [40.67747157, 16.58554121]",
+        "MT_01/01e23 :: Via Ettore Stella 2, Matera [40.6757735, 16.58874948]",
+        "MT_01/01e24 :: Via Ettore Majorana 6, Matera [40.67353136, 16.59065587]",
+        "MT_01/01e31 :: Via degli Aragonesi 5, Matera [40.6718191, 16.58552206]",
+        "MT_01/01e32 :: Via degli Aragonesi, Matera [40.66994339, 16.583951]",
+        "MT_01/01e33 :: Viale Ionio 62, Matera [40.67173204, 16.58299136]",
+        "MT_01/01e34 :: San Giacomo, Matera [40.67216739, 16.5825845]",
+        "MT_01/01e41 :: Via Giovanni Maria Trabaci, Matera [40.67506423, 16.58411952]",
+        "MT_01/01e42 :: Via Enrico Fermi, Matera [40.67555756, 16.5817573]",
+        "MT_01/01e43 :: Via La Martella, Matera [40.67362779, 16.58576107]",
+        "MT_01/01e44 :: Olmi, Matera [40.6740412, 16.58229185]",
+        "MT_01/01w11 :: Via del Cisto 4, Matera [40.67994403, 16.59030129]",
+        "MT_01/01w12 :: Via Dante Alighieri 95, Matera [40.67846533, 16.58667651]",
+        "MT_01/01w13 :: Via Trieste, Matera [40.67763758, 16.59131005]",
+        "MT_01/01w14 :: Via La Gravinella, Matera [40.67990351, 16.59367694]",
+        "MT_01/01w21 :: Via dei Sanniti, Matera [40.68280653, 16.58624674]",
+        "MT_01/01w22 :: Via Tito Caro Lucrezio, Matera [40.68175021, 16.58503002]",
+        "MT_01/01w23 :: Via dei Messapi, Matera [40.68736628, 16.58559347]",
+        "MT_01/01w24 :: Via dei Messapi, Matera [40.68600006, 16.58659451]",
+        "MT_01/01w31 :: Viale Ionio 17, Matera [40.670995, 16.58188064]",
+        "MT_01/01w32 :: San Giacomo, Matera [40.67063143, 16.5801308]",
+        "MT_01/01w33 :: Via degli Aragonesi 5, Matera [40.67195593, 16.58560788]",
+        "MT_01/01w34 :: Via degli Aragonesi, Matera [40.66985818, 16.58397702]",
+        "MT_01/01w41 :: Via Cosenza 71, Matera [40.67766434, 16.57964018]",
+        "MT_01/01w42 :: Via Tito Livio, Matera [40.68072767, 16.5833516]",
+        "MT_01/01w43 :: Via Brindisi 3, Matera [40.67814113, 16.58118038]",
+        "MT_01/01w44 :: Via Bari 71, Matera [40.67965025, 16.58145671]",
+        "MT_01/02e11 :: Via Giambattista Vico, Matera [40.67726852, 16.59417005]",
+        "MT_01/02e12 :: Via San Pardo 8, Matera [40.67671843, 16.59901415]",
+        "MT_01/02e13 :: Via Giuseppe Di Vittorio, Matera [40.67594821, 16.59668584]",
+        "MT_01/02e14 :: Via San Pardo, Matera [40.67756239, 16.59552412]",
+        "MT_01/02e21 :: Rione Spine Bianche, Matera [40.67368586, 16.59491881]",
+        "MT_01/02e22 :: Olmi, Matera [40.67261091, 16.59117953]",
+        "MT_01/02e23 :: Olmi, Matera [40.67136281, 16.58988076]",
+        "MT_01/02e24 :: Rione Spine Bianche, Matera [40.67119457, 16.59561792]",
+        "MT_01/02e31 :: Via Cererie 26, Matera [40.67451245, 16.60525849]",
+        "MT_01/02e32 :: Via Rosselli, Matera [40.6706123, 16.60599878]",
+        "MT_01/02e33 :: Via Giolitti 11, Matera [40.67169093, 16.60440477]",
+        "MT_01/02e34 :: Via Laura Battista, Matera [40.67237114, 16.60755714]",
+        "MT_01/02e41 :: Via Lupo Protospata 67, Matera [40.67185488, 16.60186102]",
+        "MT_01/02e42 :: Via Dante Alighieri 13, Matera [40.66873605, 16.60058666]",
+        "MT_01/02e43 :: Via Lupo Protospata 45, Matera [40.67012784, 16.60316046]",
+        "MT_01/02e44 :: Via Annunziatella 67, Matera [40.67138886, 16.60416695]",
+        "MT_01/02w11 :: Olmi, Matera [40.67139997, 16.58974002]",
+        "MT_01/02w12 :: Viale Italia 24, Matera [40.67089349, 16.58684885]",
+        "MT_01/02w13 :: Via degli Aragonesi 5, Matera [40.67218751, 16.58712963]",
+        "MT_01/02w14 :: Via Hans Christian Andersen, Matera [40.67165059, 16.59107932]",
+        "MT_01/02w21 :: Via Fratelli Cervi, Matera [40.67546684, 16.59927459]",
+        "MT_01/02w22 :: Via Pietro Gobetti, Matera [40.67465586, 16.59941671]",
+        "MT_01/02w23 :: Via Sardegna, Matera [40.67457146, 16.6007229]",
+        "MT_01/02w24 :: Via Nazionale, Matera [40.6733439, 16.600628]",
+        "MT_01/02w31 :: Via Rosselli 17, Matera [40.67437372, 16.60553107]",
+        "MT_01/02w32 :: Via Giuseppe Gattini, Matera [40.67182174, 16.60759624]",
+        "MT_01/02w33 :: Via Giolitti 11, Matera [40.67171071, 16.60445233]",
+        "MT_01/02w34 :: Via Rosselli 95, Matera [40.67310062, 16.60597094]",
+        "MT_01/02w41 :: Via Giambattista Pentasuglia, Matera [40.67031996, 16.60875104]",
+        "MT_01/02w42 :: Via Giambattista Pentasuglia 39, Matera [40.67037067, 16.60769673]",
+        "MT_01/02w43 :: Recinto Mario Pagano, Matera [40.66874248, 16.6062136]",
+        "MT_01/02w44 :: Via Piave 17, Matera [40.66929877, 16.60763478]",
+        "MT_01/03e11 :: Viale Europa, Matera [40.66849772, 16.59300324]",
+        "MT_01/03e12 :: Viale San Giovanni da Matera, Matera [40.66767, 16.59320335]",
+        "MT_01/03e13 :: Viale Luigi Tansillo, Matera [40.66682599, 16.59164606]",
+        "MT_01/03e14 :: Via Luigi Einaudi, Matera [40.6697184, 16.5979446]",
+        "MT_01/03e21 :: Via Ugo La Malfa 102, Matera [40.6685852, 16.59963461]",
+        "MT_01/03e22 :: Via Giuseppe Saragat 12, Matera [40.66630761, 16.59841138]",
+        "MT_01/03e23 :: Via Ferruccio Parri 13, Matera [40.66675286, 16.59854989]",
+        "MT_01/03e24 :: Viale delle Nazioni Unite 6, Matera [40.66574198, 16.59594495]",
+        "MT_01/03e31 :: Via Vincenzo Gioberti SN, Matera [40.66474073, 16.59318593]",
+        "MT_01/03e32 :: Viale Antonio Loperfido, Matera [40.6652533, 16.59086599]",
+        "MT_01/03e33 :: Via Eustacchio Lamanna 4 A/B, Matera [40.66331985, 16.5948138]",
+        "MT_01/03e34 :: Via Annibale Maria di Francia, Matera [40.6614842, 16.59699537]",
+        "MT_01/03e41 :: Via Vincenzo Cappelluti, Matera [40.66560638, 16.602775]",
+        "MT_01/03e42 :: Via Antonio Passarelli 13b, Matera [40.66541419, 16.6046265]",
+        "MT_01/03e43 :: Via Antonio Passarelli 43, Matera [40.66486213, 16.60338463]",
+        "MT_01/03e44 :: Via Lucana, Matera [40.66475755, 16.60735573]",
+        "MT_01/03w11 :: Vico Roma, Matera [40.66719501, 16.60355526]",
+        "MT_01/03w12 :: Via Quattro Novembre 18, Matera [40.66831055, 16.60358873]",
+        "MT_01/03w13 :: Via Lupo Protospata 18, Matera [40.66893348, 16.60422925]",
+        "MT_01/03w14 :: Vico Fornaci Vecchie, Matera [40.66737816, 16.60792581]",
+        "MT_01/03w21 :: Via Pasquale Vena 3/bis, Matera [40.66204969, 16.60741718]",
+        "MT_01/03w22 :: Via Pasquale Vena, Matera [40.66282388, 16.60863703]",
+        "MT_01/03w23 :: Via Lucana 226, Matera [40.66172447, 16.60981152]",
+        "MT_01/03w24 :: Via Domenico Ridola, Matera [40.66256964, 16.60995096]",
+        "MT_01/03w31 :: Piazza San Pietro Caveoso, Matera [40.66469345, 16.61179199]",
+        "MT_01/03w32 :: Via Madonna dell'Idris, Matera [40.66408572, 16.6112022]",
+        "MT_01/03w33 :: Via Bruno Buozzi 63, Matera [40.66331827, 16.61170293]",
+        "MT_01/03w34 :: Via Casalnuovo 133, Matera [40.66077225, 16.61307579]",
+        "MT_01/03w41 :: Via Madonna delle Virtù, Matera [40.66690622, 16.61367952]",
+        "MT_01/03w42 :: Via Sette Dolori, Matera [40.66688262, 16.61004711]",
+        "MT_01/03w43 :: Via Lombardi, Matera [40.66658509, 16.6078359]",
+        "MT_01/03w44 :: Via Sant'Agostino, Matera [40.67030567, 16.60898104]",
+        "MT_01/04e11 :: Via N. Columella, Matera [40.64499033, 16.62194749]",
+        "MT_01/04e12 :: Via Ricciardi, Matera [40.64527907, 16.62374013]",
+        "MT_01/04e13 :: Via dei Pesci 18, Matera [40.64039707, 16.62510933]",
+        "MT_01/04e14 :: Via dello Scorpione 19, Matera [40.64004653, 16.62708205]",
+        "MT_01/04w11 :: Lanera, Matera [40.66058219, 16.60586973]",
+        "MT_01/04w12 :: Via Castello 16bis, Matera [40.66122839, 16.59833531]",
+        "MT_01/04w13 :: Centro, Matera [40.66277625, 16.59908995]",
+        "MT_01/04w14 :: Via della Quercia, Matera [40.65971532, 16.6039529]",
+        "MT_01/04w21 :: Via Pasquale Vena, Matera [40.66099806, 16.60593636]",
+        "MT_01/04w22 :: Salita Guido Dorso, Matera [40.65939184, 16.61252845]",
+        "MT_01/04w23 :: Via del Giglio, Matera [40.65851763, 16.60561688]",
+        "MT_01/04w24 :: Salita Guido Dorso 284, Matera [40.65961377, 16.61333662]",
+        "MT_01/04w31 :: Via Marcello Morelli, Matera [40.65815497, 16.61009333]",
+        "MT_01/04w32 :: Via Lucana 308, Matera [40.65827838, 16.6154977]",
+        "MT_01/04w33 :: Pini, Matera [40.65661337, 16.61408427]",
+        "MT_01/04w34 :: Via Cappuccini 26, Matera [40.65392623, 16.61768494]",
+        "MT_01/04w41 :: Via Eustachio Vincenzo Paradiso, Matera [40.65224266, 16.61788768]",
+        "MT_01/04w42 :: Via Francesco e Natale Farina, Matera [40.65014047, 16.62021191]",
+        "MT_01/04w43 :: Via Francesco e Natale Farina, Matera [40.64596303, 16.62036206]",
+        "MT_01/04w44 :: Via Pandosia, Matera [40.64661062, 16.61689198]",
+        "MT_01/05e11 :: San Giacomo, Matera [40.67271135, 16.57831685]",
+        "MT_01/05e12 :: Via Giardinelle, Matera [40.67132248, 16.57669545]",
+        "MT_01/05e13 :: Via Vitantonio Conversi, Matera [40.67346605, 16.57622631]",
+        "MT_01/05e14 :: Via Granulari, Matera [40.6765772, 16.57534559]",
+        "MT_01/05e21 :: Via Taranto 13, Matera [40.67714497, 16.57617075]",
+        "MT_01/05e22 :: Via Taranto 1, Matera [40.67667912, 16.57846864]",
+        "MT_01/05e23 :: Via Gaio Sallustio Crispo 12, Matera [40.67912096, 16.57569738]",
+        "MT_01/05e24 :: Via Gaio Sallustio Crispo 1, Matera [40.68087189, 16.57589918]",
+        "MT_01/05e31 :: Acquarium, Matera [40.68779801, 16.57494795]",
+        "MT_01/05e32 :: Via Paolo Borsellino, Matera [40.68791682, 16.57655849]",
+        "MT_01/05e33 :: Via Caduti Di Nassiriya, Matera [40.6877029, 16.57834355]",
+        "MT_01/05e34 :: Via Caduti Di Nassiriya, Matera [40.69030644, 16.58049397]"
+      ],
+      "Melfi": [
+        "F104_CNO2 :: San Nicola di Melfi, Melfi [41.07422182, 15.6852144]",
+        "F104_CNO4 :: Via Pratilamia, Melfi [40.99817485, 15.61094123]",
+        "F104_CNO6 :: Via Aldo Moro, Melfi [40.99612976, 15.64180642]",
+        "F104_CNO7 :: Strada Consorziale della Bassa Melfese, Melfi [41.07946386, 15.68640855]",
+        "F104_CNO8 :: Via Foggia, Melfi [40.99674822, 15.63745932]"
+      ],
+      "Missanello": [
+        "F249_CNO1 :: Via Vittorio Emanuele II, Missanello [40.28254352, 16.16629056]",
+        "F249_CNO2 :: Via Vittorio Emanuele II, Missanello [40.28318787, 16.16657336]",
+        "F249_CNO3 :: Via Cesare Battisti, Missanello [40.28150657, 16.16680219]",
+        "F249_CNO4 :: Via Papa Giovanni Ventitreesimo, Missanello [40.28113065, 16.16757784]"
+      ],
+      "Moliterno": [
+        "F295_CNO1 :: Via non definita, Moliterno [40.21169516, 15.87277974]"
+      ],
+      "Montemilone": [
+        "F568_CNO1 :: Via Aldo Moro, Montemilone [41.02782091, 15.96707337]",
+        "F568_CNO2 :: Via Luigi Cadorna, Montemilone [41.03143426, 15.96977217]",
+        "F568_CNO4 :: ~Via Tramontana, Montemilone [41.03326818, 15.97228294]",
+        "F568_CNO5 :: Via Sabaudia, Montemilone [41.03255324, 15.97229205]",
+        "F568_CNO6 :: ~via martiri di via Fanti, Montemilone [41.02432287, 15.96271789]",
+        "F568_CNO7 :: Via Venti Settembre, Montemilone [41.03328481, 15.97101579]",
+        "F568_CNO8 :: Corso Cavour, Montemilone [41.02970099, 15.96940499]"
+      ],
+      "Montemurro": [
+        "F573_CNO1 :: Corso Vittorio Emanuele, Montemurro [40.29717595, 15.99087718]",
+        "F573_CNO3 :: Corso Vittorio Emanuele, Montemurro [40.29520685, 15.98827579]",
+        "F573_CNO4 :: Via San Sebastiano, Montemurro [40.29841328, 15.99400265]",
+        "F573_CNO5 :: Via Regina Elena, Montemurro [40.29653485, 15.99258208]"
+      ],
+      "Muro Lucano": [
+        "F817_CNO2 :: Strada Provinciale ex SS 7 Via Appia, Muro Lucano [40.73854326, 15.49336803]",
+        "F817_CNO3 :: Strada Provinciale 17 di Capodigiano, Muro Lucano [40.75511636, 15.49392653]",
+        "F817_CNO4 :: Strada Provinciale 14 Bellese, Muro Lucano [40.76472047, 15.52456643]"
+      ],
+      "Nemoli": [
+        "F866_CNO1 :: Strada Provinciale 45 di Nemoli, Nemoli [40.0672109, 15.800332]",
+        "F866_CNO2 :: Strada Provinciale 45 di Nemoli, Nemoli [40.07147926, 15.79902818]",
+        "F866_CNO3 :: Strada Provinciale ex SS 19 delle Calabrie, Nemoli [40.09225775, 15.80665471]"
+      ],
+      "Oliveto Lucano": [
+        "G037_CNO1 :: Viale Italia, Oliveto Lucano [40.53618352, 16.1857451]",
+        "G037_CNO2 :: Via della Libertà 2, Oliveto Lucano [40.53485359, 16.18459513]",
+        "G037_CNO3 :: Corso Garibaldi, Oliveto Lucano [40.53452974, 16.18613958]"
+      ],
+      "Oppido Lucano": [
+        "G081_CNO1 :: Via Emanuele Gianturco, Oppido Lucano [40.76021449, 15.97751946]"
+      ],
+      "Paterno": [
+        "M269_CNO1 :: Via non definita, Paterno [40.35376976, 15.74960789]"
+      ],
+      "Pescopagano": [
+        "G496_CNO1 :: Via Giuseppe Orlando Miele, Pescopagano [40.83559203, 15.39843887]"
+      ],
+      "Pietragalla": [
+        "G616_CNO3 :: Corso Giuseppe Garibaldi, Pietragalla [40.77190753, 15.79724419]",
+        "G616_CNO5 :: San Giorgio, Pietragalla [40.7702002, 15.80088665]",
+        "G616_CNO8 :: ~Strada Statale 169 di Genzano, Pietragalla [40.74201846, 15.81278695]",
+        "G942_CNO4 :: Via della Marina, Pietragalla [40.73272712, 15.80407143]"
+      ],
+      "Pietrapertosa": [
+        "G623_CNO1 :: Via Giuseppe Garibaldi, Pietrapertosa [40.51991783, 16.05997438]",
+        "G623_CNO2 :: Pietrapertosa, Pietrapertosa [40.51482724, 16.06265464]",
+        "G623_CNO3 :: Pietrapertosa, Pietrapertosa [40.51796316, 16.06251468]",
+        "G623_CNO4 :: Via della Speranza, Pietrapertosa [40.51593194, 16.06361721]"
+      ],
+      "Pisticci": [
+        "G712_CNO1 :: ~Strada Provinciale 18 Pozzitello-San Basilio, Pisticci [40.3051688, 16.77081195]",
+        "G712_CNO3 :: Rione Portobello, Pisticci [40.35320058, 16.68409616]",
+        "G712_CNO31 :: ~Via Nausicaa, Pisticci [40.30683536, 16.77258826]",
+        "G712_CNO4 :: ~Strada Provinciale 18 Pozzitello-San Basilio, Pisticci [40.30613604, 16.77185327]",
+        "G712_CNO8 :: Via non definita, Pisticci [40.30667655, 16.77112915]"
+      ],
+      "Policoro": [
+        "G786_CNO1 :: Via Penelope, Policoro [40.19522603, 16.70279312]",
+        "G786_CNO2 :: Via delle Attività Produttive, Policoro [40.1736766, 16.6551423]",
+        "G786_CNO4 :: Viale Catone, Policoro [40.19635801, 16.70901286]",
+        "G786_CNO6 :: Via Aristione, Policoro [40.18950011, 16.71198572]",
+        "G786_CNO7 :: Via Puglia, Policoro [40.20877436, 16.67263514]",
+        "G786_CNO8 :: Via Puglia, Policoro [40.21324358, 16.67627611]",
+        "G786_CNO9 :: Via Penelope, Policoro [40.19401132, 16.70025515]"
+      ],
+      "Potenza": [
+        "G942_CNO5 :: Via Laimarella, Potenza [40.68342137, 15.77555749]",
+        "G942_CNO6 :: Via Stompagno, Potenza [40.71274491, 15.78716945]",
+        "G942_CNO7 :: Strada Statale 658 Potenza-Melfi, Potenza [40.71605495, 15.80236514]",
+        "PZ_01/01e11 :: Via Taranto, Potenza [40.64512909, 15.79996463]",
+        "PZ_01/01e12 :: Via Ravenna 8, Potenza [40.64288725, 15.80386908]",
+        "PZ_01/01e13 :: Via Zara, Potenza [40.64338894, 15.80095077]",
+        "PZ_01/01e14 :: Santa Maria, Potenza [40.64399686, 15.80267301]",
+        "PZ_01/01e21 :: Via Milano, Potenza [40.64589871, 15.79802179]",
+        "PZ_01/01e22 :: Via Maratea, Potenza [40.64401305, 15.79843857]",
+        "PZ_01/01e23 :: Via Pienza 86, Potenza [40.64351329, 15.79609736]",
+        "PZ_01/01e24 :: Via Maratea, Potenza [40.64137337, 15.79670547]",
+        "PZ_01/01e31 :: Via Sabbioneta, Potenza [40.64586785, 15.79410671]",
+        "PZ_01/01e32 :: Via Sabbioneta 49, Potenza [40.64633972, 15.79387091]",
+        "PZ_01/01e33 :: Via Ancona, Potenza [40.64728945, 15.79462254]",
+        "PZ_01/01e34 :: Viale Firenze, Potenza [40.64529886, 15.79574591]",
+        "PZ_01/01e41 :: Via Messina 124, Potenza [40.65040456, 15.79200192]",
+        "PZ_01/01e42 :: Via Ancona, Potenza [40.64958256, 15.79185393]",
+        "PZ_01/01e43 :: Via Messina 269, Potenza [40.65028021, 15.79257172]",
+        "PZ_01/01e44 :: Via Ancona 6, Potenza [40.64831827, 15.79326573]",
+        "PZ_01/01w11 :: Via Caserma Lucania 48, Potenza [40.64106655, 15.80498066]",
+        "PZ_01/01w12 :: Via Giuseppe Mazzini, Potenza [40.64234959, 15.80455944]",
+        "PZ_01/01w13 :: Via Mantova 98, Potenza [40.64141532, 15.8017096]",
+        "PZ_01/01w14 :: Via Roma, Potenza [40.64249407, 15.80124448]",
+        "PZ_01/01w21 :: Via Cavour, Potenza [40.64287433, 15.80703982]",
+        "PZ_01/01w22 :: Via Ettore Ciccotti, Potenza [40.64327915, 15.80491297]",
+        "PZ_01/01w23 :: Discesa San Gerardo 65, Potenza [40.64165503, 15.80542683]",
+        "PZ_01/01w24 :: Discesa San Gerardo 102, Potenza [40.64119927, 15.8064883]",
+        "PZ_01/01w31 :: Viale Firenze, Potenza [40.6477894, 15.79675726]",
+        "PZ_01/01w32 :: Via Lazio 1, Potenza [40.64629229, 15.80331136]",
+        "PZ_01/01w33 :: Via Lazio, Potenza [40.64733905, 15.80194037]",
+        "PZ_01/01w34 :: Via Liguria 36, Potenza [40.65036006, 15.79989804]",
+        "PZ_01/01w41 :: Verderuolo, Potenza [40.65051233, 15.79545996]",
+        "PZ_01/01w42 :: Via Sanremo, Potenza [40.65386372, 15.79953558]",
+        "PZ_01/01w43 :: Via Sanremo, Potenza [40.65378454, 15.79650966]",
+        "PZ_01/01w44 :: Via Alassio, Potenza [40.65269306, 15.79848085]",
+        "PZ_01/02e11 :: Via La Marmora, Potenza [40.64305556, 15.81172195]",
+        "PZ_01/02e12 :: Via Ofanto, Potenza [40.64110751, 15.8119603]",
+        "PZ_01/02e13 :: Via Manhes, Potenza [40.6398406, 15.81031287]",
+        "PZ_01/02e14 :: Via Carlo Bo, Potenza [40.64086698, 15.80957445]",
+        "PZ_01/02e21 :: Via San Vito, Potenza [40.63875553, 15.81945446]",
+        "PZ_01/02e22 :: Via San Vito, Potenza [40.6399735, 15.81725224]",
+        "PZ_01/02e23 :: Via Appia, Potenza [40.63978701, 15.81458821]",
+        "PZ_01/02e24 :: Via Bertazzoni, Potenza [40.64114685, 15.8148817]",
+        "PZ_01/02e31 :: Via Giustino Fortunato 23, Potenza [40.63797432, 15.81516337]",
+        "PZ_01/02e32 :: Via Francesco Saverio Nitti 62, Potenza [40.63609365, 15.81135857]",
+        "PZ_01/02e33 :: Via Racioppi, Potenza [40.63688089, 15.81418998]",
+        "PZ_01/02e34 :: Via Francesco Saverio Nitti, Potenza [40.63606051, 15.81243367]",
+        "PZ_01/02e41 :: Viale Guglielmo Marconi, Potenza [40.63587133, 15.80613295]",
+        "PZ_01/02e42 :: Via Giuseppe Verdi, Potenza [40.63667679, 15.80622257]",
+        "PZ_01/02e43 :: Via Francesco Torraca 36, Potenza [40.63696408, 15.80841242]",
+        "PZ_01/02e44 :: Via Francesco Torraca 61, Potenza [40.63798526, 15.81062688]",
+        "PZ_01/02w11 :: Via Giuseppe Mazzini 101, Potenza [40.63955555, 15.80162633]",
+        "PZ_01/02w12 :: Via Giuseppe Mazzini 94, Potenza [40.64069491, 15.80443031]",
+        "PZ_01/02w13 :: Via Giuseppe Mazzini, Potenza [40.63731762, 15.79933028]",
+        "PZ_01/02w14 :: Via Giuseppe Mazzini 73, Potenza [40.63910581, 15.80076158]",
+        "PZ_01/02w21 :: Via Vincenzo Scafarelli, Potenza [40.64024938, 15.80671197]",
+        "PZ_01/02w22 :: Via San Luca, Potenza [40.63971119, 15.80656027]",
+        "PZ_01/02w23 :: Via Due Torri 1, Potenza [40.63929022, 15.8045984]",
+        "PZ_01/02w24 :: Via Achille Rosica 56, Potenza [40.63837632, 15.80129188]",
+        "PZ_01/02w31 :: Via Pretoria 253, Potenza [40.63957717, 15.80729186]",
+        "PZ_01/02w32 :: Via del Popolo 115, Potenza [40.63846397, 15.80530689]",
+        "PZ_01/02w33 :: Via Orazio Petruccelli 18, Potenza [40.63773448, 15.80213233]",
+        "PZ_01/02w34 :: Via Pretoria 161, Potenza [40.6387096, 15.80422519]",
+        "PZ_01/02w41 :: Via Amerigo Vespucci, Potenza [40.6368301, 15.80458271]",
+        "PZ_01/02w42 :: Viale Guglielmo Marconi, Potenza [40.63736981, 15.80633899]",
+        "PZ_01/02w43 :: Corso Diciotto Agosto 31, Potenza [40.63798449, 15.80396934]",
+        "PZ_01/02w44 :: Corso Giuseppe Garibaldi, Potenza [40.6374836, 15.80634982]",
+        "PZ_01/03e11 :: Via Mediterraneo, Potenza [40.6385728, 15.78717904]",
+        "PZ_01/03e12 :: Via Ionio, Potenza [40.63248278, 15.78910718]",
+        "PZ_01/03e13 :: Via del Gallitello 127b, Potenza [40.63682656, 15.78492035]",
+        "PZ_01/03e14 :: Via del Gallitello 104, Potenza [40.6385327, 15.78372324]",
+        "PZ_01/03e21 :: Gallitello, Potenza [40.63200715, 15.79172414]",
+        "PZ_01/03e22 :: Via Tirreno, Potenza [40.63297735, 15.79129217]",
+        "PZ_01/03e23 :: Cocuzzo, Potenza [40.63471114, 15.79270999]",
+        "PZ_01/03e24 :: Via Ionio 48, Potenza [40.63395997, 15.79111232]",
+        "PZ_01/03e31 :: Viale Guglielmo Marconi 192, Potenza [40.62999613, 15.80491029]",
+        "PZ_01/03e32 :: Viale dell'Unicef, Potenza [40.63118715, 15.79574229]",
+        "PZ_01/03e33 :: Via Nicola Vaccaro, Potenza [40.62813327, 15.79865325]",
+        "PZ_01/03e34 :: Via degli Oleandri 7, Potenza [40.62902558, 15.8000306]",
+        "PZ_01/03e41 :: Francioso, Potenza [40.63493368, 15.80633358]",
+        "PZ_01/03e42 :: Via Nazario Sauro 71, Potenza [40.63372733, 15.80665832]",
+        "PZ_01/03e43 :: Via Nazario Sauro, Potenza [40.6344881, 15.80730271]",
+        "PZ_01/03e44 :: Via Fabio Filzi, Potenza [40.63517866, 15.80773247]",
+        "PZ_01/03w11 :: Scala Mobile Santa Lucia, Potenza [40.6367525, 15.79894205]",
+        "PZ_01/03w12 :: Via Quattro Novembre 58, Potenza [40.63743174, 15.79978916]",
+        "PZ_01/03w13 :: Via Portasalza 41, Potenza [40.63698947, 15.80013262]",
+        "PZ_01/03w14 :: Via del Popolo 17, Potenza [40.63679092, 15.80038071]",
+        "PZ_01/03w21 :: Corso Umberto I 49, Potenza [40.6369694, 15.80150849]",
+        "PZ_01/03w22 :: Via Amerigo Vespucci, Potenza [40.63387835, 15.80091743]",
+        "PZ_01/03w23 :: Via delle Betulle, Potenza [40.63517122, 15.79881466]",
+        "PZ_01/03w24 :: Via della Pineta, Potenza [40.63360143, 15.79942231]",
+        "PZ_01/03w31 :: Via delle Querce, Potenza [40.63165438, 15.80152158]",
+        "PZ_01/03w32 :: Via delle Querce, Potenza [40.63181198, 15.80181399]",
+        "PZ_01/03w33 :: Via Nicola Vaccaro 358, Potenza [40.6304163, 15.80382183]",
+        "PZ_01/03w34 :: Via Leonardo da Vinci 24, Potenza [40.63196287, 15.80289122]",
+        "PZ_01/03w41 :: Viale Guglielmo Marconi 134, Potenza [40.6324701, 15.80420427]",
+        "PZ_01/03w42 :: Via Leonardo da Vinci, Potenza [40.63327273, 15.80295267]",
+        "PZ_01/03w43 :: Viale Dante 82, Potenza [40.63575776, 15.80162444]",
+        "PZ_01/03w44 :: Via Torquato Tasso, Potenza [40.6342959, 15.80180041]",
+        "PZ_01/04e11 :: Via Mar Egeo, Potenza [40.63766991, 15.79002488]",
+        "PZ_01/04e12 :: Via Anzio, Potenza [40.64058134, 15.79075397]",
+        "PZ_01/04e13 :: Via Vienna, Potenza [40.64313281, 15.78702161]",
+        "PZ_01/04e14 :: Via dell'Europa Unita, Potenza [40.6418383, 15.79351082]",
+        "PZ_01/04e21 :: Via dei Molinari, Potenza [40.64243319, 15.78123872]",
+        "PZ_01/04e22 :: Via del Gallitello, Potenza [40.63925777, 15.78324911]",
+        "PZ_01/04e23 :: Quartiere Europa, Potenza [40.64014466, 15.78710561]",
+        "PZ_01/04e24 :: Quartiere Europa, Potenza [40.64166179, 15.78925651]",
+        "PZ_01/04e31 :: Piazzale Zagabria 1, Potenza [40.64560857, 15.79056291]",
+        "PZ_01/04e32 :: Piazzale Sofia 1, Potenza [40.64341726, 15.79061594]",
+        "PZ_01/04e33 :: Piazzale Vilnius 16, Potenza [40.64485925, 15.78887597]",
+        "PZ_01/04e34 :: Via Adriatico, Potenza [40.64371456, 15.78801465]",
+        "PZ_01/04e41 :: Via Londra 51-55, Potenza [40.64897285, 15.78494044]",
+        "PZ_01/04e42 :: Via Parigi, Potenza [40.64647653, 15.78650063]",
+        "PZ_01/04e43 :: Via Vienna, Potenza [40.64662238, 15.78751805]",
+        "PZ_01/04e44 :: Via Vienna, Potenza [40.64431342, 15.78694843]",
+        "PZ_01/04w11 :: Macchia romana, Potenza [40.65298548, 15.80160224]",
+        "PZ_01/04w12 :: Macchia romana, Potenza [40.65670319, 15.80317134]",
+        "PZ_01/04w13 :: Viale delle Medaglie Olimpiche, Potenza [40.65831922, 15.80458194]",
+        "PZ_01/04w14 :: Viale delle Medaglie Olimpiche, Potenza [40.66038128, 15.80571513]",
+        "PZ_01/04w21 :: Via Giovanni XXIII, Potenza [40.66103263, 15.80745186]",
+        "PZ_01/04w22 :: Via Gandhi, Potenza [40.66177858, 15.80786934]",
+        "PZ_01/04w23 :: Contrada Baragiano, Potenza [40.65667924, 15.80960795]",
+        "PZ_01/04w24 :: Via Martin Luther King, Potenza [40.66008102, 15.80776771]",
+        "PZ_01/04w31 :: Strada Provinciale ex SS 7 Via Appia, Potenza [40.6598137, 15.7917319]",
+        "PZ_01/04w32 :: Via De Coubertin, Potenza [40.65564148, 15.80023316]",
+        "PZ_01/04w33 :: Via della Botte, Potenza [40.66432403, 15.80590666]",
+        "PZ_01/04w34 :: Via De Coubertin, Potenza [40.6578175, 15.79892945]",
+        "PZ_01/04w41 :: Via Serre, Potenza [40.65740545, 15.78403425]",
+        "PZ_01/04w42 :: Via Ancona, Potenza [40.65022086, 15.78681177]",
+        "PZ_01/04w43 :: Via Ancona, Potenza [40.65462209, 15.78350547]",
+        "PZ_01/04w44 :: Via Stigliani, Potenza [40.65309939, 15.78640722]"
+      ],
+      "Rapolla": [
+        "H186_CNO1 :: Via non definita, Rapolla [40.9699049, 15.67312532]"
+      ],
+      "Rapone": [
+        "H187_CNO1 :: Forestella, Rapone [40.84622367, 15.49865676]",
+        "H187_CNO2 :: Forestella, Rapone [40.84731389, 15.50081054]",
+        "H187_CNO3 :: Forestella, Rapone [40.84731789, 15.50082303]"
+      ],
+      "Rionero In Vulture": [
+        "H307_CNO1 :: Via Giorgio Amendola, Rionero in Vulture [40.9217379, 15.66949822]"
+      ],
+      "Ripacandida": [
+        "H312_CNO1 :: Via Vittorio Emanuele, Ripacandida [40.91056472, 15.72298705]",
+        "H312_CNO2 :: Via Vittorio Emanuele, Ripacandida [40.90978446, 15.72407487]",
+        "H312_CNO3 :: Via Santa Maria, Ripacandida [40.9122439, 15.72683254]",
+        "H312_CNO4 :: ~Via San Pietro, Ripacandida [40.91246757, 15.72541541]",
+        "H312_CNO5 :: ~Via Luigi Lavista, Ripacandida [40.91106415, 15.72049323]",
+        "H312_CNO6 :: Via Belvedere, Ripacandida [40.91141182, 15.72392424]",
+        "H312_CNO7 :: Viale Regina Margherita, Ripacandida [40.91227691, 15.72816828]"
+      ],
+      "Rivello": [
+        "H348_CNO3 :: Capo d'Elci, Rivello [40.0749672, 15.74619899]"
+      ],
+      "Roccanova": [
+        "H426_CNO1 :: ~Via Prato, Roccanova [40.2163664, 16.20701953]",
+        "H426_CNO2 :: ~Via Belvedere, Roccanova [40.21213249, 16.2037806]",
+        "H426_CNO5 :: Via non definita, Roccanova [40.21305317, 16.20485837]",
+        "H426_CNO6 :: Via non definita, Roccanova [40.21429256, 16.20537481]"
+      ],
+      "Rotale": [
+        "H348_CNO1 :: Strada Provinciale 94 di Roccarossa, Rotale [40.07330574, 15.68948206]",
+        "H348_CNO2 :: ~Strada Provinciale 97 di Rotale, Rotale [40.08431617, 15.71241153]"
+      ],
+      "Rotonda": [
+        "H590_CNO1 :: Via non definita, Rotonda [39.95942559, 16.01868728]"
+      ],
+      "Rotondella": [
+        "H591_CNO1 :: Corso Giuseppe Garibaldi, Rotondella [40.17233954, 16.52300964]",
+        "H591_CNO2 :: Via Purgatorio, Rotondella [40.17234339, 16.52849349]",
+        "H591_CNO3 :: Via Agostino de Pretis, Rotondella [40.17260144, 16.52382982]",
+        "H591_CNO4 :: Via Giuseppe Verdi, Rotondella [40.1723035, 16.52502877]",
+        "H591_CNO5 :: Via Camillo Benso Conte di Cavour, Rotondella [40.17177443, 16.5273713]",
+        "H591_CNO6 :: Via Antonio Gramsci, Rotondella [40.17032512, 16.5243474]",
+        "H591_CNO7 :: Via Lucania, Rotondella [40.17510813, 16.58362656]"
+      ],
+      "Ruoti": [
+        "H641_CNO1 :: Incasciaturo di Sopra, Ruoti [40.71526641, 15.69888016]"
+      ],
+      "Ruvo Del Monte": [
+        "H646_CNO1 :: Via Nino Bixio, Ruvo del Monte [40.84497204, 15.53859608]",
+        "H646_CNO2 :: Piazza Ungheria, Ruvo del Monte [40.84939137, 15.54200856]",
+        "H646_CNO3 :: ~Viale Europa, Ruvo del Monte [40.84654065, 15.54042695]",
+        "H646_CNO4 :: ~Strada Provinciale 2 Campana, Ruvo del Monte [40.84825487, 15.53972495]"
+      ],
+      "Salandra": [
+        "H687_CNO1 :: Via Torino, Salandra [40.52601467, 16.32239269]",
+        "H687_CNO2 :: Via Torino, Salandra [40.52636296, 16.32159558]",
+        "H687_CNO3 :: Via San Rocco, Salandra [40.52651561, 16.31956542]",
+        "H687_CNO4 :: Via della Piantata, Salandra [40.52804388, 16.32062297]",
+        "H687_CNO5 :: Via Regina Margherita, Salandra [40.52855378, 16.3194773]",
+        "H687_CNO6 :: Via Silvio Pellico, Salandra [40.52711466, 16.31886398]",
+        "H687_CNO7 :: Corso Vittorio Emanuele, Salandra [40.52787523, 16.31736468]"
+      ],
+      "San Brancato": [
+        "I305_CNO1 :: Via Pablo Neruda, San Brancato [40.25716144, 16.25687573]"
+      ],
+      "San Chirico Nuovo": [
+        "H795_CNO1 :: Via Madonna del Carmelo, San Chirico Nuovo [40.67760975, 16.07641957]",
+        "H795_CNO2 :: Piazza Martiri d'Ungheria, San Chirico Nuovo [40.67702163, 16.07900221]",
+        "H795_CNO3 :: Via San Tommaso, San Chirico Nuovo [40.67836085, 16.08305797]",
+        "H795_CNO4 :: Via Neviera, San Chirico Nuovo [40.67733791, 16.08012061]",
+        "H795_CNO5 :: Via Neviera, San Chirico Nuovo [40.67779507, 16.08157473]"
+      ],
+      "San Chirico Raparo": [
+        "H796_CNO1 :: ~Strada Provinciale 7 Agri - Sinni, San Chirico Raparo [40.18836629, 16.0782129]",
+        "H796_CNO3 :: Strada Provinciale 7 Agri - Sinni, San Chirico Raparo [40.19030159, 16.07571777]",
+        "H796_CNO4 :: ~Strada Provinciale 7 Agri - Sinni, San Chirico Raparo [40.19185794, 16.07737068]",
+        "H796_CNO5 :: Strada Provinciale 7 Agri - Sinni, San Chirico Raparo [40.18988821, 16.07809521]",
+        "H796_CNO6 :: ~Strada Provinciale 7 Agri - Sinni, San Chirico Raparo [40.19067265, 16.07347755]"
+      ],
+      "San Costantino Albanese": [
+        "H808_CNO1 :: ~Strada Provinciale 63 del Rubbio, San Costantino Albanese [40.03840225, 16.30450399]",
+        "H808_CNO2 :: ~Corso Italia, San Costantino Albanese [40.03680457, 16.30542385]",
+        "H808_CNO3 :: Strada Provinciale 63 del Rubbio, San Costantino Albanese [40.03604089, 16.3041096]"
+      ],
+      "San Fele": [
+        "H831_CNO1 :: Via non definita, San Fele [40.81693892, 15.53847919]",
+        "H831_CNO2 :: Santa Filomena, San Fele [40.81640328, 15.54879019]",
+        "H831_CNO3 :: Santa Filomena, San Fele [40.81984618, 15.55883002]"
+      ],
+      "San Giorgio Lucano": [
+        "H888_CNO1 :: Corso Vittorio Emanuele, San Giorgio Lucano [40.1146594, 16.39003067]",
+        "H888_CNO2 :: ~Strada Provinciale 7 Valsinni - Noepoli 1° tronco, San Giorgio Lucano [40.11096989, 16.3878039]",
+        "H888_CNO3 :: Corso Vittorio Emanuele, San Giorgio Lucano [40.11345634, 16.38891165]",
+        "H888_CNO4 :: Via non definita, San Giorgio Lucano [40.11280179, 16.38844964]",
+        "H888_CNO5 :: Strada Provinciale 7 Valsinni - Noepoli 1° tronco, San Giorgio Lucano [40.11034501, 16.38791112]",
+        "H888_CNO6 :: Strada Provinciale 7 Valsinni - Noepoli 1° tronco, San Giorgio Lucano [40.10834987, 16.38894072]"
+      ],
+      "San Martino D'Agri": [
+        "H994_CNO1 :: Via Casale, San Martino d'Agri [40.24062898, 16.05382998]",
+        "H994_CNO2 :: Via Casale, San Martino d'Agri [40.24050814, 16.05413036]",
+        "H994_CNO3 :: Strada Provinciale 159 San Martino - SS 598, San Martino d'Agri [40.23713166, 16.05105888]"
+      ],
+      "San Mauro Forte": [
+        "I029_CNO2 :: Via Giuseppe Di Vittorio, San Mauro Forte [40.4848164, 16.25299452]",
+        "I029_CNO3 :: San Mauro Forte, San Mauro Forte [40.48658886, 16.24779561]",
+        "I029_CNO4 :: Via Armando Diaz 26, San Mauro Forte [40.48634561, 16.24900707]",
+        "I029_CNO5 :: Corso Giacinto Magnante, San Mauro Forte [40.48634568, 16.24989268]",
+        "I029_CNO6 :: Via Stanislao Lauria, San Mauro Forte [40.48690633, 16.25191086]"
+      ],
+      "San Paolo Albanese": [
+        "B906_CNO1 :: Via non definita, San Paolo Albanese [40.03424475, 16.33660452]",
+        "B906_CNO2 :: Via Alessandro Rismilari, San Paolo Albanese [40.03741065, 16.33465821]"
+      ],
+      "San Severino Lucano": [
+        "I157_CNO2 :: Strada Provinciale 102 di Mezzana, San Severino Lucano [40.01800275, 16.14274463]",
+        "I157_CNO3 :: ~Via Nicola Germano, San Severino Lucano [40.02001861, 16.13811839]",
+        "I157_CNO4 :: Corso Giuseppe Garibaldi 16, San Severino Lucano [40.02210218, 16.13636538]"
+      ],
+      "Sant'Angelo Le Fratte": [
+        "I288_CNO1 :: Via Umberto I, Sant'Angelo Le Fratte [40.5470754, 15.55800694]",
+        "I288_CNO2 :: ~Via San Michele, Sant'Angelo Le Fratte [40.54573361, 15.55943171]",
+        "I288_CNO3 :: ~Strada Provinciale 145 Isca - Pantanelle, Sant'Angelo Le Fratte [40.53816538, 15.58006804]",
+        "I288_CNO4 :: ~Strada Provinciale 12 Vietrese, Sant'Angelo Le Fratte [40.54445178, 15.56096923]"
+      ],
+      "Sarconi": [
+        "I426_CNO1 :: Strada Provinciale 7 Agri - Sinni, Sarconi [40.24844046, 15.88944678]"
+      ],
+      "Sasso Di Castalda": [
+        "I457_CNO1 :: Via Provinciale, Sasso di Castalda [40.48497388, 15.67252027]"
+      ],
+      "Satriano Di Lucania": [
+        "G614_CNO1 :: Via non definita, Satriano di Lucania [40.557048, 15.6204809]"
+      ],
+      "Savoia Di Lucania": [
+        "H730_CNO1 :: Corso Giuseppe Garibaldi, Savoia di Lucania [40.56791185, 15.5502741]",
+        "H730_CNO2 :: Corso Giuseppe Garibaldi 1, Savoia di Lucania [40.56932633, 15.55121221]",
+        "H730_CNO3 :: Via non definita, Savoia di Lucania [40.57955697, 15.57778277]",
+        "H730_CNO4 :: Corso Giuseppe Garibaldi, Savoia di Lucania [40.56877068, 15.55007723]"
+      ],
+      "Scalo Di Baragiano": [
+        "A615_CNO1 :: Via Immacolata Concezione, Scalo di Baragiano [40.68210283, 15.5900489]",
+        "A615_CNO2 :: Corso Giuseppe Garibaldi, Scalo di Baragiano [40.68077484, 15.59287289]",
+        "A615_CNO3 :: ~Strada Provinciale ex SS 7 Via Appia, Scalo di Baragiano [40.69385436, 15.57100389]"
+      ],
+      "Scanzano Jonico": [
+        "M256_CNO1 :: Via Ernesto De Martino, Scanzano Jonico [40.24830212, 16.69041157]"
+      ],
+      "Senise": [
+        "I610_CNO2 :: Strada Statale 653 della Valle del Sinni, Senise [40.13476319, 16.30419779]",
+        "I610_CNO3 :: Via non definita, Senise [40.12462133, 16.28729789]"
+      ],
+      "Spinoso": [
+        "I917_CNO1 :: Salita Mercato, Spinoso [40.26885948, 15.96571572]",
+        "I917_CNO2 :: ~Via Piantani, Spinoso [40.2689009, 15.96453057]",
+        "I917_CNO3 :: Via Camillo Benso Conte di Cavour, Spinoso [40.26716589, 15.96685899]",
+        "I917_CNO4 :: Piazzetta Carboneria, Spinoso [40.26918414, 15.96636648]",
+        "I917_CNO5 :: Via Biagio Petrocelli, Spinoso [40.26870726, 15.96671581]",
+        "I917_CNO6 :: ~Strada Provinciale 7 Agri - Sinni, Spinoso [40.26779579, 15.98593216]"
+      ],
+      "Teana": [
+        "L082_CNO1 :: Strada Provinciale 15 della Sella del Titolo, Teana [40.12537729, 16.15251214]",
+        "L082_CNO2 :: Piazza Umberto primo, Teana [40.12678294, 16.15372018]"
+      ],
+      "Terranova Di Pollino": [
+        "L126_CNO1 :: B&B Bed Fantasy, Terranova di Pollino [39.97794737, 16.29720863]",
+        "L126_CNO3 :: Terranova di Pollino, Terranova di Pollino [39.97750806, 16.29841728]",
+        "L126_CNO4 :: Via Convento 1, Terranova di Pollino [39.97934423, 16.29572832]",
+        "L126_CNO5 :: Terranova di Pollino, Terranova di Pollino [39.97675728, 16.29847696]",
+        "L126_CNO6 :: Terranova di Pollino, Terranova di Pollino [39.97585445, 16.2995713]"
+      ],
+      "Tintera": [
+        "G663_CNO1 :: Via non definita, Tintera [40.57198573, 15.76935957]",
+        "G663_CNO2 :: Via non definita, Tintera [40.57908841, 15.7609203]"
+      ],
+      "Tito Scalo": [
+        "L181_CNO1 :: Strada Provinciale ex SS 94 del Varco di Pietrastretta, Tito Scalo [40.6082902, 15.70135471]"
+      ],
+      "Trecchina": [
+        "L357_CNO2 :: ~via San Martino, Trecchina [40.02948626, 15.77803827]",
+        "L357_CNO3 :: ~Contrada Ronzino, Trecchina [40.04298302, 15.79200444]",
+        "L357_CNO5 :: ~Strada Statale 585 Fondo Valle del Noce, Trecchina [40.03932226, 15.78705176]"
+      ],
+      "Trivigno": [
+        "L439_CNO1 :: ~Strada Provinciale 16 Marsicana 1° tronco, Trivigno [40.58026333, 15.98835345]",
+        "L439_CNO2 :: Via Vittorie Emmanuele, Trivigno [40.58111493, 15.98971861]",
+        "L439_CNO23 :: ~Via Roma, Trivigno [40.58036635, 15.98794793]",
+        "L439_CNO3 :: Via Armando Diaz, Trivigno [40.58022851, 15.98926519]"
+      ],
+      "Tursi": [
+        "L477_CNO1 :: Corso Umberto Primo, Tursi [40.24950082, 16.47091513]",
+        "L477_CNO10 :: Via Roma, Tursi [40.24626788, 16.4670306]",
+        "L477_CNO11 :: Strada Provinciale 41 Variante Policoro-Tursi, Tursi [40.24713197, 16.48601983]",
+        "L477_CNO12 :: Corso Vittorio Emanuele, Tursi [40.24811207, 16.47062865]",
+        "L477_CNO13 :: Via Roma, Tursi [40.24453806, 16.46423205]",
+        "L477_CNO14 :: Via Santi Quaranta, Tursi [40.24670412, 16.4790805]",
+        "L477_CNO15 :: Via Roma 85, Tursi [40.24638766, 16.47042626]",
+        "L477_CNO2 :: Piazza Plebiscito, Tursi [40.24835363, 16.47198604]",
+        "L477_CNO3 :: Via Roma, Tursi [40.24569629, 16.47291567]",
+        "L477_CNO4 :: Via Roma 196, Tursi [40.24493998, 16.46486897]",
+        "L477_CNO5 :: Via Germania, Tursi [40.24380188, 16.463575]",
+        "L477_CNO6 :: Via Portogallo, Tursi [40.24584868, 16.46639939]",
+        "L477_CNO7 :: Via Eraclea, Tursi [40.24648334, 16.47420739]",
+        "L477_CNO8 :: Via Matera, Tursi [40.24339006, 16.46310764]",
+        "L477_CNO9 :: Vico Roma, Tursi [40.24647027, 16.46968162]"
+      ],
+      "Vaglio Basilicata": [
+        "L532_CNO1 :: Via Paschiere, Vaglio Basilicata [40.66736726, 15.91781245]",
+        "L532_CNO2 :: Via Carmine, Vaglio Basilicata [40.66686347, 15.91954948]",
+        "L532_CNO3 :: Via Carmine 106, Vaglio Basilicata [40.66585049, 15.92018057]"
+      ],
+      "Valsinni": [
+        "D513_CNO1 :: Via Alcide De Gasperi, Valsinni [40.1693629, 16.44405757]",
+        "D513_CNO3 :: Piazza Madonna del Carmine, Valsinni [40.17186617, 16.4425783]",
+        "D513_CNO4 :: ~Via Vincenzo Donadio, Valsinni [40.16958835, 16.44583654]",
+        "D513_CNO5 :: Via Emanuele Gianturco, Valsinni [40.16981767, 16.44149094]",
+        "D513_CNO6 :: ~Strada Statale 653 della Valle del Sinni, Valsinni [40.17502256, 16.44229997]"
+      ],
+      "Venosa": [
+        "L738_CNO1 :: Via Melfi, Venosa [40.96341384, 15.81389377]",
+        "L738_CNO2 :: Via Appia, Venosa [40.95956526, 15.80802729]"
+      ],
+      "Viggianello": [
+        "L873_CNO1 :: Pedali, Viggianello [39.99162391, 16.07582906]",
+        "L873_CNO2 :: Via Guglielmo Marconi, Viggianello [39.97259345, 16.08776724]",
+        "L873_CNO3 :: Corso Senatore Vincenzo De Filpo, Viggianello [39.97289513, 16.08424184]",
+        "L873_CNO4 :: Santa Rosalia, Viggianello [39.99410929, 16.09429344]",
+        "L873_CNO5 :: Pedali, Viggianello [39.99295783, 16.06477432]",
+        "L873_CNO6 :: Santo Ianni, Viggianello [39.99632058, 16.0499981]",
+        "L873_CNO7 :: Strada Provinciale 34 Pedali - Viggianello, Viggianello [39.99380649, 16.06136762]",
+        "L873_CNO8 :: Via Gallizzi, Viggianello [39.99397896, 16.0572538]"
+      ],
+      "Villa D'Agri": [
+        "E977_CNO5 :: ~Strada Provinciale 16 Marsicana 3° tronco, Villa d'Agri [40.36372925, 15.81936864]",
+        "E977_CNO6 :: Via non definita, Villa d'Agri [40.37126013, 15.80631944]",
+        "L874_CNO1 :: ~Strada Provinciale ex SS 276 dell'Alto Agri, Villa d'Agri [40.35554327, 15.84215436]"
+      ]
+    }
+  }
+}
