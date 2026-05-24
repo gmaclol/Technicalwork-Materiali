@@ -1,0 +1,2253 @@
+{
+  "Calabria": {
+    "Macrozone": {
+      "CS_01": [
+        "<Cosenza, Rende>",
+        "CS_01/01e11 :: Piazza Giovanni Ventitreesimo, Cosenza [39.30555396, 16.24777408]",
+        "CS_01/01e12 :: Via Tommaso Telesio, Cosenza [39.30707616, 16.24601514]",
+        "CS_01/01e13 :: Via degli Stadi, Cosenza [39.30821195, 16.24644063]",
+        "CS_01/01e14 :: Via Panebianco, Cosenza [39.30791128, 16.24754257]",
+        "CS_01/01e21 :: Via Francesco Simonetta, Cosenza [39.30298548, 16.24942122]",
+        "CS_01/01e22 :: Città 2000, Cosenza [39.30425277, 16.2480524]",
+        "CS_01/01e23 :: Viale della Repubblica, Cosenza [39.30454832, 16.24800117]",
+        "CS_01/01e24 :: Via Leonardo Sciascia, Cosenza [39.30528204, 16.2470669]",
+        "CS_01/01e31 :: Via Pasquale Rossi, Cosenza [39.3032015, 16.24763617]",
+        "CS_01/01e32 :: Città 2000, Cosenza [39.30398121, 16.24655486]",
+        "CS_01/01e33 :: Via Gerolamo De Rada, Cosenza [39.30329369, 16.2459011]",
+        "CS_01/01e34 :: Via Luigi Pellegrini, Cosenza [39.30198615, 16.24689963]",
+        "CS_01/01e41 :: Via Riccardo Misasi, Cosenza [39.30203394, 16.24959438]",
+        "CS_01/01e42 :: Via Riccardo Misasi, Cosenza [39.30199618, 16.25086255]",
+        "CS_01/01e43 :: Via Umberto Tancredi, Cosenza [39.30189911, 16.24846405]",
+        "CS_01/01e44 :: Viale della Repubblica, Cosenza [39.30188164, 16.24786602]",
+        "CS_01/01w11 :: Via dei Mille, Cosenza [39.30848451, 16.24824041]",
+        "CS_01/01w12 :: Via Aldo Moro, Cosenza [39.30672575, 16.24816069]",
+        "CS_01/01w13 :: Via Antonio Zupi, Cosenza [39.30648098, 16.24863626]",
+        "CS_01/01w14 :: Via Mele, Cosenza [39.30551097, 16.24928717]",
+        "CS_01/01w21 :: Via Roberto Ruffilli, Cosenza [39.30825677, 16.25185395]",
+        "CS_01/01w22 :: Corso d'Italia, Cosenza [39.30809917, 16.2524409]",
+        "CS_01/01w23 :: Via Alberto Serra, Cosenza [39.3066517, 16.25113064]",
+        "CS_01/01w24 :: Via Umberto Zanotti Bianco, Cosenza [39.30690072, 16.25062151]",
+        "CS_01/01w31 :: Via Alberto Serra, Cosenza [39.3061846, 16.2505197]",
+        "CS_01/01w32 :: Corso d'Italia, Cosenza [39.30673579, 16.2524195]",
+        "CS_01/01w33 :: Via Antonio Gramsci, Cosenza [39.30576791, 16.25174814]",
+        "CS_01/01w34 :: Via Francesco Saverio Nitti, Cosenza [39.30480769, 16.25056583]",
+        "CS_01/01w41 :: Via delle Medaglie D'Oro, Cosenza [39.30489471, 16.25348336]",
+        "CS_01/01w42 :: Via Gregorio Caloprese, Cosenza [39.3040802, 16.25090973]",
+        "CS_01/01w43 :: Via delle Medaglie D'Oro, Cosenza [39.30370978, 16.25364164]",
+        "CS_01/01w44 :: Corso Luigi Fera, Cosenza [39.30332866, 16.25210724]",
+        "CS_01/02e11 :: Via Pasquale Galluppi, Cosenza [39.29949989, 16.24856894]",
+        "CS_01/02e12 :: Via Luigi Miceli, Cosenza [39.3006512, 16.24998218]",
+        "CS_01/02e13 :: Via Carlo Cattaneo, Cosenza [39.29976749, 16.25016558]",
+        "CS_01/02e14 :: Via Carlo Cattaneo, Cosenza [39.29992588, 16.25189354]",
+        "CS_01/02e21 :: Via Mario Mari 7, Cosenza [39.2989392, 16.25248514]",
+        "CS_01/02e22 :: Via Arturo Scola, Cosenza [39.30007461, 16.25364661]",
+        "CS_01/02e23 :: Via Arturo Veltri, Cosenza [39.30102243, 16.25362722]",
+        "CS_01/02e24 :: Via Luigi Caputo, Cosenza [39.30091807, 16.2516359]",
+        "CS_01/02e31 :: Via Macallè, Cosenza [39.29946168, 16.25471406]",
+        "CS_01/02e32 :: Via Ventiquattro Maggio, Cosenza [39.29877898, 16.25517293]",
+        "CS_01/02e33 :: Piazza Pasquale Scura, Cosenza [39.29846392, 16.2525764]",
+        "CS_01/02e34 :: Via Santa Teresa, Cosenza [39.29825511, 16.25071956]",
+        "CS_01/02e41 :: Via Arturo Scola, Cosenza [39.30032021, 16.25446846]",
+        "CS_01/02e42 :: Via Giuseppe Isnardi, Cosenza [39.30152164, 16.25414222]",
+        "CS_01/02e43 :: Via Ventiquattro Maggio, Cosenza [39.30286465, 16.25368003]",
+        "CS_01/02e44 :: Via Adolfo Quintieri, Cosenza [39.30284005, 16.25350412]",
+        "CS_01/02w11 :: Via Antonio Guarasci, Cosenza [39.31324648, 16.25610295]",
+        "CS_01/02w12 :: Via Oreste Dito, Cosenza [39.3147763, 16.25576423]",
+        "CS_01/02w13 :: Via Popilia, Cosenza [39.31529084, 16.25612639]",
+        "CS_01/02w14 :: Via Antonio Mirabelli, Cosenza [39.3127914, 16.25434546]",
+        "CS_01/02w21 :: Via Palmiro Togliatti, Cosenza [39.30834249, 16.25962869]",
+        "CS_01/02w22 :: Via Giovanbattista D'Amico, Cosenza [39.31057158, 16.26012459]",
+        "CS_01/02w23 :: Via Giovanbattista D'Amico, Cosenza [39.3106877, 16.25669153]",
+        "CS_01/02w24 :: Via Aristide Colonna, Cosenza [39.31104146, 16.25667396]",
+        "CS_01/02w31 :: Via Alessandro Lupinacci, Cosenza [39.30651275, 16.25570214]",
+        "CS_01/02w32 :: Via Giulia 9, Cosenza [39.30875666, 16.25519306]",
+        "CS_01/02w33 :: Piazza Bonaventura Zumbini 53, Cosenza [39.30928923, 16.25263551]",
+        "CS_01/02w34 :: Via Popilia, Cosenza [39.30857852, 16.25662191]",
+        "CS_01/02w41 :: Via Popilia, Cosenza [39.30427683, 16.25704762]",
+        "CS_01/02w42 :: Via Popilia, Cosenza [39.30534687, 16.25677392]",
+        "CS_01/02w43 :: Via Giovambattista Lupia, Cosenza [39.30713153, 16.25683298]",
+        "CS_01/02w44 :: Via Giovambattista Lupia, Cosenza [39.30713863, 16.2579617]",
+        "CS_01/03e11 :: Via Giuseppe Galliano, Cosenza [39.29849074, 16.25536492]",
+        "CS_01/03e12 :: Corso Giuseppe Mazzini, Cosenza [39.29670531, 16.25434005]",
+        "CS_01/03e13 :: Via Monte Santo, Cosenza [39.29731279, 16.2529257]",
+        "CS_01/03e14 :: Via Isonzo, Cosenza [39.29570854, 16.25378432]",
+        "CS_01/03e21 :: Via Trento, Cosenza [39.29516794, 16.25492906]",
+        "CS_01/03e22 :: Via Monte San Michele, Cosenza [39.29465057, 16.25292881]",
+        "CS_01/03e23 :: Via Monte San Michele, Cosenza [39.29555992, 16.2525744]",
+        "CS_01/03e24 :: Via Isonzo, Cosenza [39.2950903, 16.25137663]",
+        "CS_01/03e31 :: Via Nicola Parisio, Cosenza [39.29692158, 16.25080344]",
+        "CS_01/03e32 :: Via Fiume, Cosenza [39.2951982, 16.24966072]",
+        "CS_01/03e33 :: Via Pola, Cosenza [39.2973063, 16.24890837]",
+        "CS_01/03e34 :: Piazza XXV Luglio, Cosenza [39.29781626, 16.24984283]",
+        "CS_01/03e41 :: Via Gerolamo Sambiase, Cosenza [39.29810943, 16.24359312]",
+        "CS_01/03e42 :: Viale della Repubblica, Cosenza [39.30006213, 16.24734213]",
+        "CS_01/03e43 :: Via Alberico Talarico, Cosenza [39.29658693, 16.24807527]",
+        "CS_01/03e44 :: Via Tommaso Arnoni, Cosenza [39.29548095, 16.24641525]",
+        "CS_01/03w11 :: Via Popilia, Cosenza [39.30211937, 16.25718508]",
+        "CS_01/03w12 :: Via Popilia, Cosenza [39.30077262, 16.25735825]",
+        "CS_01/03w13 :: Via Popilia 31, Cosenza [39.29951076, 16.25735551]",
+        "CS_01/03w14 :: Via Popilia, Cosenza [39.29785383, 16.25696603]",
+        "CS_01/03w21 :: Via Rivocati, Cosenza [39.2920424, 16.2538124]",
+        "CS_01/03w22 :: Corso Umberto Primo, Cosenza [39.2931017, 16.25419331]",
+        "CS_01/03w23 :: Via Rivocati, Cosenza [39.29198036, 16.25660058]",
+        "CS_01/03w24 :: Via Quattromani Sertorio, Cosenza [39.29309662, 16.25692852]",
+        "CS_01/03w31 :: Viale Trieste, Cosenza [39.29362982, 16.25124233]",
+        "CS_01/03w32 :: Viale Trieste, Cosenza [39.29366698, 16.25233671]",
+        "CS_01/03w33 :: Via Pasquale Perugini, Cosenza [39.29086617, 16.2514777]",
+        "CS_01/03w34 :: Via \"Gino\" Luigi Picciotto, Cosenza [39.29182799, 16.25150583]",
+        "CS_01/03w41 :: Viale della Repubblica, Cosenza [39.29554842, 16.2472414]",
+        "CS_01/03w42 :: Via Francesco Corsonello, Cosenza [39.29207808, 16.24728546]",
+        "CS_01/03w43 :: Strada Statale 278 di Potame, Cosenza [39.28906755, 16.24752982]",
+        "CS_01/03w44 :: Via Antonio Monaco, Cosenza [39.29236502, 16.25077548]",
+        "CS_01/04e11 :: Quartiere Tribunale, Cosenza [39.31699634, 16.25262748]",
+        "CS_01/04e12 :: Via Popilia, Cosenza [39.31655859, 16.25585884]",
+        "CS_01/04e13 :: Via Giuseppe Storino, Cosenza [39.31939848, 16.25672394]",
+        "CS_01/04e14 :: Via Popilia 147c, Cosenza [39.31830345, 16.25538046]",
+        "CS_01/04e21 :: Via Rocco Chinnici, Cosenza [39.31255185, 16.25230895]",
+        "CS_01/04e22 :: Viale Paolo Borsellino, Cosenza [39.31406451, 16.25074045]",
+        "CS_01/04e23 :: Quartiere Tribunale, Cosenza [39.31677069, 16.24970454]",
+        "CS_01/04e24 :: Via Giovanni Sisca, Cosenza [39.31711834, 16.25124454]",
+        "CS_01/04e31 :: Via Antonio Scopelliti, Cosenza [39.31850581, 16.25362542]",
+        "CS_01/04e32 :: Via Manuela e Carlo Alberto Dalla Chiesa, Cosenza [39.31963003, 16.24992083]",
+        "CS_01/04e33 :: Viale Sergio Cosmai, Cosenza [39.31873619, 16.24908365]",
+        "CS_01/04e34 :: Viale Sergio Cosmai, Cosenza [39.32164549, 16.2484215]",
+        "CS_01/04e41 :: Via Panebianco, Cosenza [39.31719196, 16.24553929]",
+        "CS_01/04e42 :: Via San Proclo, Cosenza [39.31773483, 16.24472139]",
+        "CS_01/04e43 :: Via Panebianco, Cosenza [39.31881891, 16.24558403]",
+        "CS_01/04e44 :: Via Giuseppe Giacomantonio, Cosenza [39.31928188, 16.24726589]",
+        "CS_01/04w11 :: Viale Guglielmo Marconi, Cosenza [39.31178553, 16.24472188]",
+        "CS_01/04w12 :: Via degli Stadi, Cosenza [39.30950168, 16.24470578]",
+        "CS_01/04w13 :: Via Don Gaetano Mauro, Cosenza [39.31040487, 16.2459866]",
+        "CS_01/04w14 :: Via Beato Umile, Cosenza [39.30994748, 16.24676289]",
+        "CS_01/04w21 :: Via Francesco Miceli Picardi, Cosenza [39.31005702, 16.24937089]",
+        "CS_01/04w22 :: Via Roberto Ruffilli, Cosenza [39.30982933, 16.25198786]",
+        "CS_01/04w23 :: Piazza Fausto e Luigi Gullo, Cosenza [39.31173342, 16.25139789]",
+        "CS_01/04w24 :: Via Mortati, Cosenza [39.31183549, 16.24968854]",
+        "CS_01/04w31 :: Via Silvio Sesti, Cosenza [39.31114571, 16.24886077]",
+        "CS_01/04w32 :: Via Benito Falvo, Cosenza [39.31213179, 16.24782803]",
+        "CS_01/04w33 :: Via Benito Falvo, Cosenza [39.31209867, 16.246908]",
+        "CS_01/04w34 :: Via Silvio Sesti, Cosenza [39.31111506, 16.24736621]",
+        "CS_01/04w41 :: Via Cesare Gabriele, Cosenza [39.31377522, 16.24997405]",
+        "CS_01/04w42 :: Via Lazio, Cosenza [39.31394375, 16.24807213]",
+        "CS_01/04w43 :: Via Roberta Lanzino, Cosenza [39.31363655, 16.2465204]",
+        "CS_01/04w44 :: Via Panebianco, Cosenza [39.31496932, 16.2459758]",
+        "CS_01/05w11 :: Via Panebianco, Cosenza [39.32027848, 16.24526504]",
+        "CS_01/05w12 :: Via Piersanti Mattarella, Cosenza [39.32214407, 16.24598765]",
+        "CS_01/05w13 :: Viale Sergio Cosmai, Cosenza [39.32246422, 16.24859324]",
+        "CS_01/05w14 :: Via Popilia, Cosenza [39.32220949, 16.25410126]",
+        "CS_01/05w21 :: Piazza Domenico Grimaldi, Cosenza [39.3241466, 16.25400975]",
+        "CS_01/05w22 :: Via Popilia, Cosenza [39.32583439, 16.25303953]",
+        "CS_01/05w23 :: Piazza Ignazio Ranieri, Cosenza [39.32652537, 16.25344282]",
+        "CS_01/06e11 :: Massa, Cosenza [39.29437545, 16.26025493]",
+        "CS_01/06e12 :: Via Gian Vincenzo Gravina, Cosenza [39.2909715, 16.26115702]",
+        "CS_01/06e13 :: Massa, Cosenza [39.2901189, 16.26355514]",
+        "CS_01/06e14 :: Via Domenico Casaleno, Cosenza [39.28781665, 16.26824804]",
+        "CS_01/06e21 :: Via dei Martiri, Cosenza [39.28945256, 16.26288515]",
+        "CS_01/06e22 :: Via Giosuè Carducci, Cosenza [39.28687857, 16.26371721]",
+        "CS_01/06e23 :: Corso Bernardino Telesio 17, Cosenza [39.2876885, 16.26109906]",
+        "CS_01/06e24 :: Piazza Vincenzo Federici, Cosenza [39.28885576, 16.2619502]",
+        "CS_01/06e31 :: Massa, Cosenza [39.29054894, 16.25973992]",
+        "CS_01/06e32 :: Lungocrati de Seta, Cosenza [39.29108525, 16.259697]",
+        "CS_01/06e33 :: Via Lungo Busento Oberdan, Cosenza [39.29118698, 16.25693647]",
+        "CS_01/06e34 :: piazzetta, Cosenza [39.28919561, 16.25828821]",
+        "CS_01/06e41 :: Via Portapiana, Cosenza [39.28333325, 16.25938678]",
+        "CS_01/06e42 :: Corso Vittorio Emanuele Secondo, Cosenza [39.28871897, 16.25794563]",
+        "CS_01/06e43 :: Via Giuseppe Garibaldi, Cosenza [39.28954585, 16.25355905]",
+        "CS_01/07w11 :: Via Emilio Capizzano, Cosenza [39.30648781, 16.24517082]",
+        "CS_01/07w12 :: Via Saverio Albo, Cosenza [39.30819737, 16.24447646]",
+        "CS_01/07w13 :: Via Saverio Albo, Cosenza [39.30861478, 16.24291078]",
+        "CS_01/07w14 :: Via dell'Accoglienza, Cosenza [39.30560241, 16.24289056]",
+        "CS_01/07w21 :: Via Rita Pisani, Cosenza [39.30621629, 16.23811197]",
+        "CS_01/07w22 :: Via Giulio Adimari, Cosenza [39.30615929, 16.23964153]",
+        "CS_01/07w23 :: Via Francesco Mancuso, Cosenza [39.30987748, 16.24026698]",
+        "CS_01/07w24 :: Via Vittorio Accattatis 4, Cosenza [39.30943942, 16.24138116]",
+        "CS_01/07w31 :: Via Kroton, Cosenza [39.30892715, 16.23322744]",
+        "CS_01/07w32 :: Via degli Stadi, Cosenza [39.31061257, 16.23752866]",
+        "CS_01/07w33 :: Via Enrico De Nicola, Cosenza [39.31058087, 16.24297409]",
+        "CS_01/07w34 :: Via Giuseppe Tommasi, Cosenza [39.31180122, 16.24228271]",
+        "CS_01/07w41 :: Via Temesa, Cosenza [39.30577264, 16.23154294]",
+        "CS_01/07w42 :: San Vito, Cosenza [39.30720827, 16.22936669]",
+        "CS_01/07w43 :: Via degli Stadi, Cosenza [39.30836683, 16.23005629]",
+        "CS_01/07w44 :: Via degli Stadi, Cosenza [39.30892132, 16.23192323]",
+        "CS_01/08e11 :: Via Busento 43, Rende [39.32622657, 16.24646311]",
+        "CS_01/08e12 :: Via Valle del Neto, Rende [39.32821012, 16.24626687]",
+        "CS_01/08e13 :: Via Adige, Rende [39.32880486, 16.24684115]",
+        "CS_01/08e14 :: Via Giuseppe Ungaretti, Rende [39.33245439, 16.24625868]",
+        "CS_01/08e21 :: Via Salvatore Quasimodo, Rende [39.33376873, 16.24551648]",
+        "CS_01/08e22 :: Via Corrado Alvaro, Rende [39.3365716, 16.24532685]",
+        "CS_01/08e23 :: Via Don Minzoni, Rende [39.33741212, 16.2418141]",
+        "CS_01/08e24 :: Viale della Resistenza, Rende [39.33634547, 16.24414411]",
+        "CS_01/08e31 :: Via Giuseppe Verdi, Rende [39.34098688, 16.2440883]",
+        "CS_01/08e32 :: Via Gioacchino Rossini, Rende [39.34229697, 16.24226582]",
+        "CS_01/08e33 :: Via Giuseppe Verdi, Rende [39.34190574, 16.24392008]",
+        "CS_01/08e34 :: Via Vittorio Alfieri, Rende [39.33873197, 16.24508391]",
+        "CS_01/08e41 :: Via Don Minzoni, Rende [39.33657615, 16.24156041]",
+        "CS_01/08e42 :: Via Carlo Bilotti, Rende [39.33692895, 16.23916322]",
+        "CS_01/08e43 :: Via Silvio Pellico, Rende [39.3355738, 16.23826654]",
+        "CS_01/08e44 :: ~Via Carlo Bilotti, Rende [39.33604336, 16.23941387]",
+        "CS_01/08w11 :: Via Bari, Rende [39.32417127, 16.24405183]",
+        "CS_01/08w12 :: Via Milano, Rende [39.32502241, 16.24407399]",
+        "CS_01/08w13 :: Via Catanzaro, Rende [39.32332389, 16.24056927]",
+        "CS_01/08w14 :: Via Torino, Rende [39.32361715, 16.24254007]",
+        "CS_01/08w21 :: Via John Fitzgerald Kennedy, Rende [39.32650848, 16.24403117]",
+        "CS_01/08w22 :: Via John Fitzgerald Kennedy Traversa Quarta, Rende [39.32772632, 16.24403824]",
+        "CS_01/08w23 :: Piazza Martin Luter King, Rende [39.32875295, 16.24399599]",
+        "CS_01/08w24 :: Via John Fitzgerald Kennedy Traversa Quarta, Rende [39.32671958, 16.24214171]",
+        "CS_01/08w31 :: Via Sandro Pertini, Rende [39.32891087, 16.2414411]",
+        "CS_01/08w32 :: ~Viale Giuseppe Garibaldi, Rende [39.33149281, 16.24397689]",
+        "CS_01/08w33 :: Via Papa Giovanni Ventitreesimo, Rende [39.33180313, 16.23936349]",
+        "CS_01/08w34 :: Via Papa Giovanni Ventitreesimo, Rende [39.33069374, 16.24020616]",
+        "CS_01/08w41 :: Via Fratelli Bandiera, Rende [39.33440832, 16.24382772]",
+        "CS_01/08w42 :: Via Fratelli Bandiera 66, Rende [39.33438165, 16.24271387]",
+        "CS_01/08w43 :: ~Traversa Prima Ciro Menotti, Rende [39.33436449, 16.24063115]",
+        "CS_01/08w44 :: Via Morelli, Rende [39.33325432, 16.24144411]",
+        "CS_01/09e11 :: Via Gioacchino Rossini 49, Rende [39.34894372, 16.24236794]",
+        "CS_01/09e12 :: Via Gioacchino Rossini, Rende [39.34377709, 16.24266219]",
+        "CS_01/09e13 :: Via Gioacchino Rossini, Rende [39.34449176, 16.2424358]",
+        "CS_01/09e14 :: Via Giuseppe Verdi, Rende [39.34563198, 16.24398219]",
+        "CS_01/09e21 :: Via Giuseppe Verdi, Rende [39.34788824, 16.24410783]",
+        "CS_01/09e22 :: Traversa II Giuseppe Verdi, Rende [39.34988777, 16.24412669]",
+        "CS_01/09e23 :: Via Filippo De Pisis, Rende [39.35228685, 16.24216729]",
+        "CS_01/09e24 :: Via Alessandro Volta, Rende [39.35194588, 16.24378961]",
+        "CS_01/09e31 :: Via Alessandro Volta, Rende [39.35338442, 16.24386049]",
+        "CS_01/09e32 :: Piazza Santo Sergio, Rende [39.35414715, 16.24266922]",
+        "CS_01/09e33 :: Via Cristoforo Colombo, Rende [39.35711413, 16.24183263]",
+        "CS_01/09e34 :: Via Alessandro Volta, Rende [39.35719846, 16.24318347]",
+        "CS_01/09e41 :: Via Evangelista Torricelli, Rende [39.35599744, 16.2401901]",
+        "CS_01/09e42 :: Via Guglielmo Marconi 46, Rende [39.35384968, 16.24062982]",
+        "CS_01/09e43 :: Via Guglielmo Marconi 81a, Rende [39.35366238, 16.23785983]",
+        "CS_01/09e44 :: Via Enrico Fermi, Rende [39.35353738, 16.23873478]",
+        "CS_01/10w11 :: Corso Firenze, Rende [39.31957799, 16.23873108]",
+        "CS_01/10w12 :: Via Buonarroti, Rende [39.32332745, 16.23649146]",
+        "CS_01/10w13 :: Via Tintoretto, Rende [39.32569334, 16.23515317]",
+        "CS_01/10w14 :: Via Sandro Botticelli, Rende [39.32450786, 16.23846003]",
+        "CS_01/10w21 :: Via Benvenuto Cellini, Rende [39.32942409, 16.23381418]",
+        "CS_01/11w11 :: Via Mosca, Rende [39.34246057, 16.23908126]",
+        "CS_01/11w12 :: Vua Atene, Rende [39.34433407, 16.23797226]",
+        "CS_01/11w13 :: Via Montevideo, Rende [39.3499372, 16.23707935]",
+        "CS_01/11w14 :: Via Buenos Aires, Rende [39.347033, 16.24018076]",
+        "CS_01/11w21 :: Via Amedeo Avogadro 28, Rende [39.35497984, 16.23798834]",
+        "CS_01/11w22 :: ~Via Evangelista Torricelli, Rende [39.35448952, 16.23702963]",
+        "CS_01/11w23 :: Traversa Prima di Via Ettore Majorana 23, Rende [39.35532931, 16.236432]",
+        "CS_01/11w24 :: Via Evangelista Torricelli 31, Rende [39.35629437, 16.23723184]",
+        "CS_01/11w31 :: Via Ettore Majorana 12, Rende [39.35435713, 16.23516561]",
+        "CS_01/11w32 :: Via Alberto Savinio, Rende [39.35456636, 16.2310057]",
+        "CS_01/11w33 :: Traversa I Pietro Bucci 28, Rende [39.35306075, 16.2196745]",
+        "CS_01/11w34 :: Via Pietro Bucci, Rende [39.35239313, 16.22192956]",
+        "CS_01/11w41 :: Via Rosario Salerno, Rende [39.35584613, 16.22651178]"
+      ],
+      "VV_01": [
+        "<San Gregorio D'Ippona, Vibo Valentia>",
+        "VV_01/01e11 :: Via Popilia, Vibo Valentia [38.67601094, 16.0977729]",
+        "VV_01/01e12 :: Via Monsignor Sorbili, Vibo Valentia [38.67705603, 16.09853539]",
+        "VV_01/01e13 :: Via Caduti sul Lavoro, Vibo Valentia [38.67829773, 16.09787979]",
+        "VV_01/01e14 :: Via Camillo Benso di Cavour, Vibo Valentia [38.68047991, 16.09820571]",
+        "VV_01/01e21 :: Via Enrico Gagliardi, Vibo Valentia [38.67483021, 16.10164294]",
+        "VV_01/01e22 :: Via Milite Ignoto 19, Vibo Valentia [38.67548401, 16.10325507]",
+        "VV_01/01e23 :: Via Milite Ignoto, Vibo Valentia [38.67614926, 16.10110895]",
+        "VV_01/01e24 :: Via Giacomo Matteotti, Vibo Valentia [38.6776754, 16.10226846]",
+        "VV_01/01e31 :: Via XXV Aprile, Vibo Valentia [38.67785569, 16.1042116]",
+        "VV_01/01e32 :: Via Terravecchia inferiore, Vibo Valentia [38.67800891, 16.10380712]",
+        "VV_01/01e33 :: Via Carlo Parisi, Vibo Valentia [38.67862173, 16.10231068]",
+        "VV_01/01e34 :: Via S. Aloe, Vibo Valentia [38.68002473, 16.10654553]",
+        "VV_01/01e41 :: Via Minerva, Vibo Valentia [38.67998108, 16.10992599]",
+        "VV_01/01e42 :: Contrada Nasari, Vibo Valentia [38.67966511, 16.11160908]",
+        "VV_01/01e43 :: Via S. Aloe, Vibo Valentia [38.68189718, 16.11072033]",
+        "VV_01/01e44 :: Via Emanuele Paparo, Vibo Valentia [38.68264391, 16.10631213]",
+        "VV_01/01w11 :: Via Popilia, Vibo Valentia [38.67466011, 16.09690185]",
+        "VV_01/01w12 :: Via Cristoforo Colombo, Vibo Valentia [38.67352832, 16.09770487]",
+        "VV_01/01w13 :: Carmine, Vibo Valentia [38.67325975, 16.09938767]",
+        "VV_01/01w14 :: Carmine, Vibo Valentia [38.67301829, 16.10059096]",
+        "VV_01/01w21 :: Via Fontana Vecchia, Vibo Valentia [38.67217778, 16.10280373]",
+        "VV_01/01w22 :: Scesa Ospedale, Vibo Valentia [38.66988526, 16.10343893]",
+        "VV_01/01w23 :: Via San Michele, Vibo Valentia [38.67150624, 16.10496365]",
+        "VV_01/01w24 :: Via Michele Morelli, Vibo Valentia [38.67151682, 16.10574189]",
+        "VV_01/01w31 :: Corso Umberto I, Vibo Valentia [38.6725853, 16.10484459]",
+        "VV_01/01w32 :: Corso Vittorio Emanuele III, Vibo Valentia [38.67314579, 16.10322287]",
+        "VV_01/01w33 :: Via Potiri, Vibo Valentia [38.67406819, 16.09995962]",
+        "VV_01/01w34 :: Via Torretta, Vibo Valentia [38.67446622, 16.10388158]",
+        "VV_01/01w41 :: Via Alcide De Gasperi, Vibo Valentia [38.67713182, 16.10828858]",
+        "VV_01/01w42 :: Viale delle Accademie Vibonesi, Vibo Valentia [38.67649269, 16.11224286]",
+        "VV_01/01w43 :: Viale Alcide De Gasperi, Vibo Valentia [38.67819314, 16.108881]",
+        "VV_01/01w44 :: Contrada Nasari, Vibo Valentia [38.6767747, 16.11002776]",
+        "VV_01/02e11 :: Via Lacquari, Vibo Valentia [38.67366532, 16.09237954]",
+        "VV_01/02e12 :: Contrada Nasari, Vibo Valentia [38.67123075, 16.09379457]",
+        "VV_01/02e13 :: Contrada Nasari, Vibo Valentia [38.67027785, 16.09224611]",
+        "VV_01/02e14 :: Regina Elena, San Gregorio d'Ippona [38.66782586, 16.08874715]",
+        "VV_01/02w11 :: Via Giovanni Gentile, Vibo Valentia [38.67609404, 16.09413549]",
+        "VV_01/02w12 :: Viale John Fitzgerald Kennedy, Vibo Valentia [38.67634384, 16.09688651]",
+        "VV_01/02w13 :: Via Giuseppe De Luca, Vibo Valentia [38.67803768, 16.09662933]",
+        "VV_01/02w14 :: Via Cancello Rosso, Vibo Valentia [38.67884538, 16.09700194]",
+        "VV_01/02w21 :: Via F. Fuduli, Vibo Valentia [38.67621761, 16.09169238]",
+        "VV_01/02w22 :: SS18, Vibo Valentia [38.67558452, 16.09130158]",
+        "VV_01/02w23 :: SP11, Vibo Valentia [38.67546889, 16.08931111]",
+        "VV_01/02w24 :: SS18, Vibo Valentia [38.67430507, 16.08934153]",
+        "VV_01/02w31 :: Via Nicola Froggio, Vibo Valentia [38.67582582, 16.0874715]",
+        "VV_01/02w32 :: SP11, Vibo Valentia [38.67559143, 16.08504701]",
+        "VV_01/02w33 :: Contrada Feudotto, Vibo Valentia [38.67504267, 16.08270942]",
+        "VV_01/02w34 :: Via Paolo Borsellino, Vibo Valentia [38.6732811, 16.08195329]",
+        "VV_01/02w41 :: Viale Feudotto, Vibo Valentia [38.67218628, 16.08368933]",
+        "VV_01/02w42 :: Contrada Feudotto, Vibo Valentia [38.67078287, 16.08482546]",
+        "VV_01/02w43 :: Contrada Feudotto, Vibo Valentia [38.66807644, 16.08279899]",
+        "VV_01/02w44 :: Contrada Nasari, Vibo Valentia [38.66480557, 16.08356051]",
+        "VV_01/03w11 :: Via Pescara, Vibo Valentia [38.71378134, 16.12726622]",
+        "VV_01/03w12 :: Viale Senatore Parodi 97, Vibo Valentia [38.71261737, 16.12415695]",
+        "VV_01/03w13 :: Viale Senatore Parodi, V traversa, Vibo Valentia [38.71170927, 16.12249093]",
+        "VV_01/03w14 :: Viale Senatore Parodi, VII traversa, Vibo Valentia [38.71086218, 16.12088835]",
+        "VV_01/03w21 :: Longobardi, Vibo Valentia [38.71160969, 16.11918209]"
+      ]
+    },
+    "Comuni": {
+      "Acquappesa": [
+        "A041_CNO1 :: Intavolata, Acquappesa [39.49173669, 15.96904567]"
+      ],
+      "Acri": [
+        "A053_CNO1 :: Via non definita, Acri [39.4326042, 16.38847617]",
+        "A053_CNO2 :: San Martino, Acri [39.46189605, 16.39425593]",
+        "A053_CNO3 :: Via non definita, Acri [39.50925988, 16.40488651]",
+        "A053_CNO4 :: Strada Provinciale 186 Statale Jonica Bivio San Giacomo, Acri [39.54766607, 16.451967]",
+        "A053_CNO5 :: ~Strada Provinciale 186 Statale Jonica Bivio San Giacomo, Acri [39.55846994, 16.45762547]",
+        "A053_CNO6 :: Strada Provinciale 186 Statale Jonica Bivio San Giacomo, Acri [39.56128825, 16.44987086]",
+        "A053_CNO7 :: ~Zona Industriale Gastia, Acri [39.50438525, 16.40003307]",
+        "A053_CNO8 :: Via non definita, Acri [39.49863927, 16.45235299]",
+        "A053_CNO9 :: ~Strada Provinciale 177 Acri-San Mauro, Acri [39.51569825, 16.3893441]"
+      ],
+      "Amantea": [
+        "A253_CNO1 :: Strada Statale 18 Tirrena Inferiore, Amantea [39.14429786, 16.06671128]",
+        "A253_CNO2 :: Via Indipendenza, Amantea [39.14327647, 16.06703988]",
+        "A253_CNO3 :: ~Strada Provinciale 245 exSS108 Campora Grimaldi, Amantea [39.07289802, 16.11458001]"
+      ],
+      "Amaroni": [
+        "A255_CNO1 :: Via non definita, Amaroni [38.79826307, 16.46240638]"
+      ],
+      "Amendolara": [
+        "A263_CNO1 :: Via non definita, Amendolara [39.95669068, 16.6188537]",
+        "A263_CNO2 :: ~Via Leonardo da Vinci, Amendolara [39.94895716, 16.58403899]"
+      ],
+      "Anoia": [
+        "A303_CNO1 :: SP12, Anoia [38.43406504, 16.07232784]",
+        "A303_CNO2 :: Via Vincenzo Bellini, Anoia [38.4294886, 16.09860306]"
+      ],
+      "Aprigliano": [
+        "A340_CNO1 :: Strada statale 179 del Lago Ampollino, Aprigliano [39.16795259, 16.53662596]",
+        "A340_CNO2 :: Ceci, Aprigliano [39.21951728, 16.44967645]"
+      ],
+      "Ardore Marina": [
+        "A385_CNO1 :: ~SP76, Ardore Marina [38.18556722, 16.21360043]"
+      ],
+      "Badolato": [
+        "A542_CNO1 :: ~Strada Statale 106 Jonica, Badolato [38.58770957, 16.56291291]"
+      ],
+      "Bagnara Calabra": [
+        "A552_CNO1 :: Piciò, Bagnara Calabra [38.25770398, 15.79781408]",
+        "A552_CNO2 :: Piciò, Bagnara Calabra [38.26071436, 15.78540386]"
+      ],
+      "Belmonte Calabro": [
+        "A762_CNO4 :: Vadi, Belmonte Calabro [39.1600875, 16.10565391]"
+      ],
+      "Belmonte Scalo": [
+        "A762_CNO1 :: Strada Provinciale 42dir Regastili, Belmonte Scalo [39.1843911, 16.07951185]",
+        "A762_CNO2 :: Santa Barbara, Belmonte Scalo [39.17566378, 16.07658349]",
+        "A762_CNO3 :: Via non definita, Belmonte Scalo [39.16905214, 16.06673782]"
+      ],
+      "Belvedere Marittimo": [
+        "A773_CNO2 :: Strada Provinciale 263 ex SS105 di Castrovillari, Belvedere Marittimo [39.61153072, 15.86140494]",
+        "A773_CNO3 :: Marina di Belvedere, Belvedere Marittimo [39.62504011, 15.86891751]",
+        "A773_CNO4 :: Via non definita, Belvedere Marittimo [39.65667596, 15.88836652]"
+      ],
+      "Benestare": [
+        "A780_CNO1 :: Strada Provinciale 74 di Belloro, Benestare [38.14346037, 16.12577219]"
+      ],
+      "Bianco": [
+        "A843_CNO1 :: ~Via Carmine Tripodi, Bianco [38.09385606, 16.15147635]"
+      ],
+      "Bisignano": [
+        "A887_CNO1 :: Contrada Soverano, Bisignano [39.53729389, 16.25702607]",
+        "A887_CNO2 :: Strada Provinciale 234 Riva Destra Crati, Bisignano [39.50680067, 16.24116681]",
+        "A887_CNO3 :: Via Rita Levi Montalcini, Bisignano [39.49821086, 16.27530032]",
+        "A887_CNO4 :: Via Guardia, Bisignano [39.49980008, 16.27732401]"
+      ],
+      "Bova Marina": [
+        "B099_CNO1 :: ~Strada Statale 106 Jonica, Bova Marina [37.92907529, 15.90018151]",
+        "B099_CNO2 :: ~Viale dei Pini, Bova Marina [37.92969945, 15.90081232]"
+      ],
+      "Bovalino": [
+        "B098_CNO1 :: Strada Statale 106 Jonica, Bovalino [38.15182215, 16.17037326]",
+        "B098_CNO2 :: Via Giovanni Muscatello, Bovalino [38.15396478, 16.18240231]"
+      ],
+      "Briatico": [
+        "B169_CNO1 :: Via Giuseppe Garibaldi, Briatico [38.68213881, 15.98618267]"
+      ],
+      "Bucita": [
+        "H841_CNO2 :: Via Cozzi, Bucita [39.34728769, 16.15283762]"
+      ],
+      "Caccuri": [
+        "B319_CNO2 :: Strada Provinciale 32 di Santa Raina, Caccuri [39.18801861, 16.79076018]",
+        "B319_CNO3 :: Strada Provinciale 32 di Santa Raina, Caccuri [39.22795835, 16.77889684]"
+      ],
+      "Calabricata": [
+        "I590_CNO2 :: Via non definita, Calabricata [38.88548908, 16.74674817]"
+      ],
+      "Calopezzati": [
+        "B424_CNO1 :: Via Giuseppe De Simone 1, Calopezzati [39.58338261, 16.81843154]"
+      ],
+      "Campana": [
+        "B500_CNO1 :: Via non definita, Campana [39.41186017, 16.80933957]"
+      ],
+      "Campo Calabro": [
+        "B516_CNO1 :: ~Matiniti Superiore, Campo Calabro [38.20979333, 15.65760237]"
+      ],
+      "Campo San Lorenzo": [
+        "I896_CNO1 :: Strada statale 177 Silana di Rossano, Campo San Lorenzo [39.36221934, 16.48775611]"
+      ],
+      "Cappelli": [
+        "F125_CNO5 :: Viale Virgilio, Cappelli [39.26844559, 16.20277204]"
+      ],
+      "Cardeto": [
+        "B756_CNO3 :: Iriti, Cardeto [38.0727154, 15.81845415]",
+        "B756_CNO4 :: Contrada Capitano, Cardeto [38.06474825, 15.77542906]"
+      ],
+      "Cariati": [
+        "B774_CNO1 :: ~Strada Statale 106 Jonica, Cariati [39.48162628, 16.98291066]"
+      ],
+      "Carlopoli": [
+        "B790_CNO1 :: Castagna, Carlopoli [39.05654862, 16.43894458]"
+      ],
+      "Casa Borgorosso": [
+        "E239_CNO1 :: ~Viale Europa, Casa Borgorosso [38.48040697, 16.57627596]"
+      ],
+      "Casabona": [
+        "B857_CNO1 :: ~Strada Provinciale 14 Puheriu, Casabona [39.24155375, 16.97638948]",
+        "B857_CNO3 :: Strada Provinciale 15 Rosaneti, Casabona [39.21968196, 16.96104496]"
+      ],
+      "Casali_Del_Manco": [
+        "M385_CNO4 :: Via Perciavinelle [39.29657958, 16.52461563]"
+      ],
+      "Casello": [
+        "A240_CNO1 :: Via non definita, Casello [39.68412996, 16.16075724]"
+      ],
+      "Casole Bruzio": [
+        "M385_CNO2 :: Macchia, Casole Bruzio [39.29107461, 16.3382353]"
+      ],
+      "Cassano All'Ionio": [
+        "C002_CNO1 :: Via Salicetta, Cassano all'Ionio [39.74443991, 16.4830961]",
+        "C002_CNO2 :: Viale del Pollino, Cassano all'Ionio [39.74771508, 16.48536159]",
+        "C002_CNO3 :: Via Cosenza, Cassano all'Ionio [39.74493971, 16.48773969]",
+        "C002_CNO4 :: Via Avellino, Cassano all'Ionio [39.74617225, 16.48242656]"
+      ],
+      "Castiglione Cosentino": [
+        "C301_CNO1 :: ~Viale della Costituzione, Castiglione Cosentino [39.35577953, 16.26951884]"
+      ],
+      "Castiglione Marittimo": [
+        "D476_CNO1 :: ~Autostrada del Mediterraneo, Castiglione Marittimo [38.98170521, 16.14350422]"
+      ],
+      "Castrolibero": [
+        "C108_CNO1 :: Via Provinciale, Castrolibero [39.30440457, 16.20495464]"
+      ],
+      "Castroregio": [
+        "C348_CNO2 :: ~Strada Provinciale 155 Castroregio, Castroregio [39.9919314, 16.48008826]"
+      ],
+      "Castrovillari": [
+        "C349_CNO1 :: Via non definita, Castrovillari [39.7289176, 16.26085091]",
+        "C349_CNO3 :: Strada Provinciale 166 Stombi Cammarata, Castrovillari [39.73710775, 16.26983401]",
+        "C349_CNO4 :: Corso Calabria 154/ 156, Castrovillari [39.82117032, 16.19504061]"
+      ],
+      "Catanzaro": [
+        "C352_CNO1 :: Via Alto Adige, Catanzaro [38.85060187, 16.63973578]",
+        "C352_CNO4 :: Via Lenza, Catanzaro [38.92800057, 16.56286835]",
+        "C352_CNO5 :: Pontegrande, Catanzaro [38.94014479, 16.57860683]",
+        "C352_CNO6 :: Cuculera Nobile, Catanzaro [38.88144763, 16.62862709]",
+        "C352_CNO7 :: Via Curtatone, Catanzaro [38.85259955, 16.63722923]",
+        "C352_CNO8 :: Viale Emilia 79, Catanzaro [38.84500455, 16.64867183]",
+        "CZ_01/01e11 :: Via Francesco Crispi, Catanzaro [38.91156721, 16.58677586]",
+        "CZ_01/01e12 :: Sant'Antonio, Catanzaro [38.91120623, 16.58586169]",
+        "CZ_01/01e13 :: Sant'Antonio, Catanzaro [38.91033837, 16.58603174]",
+        "CZ_01/01e14 :: Via Francesco Acri, Catanzaro [38.91018255, 16.59080824]",
+        "CZ_01/01e21 :: Via Francesco Acri, Catanzaro [38.91031896, 16.59219705]",
+        "CZ_01/01e22 :: Via V. Ciaccio, Catanzaro [38.90946274, 16.5911423]",
+        "CZ_01/01e23 :: Discesa Giuseppe Poerio, Catanzaro [38.90919009, 16.58908422]",
+        "CZ_01/01e24 :: Via dei Cardatori, Catanzaro [38.90915738, 16.59223188]",
+        "CZ_01/01e31 :: Corso Giuseppe Mazzini, Catanzaro [38.90795081, 16.59090027]",
+        "CZ_01/01e32 :: Piazza Giuseppe Garibaldi 1, Catanzaro [38.90888798, 16.58902305]",
+        "CZ_01/01e33 :: Piazza Giuseppe Garibaldi 1, Catanzaro [38.9087743, 16.58872955]",
+        "CZ_01/01e34 :: Piazza S. Angelo, Catanzaro [38.90761705, 16.58941265]",
+        "CZ_01/01e41 :: Via Antonio Menniti Ippolito, Catanzaro [38.90666076, 16.59168737]",
+        "CZ_01/01e42 :: Via Scalfaro, Catanzaro [38.90656616, 16.58985476]",
+        "CZ_01/01e43 :: Via venti Settembre, Catanzaro [38.90592667, 16.59042483]",
+        "CZ_01/01e44 :: Via Guglielmo Pepe, Catanzaro [38.90389946, 16.59081515]",
+        "CZ_01/01w11 :: Via Francesco Crispi, Catanzaro [38.91299238, 16.581739]",
+        "CZ_01/01w12 :: Via Francesco Crispi, Catanzaro [38.91267307, 16.58325924]",
+        "CZ_01/01w13 :: Via V. Pugliese, Catanzaro [38.91265985, 16.58740418]",
+        "CZ_01/01w14 :: Via Piave 1, Catanzaro [38.91347541, 16.58613028]",
+        "CZ_01/01w21 :: Via Eugenio De Riso, Catanzaro [38.91371692, 16.59146461]",
+        "CZ_01/01w22 :: Via V. Pugliese 41, Catanzaro [38.91396057, 16.58900423]",
+        "CZ_01/01w23 :: Via Alcide De Gasperi, Catanzaro [38.91465315, 16.58776357]",
+        "CZ_01/01w24 :: Via Vittorio Veneto, Catanzaro [38.91408834, 16.5859226]",
+        "CZ_01/01w31 :: Via Cortese Vinicio, Catanzaro [38.91697072, 16.58461689]",
+        "CZ_01/01w32 :: Piazza Montenero, Catanzaro [38.91607152, 16.58500449]",
+        "CZ_01/01w33 :: Via Antonio Broussard, Catanzaro [38.91613986, 16.58634126]",
+        "CZ_01/01w34 :: Via Antonio Daniele, Catanzaro [38.91561991, 16.58752422]",
+        "CZ_01/01w41 :: Via Aldo Barbaro, Catanzaro [38.91602522, 16.58302451]",
+        "CZ_01/01w42 :: Via Gaetano Alberti 4, Catanzaro [38.91578192, 16.58256041]",
+        "CZ_01/01w43 :: Via Azaria Tedeschi, Catanzaro [38.91459177, 16.58203723]",
+        "CZ_01/01w44 :: Sant'Antonio, Catanzaro [38.91422635, 16.58266542]",
+        "CZ_01/02e11 :: Viale Fiume Mesima, Catanzaro [38.89907077, 16.61574258]",
+        "CZ_01/02e12 :: Viale Fiume Mesima, Catanzaro [38.90066625, 16.61705904]",
+        "CZ_01/02e13 :: Siano, Catanzaro [38.90845572, 16.60207908]",
+        "CZ_01/02e14 :: Via dei Garofani, Catanzaro [38.91163197, 16.60528479]",
+        "CZ_01/02e21 :: Via Ferdinandea, Catanzaro [38.91468832, 16.60018136]",
+        "CZ_01/02e22 :: Via Regina Madre, Catanzaro [38.9182525, 16.59732843]",
+        "CZ_01/02e23 :: Via Regina Madre, Catanzaro [38.91919032, 16.59781613]",
+        "CZ_01/02e24 :: Via delle Tre Fontane, Catanzaro [38.92169243, 16.59905512]",
+        "CZ_01/02e31 :: via antonio genovesi, Catanzaro [38.93114544, 16.58062883]",
+        "CZ_01/02e32 :: via antonio genovesi, Catanzaro [38.9312291, 16.58149047]",
+        "CZ_01/02e33 :: Pontegrande, Catanzaro [38.9325977, 16.58061965]",
+        "CZ_01/02e34 :: Via Ettore Vitale, Catanzaro [38.93421198, 16.57955189]",
+        "CZ_01/02e41 :: Via Bambinello Gesu, Catanzaro [38.92883801, 16.57946372]",
+        "CZ_01/02e42 :: Via Bambinello Gesu, Catanzaro [38.92945021, 16.58079342]",
+        "CZ_01/02e43 :: Pontegrande, Catanzaro [38.93008707, 16.58312767]",
+        "CZ_01/02e44 :: via della quercia, Catanzaro [38.92976902, 16.5847129]",
+        "CZ_01/02w11 :: Via Schipani, Catanzaro [38.91685608, 16.58937745]",
+        "CZ_01/02w12 :: Via Schipani, Catanzaro [38.91694637, 16.58882792]",
+        "CZ_01/02w13 :: Pontepiccolo, Catanzaro [38.91855051, 16.58893451]",
+        "CZ_01/02w14 :: Via Schipani, Catanzaro [38.91732408, 16.58678181]",
+        "CZ_01/02w21 :: Traversa Mario Greco, Catanzaro [38.91729978, 16.58646836]",
+        "CZ_01/02w22 :: Via Francesco Paglia, Catanzaro [38.91837803, 16.58655107]",
+        "CZ_01/02w23 :: Viale Papa Pio X, Catanzaro [38.91830063, 16.58529099]",
+        "CZ_01/02w24 :: Via Antonio Greco, Catanzaro [38.91908058, 16.58503902]",
+        "CZ_01/02w31 :: via Raffaele Carbonari, Catanzaro [38.92017654, 16.58480654]",
+        "CZ_01/02w32 :: Pontepiccolo, Catanzaro [38.92052812, 16.58358583]",
+        "CZ_01/02w33 :: Via Madonna dei cieli, Catanzaro [38.92333001, 16.58211987]",
+        "CZ_01/02w34 :: Via Francesco Paglia, Catanzaro [38.92321661, 16.58568299]",
+        "CZ_01/02w41 :: Pontepiccolo, Catanzaro [38.92651413, 16.58228876]",
+        "CZ_01/02w42 :: Viale Papa Pio X, Catanzaro [38.92665194, 16.58060339]",
+        "CZ_01/02w43 :: Viale Papa Pio X 111, Catanzaro [38.92682134, 16.58031057]",
+        "CZ_01/02w44 :: Pontepiccolo, Catanzaro [38.92616779, 16.57891945]",
+        "CZ_01/03e11 :: Dulcino, Catanzaro [38.89291185, 16.58788906]",
+        "CZ_01/03e12 :: Viale Vincenzo De Filippis, Catanzaro [38.8962851, 16.58601669]",
+        "CZ_01/03e13 :: Sant'Antonio, Catanzaro [38.8977452, 16.58419007]",
+        "CZ_01/03e14 :: Viale Vincenzo De Filippis, Catanzaro [38.90114322, 16.58384907]",
+        "CZ_01/03e21 :: Via Francesco Massara, Catanzaro [38.90064428, 16.58258824]",
+        "CZ_01/03e22 :: Sant'Antonio, Catanzaro [38.90346228, 16.58104364]",
+        "CZ_01/03e23 :: Sant'Antonio, Catanzaro [38.90483208, 16.58055059]",
+        "CZ_01/03e24 :: Sant'Antonio, Catanzaro [38.90788045, 16.5779729]",
+        "CZ_01/03e31 :: Viale Barlaam da Seminara, Catanzaro [38.90520107, 16.57040065]",
+        "CZ_01/03e32 :: Sant'Antonio, Catanzaro [38.90656455, 16.57213503]",
+        "CZ_01/03e33 :: Via Bernardino Telesio 11, Catanzaro [38.90931208, 16.57482829]",
+        "CZ_01/03e34 :: Sant'Antonio, Catanzaro [38.90907204, 16.56907321]",
+        "CZ_01/03e41 :: Mater Domini, Catanzaro [38.91003967, 16.56633669]",
+        "CZ_01/03e42 :: Sant'Antonio, Catanzaro [38.91121079, 16.56775215]",
+        "CZ_01/03e43 :: via Caroprese, Catanzaro [38.91352281, 16.56947672]",
+        "CZ_01/03e44 :: Sant'Antonio, Catanzaro [38.910358, 16.57254428]",
+        "CZ_01/03w11 :: Mater Domini, Catanzaro [38.91504155, 16.56805476]",
+        "CZ_01/03w12 :: Via Guglielmo Sirleto, Catanzaro [38.91548026, 16.57016076]",
+        "CZ_01/03w13 :: Mater Domini, Catanzaro [38.91429239, 16.57020125]",
+        "CZ_01/03w14 :: Mater Domini, Catanzaro [38.91341218, 16.5715512]",
+        "CZ_01/03w21 :: Via Orti, Catanzaro [38.92017121, 16.5652467]",
+        "CZ_01/03w22 :: Via Orti, Catanzaro [38.91902158, 16.56652734]",
+        "CZ_01/03w23 :: via Gerace, Catanzaro [38.91737628, 16.56780696]",
+        "CZ_01/03w24 :: via Nicola Misasi, Catanzaro [38.91626535, 16.56712347]",
+        "CZ_01/03w32 :: Via Candela, Catanzaro [38.92248079, 16.55754807]",
+        "CZ_01/03w33 :: Via Filippo Smaldone, Catanzaro [38.92124003, 16.56145999]",
+        "CZ_01/03w34 :: via Nicola Misasi, Catanzaro [38.91791255, 16.56496963]",
+        "CZ_01/03w41 :: Via Salita Chiesa Matrice, Catanzaro [38.9231697, 16.55845559]",
+        "CZ_01/03w42 :: Via Candela, Catanzaro [38.92243983, 16.55768744]",
+        "CZ_01/03w43 :: Via Orti, Catanzaro [38.92197111, 16.560102]",
+        "CZ_01/04e11 :: Discesa Jannoni, Catanzaro [38.90706175, 16.59218829]",
+        "CZ_01/04e12 :: Via Montecorvino, Catanzaro [38.90654364, 16.59448602]",
+        "CZ_01/04e13 :: Via Giovanni Jannoni, Catanzaro [38.90537204, 16.59452866]",
+        "CZ_01/04e14 :: Corso Giuseppe Mazzini 178, Catanzaro [38.90561917, 16.59263014]",
+        "CZ_01/04e21 :: Corso Giuseppe Mazzini, Catanzaro [38.90452232, 16.5939364]",
+        "CZ_01/04e22 :: Via venti Settembre, Catanzaro [38.90417513, 16.59208852]",
+        "CZ_01/04e23 :: Discesa Guglielmo Pepe, Catanzaro [38.90367016, 16.59134279]",
+        "CZ_01/04e24 :: Gradoni Porta Marina, Catanzaro [38.90313696, 16.59437753]",
+        "CZ_01/04e31 :: Piazza Francesco Fiorentino, Catanzaro [38.90427805, 16.5966597]",
+        "CZ_01/04e32 :: Via Eroi 1799, Catanzaro [38.90453729, 16.59414027]",
+        "CZ_01/04e33 :: Via San Francesco di Paola, Catanzaro [38.90223372, 16.59543413]",
+        "CZ_01/04e34 :: Via San Francesco di Paola, Catanzaro [38.90235002, 16.59597617]",
+        "CZ_01/04e41 :: Via Nuova, Catanzaro [38.90295847, 16.59735582]",
+        "CZ_01/04e42 :: Viale dei Normanni, Catanzaro [38.90513005, 16.59761068]",
+        "CZ_01/04e43 :: Viale dei Normanni 99, Catanzaro [38.90367162, 16.59870198]",
+        "CZ_01/04e44 :: Via Francesco Cilea, Catanzaro [38.90170571, 16.59707429]",
+        "CZ_01/04w11 :: Via Carlo V, Catanzaro [38.90454307, 16.58961256]",
+        "CZ_01/04w12 :: Via Carlo V, Catanzaro [38.90220401, 16.59263364]",
+        "CZ_01/04w13 :: Via Vincenzo D'Amato, Catanzaro [38.90140459, 16.59311623]",
+        "CZ_01/04w14 :: Via Luigi Grimaldi, Catanzaro [38.90015117, 16.59374676]",
+        "CZ_01/04w21 :: Via Luigi Lilio, Catanzaro [38.89885652, 16.59419612]",
+        "CZ_01/04w22 :: Via Domenico Marincola Pistoia 279, Catanzaro [38.8962124, 16.5976471]",
+        "CZ_01/04w23 :: Dulcino, Catanzaro [38.89546172, 16.59528178]",
+        "CZ_01/04w24 :: Viale Lucrezia Della Valle, Catanzaro [38.89715217, 16.59159338]",
+        "CZ_01/04w31 :: Via Brutium, Catanzaro [38.89374277, 16.601482]",
+        "CZ_01/04w32 :: Via degli Svevi, Catanzaro [38.89197947, 16.60296697]",
+        "CZ_01/04w33 :: Via degli Svevi 127, Catanzaro [38.89241873, 16.60468591]",
+        "CZ_01/04w34 :: Dulcino, Catanzaro [38.89433892, 16.60411342]",
+        "CZ_01/04w41 :: Viale dei Bizantini, Catanzaro [38.90111434, 16.59802286]",
+        "CZ_01/04w42 :: Via Garibaldi Gariani, Catanzaro [38.89988764, 16.59868757]",
+        "CZ_01/04w43 :: Via della Stazione, Catanzaro [38.89772785, 16.59844658]",
+        "CZ_01/04w44 :: Viale dei Bizantini, Catanzaro [38.89759304, 16.60059829]",
+        "CZ_01/05e11 :: Via Conti di Loritello, Catanzaro [38.88065219, 16.60943562]",
+        "CZ_01/05e12 :: Via Conti di Loritello, Catanzaro [38.88007604, 16.6060399]",
+        "CZ_01/05e13 :: Vecchio tracciato Ferrovia Lamezia Terme - Catanzaro Lido, Catanzaro [38.88582406, 16.60257338]",
+        "CZ_01/05e14 :: Traversa Angioini, Catanzaro [38.88891745, 16.60269454]",
+        "CZ_01/05e21 :: Viale Cassiodoro, Catanzaro [38.87026427, 16.60658533]",
+        "CZ_01/05e22 :: Via Santa Maria, Catanzaro [38.86840686, 16.6060124]",
+        "CZ_01/05e23 :: Via della Resistenza, Catanzaro [38.86935645, 16.60788763]",
+        "CZ_01/05e24 :: Via Romagna, Catanzaro [38.87036922, 16.61235923]",
+        "CZ_01/05e31 :: Via Molise 1b, Catanzaro [38.86789373, 16.60414831]",
+        "CZ_01/05e32 :: Via Umbria, Catanzaro [38.86834733, 16.60463314]",
+        "CZ_01/05e33 :: via Solferino, Catanzaro [38.86636181, 16.60719732]",
+        "CZ_01/05e34 :: Viale Magna Grecia, Catanzaro [38.86238491, 16.60919691]",
+        "CZ_01/05e41 :: Viale Magna Grecia, Catanzaro [38.8536445, 16.61073352]",
+        "CZ_01/05e42 :: Viale Magna Grecia, Catanzaro [38.85268359, 16.61096306]",
+        "CZ_01/05e43 :: Via Caduti 16 Marzo 1978, Catanzaro [38.85292254, 16.60750462]",
+        "CZ_01/05e44 :: Santa Maria, Catanzaro [38.85364761, 16.60532433]",
+        "CZ_01/05w11 :: Via Monsignor Armando Fares, Catanzaro [38.88719685, 16.59322852]",
+        "CZ_01/05w12 :: Via Monsignor Armando Fares, Catanzaro [38.8885073, 16.59492191]",
+        "CZ_01/05w13 :: Dulcino, Catanzaro [38.8881673, 16.59642048]",
+        "CZ_01/05w14 :: Viale Lucrezia Della Valle 56, Catanzaro [38.88352717, 16.59896401]",
+        "CZ_01/05w21 :: Dulcino, Catanzaro [38.87797491, 16.59957652]",
+        "CZ_01/05w22 :: Viale dei Conti Falluc, Catanzaro [38.87435053, 16.60229342]",
+        "CZ_01/05w23 :: Via Benedetto Musolino, Catanzaro [38.87200616, 16.6004461]",
+        "CZ_01/05w24 :: Via Risorgimento, Catanzaro [38.86956687, 16.6025703]",
+        "CZ_01/05w31 :: Via Rumbolo, Catanzaro [38.8677372, 16.6009058]",
+        "CZ_01/05w32 :: Via Antonio Casolini, Catanzaro [38.86682039, 16.60191609]",
+        "CZ_01/05w33 :: Via Carso, Catanzaro [38.86637444, 16.59982052]",
+        "CZ_01/05w34 :: Via Angitola, Catanzaro [38.86597793, 16.60211709]",
+        "CZ_01/05w41 :: Santa Maria, Catanzaro [38.8554035, 16.60339668]",
+        "CZ_01/05w42 :: Viale Isonzo, Catanzaro [38.85919522, 16.60607599]",
+        "CZ_01/05w43 :: Galleria Santa Maria, Catanzaro [38.85820709, 16.60295569]",
+        "CZ_01/05w44 :: Santa Maria, Catanzaro [38.85802805, 16.60199043]",
+        "I745_CNO5 :: SP16, Catanzaro [38.90080714, 16.64176253]"
+      ],
+      "Caulonia": [
+        "C285_CNO7 :: San Nicola, Caulonia [38.4128885, 16.37128187]"
+      ],
+      "Cerchiara Di Calabria": [
+        "C489_CNO1 :: Piano del Praino, Cerchiara di Calabria [39.81930512, 16.42703968]"
+      ],
+      "Cetraro": [
+        "C588_CNO1 :: Sant'Angelo, Cetraro [39.54131396, 15.91616191]",
+        "C588_CNO4 :: Contrada Motta, Cetraro [39.51285117, 15.9571461]",
+        "C588_CNO5 :: Via Fontana, Cetraro [39.5551653, 15.95348282]",
+        "C588_CNO6 :: Santa Lucia, Cetraro [39.52080592, 15.95570542]",
+        "C588_CNO7 :: San Martino, Cetraro [39.53159757, 15.989742]"
+      ],
+      "Chiaravalle Centrale": [
+        "C616_CNO1 :: Acquamammone, Chiaravalle Centrale [38.70176243, 16.38348828]"
+      ],
+      "Cicala": [
+        "C674_CNO3 :: Via non definita, Cicala [39.01885991, 16.48115274]",
+        "C674_CNO4 :: ~SS109, Cicala [39.03167797, 16.47723338]"
+      ],
+      "Cinquefrondi": [
+        "C710_CNO4 :: Contrada Grecà, Cinquefrondi [38.41498573, 16.09248839]",
+        "C710_CNO5 :: Strada Provinciale 5 Rosarno - Marina di Gioiosa Ionica, Cinquefrondi [38.41581322, 16.07606872]",
+        "G791_CNO4 :: SP5, Cinquefrondi [38.41571463, 16.07564735]"
+      ],
+      "Cirella": [
+        "D289_CNO1 :: ~Corso del Tirreno, Cirella [39.72105848, 15.81219412]",
+        "D289_CNO2 :: Cammaratea, Cirella [39.71478937, 15.81712837]",
+        "D289_CNO3 :: Cammaratea, Cirella [39.69911204, 15.8188413]"
+      ],
+      "Cirò Marina": [
+        "C726_CNO1 :: Strada Provinciale 5 Krimisa, Cirò Marina [39.35918229, 17.11273698]",
+        "C726_CNO2 :: Lungomare Nord Stefano Pugliese, Cirò Marina [39.38215233, 17.14106274]"
+      ],
+      "Cirò": [
+        "C725_CNO1 :: Strada Provinciale 4 Contrada Cappella, Cirò [39.40695723, 17.06762582]"
+      ],
+      "Cittanova": [
+        "C747_CNO1 :: Contrada San Pietro, Cittanova [38.40202156, 16.0380629]",
+        "C747_CNO2 :: Via Antonio Vivaldi, Cittanova [38.36070477, 16.07636183]",
+        "C747_CNO3 :: Contrada Sant'Antonio, Cittanova [38.4388246, 16.04051354]"
+      ],
+      "Civita": [
+        "C763_CNO1 :: Via Garibaldi, Civita [39.8297151, 16.31305507]"
+      ],
+      "Condofuri Marina": [
+        "C954_CNO2 :: Via non definita, Condofuri Marina [37.93559468, 15.88108096]"
+      ],
+      "Condofuri": [
+        "C954_CNO3 :: Grotta, Condofuri [38.00312524, 15.85801734]"
+      ],
+      "Contrada Boggiano": [
+        "I956_CNO2 :: ~SS110, Contrada Boggiano [38.48408552, 16.37874342]"
+      ],
+      "Cortale": [
+        "D049_CNO1 :: ~SP92, Cortale [38.8326398, 16.40044897]"
+      ],
+      "Cosenza": [
+        "CS_01/01e11 :: Piazza Giovanni Ventitreesimo, Cosenza [39.30555396, 16.24777408]",
+        "CS_01/01e12 :: Via Tommaso Telesio, Cosenza [39.30707616, 16.24601514]",
+        "CS_01/01e13 :: Via degli Stadi, Cosenza [39.30821195, 16.24644063]",
+        "CS_01/01e14 :: Via Panebianco, Cosenza [39.30791128, 16.24754257]",
+        "CS_01/01e21 :: Via Francesco Simonetta, Cosenza [39.30298548, 16.24942122]",
+        "CS_01/01e22 :: Città 2000, Cosenza [39.30425277, 16.2480524]",
+        "CS_01/01e23 :: Viale della Repubblica, Cosenza [39.30454832, 16.24800117]",
+        "CS_01/01e24 :: Via Leonardo Sciascia, Cosenza [39.30528204, 16.2470669]",
+        "CS_01/01e31 :: Via Pasquale Rossi, Cosenza [39.3032015, 16.24763617]",
+        "CS_01/01e32 :: Città 2000, Cosenza [39.30398121, 16.24655486]",
+        "CS_01/01e33 :: Via Gerolamo De Rada, Cosenza [39.30329369, 16.2459011]",
+        "CS_01/01e34 :: Via Luigi Pellegrini, Cosenza [39.30198615, 16.24689963]",
+        "CS_01/01e41 :: Via Riccardo Misasi, Cosenza [39.30203394, 16.24959438]",
+        "CS_01/01e42 :: Via Riccardo Misasi, Cosenza [39.30199618, 16.25086255]",
+        "CS_01/01e43 :: Via Umberto Tancredi, Cosenza [39.30189911, 16.24846405]",
+        "CS_01/01e44 :: Viale della Repubblica, Cosenza [39.30188164, 16.24786602]",
+        "CS_01/01w11 :: Via dei Mille, Cosenza [39.30848451, 16.24824041]",
+        "CS_01/01w12 :: Via Aldo Moro, Cosenza [39.30672575, 16.24816069]",
+        "CS_01/01w13 :: Via Antonio Zupi, Cosenza [39.30648098, 16.24863626]",
+        "CS_01/01w14 :: Via Mele, Cosenza [39.30551097, 16.24928717]",
+        "CS_01/01w21 :: Via Roberto Ruffilli, Cosenza [39.30825677, 16.25185395]",
+        "CS_01/01w22 :: Corso d'Italia, Cosenza [39.30809917, 16.2524409]",
+        "CS_01/01w23 :: Via Alberto Serra, Cosenza [39.3066517, 16.25113064]",
+        "CS_01/01w24 :: Via Umberto Zanotti Bianco, Cosenza [39.30690072, 16.25062151]",
+        "CS_01/01w31 :: Via Alberto Serra, Cosenza [39.3061846, 16.2505197]",
+        "CS_01/01w32 :: Corso d'Italia, Cosenza [39.30673579, 16.2524195]",
+        "CS_01/01w33 :: Via Antonio Gramsci, Cosenza [39.30576791, 16.25174814]",
+        "CS_01/01w34 :: Via Francesco Saverio Nitti, Cosenza [39.30480769, 16.25056583]",
+        "CS_01/01w41 :: Via delle Medaglie D'Oro, Cosenza [39.30489471, 16.25348336]",
+        "CS_01/01w42 :: Via Gregorio Caloprese, Cosenza [39.3040802, 16.25090973]",
+        "CS_01/01w43 :: Via delle Medaglie D'Oro, Cosenza [39.30370978, 16.25364164]",
+        "CS_01/01w44 :: Corso Luigi Fera, Cosenza [39.30332866, 16.25210724]",
+        "CS_01/02e11 :: Via Pasquale Galluppi, Cosenza [39.29949989, 16.24856894]",
+        "CS_01/02e12 :: Via Luigi Miceli, Cosenza [39.3006512, 16.24998218]",
+        "CS_01/02e13 :: Via Carlo Cattaneo, Cosenza [39.29976749, 16.25016558]",
+        "CS_01/02e14 :: Via Carlo Cattaneo, Cosenza [39.29992588, 16.25189354]",
+        "CS_01/02e21 :: Via Mario Mari 7, Cosenza [39.2989392, 16.25248514]",
+        "CS_01/02e22 :: Via Arturo Scola, Cosenza [39.30007461, 16.25364661]",
+        "CS_01/02e23 :: Via Arturo Veltri, Cosenza [39.30102243, 16.25362722]",
+        "CS_01/02e24 :: Via Luigi Caputo, Cosenza [39.30091807, 16.2516359]",
+        "CS_01/02e31 :: Via Macallè, Cosenza [39.29946168, 16.25471406]",
+        "CS_01/02e32 :: Via Ventiquattro Maggio, Cosenza [39.29877898, 16.25517293]",
+        "CS_01/02e33 :: Piazza Pasquale Scura, Cosenza [39.29846392, 16.2525764]",
+        "CS_01/02e34 :: Via Santa Teresa, Cosenza [39.29825511, 16.25071956]",
+        "CS_01/02e41 :: Via Arturo Scola, Cosenza [39.30032021, 16.25446846]",
+        "CS_01/02e42 :: Via Giuseppe Isnardi, Cosenza [39.30152164, 16.25414222]",
+        "CS_01/02e43 :: Via Ventiquattro Maggio, Cosenza [39.30286465, 16.25368003]",
+        "CS_01/02e44 :: Via Adolfo Quintieri, Cosenza [39.30284005, 16.25350412]",
+        "CS_01/02w11 :: Via Antonio Guarasci, Cosenza [39.31324648, 16.25610295]",
+        "CS_01/02w12 :: Via Oreste Dito, Cosenza [39.3147763, 16.25576423]",
+        "CS_01/02w13 :: Via Popilia, Cosenza [39.31529084, 16.25612639]",
+        "CS_01/02w14 :: Via Antonio Mirabelli, Cosenza [39.3127914, 16.25434546]",
+        "CS_01/02w21 :: Via Palmiro Togliatti, Cosenza [39.30834249, 16.25962869]",
+        "CS_01/02w22 :: Via Giovanbattista D'Amico, Cosenza [39.31057158, 16.26012459]",
+        "CS_01/02w23 :: Via Giovanbattista D'Amico, Cosenza [39.3106877, 16.25669153]",
+        "CS_01/02w24 :: Via Aristide Colonna, Cosenza [39.31104146, 16.25667396]",
+        "CS_01/02w31 :: Via Alessandro Lupinacci, Cosenza [39.30651275, 16.25570214]",
+        "CS_01/02w32 :: Via Giulia 9, Cosenza [39.30875666, 16.25519306]",
+        "CS_01/02w33 :: Piazza Bonaventura Zumbini 53, Cosenza [39.30928923, 16.25263551]",
+        "CS_01/02w34 :: Via Popilia, Cosenza [39.30857852, 16.25662191]",
+        "CS_01/02w41 :: Via Popilia, Cosenza [39.30427683, 16.25704762]",
+        "CS_01/02w42 :: Via Popilia, Cosenza [39.30534687, 16.25677392]",
+        "CS_01/02w43 :: Via Giovambattista Lupia, Cosenza [39.30713153, 16.25683298]",
+        "CS_01/02w44 :: Via Giovambattista Lupia, Cosenza [39.30713863, 16.2579617]",
+        "CS_01/03e11 :: Via Giuseppe Galliano, Cosenza [39.29849074, 16.25536492]",
+        "CS_01/03e12 :: Corso Giuseppe Mazzini, Cosenza [39.29670531, 16.25434005]",
+        "CS_01/03e13 :: Via Monte Santo, Cosenza [39.29731279, 16.2529257]",
+        "CS_01/03e14 :: Via Isonzo, Cosenza [39.29570854, 16.25378432]",
+        "CS_01/03e21 :: Via Trento, Cosenza [39.29516794, 16.25492906]",
+        "CS_01/03e22 :: Via Monte San Michele, Cosenza [39.29465057, 16.25292881]",
+        "CS_01/03e23 :: Via Monte San Michele, Cosenza [39.29555992, 16.2525744]",
+        "CS_01/03e24 :: Via Isonzo, Cosenza [39.2950903, 16.25137663]",
+        "CS_01/03e31 :: Via Nicola Parisio, Cosenza [39.29692158, 16.25080344]",
+        "CS_01/03e32 :: Via Fiume, Cosenza [39.2951982, 16.24966072]",
+        "CS_01/03e33 :: Via Pola, Cosenza [39.2973063, 16.24890837]",
+        "CS_01/03e34 :: Piazza XXV Luglio, Cosenza [39.29781626, 16.24984283]",
+        "CS_01/03e41 :: Via Gerolamo Sambiase, Cosenza [39.29810943, 16.24359312]",
+        "CS_01/03e42 :: Viale della Repubblica, Cosenza [39.30006213, 16.24734213]",
+        "CS_01/03e43 :: Via Alberico Talarico, Cosenza [39.29658693, 16.24807527]",
+        "CS_01/03e44 :: Via Tommaso Arnoni, Cosenza [39.29548095, 16.24641525]",
+        "CS_01/03w11 :: Via Popilia, Cosenza [39.30211937, 16.25718508]",
+        "CS_01/03w12 :: Via Popilia, Cosenza [39.30077262, 16.25735825]",
+        "CS_01/03w13 :: Via Popilia 31, Cosenza [39.29951076, 16.25735551]",
+        "CS_01/03w14 :: Via Popilia, Cosenza [39.29785383, 16.25696603]",
+        "CS_01/03w21 :: Via Rivocati, Cosenza [39.2920424, 16.2538124]",
+        "CS_01/03w22 :: Corso Umberto Primo, Cosenza [39.2931017, 16.25419331]",
+        "CS_01/03w23 :: Via Rivocati, Cosenza [39.29198036, 16.25660058]",
+        "CS_01/03w24 :: Via Quattromani Sertorio, Cosenza [39.29309662, 16.25692852]",
+        "CS_01/03w31 :: Viale Trieste, Cosenza [39.29362982, 16.25124233]",
+        "CS_01/03w32 :: Viale Trieste, Cosenza [39.29366698, 16.25233671]",
+        "CS_01/03w33 :: Via Pasquale Perugini, Cosenza [39.29086617, 16.2514777]",
+        "CS_01/03w34 :: Via \"Gino\" Luigi Picciotto, Cosenza [39.29182799, 16.25150583]",
+        "CS_01/03w41 :: Viale della Repubblica, Cosenza [39.29554842, 16.2472414]",
+        "CS_01/03w42 :: Via Francesco Corsonello, Cosenza [39.29207808, 16.24728546]",
+        "CS_01/03w43 :: Strada Statale 278 di Potame, Cosenza [39.28906755, 16.24752982]",
+        "CS_01/03w44 :: Via Antonio Monaco, Cosenza [39.29236502, 16.25077548]",
+        "CS_01/04e11 :: Quartiere Tribunale, Cosenza [39.31699634, 16.25262748]",
+        "CS_01/04e12 :: Via Popilia, Cosenza [39.31655859, 16.25585884]",
+        "CS_01/04e13 :: Via Giuseppe Storino, Cosenza [39.31939848, 16.25672394]",
+        "CS_01/04e14 :: Via Popilia 147c, Cosenza [39.31830345, 16.25538046]",
+        "CS_01/04e21 :: Via Rocco Chinnici, Cosenza [39.31255185, 16.25230895]",
+        "CS_01/04e22 :: Viale Paolo Borsellino, Cosenza [39.31406451, 16.25074045]",
+        "CS_01/04e23 :: Quartiere Tribunale, Cosenza [39.31677069, 16.24970454]",
+        "CS_01/04e24 :: Via Giovanni Sisca, Cosenza [39.31711834, 16.25124454]",
+        "CS_01/04e31 :: Via Antonio Scopelliti, Cosenza [39.31850581, 16.25362542]",
+        "CS_01/04e32 :: Via Manuela e Carlo Alberto Dalla Chiesa, Cosenza [39.31963003, 16.24992083]",
+        "CS_01/04e33 :: Viale Sergio Cosmai, Cosenza [39.31873619, 16.24908365]",
+        "CS_01/04e34 :: Viale Sergio Cosmai, Cosenza [39.32164549, 16.2484215]",
+        "CS_01/04e41 :: Via Panebianco, Cosenza [39.31719196, 16.24553929]",
+        "CS_01/04e42 :: Via San Proclo, Cosenza [39.31773483, 16.24472139]",
+        "CS_01/04e43 :: Via Panebianco, Cosenza [39.31881891, 16.24558403]",
+        "CS_01/04e44 :: Via Giuseppe Giacomantonio, Cosenza [39.31928188, 16.24726589]",
+        "CS_01/04w11 :: Viale Guglielmo Marconi, Cosenza [39.31178553, 16.24472188]",
+        "CS_01/04w12 :: Via degli Stadi, Cosenza [39.30950168, 16.24470578]",
+        "CS_01/04w13 :: Via Don Gaetano Mauro, Cosenza [39.31040487, 16.2459866]",
+        "CS_01/04w14 :: Via Beato Umile, Cosenza [39.30994748, 16.24676289]",
+        "CS_01/04w21 :: Via Francesco Miceli Picardi, Cosenza [39.31005702, 16.24937089]",
+        "CS_01/04w22 :: Via Roberto Ruffilli, Cosenza [39.30982933, 16.25198786]",
+        "CS_01/04w23 :: Piazza Fausto e Luigi Gullo, Cosenza [39.31173342, 16.25139789]",
+        "CS_01/04w24 :: Via Mortati, Cosenza [39.31183549, 16.24968854]",
+        "CS_01/04w31 :: Via Silvio Sesti, Cosenza [39.31114571, 16.24886077]",
+        "CS_01/04w32 :: Via Benito Falvo, Cosenza [39.31213179, 16.24782803]",
+        "CS_01/04w33 :: Via Benito Falvo, Cosenza [39.31209867, 16.246908]",
+        "CS_01/04w34 :: Via Silvio Sesti, Cosenza [39.31111506, 16.24736621]",
+        "CS_01/04w41 :: Via Cesare Gabriele, Cosenza [39.31377522, 16.24997405]",
+        "CS_01/04w42 :: Via Lazio, Cosenza [39.31394375, 16.24807213]",
+        "CS_01/04w43 :: Via Roberta Lanzino, Cosenza [39.31363655, 16.2465204]",
+        "CS_01/04w44 :: Via Panebianco, Cosenza [39.31496932, 16.2459758]",
+        "CS_01/05w11 :: Via Panebianco, Cosenza [39.32027848, 16.24526504]",
+        "CS_01/05w12 :: Via Piersanti Mattarella, Cosenza [39.32214407, 16.24598765]",
+        "CS_01/05w13 :: Viale Sergio Cosmai, Cosenza [39.32246422, 16.24859324]",
+        "CS_01/05w14 :: Via Popilia, Cosenza [39.32220949, 16.25410126]",
+        "CS_01/05w21 :: Piazza Domenico Grimaldi, Cosenza [39.3241466, 16.25400975]",
+        "CS_01/05w22 :: Via Popilia, Cosenza [39.32583439, 16.25303953]",
+        "CS_01/05w23 :: Piazza Ignazio Ranieri, Cosenza [39.32652537, 16.25344282]",
+        "CS_01/06e11 :: Massa, Cosenza [39.29437545, 16.26025493]",
+        "CS_01/06e12 :: Via Gian Vincenzo Gravina, Cosenza [39.2909715, 16.26115702]",
+        "CS_01/06e13 :: Massa, Cosenza [39.2901189, 16.26355514]",
+        "CS_01/06e14 :: Via Domenico Casaleno, Cosenza [39.28781665, 16.26824804]",
+        "CS_01/06e21 :: Via dei Martiri, Cosenza [39.28945256, 16.26288515]",
+        "CS_01/06e22 :: Via Giosuè Carducci, Cosenza [39.28687857, 16.26371721]",
+        "CS_01/06e23 :: Corso Bernardino Telesio 17, Cosenza [39.2876885, 16.26109906]",
+        "CS_01/06e24 :: Piazza Vincenzo Federici, Cosenza [39.28885576, 16.2619502]",
+        "CS_01/06e31 :: Massa, Cosenza [39.29054894, 16.25973992]",
+        "CS_01/06e32 :: Lungocrati de Seta, Cosenza [39.29108525, 16.259697]",
+        "CS_01/06e33 :: Via Lungo Busento Oberdan, Cosenza [39.29118698, 16.25693647]",
+        "CS_01/06e34 :: piazzetta, Cosenza [39.28919561, 16.25828821]",
+        "CS_01/06e41 :: Via Portapiana, Cosenza [39.28333325, 16.25938678]",
+        "CS_01/06e42 :: Corso Vittorio Emanuele Secondo, Cosenza [39.28871897, 16.25794563]",
+        "CS_01/06e43 :: Via Giuseppe Garibaldi, Cosenza [39.28954585, 16.25355905]",
+        "CS_01/07w11 :: Via Emilio Capizzano, Cosenza [39.30648781, 16.24517082]",
+        "CS_01/07w12 :: Via Saverio Albo, Cosenza [39.30819737, 16.24447646]",
+        "CS_01/07w13 :: Via Saverio Albo, Cosenza [39.30861478, 16.24291078]",
+        "CS_01/07w14 :: Via dell'Accoglienza, Cosenza [39.30560241, 16.24289056]",
+        "CS_01/07w21 :: Via Rita Pisani, Cosenza [39.30621629, 16.23811197]",
+        "CS_01/07w22 :: Via Giulio Adimari, Cosenza [39.30615929, 16.23964153]",
+        "CS_01/07w23 :: Via Francesco Mancuso, Cosenza [39.30987748, 16.24026698]",
+        "CS_01/07w24 :: Via Vittorio Accattatis 4, Cosenza [39.30943942, 16.24138116]",
+        "CS_01/07w31 :: Via Kroton, Cosenza [39.30892715, 16.23322744]",
+        "CS_01/07w32 :: Via degli Stadi, Cosenza [39.31061257, 16.23752866]",
+        "CS_01/07w33 :: Via Enrico De Nicola, Cosenza [39.31058087, 16.24297409]",
+        "CS_01/07w34 :: Via Giuseppe Tommasi, Cosenza [39.31180122, 16.24228271]",
+        "CS_01/07w41 :: Via Temesa, Cosenza [39.30577264, 16.23154294]",
+        "CS_01/07w42 :: San Vito, Cosenza [39.30720827, 16.22936669]",
+        "CS_01/07w43 :: Via degli Stadi, Cosenza [39.30836683, 16.23005629]",
+        "CS_01/07w44 :: Via degli Stadi, Cosenza [39.30892132, 16.23192323]",
+        "D086_CNO1 :: Diodato, Cosenza [39.27054136, 16.25949001]",
+        "D086_CNO10 :: Sant'Ippolito, Cosenza [39.26794073, 16.2940064]",
+        "D086_CNO2 :: Bivio Donnici, Cosenza [39.25757486, 16.28493609]",
+        "D086_CNO3 :: Strada Provinciale 244 del Lago Arvo, Cosenza [39.24611928, 16.30216936]",
+        "D086_CNO5 :: Bivio Donnici, Cosenza [39.25828053, 16.28167494]",
+        "D086_CNO8 :: Strada Provinciale 217 Ponte Rovito Aprigliano, Cosenza [39.26611437, 16.29691953]",
+        "D086_CNO9 :: Donnici Inferiore, Cosenza [39.24231633, 16.28632079]"
+      ],
+      "Costa Turchese": [
+        "B085_CNO2 :: Traversa I Via Marina Bruni, Costa Turchese [38.92583938, 16.86112295]",
+        "B085_CNO3 :: ~Strada Provinciale 4, Costa Turchese [38.93273495, 16.83976645]"
+      ],
+      "Cotronei": [
+        "D123_CNO4 :: Corso Giuseppe Garibaldi, Cotronei [39.16000038, 16.77881034]",
+        "D123_CNO5 :: Via Laghi Silani, Cotronei [39.15969182, 16.77168763]"
+      ],
+      "Cropani": [
+        "D181_CNO3 :: Cropani Marina, Cropani [38.91368521, 16.81269497]"
+      ],
+      "Crotone": [
+        "D122_CNO10 :: Contrada Cantorato, Crotone [39.17654021, 17.09541618]",
+        "D122_CNO11 :: Via degli Aranci, Crotone [39.19094981, 17.11061726]",
+        "D122_CNO14 :: Via delle Orchidee, Crotone [39.14292911, 17.11256696]",
+        "D122_CNO15 :: Contrada Passovecchio, Crotone [39.11741226, 17.0932765]",
+        "D122_CNO5 :: Via Savelli, Crotone [39.05772014, 17.09106232]",
+        "D122_CNO6 :: Via Mesoraca, Crotone [39.05843067, 17.09456526]",
+        "D122_CNO8 :: Via San Luca, Crotone [39.0546243, 17.08574893]",
+        "D122_CNO9 :: Via Aston, Crotone [39.00747201, 17.17018249]",
+        "KR_01/01e11 :: Via Gabriele Corigliano, Crotone [39.06876968, 17.12964738]",
+        "KR_01/01e12 :: Traversa Costituzione, Crotone [39.06973106, 17.13031601]",
+        "KR_01/01e13 :: Via Giovanni Palatucci, Crotone [39.07108447, 17.12924805]",
+        "KR_01/01e14 :: \"Ferry\", Crotone [39.07168353, 17.12789121]",
+        "KR_01/01e21 :: Via Arnaldo Mori, Crotone [39.07251251, 17.12951995]",
+        "KR_01/01e22 :: Viale Leonardo Gallucci 10, Crotone [39.07416667, 17.12765661]",
+        "KR_01/01e23 :: Piazza delle Palme, Crotone [39.07476831, 17.12961228]",
+        "KR_01/01e24 :: Via Santa Croce, Crotone [39.07652765, 17.12818666]",
+        "KR_01/01e31 :: Traversa Venezia, Crotone [39.07659996, 17.12995968]",
+        "KR_01/01e32 :: Via Interna Marina, Crotone [39.0771476, 17.13079627]",
+        "KR_01/01e33 :: 3a Traversa Via Reggio, Crotone [39.07868622, 17.12930644]",
+        "KR_01/01e34 :: Via Venezia, Crotone [39.07810772, 17.12729194]",
+        "KR_01/01e41 :: Discesa San Leonardo, Crotone [39.07845498, 17.13111812]",
+        "KR_01/01e42 :: Discesa Marina, Crotone [39.07834159, 17.13170723]",
+        "KR_01/01e43 :: Trav. III Corso Messina, Crotone [39.07932923, 17.13247145]",
+        "KR_01/01e44 :: Tav. II San Leonardo, Crotone [39.08024859, 17.13245151]",
+        "KR_01/01w11 :: Via Marinella, Crotone [39.08245172, 17.12559134]",
+        "KR_01/01w12 :: Via Esterna Spiaggia delle Forche, Crotone [39.08360315, 17.12441093]",
+        "KR_01/01w13 :: Via Claudio Crea, Crotone [39.08227228, 17.12357764]",
+        "KR_01/01w14 :: Via Claudio Crea, Crotone [39.08171399, 17.12333236]",
+        "KR_01/01w21 :: Via Suriano 37, Crotone [39.0826253, 17.12860019]",
+        "KR_01/01w22 :: Viale Regina Margherita, Crotone [39.08267251, 17.12657155]",
+        "KR_01/01w23 :: Viale Regina Margherita, Crotone [39.08124473, 17.12654174]",
+        "KR_01/01w24 :: Via Louis Braille, Crotone [39.0811044, 17.12535877]",
+        "KR_01/01w31 :: Via Risorgimento 102, Crotone [39.08046896, 17.13097377]",
+        "KR_01/01w32 :: Corso Vittorio Emanuele, Crotone [39.08100882, 17.12810898]",
+        "KR_01/01w33 :: Via Pitagora 5, Crotone [39.08155684, 17.12944847]",
+        "KR_01/01w34 :: Via Suriano, Crotone [39.08180158, 17.12857809]",
+        "KR_01/01w41 :: Discesa San Leonardo, Crotone [39.08057807, 17.1320921]",
+        "KR_01/01w42 :: Corso Messina, Crotone [39.07991639, 17.13322028]",
+        "KR_01/01w43 :: Via Emilio Buccarelli, Crotone [39.08095906, 17.13454083]",
+        "KR_01/01w44 :: Via Renato Geremicca, Crotone [39.08191019, 17.13403601]",
+        "KR_01/02e11 :: Via Torino, Crotone [39.07836637, 17.12093445]",
+        "KR_01/02e12 :: Via Vittorio Veneto, Crotone [39.07768831, 17.12105239]",
+        "KR_01/02e13 :: Via Giacomo Manna, Crotone [39.07797011, 17.12209319]",
+        "KR_01/02e14 :: Via San Francesco, Crotone [39.07690894, 17.12276615]",
+        "KR_01/02e21 :: Via XXV Aprile, Crotone [39.07652797, 17.12207032]",
+        "KR_01/02e22 :: Via San Francesco, Crotone [39.07733492, 17.12351304]",
+        "KR_01/02e23 :: Via della Resistenza, Crotone [39.07627486, 17.12465369]",
+        "KR_01/02e24 :: Via Libertà, Crotone [39.07502851, 17.12536681]",
+        "KR_01/02e31 :: Corso Mazzini, Crotone [39.0756018, 17.12688366]",
+        "KR_01/02e32 :: Via Firenze, Crotone [39.07731977, 17.12623246]",
+        "KR_01/02e33 :: Via Ercole Scalfaro, Crotone [39.07797065, 17.12562884]",
+        "KR_01/02e34 :: Via Azaria Tedeschi, Crotone [39.07895224, 17.12705815]",
+        "KR_01/02e41 :: Via Vittorio Veneto, Crotone [39.078834, 17.12349152]",
+        "KR_01/02e42 :: Via Sergio Rameli, Crotone [39.07977781, 17.12458227]",
+        "KR_01/02e43 :: Via Elvidio Borelli, Crotone [39.07926167, 17.12504037]",
+        "KR_01/02e44 :: Via Silvio Paternostro, Crotone [39.07972462, 17.1270202]",
+        "KR_01/02w11 :: Via Antonio Panella, Crotone [39.07941632, 17.12067945]",
+        "KR_01/02w12 :: Via Antonio Panella, Crotone [39.0787764, 17.11970629]",
+        "KR_01/02w13 :: Via Primo Maggio, Crotone [39.0780463, 17.11936621]",
+        "KR_01/02w14 :: Via Vittorio Veneto, Crotone [39.07731493, 17.12034985]",
+        "KR_01/02w21 :: Via Bernardino Telesio, Crotone [39.08043754, 17.11255397]",
+        "KR_01/02w22 :: Via Giuseppe Di Vittorio, Crotone [39.08078132, 17.11431981]",
+        "KR_01/02w23 :: Sant'Antonio, Crotone [39.08018802, 17.11943053]",
+        "KR_01/02w24 :: Via Ugo Foscolo, Crotone [39.08141598, 17.1188797]",
+        "KR_01/02w31 :: Via Giuseppe Di Vittorio, Crotone [39.08249311, 17.11405082]",
+        "KR_01/02w32 :: Via Achille Grandi, Crotone [39.08543115, 17.11426699]",
+        "KR_01/02w33 :: Fondo Gesù, Crotone [39.08712643, 17.1160345]",
+        "KR_01/02w34 :: Via Emanuele Curiel, Crotone [39.0864847, 17.11462261]",
+        "KR_01/02w41 :: Via Cutro, Crotone [39.08068368, 17.12415099]",
+        "KR_01/02w42 :: Via Mario Nicoletta, Crotone [39.08210289, 17.12138079]",
+        "KR_01/02w43 :: Via 1a Acquabona, Crotone [39.08254579, 17.11919742]",
+        "KR_01/02w44 :: Via Arrigo Boito, Crotone [39.08404254, 17.12137937]",
+        "KR_01/03e11 :: Via Francesco Cilea, Crotone [39.06622177, 17.11226156]",
+        "KR_01/03e12 :: Via Vincenzo Bellini, Crotone [39.06216125, 17.11261318]",
+        "KR_01/03e13 :: Via Saffo, Crotone [39.06502771, 17.11607623]",
+        "KR_01/03e14 :: Via Gioacchino da Fiore, Crotone [39.0623452, 17.11382265]",
+        "KR_01/03e21 :: Via Sibilla Aleramo, Crotone [39.06137296, 17.11607734]",
+        "KR_01/03e22 :: Tufolo, Crotone [39.06110607, 17.11392275]",
+        "KR_01/03e23 :: Via Renato Guttuso, Crotone [39.06092718, 17.11187202]",
+        "KR_01/03e24 :: Via G. Benassai, Crotone [39.06237304, 17.1103516]",
+        "KR_01/03e31 :: Via Turchia, Crotone [39.05962144, 17.11434949]",
+        "KR_01/03e32 :: Via Unione Europea, Crotone [39.06035463, 17.11849551]",
+        "KR_01/03e33 :: Via Nazioni Unite, Crotone [39.05925897, 17.11469242]",
+        "KR_01/03e34 :: Via Nazioni Unite, Crotone [39.05737633, 17.11569811]",
+        "KR_01/03e41 :: Via Cina, Crotone [39.05517904, 17.11648093]",
+        "KR_01/03e42 :: Via Groenlandia, Crotone [39.05543045, 17.11939548]",
+        "KR_01/03e43 :: Via Filippine, Crotone [39.0546187, 17.11425248]",
+        "KR_01/03e44 :: Via Nazioni Unite, Crotone [39.05337024, 17.11684742]",
+        "KR_01/03w11 :: Via Giovanni Paolo II, Crotone [39.08025819, 17.11077664]",
+        "KR_01/03w12 :: Via dei Greci, Crotone [39.07970956, 17.112394]",
+        "KR_01/03w13 :: Via dei Japigi, Crotone [39.07901144, 17.11073509]",
+        "KR_01/03w14 :: Via dei Greci, Crotone [39.07845445, 17.1107801]",
+        "KR_01/03w21 :: 1a Traversa Via Francesco Nigro, Crotone [39.07867444, 17.10759996]",
+        "KR_01/03w22 :: Via Giovanni Paolo II, Crotone [39.07751499, 17.10713048]",
+        "KR_01/03w23 :: Via Gioacchino da Fiore, Crotone [39.07644345, 17.1091983]",
+        "KR_01/03w24 :: Via Fausto Gullo, Crotone [39.07395805, 17.11171897]",
+        "KR_01/03w31 :: Via Giovanni Paolo II, Crotone [39.07561054, 17.10517827]",
+        "KR_01/03w32 :: Via Giovanni Paolo II, Crotone [39.07318366, 17.10393515]",
+        "KR_01/03w33 :: Via Pierpaolo Pasolini, Crotone [39.07379574, 17.10609341]",
+        "KR_01/03w34 :: Via Gioacchino da Fiore, Crotone [39.07090842, 17.11332433]",
+        "KR_01/03w41 :: San Paolo, Crotone [39.06669997, 17.11377458]",
+        "KR_01/03w42 :: Via Saffo, Crotone [39.06646469, 17.1166568]",
+        "KR_01/03w43 :: Via Antonio Scopelliti, Crotone [39.07484233, 17.11988156]",
+        "KR_01/03w44 :: Cooperative “Settembre 291”, Crotone [39.07380731, 17.11570936]"
+      ],
+      "Curinga": [
+        "D218_CNO1 :: ~Via F. Fiorentino, Curinga [38.83646409, 16.26478202]"
+      ],
+      "Cutro": [
+        "D236_CNO1 :: Via Roma, Cutro [38.94003976, 16.92513083]",
+        "D236_CNO2 :: Via Oslo, Cutro [38.93911529, 16.925225]",
+        "D236_CNO3 :: Via Mare Ionio, Cutro [38.93738732, 16.92534474]",
+        "D236_CNO4 :: Viale Foce Tacina, Cutro [38.93621502, 16.92003324]"
+      ],
+      "Davoli": [
+        "D257_CNO2 :: Via Votarelle, Davoli [38.6673655, 16.52227509]"
+      ],
+      "Destro": [
+        "E678_CNO3 :: Strada statale 177 Silana di Rossano, Destro [39.48771792, 16.69384464]",
+        "E678_CNO4 :: Via non definita, Destro [39.47886465, 16.70621792]"
+      ],
+      "Dipignano": [
+        "D304_CNO2 :: Contrada Pianette, Dipignano [39.24223481, 16.23848148]"
+      ],
+      "Domanico": [
+        "B802_CNO2 :: Cardili, Domanico [39.23184642, 16.20198751]"
+      ],
+      "Fabrizia": [
+        "D453_CNO1 :: Angilletta, Fabrizia [38.49609678, 16.28022859]"
+      ],
+      "Fagnano Castello": [
+        "D464_CNO1 :: Strada Provinciale 112 San Marco Argentano-Fagnano, Fagnano Castello [39.56007076, 16.08418758]"
+      ],
+      "Falconara Albanese": [
+        "D473_CNO2 :: Via non definita, Falconara Albanese [39.26391788, 16.07433047]",
+        "D473_CNO3 :: Contrada San Martino, Falconara Albanese [39.27172747, 16.05899729]",
+        "D473_CNO4 :: Via Pietro Mancini, Falconara Albanese [39.2745877, 16.08664478]"
+      ],
+      "Feroleto Antico": [
+        "E834_CNO3 :: ~Strada Provinciale 169/2 Complanare Destra, Feroleto Antico [38.89873829, 16.34363328]"
+      ],
+      "Filadelfia": [
+        "D587_CNO1 :: ~Viale Europa, Filadelfia [38.77914446, 16.28991873]"
+      ],
+      "Filandari": [
+        "D589_CNO2 :: Via Raffaele De Corné, Filandari [38.62334879, 16.022938]"
+      ],
+      "Filogaso": [
+        "E836_CNO2 :: ~SP4, Filogaso [38.70098521, 16.20168944]"
+      ],
+      "Fiumara": [
+        "D619_CNO1 :: Strada Provinciale 6 Villa San Giovanni - bivio per Gambarie, Fiumara [38.21104694, 15.69146151]"
+      ],
+      "Foresta": [
+        "G508_CNO2 :: Via Nazionale, Foresta [39.10208792, 16.81827029]",
+        "G508_CNO3 :: Via Nazionale, Foresta [39.10123159, 16.81591835]"
+      ],
+      "Francavilla Marittima": [
+        "D764_CNO1 :: Via non definita, Francavilla Marittima [39.796187, 16.42140454]"
+      ],
+      "Frascineto": [
+        "D774_CNO1 :: Via non definita, Frascineto [39.82177316, 16.2635576]"
+      ],
+      "Fuscaldo": [
+        "D828_CNO1 :: Strada Provinciale 30 Bivio Guardia-Bivio Fuscaldo, Fuscaldo [39.43895721, 16.00661868]",
+        "D828_CNO2 :: Cariglio, Fuscaldo [39.43482625, 16.01616877]",
+        "D828_CNO3 :: Cariglio, Fuscaldo [39.43972492, 16.00200096]",
+        "D828_CNO4 :: Piazza Don Giuseppe Gravina, Fuscaldo [39.4006332, 16.0271101]"
+      ],
+      "Gasponi": [
+        "D364_CNO1 :: C.da Samt'Angelo, Gasponi [38.66377489, 15.89453464]"
+      ],
+      "Gerace": [
+        "D975_CNO1 :: Strada Provinciale 80 Locri - Antonimina, Gerace [38.25747488, 16.20520323]",
+        "D975_CNO2 :: Zomino, Gerace [38.29137997, 16.18731913]"
+      ],
+      "Gerocarne": [
+        "D988_CNO1 :: Via non definita, Gerocarne [38.5617759, 16.24111991]"
+      ],
+      "Gimigliano": [
+        "E031_CNO1 :: Gimigliano inferiore, Gimigliano [38.975429, 16.53234013]"
+      ],
+      "Gioia Tauro": [
+        "E041_CNO1 :: Via Arturo Toscanini, Gioia Tauro [38.41449257, 15.89923316]",
+        "E041_CNO3 :: Via Guardiola, Gioia Tauro [38.44450884, 15.90879092]"
+      ],
+      "Gioiosa Ionica": [
+        "E044_CNO1 :: Strada Provinciale 5 Rosarno - Marina di Gioiosa Ionica, Gioiosa Ionica [38.33182985, 16.28724389]"
+      ],
+      "Girifalco": [
+        "E050_CNO1 :: ~Via Antonio Segni, Girifalco [38.82976867, 16.42893225]",
+        "E050_CNO2 :: SP172, Girifalco [38.82866898, 16.45083596]"
+      ],
+      "Gizzeria": [
+        "E068_CNO1 :: via Magellano, Gizzeria [38.96897251, 16.15210945]"
+      ],
+      "Grisolia": [
+        "E185_CNO1 :: ~Corso del Tirreno, Grisolia [39.73099354, 15.81053884]"
+      ],
+      "Grotteria": [
+        "E212_CNO2 :: Marmora, Grotteria [38.35151959, 16.27235193]",
+        "E212_CNO3 :: Marcinà Inferiore, Grotteria [38.30554228, 16.30215121]"
+      ],
+      "Guardia Piemontese": [
+        "E242_CNO1 :: Via Cristoforo Colombo, Guardia Piemontese [39.4658954, 15.97705514]"
+      ],
+      "Isca Marina": [
+        "E328_CNO1 :: ~SP133, Isca Marina [38.60498026, 16.54272454]"
+      ],
+      "Isola Di Capo Rizzuto": [
+        "E339_CNO1 :: Via Fiume Bonacce, Isola di Capo Rizzuto [38.90918463, 17.10011244]",
+        "E339_CNO2 :: Via Faro, Isola di Capo Rizzuto [38.90231758, 17.09749933]"
+      ],
+      "Jonadi": [
+        "E321_CNO8 :: ~Via Luigi Pirandello, Jonadi [38.65913945, 16.07222055]"
+      ],
+      "Joppolo": [
+        "E389_CNO1 :: San Bruno Melia, Joppolo [38.57291416, 15.90084513]"
+      ],
+      "Lago": [
+        "E407_CNO2 :: Greci di Lago, Lago [39.15584238, 16.11972276]",
+        "E407_CNO3 :: Greci di Lago, Lago [39.17522094, 16.13839269]"
+      ],
+      "Lamezia Terme": [
+        "CZ_02/01e11 :: Via Salvatore Scillìa, Lamezia Terme [38.95475137, 16.30226659]",
+        "CZ_02/01e12 :: Via Saverio D'Ippolito, Lamezia Terme [38.9560467, 16.30063885]",
+        "CZ_02/01e13 :: Via Senatore Arturo Perugini, Lamezia Terme [38.95867516, 16.30329514]",
+        "CZ_02/01e14 :: Sambiase, Lamezia Terme [38.96127221, 16.30719763]",
+        "CZ_02/01e21 :: Via Salvatore Foderaro, Lamezia Terme [38.95223271, 16.30574003]",
+        "CZ_02/01e22 :: Via dei Bizantini 97, Lamezia Terme [38.95494306, 16.30646441]",
+        "CZ_02/01e23 :: Via dei Bizantini, Lamezia Terme [38.95597546, 16.30844778]",
+        "CZ_02/01e24 :: Via dei Bizantini, Lamezia Terme [38.95757875, 16.30880086]",
+        "CZ_02/01e31 :: Via degli Itali, Lamezia Terme [38.95191816, 16.30931794]",
+        "CZ_02/01e32 :: Via degli Itali, Lamezia Terme [38.9534957, 16.31056836]",
+        "CZ_02/01e33 :: Via degli Itali, Lamezia Terme [38.95882489, 16.31333766]",
+        "CZ_02/01e34 :: Via Armando Scarpino, Lamezia Terme [38.96176582, 16.31265653]",
+        "CZ_02/01e41 :: Via Salvatore Foderaro, Lamezia Terme [38.95118324, 16.3132961]",
+        "CZ_02/01e42 :: Via dei Brutii, Lamezia Terme [38.95734203, 16.3141501]",
+        "CZ_02/01e43 :: Via Salvatore Foderaro, Lamezia Terme [38.95118024, 16.316562]",
+        "CZ_02/01e44 :: Via Salvatore Foderaro, Lamezia Terme [38.95087573, 16.32169218]",
+        "CZ_02/01w11 :: Via Pietro Nenni, Lamezia Terme [38.96328846, 16.31425764]",
+        "CZ_02/01w12 :: Via Generale Carlo Alberto Dalla Chiesa, Lamezia Terme [38.96589058, 16.31608896]",
+        "CZ_02/01w13 :: Via della Vittoria, Lamezia Terme [38.96374537, 16.31960227]",
+        "CZ_02/01w14 :: Magolà, Lamezia Terme [38.96121022, 16.3196635]",
+        "CZ_02/01w21 :: Via delle Viole, Lamezia Terme [38.95806487, 16.32545771]",
+        "CZ_02/01w22 :: Via Goffredo Malaterra, Lamezia Terme [38.96419683, 16.32156651]",
+        "CZ_02/01w23 :: Magolà, Lamezia Terme [38.96664389, 16.32298156]",
+        "CZ_02/01w24 :: Via del Progresso, Lamezia Terme [38.96336609, 16.32608289]",
+        "CZ_02/01w31 :: Via del Progresso, Lamezia Terme [38.9604515, 16.32941531]",
+        "CZ_02/01w32 :: Via del Progresso, Lamezia Terme [38.95931571, 16.33049764]",
+        "CZ_02/01w33 :: Via del Progresso, Lamezia Terme [38.95510647, 16.33126079]",
+        "CZ_02/01w34 :: Via del Progresso, Lamezia Terme [38.95202414, 16.33111312]",
+        "CZ_02/01w41 :: Via Aurelio Cassiodoro, Lamezia Terme [38.94932062, 16.33229969]",
+        "CZ_02/01w42 :: Via del Progresso, Lamezia Terme [38.94761382, 16.33028348]",
+        "CZ_02/01w43 :: Via Roberto il Guiscardo, Lamezia Terme [38.9505635, 16.32646641]",
+        "CZ_02/01w44 :: Via Roberto il Guiscardo, Lamezia Terme [38.95522214, 16.32287835]",
+        "CZ_02/02e11 :: Via Leonardo da Vinci, Lamezia Terme [38.96821105, 16.31927074]",
+        "CZ_02/02e12 :: Corso Giovanni Nicotera 225, Lamezia Terme [38.96869104, 16.31982941]",
+        "CZ_02/02e13 :: Via dei Campioni, Lamezia Terme [38.96881054, 16.32100701]",
+        "CZ_02/02e14 :: Via Francesco Colelli, Lamezia Terme [38.96938109, 16.32208148]",
+        "CZ_02/02e21 :: Viale Primo Maggio, Lamezia Terme [38.9703994, 16.32095087]",
+        "CZ_02/02e22 :: Via Antonio Misiani, Lamezia Terme [38.970306, 16.31952984]",
+        "CZ_02/02e23 :: Via Crati 17, Lamezia Terme [38.96974346, 16.31868452]",
+        "CZ_02/02e24 :: Via Federico Nicotera, Lamezia Terme [38.9689744, 16.31755098]",
+        "CZ_02/02e31 :: Via Sele, Lamezia Terme [38.97074474, 16.31868381]",
+        "CZ_02/02e32 :: Via Alessandro Volta 1, Lamezia Terme [38.97027565, 16.31747801]",
+        "CZ_02/02e33 :: Via Adda, Lamezia Terme [38.97101209, 16.31745472]",
+        "CZ_02/02e34 :: Piazza della Repubblica, Lamezia Terme [38.97034999, 16.31570515]",
+        "CZ_02/02e41 :: Via Carlo Ardito, Lamezia Terme [38.97216821, 16.31565441]",
+        "CZ_02/02e42 :: Via Filippo Turati, Lamezia Terme [38.97279794, 16.31711877]",
+        "CZ_02/02e43 :: Via Po, Lamezia Terme [38.97212171, 16.31835359]",
+        "CZ_02/02e44 :: Via Po, Lamezia Terme [38.97223523, 16.31986148]",
+        "CZ_02/02w11 :: Magolà, Lamezia Terme [38.97595774, 16.31316806]",
+        "CZ_02/02w12 :: Magolà, Lamezia Terme [38.97672123, 16.3123016]",
+        "CZ_02/02w13 :: Magolà, Lamezia Terme [38.97591737, 16.31486435]",
+        "CZ_02/02w14 :: Via Conforti, Lamezia Terme [38.9760089, 16.31676821]",
+        "CZ_02/02w21 :: Via Conforti, Lamezia Terme [38.97626249, 16.31694145]",
+        "CZ_02/02w22 :: Via Calvario, Lamezia Terme [38.9782515, 16.31929645]",
+        "CZ_02/02w23 :: SP159/1, Lamezia Terme [38.9803602, 16.32130205]",
+        "CZ_02/02w24 :: SP159/1, Lamezia Terme [38.98223416, 16.32302725]",
+        "CZ_02/02w31 :: Magolà, Lamezia Terme [38.97660602, 16.32083656]",
+        "CZ_02/02w32 :: Via Conforti, Lamezia Terme [38.97651424, 16.31915986]",
+        "CZ_02/02w33 :: Magolà, Lamezia Terme [38.97761604, 16.321552]",
+        "CZ_02/02w34 :: Magolà, Lamezia Terme [38.97864613, 16.32179222]",
+        "CZ_02/02w41 :: Via Giosuè Carducci, Lamezia Terme [38.97477394, 16.32004216]",
+        "CZ_02/02w42 :: Corso Numistrano 25, Lamezia Terme [38.9752418, 16.31954582]",
+        "CZ_02/02w43 :: Magolà, Lamezia Terme [38.97406252, 16.31805112]",
+        "CZ_02/02w44 :: Via Antonio D'Ippolito, Lamezia Terme [38.97469843, 16.31827253]",
+        "CZ_02/03e11 :: Via Aldo Moro, Lamezia Terme [38.96860157, 16.31377534]",
+        "CZ_02/03e12 :: Via Cristoforo Colombo, Lamezia Terme [38.97012909, 16.3136056]",
+        "CZ_02/03e13 :: Via Giuseppe Tomaino, Lamezia Terme [38.96969349, 16.31113908]",
+        "CZ_02/03e14 :: Via Aldo Moro, Lamezia Terme [38.96888438, 16.31063765]",
+        "CZ_02/03e21 :: Piazza Elvidio Borelli, Lamezia Terme [38.97136904, 16.31389526]",
+        "CZ_02/03e22 :: Magolà, Lamezia Terme [38.97262343, 16.31560673]",
+        "CZ_02/03e23 :: Via Santa Maria Maggiore, Lamezia Terme [38.97351375, 16.31490579]",
+        "CZ_02/03e24 :: Via Fabio Filzi, Lamezia Terme [38.97440365, 16.31510544]",
+        "CZ_02/03e31 :: Magolà, Lamezia Terme [38.97167695, 16.31197211]",
+        "CZ_02/03e32 :: Via Calatafimi, Lamezia Terme [38.97206053, 16.31133913]",
+        "CZ_02/03e33 :: Via Calabria, Lamezia Terme [38.97311523, 16.31026451]",
+        "CZ_02/03e34 :: Via Carnia, Lamezia Terme [38.97481011, 16.30613639]",
+        "CZ_02/03e41 :: Via Basilicata, Lamezia Terme [38.97281243, 16.30815577]",
+        "CZ_02/03e42 :: Via Santa Maria Delle Grazie, Lamezia Terme [38.97369084, 16.30589859]",
+        "CZ_02/03e43 :: Via Santa Maria Delle Grazie, Lamezia Terme [38.97349071, 16.3055126]",
+        "CZ_02/03e44 :: Via Campania, Lamezia Terme [38.97292936, 16.30529371]",
+        "CZ_02/03w11 :: Sambiase, Lamezia Terme [38.96613014, 16.29488192]",
+        "CZ_02/03w12 :: Via Guglielmo Marconi, Lamezia Terme [38.96786989, 16.30074434]",
+        "CZ_02/03w13 :: Via Guglielmo Marconi, Lamezia Terme [38.96552146, 16.29250865]",
+        "CZ_02/03w14 :: Sambiase, Lamezia Terme [38.96567059, 16.28894753]",
+        "CZ_02/03w21 :: Sambiase, Lamezia Terme [38.96678852, 16.31016042]",
+        "CZ_02/03w22 :: Via Salvatore Miceli, Lamezia Terme [38.96532442, 16.31009941]",
+        "CZ_02/03w23 :: Via Isaac Newton, Lamezia Terme [38.96614626, 16.30442222]",
+        "CZ_02/03w24 :: Via Guglielmo Marconi, Lamezia Terme [38.96806709, 16.30195228]",
+        "CZ_02/03w31 :: Via Guglielmo Marconi, Lamezia Terme [38.96976351, 16.30946992]",
+        "CZ_02/03w32 :: Via Aldo Moro, Lamezia Terme [38.96834549, 16.31027267]",
+        "CZ_02/03w33 :: Via Guglielmo Marconi 135, Lamezia Terme [38.96917192, 16.30826714]",
+        "CZ_02/03w34 :: Via Isaac Newton, Lamezia Terme [38.9690295, 16.30647842]",
+        "CZ_02/03w41 :: Via Monsignor Francesco Maiolo, Lamezia Terme [38.97062585, 16.30896244]",
+        "CZ_02/03w42 :: Via Duca d'Aosta, Lamezia Terme [38.97130074, 16.30912458]",
+        "CZ_02/03w43 :: Via Gioacchino da Fiore, Lamezia Terme [38.97179359, 16.30524204]",
+        "CZ_02/03w44 :: Via Gioacchino da Fiore, Lamezia Terme [38.97233645, 16.30553527]",
+        "CZ_02/04e11 :: Via dei Patrioti Sambiasini, Lamezia Terme [38.96604308, 16.28618025]",
+        "CZ_02/04e12 :: Sambiase, Lamezia Terme [38.96709402, 16.28599853]",
+        "CZ_02/04e13 :: Sambiase, Lamezia Terme [38.96750283, 16.28587688]",
+        "CZ_02/04e14 :: Sambiase, Lamezia Terme [38.96861329, 16.28474236]",
+        "CZ_02/04e21 :: Via Guglielmo Marconi, Lamezia Terme [38.9663507, 16.2842824]",
+        "CZ_02/04e22 :: Via Matteotti, Lamezia Terme [38.96758061, 16.28353404]",
+        "CZ_02/04e23 :: Piazza Botticelli, Lamezia Terme [38.96661136, 16.28227715]",
+        "CZ_02/04e24 :: Via Francesco Fiorentino, Lamezia Terme [38.96797173, 16.28225042]",
+        "CZ_02/04e31 :: Via Petrarca, Lamezia Terme [38.96835474, 16.28161407]",
+        "CZ_02/04e32 :: Via Salvator Rosa, Lamezia Terme [38.96816323, 16.28003288]",
+        "CZ_02/04e33 :: Via Cataldi già Anzaro, Lamezia Terme [38.96773742, 16.2794294]",
+        "CZ_02/04e34 :: Via D'Audino, Lamezia Terme [38.96574713, 16.27902529]",
+        "CZ_02/04e41 :: Sambiase, Lamezia Terme [38.96464802, 16.27771572]",
+        "CZ_02/04e42 :: Via Marzabotto, Lamezia Terme [38.96495671, 16.27695119]",
+        "CZ_02/04e43 :: Sambiase, Lamezia Terme [38.96442464, 16.27411354]",
+        "CZ_02/04e44 :: Via delle Terme, Lamezia Terme [38.96342466, 16.27484457]",
+        "CZ_02/04w11 :: Via Andrea Mantegna, Lamezia Terme [38.95336259, 16.28224911]",
+        "CZ_02/04w12 :: Via Coschi, Lamezia Terme [38.95571538, 16.28622229]",
+        "CZ_02/04w13 :: Via Arturo Toscanini, Lamezia Terme [38.95519071, 16.28502507]",
+        "CZ_02/04w14 :: Sambiase, Lamezia Terme [38.95863665, 16.28971105]",
+        "CZ_02/04w21 :: Sambiase, Lamezia Terme [38.95754112, 16.28115245]",
+        "CZ_02/04w22 :: Via Francesco Cilea, Lamezia Terme [38.95688116, 16.28302364]",
+        "CZ_02/04w23 :: Via Pane, Lamezia Terme [38.96161747, 16.28617779]",
+        "CZ_02/04w24 :: Via Pane, Lamezia Terme [38.96168364, 16.28597055]",
+        "CZ_02/04w31 :: Via Settembrini, Lamezia Terme [38.96306986, 16.28355594]",
+        "CZ_02/04w32 :: Via Don Sturzo, Lamezia Terme [38.9639494, 16.28574928]",
+        "CZ_02/04w33 :: Via Giustiniano Porchio, Lamezia Terme [38.96273606, 16.28084446]",
+        "CZ_02/04w34 :: Via Martiri di Nassirya, Lamezia Terme [38.96286553, 16.27844626]",
+        "CZ_02/04w41 :: Via Settembrini, Lamezia Terme [38.96513572, 16.28316548]",
+        "CZ_02/04w42 :: Via Sposato, Lamezia Terme [38.96560166, 16.28279692]",
+        "CZ_02/04w43 :: Sambiase, Lamezia Terme [38.96484366, 16.28140388]",
+        "CZ_02/04w44 :: Via Palermo, Lamezia Terme [38.96434035, 16.28259943]",
+        "CZ_02/05w11 :: Piano Luppino, Lamezia Terme [38.97106567, 16.28158535]",
+        "CZ_02/05w12 :: Vico I Cavour, Lamezia Terme [38.96886803, 16.28026406]",
+        "CZ_02/05w13 :: Via Cavour, Lamezia Terme [38.96906463, 16.27952622]",
+        "M208_CNO1 :: Via non definita, Lamezia Terme [38.87436547, 16.24569847]",
+        "M208_CNO14 :: Cafarone, Lamezia Terme [38.90037354, 16.22300764]",
+        "M208_CNO19 :: Lungomare Falcone Borsellino, Lamezia Terme [38.92217772, 16.22033844]",
+        "M208_CNO20 :: Cantarelle, Lamezia Terme [39.00491406, 16.2513405]",
+        "M208_CNO22 :: Mitoio, Lamezia Terme [38.99299986, 16.2536686]",
+        "M208_CNO23 :: Zangarona, Lamezia Terme [38.98269814, 16.34979224]",
+        "M208_CNO24 :: Mitoio, Lamezia Terme [38.98970463, 16.23999003]",
+        "M208_CNO27 :: Cafarone, Lamezia Terme [38.90065136, 16.22671715]",
+        "M208_CNO28 :: Via Rinaldo Miceli, Lamezia Terme [38.92495932, 16.22345995]",
+        "M208_CNO29 :: Zangarona, Lamezia Terme [38.9698061, 16.34628095]",
+        "M208_CNO30 :: SP78, Lamezia Terme [38.96993044, 16.34298949]",
+        "M208_CNO31 :: Via Rinaldo Miceli, Lamezia Terme [38.92494347, 16.22339082]",
+        "M208_CNO32 :: Marinella, Lamezia Terme [38.9282896, 16.2192787]",
+        "M208_CNO4 :: Zangarona, Lamezia Terme [38.97908587, 16.34687375]",
+        "M208_CNO5 :: Zangarona, Lamezia Terme [38.98211384, 16.3494228]",
+        "M208_CNO7 :: Vonio, Lamezia Terme [38.98571428, 16.24145826]",
+        "M208_CNO8 :: Loc. Prato, Lamezia Terme [38.86734005, 16.26565105]"
+      ],
+      "Lattarico": [
+        "E475_CNO1 :: Strada Provinciale 241 ex SS19 delle Calabrie, Lattarico [39.43942225, 16.22005157]",
+        "E475_CNO2 :: Strada Provinciale 241 ex SS19 delle Calabrie, Lattarico [39.43906626, 16.2102096]"
+      ],
+      "Laureana Di Borrello": [
+        "E479_CNO1 :: Via Monte Rosa, Laureana di Borrello [38.49312034, 16.08660144]"
+      ],
+      "Laurignano": [
+        "D304_CNO3 :: ~Strada Provinciale 79 Cosenza Paterno, Laurignano [39.28709845, 16.24554234]"
+      ],
+      "Lenticchia": [
+        "G439_CNO1 :: Via non definita, Lenticchia [38.96616889, 16.57763019]"
+      ],
+      "Limbadi": [
+        "E590_CNO1 :: Motta Filocastro, Limbadi [38.57241876, 15.9749033]"
+      ],
+      "Locri": [
+        "D976_CNO1 :: Via Dromo, Locri [38.24172655, 16.25547947]",
+        "D976_CNO2 :: Contrada Moschetta, Locri [38.22320664, 16.22808975]"
+      ],
+      "Longobardi": [
+        "E677_CNO1 :: Frailiti di Longobardi, Longobardi [39.20225384, 16.06584598]",
+        "E677_CNO2 :: Frailiti di Longobardi, Longobardi [39.20272803, 16.06236647]"
+      ],
+      "Longobucco": [
+        "E678_CNO1 :: Strada statale 177 Silana di Rossano, Longobucco [39.41237589, 16.5422981]"
+      ],
+      "Lungro": [
+        "E745_CNO1 :: ~Via Michele Rio, Lungro [39.7284075, 16.14155996]"
+      ],
+      "Luzzi": [
+        "E773_CNO1 :: Contrada Lipetrini, Luzzi [39.46916305, 16.24509262]"
+      ],
+      "Macchia Albanese": [
+        "H818_CNO1 :: Via Francesco Petrarca, Macchia Albanese [39.57669362, 16.36720917]"
+      ],
+      "Maida": [
+        "E834_CNO1 :: Strada Statale 280 dei Due Mari, Maida [38.90564973, 16.40294665]",
+        "E834_CNO2 :: SP90, Maida [38.84724288, 16.36215862]"
+      ],
+      "Malvito": [
+        "E872_CNO1 :: Strada Provinciale 116 Malvito Ponte Rosa, Malvito [39.61235802, 16.06582376]"
+      ],
+      "Mammola": [
+        "E873_CNO1 :: Contrada San Todaro, Mammola [38.33504258, 16.20648015]",
+        "E873_CNO2 :: San Filippo, Mammola [38.34238938, 16.19146222]"
+      ],
+      "Mandatoriccio": [
+        "E878_CNO1 :: ~Strada Statale 106 Jonica, Mandatoriccio [39.53807088, 16.86639385]",
+        "E878_CNO3 :: ~Strada Provinciale 205 exSS383 di Mandatoriccio, Mandatoriccio [39.51572481, 16.8872178]"
+      ],
+      "Mangone": [
+        "E888_CNO1 :: Via non definita, Mangone [39.20233596, 16.31669321]"
+      ],
+      "Mannoli": [
+        "I371_CNO1 :: Via San Marino Traversa 1, Mannoli [38.17359014, 15.8045549]",
+        "I371_CNO2 :: Largo Mortaro, Mannoli [38.17200567, 15.78590778]",
+        "I371_CNO3 :: Strada Statale 184 delle Gambarie, Mannoli [38.16721121, 15.77699753]"
+      ],
+      "Marano Marchesato": [
+        "E914_CNO1 :: ~Strada Provinciale 86 Bivio Boschi Ponte Canaletta, Marano Marchesato [39.31847278, 16.1785064]",
+        "E914_CNO2 :: Via dei Gasparoni, Marano Marchesato [39.3049891, 16.17199941]"
+      ],
+      "Marano Principato": [
+        "E915_CNO1 :: Via San Nicola, Marano Principato [39.29487882, 16.17811983]"
+      ],
+      "Marina Di Caulonia": [
+        "C285_CNO2 :: Via Ente Sila, Marina di Caulonia [38.34450511, 16.461512]",
+        "C285_CNO8 :: Via Pitagora, Marina di Caulonia [38.34082441, 16.45406279]"
+      ],
+      "Marina Di Davoli": [
+        "D257_CNO3 :: Case Santa Tecla, Marina di Davoli [38.66567779, 16.54068043]"
+      ],
+      "Marina Di Gioiosa Ionica": [
+        "E956_CNO1 :: Strada Circhetto, Marina di Gioiosa Ionica [38.30757102, 16.30872435]"
+      ],
+      "Marina Di Roseto Capo Spulico": [
+        "H572_CNO2 :: Via non definita, Marina di Roseto Capo Spulico [39.97805465, 16.61041375]",
+        "H572_CNO3 :: Via non definita, Marina di Roseto Capo Spulico [39.97882952, 16.60725992]"
+      ],
+      "Marina Di Strongoli": [
+        "I982_CNO5 :: Via Stazione, Marina di Strongoli [39.22812537, 17.10673316]"
+      ],
+      "Marzi": [
+        "F001_CNO1 :: ~Strada Provinciale 241 ex SS19 delle Calabrie, Marzi [39.1757719, 16.31168658]"
+      ],
+      "Masella": [
+        "D746_CNO1 :: Strada Provinciale 22 Sant'Elia - Fossato, Masella [37.93892512, 15.7431574]"
+      ],
+      "Melicucco": [
+        "F106_CNO1 :: ~Strada Provinciale 5 Rosarno - Marina di Gioiosa Ionica, Melicucco [38.45626121, 16.03305092]"
+      ],
+      "Melissa": [
+        "F108_CNO4 :: Strada Provinciale 12 Del Vino, Melissa [39.30685668, 17.02403357]"
+      ],
+      "Melito Di Porto Salvo": [
+        "F112_CNO1 :: Via Crimameno, Melito di Porto Salvo [37.94928996, 15.76094988]",
+        "F112_CNO2 :: Strada Statale 106 Jonica, Melito di Porto Salvo [37.93004644, 15.74949275]"
+      ],
+      "Mercuri Tedesco": [
+        "D261_CNO1 :: SP159/1, Mercuri Tedesco [39.04691446, 16.33813908]"
+      ],
+      "Mesoraca": [
+        "F157_CNO1 :: Villaggio Fratta, Mesoraca [39.10032205, 16.70102049]"
+      ],
+      "Mirto": [
+        "D184_CNO1 :: ~Strada Statale 106 Jonica, Mirto [39.59011139, 16.81203078]"
+      ],
+      "Molarotta": [
+        "I896_CNO3 :: ~Strada statale 177 Silana di Rossano, Molarotta [39.35072748, 16.47130069]"
+      ],
+      "Monasterace Marina": [
+        "F324_CNO1 :: ~Via Lambrosi B, Monasterace Marina [38.43153982, 16.56343991]"
+      ],
+      "Montalto Uffugo": [
+        "F416_CNO1 :: ~Autostrada del Mediterraneo, Montalto Uffugo [39.42036602, 16.24185991]",
+        "F416_CNO2 :: Via Insidia, Montalto Uffugo [39.42982579, 16.22010879]",
+        "F416_CNO3 :: Via Aristide De Napoli, Montalto Uffugo [39.43118407, 16.20198486]"
+      ],
+      "Montegiordano": [
+        "F519_CNO1 :: ~Lungomare Giorgio Liguori, Montegiordano [40.03197003, 16.60154011]"
+      ],
+      "Montepaone Lido": [
+        "F586_CNO3 :: Via Filippo Turati, Montepaone Lido [38.71927533, 16.52978969]"
+      ],
+      "Morano Calabro": [
+        "F708_CNO2 :: Via non definita, Morano Calabro [39.8561188, 16.14520812]"
+      ],
+      "Mormanno": [
+        "F735_CNO1 :: Via non definita, Mormanno [39.87811796, 16.00814825]",
+        "F735_CNO2 :: Via non definita, Mormanno [39.90144519, 15.99286103]"
+      ],
+      "Motta San Giovanni": [
+        "F779_CNO2 :: Valanidi, Motta San Giovanni [38.04266823, 15.72110659]",
+        "F779_CNO4 :: Via San Giorgio, Motta San Giovanni [38.0060878, 15.70663651]"
+      ],
+      "Nicotera": [
+        "F893_CNO1 :: Britto, Nicotera [38.56972406, 15.92628721]",
+        "F893_CNO2 :: Nicotera Marina, Nicotera [38.54482759, 15.94753272]"
+      ],
+      "Nocera Terinese": [
+        "F910_CNO1 :: Strada Provinciale 163/1 Torrente Torbido-Bivio Bagni 74, Nocera Terinese [39.02785431, 16.14964618]"
+      ],
+      "Oppido Mamertina": [
+        "G082_CNO3 :: Via Piliere, Oppido Mamertina [38.29386553, 15.98168347]"
+      ],
+      "Oriolo": [
+        "G110_CNO1 :: Strada Comunale Sella Salice, Oriolo [40.06549327, 16.44205722]"
+      ],
+      "Palizzi Marina": [
+        "G277_CNO2 :: Via Argine Sinistro, Palizzi Marina [37.920183, 15.98212246]"
+      ],
+      "Palmi": [
+        "G288_CNO1 :: Strada Provinciale Palmi - Taurianova, Palmi [38.37160682, 15.88462183]",
+        "G288_CNO2 :: Largo Spinelli, Palmi [38.39801673, 15.86552849]",
+        "I600_CNO1 :: Via non definita, Palmi [38.35666971, 15.86932113]"
+      ],
+      "Panetti": [
+        "G734_CNO2 :: Via Bonadio, Panetti [39.01131439, 16.32353179]"
+      ],
+      "Panettieri": [
+        "G307_CNO1 :: ~Strada Provinciale 71 Carlopoli-Fosso Nero, Panettieri [39.06780997, 16.45784007]"
+      ],
+      "Pannaconi": [
+        "C581_CNO1 :: Piana Pugliese, Pannaconi [38.67616652, 16.04400398]"
+      ],
+      "Paola": [
+        "G317_CNO1 :: Via non definita, Paola [39.33158072, 16.05252138]",
+        "G317_CNO2 :: Via non definita, Paola [39.33127394, 16.05100259]"
+      ],
+      "Paravati": [
+        "F207_CNO1 :: SP78, Paravati [38.59136749, 16.05647292]"
+      ],
+      "Parghelia": [
+        "G335_CNO1 :: Fitili, Parghelia [38.67511191, 15.93071586]"
+      ],
+      "Pedace": [
+        "M385_CNO3 :: Strada Provinciale 226 Bivio Casole Pietrafitta, Pedace [39.27895314, 16.33704913]"
+      ],
+      "Petronà": [
+        "G518_CNO1 :: Via non definita, Petronà [39.0372651, 16.76180068]"
+      ],
+      "Pianetto": [
+        "C515_CNO1 :: ~Via dell'Incontro, Pianetto [39.28855426, 16.19567764]"
+      ],
+      "Pietra": [
+        "G734_CNO1 :: Sambate, Pietra [39.01076992, 16.28886424]"
+      ],
+      "Pino Grande": [
+        "I468_CNO1 :: Strada Provinciale 255 ex SS282 delle Fossiate, Pino Grande [39.32527579, 16.75192754]",
+        "I468_CNO2 :: Strada Provinciale 255 ex SS282 delle Fossiate, Pino Grande [39.32110108, 16.75295656]"
+      ],
+      "Pirillo": [
+        "F125_CNO6 :: Muoio, Pirillo [39.2911782, 16.22430512]"
+      ],
+      "Pizzo": [
+        "G722_CNO1 :: Via Nazionale, Pizzo [38.73907617, 16.17899087]"
+      ],
+      "Platì": [
+        "G735_CNO1 :: Cirella, Platì [38.2013168, 16.07678901]"
+      ],
+      "Polia": [
+        "G785_CNO1 :: Lia, Polia [38.76267336, 16.3248582]"
+      ],
+      "Praia A Mare": [
+        "G975_CNO1 :: Via Giosuè Carducci, Praia a Mare [39.90721767, 15.78539387]",
+        "G975_CNO2 :: Via della Canaletta, Praia a Mare [39.91196408, 15.78886426]"
+      ],
+      "Reggio Calabria": [
+        "H224_CNO1 :: ~Via Reggio Campi II Tronco, Reggio Calabria [38.10868896, 15.67160426]",
+        "H224_CNO10 :: Strada Provinciale 7 Gallico Marina-Gambarie, Reggio Calabria [38.16946734, 15.68873173]",
+        "H224_CNO11 :: Ravagnese, Reggio Calabria [38.0986709, 15.65975497]",
+        "H224_CNO12 :: SP10, Reggio Calabria [38.11251942, 15.67558292]",
+        "H224_CNO13 :: Via San Cristoforo, Reggio Calabria [38.10149924, 15.67600258]",
+        "H224_CNO15 :: Pettogallico, Reggio Calabria [38.1801795, 15.69298424]",
+        "H224_CNO16 :: ~Via Eremo Botte, Reggio Calabria [38.11376711, 15.67104959]",
+        "H224_CNO17 :: Via Reggio Campi II Tronco, Reggio Calabria [38.10863488, 15.67286633]",
+        "H224_CNO18 :: Sala di Mosorrofa, Reggio Calabria [38.10285065, 15.67856858]",
+        "H224_CNO19 :: Via Reggio Campi II Tronco, Reggio Calabria [38.10735136, 15.6699898]",
+        "H224_CNO2 :: Via Spirito Santo, Reggio Calabria [38.1028005, 15.67513178]",
+        "H224_CNO20 :: Via Vallone Marianazzo, Reggio Calabria [38.11016907, 15.66880678]",
+        "H224_CNO21 :: Trizzino, Reggio Calabria [38.12208349, 15.71184074]",
+        "H224_CNO22 :: Ravagnese, Reggio Calabria [38.11259113, 15.66255767]",
+        "H224_CNO23 :: ~Via Cardinale Portanova, Reggio Calabria [38.11420773, 15.66832845]",
+        "H224_CNO24 :: Mancuso, Reggio Calabria [38.17873447, 15.69027507]",
+        "H224_CNO26 :: Via Cardinale Portanova, Reggio Calabria [38.11558787, 15.66341622]",
+        "H224_CNO28 :: Ravagnese, Reggio Calabria [38.09839648, 15.67040896]",
+        "H224_CNO29 :: Via San Sperato Mosorrota, Reggio Calabria [38.09738547, 15.67710675]",
+        "H224_CNO3 :: Strada Provinciale 11 Bivio Sant'Angelo - Podargoni, Reggio Calabria [38.16114349, 15.7515672]",
+        "H224_CNO30 :: San Giovanni di Sambatello, Reggio Calabria [38.16986283, 15.6872039]",
+        "H224_CNO31 :: ~Via Eremo Botte, Reggio Calabria [38.11695399, 15.6703377]",
+        "H224_CNO32 :: Via Eremo Botte, Reggio Calabria [38.11696899, 15.66706751]",
+        "H224_CNO33 :: Ravagnese, Reggio Calabria [38.09591751, 15.66468278]",
+        "H224_CNO34 :: Via Maria Ausiliatrice, Reggio Calabria [38.09343115, 15.6620011]",
+        "H224_CNO35 :: Via San Sperato Strada Vecchia, Reggio Calabria [38.09498301, 15.66169475]",
+        "H224_CNO36 :: Ravagnese, Reggio Calabria [38.09755299, 15.66867232]",
+        "H224_CNO37 :: Ravagnese, Reggio Calabria [38.09699428, 15.67799223]",
+        "H224_CNO38 :: Via Cardinale Portanova, Reggio Calabria [38.11513049, 15.66467624]",
+        "H224_CNO39 :: ~Via Eremo Botte, Reggio Calabria [38.11784118, 15.67386556]",
+        "H224_CNO40 :: Ravagnese, Reggio Calabria [38.09769582, 15.67274986]",
+        "H224_CNO42 :: Via delle Stelle, Reggio Calabria [38.09674748, 15.66066726]",
+        "H224_CNO43 :: Ravagnese, Reggio Calabria [38.09651968, 15.66736166]",
+        "H224_CNO44 :: Ravagnese, Reggio Calabria [38.1037793, 15.66591187]",
+        "H224_CNO45 :: SP10, Reggio Calabria [38.12013396, 15.71257863]",
+        "H224_CNO46 :: Trizzino, Reggio Calabria [38.12423963, 15.71031795]",
+        "H224_CNO49 :: Strada Provinciale 11 Bivio Sant'Angelo - Podargoni, Reggio Calabria [38.16421935, 15.76060388]",
+        "H224_CNO5 :: Via non definita, Reggio Calabria [38.1085043, 15.66934413]",
+        "H224_CNO50 :: Via San Cristoforo, Reggio Calabria [38.10275357, 15.66981861]",
+        "H224_CNO51 :: Vico Salemi, Reggio Calabria [38.10404689, 15.66257725]",
+        "H224_CNO52 :: ~Via Sant'Anna, Reggio Calabria [38.10353326, 15.66818276]",
+        "H224_CNO53 :: Casale, Reggio Calabria [38.04738764, 15.70734738]",
+        "H224_CNO54 :: Casale, Reggio Calabria [38.04635457, 15.75293503]",
+        "H224_CNO55 :: Casale, Reggio Calabria [38.04637015, 15.71366933]",
+        "H224_CNO56 :: Santa Venere-Portella, Reggio Calabria [38.0579119, 15.75673576]",
+        "H224_CNO57 :: Straorino, Reggio Calabria [38.1367251, 15.74137685]",
+        "H224_CNO58 :: Arasì, Reggio Calabria [38.15080658, 15.72955855]",
+        "H224_CNO59 :: Straorino, Reggio Calabria [38.13250952, 15.74751797]",
+        "H224_CNO6 :: Ravagnese, Reggio Calabria [38.11312876, 15.66545397]",
+        "H224_CNO60 :: Via non definita, Reggio Calabria [38.13616819, 15.82418973]",
+        "H224_CNO62 :: Gallico Marina, Reggio Calabria [38.16952544, 15.6422008]",
+        "H224_CNO63 :: Straorino, Reggio Calabria [38.14015042, 15.73654771]",
+        "H224_CNO7 :: ~Via Reggio Campi II Tronco, Reggio Calabria [38.10784898, 15.67505413]",
+        "H224_CNO8 :: ~Via Spirito Santo, Reggio Calabria [38.1041917, 15.67038456]",
+        "H224_CNO9 :: Via Reggio Campi II Tronco, Reggio Calabria [38.10738648, 15.6669204]",
+        "RC_01/01e11 :: Via Pio XI, Reggio Calabria [38.09928962, 15.64981685]",
+        "RC_01/01e12 :: Via Fortunato Saccà, Reggio Calabria [38.09956981, 15.64794072]",
+        "RC_01/01e13 :: Ravagnese, Reggio Calabria [38.09963173, 15.64874075]",
+        "RC_01/01e14 :: Vico Petrillina, Reggio Calabria [38.09639002, 15.64881109]",
+        "RC_01/01e21 :: Viale Europa, Reggio Calabria [38.0942489, 15.6467895]",
+        "RC_01/01e22 :: Ravagnese, Reggio Calabria [38.09230255, 15.64707067]",
+        "RC_01/01e23 :: Ravagnese, Reggio Calabria [38.09105678, 15.64555921]",
+        "RC_01/01e24 :: Ravagnese, Reggio Calabria [38.09130998, 15.64813934]",
+        "RC_01/01e31 :: Via Calveri, Reggio Calabria [38.08862775, 15.64508287]",
+        "RC_01/01e32 :: Viale Laboccetta, Reggio Calabria [38.0874956, 15.64647869]",
+        "RC_01/01e33 :: Via Sbarre Centrali, Reggio Calabria [38.08637742, 15.64601934]",
+        "RC_01/01e34 :: Via San Giuseppe, Reggio Calabria [38.08546535, 15.64664337]",
+        "RC_01/01e41 :: Via Ferruccio, Reggio Calabria [38.08548867, 15.64705727]",
+        "RC_01/01e42 :: Ravagnese, Reggio Calabria [38.08633494, 15.64939433]",
+        "RC_01/01e43 :: Ravagnese, Reggio Calabria [38.08742822, 15.64959534]",
+        "RC_01/01e44 :: Ravagnese, Reggio Calabria [38.08673785, 15.65086933]",
+        "RC_01/01w11 :: via Boschicello, Reggio Calabria [38.09864634, 15.6546047]",
+        "RC_01/01w12 :: via Boschicello, Reggio Calabria [38.09854131, 15.65266598]",
+        "RC_01/01w13 :: Via Monsignor Antonio Lanza, Reggio Calabria [38.0977268, 15.65061024]",
+        "RC_01/01w14 :: Ravagnese, Reggio Calabria [38.09744904, 15.65165187]",
+        "RC_01/01w21 :: Via Pio XI, Reggio Calabria [38.09473729, 15.65111347]",
+        "RC_01/01w22 :: Via Ciccarello, Reggio Calabria [38.09338957, 15.65139061]",
+        "RC_01/01w23 :: Via Modena, Reggio Calabria [38.09410971, 15.65250387]",
+        "RC_01/01w24 :: Via San Sperato, Reggio Calabria [38.09414528, 15.65728181]",
+        "RC_01/01w31 :: Ravagnese, Reggio Calabria [38.09208512, 15.65174635]",
+        "RC_01/01w32 :: Ravagnese, Reggio Calabria [38.09291275, 15.65398201]",
+        "RC_01/01w33 :: Ravagnese, Reggio Calabria [38.09348376, 15.65476257]",
+        "RC_01/01w34 :: Via Modena, Reggio Calabria [38.09143691, 15.65781953]",
+        "RC_01/01w41 :: Ravagnese, Reggio Calabria [38.0906721, 15.65207945]",
+        "RC_01/01w42 :: Via Ciccarello, Reggio Calabria [38.08901215, 15.65343412]",
+        "RC_01/01w43 :: Via Calveri, Reggio Calabria [38.08917949, 15.64986125]",
+        "RC_01/01w44 :: Ravagnese, Reggio Calabria [38.08750283, 15.65452097]",
+        "RC_01/02e11 :: Via Pio XI, Reggio Calabria [38.10009782, 15.64555409]",
+        "RC_01/02e12 :: Via Pio XI 94, Reggio Calabria [38.10009837, 15.64712582]",
+        "RC_01/02e13 :: Ravagnese, Reggio Calabria [38.10049969, 15.64404292]",
+        "RC_01/02e14 :: Ravagnese, Reggio Calabria [38.10092843, 15.64351144]",
+        "RC_01/02e21 :: Via Gaetano Marrari, Reggio Calabria [38.09855943, 15.6449247]",
+        "RC_01/02e22 :: Via Nicola Furnari, Reggio Calabria [38.09829463, 15.64209515]",
+        "RC_01/02e23 :: Via Sbarre Centrali, Reggio Calabria [38.09950917, 15.6428163]",
+        "RC_01/02e24 :: Via Nicola Furnari, Reggio Calabria [38.09837215, 15.64012691]",
+        "RC_01/02e31 :: Via Maresciallo Cusmano, Reggio Calabria [38.09814047, 15.64665876]",
+        "RC_01/02e32 :: Ravagnese, Reggio Calabria [38.09755439, 15.64708457]",
+        "RC_01/02e33 :: Via Sbarre Superiori, Reggio Calabria [38.09751568, 15.64504315]",
+        "RC_01/02e34 :: Traversa Scopelliti, Reggio Calabria [38.09684377, 15.64322291]",
+        "RC_01/02e41 :: Via Mantova, Reggio Calabria [38.09623208, 15.64083392]",
+        "RC_01/02e42 :: Viale Vittoria, Reggio Calabria [38.09545861, 15.64194364]",
+        "RC_01/02e43 :: Via Cantaffio, Reggio Calabria [38.0958365, 15.64367539]",
+        "RC_01/02e44 :: Ravagnese, Reggio Calabria [38.09534065, 15.64526615]",
+        "RC_01/02w11 :: Via Gebbione, Reggio Calabria [38.08332051, 15.63945284]",
+        "RC_01/02w12 :: Ravagnese, Reggio Calabria [38.08491258, 15.64024471]",
+        "RC_01/02w13 :: Via Gebbione, Reggio Calabria [38.08332379, 15.64571256]",
+        "RC_01/02w14 :: Via Sbarre Centrali 584, Reggio Calabria [38.08315595, 15.64884559]",
+        "RC_01/02w21 :: Ravagnese, Reggio Calabria [38.08852084, 15.64014058]",
+        "RC_01/02w22 :: Ravagnese, Reggio Calabria [38.08817739, 15.64233497]",
+        "RC_01/02w23 :: Via Ipponio, Reggio Calabria [38.08778219, 15.64114617]",
+        "RC_01/02w24 :: Via Temesa 35, Reggio Calabria [38.08751837, 15.64176248]",
+        "RC_01/02w31 :: Via Sbarre Centrali, Reggio Calabria [38.09184902, 15.6442527]",
+        "RC_01/02w32 :: Via Francesco Porcino, Reggio Calabria [38.09112686, 15.641698]",
+        "RC_01/02w33 :: Viale Calabria, Reggio Calabria [38.09001278, 15.64127865]",
+        "RC_01/02w34 :: Via Itria, Reggio Calabria [38.08962183, 15.64249688]",
+        "RC_01/02w41 :: Ravagnese, Reggio Calabria [38.09248285, 15.64145406]",
+        "RC_01/02w42 :: Via Scilla, Reggio Calabria [38.09283337, 15.64250685]",
+        "RC_01/02w43 :: Ravagnese, Reggio Calabria [38.0944022, 15.64074883]",
+        "RC_01/02w44 :: Vico Posta, Reggio Calabria [38.09390256, 15.64332167]",
+        "RC_01/03e11 :: Via Nicola Furnari, Reggio Calabria [38.09881139, 15.63533001]",
+        "RC_01/03e12 :: Via Nicola Furnari 7, Reggio Calabria [38.0987814, 15.63659249]",
+        "RC_01/03e13 :: Ravagnese, Reggio Calabria [38.09765309, 15.63763181]",
+        "RC_01/03e14 :: Via Nicola Furnari, Reggio Calabria [38.09879496, 15.63839639]",
+        "RC_01/03e21 :: Viale Galileo Galilei, Reggio Calabria [38.0960142, 15.6352636]",
+        "RC_01/03e22 :: Ravagnese, Reggio Calabria [38.09635607, 15.63730658]",
+        "RC_01/03e23 :: Viale Calabria 78, Reggio Calabria [38.09627456, 15.64000108]",
+        "RC_01/03e24 :: Vico Gatto, Reggio Calabria [38.09723159, 15.63529854]",
+        "RC_01/03e31 :: Via Isaac Newton, Reggio Calabria [38.09463502, 15.63524745]",
+        "RC_01/03e32 :: Via Italo Alaimo, Reggio Calabria [38.09322223, 15.63619783]",
+        "RC_01/03e33 :: Viale Messina, Reggio Calabria [38.09526056, 15.63769782]",
+        "RC_01/03e34 :: Via Botteghelle, Reggio Calabria [38.09283801, 15.63781363]",
+        "RC_01/03e41 :: Viale Aldo Moro, Reggio Calabria [38.08984438, 15.63512698]",
+        "RC_01/03e42 :: Via Michele Barbaro, Reggio Calabria [38.09005095, 15.63547634]",
+        "RC_01/03e43 :: Via Ecce Homo, Reggio Calabria [38.09095297, 15.63663306]",
+        "RC_01/03e44 :: Via Italo Alaimo, Reggio Calabria [38.09155856, 15.63587518]",
+        "RC_01/03w11 :: Via Gebbione, Reggio Calabria [38.08292809, 15.63724935]",
+        "RC_01/03w12 :: Via Gebbione, Reggio Calabria [38.08314835, 15.63523589]",
+        "RC_01/03w13 :: Via Sandro Pertini, Reggio Calabria [38.08349973, 15.63638772]",
+        "RC_01/03w14 :: Ravagnese, Reggio Calabria [38.08465024, 15.63805551]",
+        "RC_01/03w21 :: Viale Aldo Moro, Reggio Calabria [38.08506072, 15.63538174]",
+        "RC_01/03w22 :: Viale Aldo Moro, Reggio Calabria [38.08527966, 15.63529435]",
+        "RC_01/03w23 :: Via Sbarre Inferiore, Reggio Calabria [38.08536221, 15.63742509]",
+        "RC_01/03w24 :: Via San Giuseppe, Reggio Calabria [38.08627841, 15.63701182]",
+        "RC_01/03w31 :: Viale Aldo Moro, Reggio Calabria [38.08667968, 15.63498946]",
+        "RC_01/03w32 :: Via Raffaele Valensise, Reggio Calabria [38.08653531, 15.63535527]",
+        "RC_01/03w33 :: Via Sbarre Inferiore 351, Reggio Calabria [38.08683474, 15.63724573]",
+        "RC_01/03w34 :: Vico Stilo, Reggio Calabria [38.08730557, 15.63895217]",
+        "RC_01/03w41 :: Ravagnese, Reggio Calabria [38.08811015, 15.63503695]",
+        "RC_01/03w42 :: Ravagnese, Reggio Calabria [38.08796129, 15.63634873]",
+        "RC_01/03w43 :: Traversa Soccorso, Reggio Calabria [38.0887427, 15.63640989]",
+        "RC_01/03w44 :: Vicolo Soccorso, Reggio Calabria [38.0886452, 15.63732142]",
+        "RC_01/04e11 :: Via Spanò Bolani, Reggio Calabria [38.10252157, 15.64199355]",
+        "RC_01/04e12 :: Via Domenico Muratori, Reggio Calabria [38.10412908, 15.64242916]",
+        "RC_01/04e13 :: Via Girolamo Arcovito 26, Reggio Calabria [38.10343954, 15.64257665]",
+        "RC_01/04e14 :: Via Nicolò da Reggio, Reggio Calabria [38.10260824, 15.64438796]",
+        "RC_01/04e21 :: Via Tauriana, Reggio Calabria [38.10269522, 15.6465359]",
+        "RC_01/04e22 :: Via Magna Grecia, Reggio Calabria [38.10405536, 15.64652165]",
+        "RC_01/04e23 :: Via Diomede Marvasi, Reggio Calabria [38.10361568, 15.64585911]",
+        "RC_01/04e24 :: Via Giannangelo Spagnolio, Reggio Calabria [38.10404119, 15.64532884]",
+        "RC_01/04e31 :: Via Fiume, Reggio Calabria [38.1053204, 15.64747742]",
+        "RC_01/04e32 :: Ravagnese, Reggio Calabria [38.10510526, 15.64597316]",
+        "RC_01/04e33 :: Via Possidonea, Reggio Calabria [38.10618781, 15.64564963]",
+        "RC_01/04e34 :: Via Placido Geraci, Reggio Calabria [38.10580502, 15.64752367]",
+        "RC_01/04e41 :: Via del Torrione, Reggio Calabria [38.10963745, 15.64721552]",
+        "RC_01/04e42 :: Via Filippini 46, Reggio Calabria [38.10873154, 15.64761976]",
+        "RC_01/04e43 :: Via del Salvatore, Reggio Calabria [38.10690101, 15.64811425]",
+        "RC_01/04e44 :: Via Cattolica dei Greci, Reggio Calabria [38.10772356, 15.64603647]",
+        "RC_01/04w11 :: Corso Giuseppe Garibaldi, Reggio Calabria [38.10165372, 15.63609971]",
+        "RC_01/04w12 :: Ravagnese, Reggio Calabria [38.10031345, 15.63580457]",
+        "RC_01/04w13 :: Ravagnese, Reggio Calabria [38.10086253, 15.63747881]",
+        "RC_01/04w14 :: Via Caprera, Reggio Calabria [38.10185634, 15.63787533]",
+        "RC_01/04w21 :: Via Guglielmo Pepe 29, Reggio Calabria [38.10257398, 15.6406135]",
+        "RC_01/04w22 :: Piazza Garibaldi, Reggio Calabria [38.10306551, 15.63751505]",
+        "RC_01/04w23 :: Via Fratelli Cairoli, Reggio Calabria [38.10403657, 15.63964345]",
+        "RC_01/04w24 :: Via Nino Bixio, Reggio Calabria [38.10427668, 15.63811467]",
+        "RC_01/04w31 :: Via Antonio Cimino, Reggio Calabria [38.10435821, 15.64191221]",
+        "RC_01/04w32 :: Via Ventuno Agosto, Reggio Calabria [38.10498338, 15.64102313]",
+        "RC_01/04w33 :: Via Cavour 1, Reggio Calabria [38.10685775, 15.64073233]",
+        "RC_01/04w34 :: Via Lemos 9, Reggio Calabria [38.10588999, 15.63957599]",
+        "RC_01/04w41 :: Via Fata Morgana, Reggio Calabria [38.10871911, 15.64622773]",
+        "RC_01/04w42 :: Via Raffaele Piria, Reggio Calabria [38.10804526, 15.64236227]",
+        "RC_01/04w43 :: Ravagnese, Reggio Calabria [38.10679047, 15.64316682]",
+        "RC_01/04w44 :: Via Tommaso Campanella, Reggio Calabria [38.10789489, 15.64431279]",
+        "RC_01/05e11 :: Via Vittorio Bachelet, Reggio Calabria [38.10259588, 15.65293048]",
+        "RC_01/05e12 :: Via Pasquale Andiloro, Reggio Calabria [38.10378953, 15.6585296]",
+        "RC_01/05e13 :: Via Sant'Anna Secondo Tronco, Reggio Calabria [38.10335666, 15.65574118]",
+        "RC_01/05e14 :: Via Sant'Anna Secondo Tronco, Reggio Calabria [38.10337471, 15.65280602]",
+        "RC_01/05e21 :: Ravagnese, Reggio Calabria [38.10776446, 15.65735302]",
+        "RC_01/05e22 :: Ravagnese, Reggio Calabria [38.10715543, 15.65663902]",
+        "RC_01/05e23 :: Via Padre Gaetano Catanoso, Reggio Calabria [38.10499996, 15.65496989]",
+        "RC_01/05e24 :: Via Vecchia Cimitero, Reggio Calabria [38.10630121, 15.65365134]",
+        "RC_01/05e31 :: Ravagnese, Reggio Calabria [38.10226093, 15.6482017]",
+        "RC_01/05e32 :: Via Sant'Anna Secondo Tronco 1, Reggio Calabria [38.10305138, 15.6500347]",
+        "RC_01/05e33 :: Via Pasquale Andiloro, Reggio Calabria [38.1038534, 15.65011537]",
+        "RC_01/05e34 :: Via Pasquale Andiloro, Reggio Calabria [38.10389061, 15.65166435]",
+        "RC_01/05e41 :: Via Udine, Reggio Calabria [38.10564129, 15.64960916]",
+        "RC_01/05e42 :: Via Vecchia Cimitero, Reggio Calabria [38.10682114, 15.65017336]",
+        "RC_01/05e43 :: Ravagnese, Reggio Calabria [38.10493547, 15.64989718]",
+        "RC_01/05e44 :: Via Trabocchetto terzo, Reggio Calabria [38.10706603, 15.65156924]",
+        "RC_01/05w11 :: Via Filippini 46, Reggio Calabria [38.1094012, 15.64864324]",
+        "RC_01/05w12 :: Via Due Settembre, Reggio Calabria [38.11027977, 15.65047925]",
+        "RC_01/05w13 :: Via San Paolo, Reggio Calabria [38.1114111, 15.65003849]",
+        "RC_01/05w14 :: Via Trabocchetto 2, Reggio Calabria [38.10917904, 15.64996613]",
+        "RC_01/05w21 :: Via Paolo Costabile, Reggio Calabria [38.11240797, 15.65484267]",
+        "RC_01/05w22 :: Ravagnese, Reggio Calabria [38.11069699, 15.65333324]",
+        "RC_01/05w23 :: Via Treviso 21, Reggio Calabria [38.11294275, 15.65301639]",
+        "RC_01/05w24 :: Via Cappuccinelli, Reggio Calabria [38.1118229, 15.65451737]",
+        "RC_01/05w31 :: Via Don Luigi Orione 61, Reggio Calabria [38.11083532, 15.6562629]",
+        "RC_01/05w32 :: Via Don Luigi Orione, Reggio Calabria [38.11150267, 15.65799038]",
+        "RC_01/05w33 :: Ravagnese, Reggio Calabria [38.10826848, 15.65926021]",
+        "RC_01/05w34 :: Via Don Luigi Orione, Reggio Calabria [38.10835631, 15.65578768]",
+        "RC_01/05w41 :: Via Reggio Campi Primo Tronco, Reggio Calabria [38.11140181, 15.65161949]",
+        "RC_01/05w42 :: Via Trabocchetto 1, Reggio Calabria [38.10858346, 15.65247811]",
+        "RC_01/05w43 :: Via Villini Svizzeri, Reggio Calabria [38.10919801, 15.65385725]",
+        "RC_01/05w44 :: Via Villini Svizzeri, Reggio Calabria [38.10976017, 15.65284183]",
+        "RC_01/06e11 :: Via Rausei, Reggio Calabria [38.11480436, 15.65845929]",
+        "RC_01/06e12 :: Ravagnese, Reggio Calabria [38.1144595, 15.65517719]",
+        "RC_01/06e13 :: Ravagnese, Reggio Calabria [38.11585505, 15.65552058]",
+        "RC_01/06e14 :: Ravagnese, Reggio Calabria [38.1121472, 15.6568532]",
+        "RC_01/06e21 :: Via Giuseppe Reale, Reggio Calabria [38.11738625, 15.65731261]",
+        "RC_01/06e22 :: Via Cardinale Portanova, Reggio Calabria [38.11739176, 15.65587415]",
+        "RC_01/06e23 :: Via Cardinale Portanova, Reggio Calabria [38.11568023, 15.66034675]",
+        "RC_01/06e24 :: Via Rausei, Reggio Calabria [38.1141405, 15.66062811]",
+        "RC_01/06e31 :: Via Borrace Crocevia, Reggio Calabria [38.11740852, 15.66107152]",
+        "RC_01/06e32 :: Via Salita Zerbi Traversa I, Reggio Calabria [38.11903595, 15.66078776]",
+        "RC_01/06e33 :: Via Salita Zerbi, Reggio Calabria [38.11913423, 15.65985057]",
+        "RC_01/06e34 :: Via N. Tommaseo, Reggio Calabria [38.11842174, 15.65830193]",
+        "RC_01/06e41 :: Viale Libertà, Reggio Calabria [38.12153182, 15.6563205]",
+        "RC_01/06e42 :: Viale Libertà, Reggio Calabria [38.1219376, 15.65842373]",
+        "RC_01/06e43 :: Via Glauco, Reggio Calabria [38.12118322, 15.65835079]",
+        "RC_01/06e44 :: ~Via Tre Mulini, Reggio Calabria [38.12067393, 15.65950837]",
+        "RC_01/06w11 :: Corso Vittorio Emanuele III, Reggio Calabria [38.1130763, 15.64880428]",
+        "RC_01/06w12 :: Via San Paolo, Reggio Calabria [38.11197742, 15.64913004]",
+        "RC_01/06w13 :: Via Bonaventura Palamolla, Reggio Calabria [38.11071217, 15.6483294]",
+        "RC_01/06w14 :: Via Diana, Reggio Calabria [38.11084253, 15.64620948]",
+        "RC_01/06w21 :: Via Gabriele D'Annunzio, Reggio Calabria [38.11323602, 15.65062603]",
+        "RC_01/06w22 :: Via Francesco Cananzi, Reggio Calabria [38.11574682, 15.65128712]",
+        "RC_01/06w23 :: Via Vollaro, Reggio Calabria [38.11381222, 15.65237598]",
+        "RC_01/06w24 :: Via del Torrione, Reggio Calabria [38.11504289, 15.65383109]",
+        "RC_01/06w31 :: Via Giuseppe Benassai, Reggio Calabria [38.11763241, 15.65045421]",
+        "RC_01/06w32 :: Via Mattia Preti, Reggio Calabria [38.1182938, 15.65372556]",
+        "RC_01/06w33 :: Via Giuseppe Benassai, Reggio Calabria [38.11721679, 15.65240123]",
+        "RC_01/06w34 :: Via Roma, Reggio Calabria [38.11651338, 15.65218839]",
+        "RC_01/06w41 :: Via Amerigo Vespucci, Reggio Calabria [38.11952789, 15.65616396]",
+        "RC_01/06w42 :: Via Giorgio Miceli, Reggio Calabria [38.11962403, 15.65322257]",
+        "RC_01/06w43 :: Via Tito Minniti, Reggio Calabria [38.12029245, 15.65573717]",
+        "RC_01/06w44 :: ~Via Argine Destro Annunziata, Reggio Calabria [38.11934551, 15.65183322]",
+        "RC_01/07e11 :: Via Lia, Reggio Calabria [38.12537743, 15.66019538]",
+        "RC_01/07e12 :: Via Nicola Manfroce, Reggio Calabria [38.12321772, 15.66264088]",
+        "RC_01/07e13 :: Via Lia traversa Vico I, Reggio Calabria [38.12285713, 15.66041729]",
+        "RC_01/07e14 :: Via Casalotto, Reggio Calabria [38.12512261, 15.65951289]",
+        "RC_01/07e21 :: Via Casalotto, Reggio Calabria [38.12616652, 15.65833802]",
+        "RC_01/07e22 :: ~Via Casalotto, Reggio Calabria [38.12393661, 15.65814026]",
+        "RC_01/07e23 :: ~Via Glauco, Reggio Calabria [38.12236998, 15.65749714]",
+        "RC_01/07e24 :: Via Gorizia, Reggio Calabria [38.12427416, 15.65573205]",
+        "RC_01/07e31 :: Via Pola, Reggio Calabria [38.1230437, 15.65438887]",
+        "RC_01/07e32 :: Via Gorizia, Reggio Calabria [38.12428724, 15.65524387]",
+        "RC_01/07e33 :: Via Zara, Reggio Calabria [38.12238111, 15.65359429]",
+        "RC_01/07e34 :: ~Via Porto Candeloro, Reggio Calabria [38.11993625, 15.64947723]",
+        "RC_01/07e41 :: Via Esperia, Reggio Calabria [38.12753744, 15.65558826]",
+        "RC_01/07e42 :: Via Monte Grappa, Reggio Calabria [38.12585663, 15.65532965]",
+        "RC_01/07e43 :: Via Santa Caterina d'Alessandria, Reggio Calabria [38.12664636, 15.65394423]",
+        "RC_01/07e44 :: Via Santa Caterina d'Alessandria, Reggio Calabria [38.12551896, 15.65372402]",
+        "RC_01/07w11 :: Via Montevergine, Reggio Calabria [38.12902127, 15.65530842]",
+        "RC_01/07w12 :: Via Demetrio Sturiale, Reggio Calabria [38.12826459, 15.65401422]",
+        "RC_01/07w13 :: Traversa Prima, Reggio Calabria [38.12974702, 15.65437395]",
+        "RC_01/07w14 :: ~Via Montevergine, Reggio Calabria [38.13019409, 15.65483365]",
+        "RC_01/07w21 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.14435116, 15.65909191]",
+        "RC_01/07w22 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.14136059, 15.65836789]",
+        "RC_01/07w23 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.13874294, 15.65788771]",
+        "RC_01/07w24 :: Via Nazionale-Pentimele, Reggio Calabria [38.13444913, 15.65742768]",
+        "RC_01/07w31 :: ~Via Provinciale Vecchia Archi, Reggio Calabria [38.14537778, 15.6547842]",
+        "RC_01/07w32 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.14665265, 15.65992744]",
+        "RC_01/07w33 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.14802339, 15.660415]",
+        "RC_01/07w34 :: Gallico Marina, Reggio Calabria [38.14938748, 15.65720425]",
+        "RC_01/07w41 :: Gallico Marina, Reggio Calabria [38.15031675, 15.66150688]",
+        "RC_01/07w42 :: Via Archi Cep Lotto 13, Reggio Calabria [38.14983582, 15.66424376]",
+        "RC_01/07w43 :: Via Archi Cep Lotto 13, Reggio Calabria [38.14834138, 15.6629705]",
+        "RC_01/07w44 :: Gallico Marina, Reggio Calabria [38.15099732, 15.66445401]",
+        "RC_01/08e11 :: Gallico Marina, Reggio Calabria [38.15613021, 15.66405509]",
+        "RC_01/08e12 :: Gallico Marina, Reggio Calabria [38.15355213, 15.66566645]",
+        "RC_01/08e13 :: Gallico Marina, Reggio Calabria [38.15282306, 15.6641962]",
+        "RC_01/08e14 :: Gallico Marina, Reggio Calabria [38.15478761, 15.66113693]",
+        "RC_01/08e21 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.15399401, 15.659368]",
+        "RC_01/08e22 :: Via Provinciale Vecchia Archi, Reggio Calabria [38.15437725, 15.65728633]",
+        "RC_01/08e23 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.15985494, 15.65593369]",
+        "RC_01/08e24 :: Gallico Marina, Reggio Calabria [38.16326752, 15.64956579]",
+        "RC_01/08e31 :: Gallico Marina, Reggio Calabria [38.16436393, 15.65586541]",
+        "RC_01/08e32 :: Gallico Marina, Reggio Calabria [38.16536528, 15.65486562]",
+        "RC_01/08e33 :: Gallico Marina, Reggio Calabria [38.16568385, 15.65230815]",
+        "RC_01/08e34 :: Terzo Tronco Via Strada Statale 18, Reggio Calabria [38.16857839, 15.65262298]",
+        "RC_01/08e41 :: Via Casa Savoia, Reggio Calabria [38.16676491, 15.64753006]",
+        "RC_01/08e42 :: Gallico Marina, Reggio Calabria [38.16543673, 15.64836829]",
+        "RC_01/08e43 :: Gallico Marina, Reggio Calabria [38.16468872, 15.64694414]",
+        "RC_01/08e44 :: Lungomare Natale De Grazia, Reggio Calabria [38.16675456, 15.64452704]",
+        "RC_01/08w11 :: Via Prima Quarnaro, Reggio Calabria [38.16761944, 15.64417164]",
+        "RC_01/08w12 :: Gallico Marina, Reggio Calabria [38.16871747, 15.6477834]",
+        "RC_01/08w13 :: Gallico Marina, Reggio Calabria [38.16936416, 15.6506764]",
+        "RC_01/08w14 :: Gallico Marina, Reggio Calabria [38.1712431, 15.64947911]",
+        "RC_01/09e11 :: Via Abate Sant'Elia, Reggio Calabria [38.07840313, 15.65481135]",
+        "RC_01/09e12 :: Via Ravagnese Superiore, Reggio Calabria [38.0783535, 15.65255442]",
+        "RC_01/09e13 :: Via Ravagnese Superiore, Reggio Calabria [38.08016581, 15.65166178]",
+        "RC_01/09e14 :: Via Ravagnese Superiore, Reggio Calabria [38.08172776, 15.65060338]",
+        "RC_01/09e21 :: Ravagnese, Reggio Calabria [38.07559266, 15.65471949]",
+        "RC_01/09e22 :: Ravagnese, Reggio Calabria [38.07681124, 15.65649585]",
+        "RC_01/09e23 :: Ravagnese, Reggio Calabria [38.07949156, 15.6566865]",
+        "RC_01/09e24 :: Ravagnese, Reggio Calabria [38.07085318, 15.65950888]",
+        "RC_01/09e31 :: Via Giuseppe Valentino, Reggio Calabria [38.07398554, 15.65612858]",
+        "RC_01/09e32 :: Via Ravagnese, Reggio Calabria [38.07178856, 15.65824212]",
+        "RC_01/09e33 :: San Gregorio, Reggio Calabria [38.06420739, 15.65346831]",
+        "RC_01/09e34 :: San Leo, Reggio Calabria [38.05483597, 15.65252025]",
+        "RC_01/09e41 :: San Leo, Reggio Calabria [38.04631456, 15.65519328]",
+        "RC_01/09e42 :: Occhio, Reggio Calabria [38.0400711, 15.65807376]",
+        "RC_01/09e43 :: San Giovanni, Reggio Calabria [38.03525804, 15.65712367]",
+        "RC_01/09e44 :: Via Giuffrè, Reggio Calabria [38.03301731, 15.65764695]",
+        "RC_01/09w11 :: Via Sant'Agata al Fiume, Reggio Calabria [38.08734449, 15.66230668]",
+        "RC_01/09w12 :: Via Arangea 124, Reggio Calabria [38.08122139, 15.65929924]",
+        "RC_01/09w13 :: Ravagnese, Reggio Calabria [38.08008281, 15.6599493]",
+        "RC_01/09w14 :: Via Arangea, Reggio Calabria [38.07929981, 15.65547016]",
+        "RC_01/09w21 :: Via De Marco, Reggio Calabria [38.07910953, 15.6622615]",
+        "RC_01/09w22 :: Ravagnese, Reggio Calabria [38.07559944, 15.6624857]",
+        "RC_01/09w23 :: Via Abate Sant'Elia Intermedia, Reggio Calabria [38.07482052, 15.66227334]",
+        "RC_01/09w24 :: Ravagnese, Reggio Calabria [38.08153268, 15.66042434]",
+        "RC_01/09w31 :: Via Saracinello, Reggio Calabria [38.06940435, 15.6609819]",
+        "RC_01/09w32 :: San Gregorio, Reggio Calabria [38.06635468, 15.6615313]",
+        "RC_01/09w33 :: Contrada Livari Inferiore, Reggio Calabria [38.06470506, 15.65881488]",
+        "RC_01/09w34 :: Via Stazione San Gregorio, Reggio Calabria [38.05847508, 15.65350159]",
+        "RC_01/09w41 :: Via Nazionale San Gregorio, Reggio Calabria [38.05468984, 15.65371083]",
+        "RC_01/09w42 :: San Leo, Reggio Calabria [38.05005671, 15.65766859]",
+        "RC_01/09w43 :: Via Torrente Perara 13, Reggio Calabria [38.04467974, 15.65857187]",
+        "RC_01/09w44 :: Occhio, Reggio Calabria [38.03747644, 15.65983505]",
+        "RC_01/10e11 :: Via Nazionale, Reggio Calabria [38.02644258, 15.65303419]",
+        "RC_01/10e12 :: Via Nazionale, Reggio Calabria [38.02502533, 15.65123594]",
+        "RC_01/10e13 :: Via Monsignor Giuseppe Cognata, Reggio Calabria [38.02419911, 15.64961273]",
+        "RC_01/10e14 :: Via Augusta 12, Reggio Calabria [38.02304946, 15.6487644]",
+        "RC_01/10e21 :: Via Sottolume, Reggio Calabria [38.02298589, 15.64729881]",
+        "RC_01/10e22 :: Vico Scordino, Reggio Calabria [38.02171574, 15.64782424]",
+        "RC_01/10e23 :: Via Nazionale IV Tratto Pellaro, Reggio Calabria [38.02038314, 15.64218683]",
+        "RC_01/10e24 :: Via Bosco Diramazione al mare, Reggio Calabria [38.01876489, 15.63860246]",
+        "RC_01/10e31 :: Via Lume, Reggio Calabria [38.01984414, 15.65184722]",
+        "RC_01/10e32 :: Via Sottolume, Reggio Calabria [38.02049493, 15.64925649]",
+        "RC_01/10e33 :: Via San Francesco, Reggio Calabria [38.01828962, 15.64800325]",
+        "RC_01/10e34 :: Via Nazionale IV Tratto Pellaro, Reggio Calabria [38.01700715, 15.6397516]",
+        "RC_01/10e41 :: Lume, Reggio Calabria [38.02552378, 15.65288385]",
+        "RC_01/10e42 :: Via delle Rimembranze, Reggio Calabria [38.02349053, 15.65557612]",
+        "RC_01/10e43 :: Via Crocevia, Reggio Calabria [38.02542218, 15.65682222]",
+        "RC_01/10e44 :: Via Fondo Bolani, Reggio Calabria [38.02916598, 15.65927207]"
+      ],
+      "Rende": [
+        "CS_01/08e11 :: Via Busento 43, Rende [39.32622657, 16.24646311]",
+        "CS_01/08e12 :: Via Valle del Neto, Rende [39.32821012, 16.24626687]",
+        "CS_01/08e13 :: Via Adige, Rende [39.32880486, 16.24684115]",
+        "CS_01/08e14 :: Via Giuseppe Ungaretti, Rende [39.33245439, 16.24625868]",
+        "CS_01/08e21 :: Via Salvatore Quasimodo, Rende [39.33376873, 16.24551648]",
+        "CS_01/08e22 :: Via Corrado Alvaro, Rende [39.3365716, 16.24532685]",
+        "CS_01/08e23 :: Via Don Minzoni, Rende [39.33741212, 16.2418141]",
+        "CS_01/08e24 :: Viale della Resistenza, Rende [39.33634547, 16.24414411]",
+        "CS_01/08e31 :: Via Giuseppe Verdi, Rende [39.34098688, 16.2440883]",
+        "CS_01/08e32 :: Via Gioacchino Rossini, Rende [39.34229697, 16.24226582]",
+        "CS_01/08e33 :: Via Giuseppe Verdi, Rende [39.34190574, 16.24392008]",
+        "CS_01/08e34 :: Via Vittorio Alfieri, Rende [39.33873197, 16.24508391]",
+        "CS_01/08e41 :: Via Don Minzoni, Rende [39.33657615, 16.24156041]",
+        "CS_01/08e42 :: Via Carlo Bilotti, Rende [39.33692895, 16.23916322]",
+        "CS_01/08e43 :: Via Silvio Pellico, Rende [39.3355738, 16.23826654]",
+        "CS_01/08e44 :: ~Via Carlo Bilotti, Rende [39.33604336, 16.23941387]",
+        "CS_01/08w11 :: Via Bari, Rende [39.32417127, 16.24405183]",
+        "CS_01/08w12 :: Via Milano, Rende [39.32502241, 16.24407399]",
+        "CS_01/08w13 :: Via Catanzaro, Rende [39.32332389, 16.24056927]",
+        "CS_01/08w14 :: Via Torino, Rende [39.32361715, 16.24254007]",
+        "CS_01/08w21 :: Via John Fitzgerald Kennedy, Rende [39.32650848, 16.24403117]",
+        "CS_01/08w22 :: Via John Fitzgerald Kennedy Traversa Quarta, Rende [39.32772632, 16.24403824]",
+        "CS_01/08w23 :: Piazza Martin Luter King, Rende [39.32875295, 16.24399599]",
+        "CS_01/08w24 :: Via John Fitzgerald Kennedy Traversa Quarta, Rende [39.32671958, 16.24214171]",
+        "CS_01/08w31 :: Via Sandro Pertini, Rende [39.32891087, 16.2414411]",
+        "CS_01/08w32 :: ~Viale Giuseppe Garibaldi, Rende [39.33149281, 16.24397689]",
+        "CS_01/08w33 :: Via Papa Giovanni Ventitreesimo, Rende [39.33180313, 16.23936349]",
+        "CS_01/08w34 :: Via Papa Giovanni Ventitreesimo, Rende [39.33069374, 16.24020616]",
+        "CS_01/08w41 :: Via Fratelli Bandiera, Rende [39.33440832, 16.24382772]",
+        "CS_01/08w42 :: Via Fratelli Bandiera 66, Rende [39.33438165, 16.24271387]",
+        "CS_01/08w43 :: ~Traversa Prima Ciro Menotti, Rende [39.33436449, 16.24063115]",
+        "CS_01/08w44 :: Via Morelli, Rende [39.33325432, 16.24144411]",
+        "CS_01/09e11 :: Via Gioacchino Rossini 49, Rende [39.34894372, 16.24236794]",
+        "CS_01/09e12 :: Via Gioacchino Rossini, Rende [39.34377709, 16.24266219]",
+        "CS_01/09e13 :: Via Gioacchino Rossini, Rende [39.34449176, 16.2424358]",
+        "CS_01/09e14 :: Via Giuseppe Verdi, Rende [39.34563198, 16.24398219]",
+        "CS_01/09e21 :: Via Giuseppe Verdi, Rende [39.34788824, 16.24410783]",
+        "CS_01/09e22 :: Traversa II Giuseppe Verdi, Rende [39.34988777, 16.24412669]",
+        "CS_01/09e23 :: Via Filippo De Pisis, Rende [39.35228685, 16.24216729]",
+        "CS_01/09e24 :: Via Alessandro Volta, Rende [39.35194588, 16.24378961]",
+        "CS_01/09e31 :: Via Alessandro Volta, Rende [39.35338442, 16.24386049]",
+        "CS_01/09e32 :: Piazza Santo Sergio, Rende [39.35414715, 16.24266922]",
+        "CS_01/09e33 :: Via Cristoforo Colombo, Rende [39.35711413, 16.24183263]",
+        "CS_01/09e34 :: Via Alessandro Volta, Rende [39.35719846, 16.24318347]",
+        "CS_01/09e41 :: Via Evangelista Torricelli, Rende [39.35599744, 16.2401901]",
+        "CS_01/09e42 :: Via Guglielmo Marconi 46, Rende [39.35384968, 16.24062982]",
+        "CS_01/09e43 :: Via Guglielmo Marconi 81a, Rende [39.35366238, 16.23785983]",
+        "CS_01/09e44 :: Via Enrico Fermi, Rende [39.35353738, 16.23873478]",
+        "CS_01/10w11 :: Corso Firenze, Rende [39.31957799, 16.23873108]",
+        "CS_01/10w12 :: Via Buonarroti, Rende [39.32332745, 16.23649146]",
+        "CS_01/10w13 :: Via Tintoretto, Rende [39.32569334, 16.23515317]",
+        "CS_01/10w14 :: Via Sandro Botticelli, Rende [39.32450786, 16.23846003]",
+        "CS_01/10w21 :: Via Benvenuto Cellini, Rende [39.32942409, 16.23381418]",
+        "CS_01/11w11 :: Via Mosca, Rende [39.34246057, 16.23908126]",
+        "CS_01/11w12 :: Vua Atene, Rende [39.34433407, 16.23797226]",
+        "CS_01/11w13 :: Via Montevideo, Rende [39.3499372, 16.23707935]",
+        "CS_01/11w14 :: Via Buenos Aires, Rende [39.347033, 16.24018076]",
+        "CS_01/11w21 :: Via Amedeo Avogadro 28, Rende [39.35497984, 16.23798834]",
+        "CS_01/11w22 :: ~Via Evangelista Torricelli, Rende [39.35448952, 16.23702963]",
+        "CS_01/11w23 :: Traversa Prima di Via Ettore Majorana 23, Rende [39.35532931, 16.236432]",
+        "CS_01/11w24 :: Via Evangelista Torricelli 31, Rende [39.35629437, 16.23723184]",
+        "CS_01/11w31 :: Via Ettore Majorana 12, Rende [39.35435713, 16.23516561]",
+        "CS_01/11w32 :: Via Alberto Savinio, Rende [39.35456636, 16.2310057]",
+        "CS_01/11w33 :: Traversa I Pietro Bucci 28, Rende [39.35306075, 16.2196745]",
+        "CS_01/11w34 :: Via Pietro Bucci, Rende [39.35239313, 16.22192956]",
+        "CS_01/11w41 :: Via Rosario Salerno, Rende [39.35584613, 16.22651178]",
+        "H235_CNO1 :: Via Pietro Bucci, Rende [39.35565046, 16.22731219]",
+        "H235_CNO10 :: Traversa I Pietro Bucci 28, Rende [39.35373071, 16.21966967]",
+        "H235_CNO11 :: Via Ambrogio Fogar, Rende [39.36468942, 16.25514117]",
+        "H235_CNO4 :: Via Enrico Abbati, Rende [39.37160018, 16.2524362]",
+        "H235_CNO5 :: Via Alberto Savinio 71, Rende [39.35356453, 16.23209426]",
+        "H235_CNO7 :: ~Strada statale 107 Silana Crotonese, Rende [39.34861036, 16.17507928]",
+        "H235_CNO8 :: Unical Campus, Rende [39.35484605, 16.22527474]"
+      ],
+      "Rizziconi": [
+        "H359_CNO6 :: Via non definita, Rizziconi [38.41421571, 16.01211726]"
+      ],
+      "Rocca Di Neto": [
+        "H403_CNO2 :: Silana Crotonese, Rocca di Neto [39.17236159, 16.97200073]"
+      ],
+      "Rocca Imperiale": [
+        "H416_CNO1 :: Via non definita, Rocca Imperiale [40.07354617, 16.59432465]"
+      ],
+      "Roccabernarda": [
+        "H383_CNO3 :: Via dello Stadio, Roccabernarda [39.13103321, 16.86238791]",
+        "H383_CNO4 :: Viale dei Bizantini, Roccabernarda [39.14242306, 16.87803128]"
+      ],
+      "Roccella Ionica": [
+        "H456_CNO3 :: Candiadati, Roccella Ionica [38.32933209, 16.40538512]"
+      ],
+      "Roccelletta": [
+        "B002_CNO1 :: Viale Cassiodoro, Roccelletta [38.79569057, 16.59053196]",
+        "B002_CNO2 :: Villaggio le Roccelle, Roccelletta [38.80110656, 16.58849282]"
+      ],
+      "Roggiano Gravina": [
+        "H488_CNO1 :: Strada Provinciale 123 Roggiano Scalo San Sosti, Roggiano Gravina [39.61941077, 16.17281346]",
+        "H488_CNO2 :: ~Strada Provinciale 123 Roggiano Scalo San Sosti, Roggiano Gravina [39.6181936, 16.17882589]",
+        "H488_CNO3 :: Via non definita, Roggiano Gravina [39.60174126, 16.12422204]"
+      ],
+      "Rogliano": [
+        "H490_CNO1 :: Saliano, Rogliano [39.18154355, 16.43463257]",
+        "H490_CNO2 :: Poverella, Rogliano [39.1833484, 16.47408349]",
+        "H490_CNO3 :: Strada Provinciale 242 Rogliano-Bocca di Piazza, Rogliano [39.1817182, 16.32617848]"
+      ],
+      "Rombiolo": [
+        "H516_CNO1 :: Vico Fondo, Rombiolo [38.61578199, 15.99581073]",
+        "H516_CNO2 :: Moladi, Rombiolo [38.60245837, 15.98728509]"
+      ],
+      "Rosarno": [
+        "H558_CNO1 :: SP46, Rosarno [38.45781657, 15.94455741]"
+      ],
+      "Rose": [
+        "H565_CNO1 :: Contrada Santicelli, Rose [39.40228579, 16.27962436]"
+      ],
+      "Rota Greca": [
+        "H585_CNO1 :: Via Venezia, Rota Greca [39.46690613, 16.11548429]"
+      ],
+      "Rovito": [
+        "H621_CNO1 :: ~Casali di Cosenza, Rovito [39.28662492, 16.29225455]"
+      ],
+      "Saline Joniche": [
+        "D746_CNO2 :: Via Calatafimi, Saline Joniche [37.94157722, 15.71217182]",
+        "D746_CNO3 :: Contrada Pantanello, Saline Joniche [37.94011104, 15.70846777]",
+        "D746_CNO4 :: Via Nazionale, Saline Joniche [37.94409757, 15.71102961]"
+      ],
+      "San Calogero": [
+        "H785_CNO1 :: San Nicola de Legistis, San Calogero [38.55044431, 16.00935423]"
+      ],
+      "San Costantino Calabro": [
+        "H807_CNO1 :: Via non definita, San Costantino Calabro [38.63913813, 16.07794138]",
+        "H807_CNO2 :: Via non definita, San Costantino Calabro [38.62837731, 16.0930516]"
+      ],
+      "San Ferdinando": [
+        "M277_CNO1 :: Via delle zagare, San Ferdinando [38.50091125, 15.92043769]"
+      ],
+      "San Floro": [
+        "H846_CNO1 :: Via non definita, San Floro [38.8541026, 16.54865799]"
+      ],
+      "San Giorgio Morgeto": [
+        "H889_CNO1 :: Via Paolo Borsellino, San Giorgio Morgeto [38.38923966, 16.09715866]"
+      ],
+      "San Giovanni In Fiore": [
+        "H919_CNO3 :: Località Colleciuccio, San Giovanni in Fiore [39.27371539, 16.67479417]",
+        "H919_CNO4 :: ~Via dei Sentieri, San Giovanni in Fiore [39.24954216, 16.51558572]",
+        "H919_CNO5 :: Strada Statale 108 bis Silana di Cariati, San Giovanni in Fiore [39.24613776, 16.52891762]"
+      ],
+      "San Gregorio D'Ippona": [
+        "VV_01/02e14 :: Regina Elena, San Gregorio d'Ippona [38.66782586, 16.08874715]"
+      ],
+      "San Lorenzo Del Vallo": [
+        "H962_CNO1 :: Via non definita, San Lorenzo del Vallo [39.70015682, 16.25538895]",
+        "H962_CNO2 :: Fedula, San Lorenzo del Vallo [39.69398608, 16.25286898]"
+      ],
+      "San Lorenzo": [
+        "H959_CNO1 :: San Pantaleone, San Lorenzo [37.98792982, 15.83985875]",
+        "H959_CNO2 :: Santa Maria, San Lorenzo [38.03151377, 15.84685027]"
+      ],
+      "San Luca": [
+        "H970_CNO1 :: Via non definita, San Luca [38.13814228, 16.11828618]"
+      ],
+      "San Lucido": [
+        "H971_CNO1 :: Via non definita, San Lucido [39.30786199, 16.05974957]"
+      ],
+      "San Marco Argentano": [
+        "H981_CNO2 :: Strada Provinciale 270 exSS533 Cetraro-Fagnano, San Marco Argentano [39.58374093, 16.12046309]",
+        "H981_CNO3 :: ~Strada Statale 283 delle Terme Luigiane, San Marco Argentano [39.59965061, 16.20040799]"
+      ],
+      "San Mauro Marchesato": [
+        "I026_CNO1 :: Via non definita, San Mauro Marchesato [39.10814879, 16.92896394]"
+      ],
+      "San Nicola Arcella": [
+        "I060_CNO1 :: Viale Gregorio Medugno, San Nicola Arcella [39.86625923, 15.79770219]"
+      ],
+      "San Nicola Da Crissa": [
+        "I058_CNO1 :: ~SP47, San Nicola da Crissa [38.66846525, 16.28937658]"
+      ],
+      "San Nicolò": [
+        "H271_CNO1 :: Località Grotticelle, San Nicolò [38.62189213, 15.83749706]"
+      ],
+      "San Pietro A Maida": [
+        "I093_CNO1 :: ~Via Gaetano Scirea, San Pietro a Maida [38.85010342, 16.33412752]"
+      ],
+      "San Pietro Apostolo": [
+        "I095_CNO1 :: SS19, San Pietro Apostolo [38.99200261, 16.49804366]"
+      ],
+      "San Pietro In Guarano": [
+        "I114_CNO2 :: Via Cassieni, San Pietro in Guarano [39.33624308, 16.26722546]"
+      ],
+      "San Vito Sullo Ionio": [
+        "I393_CNO1 :: Jannuzzo, San Vito sullo Ionio [38.70509833, 16.4043585]"
+      ],
+      "Sangineto Lido": [
+        "H877_CNO1 :: Via non definita, Sangineto Lido [39.59089657, 15.86148177]",
+        "H877_CNO2 :: Via Antonio Gramsci, Sangineto Lido [39.58272543, 15.86619567]"
+      ],
+      "Sant'Agata Di Esaro": [
+        "I192_CNO1 :: Via non definita, Sant'Agata di Esaro [39.60575943, 15.9833657]",
+        "I192_CNO2 :: Via non definita, Sant'Agata di Esaro [39.62796384, 15.98112272]"
+      ],
+      "Sant'Andrea Apostolo Dello Ionio": [
+        "I266_CNO2 :: Fego, Sant'Andrea Apostolo dello Ionio [38.61329533, 16.55413533]",
+        "I266_CNO3 :: Via Papa Giovanni I, Sant'Andrea Apostolo dello Ionio [38.62015407, 16.54792336]"
+      ],
+      "Sant'Eufemia D'Aspromonte": [
+        "I333_CNO1 :: San Luca, Sant'Eufemia d'Aspromonte [38.26368574, 15.84877573]"
+      ],
+      "Sant'Ilario Dello Ionio": [
+        "I341_CNO1 :: Condojanni, Sant'Ilario dello Ionio [38.21671793, 16.19481189]"
+      ],
+      "Sant'Onofrio": [
+        "E836_CNO3 :: ~SP5, Sant'Onofrio [38.70790233, 16.15674628]",
+        "I350_CNO1 :: Contrada Castelluccio, Sant'Onofrio [38.7070327, 16.15167438]"
+      ],
+      "Santa Caterina Dello Ionio": [
+        "I170_CNO2 :: Via Padre Pio, Santa Caterina dello Ionio [38.53199389, 16.52515139]"
+      ],
+      "Santa Cristina D'Aspromonte": [
+        "I176_CNO1 :: ~Nuova Strada ANAS 571 d'Aspromonte, Santa Cristina d'Aspromonte [38.25735428, 15.965229]"
+      ],
+      "Santa Maria Del Cedro": [
+        "C717_CNO1 :: Piazza San Giovanni Paolo Secondo, Santa Maria del Cedro [39.75398357, 15.80539847]",
+        "C717_CNO2 :: Via delle Bouganvillee, Santa Maria del Cedro [39.75450833, 15.80986367]",
+        "C717_CNO3 :: Via degli Aironi, Santa Maria del Cedro [39.74594687, 15.80965946]"
+      ],
+      "Santa Serra": [
+        "D624_CNO3 :: Strada Provinciale 45 Cosenza Fiumefreddo, Santa Serra [39.2243422, 16.09580688]"
+      ],
+      "Santa Sofia D'Epiro": [
+        "I309_CNO1 :: ~Via Strada Grande, Santa Sofia d'Epiro [39.54508197, 16.32375007]"
+      ],
+      "Saporito": [
+        "C108_CNO2 :: Via Donatello 33, Saporito [39.32774535, 16.21931459]"
+      ],
+      "Saracena": [
+        "I423_CNO2 :: Via Franco Senatore, Saracena [39.77676343, 16.16489827]"
+      ],
+      "Sarrottino": [
+        "L177_CNO1 :: Via Enrico Berlinguer, Sarrottino [38.90127892, 16.53369091]"
+      ],
+      "Satriano": [
+        "I463_CNO2 :: Cecinia Residence, Satriano [38.67661584, 16.55420639]"
+      ],
+      "Scalea": [
+        "I489_CNO1 :: Via del Mare, Scalea [39.78368956, 15.81158894]",
+        "I489_CNO4 :: Impresa, Scalea [39.7849747, 15.81126876]"
+      ],
+      "Scandale": [
+        "I494_CNO2 :: Contrada Santa Domenica, Scandale [39.10147311, 17.03842534]",
+        "I494_CNO3 :: Parrera, Scandale [39.15019527, 17.03137614]",
+        "I494_CNO4 :: Contrada Corazzo, Scandale [39.16795859, 17.02089612]"
+      ],
+      "Scigliano": [
+        "D290_CNO1 :: Cupani, Scigliano [39.12213705, 16.30603039]"
+      ],
+      "Scilla": [
+        "I537_CNO2 :: Chianalea, Scilla [38.2361742, 15.74225389]",
+        "I537_CNO3 :: Solano Superiore, Scilla [38.21041185, 15.83124449]"
+      ],
+      "Sellia Marina": [
+        "I590_CNO1 :: Via non definita, Sellia Marina [38.88546478, 16.74769798]"
+      ],
+      "Serra Pedace": [
+        "M385_CNO5 :: ~Strada Provinciale 226 Bivio Casole Pietrafitta, Serra Pedace [39.27428662, 16.34347703]"
+      ],
+      "Serra San Bruno": [
+        "I639_CNO1 :: Contrada Micone, Serra San Bruno [38.51865768, 16.32468217]"
+      ],
+      "Serrastretta": [
+        "I655_CNO1 :: Cancello, Serrastretta [38.94087183, 16.43119803]"
+      ],
+      "Sersale": [
+        "I671_CNO2 :: Via Monte Crozze, Sersale [39.00567716, 16.72878877]"
+      ],
+      "Settingiano": [
+        "I704_CNO1 :: Martelletto, Settingiano [38.8913903, 16.5355048]"
+      ],
+      "Siderno": [
+        "I725_CNO1 :: Donisi, Siderno [38.29778604, 16.29686632]"
+      ],
+      "Simbario": [
+        "I744_CNO1 :: Strada provinciale Serra San Bruno-Simbario, Simbario [38.61504093, 16.33421235]"
+      ],
+      "Simeri": [
+        "I745_CNO4 :: SP13, Simeri [38.93814616, 16.6500592]"
+      ],
+      "Soriano Calabro": [
+        "I854_CNO1 :: Via non definita, Soriano Calabro [38.60572723, 16.21546757]",
+        "I854_CNO2 :: Autostrada del Mediterraneo, Soriano Calabro [38.63333532, 16.17135227]"
+      ],
+      "Soverato": [
+        "I872_CNO1 :: Turrati-Forche, Soverato [38.70575507, 16.52778439]"
+      ],
+      "Soveria Mannelli": [
+        "I874_CNO2 :: Mannelli, Soveria Mannelli [39.0752596, 16.37866933]"
+      ],
+      "Soveria Simeri": [
+        "I875_CNO2 :: Via non definita, Soveria Simeri [38.92179591, 16.68542545]"
+      ],
+      "Spatolicchi": [
+        "B118_CNO1 :: Località Priolo, Spatolicchi [37.93788863, 16.07585965]"
+      ],
+      "Spezzano Albanese": [
+        "I895_CNO1 :: ~Contrada Monte San Salvatore, Spezzano Albanese [39.66220783, 16.30834149]",
+        "I895_CNO2 :: Strada Provinciale 241 exSS19 delle Calabrie, Spezzano Albanese [39.71541606, 16.28621854]"
+      ],
+      "Spezzano Della Sila": [
+        "I896_CNO2 :: Via Stazione, Spezzano della Sila [39.29744392, 16.33950737]"
+      ],
+      "Spropoli": [
+        "G277_CNO1 :: Gruda, Spropoli [37.92480132, 16.03789864]"
+      ],
+      "Squillace": [
+        "I929_CNO1 :: Squillace Lido, Squillace [38.77932019, 16.56829713]"
+      ],
+      "Stalettì": [
+        "I937_CNO1 :: Copanello, Stalettì [38.76886401, 16.56738746]",
+        "I937_CNO2 :: Strada Provinciale 124, Stalettì [38.74366325, 16.55770137]"
+      ],
+      "Stilo": [
+        "I956_CNO1 :: Contrada Caldarella, Stilo [38.43112936, 16.5341446]"
+      ],
+      "Strongoli": [
+        "I982_CNO2 :: ~Strada Statale 106 Jonica, Strongoli [39.26712178, 17.10318052]",
+        "I982_CNO3 :: ~Strada Statale 106 Jonica, Strongoli [39.26710647, 17.10317485]",
+        "I982_CNO4 :: Strada Statale 106 Jonica, Strongoli [39.21665949, 17.10829014]"
+      ],
+      "Taurianova": [
+        "L063_CNO1 :: Via del Quirinale, Taurianova [38.36548928, 16.01260481]"
+      ],
+      "Taverna": [
+        "L070_CNO1 :: Strada statale 179 dir del Lago Ampollino, Taverna [39.08507717, 16.54620877]"
+      ],
+      "Terranova Da Sibari": [
+        "L124_CNO1 :: Via Giano Parrasio, Terranova da Sibari [39.65376843, 16.3385391]"
+      ],
+      "Tivolille Pasquali-Merenzata": [
+        "F125_CNO4 :: Muoio, Tivolille Pasquali-Merenzata [39.28850732, 16.20942788]"
+      ],
+      "Torano Castello": [
+        "L206_CNO2 :: ~Strada Provinciale 106 di Torano Castello, Torano Castello [39.49500344, 16.2095302]",
+        "L206_CNO3 :: Via non definita, Torano Castello [39.48991256, 16.18864992]"
+      ],
+      "Torre Melissa": [
+        "F108_CNO2 :: Via non definita, Torre Melissa [39.31328316, 17.1049935]"
+      ],
+      "Torretta": [
+        "D189_CNO1 :: ~Viale John Fitzgerald Kennedy, Torretta [39.46357102, 17.03407447]"
+      ],
+      "Torrevecchia": [
+        "A973_CNO1 :: Cittadella del Capo, Torrevecchia [39.55524082, 15.89388018]"
+      ],
+      "Tortora": [
+        "L305_CNO1 :: Via dei Mille, Tortora [39.93593281, 15.77957042]",
+        "L305_CNO2 :: Via Papa Giovanni Ventitreesimo, Tortora [39.91939817, 15.76462216]"
+      ],
+      "Trebisacce": [
+        "L353_CNO1 :: Via Sandro Pertini, Trebisacce [39.86490175, 16.51806471]",
+        "L353_CNO2 :: Viale Italia, Trebisacce [39.88148275, 16.54168925]"
+      ],
+      "Tropea": [
+        "L452_CNO1 :: Via Martiri della Repubblica, Tropea [38.66914481, 15.881369]"
+      ],
+      "Verbicaro": [
+        "L747_CNO1 :: ~Corso del Pollino, Verbicaro [39.75980637, 15.90764192]"
+      ],
+      "Verzino": [
+        "L802_CNO1 :: Vigne, Verzino [39.29489902, 16.8520961]"
+      ],
+      "Vibo Valentia": [
+        "F537_CNO2 :: Porto Salvo, Vibo Valentia [38.71372522, 16.08616939]",
+        "F537_CNO3 :: SS18, Vibo Valentia [38.66354166, 16.07597159]",
+        "VV_01/01e11 :: Via Popilia, Vibo Valentia [38.67601094, 16.0977729]",
+        "VV_01/01e12 :: Via Monsignor Sorbili, Vibo Valentia [38.67705603, 16.09853539]",
+        "VV_01/01e13 :: Via Caduti sul Lavoro, Vibo Valentia [38.67829773, 16.09787979]",
+        "VV_01/01e14 :: Via Camillo Benso di Cavour, Vibo Valentia [38.68047991, 16.09820571]",
+        "VV_01/01e21 :: Via Enrico Gagliardi, Vibo Valentia [38.67483021, 16.10164294]",
+        "VV_01/01e22 :: Via Milite Ignoto 19, Vibo Valentia [38.67548401, 16.10325507]",
+        "VV_01/01e23 :: Via Milite Ignoto, Vibo Valentia [38.67614926, 16.10110895]",
+        "VV_01/01e24 :: Via Giacomo Matteotti, Vibo Valentia [38.6776754, 16.10226846]",
+        "VV_01/01e31 :: Via XXV Aprile, Vibo Valentia [38.67785569, 16.1042116]",
+        "VV_01/01e32 :: Via Terravecchia inferiore, Vibo Valentia [38.67800891, 16.10380712]",
+        "VV_01/01e33 :: Via Carlo Parisi, Vibo Valentia [38.67862173, 16.10231068]",
+        "VV_01/01e34 :: Via S. Aloe, Vibo Valentia [38.68002473, 16.10654553]",
+        "VV_01/01e41 :: Via Minerva, Vibo Valentia [38.67998108, 16.10992599]",
+        "VV_01/01e42 :: Contrada Nasari, Vibo Valentia [38.67966511, 16.11160908]",
+        "VV_01/01e43 :: Via S. Aloe, Vibo Valentia [38.68189718, 16.11072033]",
+        "VV_01/01e44 :: Via Emanuele Paparo, Vibo Valentia [38.68264391, 16.10631213]",
+        "VV_01/01w11 :: Via Popilia, Vibo Valentia [38.67466011, 16.09690185]",
+        "VV_01/01w12 :: Via Cristoforo Colombo, Vibo Valentia [38.67352832, 16.09770487]",
+        "VV_01/01w13 :: Carmine, Vibo Valentia [38.67325975, 16.09938767]",
+        "VV_01/01w14 :: Carmine, Vibo Valentia [38.67301829, 16.10059096]",
+        "VV_01/01w21 :: Via Fontana Vecchia, Vibo Valentia [38.67217778, 16.10280373]",
+        "VV_01/01w22 :: Scesa Ospedale, Vibo Valentia [38.66988526, 16.10343893]",
+        "VV_01/01w23 :: Via San Michele, Vibo Valentia [38.67150624, 16.10496365]",
+        "VV_01/01w24 :: Via Michele Morelli, Vibo Valentia [38.67151682, 16.10574189]",
+        "VV_01/01w31 :: Corso Umberto I, Vibo Valentia [38.6725853, 16.10484459]",
+        "VV_01/01w32 :: Corso Vittorio Emanuele III, Vibo Valentia [38.67314579, 16.10322287]",
+        "VV_01/01w33 :: Via Potiri, Vibo Valentia [38.67406819, 16.09995962]",
+        "VV_01/01w34 :: Via Torretta, Vibo Valentia [38.67446622, 16.10388158]",
+        "VV_01/01w41 :: Via Alcide De Gasperi, Vibo Valentia [38.67713182, 16.10828858]",
+        "VV_01/01w42 :: Viale delle Accademie Vibonesi, Vibo Valentia [38.67649269, 16.11224286]",
+        "VV_01/01w43 :: Viale Alcide De Gasperi, Vibo Valentia [38.67819314, 16.108881]",
+        "VV_01/01w44 :: Contrada Nasari, Vibo Valentia [38.6767747, 16.11002776]",
+        "VV_01/02e11 :: Via Lacquari, Vibo Valentia [38.67366532, 16.09237954]",
+        "VV_01/02e12 :: Contrada Nasari, Vibo Valentia [38.67123075, 16.09379457]",
+        "VV_01/02e13 :: Contrada Nasari, Vibo Valentia [38.67027785, 16.09224611]",
+        "VV_01/02w11 :: Via Giovanni Gentile, Vibo Valentia [38.67609404, 16.09413549]",
+        "VV_01/02w12 :: Viale John Fitzgerald Kennedy, Vibo Valentia [38.67634384, 16.09688651]",
+        "VV_01/02w13 :: Via Giuseppe De Luca, Vibo Valentia [38.67803768, 16.09662933]",
+        "VV_01/02w14 :: Via Cancello Rosso, Vibo Valentia [38.67884538, 16.09700194]",
+        "VV_01/02w21 :: Via F. Fuduli, Vibo Valentia [38.67621761, 16.09169238]",
+        "VV_01/02w22 :: SS18, Vibo Valentia [38.67558452, 16.09130158]",
+        "VV_01/02w23 :: SP11, Vibo Valentia [38.67546889, 16.08931111]",
+        "VV_01/02w24 :: SS18, Vibo Valentia [38.67430507, 16.08934153]",
+        "VV_01/02w31 :: Via Nicola Froggio, Vibo Valentia [38.67582582, 16.0874715]",
+        "VV_01/02w32 :: SP11, Vibo Valentia [38.67559143, 16.08504701]",
+        "VV_01/02w33 :: Contrada Feudotto, Vibo Valentia [38.67504267, 16.08270942]",
+        "VV_01/02w34 :: Via Paolo Borsellino, Vibo Valentia [38.6732811, 16.08195329]",
+        "VV_01/02w41 :: Viale Feudotto, Vibo Valentia [38.67218628, 16.08368933]",
+        "VV_01/02w42 :: Contrada Feudotto, Vibo Valentia [38.67078287, 16.08482546]",
+        "VV_01/02w43 :: Contrada Feudotto, Vibo Valentia [38.66807644, 16.08279899]",
+        "VV_01/02w44 :: Contrada Nasari, Vibo Valentia [38.66480557, 16.08356051]",
+        "VV_01/03w11 :: Via Pescara, Vibo Valentia [38.71378134, 16.12726622]",
+        "VV_01/03w12 :: Viale Senatore Parodi 97, Vibo Valentia [38.71261737, 16.12415695]",
+        "VV_01/03w13 :: Viale Senatore Parodi, V traversa, Vibo Valentia [38.71170927, 16.12249093]",
+        "VV_01/03w14 :: Viale Senatore Parodi, VII traversa, Vibo Valentia [38.71086218, 16.12088835]",
+        "VV_01/03w21 :: Longobardi, Vibo Valentia [38.71160969, 16.11918209]"
+      ],
+      "Villa San Giovanni": [
+        "M018_CNO1 :: Piale, Villa San Giovanni [38.22560025, 15.6490873]",
+        "M018_CNO2 :: Pezzo Superiore, Villa San Giovanni [38.22291953, 15.64133471]",
+        "M018_CNO42 :: Acciarello, Villa San Giovanni [38.2085417, 15.64772796]"
+      ],
+      "Villaggio Baffa": [
+        "D123_CNO2 :: Trepidò Soprano, Villaggio Baffa [39.19452743, 16.66958604]",
+        "D123_CNO3 :: Strada Provinciale 61 Trepidò, Villaggio Baffa [39.16259506, 16.73620944]"
+      ],
+      "Villaggio Palumbo": [
+        "D123_CNO1 :: Caprara, Villaggio Palumbo [39.19605755, 16.65618939]"
+      ],
+      "Villaggio Trepitò": [
+        "F301_CNO1 :: Via non definita, Villaggio Trepitò [38.27912784, 16.05099927]"
+      ],
+      "Villapiana Scalo": [
+        "B903_CNO1 :: Via Ischia, Villapiana Scalo [39.79176447, 16.48063667]",
+        "B903_CNO2 :: Via Pantelleria, Villapiana Scalo [39.79065526, 16.48409043]"
+      ],
+      "Zambrone": [
+        "M143_CNO2 :: Madama, Zambrone [38.72015006, 15.98437489]",
+        "M143_CNO3 :: SP95 (Ex SS522), Zambrone [38.6993868, 15.97833379]"
+      ],
+      "Zinga": [
+        "B857_CNO2 :: Strada Provinciale 14 Puheriu, Zinga [39.25560186, 16.93992453]"
+      ]
+    }
+  }
+}
