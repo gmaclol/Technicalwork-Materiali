@@ -89,6 +89,29 @@ class ExcelRepository(private val context: Context) {
             val sheet = workbook.getSheetAt(0)
             val templateRow = if (sheet.lastRowNum >= 6) sheet.getRow(6) else if (sheet.lastRowNum >= 4) sheet.getRow(4) else sheet.getRow(0)
             
+            // Prepariamo gli stili una sola volta fuori dal ciclo per evitare OOM e consumo di CPU/stili POI
+            val style0 = if (templateRow != null) {
+                templateRow.getCell(0)?.cellStyle?.let { tempCellStyle0 ->
+                    workbook.createCellStyle().apply {
+                        cloneStyleFrom(tempCellStyle0)
+                        val font0 = workbook.createFont()
+                        val tempFont0 = workbook.getFontAt(tempCellStyle0.fontIndex)
+                        font0.fontHeightInPoints = tempFont0.fontHeightInPoints
+                        font0.fontName = tempFont0.fontName
+                        font0.bold = true
+                        setFont(font0)
+                    }
+                }
+            } else null
+
+            val style1 = if (templateRow != null) {
+                templateRow.getCell(1)?.cellStyle?.let { tempCellStyle1 ->
+                    workbook.createCellStyle().apply {
+                        cloneStyleFrom(tempCellStyle1)
+                    }
+                }
+            } else null
+            
             // Popolamento dei dati partendo dalla riga 4 (indice base 0)
             // SALTA i separatori
             var excelRowIndex = 4
@@ -104,28 +127,9 @@ class ExcelRepository(private val context: Context) {
                 val cell0 = row.getCell(0) ?: row.createCell(0)
                 val cell1 = row.getCell(1) ?: row.createCell(1)
                 
-                // Clonazione degli stili dalla row template
-                if (templateRow != null) {
-                    val tempCellStyle0 = templateRow.getCell(0)?.cellStyle
-                    if (tempCellStyle0 != null) {
-                        val style0 = workbook.createCellStyle()
-                        style0.cloneStyleFrom(tempCellStyle0)
-                        val font0 = workbook.createFont()
-                        val tempFont0 = workbook.getFontAt(tempCellStyle0.fontIndex)
-                        font0.fontHeightInPoints = tempFont0.fontHeightInPoints
-                        font0.fontName = tempFont0.fontName
-                        font0.bold = true
-                        style0.setFont(font0)
-                        cell0.cellStyle = style0
-                    }
-                    
-                    val tempCellStyle1 = templateRow.getCell(1)?.cellStyle
-                    if (tempCellStyle1 != null) {
-                        val style1 = workbook.createCellStyle()
-                        style1.cloneStyleFrom(tempCellStyle1)
-                        cell1.cellStyle = style1
-                    }
-                }
+                // Assegnazione degli stili pre-creati
+                if (style0 != null) cell0.cellStyle = style0
+                if (style1 != null) cell1.cellStyle = style1
                 
                 updateCellValue(cell0, rowData.label)
                 updateCellValue(cell1, rowData.value)
@@ -248,6 +252,13 @@ class ExcelRepository(private val context: Context) {
             val masterList = AssetsHelper().loadMasterList(context, company)
             var excelRowIndex = 4
 
+            val clonedStyle0 = templateStyle0?.let {
+                workbook.createCellStyle().apply { cloneStyleFrom(it) }
+            }
+            val clonedStyle1 = templateStyle1?.let {
+                workbook.createCellStyle().apply { cloneStyleFrom(it) }
+            }
+
             // 3. Scrive le righe saltando i separatori
             masterList.forEach { name ->
                 if (name.trim().matches(separatorRegex) || name.trim().matches(separatorExtraRegex)) {
@@ -260,16 +271,8 @@ class ExcelRepository(private val context: Context) {
                 val cell0 = row.createCell(0)
                 val cell1 = row.createCell(1)
 
-                templateStyle0?.let {
-                    val newStyle = workbook.createCellStyle()
-                    newStyle.cloneStyleFrom(it)
-                    cell0.cellStyle = newStyle
-                }
-                templateStyle1?.let {
-                    val newStyle = workbook.createCellStyle()
-                    newStyle.cloneStyleFrom(it)
-                    cell1.cellStyle = newStyle
-                }
+                clonedStyle0?.let { cell0.cellStyle = it }
+                clonedStyle1?.let { cell1.cellStyle = it }
 
                 cell0.setCellValue(name)
                 cell1.setCellValue("") // Cella vuota

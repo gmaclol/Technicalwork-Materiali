@@ -56,6 +56,13 @@ class ExcelWriter {
             val separatorRegex = Regex("^::.*::$|^;;.*;;$")
             var excelRowIndex = 4
             
+            val clonedStyle0 = templateStyle0?.let {
+                workbook.createCellStyle().apply { cloneStyleFrom(it) }
+            }
+            val clonedStyle1 = templateStyle1?.let {
+                workbook.createCellStyle().apply { cloneStyleFrom(it) }
+            }
+
             materials.forEach { pair ->
                 if (pair.first.trim().matches(separatorRegex)) {
                     return@forEach // Salta il separatore
@@ -67,16 +74,8 @@ class ExcelWriter {
                 val cell0 = row.createCell(0)
                 val cell1 = row.createCell(1)
                 
-                templateStyle0?.let {
-                    val newStyle = workbook.createCellStyle()
-                    newStyle.cloneStyleFrom(it)
-                    cell0.cellStyle = newStyle
-                }
-                templateStyle1?.let {
-                    val newStyle = workbook.createCellStyle()
-                    newStyle.cloneStyleFrom(it)
-                    cell1.cellStyle = newStyle
-                }
+                clonedStyle0?.let { cell0.cellStyle = it }
+                clonedStyle1?.let { cell1.cellStyle = it }
                 
                 cell0.setCellValue(pair.first)
                 val cleanValue = pair.second.trim()
