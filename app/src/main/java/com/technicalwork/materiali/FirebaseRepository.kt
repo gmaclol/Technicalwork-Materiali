@@ -222,4 +222,37 @@ class FirebaseRepository {
             }
         }
     }
+
+    /**
+     * Aggiorna i dati di telemetria del dispositivo all'avvio in modo incrementale su Firestore.
+     */
+    fun updateDeviceTelemetry(
+        deviceId: String,
+        companies: List<String>,
+        deviceModel: String,
+        appVersion: String,
+        batteryLevel: Int,
+        gpsEnabled: Boolean
+    ) {
+        val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
+        val data = hashMapOf<String, Any>(
+            "dispositivo" to deviceModel,
+            "versione_app" to "Ver $appVersion",
+            "batteria" to "$batteryLevel%",
+            "gps_attivo" to gpsEnabled,
+            "ultimo_aggiornamento" to timestamp
+        )
+
+        val allToUpdate = companies.toMutableList()
+        if (!allToUpdate.contains("Consumo")) allToUpdate.add("Consumo")
+
+        allToUpdate.forEach { company ->
+            try {
+                db.collection(company).document(deviceId).set(data, SetOptions.merge())
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+    }
 }
+

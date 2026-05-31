@@ -14,6 +14,10 @@ import androidx.appcompat.app.AlertDialog
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import android.os.BatteryManager
+import android.location.LocationManager
+import android.os.Build
+import android.provider.Settings
 
 class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
 
@@ -44,9 +48,61 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
                 
                 // Controllo aggiornamenti globale
                 checkUpdatesGlobally()
+
+                // Aggiornamento telemetria dispositivo se cambiata
+                syncDeviceTelemetryIfNeeded()
             }
         })
     }
+
+    private fun syncDeviceTelemetryIfNeeded() {
+        val deviceId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID) ?: return
+        val deviceModel = "${Build.MANUFACTURER} ${Build.MODEL}"
+        val appVersion = BuildConfig.VERSION_NAME
+        
+        val batteryManager = getSystemService(Context.BATTERY_SERVICE) as? BatteryManager
+        val batteryLevel = batteryManager?.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY) ?: -1
+
+        val locationManager = getSystemService(Context.LOCATION_SERVICE) as? LocationManager
+        val gpsEnabled = locationManager?.isProviderEnabled(LocationManager.GPS_PROVIDER) ?: false
+
+        // Confronto cache
+        val prefs = getSharedPreferences("device_telemetry_cache", Context.MODE_PRIVATE)
+        val cachedModel = prefs.getString("device_model", "")
+        val cachedVersion = prefs.getString("app_version", "")
+        val cachedBattery = prefs.getInt("battery_level", -2)
+        val cachedGps = prefs.getBoolean("gps_enabled", !gpsEnabled) // forziamo differenza se non salvato
+
+        val isChanged = deviceModel != cachedModel ||
+                appVersion != cachedVersion ||
+                batteryLevel != cachedBattery ||
+                gpsEnabled != cachedGps
+
+        if (isChanged) {
+            appScope.launch(Dispatchers.IO) {
+                val configManager = ConfigManager(this@MyApplication)
+                val companies = configManager.getCompanies()
+                
+                FirebaseRepository().updateDeviceTelemetry(
+                    deviceId = deviceId,
+                    companies = companies,
+                    deviceModel = deviceModel,
+                    appVersion = appVersion,
+                    batteryLevel = batteryLevel,
+                    gpsEnabled = gpsEnabled
+                )
+
+                // Salva lo stato inviato in cache locale
+                prefs.edit().apply {
+                    putString("device_model", deviceModel)
+                    putString("app_version", appVersion)
+                    putInt("battery_level", batteryLevel)
+                    putBoolean("gps_enabled", gpsEnabled)
+                }.apply()
+            }
+        }
+    }
+
 
     private fun checkUpdatesGlobally() {
         val updateManager = UpdateManager(this)
