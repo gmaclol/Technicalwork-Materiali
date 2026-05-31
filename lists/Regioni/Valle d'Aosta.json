@@ -1,0 +1,531 @@
+{
+  "Valle D'Aosta": {
+    "Comuni": {
+      "Allein": [
+        "A205_CNO1 :: Strada Allein Villa, Allein [45.80851978, 7.271758691]"
+      ],
+      "Antey-Saint-André": [
+        "A305_CNO1 :: Strada Regionale 46 della Valtournenche, Antey-Saint-André [45.83212455, 7.600585747]",
+        "A305_CNO2 :: Strada Regionale 46 della Valtournenche 44a, Antey-Saint-André [45.80802665, 7.587195988]",
+        "A305_CNO3 :: Grand Moulin, Antey-Saint-André [45.80650635, 7.587902627]",
+        "A305_CNO4 :: Strada Regionale 8 di La Magdeleine, Antey-Saint-André [45.80728179, 7.590439963]"
+      ],
+      "Aosta": [
+        "A326_CNO1 :: SR38, Aosta [45.75157427, 7.306247684]",
+        "A326_CNO2 :: Strada Regionale 38 di Excenex 19, Aosta [45.75662131, 7.308296825]",
+        "A326_CNO3 :: SR38, Aosta [45.76138519, 7.300025028]",
+        "AO_01/01w11 :: Via / Rue Mont Vélan, Aosta [45.74018662, 7.329376528]",
+        "AO_01/01w12 :: loc Roppoz Porossan 18, Aosta [45.74280352, 7.330873735]",
+        "AO_01/01w13 :: Strada regionale per Roisan, Aosta [45.74322151, 7.329888431]",
+        "AO_01/01w14 :: Via Pasquettaz 1a, Aosta [45.74058341, 7.328237449]",
+        "AO_01/01w21 :: Via Sant'Orso - Rue Saint-Ours, Aosta [45.73890741, 7.324910251]",
+        "AO_01/01w22 :: Via Sant'Orso, Aosta [45.74004336, 7.324731166]",
+        "AO_01/01w23 :: Via / Rue Jean-Joseph-François de la Pierre, Aosta [45.74177648, 7.322033679]",
+        "AO_01/01w31 :: Via - Rue Vittorio Avondo 23, Aosta [45.7368788, 7.330119413]",
+        "AO_01/01w32 :: Via - Rue Esperanto, Aosta [45.73789992, 7.328361478]",
+        "AO_01/01w33 :: Via Caduti del Lavoro - Rue des Victimes-du-Travail, Aosta [45.73587787, 7.329515835]",
+        "AO_01/01w34 :: Via - Rue Sylvain Lucat, Aosta [45.73543193, 7.326523595]",
+        "AO_01/01w41 :: Piazza Porta Prætoria, Aosta [45.73769787, 7.323167965]",
+        "AO_01/01w42 :: Rue du Collège Saint-Bénin, Aosta [45.73634316, 7.320514945]",
+        "AO_01/01w43 :: Le Gotrau, Aosta [45.73804409, 7.316065813]",
+        "AO_01/01w44 :: Via - Rue Jean-Baptiste de Tillier 56-58, Aosta [45.73655902, 7.317576855]",
+        "AO_01/02e11 :: Corso Ivrea - Avenue d'Ivrea, Aosta [45.7392944, 7.334243935]",
+        "AO_01/02e12 :: Via Clavalité, Aosta [45.7384527, 7.334830512]",
+        "AO_01/02e13 :: Via / Rue Jules Brocherel 17/1, Aosta [45.73816201, 7.33300895]",
+        "AO_01/02e14 :: Via Monte Emilius - Rue du Mont Emilius, Aosta [45.73931689, 7.329435786]",
+        "AO_01/02e21 :: Rue des Prés-Fossés 7/A, Aosta [45.73736312, 7.325304262]",
+        "AO_01/02e22 :: Via Antica Vetreria - Rue Ancienne Verrerie, Aosta [45.73970684, 7.326750918]",
+        "AO_01/02e23 :: Piazza - Place Plouves, Aosta [45.7368603, 7.323796292]",
+        "AO_01/02e24 :: Rue du Collège Saint-Bénin, Aosta [45.73625972, 7.320548437]",
+        "AO_01/02e31 :: Via - Rue Mons. Jean-Joconde Stévenin, Aosta [45.73423291, 7.3168645]",
+        "AO_01/02e32 :: Via Jean-Boniface Festaz 90, Aosta [45.73511934, 7.317370236]",
+        "AO_01/02e33 :: Passage Folliez, Aosta [45.73618866, 7.317667677]",
+        "AO_01/02e34 :: Via Édouard Aubert, Aosta [45.7345975, 7.315510958]",
+        "AO_01/02e41 :: Via Édouard Aubert 75, Aosta [45.73572498, 7.315365272]",
+        "AO_01/02e42 :: Via Édouard Aubert 3, Aosta [45.73620133, 7.316930016]",
+        "AO_01/02e43 :: Piazza Giovanni XXIII / Place Jean XXIII, Aosta [45.73796765, 7.317099527]",
+        "AO_01/02e44 :: Via - Rue Cesare Battisti 10, Aosta [45.73618508, 7.311736116]",
+        "AO_01/02w11 :: Via / Rue Guido Rey, Aosta [45.73998358, 7.32025406]",
+        "AO_01/02w12 :: Avenue de la Paix - Viale della Pace, Aosta [45.73944615, 7.31780955]",
+        "AO_01/02w13 :: Corso XXVI Febbraio - Avenue du Vingt-six-Février, Aosta [45.74032164, 7.316293062]",
+        "AO_01/02w14 :: Avenue de la Paix - Viale della Pace, Aosta [45.74124092, 7.316728081]",
+        "AO_01/02w21 :: Via - Rue Monte Pasubio 6, Aosta [45.73812947, 7.313019884]",
+        "AO_01/02w22 :: Via - Rue Monte Pasubio, Aosta [45.73760979, 7.311511375]",
+        "AO_01/02w23 :: Le Gotrau, Aosta [45.73934356, 7.312336946]",
+        "AO_01/02w24 :: Via - Rue Monte Vodice 47, Aosta [45.7382178, 7.311355036]",
+        "AO_01/02w31 :: Via Capitano Chamonin - Rue du Capitaine Chamonin 9, Aosta [45.73715803, 7.308889623]",
+        "AO_01/02w32 :: Via - Rue Fiollet 1, Aosta [45.73770936, 7.305536476]",
+        "AO_01/02w33 :: Via capitano Jean-François Chamonin, Aosta [45.73655284, 7.305148461]",
+        "AO_01/02w34 :: Via - Rue Adamello 12, Aosta [45.73925167, 7.310885308]",
+        "AO_01/02w41 :: Via - Rue Liconi, Aosta [45.73474245, 7.307190923]",
+        "AO_01/02w42 :: Via - Rue Liconi, Aosta [45.73460406, 7.305420703]",
+        "AO_01/02w43 :: Rue Gran Paradis, Aosta [45.73583145, 7.30653856]",
+        "AO_01/02w44 :: Via - Rue Liconi, Aosta [45.73541268, 7.310376605]",
+        "AO_01/03e11 :: Via Liconi 2/1, Aosta [45.7354588, 7.310851711]",
+        "AO_01/03e12 :: Via Lys, Aosta [45.73389634, 7.311400805]",
+        "AO_01/03e13 :: Avenue des Maquisards - Viale Partigiani, Aosta [45.73296029, 7.313843709]",
+        "AO_01/03e14 :: Via - Rue Voison, Aosta [45.73123161, 7.314272925]",
+        "AO_01/03e21 :: Via - Rue Lino Binel 19, Aosta [45.7311353, 7.311170436]",
+        "AO_01/03e22 :: Corso - Avenue Lancieri d'Aosta 24c, Aosta [45.73043961, 7.309029396]",
+        "AO_01/03e23 :: Via - Rue Grand'Eyvia 12, Aosta [45.73123931, 7.302215337]",
+        "AO_01/03e24 :: Via Piccolo San Bernardo, Aosta [45.73305903, 7.301712734]",
+        "AO_01/03e31 :: Via Chavanne - Rue Chavanne, Aosta [45.73306006, 7.307665142]",
+        "AO_01/03e32 :: Via Chavanne - Rue Chavanne, Aosta [45.73337399, 7.307592082]",
+        "AO_01/03e33 :: Via Chambéry - Rue de Chambéry 141, Aosta [45.73255419, 7.303786739]",
+        "AO_01/03e34 :: Corso Battaglione Aosta 66/3, Aosta [45.73365097, 7.303337035]",
+        "AO_01/03e41 :: Viale conte Édouard Crotti - Avenue comte Édouard Crotti, Aosta [45.73393388, 7.302050505]",
+        "AO_01/03e42 :: Via canonico Joseph Bréan - Rue chanoine Joseph Bréan, Aosta [45.73536377, 7.303455141]",
+        "AO_01/03e43 :: Avenue Saint-Martin-de-Corléans 139d, Aosta [45.73578514, 7.301861828]",
+        "AO_01/03e44 :: Avenue Saint Martin de Corléans, Aosta [45.73640216, 7.304175074]",
+        "AO_01/03w11 :: Via - Rue Anton Zimmermann, Aosta [45.74172494, 7.318450595]",
+        "AO_01/03w12 :: Via Roma / Rue de Rome, Aosta [45.74246652, 7.318003422]",
+        "AO_01/03w13 :: Viale Gran San Bernardo - Avenue du Grand-Saint-Bernard, Aosta [45.74450081, 7.318212235]",
+        "AO_01/03w14 :: Strada Consolata - Via - Rue Grand-Tournalin 38, Aosta [45.74360727, 7.321697481]",
+        "AO_01/03w21 :: Via Parigi - Rue de Paris, Aosta [45.73927133, 7.307276616]",
+        "AO_01/03w22 :: Via / Rue abbé Auguste Petigat 4, Aosta [45.74141044, 7.309341115]",
+        "AO_01/03w23 :: Via - Rue des Edelweiss, Aosta [45.74281621, 7.314357962]",
+        "AO_01/03w24 :: Viale Gran San Bernardo - Avenue du Grand-Saint-Bernard, Aosta [45.74312385, 7.316244617]",
+        "AO_01/03w31 :: Via Parigi - Rue de Paris, Aosta [45.73451651, 7.293667642]",
+        "AO_01/03w32 :: Via Montmayeur, Aosta [45.73235911, 7.294199257]",
+        "AO_01/03w33 :: Via Parigi - Rue de Paris, Aosta [45.73295918, 7.291513545]",
+        "AO_01/03w34 :: Via Montmayeur, Aosta [45.73308529, 7.291649719]",
+        "AO_01/03w41 :: Via Barone Emmanuel Bich, Aosta [45.73628089, 7.301279539]",
+        "AO_01/03w42 :: Viale Conte Crotti 83, Aosta [45.73487121, 7.30006049]",
+        "AO_01/03w43 :: Viale Europa 44, Aosta [45.73341594, 7.297305465]",
+        "AO_01/03w44 :: Avenue Saint-Martin-de-Corléans, Aosta [45.73533792, 7.295885873]"
+      ],
+      "Arnad": [
+        "A424_CNO6 :: SS26, Arnad [45.64529684, 7.717799368]",
+        "A424_CNO7 :: Prouve, Arnad [45.64207321, 7.723872838]"
+      ],
+      "Arvier": [
+        "A452_CNO1 :: SS26, Arvier [45.70294624, 7.154244769]",
+        "A452_CNO3 :: SS26, Arvier [45.70259245, 7.162596283]",
+        "A452_CNO5 :: Via Corrado Gex 8, Arvier [45.70365879, 7.169310638]"
+      ],
+      "Avise": [
+        "A521_CNO1 :: SS26 7, Avise [45.70588491, 7.132432521]"
+      ],
+      "Ayas": [
+        "A094_CNO1 :: Strada Regionale 45 della Valle D'Ayas, Ayas [45.7986783, 7.694590264]",
+        "A094_CNO10 :: Rue Varasc, Ayas [45.83025482, 7.724586821]",
+        "A094_CNO11 :: Rue Prabochon 2, Ayas [45.83125197, 7.72702158]",
+        "A094_CNO12 :: Chemin Quaille 11, Ayas [45.83164304, 7.725101429]",
+        "A094_CNO13 :: Strada Regionale 5 di Antagnod, Ayas [45.83240871, 7.723901668]",
+        "A094_CNO14 :: Strada Regionale 45 della Val d'Ayas 41, Ayas [45.83485436, 7.72851759]",
+        "A094_CNO15 :: Strada Regionale 45 della Val d'Ayas, Ayas [45.83608494, 7.729796636]",
+        "A094_CNO16 :: Strada Regionale 45 della Val d'Ayas 75, Ayas [45.83763426, 7.73167749]",
+        "A094_CNO17 :: Strada Regionale 45 della Valle D'Ayas-Rue Periasc La Val, Ayas [45.81027807, 7.695681477]",
+        "A094_CNO2 :: Rue Saint Martin, Ayas [45.80680065, 7.693079277]",
+        "A094_CNO5 :: Strada Regionale 5 di Antagnod, Ayas [45.81187562, 7.688476428]",
+        "A094_CNO6 :: Route Barmasc, Ayas [45.81340069, 7.688251171]",
+        "A094_CNO7 :: Via Decrestella, Ayas [45.81541892, 7.690908681]",
+        "A094_CNO8 :: Route Barmasc, Ayas [45.81663667, 7.690345238]",
+        "A094_CNO9 :: Rue Varasc/Chemin Varasc, Ayas [45.82820183, 7.720444993]"
+      ],
+      "Aymavilles": [
+        "A108_CNO1 :: Strada regionale di Cogne SR47, Aymavilles [45.70085082, 7.245361995]",
+        "A108_CNO2 :: Strada Comunale del Bettex, Aymavilles [45.70126404, 7.248660815]",
+        "A108_CNO4 :: Les Moulins, Aymavilles [45.70192019, 7.239071551]",
+        "A108_CNO5 :: Strada regionale di Cogne SR47, Aymavilles [45.70415916, 7.244106392]",
+        "A108_CNO6 :: Frazione Ferriere SR20 16a, Aymavilles [45.70112878, 7.240913585]"
+      ],
+      "Bard": [
+        "A643_CNO1 :: Via Vittorio Emanuele II, Bard [45.61035736, 7.745061045]"
+      ],
+      "Brissogne": [
+        "B192_CNO1 :: Strada Regionale 15 di Brissogne 57, Brissogne [45.7319999, 7.414483397]",
+        "B192_CNO2 :: Établoz, Brissogne [45.73091192, 7.411723424]"
+      ],
+      "Brusson": [
+        "B230_CNO13 :: Rue Vollon, Brusson [45.76614961, 7.713276354]",
+        "B230_CNO14 :: Rue Col Ranzola, Brusson [45.7607728, 7.722562951]",
+        "B230_CNO15 :: Rue Ruet, Brusson [45.7582517, 7.730537941]"
+      ],
+      "Chambave": [
+        "C595_CNO1 :: Strada Regionale 11 di Verrayes, Chambave [45.74415095, 7.547668782]"
+      ],
+      "Chamois": [
+        "B491_CNO1 :: Strada Chamois La Magdeleine, Chamois [45.83725225, 7.62384581]",
+        "B491_CNO2 :: Strada Comunale Corgnolaz Lieussel, Chamois [45.83992532, 7.615632548]"
+      ],
+      "Champdepraz": [
+        "C596_CNO2 :: Frazione Fabbrica, Champdepraz [45.68443269, 7.66573844]",
+        "C596_CNO3 :: Frazione Fabbrica, Champdepraz [45.68538332, 7.663703167]"
+      ],
+      "Champorcher": [
+        "B540_CNO3 :: Le Chardonney, Champorcher [45.62178145, 7.60644872]",
+        "B540_CNO4 :: Sentiero degli Orridi, Champorcher [45.6235101, 7.620946403]",
+        "B540_CNO5 :: Strada Comunale Grand Rosier, Champorcher [45.62266637, 7.635991254]",
+        "B540_CNO6 :: Strada Comunale Grand Rosier, Champorcher [45.62275767, 7.639665921]"
+      ],
+      "Charvensod": [
+        "C598_CNO1 :: SR18 70, Charvensod [45.72049955, 7.323264386]",
+        "C598_CNO2 :: SR18 252, Charvensod [45.7271862, 7.32233637]",
+        "C598_CNO4 :: SR19 146, Charvensod [45.72705537, 7.331972525]",
+        "C598_CNO5 :: SR19, Charvensod [45.72697673, 7.336313122]",
+        "C598_CNO6 :: Le Pont-Suaz, Charvensod [45.72686656, 7.318685283]",
+        "C598_CNO7 :: Località Capoluogo / Chef-lieu 178, Charvensod [45.72021537, 7.325389439]"
+      ],
+      "Châtillon": [
+        "C294_CNO10 :: Via Menabrea, Châtillon [45.74927394, 7.608844891]",
+        "C294_CNO12 :: Via Emilio Chanoux, Châtillon [45.74851099, 7.611947244]",
+        "C294_CNO14 :: Via Tour de Grange, Châtillon [45.75316254, 7.621169721]",
+        "C294_CNO15 :: Galleria Breil, Châtillon [45.74682294, 7.601931566]",
+        "C294_CNO2 :: Strada Comunale Châtillon Gléreyaz, Châtillon [45.74951964, 7.62092242]",
+        "C294_CNO3 :: SS26, Châtillon [45.7518609, 7.6160075]",
+        "C294_CNO4 :: Merlin, Châtillon [45.74959138, 7.616561267]",
+        "C294_CNO5 :: Via Menabrea, Châtillon [45.74865812, 7.605631698]",
+        "C294_CNO6 :: Via Tornafol, Châtillon [45.746549, 7.615600058]",
+        "C294_CNO8 :: Raccordo Via Pellissier SS26, Châtillon [45.75017462, 7.61566709]",
+        "C294_CNO9 :: Via Emilio Chanoux 129, Châtillon [45.74888041, 7.614389081]"
+      ],
+      "Cogne": [
+        "C821_CNO1 :: Strada Comunale per Gimillan, Cogne [45.60825946, 7.361471229]",
+        "C821_CNO3 :: Via Revettaz, Cogne [45.60822144, 7.356743837]",
+        "C821_CNO4 :: Veulla, Cogne [45.61041062, 7.3546989]",
+        "C821_CNO5 :: Strada regionale di Cogne, Cogne [45.62864575, 7.323127629]",
+        "C821_CNO6 :: Rue Grand Paradis, Cogne [45.6021626, 7.35329248]",
+        "C821_CNO7 :: Strada Comunale per Gimillan, Cogne [45.61492533, 7.359907754]",
+        "C821_CNO8 :: Rue Grand Paradis, Cogne [45.60642457, 7.355609476]",
+        "C821_CNO9 :: Via Cavagnet, Cogne [45.6108105, 7.350399392]"
+      ],
+      "Courmayeur": [
+        "D012_CNO1 :: Via Gigi Panei, Courmayeur [45.81660593, 6.964241029]",
+        "D012_CNO10 :: Pussey, Courmayeur [45.78851253, 6.974694727]",
+        "D012_CNO11 :: La Saxe, Courmayeur [45.80230512, 6.968019242]",
+        "D012_CNO12 :: Via Luigino Henry, Courmayeur [45.78655398, 6.973155557]",
+        "D012_CNO13 :: Via dei Bagni, Courmayeur [45.79674804, 6.969142827]",
+        "D012_CNO14 :: Via/Rue Circonvallazione 22, Courmayeur [45.7889611, 6.971676535]",
+        "D012_CNO15 :: Strada Regionale 35, Courmayeur [45.78605085, 6.97212656]",
+        "D012_CNO16 :: Entrelevie, Courmayeur [45.79620127, 6.966471087]",
+        "D012_CNO17 :: Strada delle Volpi, Courmayeur [45.7881727, 6.972318365]",
+        "D012_CNO18 :: Strada del Pian Gorret, Courmayeur [45.7978485, 6.976755856]",
+        "D012_CNO19 :: Dolonne, Courmayeur [45.79008656, 6.964371748]",
+        "D012_CNO2 :: Scorciatoia Raccourci della Palud 7, Courmayeur [45.81600462, 6.960976158]",
+        "D012_CNO20 :: Strada della Margherita 8a, Courmayeur [45.79024753, 6.970490898]",
+        "D012_CNO21 :: Strada La Palud, Courmayeur [45.8138322, 6.9630076]",
+        "D012_CNO22 :: Les Forges, Courmayeur [45.7922837, 6.966360739]",
+        "D012_CNO23 :: Larzey, Courmayeur [45.79609433, 6.971665605]",
+        "D012_CNO24 :: Via Marconi, Courmayeur [45.78994025, 6.974166084]",
+        "D012_CNO25 :: Via Marconi, Courmayeur [45.79075813, 6.973597215]",
+        "D012_CNO26 :: Strada della Villette 7, Courmayeur [45.79373567, 6.968541422]",
+        "D012_CNO27 :: La Villette, Courmayeur [45.7948425, 6.963876605]",
+        "D012_CNO3 :: Via dei Larici, Courmayeur [45.79456903, 6.975823099]",
+        "D012_CNO4 :: Strada Entrelevie, Courmayeur [45.80031388, 6.967506628]",
+        "D012_CNO5 :: Strada del Villair, Courmayeur [45.79670759, 6.975245238]",
+        "D012_CNO6 :: Strada delle Volpi, Courmayeur [45.78508973, 6.972165705]",
+        "D012_CNO7 :: Larzey, Courmayeur [45.79282895, 6.971780316]",
+        "D012_CNO8 :: Via Col Ferret, Courmayeur [45.79959694, 6.969333619]"
+      ],
+      "Derby": [
+        "E458_CNO13 :: Le Villaret, Derby [45.73999919, 7.078194112]",
+        "E458_CNO3 :: Le Villair, Derby [45.73540627, 7.079425023]"
+      ],
+      "Donnas": [
+        "D338_CNO1 :: Via Roma, Donnas [45.60309021, 7.769694161]",
+        "D338_CNO2 :: Via Janin, Donnas [45.6052621, 7.769915395]",
+        "D338_CNO3 :: Via Treby, Donnas [45.60388643, 7.769186814]",
+        "D338_CNO4 :: Via Roma, Donnas [45.60224626, 7.780500182]",
+        "D338_CNO5 :: Via Binel, Donnas [45.60378391, 7.774276113]",
+        "D338_CNO6 :: Rue Clapey, Donnas [45.6005154, 7.765097497]"
+      ],
+      "Doues": [
+        "D356_CNO1 :: Le Coudrey, Doues [45.81875404, 7.305376796]"
+      ],
+      "Emarèse": [
+        "D402_CNO1 :: Strada per Colle Tzecore, Emarèse [45.72825183, 7.706680009]",
+        "D402_CNO2 :: Strada per Colle Tzecore, Emarèse [45.73171017, 7.71475608]",
+        "D402_CNO3 :: Strada Regionale 7 di Eresaz, Emarèse [45.72520279, 7.701114977]"
+      ],
+      "Fontainemore": [
+        "D666_CNO2 :: Strada Regionale 44 della Valle del Lys, Fontainemore [45.64591697, 7.859183563]"
+      ],
+      "Fénis": [
+        "D537_CNO1 :: Strada comunale \"Delle Piane\" 37, Fénis [45.73330932, 7.492240874]",
+        "D537_CNO2 :: Strada Comunale Fénis 62, Fénis [45.73460042, 7.49819305]",
+        "D537_CNO3 :: Strada Comunale Fénis, Fénis [45.73363533, 7.50296604]",
+        "D537_CNO4 :: Strada comunale \"Delle Piane\", Fénis [45.73741691, 7.485129372]"
+      ],
+      "Gaby": [
+        "D839_CNO1 :: Strada Regionale 44 della Valle del Lys, Gaby [45.71282039, 7.882514047]",
+        "D839_CNO2 :: Strada Regionale 44 della Valle del Lys, Gaby [45.71313881, 7.881315179]",
+        "D839_CNO3 :: Strada Regionale 44 della Valle del Lys, Gaby [45.71423179, 7.881067735]"
+      ],
+      "Gignod": [
+        "E029_CNO1 :: SS27, Gignod [45.77545274, 7.299640525]",
+        "E029_CNO2 :: Lexert, Gignod [45.78132389, 7.295786212]",
+        "E029_CNO3 :: Strada regionale per Bionaz, Gignod [45.76748833, 7.311843884]",
+        "E029_CNO5 :: SR38, Gignod [45.7675725, 7.296168926]"
+      ],
+      "Gressan": [
+        "E165_CNO1 :: Moline, Gressan [45.71435433, 7.290971925]",
+        "E165_CNO2 :: Frazione Les Fleurs 1, Gressan [45.70311355, 7.311328088]"
+      ],
+      "Gressoney-La-Trinité": [
+        "E167_CNO1 :: La Tache, Gressoney-La-Trinité [45.82591656, 7.823160856]"
+      ],
+      "Gressoney-Saint-Jean": [
+        "E168_CNO4 :: Lyskamm Wäg, Gressoney-Saint-Jean [45.78025482, 7.824929448]",
+        "E168_CNO5 :: Strada Castello Savoia, Gressoney-Saint-Jean [45.76996648, 7.826577228]",
+        "E168_CNO6 :: Strada Regionale 44 della Valle del Lys, Gressoney-Saint-Jean [45.77198494, 7.829818421]",
+        "E168_CNO7 :: Strada Castello Savoia 1, Gressoney-Saint-Jean [45.77168261, 7.829064662]"
+      ],
+      "Hône": [
+        "E273_CNO1 :: Via Émile Chanoux, Hône [45.61150007, 7.740252386]",
+        "E273_CNO2 :: Via Émile Chanoux, Hône [45.61196675, 7.736724994]",
+        "E273_CNO3 :: Rue de Vareyna, Hône [45.61305312, 7.73406016]"
+      ],
+      "Introd": [
+        "E306_CNO2 :: Località Les Villes-Dessus, Introd [45.69425906, 7.180442188]",
+        "E306_CNO3 :: Strada regionale della Valsavarenche, Introd [45.69050753, 7.186487484]"
+      ],
+      "Issime": [
+        "E369_CNO1 :: Strada Regionale 44 della Valle del Lys, Issime [45.68254038, 7.856591867]",
+        "E369_CNO2 :: Nicche, Issime [45.68747842, 7.853865048]"
+      ],
+      "Issogne": [
+        "E371_CNO1 :: Strada Regionale 4 Issogne, Issogne [45.6540077, 7.68456998]"
+      ],
+      "Jovençan": [
+        "E391_CNO1 :: SR20 2, Jovençan [45.71617034, 7.273771979]",
+        "E391_CNO2 :: Jobel, Jovençan [45.71657066, 7.274839231]"
+      ],
+      "La Magdeleine": [
+        "A308_CNO1 :: Artaz, La Magdeleine [45.81231809, 7.61800974]",
+        "A308_CNO2 :: Strada Comunale, La Magdeleine [45.81113553, 7.619906363]"
+      ],
+      "La Salle": [
+        "E458_CNO1 :: Via del Ponte, La Salle [45.74581231, 7.069058678]",
+        "E458_CNO10 :: Chaffieron, La Salle [45.75539279, 7.068946439]",
+        "E458_CNO11 :: Villarisson, La Salle [45.76212469, 7.061219365]",
+        "E458_CNO12 :: Chez Les Gontiers, La Salle [45.726256, 7.088731468]",
+        "E458_CNO14 :: Le Villaret, La Salle [45.73064252, 7.086250815]",
+        "E458_CNO2 :: Via Corrado Gex, La Salle [45.7452562, 7.067628547]",
+        "E458_CNO4 :: SS26, La Salle [45.72528721, 7.089601414]",
+        "E458_CNO5 :: Via Col Serena, La Salle [45.74671706, 7.071919009]",
+        "E458_CNO6 :: Chaffieron, La Salle [45.74670815, 7.074229561]",
+        "E458_CNO8 :: Via Cesare Ollietti, La Salle [45.74369211, 7.073156851]",
+        "E458_CNO9 :: Tsantamerla, La Salle [45.75244063, 7.067372626]"
+      ],
+      "La Thuile": [
+        "E470_CNO1 :: Strada statale 26 della Valle d'Aosta, La Thuile [45.71396333, 6.944262122]",
+        "E470_CNO10 :: Frazione Villaret, La Thuile [45.70897924, 6.955272448]",
+        "E470_CNO11 :: Entrèves 133, La Thuile [45.71213096, 6.947941888]",
+        "E470_CNO12 :: Grande Golette, La Thuile [45.71375672, 6.942694658]",
+        "E470_CNO13 :: Frazione Villaret, La Thuile [45.7134977, 6.950625786]",
+        "E470_CNO14 :: Colle San Carlo, La Thuile [45.71881399, 6.959171001]",
+        "E470_CNO15 :: Frazione Villaret, La Thuile [45.71428988, 6.950513868]",
+        "E470_CNO16 :: Localité Grand Entrèves, La Thuile [45.71383268, 6.949159307]",
+        "E470_CNO17 :: Frazione Thovex, La Thuile [45.71749626, 6.955890278]",
+        "E470_CNO18 :: Entrèves, La Thuile [45.71222322, 6.944768514]",
+        "E470_CNO19 :: Localité Moulin, La Thuile [45.71654727, 6.950024367]",
+        "E470_CNO20 :: Entrèves, La Thuile [45.71486063, 6.947469881]",
+        "E470_CNO9 :: Via Paolo Debernard, La Thuile [45.71759505, 6.948602807]"
+      ],
+      "Lexert": [
+        "A877_CNO1 :: Strada regionale per Bionaz, Lexert [45.86467783, 7.398195226]"
+      ],
+      "Lillianes": [
+        "E587_CNO1 :: Fey, Lillianes [45.63327589, 7.845082746]",
+        "E587_CNO2 :: Via Roma, Lillianes [45.63249292, 7.844346125]"
+      ],
+      "Montjovet": [
+        "F367_CNO1 :: SS26, Montjovet [45.70426147, 7.673890575]",
+        "F367_CNO2 :: Tavernaz, Montjovet [45.70997815, 7.672445705]",
+        "F367_CNO3 :: Brocard, Montjovet [45.71462787, 7.671054477]"
+      ],
+      "Morgex": [
+        "F726_CNO1 :: Chemin de l'Echely, Morgex [45.76024995, 7.032297729]",
+        "F726_CNO11 :: Ruine Desot, Morgex [45.75361116, 7.051606368]",
+        "F726_CNO12 :: Viale della Rimembranza, Morgex [45.7551333, 7.039983418]",
+        "F726_CNO13 :: Via Gran San Bernardo, Morgex [45.75824544, 7.03657961]",
+        "F726_CNO14 :: Lavancher, Morgex [45.76282091, 7.032893072]",
+        "F726_CNO15 :: SR 39 Colle San Carlo 6, Morgex [45.75483385, 7.034660924]",
+        "F726_CNO16 :: SS26 118, Morgex [45.75934256, 7.031841591]",
+        "F726_CNO17 :: Strada la Ruine, Morgex [45.75379361, 7.046740561]",
+        "F726_CNO18 :: Via Dei Trinceramenti, Morgex [45.75674173, 7.03547349]",
+        "F726_CNO19 :: SS26, Morgex [45.7587403, 7.034604246]",
+        "F726_CNO20 :: Rue Valdigne 139, Morgex [45.75822705, 7.032672553]",
+        "F726_CNO21 :: SR 39 Colle San Carlo 6, Morgex [45.75560842, 7.03482691]",
+        "F726_CNO3 :: Ruine Damon, Morgex [45.7558776, 7.050429916]",
+        "F726_CNO4 :: Chemin du Villair, Morgex [45.76076716, 7.044317122]",
+        "F726_CNO9 :: Strada la Ruine 4, Morgex [45.75388983, 7.048673196]"
+      ],
+      "Nus": [
+        "F987_CNO1 :: Via Aosta, Nus [45.73927207, 7.465843579]",
+        "F987_CNO2 :: Faverges, Nus [45.74263197, 7.462670183]",
+        "F987_CNO3 :: Strada Regionale n. 36 di Saint-Barthélemy, Nus [45.74121612, 7.466675402]",
+        "F987_CNO4 :: Via Aosta 34, Nus [45.73917918, 7.465453072]",
+        "F987_CNO5 :: Via Risorgimento 90, Nus [45.74077035, 7.471072944]",
+        "F987_CNO6 :: Via Risorgimento, Nus [45.74088127, 7.47204824]"
+      ],
+      "Ollomont": [
+        "G045_CNO1 :: Strada regionale per Ollomont, Ollomont [45.84859938, 7.311182736]"
+      ],
+      "Oyace": [
+        "G012_CNO1 :: Strada regionale per Bionaz, Oyace [45.85057771, 7.381850947]"
+      ],
+      "Palleusieux": [
+        "H042_CNO1 :: Avenue Dent du Geant 31, Palleusieux [45.78197084, 6.974069214]",
+        "H042_CNO2 :: Strada Regionale, Palleusieux [45.78016528, 6.975807936]",
+        "H042_CNO3 :: Champex, Palleusieux [45.77105291, 6.986123517]",
+        "H042_CNO4 :: Strada statale 26 della Valle d'Aosta, Palleusieux [45.76448474, 6.985291347]",
+        "H042_CNO5 :: SS26dir, Palleusieux [45.76931096, 6.983941912]",
+        "H042_CNO6 :: Champex, Palleusieux [45.76418624, 6.984848262]",
+        "H042_CNO7 :: Champex, Palleusieux [45.77321682, 6.98526526]",
+        "H042_CNO8 :: Strada Regionale, Palleusieux [45.78012173, 6.975106652]",
+        "H042_CNO9 :: Verrand, Palleusieux [45.78121847, 6.976589905]"
+      ],
+      "Planté": [
+        "A452_CNO4 :: Gerbelle, Planté [45.63704632, 7.068107517]",
+        "L582_CNO1 :: Gerbelle, Planté [45.63704632, 7.068107517]"
+      ],
+      "Pollein": [
+        "G794_CNO1 :: SR19, Pollein [45.72843295, 7.34500573]",
+        "G794_CNO2 :: SR19, Pollein [45.72829376, 7.356112737]",
+        "G794_CNO3 :: SR19 71, Pollein [45.72864586, 7.3506614]",
+        "G794_CNO4 :: SR19, Pollein [45.73233271, 7.359049152]"
+      ],
+      "Pont-Saint-Martin": [
+        "G459_CNO1 :: Strada Regionale 1 di Perloz, Pont-Saint-Martin [45.60518531, 7.803995807]"
+      ],
+      "Pontboset": [
+        "G545_CNO1 :: Strada Regionale 2 per Champorcher, Pontboset [45.60658434, 7.687455075]"
+      ],
+      "Pontey": [
+        "G860_CNO1 :: Prelaz, Pontey [45.73914461, 7.585331043]",
+        "G860_CNO3 :: Strada Comunale, Pontey [45.73852077, 7.591468534]"
+      ],
+      "Quart": [
+        "H110_CNO12 :: Via Roma, Quart [45.74019775, 7.417483738]"
+      ],
+      "Rhêmes-Notre-Dame": [
+        "H262_CNO1 :: Strada regionale di Rhêmes, Rhêmes-Notre-Dame [45.56957409, 7.117916857]",
+        "H262_CNO2 :: Strada regionale di Rhêmes, Rhêmes-Notre-Dame [45.57828235, 7.122691946]"
+      ],
+      "Roisan": [
+        "H497_CNO1 :: Strada regionale per Roisan, Roisan [45.78609269, 7.311965939]",
+        "H497_CNO2 :: Le Martinet, Roisan [45.78308356, 7.311418425]"
+      ],
+      "Saint-Christophe": [
+        "H669_CNO1 :: Les Rouiyes, Saint-Christophe [45.75212321, 7.350871685]",
+        "H669_CNO2 :: Località Bret, Saint-Christophe [45.74745524, 7.358321328]",
+        "H669_CNO3 :: Località La Maladière, Saint-Christophe [45.74125523, 7.35815164]",
+        "H669_CNO4 :: Località Grande Charrière 2, Saint-Christophe [45.74015267, 7.354678164]"
+      ],
+      "Saint-Denis": [
+        "H670_CNO1 :: Strada Regionale 12 di Saint-Denis, Saint-Denis [45.7524629, 7.556996551]"
+      ],
+      "Saint-Marcel": [
+        "H671_CNO1 :: Paquier, Saint-Marcel [45.73214717, 7.450721359]",
+        "H671_CNO2 :: Fossal, Saint-Marcel [45.73014871, 7.449404704]",
+        "H671_CNO3 :: Strada Regionale 14 Di Saint-Marcel, Saint-Marcel [45.73150945, 7.444227093]",
+        "H671_CNO4 :: Faverge 1a, Saint-Marcel [45.7295311, 7.444996118]"
+      ],
+      "Saint-Nicolas": [
+        "H672_CNO2 :: Strada Regionale 22 Saint Nicolas 50, Saint-Nicolas [45.71685928, 7.169658377]",
+        "H672_CNO3 :: Strada Regionale 22 Saint Nicolas, Saint-Nicolas [45.71505396, 7.167882675]"
+      ],
+      "Saint-Oyen": [
+        "H673_CNO1 :: Rue Verraz, Saint-Oyen [45.82494133, 7.214818015]",
+        "H673_CNO2 :: Via della Chiesa, Saint-Oyen [45.82513382, 7.214522647]"
+      ],
+      "Saint-Pierre": [
+        "H674_CNO1 :: Via Corrado Gex, Saint-Pierre [45.71019224, 7.231886662]",
+        "H674_CNO10 :: Praximond, Saint-Pierre [45.71425823, 7.219915571]",
+        "H674_CNO2 :: Località Tache, Saint-Pierre [45.71556219, 7.231440049]",
+        "H674_CNO3 :: Località Ordines, Saint-Pierre [45.71159081, 7.221008548]",
+        "H674_CNO4 :: Località Cognein, Saint-Pierre [45.70884301, 7.222555188]",
+        "H674_CNO6 :: Via della Libertà 59, Saint-Pierre [45.70873296, 7.235161547]",
+        "H674_CNO7 :: Via della Collina, Saint-Pierre [45.7096376, 7.228486233]",
+        "H674_CNO8 :: Saint-Pierre - Hotel Chateau, Saint-Pierre [45.70918715, 7.22745599]",
+        "H674_CNO9 :: Località Tache, Saint-Pierre [45.71420979, 7.231000802]"
+      ],
+      "Saint-Rhémy-En-Bosses": [
+        "H675_CNO1 :: Praz-du-Mas-Berluc, Saint-Rhémy-en-Bosses [45.82355913, 7.181210322]"
+      ],
+      "Sarre": [
+        "I442_CNO1 :: Les Angelin, Sarre [45.7277151, 7.275114039]",
+        "I442_CNO2 :: Frazione Saint-Maurice, Sarre [45.71637531, 7.256245338]",
+        "I442_CNO3 :: Frazione Tissoret, Sarre [45.71973974, 7.251014568]"
+      ],
+      "Torgnon": [
+        "L217_CNO1 :: Strada Comunale Chantorné 166, Torgnon [45.80821921, 7.566616271]",
+        "L217_CNO2 :: Strada Comunale Chantorné, Torgnon [45.80483575, 7.561481051]",
+        "L217_CNO3 :: Strada Comunale Chantorné 10, Torgnon [45.80692755, 7.566503019]",
+        "L217_CNO4 :: Rue Molinet, Torgnon [45.80488453, 7.568419854]",
+        "L217_CNO5 :: Piazza Fruttaz, Torgnon [45.8036857, 7.568328898]",
+        "L217_CNO6 :: Strada Regionale 9 di Torgnon 120, Torgnon [45.80223329, 7.569405473]",
+        "L217_CNO7 :: Verney, Torgnon [45.79953708, 7.569528573]"
+      ],
+      "Valpelline": [
+        "L643_CNO1 :: Les Ansermin, Valpelline [45.82657606, 7.333658977]",
+        "L643_CNO2 :: Strada regionale per Bionaz 52, Valpelline [45.82511143, 7.325947926]",
+        "L643_CNO3 :: Strada regionale per Bionaz, Valpelline [45.82452686, 7.325225833]"
+      ],
+      "Valsavarenche": [
+        "L647_CNO2 :: Strada regionale della Valsavarenche, Valsavarenche [45.59203354, 7.208999343]",
+        "L647_CNO3 :: Frazione Dégioz, Valsavarenche [45.59094493, 7.210287788]"
+      ],
+      "Valtournenche": [
+        "L654_CNO1 :: Cheperon, Valtournenche [45.87768197, 7.628478824]",
+        "L654_CNO12 :: Strada Comunale, Valtournenche [45.87872031, 7.623087035]",
+        "L654_CNO13 :: Strada Comunale Scuole Medie, Valtournenche [45.87474511, 7.623102488]",
+        "L654_CNO14 :: Strada Comunale di Crépin, Valtournenche [45.88240443, 7.621832957]",
+        "L654_CNO15 :: Champcartanaz, Valtournenche [45.8779911, 7.623818237]",
+        "L654_CNO16 :: Via Funivie, Valtournenche [45.93387435, 7.632883529]",
+        "L654_CNO17 :: Tourtourouse, Valtournenche [45.88112255, 7.624064872]",
+        "L654_CNO18 :: Cheperon, Valtournenche [45.87818408, 7.629718544]",
+        "L654_CNO19 :: Via Guido Rey, Valtournenche [45.93422023, 7.630638069]",
+        "L654_CNO2 :: Via Roma, Valtournenche [45.87647995, 7.623601562]",
+        "L654_CNO20 :: Strada Comunale Scuole Medie, Valtournenche [45.8744492, 7.624804503]",
+        "L654_CNO21 :: Via Guido Rey 34, Valtournenche [45.93362832, 7.629798756]",
+        "L654_CNO22 :: Strada Comunale di Crépin, Valtournenche [45.88552165, 7.621573315]",
+        "L654_CNO23 :: Strada Comunale di Valmartin, Valtournenche [45.87263533, 7.61697475]",
+        "L654_CNO24 :: Sentiero 107 Cheneil Cervinia, Valtournenche [45.86430112, 7.643508709]",
+        "L654_CNO3 :: Strada Regionale 46 della Valtournenche, Valtournenche [45.86863254, 7.614729829]",
+        "L654_CNO4 :: Crétaz, Valtournenche [45.93547735, 7.629388053]",
+        "L654_CNO5 :: Via Funivie 2, Valtournenche [45.93365713, 7.63116892]",
+        "L654_CNO6 :: Via Battaglione Monte Cervino, Valtournenche [45.93768334, 7.629882167]",
+        "L654_CNO7 :: Piazza Jumeaux e Guide Maquignaz 4, Valtournenche [45.93700878, 7.629256667]",
+        "L654_CNO9 :: SR 46, Valtournenche [45.88500191, 7.624398129]"
+      ],
+      "Verrayes": [
+        "L783_CNO4 :: Strada Regionale 42 Col Saint-Pantaleon, Verrayes [45.74621838, 7.523211451]",
+        "L783_CNO5 :: Strada Regionale 42 Col Saint-Pantaleon, Verrayes [45.75927441, 7.51871371]",
+        "L783_CNO6 :: Strada Regionale 42 Col Saint-Pantaleon, Verrayes [45.76163145, 7.532702404]"
+      ],
+      "Verrès": [
+        "C282_CNO1 :: Via Stazione 1, Verrès [45.66146707, 7.692751329]",
+        "C282_CNO2 :: Via Caduti per la Libertà, Verrès [45.66881934, 7.689391576]",
+        "C282_CNO4 :: Via Duca d'Aosta, Verrès [45.6663875, 7.693103503]",
+        "C282_CNO5 :: Via Caduti per la Libertà, Verrès [45.66916705, 7.687520116]",
+        "C282_CNO6 :: Vicolo Dietro Il Borgo, Verrès [45.66701109, 7.692984301]",
+        "C282_CNO7 :: Via Martorey 19, Verrès [45.66861067, 7.691499188]",
+        "C282_CNO9 :: Via Circonvallazione, Verrès [45.66541615, 7.688311127]"
+      ],
+      "Villair": [
+        "H110_CNO1 :: Balma, Villair [45.74895315, 7.383879072]",
+        "H110_CNO13 :: SS26, Villair [45.7427859, 7.387029334]",
+        "H110_CNO14 :: Prebenda, Villair [45.74932069, 7.393327814]",
+        "H110_CNO2 :: SR37, Villair [45.74951812, 7.413545299]",
+        "H110_CNO3 :: Villaggio Ronchet di Sotto, Villair [45.74512504, 7.391337958]",
+        "H110_CNO4 :: SR37, Villair [45.74790429, 7.412648008]",
+        "H110_CNO5 :: Chariette, Villair [45.74978365, 7.388710788]",
+        "H110_CNO6 :: Via Aosta 66, Villair [45.74164638, 7.409197109]",
+        "H110_CNO7 :: Larey, Villair [45.74768953, 7.391330163]",
+        "H110_CNO9 :: Regione Amérique 9, Villair [45.74164491, 7.381837887]"
+      ],
+      "Villeneuve": [
+        "L981_CNO1 :: Via Quattro Novembre, Villeneuve [45.70303278, 7.208910388]",
+        "L981_CNO2 :: Via Pierino Chanoux, Villeneuve [45.70170314, 7.206808905]"
+      ],
+      "Étroubles": [
+        "D444_CNO1 :: Strada Comunale, Étroubles [45.82200858, 7.234999272]",
+        "D444_CNO2 :: SS27, Étroubles [45.82118239, 7.229828338]",
+        "D444_CNO3 :: Rue Chevrières 1, Étroubles [45.81912086, 7.229271817]"
+      ]
+    }
+  }
+}
