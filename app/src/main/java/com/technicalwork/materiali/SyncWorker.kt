@@ -1,6 +1,7 @@
 package com.technicalwork.materiali
 
 import android.content.Context
+import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
@@ -40,13 +41,14 @@ class SyncWorker(
             }
             Result.success()
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Errore durante l'esecuzione di SyncWorker: ${e.message}", e)
             // Riprova una volta in caso di errore temporaneo (es. rete instabile)
             if (runAttemptCount < 1) Result.retry() else Result.failure()
         }
     }
 
     companion object {
+        private const val TAG = "TW_SyncWorker"
         private const val WORK_NAME = "firebase_full_sync"
 
         /**

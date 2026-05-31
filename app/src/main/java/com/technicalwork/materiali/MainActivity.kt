@@ -5,6 +5,7 @@ import android.app.Activity
 import android.app.DownloadManager
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.graphics.Color
 import android.media.MediaScannerConnection
 import android.net.Uri
@@ -455,6 +456,71 @@ class MainActivity : AppCompatActivity() {
 
         // Check scambi pendenti al resume
         processPendingExchanges()
+        
+        // Controlla se le liste sono state aggiornate da MyApplication (Forza Aggiornamento)
+        checkForListsUpdate()
+    }
+    
+    /**
+     * Controlla se MyApplication ha aggiornato le liste in background.
+     * Se sì, invalida la cache del ConfigManager, ricostruisce il drawer,
+     * e ri-valida l'azienda selezionata.
+     */
+    private fun checkForListsUpdate() {
+        val syncPrefs = getSharedPreferences("sync_meta", Context.MODE_PRIVATE)
+        val lastUpdateAt = syncPrefs.getLong("lists_updated_at", 0L)
+        val lastCheckedAt = syncPrefs.getLong("lists_checked_by_main", 0L)
+        
+        if (lastUpdateAt > lastCheckedAt) {
+            Log.i("TW_MainActivity", "Rilevato aggiornamento liste in background (update=$lastUpdateAt > checked=$lastCheckedAt)")
+            syncPrefs.edit().putLong("lists_checked_by_main", lastUpdateAt).apply()
+            
+            // Invalida la cache in memoria del ConfigManager per leggere il nuovo config_cache.json
+            configManager.invalidateCache()
+            
+            // Ricostruisci il drawer con le nuove aziende
+            setupDynamicDrawer()
+            
+            // Ri-valida l'azienda selezionata
+            if (lastSelectedCompany != null && lastSelectedCompany != "Consumo") {
+                val validCompanies = configManager.getCompanies()
+                val companyFile = java.io.File(filesDir, "lists/${lastSelectedCompany}.txt")
+                
+                if (!validCompanies.contains(lastSelectedCompany) || !companyFile.exists()) {
+                    val staleName = lastSelectedCompany
+                    Log.i("TW_MainActivity", "Azienda '$staleName' rimossa o file non esistente dopo aggiornamento forzato, reset")
+                    lastSelectedCompany = null
+                    settingsRepository.lastSelectedCompany = null
+                    
+                    if (companyFile.exists()) companyFile.delete()
+                    
+                    // Ricarica con la master list generica
+                    currentFileUri?.let { uri ->
+                        if (fileStorageManager.isUriAccessible(uri)) {
+                            adapter.setMasterList(AssetsHelper().loadMasterList(this, null))
+                            readExcelFile(uri)
+                        }
+                    }
+                } else {
+                    // L'azienda esiste ed il file c'è, ma la lista potrebbe essere aggiornata — ricarica
+                    currentFileUri?.let { uri ->
+                        if (fileStorageManager.isUriAccessible(uri) && !isConsumoMode) {
+                            adapter.setMasterList(AssetsHelper().loadMasterList(this, lastSelectedCompany))
+                            readExcelFile(uri)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Chiamato direttamente da MyApplication quando il listener Firestore rileva
+     * un aggiornamento forzato delle liste. Invalida la cache e ri-valida in tempo reale.
+     */
+    fun onListsUpdatedFromDashboard() {
+        Log.i("TW_MainActivity", "Ricevuta notifica di aggiornamento liste in tempo reale da MyApplication")
+        checkForListsUpdate()
     }
 
     override fun onPause() {
@@ -878,6 +944,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadLastFile() {
         lastSelectedCompany = settingsRepository.lastSelectedCompany
+        
+        // Validazione: se l'azienda salvata non esiste più nel config, resettiamo
+        if (lastSelectedCompany != null && lastSelectedCompany != "Consumo") {
+            val validCompanies = configManager.getCompanies()
+            if (!validCompanies.contains(lastSelectedCompany)) {
+                val staleName = lastSelectedCompany
+                Log.i("TW_MainActivity", "Azienda '$staleName' non più presente in config.json, reset a null")
+                lastSelectedCompany = null
+                settingsRepository.lastSelectedCompany = null
+                // Cancella anche il file locale della lista obsoleta
+                val staleFile = java.io.File(filesDir, "lists/${staleName}.txt")
+                if (staleFile.exists()) staleFile.delete()
+            }
+        }
+        
         val uriString = settingsRepository.lastFileUri
 
         uriString?.let {

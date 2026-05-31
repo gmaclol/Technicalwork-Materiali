@@ -10,7 +10,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.content.Context
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -24,6 +27,7 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
     private var currentActivity: Activity? = null
     private val appScope = CoroutineScope(Dispatchers.Default)
     private val updateCheckHandler = Handler(Looper.getMainLooper())
+    private var dashboardListenerRegistration: com.google.firebase.firestore.ListenerRegistration? = null
 
     private val updateCheckRunnable = object : Runnable {
         override fun run() {
@@ -43,6 +47,9 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
         
         ProcessLifecycleOwner.get().lifecycle.addObserver(object : DefaultLifecycleObserver {
             override fun onStart(owner: LifecycleOwner) {
+                // Avvia il listener Firestore in tempo reale per Forza Aggiornamento
+                startDashboardListener()
+
                 // Aggiornamento GPS e presenza
                 SyncWorker.enqueue(this@MyApplication, isFullSync = false)
                 
@@ -51,6 +58,11 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
 
                 // Aggiornamento telemetria dispositivo se cambiata
                 syncDeviceTelemetryIfNeeded()
+            }
+
+            override fun onStop(owner: LifecycleOwner) {
+                // Ferma il listener in tempo reale quando l'app va in background per risparmiare risorse
+                stopDashboardListener()
             }
         })
     }
@@ -186,4 +198,59 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
     override fun onActivityStopped(activity: Activity) {}
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
     override fun onActivityDestroyed(activity: Activity) {}
+
+    private fun startDashboardListener() {
+        if (dashboardListenerRegistration != null) return
+        
+        try {
+            val db = Firebase.firestore
+            dashboardListenerRegistration = db.collection("settings").document("dashboard")
+                .addSnapshotListener { snapshot, error ->
+                    if (error != null) {
+                        Log.e("TW_MyApplication", "Errore nel listener dashboard in tempo reale: ${error.message}", error)
+                        return@addSnapshotListener
+                    }
+                    if (snapshot != null && snapshot.exists()) {
+                        val remoteTimestamp = snapshot.getLong("forceListUpdate") ?: 0L
+                        val syncPrefs = getSharedPreferences("sync_meta", Context.MODE_PRIVATE)
+                        val localTimestamp = syncPrefs.getLong("last_force_list_update", 0L)
+                        
+                        if (remoteTimestamp > localTimestamp) {
+                            Log.i("TW_MyApplication", "Rilevato 'Forza Aggiornamento' in TEMPO REALE (remoto=$remoteTimestamp > locale=$localTimestamp). Avvio fetch GitHub!")
+                            
+                            appScope.launch(Dispatchers.IO) {
+                                try {
+                                    val configManager = ConfigManager(this@MyApplication)
+                                    configManager.fetchRemoteConfig()
+                                    configManager.fetchRemoteRegionsJson()
+                                    ListUpdater().syncLists(this@MyApplication, configManager.getCompanies(), configManager.getPfsAreas())
+                                    
+                                    syncPrefs.edit().putLong("last_force_list_update", remoteTimestamp).apply()
+                                    Log.i("TW_MyApplication", "Fetch in tempo reale completato con successo. SharedPreferences allineate.")
+                                    
+                                    // Segna che le liste sono state aggiornate, così MainActivity può rivalidare
+                                    syncPrefs.edit().putLong("lists_updated_at", System.currentTimeMillis()).apply()
+                                    
+                                    // Notifica direttamente la MainActivity corrente se attiva
+                                    Handler(Looper.getMainLooper()).post {
+                                        (currentActivity as? MainActivity)?.onListsUpdatedFromDashboard()
+                                    }
+                                } catch (e: Exception) {
+                                    Log.e("TW_MyApplication", "Errore nel fetch in tempo reale da GitHub: ${e.message}", e)
+                                }
+                            }
+                        }
+                    }
+                }
+            Log.d("TW_MyApplication", "Dashboard realtime listener registrato con successo")
+        } catch (e: Exception) {
+            Log.e("TW_MyApplication", "Impossibile registrare il dashboard listener: ${e.message}", e)
+        }
+    }
+
+    private fun stopDashboardListener() {
+        dashboardListenerRegistration?.remove()
+        dashboardListenerRegistration = null
+        Log.d("TW_MyApplication", "Dashboard realtime listener rimosso")
+    }
 }

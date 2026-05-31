@@ -3,9 +3,13 @@ package com.technicalwork.materiali
 import android.content.Context
 import android.net.Uri
 import android.provider.Settings
+import android.util.Log
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
 
 /**
@@ -15,6 +19,8 @@ import kotlinx.coroutines.withContext
 class SyncManager(private val context: Context) {
 
     companion object {
+        private const val TAG = "TW_SyncManager"
+
         fun getLastLocationHelper(context: Context): Pair<Double?, Double?> {
             return try {
                 if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
@@ -32,15 +38,51 @@ class SyncManager(private val context: Context) {
 
     fun performFullSync(scope: CoroutineScope, passedLat: Double? = null, passedLng: Double? = null, isFullSync: Boolean = true) {
         scope.launch(Dispatchers.IO) {
+            Log.d(TAG, "Avvio performFullSync: isFullSync=$isFullSync")
             val settingsRepo = SettingsRepository(context)
             val configManager = ConfigManager(context)
-            val techName = settingsRepo.technicianName ?: return@launch
+            val techName = settingsRepo.technicianName ?: run {
+                Log.w(TAG, "Annullato: Nome tecnico non impostato")
+                return@launch
+            }
             val deviceId = Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
             
-            // 1. Fetch Configurazione Remota e Liste (GitHub)
-            configManager.fetchRemoteConfig()
-            configManager.fetchRemoteRegionsJson()
-            ListUpdater().syncLists(context, configManager.getCompanies(), configManager.getPfsAreas())
+            // 0. Controllo Forza Aggiornamento Liste/Config da Dashboard (Firestore)
+            try {
+                Log.d(TAG, "Verifica presenza di 'Forza Aggiornamento' liste da Firestore")
+                val db = Firebase.firestore
+                val snap = db.collection("settings").document("dashboard").get().await()
+                if (snap.exists()) {
+                    val remoteTimestamp = snap.getLong("forceListUpdate") ?: 0L
+                    val syncPrefs = context.getSharedPreferences("sync_meta", Context.MODE_PRIVATE)
+                    val localTimestamp = syncPrefs.getLong("last_force_list_update", 0L)
+                    
+                    if (remoteTimestamp > localTimestamp) {
+                        Log.i(TAG, "Rilevato 'Forza Aggiornamento' da Dashboard (remoto=$remoteTimestamp > locale=$localTimestamp). Eseguo fetch forzato da GitHub!")
+                        
+                        // Forza il fetch immediato da GitHub indipendentemente da isFullSync
+                        configManager.fetchRemoteConfig()
+                        configManager.fetchRemoteRegionsJson()
+                        ListUpdater().syncLists(context, configManager.getCompanies(), configManager.getPfsAreas())
+                        
+                        // Aggiorna il timestamp locale per evitare fetch continui
+                        syncPrefs.edit().putLong("last_force_list_update", remoteTimestamp).apply()
+                        // Segna che le liste sono state aggiornate per la ri-validazione di MainActivity
+                        syncPrefs.edit().putLong("lists_updated_at", System.currentTimeMillis()).apply()
+                        Log.i(TAG, "Fetch forzato da GitHub completato con successo. Timestamp aggiornato.")
+                    }
+                }
+            } catch (e: Exception) {
+                Log.e(TAG, "Errore durante il controllo del Forza Aggiornamento da Firestore: ${e.message}", e)
+            }
+            
+            // Eseguiamo il flush dei PFS offline accumulati in precedenza
+            try {
+                Log.d(TAG, "Tentativo di flush di PfsSyncQueue")
+                PfsSyncQueue().flush(context)
+            } catch (e: Exception) {
+                Log.e(TAG, "Errore durante il flush di PfsSyncQueue: ${e.message}", e)
+            }
 
             // 2. Rilevamento Posizione
             // Il worker pre-fetcha con LocationManager (veloce ma spesso null).
@@ -58,7 +100,8 @@ class SyncManager(private val context: Context) {
                         lat = loc.latitude
                         lng = loc.longitude
                     }
-                } catch (_: Exception) {
+                } catch (e: Exception) {
+                    Log.w(TAG, "FusedLocation fallito, provo LocationManager raw: ${e.message}")
                     // Fallback finale a LocationManager raw
                     val (fbLat, fbLng) = getLastLocationHelper(context)
                     lat = fbLat
@@ -70,8 +113,21 @@ class SyncManager(private val context: Context) {
             
             if (!isFullSync) {
                 // LIGHT SYNC: Aggiorna solo presenza e posizione per non consumare letture Excel e scritture massive
+                Log.d(TAG, "Esecuzione Light Sync per $techName (lat=$lat, lng=$lng)")
                 firebaseRepo.updateTechnicianName(deviceId, techName, configManager.getCompanies(), lat, lng)
                 return@launch
+            }
+
+            Log.d(TAG, "Esecuzione Full Sync per $techName")
+
+            // 1. Fetch Configurazione Remota e Liste (GitHub) - Spostato qui per caricarle SOLO in Full Sync
+            try {
+                Log.d(TAG, "Download configurazione e regioni da GitHub")
+                configManager.fetchRemoteConfig()
+                configManager.fetchRemoteRegionsJson()
+                ListUpdater().syncLists(context, configManager.getCompanies(), configManager.getPfsAreas())
+            } catch (e: Exception) {
+                Log.e(TAG, "Errore nel download delle liste/regioni da GitHub: ${e.message}", e)
             }
 
             // 3. Sync di tutti i file Excel (Aziende e Consumo)

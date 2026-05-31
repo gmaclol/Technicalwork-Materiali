@@ -9,6 +9,7 @@ import java.io.InputStreamReader
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import android.util.Log
 
 data class AppConfig(
     val companies: List<String> = emptyList(),
@@ -16,6 +17,10 @@ data class AppConfig(
 )
 
 class ConfigManager(private val context: Context) {
+
+    companion object {
+        private const val TAG = "TW_ConfigManager"
+    }
 
     private val gson = Gson()
     private val client = OkHttpClient()
@@ -39,7 +44,7 @@ class ConfigManager(private val context: Context) {
                     cachedConfig = gson.fromJson(reader, AppConfig::class.java)
                 }
             } catch (e: Exception) {
-                e.printStackTrace()
+                Log.e(TAG, "Errore nella lettura della configurazione da cache: ${e.message}", e)
             }
         }
 
@@ -54,7 +59,7 @@ class ConfigManager(private val context: Context) {
                 config ?: AppConfig()
             }
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Errore nella lettura della configurazione da assets: ${e.message}", e)
             AppConfig()
         }
     }
@@ -64,7 +69,7 @@ class ConfigManager(private val context: Context) {
      */
     suspend fun fetchRemoteConfig(): Boolean {
         return try {
-            val request = Request.Builder().url(configUrl).build()
+            val request = Request.Builder().url("$configUrl?t=${System.currentTimeMillis()}").build()
             val response = client.newCall(request).execute()
             if (response.isSuccessful) {
                 val content = response.body?.string()
@@ -77,9 +82,16 @@ class ConfigManager(private val context: Context) {
             }
             false
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Errore durante fetchRemoteConfig: ${e.message}", e)
             false
         }
+    }
+
+    /**
+     * Invalida la cache in memoria per forzare la rilettura dal file al prossimo utilizzo.
+     */
+    fun invalidateCache() {
+        cachedConfig = null
     }
 
     fun getCompanies(): List<String> = getConfig().companies
@@ -98,7 +110,7 @@ class ConfigManager(private val context: Context) {
             ITALIAN_REGIONS.map { region ->
                 launch(Dispatchers.IO) {
                     val encodedRegion = region.replace(" ", "%20")
-                    val url = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/Regioni/$encodedRegion.json"
+                    val url = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/Regioni/$encodedRegion.json?t=${System.currentTimeMillis()}"
                     val regionFile = File(context.filesDir, "$region.json")
                     try {
                         val request = Request.Builder().url(url).build()
@@ -110,7 +122,7 @@ class ConfigManager(private val context: Context) {
                             }
                         }
                     } catch (e: Exception) {
-                        e.printStackTrace()
+                        Log.e(TAG, "Errore durante fetchRemoteRegionsJson per la regione $region: ${e.message}", e)
                     }
                 }
             }.forEach { it.join() }

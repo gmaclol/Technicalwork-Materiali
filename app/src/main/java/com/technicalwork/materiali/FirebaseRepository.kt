@@ -13,8 +13,13 @@ import java.util.Date
 import java.util.Locale
 import android.os.BatteryManager
 import android.location.LocationManager
+import android.util.Log
 
 class FirebaseRepository {
+
+    companion object {
+        private const val TAG = "TW_FirebaseRepo"
+    }
 
     private val db = Firebase.firestore
     private val separatorRegex = Regex("^::.*::$")
@@ -127,7 +132,7 @@ class FirebaseRepository {
             }
             true
         } catch (e: Exception) {
-            e.printStackTrace()
+            Log.e(TAG, "Errore durante syncToFirestore per azienda $company: ${e.message}", e)
             if (!isRetry) {
                 SyncQueue().save(context, company, technicianName, materials, lat, lng, deviceId)
             }
@@ -157,7 +162,7 @@ class FirebaseRepository {
             try {
                 db.collection(company).document(deviceId).set(data, SetOptions.merge())
             } catch (e: Exception) {
-                e.printStackTrace()
+                Log.e(TAG, "Errore in updateTechnicianName per $company: ${e.message}", e)
             }
         }
         // Aggiorna il registro centrale con dot-notation per non sovrascrivere altri campi (es. pfsAreas)
@@ -179,7 +184,7 @@ class FirebaseRepository {
                 db.collection("settings").document("devices_names")
                     .set(nameData, SetOptions.merge())
             } catch (e2: Exception) {
-                e2.printStackTrace()
+                Log.e(TAG, "Errore fallback updateTechnicianName: ${e2.message}", e2)
             }
         }
     }
@@ -197,7 +202,7 @@ class FirebaseRepository {
             try {
                 db.collection(company).document(deviceId).set(data, SetOptions.merge())
             } catch (e: Exception) {
-                e.printStackTrace()
+                Log.e(TAG, "Errore in updateAppVersionOnly per $company: ${e.message}", e)
             }
         }
     }
@@ -231,7 +236,7 @@ class FirebaseRepository {
                 db.collection("settings").document("devices_names")
                     .set(nameData, SetOptions.merge())
             } catch (e2: Exception) {
-                e2.printStackTrace()
+                Log.e(TAG, "Errore fallback updatePfsAreas: ${e2.message}", e2)
             }
         }
     }
@@ -248,13 +253,16 @@ class FirebaseRepository {
         gpsEnabled: Boolean
     ) {
         val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
+        Log.d(TAG, "Avvio updateDeviceTelemetry per $deviceId")
         val data = hashMapOf<String, Any>(
             "dispositivo" to deviceModel,
             "versione_app" to "Ver $appVersion",
-            "batteria" to "$batteryLevel%",
             "gps_attivo" to gpsEnabled,
             "ultimo_aggiornamento" to timestamp
         )
+        if (batteryLevel >= 0) {
+            data["batteria"] = "$batteryLevel%"
+        }
 
         val allToUpdate = companies.toMutableList()
         if (!allToUpdate.contains("Consumo")) allToUpdate.add("Consumo")
@@ -263,7 +271,7 @@ class FirebaseRepository {
             try {
                 db.collection(company).document(deviceId).set(data, SetOptions.merge())
             } catch (e: Exception) {
-                e.printStackTrace()
+                Log.e(TAG, "Errore in updateDeviceTelemetry per $company: ${e.message}", e)
             }
         }
     }
