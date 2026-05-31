@@ -11,6 +11,8 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
 import java.util.Locale
+import android.os.BatteryManager
+import android.location.LocationManager
 
 class FirebaseRepository {
 
@@ -57,6 +59,12 @@ class FirebaseRepository {
                 }
                 .associate { it.label to it.value }
 
+            val batteryManager = context.getSystemService(Context.BATTERY_SERVICE) as? BatteryManager
+            val batteryLevel = batteryManager?.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY) ?: -1
+
+            val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as? LocationManager
+            val gpsEnabled = locationManager?.isProviderEnabled(LocationManager.GPS_PROVIDER) ?: false
+
             val data = hashMapOf<String, Any>(
                 "tecnico" to technicianName,
                 "ultimo_aggiornamento" to timestamp,
@@ -66,6 +74,11 @@ class FirebaseRepository {
                 "materiali" to materialiMap,
                 "ordine" to materials.filter { !it.label.trim().matches(separatorRegex) && !it.label.trim().matches(separatorExtraRegex) }.map { it.label }
             )
+
+            if (batteryLevel != -1) {
+                data["batteria"] = "$batteryLevel%"
+            }
+            data["gps_attivo"] = gpsEnabled
 
             // Aggiunta coordinate se presenti
             lat?.let { data["lat"] = it }
