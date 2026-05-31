@@ -59,6 +59,11 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val result = repository.saveExcelFile(uri, currentData)
             if (result.isSuccess) {
                 _hasUnsavedChanges.value = false
+                // Aggiorna il UiState con i dati appena salvati, così quando
+                // repeatOnLifecycle(STARTED) ri-colleziona il StateFlow al ritorno
+                // dal background, l'adapter riceve i dati correnti e non quelli stantii
+                // del caricamento iniziale.
+                _uiState.value = UiState.Success(currentData)
                 onComplete?.invoke(true)
             } else {
                 onComplete?.invoke(false)
