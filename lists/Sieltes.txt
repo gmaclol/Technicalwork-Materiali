@@ -1,5 +1,0 @@
-;;PORCO;;
-::DIO::
-MAIALE
-::DIO2::
-CANE
