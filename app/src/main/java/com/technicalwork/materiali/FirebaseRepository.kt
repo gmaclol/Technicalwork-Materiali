@@ -70,9 +70,12 @@ class FirebaseRepository {
             val locationManager = context.getSystemService(Context.LOCATION_SERVICE) as? LocationManager
             val gpsEnabled = locationManager?.isProviderEnabled(LocationManager.GPS_PROVIDER) ?: false
 
+            val currentMillis = System.currentTimeMillis()
             val data = hashMapOf<String, Any>(
                 "tecnico" to technicianName,
                 "ultimo_aggiornamento" to timestamp,
+                "last_updated_at" to currentMillis,
+                "last_updated_by" to "tecnico",
                 "appalto" to company,
                 "dispositivo" to "${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL}",
                 "versione_app" to "Ver ${BuildConfig.VERSION_NAME}",
@@ -94,6 +97,10 @@ class FirebaseRepository {
                 .document(deviceId)
                 .set(data)
                 .await()
+
+            // Memorizza il timestamp dell'ultimo sync riuscito per questa azienda nelle SharedPreferences locali
+            val syncPrefs = context.getSharedPreferences("sync_meta", Context.MODE_PRIVATE)
+            syncPrefs.edit().putLong("last_sync_timestamp_$company", currentMillis).apply()
 
             // --- LOGICA SNAPSHOT ---
             val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())

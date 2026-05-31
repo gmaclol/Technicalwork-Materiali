@@ -148,6 +148,50 @@ class SyncManager(private val context: Context) {
                 settingsRepo.getCompanyFileUri(company)?.let { uriString ->
                     val uri = Uri.parse(uriString)
                     if (fileStorageManager.isUriAccessible(uri)) {
+                        val localFile = try {
+                            val docFile = androidx.documentfile.provider.DocumentFile.fromSingleUri(context, uri)
+                            if (docFile != null && docFile.exists()) {
+                                // Tenta di ottenere la data fisica del file
+                                docFile.lastModified()
+                            } else 0L
+                        } catch (e: Exception) { 0L }
+
+                        val lastSyncTime = syncPrefs.getLong("last_sync_timestamp_$company", 0L)
+                        var hasOfflineChanges = localFile > (lastSyncTime + 2000L)
+
+                        // 3A. Controlla se la Dashboard Admin ha modificato i dati
+                        try {
+                            val db = com.google.firebase.ktx.Firebase.firestore
+                            val snap = db.collection(company).document(deviceId).get().await()
+                            if (snap.exists()) {
+                                val lastUpdatedBy = snap.getString("last_updated_by") ?: ""
+                                val remoteTimestamp = snap.getLong("last_updated_at") ?: 0L
+
+                                if (lastUpdatedBy == "admin" && remoteTimestamp > lastSyncTime && !hasOfflineChanges) {
+                                    // ALLINEA DA ADMIN: Sovrascrivi l'Excel locale con i dati provenienti da Firestore
+                                    Log.i(TAG, "Rilevata modifica da Admin per $company. Sovrascrivo l'Excel locale.")
+                                    val materialsMap = snap.get("materiali") as? Map<String, String> ?: emptyMap()
+                                    val remoteDataList = materialsMap.map { ExcelRowData(it.key, it.value) }
+                                    
+                                    // Salva il file Excel locale
+                                    excelRepo.saveExcelFile(uri, remoteDataList).onSuccess {
+                                        syncPrefs.edit().putLong("last_sync_timestamp_$company", remoteTimestamp).apply()
+                                        Log.i(TAG, "Excel locale per $company allineato con successo alle modifiche Admin.")
+                                        
+                                        // Segnala a MainActivity di ricaricare i dati a schermo
+                                        syncPrefs.edit().putLong("lists_updated_at", System.currentTimeMillis()).apply()
+                                        android.os.Handler(android.os.Looper.getMainLooper()).post {
+                                            (MyApplication.getCurrentActivity() as? MainActivity)?.onListsUpdatedFromDashboard()
+                                        }
+                                    }
+                                    return@let
+                                }
+                            }
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Errore durante il controllo delle modifiche Admin per $company: ${e.message}", e)
+                        }
+
+                        // Sync standard in upload
                         excelRepo.readExcelFile(uri, company).onSuccess { data ->
                             val isEmpty = data.all { it.value.isEmpty() || it.value == "0" }
                             if (!isEmpty) {
@@ -162,6 +206,45 @@ class SyncManager(private val context: Context) {
             settingsRepo.consumoFileUri?.let { uriString ->
                 val uri = Uri.parse(uriString)
                 if (fileStorageManager.isUriAccessible(uri)) {
+                    val localFile = try {
+                        val docFile = androidx.documentfile.provider.DocumentFile.fromSingleUri(context, uri)
+                        if (docFile != null && docFile.exists()) {
+                            docFile.lastModified()
+                        } else 0L
+                    } catch (e: Exception) { 0L }
+
+                    val lastSyncTime = syncPrefs.getLong("last_sync_timestamp_Consumo", 0L)
+                    val hasOfflineChanges = localFile > (lastSyncTime + 2000L)
+
+                    // Controllo modifiche Admin per Consumo
+                    try {
+                        val db = com.google.firebase.ktx.Firebase.firestore
+                        val snap = db.collection("Consumo").document(deviceId).get().await()
+                        if (snap.exists()) {
+                            val lastUpdatedBy = snap.getString("last_updated_by") ?: ""
+                            val remoteTimestamp = snap.getLong("last_updated_at") ?: 0L
+
+                            if (lastUpdatedBy == "admin" && remoteTimestamp > lastSyncTime && !hasOfflineChanges) {
+                                Log.i(TAG, "Rilevata modifica da Admin per Consumo. Sovrascrivo l'Excel locale.")
+                                val materialsMap = snap.get("materiali") as? Map<String, String> ?: emptyMap()
+                                val remoteDataList = materialsMap.map { ExcelRowData(it.key, it.value) }
+                                
+                                ConsumoRepository(context).saveConsumoFile(uri, remoteDataList, techName).onSuccess {
+                                    syncPrefs.edit().putLong("last_sync_timestamp_Consumo", remoteTimestamp).apply()
+                                    Log.i(TAG, "Excel locale per Consumo allineato con successo alle modifiche Admin.")
+                                    
+                                    syncPrefs.edit().putLong("lists_updated_at", System.currentTimeMillis()).apply()
+                                    android.os.Handler(android.os.Looper.getMainLooper()).post {
+                                        (MyApplication.getCurrentActivity() as? MainActivity)?.onListsUpdatedFromDashboard()
+                                    }
+                                }
+                                return@let
+                            }
+                        }
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Errore controllo modifiche Admin per Consumo: ${e.message}", e)
+                    }
+
                     ConsumoRepository(context).readConsumoFile(uri).onSuccess { data ->
                         val isEmpty = data.all { it.value.isEmpty() || it.value == "0" }
                         if (!isEmpty) {

@@ -24,6 +24,14 @@ import android.provider.Settings
 
 class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
 
+    companion object {
+        private var instance: MyApplication? = null
+        
+        fun getCurrentActivity(): Activity? {
+            return instance?.currentActivity
+        }
+    }
+
     private var currentActivity: Activity? = null
     private val appScope = CoroutineScope(Dispatchers.Default)
     private val updateCheckHandler = Handler(Looper.getMainLooper())
@@ -43,6 +51,7 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
 
     override fun onCreate() {
         super.onCreate()
+        instance = this
         registerActivityLifecycleCallbacks(this)
         
         ProcessLifecycleOwner.get().lifecycle.addObserver(object : DefaultLifecycleObserver {
@@ -199,6 +208,8 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
     override fun onActivitySaveInstanceState(activity: Activity, outState: Bundle) {}
     override fun onActivityDestroyed(activity: Activity) {}
 
+    private val adminListeners = mutableMapOf<String, com.google.firebase.firestore.ListenerRegistration>()
+
     private fun startDashboardListener() {
         if (dashboardListenerRegistration != null) return
         
@@ -243,6 +254,30 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
                     }
                 }
             Log.d("TW_MyApplication", "Dashboard realtime listener registrato con successo")
+
+            // Registra listener per rilevare modifiche dell'admin in tempo reale
+            val deviceId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
+            val configManager = ConfigManager(this)
+            val allCompanies = configManager.getCompanies().toMutableList()
+            if (!allCompanies.contains("Consumo")) allCompanies.add("Consumo")
+
+            allCompanies.forEach { company ->
+                if (!adminListeners.containsKey(company)) {
+                    val reg = db.collection(company).document(deviceId)
+                        .addSnapshotListener { snap, err ->
+                            if (err != null) return@addSnapshotListener
+                            if (snap != null && snap.exists()) {
+                                val lastUpdatedBy = snap.getString("last_updated_by")
+                                if (lastUpdatedBy == "admin") {
+                                    Log.i("TW_MyApplication", "Rilevata modifica da Admin per $company in tempo reale! Avvio Sync di allineamento.")
+                                    // Eseguiamo il Sync Manager per elaborare l'allineamento del file Excel
+                                    SyncManager(this@MyApplication).performFullSync(appScope, isFullSync = true)
+                                }
+                            }
+                        }
+                    adminListeners[company] = reg
+                }
+            }
         } catch (e: Exception) {
             Log.e("TW_MyApplication", "Impossibile registrare il dashboard listener: ${e.message}", e)
         }
@@ -251,6 +286,8 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
     private fun stopDashboardListener() {
         dashboardListenerRegistration?.remove()
         dashboardListenerRegistration = null
+        adminListeners.values.forEach { it.remove() }
+        adminListeners.clear()
         Log.d("TW_MyApplication", "Dashboard realtime listener rimosso")
     }
 }
