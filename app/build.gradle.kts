@@ -86,11 +86,12 @@ android {
 
 }
 
-tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-    compilerOptions {
-        freeCompilerArgs.add("-Xbackend-threads=0") // Use all CPU cores for compilation
-    }
-}
+// Commented out to prevent compiler crash: PerformanceManager functions can be run only from the same thread
+// tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+//     compilerOptions {
+//         freeCompilerArgs.add("-Xbackend-threads=0") // Use all CPU cores for compilation
+//     }
+// }
 
 dependencies {
     implementation(libs.androidx.core.ktx)

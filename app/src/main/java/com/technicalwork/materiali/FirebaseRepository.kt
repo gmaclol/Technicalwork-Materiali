@@ -56,13 +56,31 @@ class FirebaseRepository {
         return try {
             val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
 
-            // Filtra i materiali escludendo i separatori e crea la mappa
-            val materialiMap = materials
-                .filter { item ->
-                    val label = item.label.trim()
-                    !label.matches(separatorRegex) && !label.matches(separatorExtraRegex)
+            val masterList = AssetsHelper().loadMasterList(context, company)
+            val normalizedMaster = masterList
+                .filter { 
+                    val trimmed = it.trim()
+                    !trimmed.matches(separatorRegex) && !trimmed.matches(separatorExtraRegex) 
                 }
-                .associate { it.label to it.value }
+                .map { it.trim().lowercase() }
+                .toSet()
+
+            val parser = StockParser()
+            val filteredMaterials = materials.filter { item ->
+                val label = item.label.trim()
+                val isSeparator = label.matches(separatorRegex) || label.matches(separatorExtraRegex)
+                if (isSeparator) return@filter false
+                
+                val isExtra = !normalizedMaster.contains(label.lowercase())
+                if (isExtra) {
+                    val stock = parser.parse(label, item.value)
+                    val hasStock = stock.free > 0 || stock.used > 0
+                    if (!hasStock) return@filter false
+                }
+                true
+            }
+
+            val materialiMap = filteredMaterials.associate { it.label to it.value }
 
             val batteryManager = context.getSystemService(Context.BATTERY_SERVICE) as? BatteryManager
             val batteryLevel = batteryManager?.getIntProperty(BatteryManager.BATTERY_PROPERTY_CAPACITY) ?: -1
@@ -80,7 +98,7 @@ class FirebaseRepository {
                 "dispositivo" to "${android.os.Build.MANUFACTURER} ${android.os.Build.MODEL}",
                 "versione_app" to "Ver ${BuildConfig.VERSION_NAME}",
                 "materiali" to materialiMap,
-                "ordine" to materials.filter { !it.label.trim().matches(separatorRegex) && !it.label.trim().matches(separatorExtraRegex) }.map { it.label }
+                "ordine" to filteredMaterials.map { it.label }
             )
 
             if (batteryLevel != -1) {

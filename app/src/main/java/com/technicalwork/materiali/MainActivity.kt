@@ -92,6 +92,8 @@ class MainActivity : AppCompatActivity() {
     private val exchangeRepo = ExchangeRepository()
     private lateinit var configManager: ConfigManager
     private var toolbarQrButton: View? = null
+    // Guard: IDs degli scambi attualmente in fase di processamento, per evitare duplicati
+    private val processingExchangeIds = mutableSetOf<String>()
 
     // updateCheckHandler è stato spostato in MyApplication
 
@@ -385,7 +387,25 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        loadLastFile()
+        if (savedInstanceState != null) {
+            isConsumoMode = savedInstanceState.getBoolean("isConsumoMode", false)
+            lastSelectedCompany = savedInstanceState.getString("lastSelectedCompany")
+            val uriStr = savedInstanceState.getString("currentFileUri")
+            currentFileUri = uriStr?.toUri()
+            
+            adapter.isConsumoMode = isConsumoMode
+            val fileNameWithExt = currentFileUri?.let { fileStorageManager.getFileNameFromUri(it, if (isConsumoMode) "Materiali di consumo" else getString(R.string.default_file_name)) }
+            val fileName = fileNameWithExt?.substringBeforeLast('.')
+            customToolbarTitle?.text = fileName
+            tvCurrentFileName.text = if (isConsumoMode) "Materiali di consumo" else (lastSelectedCompany ?: getString(R.string.default_company_name))
+            toolbarQrButton?.visibility = if (isConsumoMode) View.GONE else View.VISIBLE
+            
+            if (!isConsumoMode) {
+                adapter.setMasterList(AssetsHelper().loadMasterList(this, lastSelectedCompany))
+            }
+        } else {
+            loadLastFile()
+        }
         checkTechnicianName()
 
         lifecycleScope.launch {
@@ -533,6 +553,26 @@ class MainActivity : AppCompatActivity() {
         favoritesListenerRegistration?.remove()
     }
 
+    override fun onSaveInstanceState(outState: Bundle) {
+        val currentData = adapter.getData()
+        if (currentData.isNotEmpty()) {
+            if (isConsumoMode) {
+                viewModel.saveStateForUndo(currentData)
+            } else {
+                val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
+                val mappedPairs = currentData.map { Pair(it.label, it.value) }
+                val mergedPairs = MaterialMerger().merge(mappedPairs, masterList)
+                val finalData = mergedPairs.map { ExcelRowData(it.first, it.second) }
+                viewModel.saveStateForUndo(finalData)
+            }
+        }
+
+        super.onSaveInstanceState(outState)
+        outState.putBoolean("isConsumoMode", isConsumoMode)
+        outState.putString("lastSelectedCompany", lastSelectedCompany)
+        currentFileUri?.let { outState.putString("currentFileUri", it.toString()) }
+    }
+
 
     private fun handleUiState(state: UiState) {
         progressBar.visibility = if (state is UiState.Loading) View.VISIBLE else View.GONE
@@ -540,7 +580,7 @@ class MainActivity : AppCompatActivity() {
         when (state) {
             is UiState.Initial, is UiState.Loading -> { } // future loader
             is UiState.Success -> {
-                if (!isConsumoMode) {
+                if (adapter.getData() != state.data) {
                     adapter.updateData(state.data)
                 }
             }
@@ -835,7 +875,6 @@ class MainActivity : AppCompatActivity() {
             if (result.isSuccess) {
                 if (!isConsumoMode) return@launch
                 val data = result.getOrNull() ?: emptyList()
-                adapter.updateData(data)
                 viewModel.saveStateForUndo(data)
                 viewModel.markAsSaved()
                 HistoryRepository(this@MainActivity).cleanOldSnapshots("Consumo")
@@ -1402,8 +1441,17 @@ class MainActivity : AppCompatActivity() {
         exchangeListenerRegistration = exchangeRepo.listenForPendingExchanges(deviceId) { pendingList ->
             lifecycleScope.launch {
                 for (exchange in pendingList) {
-                    applyExchangeToLocalInventory(exchange)
-                    exchangeRepo.markAsProcessed(exchange.id)
+                    // Skip se già in fase di processamento (race con processPendingExchanges)
+                    synchronized(processingExchangeIds) {
+                        if (!processingExchangeIds.add(exchange.id)) return@launch
+                    }
+                    try {
+                        processAndMarkExchange(exchange)
+                    } finally {
+                        synchronized(processingExchangeIds) {
+                            processingExchangeIds.remove(exchange.id)
+                        }
+                    }
                 }
             }
         }
@@ -1420,10 +1468,31 @@ class MainActivity : AppCompatActivity() {
                 exchangeRepo.getPendingExchanges(deviceId)
             }
             for (exchange in pending) {
-                applyExchangeToLocalInventory(exchange)
-                withContext(Dispatchers.IO) {
-                    exchangeRepo.markAsProcessed(exchange.id)
+                // Skip se già in fase di processamento (race con setupExchangeListener)
+                synchronized(processingExchangeIds) {
+                    if (!processingExchangeIds.add(exchange.id)) continue
                 }
+                try {
+                    processAndMarkExchange(exchange)
+                } finally {
+                    synchronized(processingExchangeIds) {
+                        processingExchangeIds.remove(exchange.id)
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * Processa un singolo scambio: applica le modifiche all'inventario locale e marca come processato.
+     * Il markAsProcessed avviene subito dopo il salvataggio del file locale, indipendentemente
+     * dal successo della sincronizzazione Firestore (che verrà recuperata dal SyncWorker).
+     */
+    private suspend fun processAndMarkExchange(exchange: ExchangeLog) {
+        val success = applyExchangeToLocalInventory(exchange)
+        if (success) {
+            withContext(Dispatchers.IO) {
+                exchangeRepo.markAsProcessed(exchange.id)
             }
         }
     }
@@ -1431,26 +1500,27 @@ class MainActivity : AppCompatActivity() {
     /**
      * Applica uno scambio ricevuto all'inventario locale.
      * Legge il file Excel dell'appalto coinvolto, modifica le quantità, salva.
+     * Ritorna true in caso di successo, false in caso di errore.
      */
-    private suspend fun applyExchangeToLocalInventory(exchange: ExchangeLog) {
+    private suspend fun applyExchangeToLocalInventory(exchange: ExchangeLog): Boolean {
         val company = exchange.company
-        val fileUriString = settingsRepository.getCompanyFileUri(company) ?: return
+        val fileUriString = settingsRepository.getCompanyFileUri(company) ?: return false
         val uri = android.net.Uri.parse(fileUriString)
 
-        if (!fileStorageManager.isUriAccessible(uri)) return
+        if (!fileStorageManager.isUriAccessible(uri)) return false
 
         val excelRepo = ExcelRepository(this)
         val result = withContext(Dispatchers.IO) { excelRepo.readExcelFile(uri, company) }
-        if (result.isFailure) return
+        if (result.isFailure) return false
 
-        val localData = result.getOrNull()?.toMutableList() ?: return
+        val localData = result.getOrNull()?.toMutableList() ?: return false
         val parser = StockParser()
 
         // La direzione è dal punto di vista di B (chi ha scansionato).
         // Per A (noi), l'effetto è inverso:
         // Se B ha preso da A → A perde materiale
         // Se B ha dato ad A → A guadagna materiale
-        val direction = try { ExchangeDirection.valueOf(exchange.direction) } catch (_: Exception) { return }
+        val direction = try { ExchangeDirection.valueOf(exchange.direction) } catch (_: Exception) { return false }
 
         val items = exchange.items.mapNotNull { map ->
             val label = map["label"] as? String ?: return@mapNotNull null
@@ -1494,21 +1564,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Salva il file Excel locale
-        withContext(Dispatchers.IO) {
-            excelRepo.saveExcelFile(uri, localData)
+        val saveSuccess = withContext(Dispatchers.IO) {
+            excelRepo.saveExcelFile(uri, localData).isSuccess
         }
+        if (!saveSuccess) return false
 
-        // Se l'appalto dello scambio è quello attualmente aperto, ricarica ricarica la view completamente in real-time
+        // Se l'appalto dello scambio è quello attualmente aperto, ricarica la view completamente in real-time
         if (company == lastSelectedCompany && currentFileUri == uri) {
             viewModel.loadExcelFile(uri, company)
-        }
-
-        // Sync Firestore
-        val techName = getTechnicianName() ?: return
-        val (lat, lng) = getLastLocation()
-        val deviceId = getDeviceID()
-        withContext(Dispatchers.IO) {
-            FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, localData, lat, lng, deviceId = deviceId)
         }
 
         // Notifica l'utente
@@ -1519,6 +1582,26 @@ class MainActivity : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
         }
+
+        // Sync Firestore in modo best-effort: se fallisce, il SyncWorker recupererà la prossima volta.
+        // Non blocchiamo il markAsProcessed per questo — il salvataggio locale è ciò che conta.
+        val techName = getTechnicianName()
+        if (techName != null) {
+            val (lat, lng) = getLastLocation()
+            val deviceId = getDeviceID()
+            withContext(Dispatchers.IO) {
+                try {
+                    FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, localData, lat, lng, deviceId = deviceId)
+                } catch (e: Exception) {
+                    Log.w("TW_MainActivity", "Sync Firestore best-effort fallito per scambio ${exchange.id}: ${e.message}")
+                }
+            }
+        } else {
+            // Se manca il techName, programma un sync completo per dopo
+            SyncWorker.enqueue(this@MainActivity)
+        }
+
+        return true
     }
     private fun setupDynamicDrawer() {
         val container = findViewById<android.widget.LinearLayout>(R.id.llCompaniesContainer) ?: return

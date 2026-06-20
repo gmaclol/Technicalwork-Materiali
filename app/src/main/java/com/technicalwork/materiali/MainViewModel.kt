@@ -109,6 +109,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             undoStack.removeAt(0)
         }
         _hasUnsavedChanges.value = true
+        _uiState.value = UiState.Success(snapshotData)
     }
 
     fun clearPreRevertSnapshot() {
@@ -121,8 +122,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val previousState = undoStack.peek()
             val restoredData = previousState.data.map { it.copy() }
             
-            // Non sovrascriviamo _uiState.value per non rifare il bind completo della RV se non necessario,
-            // ritorniamo i dati ripristinati.
+            _uiState.value = UiState.Success(restoredData)
             _hasUnsavedChanges.value = true
             onUndoState(restoredData)
             return true

@@ -27,10 +27,13 @@ class MaterialMerger {
             .map { it.trim().lowercase() }
             .toSet()
 
-        val extraMaterials = techMaterials.filter { (name, _) ->
+        val parser = StockParser()
+        val extraMaterials = techMaterials.filter { (name, value) ->
             val trimmedName = name.trim()
+            val stock = parser.parse(trimmedName, value)
+            val hasStock = stock.free > 0 || stock.used > 0
             !trimmedName.matches(separatorRegex) && !trimmedName.matches(separatorExtraRegex) && 
-            !normalizedMaster.contains(trimmedName.lowercase())
+            !normalizedMaster.contains(trimmedName.lowercase()) && hasStock
         }
         
         val hasExtras = extraMaterials.isNotEmpty()

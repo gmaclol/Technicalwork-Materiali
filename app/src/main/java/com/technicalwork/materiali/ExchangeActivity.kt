@@ -311,18 +311,50 @@ class ExchangeActivity : AppCompatActivity() {
         tvRemoteTechName.text = remoteTechName
         tvRemoteCompany.text = remoteCompany
 
-        // Converti l'inventario in ExchangeRowData usando StockParser
-        val separatorRegex = Regex("^::.*::$|^;;.*;;$")
-        
+        val masterList = AssetsHelper().loadMasterList(this, remoteCompany)
+        val separatorRegex = Regex("^::.*::$")
+        val separatorExtraRegex = Regex("^;;.*;;$")
+        val normalizedMaster = masterList
+            .filter { 
+                val trimmed = it.trim()
+                !trimmed.matches(separatorRegex) && !trimmed.matches(separatorExtraRegex) 
+            }
+            .map { it.trim().lowercase() }
+            .toSet()
+
         val remoteExchangeRows = remoteInventory
-            .filter { !it.label.trim().matches(separatorRegex) && it.label.isNotBlank() }
+            .filter { 
+                val label = it.label.trim()
+                val isSep = label.matches(separatorRegex) || label.matches(separatorExtraRegex) || label.isBlank()
+                if (isSep) return@filter false
+                
+                val isExtra = !normalizedMaster.contains(label.lowercase())
+                if (isExtra) {
+                    val stock = parser.parse(label, it.value)
+                    val hasStock = stock.free > 0 || stock.used > 0
+                    if (!hasStock) return@filter false
+                }
+                true
+            }
             .map { row ->
                 val stock = parser.parse(row.label, row.value)
                 ExchangeRowData(row.label, stock.free, stock.used, parser.hasUsedPart(row.value))
             }
             
         val localExchangeRows = localInventory
-            .filter { !it.label.trim().matches(separatorRegex) && it.label.isNotBlank() }
+            .filter { 
+                val label = it.label.trim()
+                val isSep = label.matches(separatorRegex) || label.matches(separatorExtraRegex) || label.isBlank()
+                if (isSep) return@filter false
+                
+                val isExtra = !normalizedMaster.contains(label.lowercase())
+                if (isExtra) {
+                    val stock = parser.parse(label, it.value)
+                    val hasStock = stock.free > 0 || stock.used > 0
+                    if (!hasStock) return@filter false
+                }
+                true
+            }
             .map { row ->
                 val stock = parser.parse(row.label, row.value)
                 ExchangeRowData(row.label, stock.free, stock.used, parser.hasUsedPart(row.value))

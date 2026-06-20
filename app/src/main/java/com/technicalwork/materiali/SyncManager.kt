@@ -202,8 +202,7 @@ class SyncManager(private val context: Context) {
 
                         // Sync standard in upload
                         excelRepo.readExcelFile(uri, company).onSuccess { data ->
-                            val isEmpty = data.all { it.value.isEmpty() || it.value == "0" }
-                            if (!isEmpty) {
+                            if (data.isNotEmpty()) {
                                 firebaseRepo.syncToFirestore(context, company, techName, data, lat, lng, deviceId = deviceId)
                             }
                         }
@@ -257,8 +256,7 @@ class SyncManager(private val context: Context) {
                     }
 
                     ConsumoRepository(context).readConsumoFile(uri).onSuccess { data ->
-                        val isEmpty = data.all { it.value.isEmpty() || it.value == "0" }
-                        if (!isEmpty) {
+                        if (data.isNotEmpty()) {
                             firebaseRepo.syncToFirestore(context, "Consumo", techName, data, lat, lng, deviceId = deviceId)
                         }
                     }
