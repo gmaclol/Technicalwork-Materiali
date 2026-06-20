@@ -23,7 +23,7 @@ class ConfigManager(private val context: Context) {
     }
 
     private val gson = Gson()
-    private val client = OkHttpClient()
+    private val client = NetworkClient.okHttpClient
     private val configUrl = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/config.json"
     private val cacheFile = File(context.filesDir, "config_cache.json")
     private var cachedConfig: AppConfig? = null

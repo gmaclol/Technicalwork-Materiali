@@ -15,7 +15,12 @@ senza riaprire i file nella maggior parte dei casi.
 
 1. Leggi `tasks/decisions.md` se esiste — contiene contesto architetturale già noto
 2. Leggi `tasks/lessons.md` se esiste — contiene pattern da tenere a mente
-3. Non aprire altro prima di aver completato la scansione
+3. Se esiste già `graphify-out/` (grafo costruito in precedenza), consultalo per
+   farti un'idea rapida di moduli e dipendenze principali — usalo come punto di
+   partenza per orientarti più in fretta, NON come sostituto della scansione:
+   `struttura.md` resta il documento di riferimento testuale, va comunque popolato
+   per intero seguendo il formato sotto
+4. Non aprire altro prima di aver completato la scansione
 
 ---
 

@@ -34,6 +34,8 @@ google-services.json
 # Credenziali e chiavi
 keystore.properties
 signing.properties
+KEYS.md
+tasks/KEYS.md
 
 # File temporanei Windows
 Thumbs.db
@@ -51,3 +53,4 @@ skills-lock.json
 /tasks/todo.md
 /tasks/org.md
 /tasks/review.md
+graphify-out/

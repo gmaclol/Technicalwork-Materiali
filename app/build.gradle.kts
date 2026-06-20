@@ -77,6 +77,18 @@ android {
     }
     buildFeatures {
         buildConfig = true
+        viewBinding = false
+        dataBinding = false
+        aidl = false
+        shaders = false
+        resValues = false
+    }
+
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
+    compilerOptions {
+        freeCompilerArgs.add("-Xbackend-threads=0") // Use all CPU cores for compilation
     }
 }
 

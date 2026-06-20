@@ -10,7 +10,7 @@ import java.io.File
 
 class ListUpdater {
 
-    private val client = OkHttpClient()
+    private val client = NetworkClient.okHttpClient
     private val baseUrl = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/"
 
     companion object {

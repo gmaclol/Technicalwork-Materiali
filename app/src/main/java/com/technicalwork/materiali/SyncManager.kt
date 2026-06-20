@@ -46,6 +46,7 @@ class SyncManager(private val context: Context) {
                 return@launch
             }
             val deviceId = Settings.Secure.getString(context.contentResolver, Settings.Secure.ANDROID_ID)
+            val firebaseRepo = FirebaseRepository()
             
             // 0. Controllo Forza Aggiornamento Liste/Config da Dashboard (Firestore)
             try {
@@ -84,6 +85,14 @@ class SyncManager(private val context: Context) {
                 Log.e(TAG, "Errore durante il flush di PfsSyncQueue: ${e.message}", e)
             }
 
+            // Eseguiamo il flush dei materiali offline accumulati in precedenza
+            try {
+                Log.d(TAG, "Tentativo di flush di SyncQueue")
+                SyncQueue().flush(context, firebaseRepo)
+            } catch (e: Exception) {
+                Log.e(TAG, "Errore durante il flush di SyncQueue: ${e.message}", e)
+            }
+
             // 2. Rilevamento Posizione
             // Il worker pre-fetcha con LocationManager (veloce ma spesso null).
             // Se mancante, usa FusedLocationProviderClient (cache piu' affidabile di Play Services).
@@ -108,8 +117,6 @@ class SyncManager(private val context: Context) {
                     lng = fbLng
                 }
             }
-
-            val firebaseRepo = FirebaseRepository()
             
             if (!isFullSync) {
                 // LIGHT SYNC: Aggiorna solo presenza e posizione per non consumare letture Excel e scritture massive
@@ -170,8 +177,10 @@ class SyncManager(private val context: Context) {
                                 if (lastUpdatedBy == "admin" && remoteTimestamp > lastSyncTime && !hasOfflineChanges) {
                                     // ALLINEA DA ADMIN: Sovrascrivi l'Excel locale con i dati provenienti da Firestore
                                     Log.i(TAG, "Rilevata modifica da Admin per $company. Sovrascrivo l'Excel locale.")
-                                    val materialsMap = snap.get("materiali") as? Map<String, String> ?: emptyMap()
-                                    val remoteDataList = materialsMap.map { ExcelRowData(it.key, it.value) }
+                                    val materialsMap = snap.get("materiali") as? Map<*, *>
+                                    val remoteDataList = materialsMap?.mapNotNull { (key, value) ->
+                                        if (key is String && value is String) ExcelRowData(key, value) else null
+                                    } ?: emptyList()
                                     
                                     // Salva il file Excel locale
                                     excelRepo.saveExcelFile(uri, remoteDataList).onSuccess {
@@ -226,8 +235,10 @@ class SyncManager(private val context: Context) {
 
                             if (lastUpdatedBy == "admin" && remoteTimestamp > lastSyncTime && !hasOfflineChanges) {
                                 Log.i(TAG, "Rilevata modifica da Admin per Consumo. Sovrascrivo l'Excel locale.")
-                                val materialsMap = snap.get("materiali") as? Map<String, String> ?: emptyMap()
-                                val remoteDataList = materialsMap.map { ExcelRowData(it.key, it.value) }
+                                val materialsMap = snap.get("materiali") as? Map<*, *>
+                                val remoteDataList = materialsMap?.mapNotNull { (key, value) ->
+                                    if (key is String && value is String) ExcelRowData(key, value) else null
+                                } ?: emptyList()
                                 
                                 ConsumoRepository(context).saveConsumoFile(uri, remoteDataList, techName).onSuccess {
                                     syncPrefs.edit().putLong("last_sync_timestamp_Consumo", remoteTimestamp).apply()

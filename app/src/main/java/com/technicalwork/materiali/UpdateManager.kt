@@ -31,7 +31,7 @@ data class GitHubAsset(
 
 class UpdateManager(private val context: Context) {
 
-    private val client = OkHttpClient()
+    private val client = NetworkClient.okHttpClient
     private val gson = Gson()
     
     private val GITHUB_OWNER = "gmaclol"

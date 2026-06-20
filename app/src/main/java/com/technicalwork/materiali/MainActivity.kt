@@ -1409,12 +1409,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    @SuppressLint("HardwareIds")
     private fun getDeviceID(): String {
-        return android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        return android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID) ?: ""
     }
 
-    @SuppressLint("HardwareIds")
     private fun processPendingExchanges() {
         val deviceId = getDeviceID()
         lifecycleScope.launch {
@@ -1508,7 +1506,7 @@ class MainActivity : AppCompatActivity() {
         // Sync Firestore
         val techName = getTechnicianName() ?: return
         val (lat, lng) = getLastLocation()
-        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        val deviceId = getDeviceID()
         withContext(Dispatchers.IO) {
             FirebaseRepository().syncToFirestore(this@MainActivity, company, techName, localData, lat, lng, deviceId = deviceId)
         }
