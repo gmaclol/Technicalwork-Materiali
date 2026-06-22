@@ -104,18 +104,29 @@ class FileStorageManager(private val context: Context) {
             }
 
             // Copia effettiva del contenuto nel nuovo Uri
-            contentResolver.openInputStream(originalUri)?.use { input ->
-                contentResolver.openOutputStream(newUri)?.use { output ->
-                    input.copyTo(output)
-                }
-            } ?: return@withContext null
+            val copySuccess = try {
+                contentResolver.openInputStream(originalUri)?.use { input ->
+                    contentResolver.openOutputStream(newUri)?.use { output ->
+                        input.copyTo(output)
+                        output.flush()
+                        true
+                    }
+                } ?: false
+            } catch (e: Exception) {
+                false
+            }
+            if (!copySuccess) {
+                // Tenta di pulire il file destinazione scritto parzialmente
+                try { contentResolver.delete(newUri, null, null) } catch (_: Exception) {}
+                return@withContext null
+            }
 
-            // Scansione MediaStore sul nuovo file
+            // Scansione MediaStore sul nuovo file (solo se copia riuscita)
             android.media.MediaScannerConnection.scanFile(
                 context, arrayOf(scanPath ?: newUri.path), null, null
             )
 
-            // Tentativo di eliminazione del file originale con vari metodi in ordine
+            // Eliminazione file originale SOLO se la copia è stata completata con successo
             try {
                 var deleted = false
                 

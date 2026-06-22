@@ -6,7 +6,9 @@ import android.net.NetworkCapabilities
 import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -38,22 +40,22 @@ class FirebaseRepository {
         lng: Double? = null,
         isRetry: Boolean = false,
         deviceId: String
-    ): Boolean {
-        if (technicianName.isBlank() || company.isBlank()) return false
+    ): Boolean = withContext(Dispatchers.IO) {
+        if (technicianName.isBlank() || company.isBlank()) return@withContext false
 
         // Controllo Connessione
-        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val capabilities = cm.getNetworkCapabilities(cm.activeNetwork)
+        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as? ConnectivityManager
+        val capabilities = cm?.getNetworkCapabilities(cm.activeNetwork)
         val isConnected = capabilities?.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) == true
 
         if (!isConnected) {
             if (!isRetry) {
                 SyncQueue().save(context, company, technicianName, materials, lat, lng, deviceId)
             }
-            return false
+            return@withContext false
         }
 
-        return try {
+        try {
             val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
 
             val masterList = AssetsHelper().loadMasterList(context, company)
@@ -169,7 +171,7 @@ class FirebaseRepository {
      * Aggiorna solo il nome del tecnico in tutte le collezioni principali
      * e nel registro centrale devices_names con timestamp. Includendo i metadata primari.
      */
-    fun updateTechnicianName(deviceId: String, newName: String, companies: List<String>, lat: Double? = null, lng: Double? = null) {
+    suspend fun updateTechnicianName(deviceId: String, newName: String, companies: List<String>, lat: Double? = null, lng: Double? = null) = withContext(Dispatchers.IO) {
         val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
         val data = hashMapOf<String, Any>(
             "tecnico" to newName,
@@ -185,7 +187,7 @@ class FirebaseRepository {
 
         allToUpdate.forEach { company ->
             try {
-                db.collection(company).document(deviceId).set(data, SetOptions.merge())
+                db.collection(company).document(deviceId).set(data, SetOptions.merge()).await()
             } catch (e: Exception) {
                 Log.e(TAG, "Errore in updateTechnicianName per $company: ${e.message}", e)
             }
@@ -196,18 +198,24 @@ class FirebaseRepository {
                 .update(
                     "$deviceId.name", newName,
                     "$deviceId.updatedAt", System.currentTimeMillis()
-                )
+                ).await()
         } catch (e: Exception) {
-            // Se il documento o il campo non esistono ancora, usiamo il set merge come fallback
             try {
-                val nameData = hashMapOf<String, Any>(
-                    deviceId to hashMapOf(
-                        "name" to newName,
-                        "updatedAt" to System.currentTimeMillis()
-                    )
-                )
-                db.collection("settings").document("devices_names")
-                    .set(nameData, SetOptions.merge())
+                // Fallback: verifica se il documento devices_names esiste già
+                val docSnap = db.collection("settings").document("devices_names").get().await()
+                if (!docSnap.exists()) {
+                    // Crea il documento ex-novo
+                    db.collection("settings").document("devices_names")
+                        .set(hashMapOf(deviceId to hashMapOf("name" to newName, "updatedAt" to System.currentTimeMillis())))
+                        .await()
+                } else {
+                    // Il documento esiste ma il field deviceId manca: riprova update (ora dovrebbe funzionare)
+                    db.collection("settings").document("devices_names")
+                        .update(
+                            "$deviceId.name", newName,
+                            "$deviceId.updatedAt", System.currentTimeMillis()
+                        ).await()
+                }
             } catch (e2: Exception) {
                 Log.e(TAG, "Errore fallback updateTechnicianName: ${e2.message}", e2)
             }
@@ -218,14 +226,14 @@ class FirebaseRepository {
      * Aggiorna solo la versione dell'app nelle collezioni. Utile al riavvio post-update
      * per far comparire la nuova versione sulla dashboard senza aspettare un salvataggio materiali.
      */
-    fun updateAppVersionOnly(deviceId: String, companies: List<String>) {
+    suspend fun updateAppVersionOnly(deviceId: String, companies: List<String>) = withContext(Dispatchers.IO) {
         val data = hashMapOf<String, Any>("versione_app" to "Ver ${BuildConfig.VERSION_NAME}")
         val allToUpdate = companies.toMutableList()
         if (!allToUpdate.contains("Consumo")) allToUpdate.add("Consumo")
         
         allToUpdate.forEach { company ->
             try {
-                db.collection(company).document(deviceId).set(data, SetOptions.merge())
+                db.collection(company).document(deviceId).set(data, SetOptions.merge()).await()
             } catch (e: Exception) {
                 Log.e(TAG, "Errore in updateAppVersionOnly per $company: ${e.message}", e)
             }
@@ -235,7 +243,7 @@ class FirebaseRepository {
     /**
      * Aggiorna le aree PFS salvate per questo dispositivo
      */
-    fun updatePfsAreas(deviceId: String, pfsAreas: List<String>, techName: String? = null) {
+    suspend fun updatePfsAreas(deviceId: String, pfsAreas: List<String>, techName: String? = null) = withContext(Dispatchers.IO) {
         val timestamp = System.currentTimeMillis()
         try {
             // Usa dot-notation per aggiornare solo pfsAreas senza cancellare il 'name'
@@ -243,23 +251,28 @@ class FirebaseRepository {
                 .update(
                     "$deviceId.pfsAreas", pfsAreas,
                     "$deviceId.updatedAt", timestamp
-                )
+                ).await()
         } catch (e: Exception) {
-            // Se fallisce (magari il campo deviceId non esiste ancora o era una stringa legacy), usiamo il set merge
             try {
-                val devMap = hashMapOf<String, Any>(
-                    "pfsAreas" to pfsAreas,
-                    "updatedAt" to timestamp
-                )
-                if (techName != null) {
-                    devMap["name"] = techName
+                val docSnap = db.collection("settings").document("devices_names").get().await()
+                if (!docSnap.exists()) {
+                    val devMap = hashMapOf<String, Any>(
+                        "pfsAreas" to pfsAreas,
+                        "updatedAt" to timestamp
+                    )
+                    if (techName != null) {
+                        devMap["name"] = techName
+                    }
+                    db.collection("settings").document("devices_names")
+                        .set(hashMapOf(deviceId to devMap))
+                        .await()
+                } else {
+                    db.collection("settings").document("devices_names")
+                        .update(
+                            "$deviceId.pfsAreas", pfsAreas,
+                            "$deviceId.updatedAt", timestamp
+                        ).await()
                 }
-                
-                val nameData = hashMapOf<String, Any>(
-                    deviceId to devMap
-                )
-                db.collection("settings").document("devices_names")
-                    .set(nameData, SetOptions.merge())
             } catch (e2: Exception) {
                 Log.e(TAG, "Errore fallback updatePfsAreas: ${e2.message}", e2)
             }
@@ -269,14 +282,14 @@ class FirebaseRepository {
     /**
      * Aggiorna i dati di telemetria del dispositivo all'avvio in modo incrementale su Firestore.
      */
-    fun updateDeviceTelemetry(
+    suspend fun updateDeviceTelemetry(
         deviceId: String,
         companies: List<String>,
         deviceModel: String,
         appVersion: String,
         batteryLevel: Int,
         gpsEnabled: Boolean
-    ) {
+    ) = withContext(Dispatchers.IO) {
         val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
         Log.d(TAG, "Avvio updateDeviceTelemetry per $deviceId")
         val data = hashMapOf<String, Any>(
@@ -294,7 +307,7 @@ class FirebaseRepository {
 
         allToUpdate.forEach { company ->
             try {
-                db.collection(company).document(deviceId).set(data, SetOptions.merge())
+                db.collection(company).document(deviceId).set(data, SetOptions.merge()).await()
             } catch (e: Exception) {
                 Log.e(TAG, "Errore in updateDeviceTelemetry per $company: ${e.message}", e)
             }

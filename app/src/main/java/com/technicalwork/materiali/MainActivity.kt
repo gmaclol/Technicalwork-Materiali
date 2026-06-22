@@ -554,6 +554,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putBoolean("isConsumoMode", isConsumoMode)
+        outState.putString("lastSelectedCompany", lastSelectedCompany)
+        currentFileUri?.let { outState.putString("currentFileUri", it.toString()) }
+
         val currentData = adapter.getData()
         if (currentData.isNotEmpty()) {
             if (isConsumoMode) {
@@ -566,11 +571,6 @@ class MainActivity : AppCompatActivity() {
                 viewModel.saveStateForUndo(finalData)
             }
         }
-
-        super.onSaveInstanceState(outState)
-        outState.putBoolean("isConsumoMode", isConsumoMode)
-        outState.putString("lastSelectedCompany", lastSelectedCompany)
-        currentFileUri?.let { outState.putString("currentFileUri", it.toString()) }
     }
 
 
@@ -1093,7 +1093,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: android.view.Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         saveMenuItem = menu?.findItem(R.id.action_save)
-        saveMenuItem?.actionView?.setOnClickListener { onOptionsItemSelected(saveMenuItem!!) }
+        saveMenuItem?.actionView?.setOnClickListener { saveMenuItem?.let { onOptionsItemSelected(it) } }
         updateSaveButtonLook(viewModel.hasUnsavedChanges.value)
         
         val undoItem = menu?.findItem(R.id.action_undo)

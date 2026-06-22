@@ -56,9 +56,10 @@ class SyncWorker(
          * così non si accumulano richieste ridondanti.
          */
         fun enqueue(context: Context, isFullSync: Boolean = true) {
+            val appCtx = context.applicationContext
             try {
-                if (androidx.core.content.ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_COARSE_LOCATION) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
-                    val fusedClient = com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(context)
+                if (androidx.core.content.ContextCompat.checkSelfPermission(appCtx, android.Manifest.permission.ACCESS_COARSE_LOCATION) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                    val fusedClient = com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(appCtx)
                     fusedClient.lastLocation.addOnCompleteListener { task ->
                         var lat: Double? = null
                         var lng: Double? = null
@@ -66,17 +67,17 @@ class SyncWorker(
                             lat = task.result.latitude
                             lng = task.result.longitude
                         } else {
-                            val (fbLat, fbLng) = SyncManager.getLastLocationHelper(context)
+                            val (fbLat, fbLng) = SyncManager.getLastLocationHelper(appCtx)
                             lat = fbLat
                             lng = fbLng
                         }
-                        enqueueWithLocation(context, lat, lng, isFullSync)
+                        enqueueWithLocation(appCtx, lat, lng, isFullSync)
                     }
                 } else {
-                    enqueueWithLocation(context, null, null, isFullSync)
+                    enqueueWithLocation(appCtx, null, null, isFullSync)
                 }
             } catch (e: Exception) {
-                enqueueWithLocation(context, null, null, isFullSync)
+                enqueueWithLocation(appCtx, null, null, isFullSync)
             }
         }
 

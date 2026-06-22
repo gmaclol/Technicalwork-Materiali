@@ -9,6 +9,7 @@ import java.io.InputStreamReader
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import android.util.Log
 
 data class AppConfig(
@@ -67,8 +68,8 @@ class ConfigManager(private val context: Context) {
     /**
      * Scarica la nuova configurazione da GitHub in background.
      */
-    suspend fun fetchRemoteConfig(): Boolean {
-        return try {
+    suspend fun fetchRemoteConfig(): Boolean = withContext(Dispatchers.IO) {
+        try {
             val request = Request.Builder().url("$configUrl?t=${System.currentTimeMillis()}").build()
             val response = client.newCall(request).execute()
             if (response.isSuccessful) {
@@ -77,7 +78,7 @@ class ConfigManager(private val context: Context) {
                     cacheFile.writeText(content)
                     // Invalida cache in memoria per il prossimo utilizzo
                     cachedConfig = null 
-                    return true
+                    return@withContext true
                 }
             }
             false
@@ -105,7 +106,7 @@ class ConfigManager(private val context: Context) {
         "Trentino-Alto Adige", "Umbria", "Valle d'Aosta", "Veneto"
     )
 
-    suspend fun fetchRemoteRegionsJson() {
+    suspend fun fetchRemoteRegionsJson() = withContext(Dispatchers.IO) {
         coroutineScope {
             ITALIAN_REGIONS.map { region ->
                 launch(Dispatchers.IO) {
