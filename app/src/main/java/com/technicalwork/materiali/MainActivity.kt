@@ -297,7 +297,7 @@ class MainActivity : AppCompatActivity() {
             // Callback eseguito quando i dati cambiano (perdita focus, riga aggiunta/rimossa, +/-)
             val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
             val currentData = adapter.getData().map { Pair(it.label, it.value) }
-            val mergedPairs = MaterialMerger().merge(currentData, masterList)
+            val mergedPairs = MaterialMerger().merge(currentData, masterList, filterEmptyExtras = false)
             val finalData = mergedPairs.map { ExcelRowData(it.first, it.second) }
             
             // Applica il merge reattivo solo se necessario per evitare loop
@@ -561,7 +561,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 val masterList = AssetsHelper().loadMasterList(this, lastSelectedCompany)
                 val mappedPairs = currentData.map { Pair(it.label, it.value) }
-                val mergedPairs = MaterialMerger().merge(mappedPairs, masterList)
+                val mergedPairs = MaterialMerger().merge(mappedPairs, masterList, filterEmptyExtras = false)
                 val finalData = mergedPairs.map { ExcelRowData(it.first, it.second) }
                 viewModel.saveStateForUndo(finalData)
             }

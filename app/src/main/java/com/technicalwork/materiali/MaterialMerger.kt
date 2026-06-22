@@ -13,7 +13,7 @@ class MaterialMerger {
      *    - Inserisce i materiali extra immediatamente dopo la PRIMA occorrenza di ;;TESTO;;.
      *    - Se non esiste alcun ;;TESTO;;, i materiali extra vanno in cima (fallback).
      */
-    fun merge(techMaterials: List<Pair<String, String>>, masterList: List<String>): List<Pair<String, String>> {
+    fun merge(techMaterials: List<Pair<String, String>>, masterList: List<String>, filterEmptyExtras: Boolean = true): List<Pair<String, String>> {
         val result = mutableListOf<Pair<String, String>>()
         val separatorRegex = Regex("^::.*::$")
         val separatorExtraRegex = Regex("^;;.*;;$")
@@ -33,7 +33,7 @@ class MaterialMerger {
             val stock = parser.parse(trimmedName, value)
             val hasStock = stock.free > 0 || stock.used > 0
             !trimmedName.matches(separatorRegex) && !trimmedName.matches(separatorExtraRegex) && 
-            !normalizedMaster.contains(trimmedName.lowercase()) && hasStock
+            !normalizedMaster.contains(trimmedName.lowercase()) && (!filterEmptyExtras || hasStock)
         }
         
         val hasExtras = extraMaterials.isNotEmpty()
