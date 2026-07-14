@@ -104,6 +104,9 @@ class ExchangeActivity : AppCompatActivity() {
         setupToolbar()
 
         val mode = intent.getStringExtra(EXTRA_MODE) ?: MODE_GENERATE
+        if (mode == MODE_SCAN) {
+            findViewById<View>(android.R.id.content).visibility = View.INVISIBLE
+        }
         when (mode) {
             MODE_GENERATE -> showQrGenerator()
             MODE_SCAN -> startQrScanner()
@@ -247,6 +250,7 @@ class ExchangeActivity : AppCompatActivity() {
     }
 
     private fun loadRemoteInventory() {
+        findViewById<View>(android.R.id.content).visibility = View.VISIBLE
         layoutLoading.visibility = View.VISIBLE
         toolbar.title = getString(R.string.exchange_title_loading)
 

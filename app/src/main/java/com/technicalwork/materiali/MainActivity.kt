@@ -604,43 +604,29 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showTechnicianNameDialog(isUpdate: Boolean) {
-        val input = EditText(this)
         val currentName = getTechnicianName()
-        if (isUpdate && currentName != null) {
-            input.setText(currentName)
-            input.setSelectAllOnFocus(true)
-        }
-
-        AlertDialog.Builder(this)
-            .setTitle(if (isUpdate) getString(R.string.dialog_title_edit_tech_name) else getString(R.string.dialog_title_welcome))
-            .setMessage(getString(R.string.dialog_msg_enter_tech_name))
-            .setView(input)
-            .setCancelable(isUpdate)
-            .setPositiveButton(getString(R.string.btn_save)) { _, _ ->
-                val newName = input.text.toString().trim()
-                if (newName.isNotEmpty()) {
-                    saveTechnicianName(newName)
-                    val now = System.currentTimeMillis()
-                    settingsRepository.lastNameUpdateTimestamp = now
-                    tvTechName.text = newName
-                    
-                    // Sincronizza immediatamente il nuovo nome su Firebase (incluso devices_names con timestamp)
-                    val (lat, lng) = getLastLocation()
-                    val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-                    lifecycleScope.launch(Dispatchers.IO) {
-                        FirebaseRepository().updateTechnicianName(deviceId, newName, configManager.getCompanies(), lat, lng)
-                        performTotalSync(force = true)
-                    }
-                } else if (!isUpdate) {
-                    checkTechnicianName()
+        MainActivityDialogs.showTechnicianNameDialog(
+            activity = this,
+            isUpdate = isUpdate,
+            currentName = currentName,
+            onSave = { newName ->
+                saveTechnicianName(newName)
+                val now = System.currentTimeMillis()
+                settingsRepository.lastNameUpdateTimestamp = now
+                tvTechName.text = newName
+                
+                // Sincronizza immediatamente il nuovo nome su Firebase (incluso devices_names con timestamp)
+                val (lat, lng) = getLastLocation()
+                val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+                lifecycleScope.launch(Dispatchers.IO) {
+                    FirebaseRepository().updateTechnicianName(deviceId, newName, configManager.getCompanies(), lat, lng)
+                    performTotalSync(force = true)
                 }
+            },
+            onCancel = {
+                checkTechnicianName()
             }
-            .apply {
-                if (isUpdate) {
-                    setNegativeButton(getString(R.string.btn_cancel), null)
-                }
-            }
-            .show()
+        )
     }
 
     private fun getTechnicianName(): String? {
@@ -685,47 +671,37 @@ class MainActivity : AppCompatActivity() {
     private fun showRenameDialog(company: String, providedUri: Uri? = null) {
         val uri = providedUri ?: getCompanyFileUri(company) ?: return
         val currentFullName = fileStorageManager.getFileNameFromUri(uri)
-        val currentName = currentFullName.substringBeforeLast('.')
-        val extension = currentFullName.substringAfterLast('.', "")
         
-        val input = EditText(this)
-        input.setText(currentName)
-        input.setSelectAllOnFocus(true)
-
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.dialog_title_rename_file))
-            .setMessage(getString(R.string.dialog_msg_rename_file))
-            .setView(input)
-            .setPositiveButton(getString(R.string.btn_rename)) { _, _ ->
-                val newBaseName = input.text.toString().trim()
-                if (newBaseName.isNotEmpty() && newBaseName != currentName) {
-                    val newDisplayName = if (extension.isNotEmpty()) "$newBaseName.$extension" else newBaseName
-                    performPhysicalRename(company, uri, newDisplayName)
-                }
-            }
-            .setNegativeButton(getString(R.string.btn_cancel), null)
-            .show()
-    }
-
-    private fun performPhysicalRename(company: String, uri: Uri, newName: String) {
-        lifecycleScope.launch {
-            val newUri = fileStorageManager.safeRenameFile(uri, newName)
-            if (newUri != null) {
-                if (company == "Consumo") {
-                    saveConsumoFileUri(newUri)
-                } else {
-                    saveCompanyFileUri(company, newUri)
-                }
+        MainActivityDialogs.showRenameDialog(
+            activity = this,
+            currentFullName = currentFullName,
+            onRename = { newBaseName ->
+                val extension = currentFullName.substringAfterLast('.', "")
+                val cleanFilename = if (extension.isNotEmpty()) "$newBaseName.$extension" else newBaseName
                 
-                if (currentFileUri == uri) {
-                    if (company == "Consumo") openConsumoFile(newUri)
-                    else openExcelFile(newUri)
+                lifecycleScope.launch {
+                    val renamedUri = fileStorageManager.safeRenameFile(uri, cleanFilename)
+                    if (renamedUri != null) {
+                        if (isConsumoMode && company == "Consumo") {
+                            saveConsumoFileUri(renamedUri)
+                            consumoFileUri = renamedUri
+                        } else {
+                            saveCompanyFileUri(company, renamedUri)
+                        }
+                        
+                        if (company == lastSelectedCompany) {
+                            currentFileUri = renamedUri
+                            val fileName = cleanFilename.substringBeforeLast('.')
+                            customToolbarTitle?.text = fileName
+                        }
+                        
+                        Toast.makeText(this@MainActivity, getString(R.string.toast_file_renamed), Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this@MainActivity, getString(R.string.toast_rename_error), Toast.LENGTH_SHORT).show()
+                    }
                 }
-                Toast.makeText(this@MainActivity, getString(R.string.toast_file_renamed), Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(this@MainActivity, getString(R.string.toast_rename_error), Toast.LENGTH_LONG).show()
             }
-        }
+        )
     }
 
     private fun handleShare() {
@@ -830,10 +806,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showConsumoChoiceDialog() {
-        AlertDialog.Builder(this)
-            .setTitle("Materiali di consumo")
-            .setMessage("Configura il file per i Materiali di consumo")
-            .setPositiveButton("Nuovo file") { _, _ ->
+        MainActivityDialogs.showConsumoChoiceDialog(
+            activity = this,
+            onNewFile = {
                 val intent = Intent(Intent.ACTION_CREATE_DOCUMENT).apply {
                     addCategory(Intent.CATEGORY_OPENABLE)
                     type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -841,16 +816,15 @@ class MainActivity : AppCompatActivity() {
                     putExtra(DocumentsContract.EXTRA_INITIAL_URI, Uri.parse("content://com.android.externalstorage.documents/document/primary%3ADownload"))
                 }
                 createConsumoTemplateLauncher.launch(intent)
-            }
-            .setNegativeButton("Usa esistente") { _, _ ->
+            },
+            onSelectFile = {
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
                     addCategory(Intent.CATEGORY_OPENABLE)
                     type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
                 }
                 selectConsumoFileLauncher.launch(intent)
             }
-            .setNeutralButton(getString(R.string.btn_cancel), null)
-            .show()
+        )
     }
 
     private fun openConsumoFile(uri: Uri) {
@@ -887,13 +861,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showChoiceDialog(company: String) {
-        AlertDialog.Builder(this)
-            .setTitle(company)
-            .setMessage(getString(R.string.dialog_msg_config_company, company))
-            .setPositiveButton("Nuovo file") { _, _ ->
+        MainActivityDialogs.showChoiceDialog(
+            activity = this,
+            company = company,
+            onNewFile = {
                 createFileFromTemplate("$company.xlsx")
-            }
-            .setNegativeButton(getString(R.string.btn_use_existing)) { _, _ ->
+            },
+            onSelectFile = {
                 val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
                     addCategory(Intent.CATEGORY_OPENABLE)
                     type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
@@ -902,8 +876,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 selectFileLauncher.launch(intent)
             }
-            .setNeutralButton(getString(R.string.btn_cancel), null)
-            .show()
+        )
     }
 
     private fun createFileFromTemplate(fileName: String) {
@@ -946,22 +919,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showExitWarningDialog() {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.dialog_title_unsaved_changes))
-            .setMessage(getString(R.string.dialog_msg_save_before_exit))
-            .setNeutralButton(getString(R.string.btn_exit_without_saving)) { _, _ -> finish() }
-            .setNegativeButton(getString(R.string.btn_no)) { dialog, _ -> dialog.dismiss() }
-            .setPositiveButton(getString(R.string.btn_save_and_exit)) { _, _ -> saveExcelFile(silent = true) { finish() } }
-            .show()
+        MainActivityDialogs.showExitWarningDialog(
+            activity = this,
+            onExitWithoutSaving = { finish() },
+            onSaveAndExit = { saveExcelFile(silent = true) { finish() } }
+        )
     }
 
     private fun showResetConfirmationDialog() {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.dialog_title_reset_file))
-            .setMessage(getString(R.string.dialog_msg_reset_file))
-            .setPositiveButton(getString(R.string.btn_reset)) { _, _ -> resetCurrentFile() }
-            .setNegativeButton(getString(R.string.btn_cancel), null)
-            .show()
+        MainActivityDialogs.showResetConfirmationDialog(
+            activity = this,
+            onConfirm = { resetCurrentFile() }
+        )
     }
 
     private fun resetCurrentFile() {
@@ -1068,27 +1037,25 @@ class MainActivity : AppCompatActivity() {
 
     private fun showSampleDialog() {
         viewModel.clearError()
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.dialog_title_invalid_format))
-            .setMessage(getString(R.string.dialog_msg_invalid_format))
-            .setPositiveButton(getString(R.string.btn_use_template)) { _, _ -> createFileFromTemplate("${lastSelectedCompany ?: "Sample"}.xlsx") }
-            .setNegativeButton(getString(R.string.btn_cancel), null)
-            .show()
+        MainActivityDialogs.showSampleDialog(
+            activity = this,
+            onUseTemplate = {
+                createFileFromTemplate("${lastSelectedCompany ?: "Sample"}.xlsx")
+            }
+        )
     }
 
     private fun showDeleteConfirmation(position: Int) {
-        AlertDialog.Builder(this)
-            .setTitle(getString(R.string.dialog_title_delete_row))
-            .setMessage(getString(R.string.dialog_msg_delete_row))
-            .setPositiveButton(getString(R.string.btn_delete)) { _, _ ->
+        MainActivityDialogs.showDeleteConfirmation(
+            activity = this,
+            onConfirm = {
                 adapter.removeRow(position)
                 Toast.makeText(this, getString(R.string.toast_row_deleted), Toast.LENGTH_SHORT).show()
-            }
-            .setNegativeButton(getString(R.string.btn_cancel)) { _, _ ->
+            },
+            onCancel = {
                 adapter.notifyItemChanged(position)
             }
-            .setCancelable(false)
-            .show()
+        )
     }
 
     override fun onCreateOptionsMenu(menu: android.view.Menu?): Boolean {
@@ -1417,25 +1384,19 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        val dialog = BottomSheetDialog(this)
-        val view = layoutInflater.inflate(R.layout.bottom_sheet_exchange_choice, null)
-
-        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnGenerateQr).setOnClickListener {
-            dialog.dismiss()
-            val intent = Intent(this, ExchangeActivity::class.java)
-            intent.putExtra(ExchangeActivity.EXTRA_MODE, ExchangeActivity.MODE_GENERATE)
-            exchangeActivityLauncher.launch(intent)
-        }
-
-        view.findViewById<com.google.android.material.button.MaterialButton>(R.id.btnScanQr).setOnClickListener {
-            dialog.dismiss()
-            val intent = Intent(this, ExchangeActivity::class.java)
-            intent.putExtra(ExchangeActivity.EXTRA_MODE, ExchangeActivity.MODE_SCAN)
-            exchangeActivityLauncher.launch(intent)
-        }
-
-        dialog.setContentView(view)
-        dialog.show()
+        MainActivityDialogs.showExchangeChoiceSheet(
+            activity = this,
+            onGenerateQr = {
+                val intent = Intent(this, ExchangeActivity::class.java)
+                intent.putExtra(ExchangeActivity.EXTRA_MODE, ExchangeActivity.MODE_GENERATE)
+                exchangeActivityLauncher.launch(intent)
+            },
+            onScanQr = {
+                val intent = Intent(this, ExchangeActivity::class.java)
+                intent.putExtra(ExchangeActivity.EXTRA_MODE, ExchangeActivity.MODE_SCAN)
+                exchangeActivityLauncher.launch(intent)
+            }
+        )
     }
 
     private fun setupExchangeListener(deviceId: String) {
