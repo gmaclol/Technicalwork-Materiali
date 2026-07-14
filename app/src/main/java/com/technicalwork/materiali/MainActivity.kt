@@ -24,6 +24,7 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -1158,18 +1159,19 @@ class MainActivity : AppCompatActivity() {
         val rvHistory = view.findViewById<RecyclerView>(R.id.rvHistory)
         
         val historyList = viewModel.undoStack.toList().reversed()
-        val displayList = mutableListOf<HistoryItem>()
+        val displayList = mutableListOf<HistoryAdapterItem>()
         
-        val rawDiffs = mutableListOf<Triple<Int, List<DiffItem>, String>>()
+        val rawDiffs = mutableListOf<Triple<Int, List<DiffItem>, UndoSnapshot>>()
         for (i in 0 until historyList.size - 1) {
             val currentSnapshot = historyList[i]
             val previousSnapshot = historyList[i+1]
             val diffs = getStructuredDiff(previousSnapshot.data, currentSnapshot.data)
             if (diffs.isNotEmpty()) {
-                rawDiffs.add(Triple(viewModel.undoStack.size - 1 - i, diffs, currentSnapshot.timestamp))
+                rawDiffs.add(Triple(viewModel.undoStack.size - 1 - i, diffs, currentSnapshot))
             }
         }
 
+        val tempItems = mutableListOf<HistoryAdapterItem.SnapshotItem>()
         var i = 0
         while (i < rawDiffs.size) {
             var endSnapshotIndex = i
@@ -1183,7 +1185,14 @@ class MainActivity : AppCompatActivity() {
                 if (currentLabels == nextLabels) {
                     nextDiffs.forEach { nd ->
                         val ext = accumulatedDiffs[nd.label]!!
-                        accumulatedDiffs[nd.label] = DiffItem(nd.label, ext.diff + nd.diff, ext.isTextDiff || nd.isTextDiff, ext.header)
+                        accumulatedDiffs[nd.label] = DiffItem(
+                            nd.label,
+                            ext.diff + nd.diff,
+                            ext.isTextDiff || nd.isTextDiff,
+                            ext.header,
+                            ext.oldValue,
+                            nd.newValue
+                        )
                     }
                     endSnapshotIndex++
                 } else {
@@ -1192,42 +1201,169 @@ class MainActivity : AppCompatActivity() {
             }
             
             val targetStackIndex = rawDiffs[endSnapshotIndex].first
-            val timestamp = rawDiffs[i].third
+            val snapshot = rawDiffs[i].third
             
             val finalDiffs = accumulatedDiffs.values.filter { it.isTextDiff || it.diff != 0 }.toList()
             if (finalDiffs.isNotEmpty()) {
-                val ssb = formatGroupedDiff(finalDiffs, timestamp)
-                displayList.add(HistoryItem(ssb, targetStackIndex, timestamp))
+                tempItems.add(HistoryAdapterItem.SnapshotItem(finalDiffs, targetStackIndex, snapshot.timestamp, snapshot.epochMillis))
             }
             i = endSnapshotIndex + 1
         }
 
-        rvHistory.layoutManager = LinearLayoutManager(this)
-        rvHistory.adapter = object : RecyclerView.Adapter<HistoryViewHolder>() {
-            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryViewHolder {
-                val v = LayoutInflater.from(parent.context).inflate(R.layout.item_history_row, parent, false)
-                return HistoryViewHolder(v)
+        // Raggruppa per Giorno e costruisce la displayList finale piatta
+        var lastDay = ""
+        for (item in tempItems) {
+            val day = getDayString(item.epochMillis)
+            if (day != lastDay) {
+                displayList.add(HistoryAdapterItem.DayHeader(day))
+                lastDay = day
             }
-            override fun onBindViewHolder(holder: HistoryViewHolder, position: Int) {
-                val item = displayList[position]
-                holder.tvDiff.text = item.spannableDiff
-                holder.itemView.setOnClickListener {
-                    AlertDialog.Builder(this@MainActivity)
-                        .setTitle("Sei sicuro?")
-                        .setMessage("Vuoi tornare alla modifica delle ${item.timestamp}? Le modifiche successive andranno perse.")
-                        .setPositiveButton("Conferma") { _, _ ->
-                            viewModel.preRevertSnapshot = adapter.getData().map { it.copy() }
-                            while (viewModel.undoStack.size > item.stackIndex + 1) viewModel.undoStack.pop()
-                            val restoredData = viewModel.undoStack.peek().data.map { it.copy() }
-                            adapter.updateData(restoredData)
-                            viewModel.markAsUnsaved()
-                            updateUndoButtonLook()
-                            dialog.dismiss()
-                        }
-                        .setNegativeButton("Annulla", null)
-                        .show()
+            displayList.add(item)
+        }
+
+        rvHistory.layoutManager = LinearLayoutManager(this)
+        rvHistory.adapter = object : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+            private val TYPE_HEADER = 0
+            private val TYPE_ITEM = 1
+
+            override fun getItemViewType(position: Int): Int {
+                return when (displayList[position]) {
+                    is HistoryAdapterItem.DayHeader -> TYPE_HEADER
+                    is HistoryAdapterItem.SnapshotItem -> TYPE_ITEM
                 }
             }
+
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+                val v = LayoutInflater.from(parent.context).inflate(R.layout.item_history_row, parent, false)
+                return if (viewType == TYPE_HEADER) HeaderViewHolder(v) else HistoryViewHolder(v)
+            }
+
+            override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+                when (val item = displayList[position]) {
+                    is HistoryAdapterItem.DayHeader -> {
+                        val hHolder = holder as HeaderViewHolder
+                        hHolder.tvHeader.text = item.day
+                        hHolder.tvHeader.setTypeface(null, android.graphics.Typeface.BOLD)
+                        hHolder.tvHeader.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.gemini_accent_blue))
+                        hHolder.tvHeader.textSize = 16f
+                        hHolder.containerGroups.visibility = View.GONE
+                        hHolder.itemView.setOnClickListener(null)
+                    }
+                    is HistoryAdapterItem.SnapshotItem -> {
+                        val iHolder = holder as HistoryViewHolder
+                        iHolder.tvTime.text = "⏱️ Modifiche delle ore ${item.timestamp.substringBeforeLast(':')}"
+                        iHolder.tvTime.textSize = 12f
+                        iHolder.tvTime.setTypeface(null, android.graphics.Typeface.BOLD)
+                        iHolder.tvTime.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.gemini_text_secondary))
+                        
+                        iHolder.containerGroups.visibility = View.VISIBLE
+                        iHolder.containerGroups.removeAllViews()
+
+                        val byHeader = item.diffs.groupBy { it.header ?: "Senza Categoria" }
+                        val blue = ContextCompat.getColor(this@MainActivity, R.color.gemini_accent_blue)
+                        val red = ContextCompat.getColor(this@MainActivity, R.color.gemini_destructive)
+                        val gray = Color.GRAY
+
+                        for ((header, diffList) in byHeader) {
+                            val card = androidx.cardview.widget.CardView(this@MainActivity).apply {
+                                val lp = LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT,
+                                    LinearLayout.LayoutParams.WRAP_CONTENT
+                                ).apply {
+                                    setMargins(0, 0, 0, (8 * resources.displayMetrics.density).toInt())
+                                }
+                                layoutParams = lp
+                                radius = (8 * resources.displayMetrics.density)
+                                cardElevation = (3 * resources.displayMetrics.density)
+                                setCardBackgroundColor(ContextCompat.getColor(this@MainActivity, R.color.gemini_card_bg))
+                            }
+
+                            val innerLayout = LinearLayout(this@MainActivity).apply {
+                                layoutParams = LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT,
+                                    LinearLayout.LayoutParams.WRAP_CONTENT
+                                )
+                                orientation = LinearLayout.VERTICAL
+                                val padding = (12 * resources.displayMetrics.density).toInt()
+                                setPadding(padding, padding, padding, padding)
+                            }
+
+                            val tvHeader = TextView(this@MainActivity).apply {
+                                layoutParams = LinearLayout.LayoutParams(
+                                    LinearLayout.LayoutParams.MATCH_PARENT,
+                                    LinearLayout.LayoutParams.WRAP_CONTENT
+                                ).apply {
+                                    setMargins(0, 0, 0, (6 * resources.displayMetrics.density).toInt())
+                                }
+                                text = "📁 $header"
+                                textSize = 14f
+                                setTypeface(null, android.graphics.Typeface.BOLD)
+                                setTextColor(ContextCompat.getColor(this@MainActivity, R.color.gemini_text_main))
+                            }
+                            innerLayout.addView(tvHeader)
+
+                            for (diffItem in diffList) {
+                                val tvItem = TextView(this@MainActivity).apply {
+                                    layoutParams = LinearLayout.LayoutParams(
+                                        LinearLayout.LayoutParams.MATCH_PARENT,
+                                        LinearLayout.LayoutParams.WRAP_CONTENT
+                                    ).apply {
+                                        setMargins((8 * resources.displayMetrics.density).toInt(), 0, 0, (4 * resources.displayMetrics.density).toInt())
+                                    }
+                                    textSize = 13f
+                                    
+                                    val textBuilder = SpannableStringBuilder().apply {
+                                        append("• ").append(diffItem.label).append(": ")
+                                        if (diffItem.isTextDiff) {
+                                            val oldText = if (diffItem.oldValue.isEmpty()) "vuoto" else "\"${diffItem.oldValue}\""
+                                            val newText = if (diffItem.newValue.isEmpty()) "cancellato" else "\"${diffItem.newValue}\""
+                                            append("modificato da ").append(oldText).append(" a ").append(newText)
+                                            setSpan(ForegroundColorSpan(gray), 0, length, 0)
+                                        } else {
+                                            if (diffItem.diff > 0) {
+                                                val t = "aggiunti +${diffItem.diff} pezzi (ora: ${diffItem.newValue}, prima: ${diffItem.oldValue})"
+                                                val start = length
+                                                append(t)
+                                                setSpan(ForegroundColorSpan(blue), start, length, 0)
+                                                setSpan(StyleSpan(android.graphics.Typeface.BOLD), start, length, 0)
+                                            } else {
+                                                val t = "tolti ${Math.abs(diffItem.diff)} pezzi (ora: ${diffItem.newValue}, prima: ${diffItem.oldValue})"
+                                                val start = length
+                                                append(t)
+                                                setSpan(ForegroundColorSpan(red), start, length, 0)
+                                                setSpan(StyleSpan(android.graphics.Typeface.BOLD), start, length, 0)
+                                            }
+                                        }
+                                    }
+                                    text = textBuilder
+                                }
+                                innerLayout.addView(tvItem)
+                            }
+
+                            card.addView(innerLayout)
+                            iHolder.containerGroups.addView(card)
+                        }
+
+                        iHolder.itemView.setOnClickListener {
+                            AlertDialog.Builder(this@MainActivity)
+                                .setTitle("Sei sicuro?")
+                                .setMessage("Vuoi tornare alle modifiche fatte alle ore ${item.timestamp.substringBeforeLast(':')}? Le modifiche inserite dopo andranno perse.")
+                                .setPositiveButton("Conferma") { _, _ ->
+                                    viewModel.preRevertSnapshot = adapter.getData().map { it.copy() }
+                                    while (viewModel.undoStack.size > item.stackIndex + 1) viewModel.undoStack.pop()
+                                    val restoredData = viewModel.undoStack.peek().data.map { it.copy() }
+                                    adapter.updateData(restoredData)
+                                    viewModel.markAsUnsaved()
+                                    updateUndoButtonLook()
+                                    dialog.dismiss()
+                                }
+                                .setNegativeButton("Annulla", null)
+                                .show()
+                        }
+                    }
+                }
+            }
+
             override fun getItemCount() = displayList.size
         }
         
@@ -1235,10 +1371,52 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private data class DiffItem(val label: String, val diff: Int, val isTextDiff: Boolean, val header: String?)
-    private data class HistoryItem(val spannableDiff: SpannableStringBuilder, val stackIndex: Int, val timestamp: String)
+    private fun getDayString(epochMillis: Long): String {
+        val now = java.util.Calendar.getInstance()
+        val sms = java.util.Calendar.getInstance()
+        sms.timeInMillis = epochMillis
+        
+        val format = SimpleDateFormat("dd MMMM yyyy", Locale.ITALY)
+        val todayStr = format.format(now.time)
+        val smsStr = format.format(sms.time)
+        
+        if (todayStr == smsStr) return "📅 Oggi"
+        
+        now.add(java.util.Calendar.DATE, -1)
+        val yesterdayStr = format.format(now.time)
+        if (yesterdayStr == smsStr) return "📅 Ieri"
+        
+        val dayOfWeekFormat = SimpleDateFormat("EEEE d MMMM yyyy", Locale.ITALY)
+        return "📅 " + dayOfWeekFormat.format(sms.time).replaceFirstChar { it.uppercase() }
+    }
+
+    private sealed class HistoryAdapterItem {
+        data class DayHeader(val day: String) : HistoryAdapterItem()
+        data class SnapshotItem(
+            val diffs: List<DiffItem>,
+            val stackIndex: Int,
+            val timestamp: String,
+            val epochMillis: Long
+        ) : HistoryAdapterItem()
+    }
+
+    private data class DiffItem(
+        val label: String,
+        val diff: Int,
+        val isTextDiff: Boolean,
+        val header: String?,
+        val oldValue: String,
+        val newValue: String
+    )
+
+    private class HeaderViewHolder(v: View) : RecyclerView.ViewHolder(v) {
+        val tvHeader: TextView = v.findViewById(R.id.tvTime)
+        val containerGroups: LinearLayout = v.findViewById(R.id.containerGroups)
+    }
+
     private class HistoryViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        val tvDiff: TextView = v.findViewById(R.id.tvDiff)
+        val tvTime: TextView = v.findViewById(R.id.tvTime)
+        val containerGroups: LinearLayout = v.findViewById(R.id.containerGroups)
     }
 
     private fun getStructuredDiff(old: List<ExcelRowData>, new: List<ExcelRowData>): List<DiffItem> {
@@ -1258,9 +1436,11 @@ class MainActivity : AppCompatActivity() {
                 val header = findHeaderForLabel(new, label) ?: findHeaderForLabel(old, label)
                 if (newVal != null && oldVal != null) {
                     val diff = newVal - oldVal
-                    if (diff != 0) diffs.add(DiffItem(label, diff, false, header))
+                    if (diff != 0) {
+                        diffs.add(DiffItem(label, diff, false, header, oldValStr, newValStr))
+                    }
                 } else {
-                    diffs.add(DiffItem(label, 0, true, header))
+                    diffs.add(DiffItem(label, 0, true, header, oldValStr, newValStr))
                 }
             }
         }
@@ -1279,7 +1459,7 @@ class MainActivity : AppCompatActivity() {
         return null
     }
 
-    private fun formatGroupedDiff(diffs: List<DiffItem>, timestamp: String): SpannableStringBuilder {
+    private fun formatGroupedDiff(diffs: List<DiffItem>): SpannableStringBuilder {
         val ssb = SpannableStringBuilder()
         val blue = ContextCompat.getColor(this, R.color.gemini_accent_blue)
         val red = ContextCompat.getColor(this, R.color.gemini_destructive)
@@ -1288,36 +1468,40 @@ class MainActivity : AppCompatActivity() {
 
         val byHeader = diffs.groupBy { it.header ?: "Senza Categoria" }
 
-        ssb.append(timestamp).append("\n")
-        ssb.setSpan(ForegroundColorSpan(gray), 0, timestamp.length, 0)
-        ssb.setSpan(RelativeSizeSpan(0.85f), 0, timestamp.length, 0)
-
         var firstHeader = true
         for ((header, items) in byHeader) {
             if (!firstHeader) ssb.append("\n")
             firstHeader = false
 
             val startH = ssb.length
-            ssb.append("📁 $header\n")
+            ssb.append("📁 ").append(header).append("\n")
             ssb.setSpan(ForegroundColorSpan(headerColor), startH, ssb.length, 0)
             ssb.setSpan(StyleSpan(android.graphics.Typeface.BOLD), startH, ssb.length, 0)
             ssb.setSpan(RelativeSizeSpan(0.95f), startH, ssb.length, 0)
 
             for (item in items) {
                 val startItem = ssb.length
-                ssb.append("  • ").append(item.label)
+                ssb.append("  • ").append(item.label).append(": ")
                 
                 if (item.isTextDiff) {
-                    ssb.append(" : testuale\n")
+                    val oldText = if (item.oldValue.isEmpty()) "vuoto" else "\"${item.oldValue}\""
+                    val newText = if (item.newValue.isEmpty()) "cancellato" else "\"${item.newValue}\""
+                    ssb.append("modificato da ").append(oldText).append(" a ").append(newText).append("\n")
                     ssb.setSpan(ForegroundColorSpan(gray), startItem, ssb.length, 0)
                 } else {
-                    val sign = if (item.diff > 0) "+" else ""
-                    val color = if (item.diff > 0) blue else red
-                    val diffStr = "  $sign${item.diff}\n"
-                    val startVal = ssb.length
-                    ssb.append(diffStr)
-                    ssb.setSpan(ForegroundColorSpan(color), startVal, ssb.length, 0)
-                    ssb.setSpan(StyleSpan(android.graphics.Typeface.BOLD), startVal, ssb.length, 0)
+                    if (item.diff > 0) {
+                        val text = "aggiunti +${item.diff} pezzi (ora: ${item.newValue}, prima: ${item.oldValue})\n"
+                        val startVal = ssb.length
+                        ssb.append(text)
+                        ssb.setSpan(ForegroundColorSpan(blue), startVal, ssb.length, 0)
+                        ssb.setSpan(StyleSpan(android.graphics.Typeface.BOLD), startVal, ssb.length, 0)
+                    } else {
+                        val text = "tolti ${Math.abs(item.diff)} pezzi (ora: ${item.newValue}, prima: ${item.oldValue})\n"
+                        val startVal = ssb.length
+                        ssb.append(text)
+                        ssb.setSpan(ForegroundColorSpan(red), startVal, ssb.length, 0)
+                        ssb.setSpan(StyleSpan(android.graphics.Typeface.BOLD), startVal, ssb.length, 0)
+                    }
                 }
             }
         }
