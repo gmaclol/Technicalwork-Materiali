@@ -250,21 +250,8 @@ class MainActivity : AppCompatActivity() {
         val headerView = navigationView.getHeaderView(0)
         tvCurrentFileName = headerView.findViewById(R.id.tvCurrentFileName)
         
-        val appLogo = headerView.findViewById<ImageView>(R.id.app_logo)
-        val pfsLogo = headerView.findViewById<ImageView>(R.id.pfs_logo)
-        
-        appLogo?.setOnClickListener {
-            drawerLayout.closeDrawer(GravityCompat.START)
-        }
-        
-        pfsLogo?.setOnClickListener {
-            val p = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
-            p.edit { putString("last_activity", "PfsActivity") }
-            val forwardIntent = Intent(this, PfsActivity::class.java)
-            forwardIntent.putExtra("skip_routing", true)
-            startActivity(forwardIntent)
-            finish()
-        }
+        // Configurazione globale Drawer (Header + Bottoni aziendali)
+        setupDynamicDrawer()
 
         tvTechName = findViewById(R.id.tvTechName)
         cbIncludeTechName = findViewById(R.id.cbIncludeTechName)
@@ -635,15 +622,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun saveTechnicianName(name: String) {
         settingsRepository.technicianName = name
-    }
-
-    private fun setupCompanyButton(button: MaterialButton, company: String) {
-        button.setOnClickListener { handleCompanyClick(company) }
-        button.setOnLongClickListener {
-            lastSelectedCompany = company
-            showCompanyOptionsMenu(company)
-            true
-        }
     }
 
     private fun showCompanyOptionsMenu(company: String) {
@@ -1566,29 +1544,29 @@ class MainActivity : AppCompatActivity() {
         return true
     }
     private fun setupDynamicDrawer() {
-        val container = findViewById<android.widget.LinearLayout>(R.id.llCompaniesContainer) ?: return
-        container.removeAllViews()
-
-        val companies = configManager.getCompanies()
-        val inflater = LayoutInflater.from(this)
-
-        companies.forEachIndexed { index, company ->
-            val button = MaterialButton(this, null, com.google.android.material.R.attr.materialButtonTonalStyle)
-            val params = android.widget.LinearLayout.LayoutParams(
-                android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
-                (56 * resources.displayMetrics.density).toInt()
-            )
-            if (index == 0) {
-                params.topMargin = (8 * resources.displayMetrics.density).toInt()
+        val navigationView: com.google.android.material.navigation.NavigationView = findViewById(R.id.navigationView)
+        MainActivityDrawerHelper.bindDrawer(
+            activity = this,
+            navigationView = navigationView,
+            companies = configManager.getCompanies(),
+            onLogoClick = {
+                drawerLayout.closeDrawer(GravityCompat.START)
+            },
+            onPfsLogoClick = {
+                val p = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+                p.edit { putString("last_activity", "PfsActivity") }
+                val forwardIntent = Intent(this, PfsActivity::class.java)
+                forwardIntent.putExtra("skip_routing", true)
+                startActivity(forwardIntent)
+                finish()
+            },
+            onCompanyClick = { company ->
+                handleCompanyClick(company)
+            },
+            onCompanyLongClick = { company ->
+                lastSelectedCompany = company
+                showCompanyOptionsMenu(company)
             }
-            button.layoutParams = params
-            button.text = company
-            button.icon = ContextCompat.getDrawable(this, android.R.drawable.ic_menu_add)
-            button.cornerRadius = (28 * resources.displayMetrics.density).toInt()
-            button.textAlignment = View.TEXT_ALIGNMENT_VIEW_START
-            
-            setupCompanyButton(button, company)
-            container.addView(button)
-        }
+        )
     }
 }
