@@ -29,9 +29,9 @@ class ExcelWriter {
             ZipSecureFile.setMinInflateRatio(0.001)
 
             // Apre il file copiato
-            val fis = FileInputStream(targetFile)
-            val workbook = WorkbookFactory.create(fis)
-            fis.close()
+            val workbook = FileInputStream(targetFile).use { fis ->
+                WorkbookFactory.create(fis)
+            }
 
             // 3) Prende il primo foglio
             val sheet = workbook.getSheetAt(0)

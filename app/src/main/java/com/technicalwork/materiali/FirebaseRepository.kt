@@ -185,9 +185,19 @@ class FirebaseRepository {
         val allToUpdate = companies.toMutableList()
         if (!allToUpdate.contains("Consumo")) allToUpdate.add("Consumo")
 
+        // Aggiorna anche lo snapshot di oggi se esiste, così il rename è immediato anche per la data corrente
+        val todayStr = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault()).format(java.util.Date())
+
         allToUpdate.forEach { company ->
             try {
+                // Documento live
                 db.collection(company).document(deviceId).set(data, SetOptions.merge()).await()
+                // Snapshot del giorno corrente (solo se esiste già, altrimenti lo skip)
+                val todayDocId = "${deviceId}_$todayStr"
+                val todaySnap = db.collection(company).document(todayDocId).get().await()
+                if (todaySnap.exists()) {
+                    db.collection(company).document(todayDocId).set(data, SetOptions.merge()).await()
+                }
             } catch (e: Exception) {
                 Log.e(TAG, "Errore in updateTechnicianName per $company: ${e.message}", e)
             }

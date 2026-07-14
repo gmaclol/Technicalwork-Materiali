@@ -261,6 +261,7 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
             val allCompanies = configManager.getCompanies().toMutableList()
             if (!allCompanies.contains("Consumo")) allCompanies.add("Consumo")
 
+            val adminSyncPrefs = getSharedPreferences("sync_meta", Context.MODE_PRIVATE)
             allCompanies.forEach { company ->
                 if (!adminListeners.containsKey(company)) {
                     val reg = db.collection(company).document(deviceId)
@@ -269,9 +270,13 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
                             if (snap != null && snap.exists()) {
                                 val lastUpdatedBy = snap.getString("last_updated_by")
                                 if (lastUpdatedBy == "admin") {
-                                    Log.i("TW_MyApplication", "Rilevata modifica da Admin per $company in tempo reale! Avvio Sync di allineamento.")
-                                    // Eseguiamo il Sync Manager per elaborare l'allineamento del file Excel
-                                    SyncManager(this@MyApplication).performFullSync(appScope, isFullSync = true)
+                                    val remoteTimestamp = snap.getLong("last_updated_at") ?: 0L
+                                    val lastProcessed = adminSyncPrefs.getLong("last_admin_update_$company", 0L)
+                                    if (remoteTimestamp > lastProcessed) {
+                                        Log.i("TW_MyApplication", "Rilevata modifica da Admin per $company in tempo reale! (remote=$remoteTimestamp > local=$lastProcessed) Avvio Sync di allineamento.")
+                                        adminSyncPrefs.edit().putLong("last_admin_update_$company", remoteTimestamp).apply()
+                                        SyncManager(this@MyApplication).performFullSync(appScope, isFullSync = true)
+                                    }
                                 }
                             }
                         }

@@ -241,7 +241,7 @@ class MainActivity : AppCompatActivity() {
 
         ViewCompat.setOnApplyWindowInsetsListener(drawerLayout) { _, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            toolbar.setPadding(0, systemBars.top, 0, systemBars.bottom)
+            toolbar.setPadding(0, systemBars.top, 0, 0)
             // rimosso il setPadding della recyclerView qui perche lo gestiamo sopra con imeInsets
             navigationView.setPadding(0, systemBars.top, 0, systemBars.bottom)
             insets
@@ -777,8 +777,8 @@ class MainActivity : AppCompatActivity() {
                 // 3. Esegue il merge (Tecnico + Master)
                 val mergedList = MaterialMerger().merge(techMaterials, masterList)
 
-                // Sync affidabile anche se l'utente esce subito dopo la condivisione
-                SyncWorker.enqueue(this@MainActivity)
+                // NB: Il sync Firestore è già gestito da saveExcelFile() che chiama SyncWorker.enqueue()
+                // Non duplicare l'enqueue qui per evitare race condition con REPLACE policy.
 
                 // 4. Scrive il nuovo file Excel basato sul template Sample.xlsx
                 val generatedFile = ExcelWriter().writeOutput(this, mergedList)
@@ -1044,6 +1044,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openExcelFile(uri: Uri) {
+        viewModel.clearState()
         settingsRepository.lastMode = "appalto"
         isConsumoMode = false
         adapter.isConsumoMode = false

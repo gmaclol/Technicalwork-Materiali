@@ -136,6 +136,21 @@ class ExchangeRepository {
                 } else {
                     row
                 }
+            }.toMutableList()
+
+            // 2b. Aggiunge materiali nuovi che B dà ad A (non presenti nell'inventario di A)
+            if (direction == ExchangeDirection.B_GIVES_TO_A) {
+                items.filter { item -> currentInventory.none { it.label == item.label } }
+                    .forEach { item ->
+                        val newValue = if (item.qtyUsed > 0) {
+                            "${item.qtyFree} + ${item.qtyUsed} sparat"
+                        } else if (item.qtyFree > 0) {
+                            item.qtyFree.toString()
+                        } else ""
+                        if (newValue.isNotEmpty()) {
+                            updatedInventory.add(ExcelRowData(item.label, newValue))
+                        }
+                    }
             }
 
             // 3. Aggiorna Firestore di A con i nuovi valori
