@@ -174,6 +174,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         
         // --- ROUTING LOGIC ---
+        val bannedPrefs = getSharedPreferences("com.technicalwork.materiali.favorites", Context.MODE_PRIVATE)
+        if (bannedPrefs.getBoolean("is_banned", false)) {
+            val bannedIntent = Intent(this, BannedActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            startActivity(bannedIntent)
+            finish()
+            return
+        }
+
         val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
         val lastActivity = prefs.getString("last_activity", "MainActivity")
         if (lastActivity == "PfsActivity" && !intent.getBooleanExtra("skip_routing", false)) {
