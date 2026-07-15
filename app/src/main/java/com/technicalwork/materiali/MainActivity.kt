@@ -1102,6 +1102,30 @@ class MainActivity : AppCompatActivity() {
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
                     onComplete?.invoke()
+
+                    // Sync Firestore istantaneo best-effort
+                    val techName = getTechnicianName()
+                    if (techName != null) {
+                        val (lat, lng) = getLastLocation()
+                        val deviceId = getDeviceID()
+                        val currentData = adapter.getData().map { it.copy() }
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            try {
+                                FirebaseRepository().syncToFirestore(
+                                    context = this@MainActivity,
+                                    company = "Consumo",
+                                    technicianName = techName,
+                                    materials = currentData,
+                                    lat = lat,
+                                    lng = lng,
+                                    deviceId = deviceId
+                                )
+                            } catch (e: Exception) {
+                                Log.w("TW_MainActivity", "Sync Firestore istantaneo fallito per Consumo: ${e.message}")
+                            }
+                        }
+                    }
+
                     SyncWorker.enqueue(this@MainActivity)
                 } else {
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
@@ -1125,6 +1149,30 @@ class MainActivity : AppCompatActivity() {
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_file_saved), Toast.LENGTH_SHORT).show()
                     saveLastFileUri(uri)
                     onComplete?.invoke()
+
+                    // Sync Firestore istantaneo best-effort
+                    val company = lastSelectedCompany
+                    val techName = getTechnicianName()
+                    if (company != null && techName != null) {
+                        val (lat, lng) = getLastLocation()
+                        val deviceId = getDeviceID()
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            try {
+                                FirebaseRepository().syncToFirestore(
+                                    context = this@MainActivity,
+                                    company = company,
+                                    technicianName = techName,
+                                    materials = dataToSave,
+                                    lat = lat,
+                                    lng = lng,
+                                    deviceId = deviceId
+                                )
+                            } catch (e: Exception) {
+                                Log.w("TW_MainActivity", "Sync Firestore istantaneo fallito per $company: ${e.message}")
+                            }
+                        }
+                    }
+
                     SyncWorker.enqueue(this@MainActivity)
                 } else {
                     if (!silent) Toast.makeText(this@MainActivity, getString(R.string.toast_save_error), Toast.LENGTH_SHORT).show()
