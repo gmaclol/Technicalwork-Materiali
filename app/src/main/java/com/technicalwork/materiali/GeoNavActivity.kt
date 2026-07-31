@@ -195,7 +195,7 @@ class GeoNavActivity : AppCompatActivity() {
 
         val regions = availableRegions.toTypedArray()
         val checkedItems = BooleanArray(regions.size) { i ->
-            sharedPrefs.getBoolean("filter_${regions[i]}", regions[i] == "Piemonte")
+            sharedPrefs.getBoolean("filter_${regions[i]}", true)
         }
 
         androidx.appcompat.app.AlertDialog.Builder(this)
@@ -231,7 +231,7 @@ class GeoNavActivity : AppCompatActivity() {
                 val regionsAdded = mutableListOf<String>()
 
                 for (region in configManager.ITALIAN_REGIONS) {
-                    if (!sharedPrefs.getBoolean("filter_$region", region == "Piemonte")) continue
+                    if (!sharedPrefs.getBoolean("filter_$region", true)) continue
 
                     val cachedFile = java.io.File(filesDir, "$region.json")
                     var jsonString: String? = null
@@ -249,7 +249,17 @@ class GeoNavActivity : AppCompatActivity() {
                     if (jsonString != null) {
                         try {
                             val regionJson = org.json.JSONObject(jsonString)
-                            val regionObj = regionJson.optJSONObject(region)
+                            var regionObj = regionJson.optJSONObject(region)
+                            if (regionObj == null) {
+                                val keys = regionJson.keys()
+                                while (keys.hasNext()) {
+                                    val key = keys.next()
+                                    if (key.equals(region, ignoreCase = true)) {
+                                        regionObj = regionJson.optJSONObject(key)
+                                        break
+                                    }
+                                }
+                            }
                             if (regionObj != null) {
                                 fullData?.put(region, regionObj)
                                 regionsAdded.add(region)
@@ -356,7 +366,10 @@ class GeoNavActivity : AppCompatActivity() {
         
         when (item.type) {
             TreeType.REGION -> {
-                children.add(TreeItem("Macrozone", nextLevel, TreeType.CAT_MACRO, parentRegion = pRegion))
+                val hasMacrozone = regionObj?.optJSONObject("Macrozone")?.let { it.length() > 0 } ?: false
+                if (hasMacrozone) {
+                    children.add(TreeItem("Macrozone", nextLevel, TreeType.CAT_MACRO, parentRegion = pRegion))
+                }
                 children.add(TreeItem("Comuni", nextLevel, TreeType.CAT_COMUNI, parentRegion = pRegion))
             }
             TreeType.CAT_MACRO -> {

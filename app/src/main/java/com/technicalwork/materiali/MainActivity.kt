@@ -385,7 +385,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
-        if (savedInstanceState != null) {
+        if (savedInstanceState != null && viewModel.uiState.value is UiState.Success) {
             isConsumoMode = savedInstanceState.getBoolean("isConsumoMode", false)
             lastSelectedCompany = savedInstanceState.getString("lastSelectedCompany")
             val uriStr = savedInstanceState.getString("currentFileUri")

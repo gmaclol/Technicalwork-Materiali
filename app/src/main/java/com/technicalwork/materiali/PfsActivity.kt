@@ -230,7 +230,7 @@ class PfsActivity : AppCompatActivity() {
                                 reader.beginObject()
                                 while (reader.hasNext()) {
                                     val topLevelKey = reader.nextName()
-                                    if (topLevelKey == region) {
+                                    if (topLevelKey.equals(region, ignoreCase = true)) {
                                         reader.beginObject()
                                         searchLoop@ while (reader.hasNext()) {
                                             val sectionKey = reader.nextName()

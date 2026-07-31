@@ -223,8 +223,22 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
                     }
                     if (snapshot != null && snapshot.exists()) {
                         val remoteTimestamp = snapshot.getLong("forceListUpdate") ?: 0L
+                        val remoteSyncReq = snapshot.getLong("forceSyncRequest") ?: 0L
+                        val targetAppalto = snapshot.getString("forceSyncAppalto")
+                        
                         val syncPrefs = getSharedPreferences("sync_meta", Context.MODE_PRIVATE)
                         val localTimestamp = syncPrefs.getLong("last_force_list_update", 0L)
+                        val localSyncReq = syncPrefs.getLong("last_force_sync_req", 0L)
+                        
+                        if (remoteSyncReq > localSyncReq) {
+                            syncPrefs.edit().putLong("last_force_sync_req", remoteSyncReq).apply()
+                            val settingsRepo = SettingsRepository(this@MyApplication)
+                            val currentCompany = settingsRepo.lastSelectedCompany
+                            if (targetAppalto.isNullOrBlank() || targetAppalto.equals(currentCompany, ignoreCase = true) || targetAppalto.equals("Consumo", ignoreCase = true)) {
+                                Log.i("TW_MyApplication", "Rilevata richiesta 'Richiedi Sync Appalto' dall'Admin per $targetAppalto. Avvio Sync immediato!")
+                                SyncWorker.enqueue(this@MyApplication, isFullSync = true)
+                            }
+                        }
                         
                         if (remoteTimestamp > localTimestamp) {
                             Log.i("TW_MyApplication", "Rilevato 'Forza Aggiornamento' in TEMPO REALE (remoto=$remoteTimestamp > locale=$localTimestamp). Avvio fetch GitHub!")

@@ -110,7 +110,7 @@ class ConfigManager(private val context: Context) {
         coroutineScope {
             ITALIAN_REGIONS.map { region ->
                 launch(Dispatchers.IO) {
-                    val encodedRegion = region.replace(" ", "%20")
+                    val encodedRegion = java.net.URLEncoder.encode(region, "UTF-8").replace("+", "%20")
                     val url = "https://raw.githubusercontent.com/gmaclol/Technicalwork-Materiali/master/lists/Regioni/$encodedRegion.json?t=${System.currentTimeMillis()}"
                     val regionFile = File(context.filesDir, "$region.json")
                     try {
