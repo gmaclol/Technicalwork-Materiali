@@ -1,6 +1,276 @@
 {
   "Emilia-Romagna": {
     "Macrozone": {
+      "BO_07": [
+        "<Argelato, Bentivoglio, Castagnolo Minore, Cinquanta, Funo Di Argelato, Gherghenzano, San Giorgio Di Piano, San Marino Di Bentivoglio, Santa Maria In Duno, Stiatico>",
+        "BO_07/01e11 :: Via don Giovanni Minzoni 2/16, San Giorgio di Piano [44.64838275, 11.3687763]",
+        "BO_07/01e12 :: Via Giuseppe Gamberini 7, San Giorgio di Piano [44.64576047, 11.37416453]",
+        "BO_07/01e13 :: Via Bruno Buozzi 2, San Giorgio di Piano [44.64359113, 11.37341668]",
+        "BO_07/01e21 :: Via Venti Settembre 4, San Giorgio di Piano [44.64633469, 11.37706179]",
+        "BO_07/01e22 :: Via Chiesa 2/2, Cinquanta [44.65806578, 11.40072604]",
+        "BO_07/01e23 :: Ponte Rosso, Gherghenzano [44.68066495, 11.38521736]",
+        "BO_07/01e24 :: Rotonda Margherita Hack, Santa Maria in Duno [44.63863847, 11.40422226]",
+        "BO_07/01e31 :: Via Guglielmo Marconi 35, Santa Maria in Duno [44.63591085, 11.41647293]",
+        "BO_07/01e32 :: Via Guglielmo Marconi, Santa Maria in Duno [44.63493918, 11.4205299]",
+        "BO_07/01e33 :: Via Saletto 41, Bentivoglio [44.63501675, 11.44261177]",
+        "BO_07/01e34 :: Via di Mezzo di Saletto, San Marino di Bentivoglio [44.60853588, 11.4242203]",
+        "BO_07/01e41 :: Via Canali e Crociali, San Marino di Bentivoglio [44.60353553, 11.42066359]",
+        "BO_07/01e42 :: Via di Mezzo di Saletto 58a, San Marino di Bentivoglio [44.60275548, 11.42097855]",
+        "BO_07/01w11 :: Via Santa Marta 2a, Castagnolo Minore [44.59529322, 11.36997928]",
+        "BO_07/01w12 :: Via Galliera 115, Funo di Argelato [44.59268443, 11.36865681]",
+        "BO_07/01w13 :: Via San Giobbe 50, Funo di Argelato [44.59587124, 11.36704458]",
+        "BO_07/01w14 :: Pietroburgo, Funo di Argelato [44.59714609, 11.36261765]",
+        "BO_07/01w21 :: Via Centese 101, Argelato [44.64185995, 11.34897178]",
+        "BO_07/01w31 :: Via Palazzaccio 3/2, Stiatico [44.61790771, 11.36157184]",
+        "BO_07/01w32 :: Via Santa Marta 2a, Castagnolo Minore [44.59530369, 11.37016975]"
+      ],
+      "BO_08": [
+        "<Altedo, Baricella, Capo D'Argine, Casoni Di Malalbergo, Cà De Fabbri, Minerbio, Pegola, San Giovanni In Triario, San Martino In Soverzano, Tintoria>",
+        "BO_08/01w11 :: Via Savena Vecchia 389, Baricella [44.66463239, 11.57264787]",
+        "BO_08/01w21 :: Via Oreste Brunelli 115, Baricella [44.6438396, 11.53581573]",
+        "BO_08/01w22 :: Via Dino Donati 1, Baricella [44.64775163, 11.52791324]",
+        "BO_08/01w23 :: Via Europa, Baricella [44.64476245, 11.5332335]",
+        "BO_08/01w24 :: Via Savena Vecchia 95, Baricella [44.6563645, 11.55042096]",
+        "BO_08/01w31 :: Via Aldo Moro 1, Pegola [44.69147934, 11.50248044]",
+        "BO_08/01w32 :: Via Nazionale 264, Pegola [44.68944169, 11.50135795]",
+        "BO_08/01w33 :: Via Nazionale, Pegola [44.68009216, 11.49575163]",
+        "BO_08/01w34 :: Via Nazionale 154, Altedo [44.67151947, 11.49001278]",
+        "BO_08/01w41 :: Via Don Giovanni Minzoni 1, Altedo [44.6636172, 11.48583869]",
+        "BO_08/01w42 :: Via Bassa Inferiore 20, Altedo [44.65981922, 11.4833999]",
+        "BO_08/01w43 :: Via San Giovanni Battista 6, Altedo [44.660628, 11.48766072]",
+        "BO_08/02w11 :: Via Mora 13, Tintoria [44.63360192, 11.51880434]",
+        "BO_08/02w12 :: Via Palio 1, San Martino in Soverzano [44.62693012, 11.49214934]",
+        "BO_08/02w13 :: Via Fabbri 10, Tintoria [44.62060078, 11.48872482]",
+        "BO_08/02w14 :: Via Roma 41, San Giovanni in Triario [44.61867369, 11.48570814]",
+        "BO_08/02w21 :: Via Savena Superiore 72b, Minerbio [44.61186621, 11.48033984]",
+        "BO_08/02w22 :: Via Ronchi Inferiore 42, Cà de fabbri [44.61678881, 11.46269288]",
+        "BO_08/02w23 :: Via Bassa Superiore 34, Casoni di Malalbergo [44.6284719, 11.46147288]",
+        "BO_08/02w24 :: Via Savenella 135, Capo d'Argine [44.59883721, 11.4388901]"
+      ],
+      "BO_10": [
+        "<Ca' Di Landino, Lagaro>",
+        "BO_10/01e11 :: Via Val di Setta, Lagaro [44.22470408, 11.18086218]",
+        "BO_10/01e21 :: Bagucci, Ca' di Landino [44.12348861, 11.16560129]"
+      ],
+      "BO_12": [
+        "<Abetaia, Berzantina, Gaggio Montano, Lizzo, Querciola, Rocca Pitigliana, Suviana>",
+        "BO_12/01e11 :: SP40, Berzantina [44.15488819, 10.97953596]",
+        "BO_12/01e12 :: SP40, Berzantina [44.15426638, 10.98291323]",
+        "BO_12/01e13 :: SP63, Lizzo [44.15920465, 11.01250418]",
+        "BO_12/01e14 :: Via Fornaci 22, Berzantina [44.15877981, 10.98074298]",
+        "BO_12/01e21 :: Piazza Roma 5, Lizzo [44.16224948, 11.03775218]",
+        "BO_12/01e22 :: SP23, Suviana [44.1366565, 11.0368531]",
+        "BO_12/01e23 :: Pida, Suviana [44.13027207, 11.02277458]",
+        "BO_12/02e11 :: Ca' di Masonte, Gaggio Montano [44.19291658, 10.94944264]",
+        "BO_12/02e12 :: Via Serragualtiera 67, Gaggio Montano [44.19334685, 10.93243963]",
+        "BO_12/02e13 :: Guanella, Abetaia [44.20897605, 10.94918747]",
+        "BO_12/02e21 :: Colombara, Abetaia [44.21925239, 10.96726105]",
+        "BO_12/02e31 :: Volpara, Rocca Pitigliana [44.23739547, 11.01055722]",
+        "BO_12/02e41 :: Località Canova, Querciola [44.18808761, 10.90003124]"
+      ],
+      "BO_13": [
+        "<Castel San Pietro Terme, Poggio Piccolo, Via Larga>",
+        "BO_13/01e11 :: ~Via Risorgimento, Castel San Pietro Terme [44.39725683, 11.58721373]",
+        "BO_13/01e12 :: Via Albertazzi 241, Castel San Pietro Terme [44.39709106, 11.58360607]",
+        "BO_13/01e13 :: Via Antonio Gramsci 180, Castel San Pietro Terme [44.4023467, 11.59203244]",
+        "BO_13/01e14 :: Via Stradelli Guelfi 1300, Castel San Pietro Terme [44.43853891, 11.59255424]",
+        "BO_13/01e21 :: Viale Alfredo Oriani 29, Castel San Pietro Terme [44.39908435, 11.59546128]",
+        "BO_13/01e22 :: Via Madre Teresa di Calcutta, Castel San Pietro Terme [44.40215608, 11.59465104]",
+        "BO_13/01e31 :: Via Emilia Ponente, Castel San Pietro Terme [44.42953384, 11.5171206]",
+        "BO_13/01e32 :: Via Lazio 1, Castel San Pietro Terme [44.4274093, 11.52256773]",
+        "BO_13/01e33 :: Via Emilia, Castel San Pietro Terme [44.43077688, 11.51340142]",
+        "BO_13/01e34 :: Via Montecalderaro 14, Castel San Pietro Terme [44.40737042, 11.50304182]",
+        "BO_13/02e11 :: Via Larga 1, Via Larga [44.43529883, 11.6551298]",
+        "BO_13/02e12 :: Via dell'Artigianato 2, Poggio Piccolo [44.43990378, 11.61614512]"
+      ],
+      "BO_15": [
+        "<Gabbiano, Loiano, Madonna Dei Boschi, Piamaggio, Rioveggio, Roncastaldo, Sabbioni, Trasasso, Tre Fasci, Vado>",
+        "BO_15/01e11 :: Via Luigi Casaglia, Tre Fasci [44.27734713, 11.27155302]",
+        "BO_15/01e12 :: SP79, Trasasso [44.25880667, 11.27365544]",
+        "BO_15/01e13 :: Via Pietro Bignardi 31, Tre Fasci [44.28106378, 11.27153116]",
+        "BO_15/01e14 :: Via Cà di Barbiere, Tre Fasci [44.29209508, 11.27510836]",
+        "BO_15/01e21 :: Strada Freddolina, Gabbiano [44.27097754, 11.23969718]",
+        "BO_15/01e22 :: Via Ca' Rosa, Rioveggio [44.2739181, 11.22117191]",
+        "BO_15/01e23 :: Via Val di Setta 13/a, Rioveggio [44.27739576, 11.20004303]",
+        "BO_15/01e24 :: Via Cà del Monte, Rioveggio [44.2712923, 11.19738997]",
+        "BO_15/01e31 :: SP59, Vado [44.31886217, 11.27257406]",
+        "BO_15/01e32 :: Via della Stazione 14, Vado [44.318466, 11.25892814]",
+        "BO_15/01w11 :: Via la Serra, Madonna dei Boschi [44.23429548, 11.33449663]",
+        "BO_15/01w12 :: Via Panoramica 7, Madonna dei Boschi [44.22948711, 11.3293826]",
+        "BO_15/01w13 :: Via Napoleonica 4, Madonna dei Boschi [44.22541738, 11.32596868]",
+        "BO_15/01w14 :: Via degli Orzi 8, Piamaggio [44.19953181, 11.31914309]",
+        "BO_15/01w21 :: Via Santa Margherita, Loiano [44.26452461, 11.32621009]",
+        "BO_15/01w22 :: Via del Boschetto 1, Sabbioni [44.27369361, 11.3173943]",
+        "BO_15/01w23 :: Via Napoleonica 34, Sabbioni [44.28286997, 11.32645411]",
+        "BO_15/01w24 :: Viale Guglielmo Marconi, Roncastaldo [44.26150515, 11.32295658]"
+      ],
+      "BO_16": [
+        "<Allocco, Lama Di Reno, Monte San Pietro, Pian Di Venola, Sasso Marconi, Sibano, Sirano>",
+        "BO_16/01e11 :: Cinque Cerri, Sasso Marconi [44.36732471, 11.26037486]",
+        "BO_16/01e12 :: Via Belvedere 14, Sirano [44.37625067, 11.24579084]",
+        "BO_16/01e21 :: Via Allocco, Allocco [44.33109892, 11.26809809]",
+        "BO_16/01w11 :: Via Torrente Venola 1/4, Pian di Venola [44.33295586, 11.18660064]",
+        "BO_16/01w12 :: Ca' Nova di Sopra 126, Sibano [44.3223504, 11.18036528]",
+        "BO_16/01w13 :: Via Lama di Reno 69/2, Lama di Reno [44.36650937, 11.21492614]",
+        "BO_16/01w14 :: Via Lama di Reno, Lama di Reno [44.36772302, 11.2141683]",
+        "BO_16/01w21 :: Via Lavino, Monte San Pietro [44.37471911, 11.14513203]",
+        "BO_16/01w22 :: Via Gavignano, Monte San Pietro [44.39325214, 11.1247916]",
+        "BO_16/01w23 :: Via Valle D'Aosta 18, Monte San Pietro [44.36943555, 11.12618873]",
+        "BO_16/01w24 :: Via Lavino 542, Monte San Pietro [44.36820672, 11.12318422]",
+        "BO_16/01w31 :: Sandro Pertini 1, Monte San Pietro [44.41093585, 11.14453942]"
+      ],
+      "BO_17": [
+        "<Imola, Medicina>",
+        "BO_17/01e11 :: Via Giacomo Matteotti 35, Medicina [44.4795278, 11.63258603]",
+        "BO_17/01e12 :: Via Piave 208, Medicina [44.4746348, 11.63282414]",
+        "BO_17/01e13 :: Via Roberto Preti 111h, Medicina [44.47049918, 11.63101135]",
+        "BO_17/01e14 :: Via Nuova, Medicina [44.47035427, 11.67589617]",
+        "BO_17/01e21 :: Via Gagliazzona, Imola [44.52457393, 11.78093604]",
+        "BO_17/01e23 :: Vicolo Carpeneto 1, Imola [44.45977219, 11.71718706]",
+        "BO_17/01e24 :: Via vecchia San Vitale 620, Medicina [44.46947584, 11.71559696]",
+        "BO_17/01e31 :: Via San Vitale 15, Imola [44.46110669, 11.7270597]",
+        "BO_17/01e32 :: Via di Sesto 5, Imola [44.45805629, 11.73190031]",
+        "BO_17/01e33 :: Via Amedeo Marchi 1, Imola [44.46049865, 11.72987177]",
+        "BO_17/01w11 :: Via Antonio Rossi 4, Medicina [44.48747956, 11.61243141]",
+        "BO_17/01w12 :: ~Via Fasanina, Medicina [44.4924978, 11.59951506]",
+        "BO_17/01w13 :: Via Chiesina 35, Medicina [44.49518726, 11.57382642]",
+        "BO_17/01w14 :: Via Fiorentina 536, Medicina [44.50372763, 11.61487474]",
+        "BO_17/01w21 :: Via Fiorentina 3899c, Medicina [44.53242038, 11.62538066]",
+        "BO_17/01w22 :: Via Sant'Antonio 7596, Medicina [44.56045736, 11.72070563]",
+        "BO_17/01w23 :: Via Fabbri Renato, Medicina [44.55947898, 11.72171368]"
+      ],
+      "BO_18": [
+        "<Argenta, Molinella>",
+        "BO_18/01e11 :: Via Fabio Filzi 22, Molinella [44.6166033, 11.67736404]",
+        "BO_18/01e12 :: Viale Venticinque Aprile 1, Molinella [44.61893471, 11.71701132]",
+        "BO_18/01e13 :: Via Ada Negri 1, Molinella [44.61943697, 11.71997913]",
+        "BO_18/01e14 :: Via Fiume Vecchio 209, Molinella [44.61496019, 11.73083933]",
+        "BO_18/01e21 :: Via Rotta del Giardino 2, Molinella [44.58881832, 11.60740335]",
+        "BO_18/01e22 :: Via Provinciale Superiore 205/7, Molinella [44.58815382, 11.60965163]",
+        "BO_18/01e23 :: Via P. Rinaldi 22, Molinella [44.58865833, 11.63055228]",
+        "BO_18/01e31 :: Via Barabana 1, Molinella [44.55833209, 11.63112441]",
+        "BO_18/01e32 :: Via Selva, Molinella [44.55509265, 11.62635137]",
+        "BO_18/01w11 :: Via Paolo Fabbri 3, Molinella [44.61864022, 11.67279347]",
+        "BO_18/01w12 :: Via Francesco Schiassi 2, Molinella [44.62184973, 11.6664838]",
+        "BO_18/01w13 :: Via Malvezza 2, Molinella [44.6138574, 11.64232911]",
+        "BO_18/01w21 :: Via Ghiaroni 69, Molinella [44.6457831, 11.65344909]",
+        "BO_18/01w22 :: Via Severino Ferrari 185, Molinella [44.65165736, 11.64785429]",
+        "BO_18/01w23 :: Via Canale della Botte 71, Molinella [44.65123121, 11.64740129]",
+        "BO_18/01w24 :: Via Carreggiata 96, Molinella [44.65436542, 11.64648383]",
+        "BO_18/01w31 :: Via Fascinata 214, Argenta [44.67253074, 11.65527707]",
+        "BO_18/01w32 :: Via Alfiero Taddia, Molinella [44.66172261, 11.64527606]",
+        "BO_18/01w33 :: Via Canne 15, Argenta [44.65491169, 11.6530839]",
+        "BO_18/01w34 :: Via Valletta 11b, Argenta [44.63970552, 11.68854743]"
+      ],
+      "BO_19": [
+        "<Maggi, San Giovanni In Persiceto>",
+        "BO_19/01e11 :: Via Virginia 29, San Giovanni in Persiceto [44.70507609, 11.22393909]",
+        "BO_19/01e12 :: Via Sicilia, San Giovanni in Persiceto [44.70577234, 11.22872253]",
+        "BO_19/01e13 :: Via Cento 201, San Giovanni in Persiceto [44.70857191, 11.23002474]",
+        "BO_19/01e14 :: Via Cento 251, San Giovanni in Persiceto [44.71055858, 11.23182554]",
+        "BO_19/01e21 :: Via Barbieri 15, San Giovanni in Persiceto [44.71467195, 11.23147652]",
+        "BO_19/01e22 :: Via delle Viole 1, San Giovanni in Persiceto [44.71600524, 11.23495697]",
+        "BO_19/01e23 :: Via San Cristoforo 144, San Giovanni in Persiceto [44.7267144, 11.23739027]",
+        "BO_19/01w11 :: via Cento 105l, San Giovanni in Persiceto [44.69892842, 11.22547231]",
+        "BO_19/01w12 :: Via Biancolina 42, San Giovanni in Persiceto [44.65196018, 11.21866812]",
+        "BO_19/01w13 :: Via Vecchia di Zenerigolo 6a, San Giovanni in Persiceto [44.63954135, 11.19718903]",
+        "BO_19/01w14 :: Via Cento 63, San Giovanni in Persiceto [44.65079538, 11.1973269]",
+        "BO_19/01w21 :: Via Spianate 2a, San Giovanni in Persiceto [44.638837, 11.19400965]",
+        "BO_19/01w22 :: Via Crevalcore 82, San Giovanni in Persiceto [44.66358953, 11.1756116]",
+        "BO_19/01w23 :: ~Circonvallazione Liberazione, San Giovanni in Persiceto [44.64116234, 11.18461663]",
+        "BO_19/01w24 :: Via Cassola di Sotto, San Giovanni in Persiceto [44.62852234, 11.15892235]",
+        "BO_19/01w31 :: Via Bologna, San Giovanni in Persiceto [44.61295271, 11.20716035]",
+        "BO_19/01w32 :: Via Castelfranco 13, San Giovanni in Persiceto [44.63550285, 11.17930708]",
+        "BO_19/01w33 :: Via Castagnolo 36, San Giovanni in Persiceto [44.63086603, 11.18158785]",
+        "BO_19/01w34 :: Via Bologna 126a, San Giovanni in Persiceto [44.62543344, 11.19729858]",
+        "BO_19/01w41 :: Via Castagnolo 79a, San Giovanni in Persiceto [44.62785295, 11.1786912]",
+        "BO_19/02e11 :: Via molino di sotto 28, Maggi [44.66950567, 11.13884171]",
+        "BO_19/02e12 :: Via molino di sotto 2, Maggi [44.6651296, 11.13455616]",
+        "BO_19/02e13 :: Via Modena 4, Maggi [44.65862053, 11.12887057]",
+        "BO_19/02e14 :: ~Via Suor Teresa Veronesi, Maggi [44.65538107, 11.12635533]",
+        "BO_19/02e21 :: Via San Benedetto 9, Maggi [44.64707033, 11.1218807]"
+      ],
+      "BO_20": [
+        "<Monte San Pietro, Valsamoggia>",
+        "BO_20/01e11 :: Via Circonvallazione Nord 14, Valsamoggia [44.50890032, 11.08079955]",
+        "BO_20/01e12 :: Via Papa Giovanni Ventitreesimo 13, Valsamoggia [44.50715021, 11.07771798]",
+        "BO_20/01e13 :: Via Adolfo de Maria 4, Valsamoggia [44.50550959, 11.08131657]",
+        "BO_20/01e14 :: Via Circonvallazione Nord 89, Valsamoggia [44.50688248, 11.08414293]",
+        "BO_20/01e21 :: Via Giuseppe Mazzini 20, Valsamoggia [44.50470032, 11.08432812]",
+        "BO_20/01e22 :: Via Giuseppe Mazzini, Valsamoggia [44.50385656, 11.08685912]",
+        "BO_20/01e23 :: Via Edmondo De Amicis 5, Valsamoggia [44.50230626, 11.08569883]",
+        "BO_20/01w11 :: Via Sentiero Canale, Valsamoggia [44.51237945, 11.12829879]",
+        "BO_20/01w12 :: Via San Savino 1, Valsamoggia [44.51022071, 11.13134574]",
+        "BO_20/01w21 :: Via Sartini 8b, Valsamoggia [44.51327518, 11.13004666]",
+        "BO_20/01w22 :: Via Togliatti 9, Valsamoggia [44.5139847, 11.1274791]",
+        "BO_20/01w23 :: Via Vanotto 4a, Valsamoggia [44.5159055, 11.12576187]",
+        "BO_20/01w24 :: Via Bargellina, Valsamoggia [44.51624432, 11.12936909]",
+        "BO_20/01w31 :: Via Cassoletta 65, Valsamoggia [44.53857422, 11.15685692]",
+        "BO_20/01w32 :: Via Salvador Allende 23a, Valsamoggia [44.54995378, 11.12962911]",
+        "BO_20/01w33 :: Via Castellaccio 1, Valsamoggia [44.54574782, 11.13227231]",
+        "BO_20/01w41 :: Via San Lorenzo 31, Valsamoggia [44.54826125, 11.14778579]",
+        "BO_20/01w42 :: Via Emilia 55, Valsamoggia [44.56309923, 11.14411381]",
+        "BO_20/01w43 :: Via Marzabotto 3, Valsamoggia [44.54926305, 11.13471429]",
+        "BO_20/02w11 :: Via San Martino 24, Monte San Pietro [44.49146425, 11.15865831]",
+        "BO_20/02w12 :: Via San Martino, Monte San Pietro [44.46781764, 11.16631254]",
+        "BO_20/02w21 :: Via Landa, Monte San Pietro [44.45078506, 11.15172667]",
+        "BO_20/02w22 :: Via Albert Schwaitzer, Monte San Pietro [44.44970445, 11.15223144]",
+        "BO_20/02w23 :: Via Luigi Dalle Olle, Monte San Pietro [44.45143406, 11.13919102]",
+        "BO_20/02w31 :: Via Giacomo Matteotti 4, Monte San Pietro [44.44066777, 11.18086115]",
+        "BO_20/02w32 :: Via Palmiro Togliatti 5, Monte San Pietro [44.44829335, 11.19219655]",
+        "BO_20/02w33 :: Via Lavino 177d, Monte San Pietro [44.45045629, 11.19378975]",
+        "BO_20/02w34 :: Via Lavino 108b, Monte San Pietro [44.45130721, 11.19431918]"
+      ],
+      "BO_21": [
+        "<Castelnuovo, Cereglio, Tabina, Tolè, Vergato>",
+        "BO_21/01e11 :: Via A. Colombi, Vergato [44.28029471, 11.11192845]",
+        "BO_21/01e12 :: Via Bologna, Tabina [44.28505973, 11.10977095]",
+        "BO_21/01e13 :: Via Palazzina 171, Tabina [44.28775567, 11.11195701]",
+        "BO_21/01e14 :: Strada Statale 64 Porrettana, Tabina [44.30164422, 11.12441677]",
+        "BO_21/01e21 :: Via Buriani, Vergato [44.27976421, 11.11232739]",
+        "BO_21/01e22 :: Ospedale di Sopra, Vergato [44.2784381, 11.11069915]",
+        "BO_21/01e23 :: Via Castelnuovo, Castelnuovo [44.27130236, 11.09802725]",
+        "BO_21/01e24 :: Strada Statale 64 Porrettana, Vergato [44.25039826, 11.09681308]",
+        "BO_21/01e31 :: Via Minghetti, Cereglio [44.29010637, 11.10211997]",
+        "BO_21/01e32 :: Via Giuseppe Di Vittorio 41, Tolè [44.32860878, 11.05728733]",
+        "BO_21/01e33 :: SP25 7, Cereglio [44.30715911, 11.06693296]",
+        "BO_21/01e41 :: Via Venola 37, Tolè [44.3299303, 11.06161155]",
+        "BO_21/01e42 :: Via Papa Giovanni XXIII 74, Tolè [44.33094106, 11.06074839]",
+        "BO_21/01e43 :: Via Basabue 7, Tolè [44.32898824, 11.05804031]",
+        "BO_21/01e44 :: Via del Montello 1, Tolè [44.32878189, 11.06026721]"
+      ],
+      "BO_24": [
+        "<Anzola Dell'Emilia, Calderara Di Reno, Sala Bolognese>",
+        "BO_24/01e11 :: Via Pierino Turrini 1, Anzola dell'Emilia [44.56190921, 11.19481729]",
+        "BO_24/01e12 :: Via Mario Mazzoni 25, Anzola dell'Emilia [44.56138342, 11.19607286]",
+        "BO_24/01e13 :: Via Pio Galli 7, Anzola dell'Emilia [44.54720478, 11.1949342]",
+        "BO_24/01e14 :: Via Lunga, Anzola dell'Emilia [44.54653947, 11.18982358]",
+        "BO_24/01e21 :: Via Guido della Corte, Anzola dell'Emilia [44.5736401, 11.14885051]",
+        "BO_24/01e22 :: Via Gramsci 74, Anzola dell'Emilia [44.56547169, 11.14506535]",
+        "BO_24/01w11 :: Via Antonio Gramsci 234a, Sala Bolognese [44.58251996, 11.23650989]",
+        "BO_24/01w12 :: Via Lavino 16, Sala Bolognese [44.58205204, 11.23325169]",
+        "BO_24/01w13 :: Via Antonio Gramsci 309, Sala Bolognese [44.58013272, 11.23753385]",
+        "BO_24/01w21 :: Via Giacomo Matteotti 30, Sala Bolognese [44.61642555, 11.26334453]",
+        "BO_24/01w22 :: Via Bagno 19, Sala Bolognese [44.65114231, 11.28110061]",
+        "BO_24/02w11 :: Via Ferrovia 1, Calderara di Reno [44.57402419, 11.23721878]",
+        "BO_24/02w12 :: Via fratelli Pierantoni 24, Calderara di Reno [44.56743002, 11.27232436]",
+        "BO_24/02w21 :: Via Larga 26, Calderara di Reno [44.57218753, 11.30306493]",
+        "BO_24/02w22 :: Via Fornace, Calderara di Reno [44.59179608, 11.30938833]",
+        "BO_24/02w23 :: Via Roveno Marchesini 2c, Calderara di Reno [44.56826455, 11.30416143]"
+      ],
+      "BO_99": [
+        "<Fradusto, Rocca Di Roffeno, Sassomolare, Valgattara, Valsamoggia>",
+        "BO_99/01e11 :: SP67 30, Sassomolare [44.26123254, 10.97490253]",
+        "BO_99/01e21 :: SS623 26, Sassomolare [44.27044963, 10.99211068]",
+        "BO_99/01e31 :: Via Carpineta 44, Rocca di Roffeno [44.27680817, 11.01786247]",
+        "BO_99/01w11 :: L'Acqua Calda 35, Fradusto [44.22166019, 11.28386128]",
+        "BO_99/02e11 :: Via San Michele, Valsamoggia [44.43880446, 11.03726291]",
+        "BO_99/02w11 :: Via La Piazza 14, Valgattara [44.20732514, 11.28374911]",
+        "BO_99/03e11 :: Via Goccia 1376, Valsamoggia [44.36733369, 11.05609537]",
+        "BO_99/04e11 :: Via Abè 3, Valsamoggia [44.46258976, 11.10286133]",
+        "BO_99/05e11 :: Via Vedegheto 181c, Valsamoggia [44.34331758, 11.07962197]",
+        "BO_99/06e11 :: Via Palazzetto, Valsamoggia [44.47186055, 11.11790116]"
+      ],
       "BOH_1": [
         "<Bologna, Casalecchio Di Reno, Castel Maggiore, Sasso Marconi, Zola Predosa>",
         "BOH_1/01e11 :: Via Porrettana 23, Casalecchio di Reno [44.48700746, 11.29334752]",
@@ -447,276 +717,6 @@
         "BOH_3/06w13 :: Via Emilia Levante 3, Imola [44.34124291, 11.74498215]",
         "BOH_3/06w14 :: Via Lola, Imola [44.31387732, 11.73496034]",
         "BOH_3/06w21 :: Via Goccianello 29, Imola [44.33055046, 11.72717507]"
-      ],
-      "BO_07": [
-        "<Argelato, Bentivoglio, Castagnolo Minore, Cinquanta, Funo Di Argelato, Gherghenzano, San Giorgio Di Piano, San Marino Di Bentivoglio, Santa Maria In Duno, Stiatico>",
-        "BO_07/01e11 :: Via don Giovanni Minzoni 2/16, San Giorgio di Piano [44.64838275, 11.3687763]",
-        "BO_07/01e12 :: Via Giuseppe Gamberini 7, San Giorgio di Piano [44.64576047, 11.37416453]",
-        "BO_07/01e13 :: Via Bruno Buozzi 2, San Giorgio di Piano [44.64359113, 11.37341668]",
-        "BO_07/01e21 :: Via Venti Settembre 4, San Giorgio di Piano [44.64633469, 11.37706179]",
-        "BO_07/01e22 :: Via Chiesa 2/2, Cinquanta [44.65806578, 11.40072604]",
-        "BO_07/01e23 :: Ponte Rosso, Gherghenzano [44.68066495, 11.38521736]",
-        "BO_07/01e24 :: Rotonda Margherita Hack, Santa Maria in Duno [44.63863847, 11.40422226]",
-        "BO_07/01e31 :: Via Guglielmo Marconi 35, Santa Maria in Duno [44.63591085, 11.41647293]",
-        "BO_07/01e32 :: Via Guglielmo Marconi, Santa Maria in Duno [44.63493918, 11.4205299]",
-        "BO_07/01e33 :: Via Saletto 41, Bentivoglio [44.63501675, 11.44261177]",
-        "BO_07/01e34 :: Via di Mezzo di Saletto, San Marino di Bentivoglio [44.60853588, 11.4242203]",
-        "BO_07/01e41 :: Via Canali e Crociali, San Marino di Bentivoglio [44.60353553, 11.42066359]",
-        "BO_07/01e42 :: Via di Mezzo di Saletto 58a, San Marino di Bentivoglio [44.60275548, 11.42097855]",
-        "BO_07/01w11 :: Via Santa Marta 2a, Castagnolo Minore [44.59529322, 11.36997928]",
-        "BO_07/01w12 :: Via Galliera 115, Funo di Argelato [44.59268443, 11.36865681]",
-        "BO_07/01w13 :: Via San Giobbe 50, Funo di Argelato [44.59587124, 11.36704458]",
-        "BO_07/01w14 :: Pietroburgo, Funo di Argelato [44.59714609, 11.36261765]",
-        "BO_07/01w21 :: Via Centese 101, Argelato [44.64185995, 11.34897178]",
-        "BO_07/01w31 :: Via Palazzaccio 3/2, Stiatico [44.61790771, 11.36157184]",
-        "BO_07/01w32 :: Via Santa Marta 2a, Castagnolo Minore [44.59530369, 11.37016975]"
-      ],
-      "BO_08": [
-        "<Altedo, Baricella, Capo D'Argine, Casoni Di Malalbergo, Cà De Fabbri, Minerbio, Pegola, San Giovanni In Triario, San Martino In Soverzano, Tintoria>",
-        "BO_08/01w11 :: Via Savena Vecchia 389, Baricella [44.66463239, 11.57264787]",
-        "BO_08/01w21 :: Via Oreste Brunelli 115, Baricella [44.6438396, 11.53581573]",
-        "BO_08/01w22 :: Via Dino Donati 1, Baricella [44.64775163, 11.52791324]",
-        "BO_08/01w23 :: Via Europa, Baricella [44.64476245, 11.5332335]",
-        "BO_08/01w24 :: Via Savena Vecchia 95, Baricella [44.6563645, 11.55042096]",
-        "BO_08/01w31 :: Via Aldo Moro 1, Pegola [44.69147934, 11.50248044]",
-        "BO_08/01w32 :: Via Nazionale 264, Pegola [44.68944169, 11.50135795]",
-        "BO_08/01w33 :: Via Nazionale, Pegola [44.68009216, 11.49575163]",
-        "BO_08/01w34 :: Via Nazionale 154, Altedo [44.67151947, 11.49001278]",
-        "BO_08/01w41 :: Via Don Giovanni Minzoni 1, Altedo [44.6636172, 11.48583869]",
-        "BO_08/01w42 :: Via Bassa Inferiore 20, Altedo [44.65981922, 11.4833999]",
-        "BO_08/01w43 :: Via San Giovanni Battista 6, Altedo [44.660628, 11.48766072]",
-        "BO_08/02w11 :: Via Mora 13, Tintoria [44.63360192, 11.51880434]",
-        "BO_08/02w12 :: Via Palio 1, San Martino in Soverzano [44.62693012, 11.49214934]",
-        "BO_08/02w13 :: Via Fabbri 10, Tintoria [44.62060078, 11.48872482]",
-        "BO_08/02w14 :: Via Roma 41, San Giovanni in Triario [44.61867369, 11.48570814]",
-        "BO_08/02w21 :: Via Savena Superiore 72b, Minerbio [44.61186621, 11.48033984]",
-        "BO_08/02w22 :: Via Ronchi Inferiore 42, Cà de fabbri [44.61678881, 11.46269288]",
-        "BO_08/02w23 :: Via Bassa Superiore 34, Casoni di Malalbergo [44.6284719, 11.46147288]",
-        "BO_08/02w24 :: Via Savenella 135, Capo d'Argine [44.59883721, 11.4388901]"
-      ],
-      "BO_10": [
-        "<Ca' Di Landino, Lagaro>",
-        "BO_10/01e11 :: Via Val di Setta, Lagaro [44.22470408, 11.18086218]",
-        "BO_10/01e21 :: Bagucci, Ca' di Landino [44.12348861, 11.16560129]"
-      ],
-      "BO_12": [
-        "<Abetaia, Berzantina, Gaggio Montano, Lizzo, Querciola, Rocca Pitigliana, Suviana>",
-        "BO_12/01e11 :: SP40, Berzantina [44.15488819, 10.97953596]",
-        "BO_12/01e12 :: SP40, Berzantina [44.15426638, 10.98291323]",
-        "BO_12/01e13 :: SP63, Lizzo [44.15920465, 11.01250418]",
-        "BO_12/01e14 :: Via Fornaci 22, Berzantina [44.15877981, 10.98074298]",
-        "BO_12/01e21 :: Piazza Roma 5, Lizzo [44.16224948, 11.03775218]",
-        "BO_12/01e22 :: SP23, Suviana [44.1366565, 11.0368531]",
-        "BO_12/01e23 :: Pida, Suviana [44.13027207, 11.02277458]",
-        "BO_12/02e11 :: Ca' di Masonte, Gaggio Montano [44.19291658, 10.94944264]",
-        "BO_12/02e12 :: Via Serragualtiera 67, Gaggio Montano [44.19334685, 10.93243963]",
-        "BO_12/02e13 :: Guanella, Abetaia [44.20897605, 10.94918747]",
-        "BO_12/02e21 :: Colombara, Abetaia [44.21925239, 10.96726105]",
-        "BO_12/02e31 :: Volpara, Rocca Pitigliana [44.23739547, 11.01055722]",
-        "BO_12/02e41 :: Località Canova, Querciola [44.18808761, 10.90003124]"
-      ],
-      "BO_13": [
-        "<Castel San Pietro Terme, Poggio Piccolo, Via Larga>",
-        "BO_13/01e11 :: ~Via Risorgimento, Castel San Pietro Terme [44.39725683, 11.58721373]",
-        "BO_13/01e12 :: Via Albertazzi 241, Castel San Pietro Terme [44.39709106, 11.58360607]",
-        "BO_13/01e13 :: Via Antonio Gramsci 180, Castel San Pietro Terme [44.4023467, 11.59203244]",
-        "BO_13/01e14 :: Via Stradelli Guelfi 1300, Castel San Pietro Terme [44.43853891, 11.59255424]",
-        "BO_13/01e21 :: Viale Alfredo Oriani 29, Castel San Pietro Terme [44.39908435, 11.59546128]",
-        "BO_13/01e22 :: Via Madre Teresa di Calcutta, Castel San Pietro Terme [44.40215608, 11.59465104]",
-        "BO_13/01e31 :: Via Emilia Ponente, Castel San Pietro Terme [44.42953384, 11.5171206]",
-        "BO_13/01e32 :: Via Lazio 1, Castel San Pietro Terme [44.4274093, 11.52256773]",
-        "BO_13/01e33 :: Via Emilia, Castel San Pietro Terme [44.43077688, 11.51340142]",
-        "BO_13/01e34 :: Via Montecalderaro 14, Castel San Pietro Terme [44.40737042, 11.50304182]",
-        "BO_13/02e11 :: Via Larga 1, Via Larga [44.43529883, 11.6551298]",
-        "BO_13/02e12 :: Via dell'Artigianato 2, Poggio Piccolo [44.43990378, 11.61614512]"
-      ],
-      "BO_15": [
-        "<Gabbiano, Loiano, Madonna Dei Boschi, Piamaggio, Rioveggio, Roncastaldo, Sabbioni, Trasasso, Tre Fasci, Vado>",
-        "BO_15/01e11 :: Via Luigi Casaglia, Tre Fasci [44.27734713, 11.27155302]",
-        "BO_15/01e12 :: SP79, Trasasso [44.25880667, 11.27365544]",
-        "BO_15/01e13 :: Via Pietro Bignardi 31, Tre Fasci [44.28106378, 11.27153116]",
-        "BO_15/01e14 :: Via Cà di Barbiere, Tre Fasci [44.29209508, 11.27510836]",
-        "BO_15/01e21 :: Strada Freddolina, Gabbiano [44.27097754, 11.23969718]",
-        "BO_15/01e22 :: Via Ca' Rosa, Rioveggio [44.2739181, 11.22117191]",
-        "BO_15/01e23 :: Via Val di Setta 13/a, Rioveggio [44.27739576, 11.20004303]",
-        "BO_15/01e24 :: Via Cà del Monte, Rioveggio [44.2712923, 11.19738997]",
-        "BO_15/01e31 :: SP59, Vado [44.31886217, 11.27257406]",
-        "BO_15/01e32 :: Via della Stazione 14, Vado [44.318466, 11.25892814]",
-        "BO_15/01w11 :: Via la Serra, Madonna dei Boschi [44.23429548, 11.33449663]",
-        "BO_15/01w12 :: Via Panoramica 7, Madonna dei Boschi [44.22948711, 11.3293826]",
-        "BO_15/01w13 :: Via Napoleonica 4, Madonna dei Boschi [44.22541738, 11.32596868]",
-        "BO_15/01w14 :: Via degli Orzi 8, Piamaggio [44.19953181, 11.31914309]",
-        "BO_15/01w21 :: Via Santa Margherita, Loiano [44.26452461, 11.32621009]",
-        "BO_15/01w22 :: Via del Boschetto 1, Sabbioni [44.27369361, 11.3173943]",
-        "BO_15/01w23 :: Via Napoleonica 34, Sabbioni [44.28286997, 11.32645411]",
-        "BO_15/01w24 :: Viale Guglielmo Marconi, Roncastaldo [44.26150515, 11.32295658]"
-      ],
-      "BO_16": [
-        "<Allocco, Lama Di Reno, Monte San Pietro, Pian Di Venola, Sasso Marconi, Sibano, Sirano>",
-        "BO_16/01e11 :: Cinque Cerri, Sasso Marconi [44.36732471, 11.26037486]",
-        "BO_16/01e12 :: Via Belvedere 14, Sirano [44.37625067, 11.24579084]",
-        "BO_16/01e21 :: Via Allocco, Allocco [44.33109892, 11.26809809]",
-        "BO_16/01w11 :: Via Torrente Venola 1/4, Pian di Venola [44.33295586, 11.18660064]",
-        "BO_16/01w12 :: Ca' Nova di Sopra 126, Sibano [44.3223504, 11.18036528]",
-        "BO_16/01w13 :: Via Lama di Reno 69/2, Lama di Reno [44.36650937, 11.21492614]",
-        "BO_16/01w14 :: Via Lama di Reno, Lama di Reno [44.36772302, 11.2141683]",
-        "BO_16/01w21 :: Via Lavino, Monte San Pietro [44.37471911, 11.14513203]",
-        "BO_16/01w22 :: Via Gavignano, Monte San Pietro [44.39325214, 11.1247916]",
-        "BO_16/01w23 :: Via Valle D'Aosta 18, Monte San Pietro [44.36943555, 11.12618873]",
-        "BO_16/01w24 :: Via Lavino 542, Monte San Pietro [44.36820672, 11.12318422]",
-        "BO_16/01w31 :: Sandro Pertini 1, Monte San Pietro [44.41093585, 11.14453942]"
-      ],
-      "BO_17": [
-        "<Imola, Medicina>",
-        "BO_17/01e11 :: Via Giacomo Matteotti 35, Medicina [44.4795278, 11.63258603]",
-        "BO_17/01e12 :: Via Piave 208, Medicina [44.4746348, 11.63282414]",
-        "BO_17/01e13 :: Via Roberto Preti 111h, Medicina [44.47049918, 11.63101135]",
-        "BO_17/01e14 :: Via Nuova, Medicina [44.47035427, 11.67589617]",
-        "BO_17/01e21 :: Via Gagliazzona, Imola [44.52457393, 11.78093604]",
-        "BO_17/01e23 :: Vicolo Carpeneto 1, Imola [44.45977219, 11.71718706]",
-        "BO_17/01e24 :: Via vecchia San Vitale 620, Medicina [44.46947584, 11.71559696]",
-        "BO_17/01e31 :: Via San Vitale 15, Imola [44.46110669, 11.7270597]",
-        "BO_17/01e32 :: Via di Sesto 5, Imola [44.45805629, 11.73190031]",
-        "BO_17/01e33 :: Via Amedeo Marchi 1, Imola [44.46049865, 11.72987177]",
-        "BO_17/01w11 :: Via Antonio Rossi 4, Medicina [44.48747956, 11.61243141]",
-        "BO_17/01w12 :: ~Via Fasanina, Medicina [44.4924978, 11.59951506]",
-        "BO_17/01w13 :: Via Chiesina 35, Medicina [44.49518726, 11.57382642]",
-        "BO_17/01w14 :: Via Fiorentina 536, Medicina [44.50372763, 11.61487474]",
-        "BO_17/01w21 :: Via Fiorentina 3899c, Medicina [44.53242038, 11.62538066]",
-        "BO_17/01w22 :: Via Sant'Antonio 7596, Medicina [44.56045736, 11.72070563]",
-        "BO_17/01w23 :: Via Fabbri Renato, Medicina [44.55947898, 11.72171368]"
-      ],
-      "BO_18": [
-        "<Argenta, Molinella>",
-        "BO_18/01e11 :: Via Fabio Filzi 22, Molinella [44.6166033, 11.67736404]",
-        "BO_18/01e12 :: Viale Venticinque Aprile 1, Molinella [44.61893471, 11.71701132]",
-        "BO_18/01e13 :: Via Ada Negri 1, Molinella [44.61943697, 11.71997913]",
-        "BO_18/01e14 :: Via Fiume Vecchio 209, Molinella [44.61496019, 11.73083933]",
-        "BO_18/01e21 :: Via Rotta del Giardino 2, Molinella [44.58881832, 11.60740335]",
-        "BO_18/01e22 :: Via Provinciale Superiore 205/7, Molinella [44.58815382, 11.60965163]",
-        "BO_18/01e23 :: Via P. Rinaldi 22, Molinella [44.58865833, 11.63055228]",
-        "BO_18/01e31 :: Via Barabana 1, Molinella [44.55833209, 11.63112441]",
-        "BO_18/01e32 :: Via Selva, Molinella [44.55509265, 11.62635137]",
-        "BO_18/01w11 :: Via Paolo Fabbri 3, Molinella [44.61864022, 11.67279347]",
-        "BO_18/01w12 :: Via Francesco Schiassi 2, Molinella [44.62184973, 11.6664838]",
-        "BO_18/01w13 :: Via Malvezza 2, Molinella [44.6138574, 11.64232911]",
-        "BO_18/01w21 :: Via Ghiaroni 69, Molinella [44.6457831, 11.65344909]",
-        "BO_18/01w22 :: Via Severino Ferrari 185, Molinella [44.65165736, 11.64785429]",
-        "BO_18/01w23 :: Via Canale della Botte 71, Molinella [44.65123121, 11.64740129]",
-        "BO_18/01w24 :: Via Carreggiata 96, Molinella [44.65436542, 11.64648383]",
-        "BO_18/01w31 :: Via Fascinata 214, Argenta [44.67253074, 11.65527707]",
-        "BO_18/01w32 :: Via Alfiero Taddia, Molinella [44.66172261, 11.64527606]",
-        "BO_18/01w33 :: Via Canne 15, Argenta [44.65491169, 11.6530839]",
-        "BO_18/01w34 :: Via Valletta 11b, Argenta [44.63970552, 11.68854743]"
-      ],
-      "BO_19": [
-        "<Maggi, San Giovanni In Persiceto>",
-        "BO_19/01e11 :: Via Virginia 29, San Giovanni in Persiceto [44.70507609, 11.22393909]",
-        "BO_19/01e12 :: Via Sicilia, San Giovanni in Persiceto [44.70577234, 11.22872253]",
-        "BO_19/01e13 :: Via Cento 201, San Giovanni in Persiceto [44.70857191, 11.23002474]",
-        "BO_19/01e14 :: Via Cento 251, San Giovanni in Persiceto [44.71055858, 11.23182554]",
-        "BO_19/01e21 :: Via Barbieri 15, San Giovanni in Persiceto [44.71467195, 11.23147652]",
-        "BO_19/01e22 :: Via delle Viole 1, San Giovanni in Persiceto [44.71600524, 11.23495697]",
-        "BO_19/01e23 :: Via San Cristoforo 144, San Giovanni in Persiceto [44.7267144, 11.23739027]",
-        "BO_19/01w11 :: via Cento 105l, San Giovanni in Persiceto [44.69892842, 11.22547231]",
-        "BO_19/01w12 :: Via Biancolina 42, San Giovanni in Persiceto [44.65196018, 11.21866812]",
-        "BO_19/01w13 :: Via Vecchia di Zenerigolo 6a, San Giovanni in Persiceto [44.63954135, 11.19718903]",
-        "BO_19/01w14 :: Via Cento 63, San Giovanni in Persiceto [44.65079538, 11.1973269]",
-        "BO_19/01w21 :: Via Spianate 2a, San Giovanni in Persiceto [44.638837, 11.19400965]",
-        "BO_19/01w22 :: Via Crevalcore 82, San Giovanni in Persiceto [44.66358953, 11.1756116]",
-        "BO_19/01w23 :: ~Circonvallazione Liberazione, San Giovanni in Persiceto [44.64116234, 11.18461663]",
-        "BO_19/01w24 :: Via Cassola di Sotto, San Giovanni in Persiceto [44.62852234, 11.15892235]",
-        "BO_19/01w31 :: Via Bologna, San Giovanni in Persiceto [44.61295271, 11.20716035]",
-        "BO_19/01w32 :: Via Castelfranco 13, San Giovanni in Persiceto [44.63550285, 11.17930708]",
-        "BO_19/01w33 :: Via Castagnolo 36, San Giovanni in Persiceto [44.63086603, 11.18158785]",
-        "BO_19/01w34 :: Via Bologna 126a, San Giovanni in Persiceto [44.62543344, 11.19729858]",
-        "BO_19/01w41 :: Via Castagnolo 79a, San Giovanni in Persiceto [44.62785295, 11.1786912]",
-        "BO_19/02e11 :: Via molino di sotto 28, Maggi [44.66950567, 11.13884171]",
-        "BO_19/02e12 :: Via molino di sotto 2, Maggi [44.6651296, 11.13455616]",
-        "BO_19/02e13 :: Via Modena 4, Maggi [44.65862053, 11.12887057]",
-        "BO_19/02e14 :: ~Via Suor Teresa Veronesi, Maggi [44.65538107, 11.12635533]",
-        "BO_19/02e21 :: Via San Benedetto 9, Maggi [44.64707033, 11.1218807]"
-      ],
-      "BO_20": [
-        "<Monte San Pietro, Valsamoggia>",
-        "BO_20/01e11 :: Via Circonvallazione Nord 14, Valsamoggia [44.50890032, 11.08079955]",
-        "BO_20/01e12 :: Via Papa Giovanni Ventitreesimo 13, Valsamoggia [44.50715021, 11.07771798]",
-        "BO_20/01e13 :: Via Adolfo de Maria 4, Valsamoggia [44.50550959, 11.08131657]",
-        "BO_20/01e14 :: Via Circonvallazione Nord 89, Valsamoggia [44.50688248, 11.08414293]",
-        "BO_20/01e21 :: Via Giuseppe Mazzini 20, Valsamoggia [44.50470032, 11.08432812]",
-        "BO_20/01e22 :: Via Giuseppe Mazzini, Valsamoggia [44.50385656, 11.08685912]",
-        "BO_20/01e23 :: Via Edmondo De Amicis 5, Valsamoggia [44.50230626, 11.08569883]",
-        "BO_20/01w11 :: Via Sentiero Canale, Valsamoggia [44.51237945, 11.12829879]",
-        "BO_20/01w12 :: Via San Savino 1, Valsamoggia [44.51022071, 11.13134574]",
-        "BO_20/01w21 :: Via Sartini 8b, Valsamoggia [44.51327518, 11.13004666]",
-        "BO_20/01w22 :: Via Togliatti 9, Valsamoggia [44.5139847, 11.1274791]",
-        "BO_20/01w23 :: Via Vanotto 4a, Valsamoggia [44.5159055, 11.12576187]",
-        "BO_20/01w24 :: Via Bargellina, Valsamoggia [44.51624432, 11.12936909]",
-        "BO_20/01w31 :: Via Cassoletta 65, Valsamoggia [44.53857422, 11.15685692]",
-        "BO_20/01w32 :: Via Salvador Allende 23a, Valsamoggia [44.54995378, 11.12962911]",
-        "BO_20/01w33 :: Via Castellaccio 1, Valsamoggia [44.54574782, 11.13227231]",
-        "BO_20/01w41 :: Via San Lorenzo 31, Valsamoggia [44.54826125, 11.14778579]",
-        "BO_20/01w42 :: Via Emilia 55, Valsamoggia [44.56309923, 11.14411381]",
-        "BO_20/01w43 :: Via Marzabotto 3, Valsamoggia [44.54926305, 11.13471429]",
-        "BO_20/02w11 :: Via San Martino 24, Monte San Pietro [44.49146425, 11.15865831]",
-        "BO_20/02w12 :: Via San Martino, Monte San Pietro [44.46781764, 11.16631254]",
-        "BO_20/02w21 :: Via Landa, Monte San Pietro [44.45078506, 11.15172667]",
-        "BO_20/02w22 :: Via Albert Schwaitzer, Monte San Pietro [44.44970445, 11.15223144]",
-        "BO_20/02w23 :: Via Luigi Dalle Olle, Monte San Pietro [44.45143406, 11.13919102]",
-        "BO_20/02w31 :: Via Giacomo Matteotti 4, Monte San Pietro [44.44066777, 11.18086115]",
-        "BO_20/02w32 :: Via Palmiro Togliatti 5, Monte San Pietro [44.44829335, 11.19219655]",
-        "BO_20/02w33 :: Via Lavino 177d, Monte San Pietro [44.45045629, 11.19378975]",
-        "BO_20/02w34 :: Via Lavino 108b, Monte San Pietro [44.45130721, 11.19431918]"
-      ],
-      "BO_21": [
-        "<Castelnuovo, Cereglio, Tabina, Tolè, Vergato>",
-        "BO_21/01e11 :: Via A. Colombi, Vergato [44.28029471, 11.11192845]",
-        "BO_21/01e12 :: Via Bologna, Tabina [44.28505973, 11.10977095]",
-        "BO_21/01e13 :: Via Palazzina 171, Tabina [44.28775567, 11.11195701]",
-        "BO_21/01e14 :: Strada Statale 64 Porrettana, Tabina [44.30164422, 11.12441677]",
-        "BO_21/01e21 :: Via Buriani, Vergato [44.27976421, 11.11232739]",
-        "BO_21/01e22 :: Ospedale di Sopra, Vergato [44.2784381, 11.11069915]",
-        "BO_21/01e23 :: Via Castelnuovo, Castelnuovo [44.27130236, 11.09802725]",
-        "BO_21/01e24 :: Strada Statale 64 Porrettana, Vergato [44.25039826, 11.09681308]",
-        "BO_21/01e31 :: Via Minghetti, Cereglio [44.29010637, 11.10211997]",
-        "BO_21/01e32 :: Via Giuseppe Di Vittorio 41, Tolè [44.32860878, 11.05728733]",
-        "BO_21/01e33 :: SP25 7, Cereglio [44.30715911, 11.06693296]",
-        "BO_21/01e41 :: Via Venola 37, Tolè [44.3299303, 11.06161155]",
-        "BO_21/01e42 :: Via Papa Giovanni XXIII 74, Tolè [44.33094106, 11.06074839]",
-        "BO_21/01e43 :: Via Basabue 7, Tolè [44.32898824, 11.05804031]",
-        "BO_21/01e44 :: Via del Montello 1, Tolè [44.32878189, 11.06026721]"
-      ],
-      "BO_24": [
-        "<Anzola Dell'Emilia, Calderara Di Reno, Sala Bolognese>",
-        "BO_24/01e11 :: Via Pierino Turrini 1, Anzola dell'Emilia [44.56190921, 11.19481729]",
-        "BO_24/01e12 :: Via Mario Mazzoni 25, Anzola dell'Emilia [44.56138342, 11.19607286]",
-        "BO_24/01e13 :: Via Pio Galli 7, Anzola dell'Emilia [44.54720478, 11.1949342]",
-        "BO_24/01e14 :: Via Lunga, Anzola dell'Emilia [44.54653947, 11.18982358]",
-        "BO_24/01e21 :: Via Guido della Corte, Anzola dell'Emilia [44.5736401, 11.14885051]",
-        "BO_24/01e22 :: Via Gramsci 74, Anzola dell'Emilia [44.56547169, 11.14506535]",
-        "BO_24/01w11 :: Via Antonio Gramsci 234a, Sala Bolognese [44.58251996, 11.23650989]",
-        "BO_24/01w12 :: Via Lavino 16, Sala Bolognese [44.58205204, 11.23325169]",
-        "BO_24/01w13 :: Via Antonio Gramsci 309, Sala Bolognese [44.58013272, 11.23753385]",
-        "BO_24/01w21 :: Via Giacomo Matteotti 30, Sala Bolognese [44.61642555, 11.26334453]",
-        "BO_24/01w22 :: Via Bagno 19, Sala Bolognese [44.65114231, 11.28110061]",
-        "BO_24/02w11 :: Via Ferrovia 1, Calderara di Reno [44.57402419, 11.23721878]",
-        "BO_24/02w12 :: Via fratelli Pierantoni 24, Calderara di Reno [44.56743002, 11.27232436]",
-        "BO_24/02w21 :: Via Larga 26, Calderara di Reno [44.57218753, 11.30306493]",
-        "BO_24/02w22 :: Via Fornace, Calderara di Reno [44.59179608, 11.30938833]",
-        "BO_24/02w23 :: Via Roveno Marchesini 2c, Calderara di Reno [44.56826455, 11.30416143]"
-      ],
-      "BO_99": [
-        "<Fradusto, Rocca Di Roffeno, Sassomolare, Valgattara, Valsamoggia>",
-        "BO_99/01e11 :: SP67 30, Sassomolare [44.26123254, 10.97490253]",
-        "BO_99/01e21 :: SS623 26, Sassomolare [44.27044963, 10.99211068]",
-        "BO_99/01e31 :: Via Carpineta 44, Rocca di Roffeno [44.27680817, 11.01786247]",
-        "BO_99/01w11 :: L'Acqua Calda 35, Fradusto [44.22166019, 11.28386128]",
-        "BO_99/02e11 :: Via San Michele, Valsamoggia [44.43880446, 11.03726291]",
-        "BO_99/02w11 :: Via La Piazza 14, Valgattara [44.20732514, 11.28374911]",
-        "BO_99/03e11 :: Via Goccia 1376, Valsamoggia [44.36733369, 11.05609537]",
-        "BO_99/04e11 :: Via Abè 3, Valsamoggia [44.46258976, 11.10286133]",
-        "BO_99/05e11 :: Via Vedegheto 181c, Valsamoggia [44.34331758, 11.07962197]",
-        "BO_99/06e11 :: Via Palazzetto, Valsamoggia [44.47186055, 11.11790116]"
       ],
       "FC_01": [
         "<Bertinoro, Forlimpopoli, Forlì>",
@@ -4091,6 +4091,10 @@
         "A138_CNO8 :: San Quirico, Albareto [44.44449907, 9.68904022]",
         "A138_CNO9 :: SP23 4a, Albareto [44.40472054, 9.684393975]"
       ],
+      "Alberone": [
+        "H360_CNO10 :: Via Belvedere 15, Alberone [44.96369451, 11.83808343]",
+        "H360_CNO13 :: Via Nagliati 69, Alberone [44.9623519, 11.82769784]"
+      ],
       "Albinea": [
         "RE_01/11e43 :: Via Alcide De Gasperi 1, Albinea [44.63245282, 10.6055121]",
         "RE_01/12e11 :: Via Papa Giovanni XXIII 13/1, Albinea [44.63117726, 10.60937614]",
@@ -4410,6 +4414,17 @@
         "A788_CNO8 :: SP114, Berceto [44.50063208, 9.955459344]",
         "PR_02/01e11 :: Via San Francesco di Sales, Berceto [44.51096003, 9.984396545]"
       ],
+      "Berra": [
+        "A806_563 :: Via Albersano 88, Berra [44.975423, 11.99099058]",
+        "A806_629 :: Via Piave 83a, Berra [44.97868661, 11.9823923]",
+        "A806_718 :: Via Piave 71, Berra [44.97872881, 11.98166678]",
+        "A806_CNO1 :: Via dell'Artigianato 4, Berra [44.97289428, 11.97574747]",
+        "A806_CNO11 :: Via tre Dicembre 8, Berra [44.98082885, 11.97139213]",
+        "A806_CNO13 :: Via Albersano 76, Berra [44.97542617, 11.99085827]",
+        "A806_CNO15 :: Via due Febbraio 15, Berra [44.97971486, 11.97844281]",
+        "A806_CNO2 :: Via Ponte Farmacia 3, Berra [44.97771336, 11.98327488]",
+        "A806_CNO8 :: Via Martiri della Libertà 1, Berra [44.98067372, 11.97684198]"
+      ],
       "Bertinoro": [
         "FC_01/10e11 :: Via del Poggio 54, Bertinoro [44.17038719, 12.1589752]",
         "FC_01/10e12 :: Via Fonde, Bertinoro [44.18439286, 12.16955352]",
@@ -4581,12 +4596,12 @@
         "E426_CNO9 :: SP42 355, Borra [44.30364214, 10.72138789]",
         "MO_13/01e23 :: SP42 286, Borra [44.29715627, 10.71065648]"
       ],
-      "Borzano D'Enza": [
-        "C669_CNO17 :: Via Borzano 52, Borzano d'Enza [44.52584834, 10.36723779]"
-      ],
       "Borzano": [
         "A162_CNO2 :: Via Maria Melato, Borzano [44.61040811, 10.63894706]",
         "RE_12/01e31 :: Via Balletti 13b, Borzano [44.60549445, 10.65542944]"
+      ],
+      "Borzano D'Enza": [
+        "C669_CNO17 :: Via Borzano 52, Borzano d'Enza [44.52584834, 10.36723779]"
       ],
       "Boschetto": [
         "E410_CNO10 :: Via del Mare 32, Boschetto [44.76449839, 12.14484202]",
@@ -4737,6 +4752,11 @@
         "B408_CNO7 :: Via Giovanni Battilocchi 123, Calestano [44.63465077, 10.17211065]",
         "B408_CNO8 :: Via Ramiano 7, Calestano [44.61495712, 10.15922629]",
         "PR_04/01w15 :: San Remigio, Calestano [44.60133042, 10.12107077]"
+      ],
+      "Caminata": [
+        "B479_CNO1 :: SS412 6, Caminata [44.90940629, 9.311826995]",
+        "B479_CNO2 :: Via Vittorio Emanuele 11, Caminata [44.90984012, 9.308634882]",
+        "F885_CNO10 :: SS412, Caminata [44.9084724, 9.314534082]"
       ],
       "Campagnola Emilia": [
         "RE_06/01e21 :: Via Garibaldi 13, Campagnola Emilia [44.83914822, 10.75550074]",
@@ -5122,6 +5142,8 @@
         "M364_CNO39 :: Via Ca' dei Bracchi 120, Casalino [44.32202421, 10.35748351]"
       ],
       "Casaltone": [
+        "I845_CNO1 :: Via Trento 10, Casaltone [44.83847346, 10.44413132]",
+        "I845_CNO3 :: Via Cavalier Sante Bertoluzzi 1, Casaltone [44.83217285, 10.44293503]",
         "PR_18/01e31 :: Via Firenze 1bis, Casaltone [44.84190167, 10.4444608]",
         "PR_18/01w31 :: Strada del Canale, Casaltone [44.82138996, 10.4382413]"
       ],
@@ -5137,6 +5159,12 @@
         "I689_CNO4 :: Via Tole 4, Casine [44.27066779, 10.79210294]",
         "MO_11/01e41 :: Via Casa Gualandi 23, Casine [44.26566882, 10.7875997]"
       ],
+      "Casola": [
+        "F503_CNO10 :: Via provinciale per Frassinoro Casola, Casola [44.32208952, 10.60057158]",
+        "F503_CNO5 :: Via provinciale per Frassinoro Casola 52, Casola [44.33999806, 10.60892186]",
+        "F503_CNO6 :: Via Casa Maestri 2, Casola [44.3362632, 10.61737518]",
+        "F503_CNO9 :: Via Bibulca, Casola [44.35126794, 10.61892055]"
+      ],
       "Casola Valsenio": [
         "B982_CNO1 :: Via dei Fiori 1, Casola Valsenio [44.22169288, 11.61991753]",
         "B982_CNO2 :: Valsenio, Casola Valsenio [44.24404674, 11.64870575]",
@@ -5148,12 +5176,6 @@
         "B982_CNO8 :: Via Benigno Zaccagnini 1, Casola Valsenio [44.22748497, 11.62889514]",
         "B982_CNO9 :: Via Storta, Casola Valsenio [44.22515008, 11.62970299]"
       ],
-      "Casola": [
-        "F503_CNO10 :: Via provinciale per Frassinoro Casola, Casola [44.32208952, 10.60057158]",
-        "F503_CNO5 :: Via provinciale per Frassinoro Casola 52, Casola [44.33999806, 10.60892186]",
-        "F503_CNO6 :: Via Casa Maestri 2, Casola [44.3362632, 10.61737518]",
-        "F503_CNO9 :: Via Bibulca, Casola [44.35126794, 10.61892055]"
-      ],
       "Casone": [
         "D357_CNO1 :: Via Guido Guerra, Casone [44.11942984, 11.88188888]",
         "D357_CNO2 :: Via Giacomo Matteotti 30, Casone [44.12094574, 11.88643375]",
@@ -5161,12 +5183,12 @@
         "D357_CNO4 :: Via Roma, Casone [44.12059577, 11.88630043]",
         "D357_CNO5 :: Via Canale 1, Casone [44.12207183, 11.88590688]"
       ],
-      "Casoni Di Malalbergo": [
-        "BO_08/02w23 :: Via Bassa Superiore 34, Casoni di Malalbergo [44.6284719, 11.46147288]"
-      ],
       "Casoni": [
         "E772_CNO6 :: Via Anna Frank 18, Casoni [44.9395284, 10.73952059]",
         "H195_CNO1 :: Via Cantina, Casoni [44.72281923, 11.05508273]"
+      ],
+      "Casoni Di Malalbergo": [
+        "BO_08/02w23 :: Via Bassa Superiore 34, Casoni di Malalbergo [44.6284719, 11.46147288]"
       ],
       "Castagnolo Minore": [
         "A392_CNO3 :: Via Santa Marta 2a, Castagnolo Minore [44.5952914, 11.36992786]",
@@ -5339,17 +5361,17 @@
       "Castellino Delle Formiche": [
         "MO_12/01e33 :: Via Gainazzo 1791, Castellino delle Formiche [44.37460454, 10.93794618]"
       ],
+      "Castello": [
+        "H303_CNO1 :: Via Castello, Castello [44.23011636, 10.65325477]",
+        "H303_CNO3 :: Scalinata del Fosso, Castello [44.23083701, 10.65134074]",
+        "H303_CNO5 :: SS12dir 90, Castello [44.23111857, 10.65567066]"
+      ],
       "Castello D'Argile": [
         "C185_CNO1 :: Via Centese, Castello d'Argile [44.67168723, 11.30180327]",
         "FE_02/02e32 :: Via Giacomo Matteotti 137, Castello d'Argile [44.68281425, 11.29721857]",
         "FE_02/02e33 :: Via Guglielmo Marconi 3, Castello d'Argile [44.68176467, 11.29594502]",
         "FE_02/02e34 :: Via Provinciale Sud 20, Castello d'Argile [44.67754855, 11.29718109]",
         "FE_02/02e41 :: Via Monsignor Vincenzo Gandolfi 11, Castello d'Argile [44.675705, 11.29496325]"
-      ],
-      "Castello": [
-        "H303_CNO1 :: Via Castello, Castello [44.23011636, 10.65325477]",
-        "H303_CNO3 :: Scalinata del Fosso, Castello [44.23083701, 10.65134074]",
-        "H303_CNO5 :: SS12dir 90, Castello [44.23111857, 10.65567066]"
       ],
       "Castelluccio": [
         "F642_CNO15 :: Via Monte Belvedere, Castelluccio [44.23003297, 10.92503178]"
@@ -5375,6 +5397,9 @@
         "RE_04/01w23 :: Via Parisola 4, Castelnovo ne' Monti [44.41512362, 10.39156785]",
         "RE_04/01w24 :: Via Costa de Grassi 78, Castelnovo ne' Monti [44.4025923, 10.3757672]"
       ],
+      "Castelnuovo": [
+        "BO_21/01e23 :: Via Castelnuovo, Castelnuovo [44.27130236, 11.09802725]"
+      ],
       "Castelnuovo Fogliani": [
         "A223_CNO1 :: Via Crocetta, Castelnuovo Fogliani [44.87784804, 9.968896861]",
         "PC_15/01w11 :: i Latte, Castelnuovo Fogliani [44.88545516, 9.957103595]"
@@ -5393,9 +5418,6 @@
         "MO_04/03w32 :: Via Achille Ferrari 32a, Castelnuovo Rangone [44.55227062, 10.94414067]",
         "MO_04/03w33 :: Via Case Bruciate 13a, Castelnuovo Rangone [44.55215044, 10.94203085]",
         "MO_04/03w34 :: Via Settecani Cavidole 28, Castelnuovo Rangone [44.5650521, 10.96328791]"
-      ],
-      "Castelnuovo": [
-        "BO_21/01e23 :: Via Castelnuovo, Castelnuovo [44.27130236, 11.09802725]"
       ],
       "Castelvetro Di Modena": [
         "MO_18/04e11 :: Via Venti Settembre 1, Castelvetro di Modena [44.5037301, 10.94377432]",
@@ -5616,6 +5638,10 @@
         "L184_CNO17 :: Via Radici 33a, Cerredolo [44.40274247, 10.61829893]",
         "L184_CNO7 :: Via Radici 50, Cerredolo [44.39580759, 10.61925972]"
       ],
+      "Cerreto": [
+        "M165_CNO1 :: SP18 33, Cerreto [44.66516979, 9.254048834]",
+        "M165_CNO4 :: SP18 61, Cerreto [44.64924974, 9.296082363]"
+      ],
       "Cerreto Alpi": [
         "M364_CNO23 :: Via Piana 2, Cerreto Alpi [44.32262523, 10.24804913]"
       ],
@@ -5625,10 +5651,6 @@
         "M364_CNO21 :: Via Provinciale 19, Cerreto Laghi [44.29878315, 10.24205539]",
         "M364_CNO22 :: Via Abetina 2, Cerreto Laghi [44.29813771, 10.24708421]",
         "M364_CNO32 :: Via Abetina 2, Cerreto Laghi [44.29815859, 10.24709054]"
-      ],
-      "Cerreto": [
-        "M165_CNO1 :: SP18 33, Cerreto [44.66516979, 9.254048834]",
-        "M165_CNO4 :: SP18 61, Cerreto [44.64924974, 9.296082363]"
       ],
       "Cerrè Marabino": [
         "L184_CNO16 :: Via dell'Industria 1, Cerrè Marabino [44.40360576, 10.48139895]"
@@ -5949,6 +5971,9 @@
         "E187_CNO15 :: Marzolaro, Chiosi [44.2196656, 11.13395241]",
         "E187_CNO25 :: Marzolaro, Chiosi [44.21210201, 11.13458133]"
       ],
+      "Ciano": [
+        "MO_12/03e11 :: Via Boschi di Ciano, Ciano [44.42057874, 11.00811867]"
+      ],
       "Ciano D'Enza": [
         "C669_CNO1 :: Via Taverne Carbonizzo 47, Ciano d'Enza [44.60195703, 10.4083526]",
         "C669_CNO12 :: Via dei Castelli, Ciano d'Enza [44.58963893, 10.41710235]",
@@ -5957,9 +5982,6 @@
         "C669_CNO3 :: Via del Conchello 2, Ciano d'Enza [44.60660403, 10.41310054]",
         "C669_CNO4 :: Via dei Caduti in Russia 8, Ciano d'Enza [44.59998162, 10.41370629]",
         "C669_CNO6 :: Piazza Matteotti, Ciano d'Enza [44.59266851, 10.40805122]"
-      ],
-      "Ciano": [
-        "MO_12/03e11 :: Via Boschi di Ciano, Ciano [44.42057874, 11.00811867]"
       ],
       "Cinquanta": [
         "BO_07/01e22 :: Via Chiesa 2/2, Cinquanta [44.65806578, 11.40072604]"
@@ -6305,6 +6327,9 @@
         "RE_05/01w32 :: Via Mandrio 17, Correggio [44.78818589, 10.80350876]",
         "RE_05/01w33 :: Via Mandrio 18a, Correggio [44.79207317, 10.80570244]"
       ],
+      "Corte_Brugnatella": [
+        "D054_CNO1 :: Lenzino [44.69086365, 9.3337155]"
+      ],
       "Cortemaggiore": [
         "D061_CNO1 :: Via Strada Vecchia 2, Cortemaggiore [44.99227561, 9.929931036]",
         "D061_CNO10 :: Via Cremona 2, Cortemaggiore [44.99551917, 9.933368946]",
@@ -6317,9 +6342,6 @@
         "D061_CNO7 :: Via Bramante 1, Cortemaggiore [44.99451929, 9.933021635]",
         "D061_CNO8 :: Via Torino 2, Cortemaggiore [44.99614178, 9.924332304]",
         "D061_CNO9 :: Via Camillo Benso Conte di Cavour 13, Cortemaggiore [44.99731796, 9.931773703]"
-      ],
-      "Corte_Brugnatella": [
-        "D054_CNO1 :: Lenzino [44.69086365, 9.3337155]"
       ],
       "Costabona": [
         "L969_CNO18 :: Via San Prospero, Costabona [44.34743372, 10.49162484]",
@@ -6601,13 +6623,13 @@
         "D502_CNO9 :: Boccolo Noce, Farini [44.67957059, 9.64065099]",
         "PC_18/01w11 :: SP51, Farini [44.70982654, 9.570595249]"
       ],
+      "Farneta": [
+        "F503_CNO4 :: Via del Tracciolino, Farneta [44.34818097, 10.5696123]"
+      ],
       "Farneta Di Riccò": [
         "F357_CNO18 :: Via Riccò - Crocetta 240/5, Farneta di Riccò [44.42111318, 10.85289845]",
         "F357_CNO19 :: Via Villaggio 110, Farneta di Riccò [44.43007615, 10.8477842]",
         "MO_12/02e21 :: Via Riccò - Crocetta 297, Farneta di Riccò [44.42219294, 10.85230797]"
-      ],
-      "Farneta": [
-        "F503_CNO4 :: Via del Tracciolino, Farneta [44.34818097, 10.5696123]"
       ],
       "Febbio": [
         "L969_CNO10 :: Via San Lorenzo 1, Febbio [44.30595059, 10.43271585]",
@@ -6975,6 +6997,12 @@
         "PR_05/01w22 :: Siccomonte, Fidenza [44.806275, 10.07215229]",
         "PR_05/01w23 :: Casa San Michele, Fidenza [44.85959641, 10.0853345]",
         "PR_05/01w24 :: Via Antonio Sciesa 1, Fidenza [44.86196596, 10.07680581]"
+      ],
+      "Final Di Rero": [
+        "L390_CNO10 :: Via Giacomo Matteotti, Final di Rero [44.81694288, 11.88804697]",
+        "L390_CNO3 :: Via Alcide De Gasperi 2, Final di Rero [44.82204532, 11.89227581]",
+        "L390_CNO8 :: Via Cortili Mariani, Final di Rero [44.80772137, 11.87391201]",
+        "L390_CNO9 :: Via del Risparmio 1a, Final di Rero [44.81167632, 11.88315152]"
       ],
       "Finale Emilia": [
         "MO_06/01e11 :: Via Guercino, Finale Emilia [44.83745509, 11.30083418]",
@@ -7592,6 +7620,15 @@
         "MO_04/03e43 :: Via Corletto 5, Formigine [44.58300476, 10.82360289]",
         "MO_04/03e44 :: Via Battezzate 49a, Formigine [44.58156258, 10.82372195]"
       ],
+      "Formignana": [
+        "D713_CNO1 :: Piazza Cortilone 1, Formignana [44.84156188, 11.86091193]",
+        "D713_CNO2 :: Via del Lavoro, Formignana [44.8379716, 11.85884023]",
+        "D713_CNO3 :: Viale Cavour 1, Formignana [44.84317263, 11.85844407]",
+        "D713_CNO4 :: Via provinciale per Copparo 22, Formignana [44.84189009, 11.8552865]",
+        "D713_CNO5 :: Via Vicolo del Ponte 2, Formignana [44.84072736, 11.85835948]",
+        "D713_CNO6 :: Via Antonio Gramsci 99, Formignana [44.84652171, 11.86045538]",
+        "D713_CNO7 :: Via Giacomo Matteotti 23, Formignana [44.84152358, 11.86381667]"
+      ],
       "Fornovo Di Taro": [
         "PR_06/01w11 :: Via Armando Diaz 1, Fornovo di Taro [44.68933511, 10.09736212]",
         "PR_06/01w12 :: La salita, Fornovo di Taro [44.67445702, 10.09767757]"
@@ -7756,6 +7793,9 @@
         "E232_CNO5 :: Via Puccini 13, Gualtieri [44.90341293, 10.63631722]",
         "E232_CNO6 :: Strada Statale 63 46, Gualtieri [44.900002, 10.63139746]",
         "E232_CNO8 :: Via Giuseppe Di Vittorio, Gualtieri [44.89909253, 10.62626837]"
+      ],
+      "Guarda": [
+        "H360_CNO11 :: Via primo Maggio 3, Guarda [44.96908927, 11.7998478]"
       ],
       "Guastalla": [
         "E253_CNO1 :: Via Roncaglio Superiore 29a, Guastalla [44.89487081, 10.65020645]",
@@ -8039,12 +8079,12 @@
         "E547_CNO9 :: Strada Provinciale di Mulazzano 36, Lesignano de' Bagni [44.60868658, 10.30199641]",
         "PR_99/02w11 :: Via di Case Trombi 34, Lesignano de' Bagni [44.61114518, 10.28406089]"
       ],
+      "Levizzano": [
+        "A586_CNO12 :: Via Montassone, Levizzano [44.46600405, 10.63169236]"
+      ],
       "Levizzano Rangone": [
         "MO_18/04e22 :: Via Poggio 3, Levizzano Rangone [44.48274794, 10.91325707]",
         "MO_18/04e23 :: Via Guerro di Qua, Levizzano Rangone [44.48292912, 10.93343587]"
-      ],
-      "Levizzano": [
-        "A586_CNO12 :: Via Montassone, Levizzano [44.46600405, 10.63169236]"
       ],
       "Libolla": [
         "G184_CNO13 :: Strada Dianti 1, Libolla [44.74478843, 11.90446373]"
@@ -8344,6 +8384,10 @@
         "F016_CNO3 :: Via Lino Manarini 11, Masi Torello [44.79456589, 11.79391512]",
         "F016_CNO4 :: Via dei Mestieri 1, Masi Torello [44.79823721, 11.78884067]"
       ],
+      "Massa": [
+        "E675_CNO3 :: Via Decio Raggi 7, Massa [44.07505328, 12.32794226]",
+        "L184_CNO4 :: Via Mutilati di guerra, Massa [44.37717577, 10.58276464]"
+      ],
       "Massa Fiscaglia": [
         "M323_CNO1 :: Via del Mare 1, Massa Fiscaglia [44.80959291, 12.01803079]",
         "M323_CNO12 :: Via Zocchi 1, Massa Fiscaglia [44.81012574, 12.01184453]",
@@ -8366,10 +8410,6 @@
         "RA_04/04e22 :: Via Martiri della Libertà 63v, Massa Lombarda [44.44781441, 11.82304996]",
         "RA_04/04e23 :: Via della Costituzione 82, Massa Lombarda [44.44478637, 11.81928535]",
         "RA_04/04e24 :: ~Via don Lorenzo Milani, Massa Lombarda [44.43790908, 11.83084676]"
-      ],
-      "Massa": [
-        "E675_CNO3 :: Via Decio Raggi 7, Massa [44.07505328, 12.32794226]",
-        "L184_CNO4 :: Via Mutilati di guerra, Massa [44.37717577, 10.58276464]"
       ],
       "Massenzatica": [
         "F156_CNO10 :: Via Guido Monaco, Massenzatica [44.92693456, 12.17860957]"
@@ -8954,6 +8994,10 @@
         "BO_18/01w24 :: Via Carreggiata 96, Molinella [44.65436542, 11.64648383]",
         "BO_18/01w32 :: Via Alfiero Taddia, Molinella [44.66172261, 11.64527606]"
       ],
+      "Monchio": [
+        "G250_CNO2 :: Via Panoramica 163, Monchio [44.38651665, 10.64665014]",
+        "G250_CNO9 :: Piazza Caduti, Monchio [44.38396067, 10.64964995]"
+      ],
       "Monchio Delle Corti": [
         "F340_CNO1 :: Via Valscura, Monchio delle Corti [44.39141719, 10.09962304]",
         "F340_CNO11 :: Via Casanuova, Monchio delle Corti [44.42762578, 10.14742372]",
@@ -8971,10 +9015,6 @@
       "Monchio Delle Olle": [
         "C669_CNO18 :: Via Monchio alle Olle, Monchio delle Olle [44.54044288, 10.4159476]",
         "RE_03/01w11 :: Via Manini 2, Monchio delle Olle [44.54021582, 10.41626263]"
-      ],
-      "Monchio": [
-        "G250_CNO2 :: Via Panoramica 163, Monchio [44.38651665, 10.64665014]",
-        "G250_CNO9 :: Piazza Caduti, Monchio [44.38396067, 10.64964995]"
       ],
       "Mondaino": [
         "F346_CNO1 :: Via Borgo 20, Mondaino [43.85672271, 12.67189098]",
@@ -9114,13 +9154,13 @@
       "Montesanto": [
         "M110_CNO4 :: Via Umberto Terracini 3, Montesanto [44.73015164, 11.72828576]"
       ],
-      "Monticelli D'Ongina": [
-        "PC_04/01e11 :: Via Martiri della Libertà, Monticelli d'Ongina [45.0895634, 9.934012489]"
-      ],
       "Monticelli": [
         "F156_CNO14 :: Via quattro Novembre, Monticelli [44.91910322, 12.1883535]",
         "F156_CNO15 :: Piazza primo Maggio 1, Monticelli [44.91924422, 12.18749635]",
         "F156_CNO7 :: Via del Zenone 2, Monticelli [44.90264048, 12.22304785]"
+      ],
+      "Monticelli D'Ongina": [
+        "PC_04/01e11 :: Via Martiri della Libertà, Monticelli d'Ongina [45.0895634, 9.934012489]"
       ],
       "Montione": [
         "L764_CNO10 :: Via Roma 2, Montione [43.79324817, 12.00416783]",
@@ -9200,6 +9240,11 @@
         "F882_CNO29 :: Strada Sasso, Neviano degli Arduini [44.53002363, 10.28278203]",
         "F882_CNO30 :: Case Bodini, Neviano degli Arduini [44.54360657, 10.29349719]",
         "PR_12/01e11 :: Strada Campora, Neviano degli Arduini [44.52761014, 10.28283722]"
+      ],
+      "Nibbiano": [
+        "F885_CNO11 :: Strada Vicinale Ploia Cucù Lentino, Nibbiano [44.91375667, 9.342036149]",
+        "F885_CNO2 :: Via Roma 15, Nibbiano [44.90479807, 9.328404954]",
+        "F885_CNO9 :: Strada da vicinale Primaro, Nibbiano [44.9066123, 9.328327297]"
       ],
       "Nismozza": [
         "M364_CNO6 :: Via Nismozza, Nismozza [44.36190415, 10.30383564]"
@@ -9826,6 +9871,14 @@
         "MO_16/04w13 :: Via Casa Venturelli, Pavullo nel Frignano [44.35112526, 10.80114431]",
         "MO_16/04w14 :: Via Pratolino, Pavullo nel Frignano [44.34332043, 10.81482932]"
       ],
+      "Pecorara": [
+        "G399_CNO1 :: SP34 [44.87480413, 9.383688472]",
+        "G399_CNO2 :: Poggio Moresco [44.86647098, 9.356627319]",
+        "G399_CNO3 :: SP34 [44.8748091, 9.383705205]",
+        "G399_CNO6 :: Cicogni [44.84398891, 9.375023729]",
+        "G399_CNO7 :: SP34 [44.86113444, 9.384283175]",
+        "G399_CNO8 :: Peschiera [44.88875401, 9.371061929]"
+      ],
       "Pecorile": [
         "RE_03/01e33 :: Via Canossa 32, Pecorile [44.58391471, 10.50773877]"
       ],
@@ -10356,9 +10409,6 @@
         "B969_CNO4 :: Via Guido Rossa 9, Prati di Castel di Casio [44.1766874, 10.98385215]",
         "B969_CNO5 :: Via Don Fornasini 14, Prati di Castel di Casio [44.17887892, 10.98455953]"
       ],
-      "Predappio Alta": [
-        "H017_CNO26 :: Via Alessandro Manzoni 1, Predappio Alta [44.10893601, 11.98090538]"
-      ],
       "Predappio": [
         "H017_CNO1 :: Via San Francesco d'Assisi 77, Predappio [44.06687733, 11.96789164]",
         "H017_CNO14 :: Viale della Libertà 52, Predappio [44.09713647, 11.98156702]",
@@ -10374,6 +10424,9 @@
         "H017_CNO25 :: Via Gorizia 1, Predappio [44.10454196, 11.98135552]",
         "H017_CNO3 :: Via della Cava 2, Predappio [44.09127836, 11.98230947]",
         "H017_CNO8 :: Via Palazzole 2, Predappio [44.1470685, 11.99116714]"
+      ],
+      "Predappio Alta": [
+        "H017_CNO26 :: Via Alessandro Manzoni 1, Predappio Alta [44.10893601, 11.98090538]"
       ],
       "Premilcuore": [
         "H034_CNO1 :: SP3, Premilcuore [43.98648392, 11.78707618]",
@@ -11555,6 +11608,12 @@
         "PC_09/01e41 :: Mulinazzo, Rivergaro [44.88725757, 9.583293289]",
         "PC_09/01e42 :: Via Mameli 1, Rivergaro [44.89179598, 9.585081006]"
       ],
+      "Ro": [
+        "H360_CNO14 :: Via Pioppa 55, Ro [44.95252181, 11.76829857]",
+        "H360_CNO15 :: Via Roma 4, Ro [44.94629145, 11.76220878]",
+        "H360_CNO16 :: Via Ro 9, Ro [44.94124098, 11.75250522]",
+        "H360_CNO17 :: Piazza Umberto primo 16, Ro [44.94710629, 11.76053127]"
+      ],
       "Rocca Di Roffeno": [
         "BO_99/01e31 :: Via Carpineta 44, Rocca di Roffeno [44.27680817, 11.01786247]",
         "C075_CNO19 :: Via Ciliegiola 8, Rocca di Roffeno [44.29127657, 11.032645]",
@@ -11611,6 +11670,10 @@
       "Roncobilaccio": [
         "C296_CNO9 :: Via del Casello 2, Roncobilaccio [44.11354634, 11.2256797]"
       ],
+      "Roncodigà": [
+        "L390_CNO1 :: Via Canova 1a, Roncodigà [44.81508148, 11.90955347]",
+        "L390_CNO2 :: Via Carrara Lombardi, Roncodigà [44.81820768, 11.90183026]"
+      ],
       "Roncofreddo": [
         "H542_CNO1 :: Via Aldo Moro 7, Roncofreddo [44.04160931, 12.31701652]",
         "H542_CNO2 :: Via Provinciale Cento 650, Roncofreddo [44.04530583, 12.32278433]",
@@ -11648,6 +11711,9 @@
         "RE_13/01e12 :: Via Valesino 2, Rubiera [44.64793218, 10.78047475]",
         "RE_13/01e14 :: Via Tintoretto 1, Rubiera [44.66371251, 10.78285146]",
         "RE_13/12e13 :: Via Pablo Picasso 2, Rubiera [44.66271374, 10.78234555]"
+      ],
+      "Ruina": [
+        "H360_CNO9 :: Piazza Giuseppe Garibaldi 10, Ruina [44.91352618, 11.73928421]"
       ],
       "Russi": [
         "RA_05/01w11 :: Via Molinaccio 75, Russi [44.36741897, 12.04510617]",
@@ -11804,6 +11870,11 @@
         "H887_CNO8 :: Via Tononi 2d, San Giorgio Piacentino [44.94839879, 9.735070393]",
         "H887_CNO9 :: Via non definita, San Giorgio Piacentino [44.94943153, 9.730389118]"
       ],
+      "San Giovanni": [
+        "G184_CNO18 :: Via Martiri della Libertà 1, San Giovanni [44.72853908, 12.04448845]",
+        "G184_CNO19 :: Via Lidi Ferraresi 348, San Giovanni [44.7247509, 12.05241832]",
+        "G184_CNO21 :: Via Lidi Ferraresi 209, San Giovanni [44.72639261, 12.04927711]"
+      ],
       "San Giovanni Battista": [
         "MO_10/01e21 :: Via per Novi 2, San Giovanni Battista [44.90913113, 10.98005548]",
         "MO_10/01e22 :: Via per Novi 17b, San Giovanni Battista [44.90604817, 10.9712366]",
@@ -11854,11 +11925,6 @@
       ],
       "San Giovanni In Triario": [
         "BO_08/02w14 :: Via Roma 41, San Giovanni in Triario [44.61867369, 11.48570814]"
-      ],
-      "San Giovanni": [
-        "G184_CNO18 :: Via Martiri della Libertà 1, San Giovanni [44.72853908, 12.04448845]",
-        "G184_CNO19 :: Via Lidi Ferraresi 348, San Giovanni [44.7247509, 12.05241832]",
-        "G184_CNO21 :: Via Lidi Ferraresi 209, San Giovanni [44.72639261, 12.04927711]"
       ],
       "San Giuliano Piacentino": [
         "C288_CNO8 :: Via Dosso, San Giuliano Piacentino [45.07668897, 9.988934902]",
@@ -11966,6 +12032,9 @@
         "BO_07/01e41 :: Via Canali e Crociali, San Marino di Bentivoglio [44.60353553, 11.42066359]",
         "BO_07/01e42 :: Via di Mezzo di Saletto 58a, San Marino di Bentivoglio [44.60275548, 11.42097855]"
       ],
+      "San Martino": [
+        "F642_CNO21 :: Cà di Carletto, San Martino [44.28859973, 10.91758258]"
+      ],
       "San Martino In Pedriolo": [
         "B892_CNO10 :: Via L. Longo 7, San Martino in Pedriolo [44.35364535, 11.56098739]",
         "B892_CNO11 :: Via Fiagnano 14, San Martino in Pedriolo [44.34943907, 11.56607114]"
@@ -11980,9 +12049,6 @@
         "MO_15/01e31 :: Via fratelli Cervi 1, San Martino Secchia [44.79025106, 11.02066627]",
         "MO_15/01e32 :: Via Olmo 1, San Martino Secchia [44.79429198, 11.02426208]",
         "MO_15/01e33 :: Via Alcide De Gasperi 2, San Martino Secchia [44.79262394, 11.02226219]"
-      ],
-      "San Martino": [
-        "F642_CNO21 :: Cà di Carletto, San Martino [44.28859973, 10.91758258]"
       ],
       "San Mauro Pascoli": [
         "FC_10/02e11 :: Via Pablo Neruda 20, San Mauro Pascoli [44.10161776, 12.41263217]",
@@ -12000,16 +12066,16 @@
         "RN_08/03e31 :: Via Cagnona, San Mauro Pascoli [44.133369, 12.42161454]",
         "RN_08/03e32 :: Via Selve 847, San Mauro Pascoli [44.13098867, 12.43796649]"
       ],
+      "San Michele": [
+        "G649_CNO5 :: Via Casa Martello 3, San Michele [44.19968603, 10.61856769]",
+        "G649_CNO9 :: Via Giardini Sud, San Michele [44.20120294, 10.615393]"
+      ],
       "San Michele Tiorre": [
         "PR_04/01e13 :: Via Riccardo Tanzi 1, San Michele Tiorre [44.68866751, 10.25904666]",
         "PR_04/01e14 :: Logretto, San Michele Tiorre [44.70071338, 10.2530568]",
         "PR_04/01e21 :: Via Dante Alighieri, San Michele Tiorre [44.68777949, 10.26575009]",
         "PR_04/01e22 :: Parigi, San Michele Tiorre [44.68411032, 10.26575046]",
         "PR_04/01e23 :: Parigi, San Michele Tiorre [44.68187745, 10.26611783]"
-      ],
-      "San Michele": [
-        "G649_CNO5 :: Via Casa Martello 3, San Michele [44.19968603, 10.61856769]",
-        "G649_CNO9 :: Via Giardini Sud, San Michele [44.20120294, 10.615393]"
       ],
       "San Nazzaro": [
         "PC_04/01e14 :: Via Granelli, San Nazzaro [45.07862667, 9.899732789]"
@@ -12083,6 +12149,13 @@
         "MO_15/01e14 :: Piazza Antonio Gramsci 9a, San Pietro in Elda [44.79007019, 11.02423928]",
         "MO_15/01e23 :: Via del Mulino, San Pietro in Elda [44.7852818, 11.02334898]"
       ],
+      "San Polo": [
+        "G747_CNO2 :: Via Guglielmo Marconi 6, San Polo [44.95717512, 9.695636498]",
+        "PR_16/01e11 :: Via 1 Maggio 38, San Polo [44.89017138, 10.36080861]",
+        "PR_16/01e12 :: Via Santi 19, San Polo [44.88764574, 10.35992865]",
+        "PR_16/01e13 :: Via 1 Maggio, San Polo [44.88953455, 10.36751404]",
+        "PR_16/01e14 :: Via Padre Pio, San Polo [44.89878126, 10.33454315]"
+      ],
       "San Polo D'Enza": [
         "I123_CNO1 :: Via Don Minzoni 1, San Polo d'Enza [44.62448256, 10.42466596]",
         "I123_CNO10 :: Piazza Primo Maggio, San Polo d'Enza [44.62553586, 10.42152298]",
@@ -12097,13 +12170,6 @@
         "I123_CNO6 :: Via Gian Maestri 1/1, San Polo d'Enza [44.62536572, 10.42720194]",
         "I123_CNO7 :: Via Venticinque Aprile, San Polo d'Enza [44.62553205, 10.42420052]",
         "I123_CNO8 :: Via della Costituzione, San Polo d'Enza [44.62073128, 10.41801225]"
-      ],
-      "San Polo": [
-        "G747_CNO2 :: Via Guglielmo Marconi 6, San Polo [44.95717512, 9.695636498]",
-        "PR_16/01e11 :: Via 1 Maggio 38, San Polo [44.89017138, 10.36080861]",
-        "PR_16/01e12 :: Via Santi 19, San Polo [44.88764574, 10.35992865]",
-        "PR_16/01e13 :: Via 1 Maggio, San Polo [44.88953455, 10.36751404]",
-        "PR_16/01e14 :: Via Padre Pio, San Polo [44.89878126, 10.33454315]"
       ],
       "San Possidonio": [
         "I128_CNO1 :: Pista ciclabile San Possidonio-Pioppa, San Possidonio [44.87197907, 10.97712224]",
@@ -12160,6 +12226,12 @@
         "M381_CNO26 :: Via Giacomo Matteotti 45, Sant'Agostino [44.79150304, 11.38402392]",
         "M381_CNO9 :: Via Giacomo Matteotti 7, Sant'Agostino [44.79166524, 11.38628133]"
       ],
+      "Sant'Andrea": [
+        "G566_CNO11 :: Via Guglielmo Marconi 7, Sant'Andrea [44.21525437, 11.23467291]",
+        "G566_CNO13 :: Via Provinciale Sant'Andrea 6, Sant'Andrea [44.21622102, 11.21894167]",
+        "G566_CNO20 :: Via Provinciale Sant'Andrea 112, Sant'Andrea [44.20602459, 11.22397817]",
+        "M324_CNO8 :: Via Collina, Sant'Andrea [44.0052578, 12.40175262]"
+      ],
       "Sant'Andrea Bagni": [
         "PR_06/02e14 :: Via Claudio Abbado, Sant'Andrea Bagni [44.72269987, 10.09240441]",
         "PR_06/02e21 :: Via Giacomo Puccini 10, Sant'Andrea Bagni [44.72218654, 10.08790218]",
@@ -12182,12 +12254,6 @@
         "H801_CNO7 :: Via Provinciale Conca, Sant'Andrea in Casale [43.91476998, 12.63916183]",
         "H801_CNO8 :: Via Bologna 132, Sant'Andrea in Casale [43.92760932, 12.64958929]",
         "H801_CNO9 :: Via Ca' Togni 306, Sant'Andrea in Casale [43.9309343, 12.64957288]"
-      ],
-      "Sant'Andrea": [
-        "G566_CNO11 :: Via Guglielmo Marconi 7, Sant'Andrea [44.21525437, 11.23467291]",
-        "G566_CNO13 :: Via Provinciale Sant'Andrea 6, Sant'Andrea [44.21622102, 11.21894167]",
-        "G566_CNO20 :: Via Provinciale Sant'Andrea 112, Sant'Andrea [44.20602459, 11.22397817]",
-        "M324_CNO8 :: Via Collina, Sant'Andrea [44.0052578, 12.40175262]"
       ],
       "Sant'Andreapelago": [
         "G649_CNO1 :: Via Giardini Nord, Sant'Andreapelago [44.20726493, 10.61524869]",
@@ -12402,6 +12468,10 @@
         "F597_CNO13 :: Via Idice 289, Savazza [44.29850854, 11.39857404]",
         "F597_CNO3 :: Via Idice 304/1, Savazza [44.30446795, 11.399087]"
       ],
+      "Savignano": [
+        "E187_CNO18 :: Località Limentra, Savignano [44.22718432, 11.05894945]",
+        "E187_CNO2 :: SP62, Savignano [44.22602492, 11.05898111]"
+      ],
       "Savignano Sul Rubicone": [
         "FC_10/01e11 :: ~Via Circonvallazione, Savignano sul Rubicone [44.09267342, 12.39387288]",
         "FC_10/01e12 :: Via Raffaello Sanzio 26, Savignano sul Rubicone [44.09523536, 12.39569894]",
@@ -12419,10 +12489,6 @@
         "I472_CNO2 :: Fiumicino, Savignano sul Rubicone [44.12195674, 12.40012874]",
         "RN_08/02e11 :: Via Portazza 2, Savignano sul Rubicone [44.15659032, 12.42655652]",
         "RN_08/02e12 :: Strada Rubicone Destra 2, Savignano sul Rubicone [44.15771931, 12.42431846]"
-      ],
-      "Savignano": [
-        "E187_CNO18 :: Località Limentra, Savignano [44.22718432, 11.05894945]",
-        "E187_CNO2 :: SP62, Savignano [44.22602492, 11.05898111]"
       ],
       "Savognatica": [
         "B825_CNO1 :: Via Francesco Crispi 73, Savognatica [44.45427959, 10.51587943]",
@@ -12474,15 +12540,15 @@
         "F882_CNO28 :: Strada Monchio, Scurano [44.51204495, 10.2986252]",
         "F882_CNO3 :: La Chiastra, Scurano [44.49997885, 10.30328655]"
       ],
-      "Selva Grossa": [
-        "E548_CNO2 :: Strada del Fagiano, Selva Grossa [44.60563096, 10.00356626]",
-        "E548_CNO6 :: Strada dei Laghi 1, Selva Grossa [44.61385713, 9.99259086]"
-      ],
       "Selva": [
         "D555_CNO10 :: Strada statale 654 di Val Nure, Selva [44.59448793, 9.484392672]",
         "D555_CNO19 :: Torrio sopra, Selva [44.5801335, 9.423849945]",
         "F357_CNO15 :: Via Giardini Sud, Selva [44.41298418, 10.79552581]",
         "F357_CNO16 :: Via Giardini Sud 3990, Selva [44.39603522, 10.79818755]"
+      ],
+      "Selva Grossa": [
+        "E548_CNO2 :: Strada del Fagiano, Selva Grossa [44.60563096, 10.00356626]",
+        "E548_CNO6 :: Strada dei Laghi 1, Selva Grossa [44.61385713, 9.99259086]"
       ],
       "Selvapiana": [
         "C669_CNO15 :: Località Selvapiana 72, Selvapiana [44.56442713, 10.41409724]"
@@ -12579,10 +12645,6 @@
         "MO_02/06e32 :: Via Stradello Morello 99, Soliera [44.73270781, 10.92069017]",
         "MO_02/06e33 :: Via San Michele, Soliera [44.71921794, 10.93689003]"
       ],
-      "Solignano Nuovo": [
-        "MO_18/04e12 :: Via dei Mille 29, Solignano Nuovo [44.51007295, 10.94618475]",
-        "MO_18/04e14 :: Via Croce 5d, Solignano Nuovo [44.50917971, 10.91929265]"
-      ],
       "Solignano": [
         "I803_CNO1 :: Via Roma 13, Solignano [44.61443214, 9.979407082]",
         "I803_CNO10 :: Strada Bottione - Prelerna - Solignano 67, Solignano [44.61324142, 9.921808598]",
@@ -12591,6 +12653,10 @@
         "I803_CNO5 :: Autostrada della Cisa 17, Solignano [44.68033801, 10.07463201]",
         "I803_CNO6 :: Strada statale 308 di Fondo Valle Taro 5, Solignano [44.61496412, 9.978758959]",
         "I803_CNO7 :: Strada Selva Priana 178, Solignano [44.65805975, 9.91779736]"
+      ],
+      "Solignano Nuovo": [
+        "MO_18/04e12 :: Via dei Mille 29, Solignano Nuovo [44.51007295, 10.94618475]",
+        "MO_18/04e14 :: Via Croce 5d, Solignano Nuovo [44.50917971, 10.91929265]"
       ],
       "Sologno": [
         "L969_CNO7 :: Via della Villa 18, Sologno [44.36575512, 10.39514505]",
@@ -12864,6 +12930,13 @@
       "Trentino": [
         "D486_CNO1 :: Via Trentino 170a, Trentino [44.23412841, 10.82755963]",
         "MO_11/01e31 :: Via Trentino, Trentino [44.23958232, 10.83090526]"
+      ],
+      "Tresigallo": [
+        "L390_CNO11 :: Via del Mare 161, Tresigallo [44.81645375, 11.89163097]",
+        "L390_CNO12 :: Via Quattro Novembre 1, Tresigallo [44.8192516, 11.89722475]",
+        "L390_CNO4 :: Via primo Maggio 2, Tresigallo [44.81852262, 11.89253138]",
+        "L390_CNO5 :: Via Arturo Toscanini [44.81531176, 11.89977265]",
+        "L390_CNO6 :: Via Filippo Corridoni 35, Tresigallo [44.81917299, 11.89478858]"
       ],
       "Trignano": [
         "MO_19/01e21 :: San Martino in Rio, Trignano [44.7323079, 10.78941453]",
@@ -13252,6 +13325,9 @@
         "M367_CNO4 :: Via Gino Boni 12, Zibello [45.01989041, 10.13238089]",
         "M367_CNO5 :: Via Giaranzana 53, Zibello [45.01203611, 10.11432761]",
         "M367_CNO9 :: Via Lavezzoli, Zibello [45.01842953, 10.12552006]"
+      ],
+      "Zocca": [
+        "H360_CNO12 :: Via Ca' Pompa 16, Zocca [44.92852593, 11.74762418]"
       ],
       "Zola Predosa": [
         "BOH_1/06w11 :: Via Gesso 103, Zola Predosa [44.48267604, 11.23699136]",
