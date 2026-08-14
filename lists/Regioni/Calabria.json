@@ -649,12 +649,12 @@
         "D289_CNO2 :: Cammaratea, Cirella [39.71478937, 15.81712837]",
         "D289_CNO3 :: Cammaratea, Cirella [39.69911204, 15.8188413]"
       ],
+      "Cirò": [
+        "C725_CNO1 :: Strada Provinciale 4 Contrada Cappella, Cirò [39.40695723, 17.06762582]"
+      ],
       "Cirò Marina": [
         "C726_CNO1 :: Strada Provinciale 5 Krimisa, Cirò Marina [39.35918229, 17.11273698]",
         "C726_CNO2 :: Lungomare Nord Stefano Pugliese, Cirò Marina [39.38215233, 17.14106274]"
-      ],
-      "Cirò": [
-        "C725_CNO1 :: Strada Provinciale 4 Contrada Cappella, Cirò [39.40695723, 17.06762582]"
       ],
       "Cittanova": [
         "C747_CNO1 :: Contrada San Pietro, Cittanova [38.40202156, 16.0380629]",
@@ -664,14 +664,23 @@
       "Civita": [
         "C763_CNO1 :: Via Garibaldi, Civita [39.8297151, 16.31305507]"
       ],
-      "Condofuri Marina": [
-        "C954_CNO2 :: Via non definita, Condofuri Marina [37.93559468, 15.88108096]"
-      ],
       "Condofuri": [
         "C954_CNO3 :: Grotta, Condofuri [38.00312524, 15.85801734]"
       ],
+      "Condofuri Marina": [
+        "C954_CNO2 :: Via non definita, Condofuri Marina [37.93559468, 15.88108096]"
+      ],
       "Contrada Boggiano": [
         "I956_CNO2 :: ~SS110, Contrada Boggiano [38.48408552, 16.37874342]"
+      ],
+      "Corigliano-Rossano": [
+        "D005_CNO4 :: Strada Provinciale 187 Corigliano-Piano Caruso, Corigliano-Rossano [39.56089342, 16.52773523]",
+        "D005_CNO6 :: Strada Provinciale 187 Corigliano-Piano Caruso, Corigliano-Rossano [39.56232436, 16.52724026]",
+        "D005_CNO8 :: Via Ada Negri, Corigliano-Rossano [39.6252488, 16.51628393]",
+        "H579_CNO1 :: Via Regina, Corigliano-Rossano [39.61943567, 16.68705108]",
+        "H579_CNO2 :: Contrada Galderate, Corigliano-Rossano [39.61769868, 16.6575153]",
+        "H579_CNO4 :: Contrada Sant'Irene, Corigliano-Rossano [39.61845676, 16.59256888]",
+        "H579_CNO6 :: Contrada Momena, Corigliano-Rossano [39.61525852, 16.60564734]"
       ],
       "Cortale": [
         "D049_CNO1 :: ~SP92, Cortale [38.8326398, 16.40044897]"
@@ -1943,13 +1952,13 @@
       "San Gregorio D'Ippona": [
         "VV_01/02e14 :: Regina Elena, San Gregorio d'Ippona [38.66782586, 16.08874715]"
       ],
-      "San Lorenzo Del Vallo": [
-        "H962_CNO1 :: Via non definita, San Lorenzo del Vallo [39.70015682, 16.25538895]",
-        "H962_CNO2 :: Fedula, San Lorenzo del Vallo [39.69398608, 16.25286898]"
-      ],
       "San Lorenzo": [
         "H959_CNO1 :: San Pantaleone, San Lorenzo [37.98792982, 15.83985875]",
         "H959_CNO2 :: Santa Maria, San Lorenzo [38.03151377, 15.84685027]"
+      ],
+      "San Lorenzo Del Vallo": [
+        "H962_CNO1 :: Via non definita, San Lorenzo del Vallo [39.70015682, 16.25538895]",
+        "H962_CNO2 :: Fedula, San Lorenzo del Vallo [39.69398608, 16.25286898]"
       ],
       "San Luca": [
         "H970_CNO1 :: Via non definita, San Luca [38.13814228, 16.11828618]"
