@@ -285,11 +285,6 @@
         "A329_CNO5 :: Frontale, Apiro [43.35364826, 13.10561827]",
         "A329_CNO7 :: Frontale, Apiro [43.34982601, 13.10397703]"
       ],
-      "Appignano Del Tronto": [
-        "A335_CNO1 :: Strada Provinciale 220 San Martino 24, Appignano del Tronto [42.89850365, 13.66771968]",
-        "A335_CNO2 :: ~Strada Provinciale 4 Appignano, Appignano del Tronto [42.89911307, 13.65649334]",
-        "A335_CNO3 :: Viale Rimembranze, Appignano del Tronto [42.89990713, 13.66309975]"
-      ],
       "Appignano": [
         "A334_CNO1 :: Calamante-Galli, Appignano [43.35752291, 13.34971737]",
         "A334_CNO2 :: Borgo 20 Settembre, Appignano [43.36426752, 13.34709151]",
@@ -298,6 +293,11 @@
         "A334_CNO7 :: Via Bramante, Appignano [43.36111233, 13.35445265]",
         "A334_CNO8 :: Viale Dante Alighieri, Appignano [43.36153821, 13.34813957]",
         "A334_CNO9 :: Via Alfieri, Appignano [43.35961471, 13.34851707]"
+      ],
+      "Appignano Del Tronto": [
+        "A335_CNO1 :: Strada Provinciale 220 San Martino 24, Appignano del Tronto [42.89850365, 13.66771968]",
+        "A335_CNO2 :: ~Strada Provinciale 4 Appignano, Appignano del Tronto [42.89911307, 13.65649334]",
+        "A335_CNO3 :: Viale Rimembranze, Appignano del Tronto [42.89990713, 13.66309975]"
       ],
       "Arcevia": [
         "A366_CNO1 :: Montefortino, Arcevia [43.50253126, 12.94577347]",
@@ -429,6 +429,9 @@
         "AP_01/04e11 :: Via Giuseppe Odoardi, Ascoli Piceno [42.85808082, 13.64246307]",
         "AP_01/04e12 :: Via Emidio Luzi 41, Ascoli Piceno [42.86113252, 13.6418112]",
         "AP_01/04e13 :: Via Emidio Luzi, Ascoli Piceno [42.86494981, 13.63954473]"
+      ],
+      "Auditore": [
+        "A493_CNO6 :: Auditore [43.81285748, 12.55489262]"
       ],
       "Balzo": [
         "F516_CNO3 :: Forca, Balzo [42.84042811, 13.33349672]",
@@ -567,6 +570,12 @@
       ],
       "Caselle": [
         "E868_CNO4 :: Case Popolari Campo Sportivo, Caselle [42.82892361, 13.68789085]"
+      ],
+      "Casinina": [
+        "A493_CNO4 :: Strada Provinciale Auditore, Casinina [43.8216351, 12.57110498]",
+        "A493_CNO7 :: Via Provinciale, Casinina [43.8159898, 12.58757076]",
+        "A493_CNO8 :: Mulino Guerra, Casinina [43.81530348, 12.58993369]",
+        "A493_CNO9 :: Mulino Guerra, Casinina [43.81879316, 12.58935766]"
       ],
       "Castel Colonna": [
         "M318_CNO4 :: Via Marconi, Castel Colonna [43.67838666, 13.10524336]",
@@ -1102,17 +1111,17 @@
         "D760_CNO1 :: Contrada Lamatore, Francavilla d'Ete [43.18706702, 13.54100152]",
         "D760_CNO2 :: Santissimo Crocifisso, Francavilla d'Ete [43.19021624, 13.54236569]"
       ],
+      "Fratte": [
+        "I460_CNO1 :: Corso Europa, Fratte [43.89314393, 12.53061304]",
+        "I460_CNO2 :: Via Dante Alighieri, Fratte [43.89063086, 12.53043758]",
+        "I460_CNO3 :: Corso Europa, Fratte [43.8872184, 12.52745507]"
+      ],
       "Fratte Rosa": [
         "D791_CNO1 :: Via San Giovanni, Fratte Rosa [43.62919996, 12.91722219]",
         "D791_CNO2 :: Via Cavallina, Fratte Rosa [43.64530399, 12.90968255]",
         "D791_CNO3 :: Via dei Lubachi, Fratte Rosa [43.63395267, 12.90084738]",
         "D791_CNO4 :: Strada Provinciale 41 Fratte Rosa, Fratte Rosa [43.64464577, 12.89312122]",
         "D791_CNO5 :: Convento di Santa Vittoria, Fratte Rosa [43.63692225, 12.89748382]"
-      ],
-      "Fratte": [
-        "I460_CNO1 :: Corso Europa, Fratte [43.89314393, 12.53061304]",
-        "I460_CNO2 :: Via Dante Alighieri, Fratte [43.89063086, 12.53043758]",
-        "I460_CNO3 :: Corso Europa, Fratte [43.8872184, 12.52745507]"
       ],
       "Frontino": [
         "D807_CNO1 :: Via della Libertà, Frontino [43.76413535, 12.37828288]",
@@ -1348,14 +1357,6 @@
         "E743_CNO3 :: Via Foglia, Lunano [43.73575627, 12.44465865]",
         "E743_CNO4 :: Corso Roma, Lunano [43.73072671, 12.44187071]"
       ],
-      "Macerata Feltria": [
-        "E785_CNO1 :: Carcangelone, Macerata Feltria [43.7999908, 12.44756318]",
-        "E785_CNO2 :: Carcangelone, Macerata Feltria [43.8056348, 12.44514903]",
-        "E785_CNO4 :: Via Giacomo Matteotti, Macerata Feltria [43.80322328, 12.43533623]",
-        "E785_CNO5 :: Carcangelone, Macerata Feltria [43.80340551, 12.44091087]",
-        "E785_CNO6 :: Carcangelone, Macerata Feltria [43.80140673, 12.44542867]",
-        "E785_CNO7 :: Via della Resistenza, Macerata Feltria [43.80497329, 12.4389609]"
-      ],
       "Macerata": [
         "E783_CNO1 :: Montanello, Macerata [43.32331616, 13.42651537]",
         "E783_CNO2 :: Via Domenico Troili, Macerata [43.31836552, 13.42374774]",
@@ -1445,6 +1446,14 @@
         "MC_01/03w44 :: Via Salvatore Quasimodo, Macerata [43.28299332, 13.42789815]",
         "MC_01/04e11 :: Via Giovanni Verga, Macerata [43.28276113, 13.42361669]"
       ],
+      "Macerata Feltria": [
+        "E785_CNO1 :: Carcangelone, Macerata Feltria [43.7999908, 12.44756318]",
+        "E785_CNO2 :: Carcangelone, Macerata Feltria [43.8056348, 12.44514903]",
+        "E785_CNO4 :: Via Giacomo Matteotti, Macerata Feltria [43.80322328, 12.43533623]",
+        "E785_CNO5 :: Carcangelone, Macerata Feltria [43.80340551, 12.44091087]",
+        "E785_CNO6 :: Carcangelone, Macerata Feltria [43.80140673, 12.44542867]",
+        "E785_CNO7 :: Via della Resistenza, Macerata Feltria [43.80497329, 12.4389609]"
+      ],
       "Magliano Di Tenna": [
         "E807_CNO1 :: Monte Vettore, Magliano di Tenna [43.13712949, 13.58782986]",
         "E807_CNO2 :: Molino, Magliano di Tenna [43.12389694, 13.58706231]",
@@ -1523,6 +1532,13 @@
         "F051_CNO7 :: Vicolo Torrione, Matelica [43.25312411, 13.00834324]",
         "F051_CNO8 :: Via Guglielmo Oberdan, Matelica [43.25627268, 13.00983692]",
         "F051_CNO9 :: Strada Provinciale 256 Muccese, Matelica [43.24781987, 13.01071449]"
+      ],
+      "Mercatale": [
+        "I459_CNO10 :: Sassocorvaro, Mercatale [43.78097646, 12.4834785]",
+        "I459_CNO11 :: Sassocorvaro, Mercatale [43.78627655, 12.48973883]",
+        "I459_CNO2 :: Sassocorvaro, Mercatale [43.78537492, 12.48730106]",
+        "I459_CNO3 :: Via Leonardo da Vinci, Mercatale [43.78185735, 12.4864223]",
+        "I459_CNO9 :: Via Provinciale, Mercatale [43.79164318, 12.49212967]"
       ],
       "Mercatello Sul Metauro": [
         "F135_CNO1 :: Via Bolciano 3, Mercatello sul Metauro [43.64739943, 12.3421439]",
@@ -1739,6 +1755,11 @@
       "Montecchio": [
         "F533_CNO21 :: Via Apsella, Montecchio [43.84028443, 12.77079369]"
       ],
+      "Montecosaro": [
+        "F482_CNO11 :: Via San Lorenzo 56, Montecosaro [43.31381975, 13.6375858]",
+        "F482_CNO4 :: Via Circonvallazione della Divina Provvidenza, Montecosaro [43.31768281, 13.63597375]",
+        "F482_CNO9 :: Via del Pietrone 8, Montecosaro [43.31636509, 13.63841791]"
+      ],
       "Montecosaro Scalo": [
         "F482_CNO1 :: Via Michelangelo Buonarroti 22, Montecosaro Scalo [43.28242465, 13.63929463]",
         "F482_CNO10 :: Via Cristoforo Colombo 50, Montecosaro Scalo [43.28334173, 13.64095212]",
@@ -1752,11 +1773,6 @@
         "F482_CNO6 :: Via Goffredo Mameli 22, Montecosaro Scalo [43.2853098, 13.64467642]",
         "F482_CNO7 :: Cave, Montecosaro Scalo [43.28352002, 13.64595434]",
         "F482_CNO8 :: Via Roma 5, Montecosaro Scalo [43.28640191, 13.646537]"
-      ],
-      "Montecosaro": [
-        "F482_CNO11 :: Via San Lorenzo 56, Montecosaro [43.31381975, 13.6375858]",
-        "F482_CNO4 :: Via Circonvallazione della Divina Provvidenza, Montecosaro [43.31768281, 13.63597375]",
-        "F482_CNO9 :: Via del Pietrone 8, Montecosaro [43.31636509, 13.63841791]"
       ],
       "Montedinove": [
         "F487_CNO1 :: Via Giosuè del Duca 8, Montedinove [42.97175732, 13.58921257]",
@@ -2080,16 +2096,6 @@
         "F533_CNO8 :: Via Roma 108, Osteria Nuova [43.84690839, 12.78675358]",
         "M331_CNO14 :: Via Lucio Fontana, Osteria Nuova [43.86181826, 12.77342101]"
       ],
-      "Ostra Vetere": [
-        "F581_CNO1 :: Borgo Cavour, Ostra Vetere [43.60576517, 13.05972428]",
-        "F581_CNO2 :: Via Santa Croce, Ostra Vetere [43.60753266, 13.06059254]",
-        "F581_CNO3 :: Strada Provinciale dell'Acquasanta, Ostra Vetere [43.6027583, 13.06355181]",
-        "F581_CNO4 :: Gambacane, Ostra Vetere [43.60206755, 13.05633564]",
-        "F581_CNO5 :: Strada Provinciale dell'Acquasanta, Ostra Vetere [43.59659629, 13.09199599]",
-        "F581_CNO6 :: Contrada San Severo, Ostra Vetere [43.60129522, 13.06645097]",
-        "F581_CNO7 :: Via Portapesa, Ostra Vetere [43.60287122, 13.05844825]",
-        "F581_CNO9 :: Via non definita, Ostra Vetere [43.61511365, 13.04148231]"
-      ],
       "Ostra": [
         "F401_CNO1 :: Largo Marina, Ostra [43.61724366, 13.15928153]",
         "F401_CNO10 :: Largo Marina, Ostra [43.61725674, 13.15922759]",
@@ -2105,6 +2111,16 @@
         "F401_CNO8 :: Casine, Ostra [43.63553722, 13.14177746]",
         "F401_CNO9 :: Via Giacomo Matteotti, Ostra [43.61171333, 13.15538058]",
         "F581_CNO8 :: Via Vaccarilese, Ostra [43.59177026, 13.10793028]"
+      ],
+      "Ostra Vetere": [
+        "F581_CNO1 :: Borgo Cavour, Ostra Vetere [43.60576517, 13.05972428]",
+        "F581_CNO2 :: Via Santa Croce, Ostra Vetere [43.60753266, 13.06059254]",
+        "F581_CNO3 :: Strada Provinciale dell'Acquasanta, Ostra Vetere [43.6027583, 13.06355181]",
+        "F581_CNO4 :: Gambacane, Ostra Vetere [43.60206755, 13.05633564]",
+        "F581_CNO5 :: Strada Provinciale dell'Acquasanta, Ostra Vetere [43.59659629, 13.09199599]",
+        "F581_CNO6 :: Contrada San Severo, Ostra Vetere [43.60129522, 13.06645097]",
+        "F581_CNO7 :: Via Portapesa, Ostra Vetere [43.60287122, 13.05844825]",
+        "F581_CNO9 :: Via non definita, Ostra Vetere [43.61511365, 13.04148231]"
       ],
       "Palmiano": [
         "G289_CNO1 :: Località Castel San Pietro, Palmiano [42.92081514, 13.46353882]",
@@ -2373,6 +2389,15 @@
         "G551_CNO7 :: Via Giacomo Matteotti, Piandimeleto [43.72448307, 12.41462158]",
         "G551_CNO8 :: Villa da Piano, Piandimeleto [43.73074825, 12.37363105]"
       ],
+      "Piane": [
+        "D477_CNO10 :: Volpi II, Piane [43.09625261, 13.49494862]",
+        "D477_CNO11 :: Strada Provinciale 123 Madonnetta, Piane [43.09024973, 13.49366372]",
+        "D477_CNO12 :: Via Aurelia, Piane [43.10626403, 13.47094684]",
+        "D477_CNO2 :: Strada Provinciale 29 Faleriense-Monte, Piane [43.10343052, 13.47202151]",
+        "D477_CNO5 :: Via Aurelia, Piane [43.10808739, 13.47442883]",
+        "D477_CNO7 :: Viale della Resistenza, Piane [43.10058453, 13.49959016]",
+        "D477_CNO9 :: Zona Industriale Piane di Falerone, Piane [43.09790103, 13.49634897]"
+      ],
       "Piane Della Rancia": [
         "F567_CNO4 :: Ex Scuola di Santa Lucia, Piane della Rancia [43.24263805, 13.36977224]"
       ],
@@ -2393,15 +2418,6 @@
         "D652_CNO19 :: Via Sant'Antonio, Piane di Morro [42.8199183, 13.65123488]",
         "D652_CNO3 :: Via Verona, Piane di Morro [42.82502647, 13.6563485]",
         "D652_CNO6 :: Sant'Antonio, Piane di Morro [42.82970578, 13.64258367]"
-      ],
-      "Piane": [
-        "D477_CNO10 :: Volpi II, Piane [43.09625261, 13.49494862]",
-        "D477_CNO11 :: Strada Provinciale 123 Madonnetta, Piane [43.09024973, 13.49366372]",
-        "D477_CNO12 :: Via Aurelia, Piane [43.10626403, 13.47094684]",
-        "D477_CNO2 :: Strada Provinciale 29 Faleriense-Monte, Piane [43.10343052, 13.47202151]",
-        "D477_CNO5 :: Via Aurelia, Piane [43.10808739, 13.47442883]",
-        "D477_CNO7 :: Viale della Resistenza, Piane [43.10058453, 13.49959016]",
-        "D477_CNO9 :: Zona Industriale Piane di Falerone, Piane [43.09790103, 13.49634897]"
       ],
       "Piedilama": [
         "A437_CNO11 :: Strada Provinciale 129 Trisungo d'Arquata - Tufo, Piedilama [42.77482646, 13.29760944]",
@@ -2587,14 +2603,14 @@
         "H321_CNO8 :: Via Macinadoro, Ripatransone [42.99379678, 13.7658079]",
         "H321_CNO9 :: Contrada Tesino / Contrada San Rustico, Ripatransone [42.97307907, 13.76407161]"
       ],
-      "Ripe San Ginesio": [
-        "H323_CNO1 :: Strada Statale 78 Picena, Ripe San Ginesio [43.14213142, 13.37899103]",
-        "H323_CNO2 :: Via Giovanni Maiani, Ripe San Ginesio [43.14190624, 13.36745146]"
-      ],
       "Ripe": [
         "M318_CNO1 :: Ripe, Ripe [43.67256718, 13.10340974]",
         "M318_CNO11 :: Via Gioacchino Rossini, Ripe [43.66810031, 13.10463625]",
         "M318_CNO5 :: Ripe, Ripe [43.66569464, 13.10729798]"
+      ],
+      "Ripe San Ginesio": [
+        "H323_CNO1 :: Strada Statale 78 Picena, Ripe San Ginesio [43.14213142, 13.37899103]",
+        "H323_CNO2 :: Via Giovanni Maiani, Ripe San Ginesio [43.14190624, 13.36745146]"
       ],
       "Roccafluvione": [
         "H390_CNO1 :: Strada Statale 78 Picena, Roccafluvione [42.85540643, 13.48043722]",
@@ -2899,6 +2915,12 @@
         "I436_CNO6 :: Contrada Campanotico, Sarnano [43.04128995, 13.28293869]",
         "I436_CNO8 :: Brilli (Sant'Eusebio), Sarnano [43.01903596, 13.2790888]",
         "I436_CNO9 :: Via San Rocco 3, Sarnano [43.03239015, 13.29545457]"
+      ],
+      "Sassocorvaro": [
+        "I459_CNO13 :: Strada Provinciale Sassocorvaro, Sassocorvaro [43.77990024, 12.49503746]",
+        "I459_CNO4 :: Strada Provinciale San Donato in Taviglione, Sassocorvaro [43.78261984, 12.49985168]",
+        "I459_CNO5 :: Sassocorvaro [43.77834883, 12.52746476]",
+        "I459_CNO7 :: Sassocorvaro, Sassocorvaro [43.78080144, 12.49829306]"
       ],
       "Sassofeltrio": [
         "I460_CNO5 :: Strada Provinciale Valle Sant'Anastasia, Sassofeltrio [43.89468082, 12.4410021]",
