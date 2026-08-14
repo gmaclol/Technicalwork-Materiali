@@ -1122,6 +1122,21 @@
         "PN_05/02e33 :: Via Policreta 6a, Fiume Veneto [45.93790585, 12.72782919]",
         "PN_05/02e34 :: Via Pian di Pan 50a, Fiume Veneto [45.94204771, 12.72396036]"
       ],
+      "Fiumicello Villa Vicentina": [
+        "D627_CNO1 :: Via Pietro Martinis 3, Fiumicello Villa Vicentina [45.791258, 13.4121872]",
+        "D627_CNO10 :: Via Indipendenza 51, Fiumicello Villa Vicentina [45.78715464, 13.4122851]",
+        "D627_CNO2 :: Via Venticinque Aprile 44, Fiumicello Villa Vicentina [45.78817425, 13.40960201]",
+        "D627_CNO3 :: Via Anna Frank 17, Fiumicello Villa Vicentina [45.80490002, 13.41658997]",
+        "D627_CNO4 :: Via monsignor Adamo Zanetti 2, Fiumicello Villa Vicentina [45.79140856, 13.40970169]",
+        "D627_CNO5 :: Via Passarella 5, Fiumicello Villa Vicentina [45.77421828, 13.40823397]",
+        "D627_CNO6 :: Via Cantonina 2, Fiumicello Villa Vicentina [45.79129239, 13.41617471]",
+        "D627_CNO7 :: Via Libertà 14, Fiumicello Villa Vicentina [45.79371591, 13.40574129]",
+        "D627_CNO8 :: Via Trieste 120a, Fiumicello Villa Vicentina [45.80517509, 13.41347115]",
+        "D627_CNO9 :: Via Trieste 4, Fiumicello Villa Vicentina [45.79138393, 13.4136133]",
+        "M034_CNO1 :: Via Gorizia 42, Fiumicello Villa Vicentina [45.81805997, 13.39672102]",
+        "M034_CNO2 :: Via Don Augusto Miceu, Fiumicello Villa Vicentina [45.80889884, 13.39448511]",
+        "M034_CNO3 :: Via Giuseppe Garibaldi 1-17, Fiumicello Villa Vicentina [45.8189472, 13.38390686]"
+      ],
       "Flagogna": [
         "D700_CNO10 :: Via Cornino 11, Flagogna [46.2236812, 12.97714409]",
         "D700_CNO4 :: Via Caravel, Flagogna [46.22387554, 12.96930631]",
@@ -1261,6 +1276,9 @@
         "GO_01/01w44 :: Via Vittorio Veneto 138, Gorizia [45.93530443, 13.63061479]",
         "GO_01/02w12 :: Via Licinio 42, Gorizia [45.93186205, 13.56827321]"
       ],
+      "Gradisca": [
+        "I562_CNO8 :: Via Trento 2, Gradisca [46.01464943, 12.97502951]"
+      ],
       "Gradisca D'Isonzo": [
         "E124_CNO1 :: Borgo Trevisan 2, Gradisca d'Isonzo [45.89177933, 13.4763453]",
         "E124_CNO2 :: SR305;SR351, Gradisca d'Isonzo [45.88012899, 13.48395024]",
@@ -1271,14 +1289,14 @@
         "GO_05/01w14 :: Via Eugenio Dal Ben 18, Gradisca d'Isonzo [45.88613109, 13.49428456]",
         "GO_05/01w21 :: Via Aquileia, Gradisca d'Isonzo [45.88257768, 13.48155361]"
       ],
-      "Gradisca": [
-        "I562_CNO8 :: Via Trento 2, Gradisca [46.01464943, 12.97502951]"
-      ],
       "Grado": [
         "E125_CNO1 :: SP19, Grado [45.68255433, 13.4149891]"
       ],
       "Grimacco": [
         "E179_CNO1 :: SP45, Grimacco [46.15432092, 13.5783951]"
+      ],
+      "Grions": [
+        "I562_CNO1 :: Piazza Vittorio Emanuele Terzo, Grions [46.03765323, 12.9698091]"
       ],
       "Grions Del Torre": [
         "G949_CNO15 :: Via Giovanni Battista Maddalena 26, Grions del Torre [46.0920975, 13.29293873]",
@@ -1287,9 +1305,6 @@
         "G949_CNO20 :: Via Venticinque Aprile 6a, Grions del Torre [46.1185467, 13.29921343]",
         "G949_CNO22 :: Via San Clemente 1b, Grions del Torre [46.11784224, 13.29817297]",
         "G949_CNO26 :: Via Zorutti 23, Grions del Torre [46.10658569, 13.30496166]"
-      ],
-      "Grions": [
-        "I562_CNO1 :: Piazza Vittorio Emanuele Terzo, Grions [46.03765323, 12.9698091]"
       ],
       "Gris": [
         "A855_CNO2 :: Via dei Gelsi 8, Gris [45.92816862, 13.23567927]",
@@ -1655,11 +1670,11 @@
       "Pinedo": [
         "C790_CNO6 :: Zona Industriale Pinedo, Pinedo [46.26760072, 12.46330211]"
       ],
-      "Pioverno  Di Sopra": [
-        "UD_18/01w41 :: Via Antonio Bidernuccio, Pioverno  di Sopra [46.33639359, 13.14035738]"
-      ],
       "Pioverno": [
         "L743_CNO1 :: Strada del Fortino, Pioverno [46.33475273, 13.13567274]"
+      ],
+      "Pioverno  Di Sopra": [
+        "UD_18/01w41 :: Via Antonio Bidernuccio, Pioverno  di Sopra [46.33639359, 13.14035738]"
       ],
       "Plaino": [
         "G238_CNO2 :: Via dei Castagni, Plaino [46.09831642, 13.18547001]",
@@ -1844,14 +1859,14 @@
       "Pradielis": [
         "E760_CNO2 :: Crastie, Pradielis [46.2810261, 13.26333149]"
       ],
-      "Pradis Di Sopra": [
-        "C791_CNO1 :: Via Pradis di Sopra 61a, Pradis di Sopra [46.24551973, 12.90663415]"
-      ],
       "Pradis": [
         "F266_CNO1 :: Via Fontana, Pradis [46.40818323, 13.19574715]",
         "F266_CNO2 :: Via Roma, Pradis [46.41016555, 13.19722656]",
         "F266_CNO4 :: Via don Domenico Tessitori, Pradis [46.40639258, 13.18886856]",
         "UD_18/01w21 :: SP112, Pradis [46.43344723, 13.19902671]"
+      ],
+      "Pradis Di Sopra": [
+        "C791_CNO1 :: Via Pradis di Sopra 61a, Pradis di Sopra [46.24551973, 12.90663415]"
       ],
       "Prata Di Pordenone": [
         "PN_05/02w12 :: Via Friuli 100, Prata di Pordenone [45.8765962, 12.56871862]"
@@ -1979,12 +1994,12 @@
       "Rivoli": [
         "E833_CNO16 :: Via Rivoli 83, Rivoli [46.21797005, 13.06661256]"
       ],
-      "Romans D'Isonzo": [
-        "H514_CNO2 :: Viale Palmanova 1, Romans d'Isonzo [45.89971704, 13.41574589]"
-      ],
       "Romans": [
         "L686_CNO1 :: Via Strangulin 9, Romans [45.89978683, 13.0213724]",
         "L686_CNO4 :: Via Punt dal Crep 12, Romans [45.89331208, 13.00447251]"
+      ],
+      "Romans D'Isonzo": [
+        "H514_CNO2 :: Viale Palmanova 1, Romans d'Isonzo [45.89971704, 13.41574589]"
       ],
       "Ronchi Dei Legionari": [
         "GO_02/02w14 :: Via Staranzano 34d, Ronchi dei Legionari [45.81440976, 13.50449723]",
@@ -2083,25 +2098,25 @@
       "San Giovanni In Colle": [
         "D461_CNO5 :: Via del Tennis, San Giovanni in Colle [46.1161447, 13.07622492]"
       ],
+      "San Leonardo": [
+        "H951_CNO1 :: Via Cemur 12, San Leonardo [46.11560672, 13.50527809]",
+        "H951_CNO2 :: SP45, San Leonardo [46.12087212, 13.52192938]"
+      ],
       "San Leonardo Valcellina": [
         "F596_CNO1 :: Via Galet 1, San Leonardo Valcellina [46.09643352, 12.68431679]",
         "F596_CNO2 :: Via John Fitzgerald Kennedy 1a, San Leonardo Valcellina [46.09685587, 12.68055325]",
         "PN_99/01e11 :: Via Partidor 3, San Leonardo Valcellina [46.09938298, 12.68762966]",
         "PN_99/01e21 :: Via Circonvallazione 32, San Leonardo Valcellina [46.09378161, 12.67230413]"
       ],
-      "San Leonardo": [
-        "H951_CNO1 :: Via Cemur 12, San Leonardo [46.11560672, 13.50527809]",
-        "H951_CNO2 :: SP45, San Leonardo [46.12087212, 13.52192938]"
+      "San Lorenzo": [
+        "I562_CNO2 :: Via Chino Ermacora 4, San Lorenzo [45.99777988, 12.99798627]",
+        "I562_CNO7 :: Via dei Molini 16, San Lorenzo [46.00166423, 12.99859607]"
       ],
       "San Lorenzo Isontino": [
         "H964_CNO1 :: Via Farra 20, San Lorenzo Isontino [45.92739045, 13.52422353]",
         "H964_CNO2 :: Via Boschetto 3a, San Lorenzo Isontino [45.93284305, 13.52699128]",
         "H964_CNO3 :: Via Gavinana 20, San Lorenzo Isontino [45.92901795, 13.52717731]",
         "H964_CNO4 :: Via Udine 13, San Lorenzo Isontino [45.93055622, 13.52645994]"
-      ],
-      "San Lorenzo": [
-        "I562_CNO2 :: Via Chino Ermacora 4, San Lorenzo [45.99777988, 12.99798627]",
-        "I562_CNO7 :: Via dei Molini 16, San Lorenzo [46.00166423, 12.99859607]"
       ],
       "San Marco": [
         "F144_CNO10 :: Via Fabio Simonutti 6, San Marco [46.05581904, 13.0795621]"
@@ -2339,6 +2354,12 @@
         "L335_CNO6 :: Via Maggiore 20, Trasaghis [46.29199747, 13.05083784]",
         "L335_CNO7 :: Via dei Lecci 1, Trasaghis [46.28318006, 13.08896674]",
         "L335_CNO8 :: Via dei Brancs 10, Trasaghis [46.32340567, 13.06425588]"
+      ],
+      "Treppo Ligosullo": [
+        "E586_CNO1 :: Strada Provinciale Duron, Treppo Ligosullo [46.53936085, 13.07574896]",
+        "L381_CNO1 :: Via Gosper, Treppo Ligosullo [46.53199844, 13.03947233]",
+        "L381_CNO2 :: Via Dante Alighieri 72, Treppo Ligosullo [46.53440549, 13.04885836]",
+        "L381_CNO3 :: Via Quattro Novembre 4, Treppo Ligosullo [46.533327, 13.04208412]"
       ],
       "Trieste": [
         "L424_CNO10 :: SP1, Trieste [45.64481924, 13.862487]",
