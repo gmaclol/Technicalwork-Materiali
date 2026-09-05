@@ -3965,14 +3965,14 @@
         "PA_22/01e12 :: ~SP5, Altofonte [38.02926256, 13.32727668]",
         "PA_22/02e13 :: Via Arciprete Lo Nigro, Altofonte [38.0405048, 13.28611874]"
       ],
+      "Alì": [
+        "ME_28/01e21 :: Via dietro la Chiesa 14, Alì [38.0271433, 15.41624886]"
+      ],
       "Alì Terme": [
         "A201_CNO1 :: Via Francesco Crispi 200, Alì Terme [38.00168216, 15.42064759]",
         "A201_CNO2 :: Via Domenico Sparacino, Alì Terme [38.00894035, 15.42111768]",
         "A201_CNO3 :: Via Pietro Interdonato, Alì Terme [38.0039928, 15.42196223]",
         "A201_CNO4 :: Via Maestro Guglielmo, Alì Terme [38.00382634, 15.4224138]"
-      ],
-      "Alì": [
-        "ME_28/01e21 :: Via dietro la Chiesa 14, Alì [38.0271433, 15.41624886]"
       ],
       "Antillo": [
         "A313_CNO1 :: Via Monti, Antillo [37.97830852, 15.24140122]",
@@ -6936,11 +6936,11 @@
         "M283_CNO2 :: Corso Fondaco 63, Maniace [37.85867269, 14.80766335]",
         "M283_CNO3 :: Via Alessandro Manzoni 1, Maniace [37.86656704, 14.80581]"
       ],
-      "Marausa Lido": [
-        "TP_12/02e14 :: Via dei Ciclopi, Marausa Lido [37.93993699, 12.48811757]"
-      ],
       "Marausa": [
         "TP_12/02e11 :: Strada Enrico Rinaldo, Marausa [37.93960218, 12.50969339]"
+      ],
+      "Marausa Lido": [
+        "TP_12/02e14 :: Via dei Ciclopi, Marausa Lido [37.93993699, 12.48811757]"
       ],
       "Marettimo": [
         "D518_CNO13 :: Via Guglielmo Pepe, Marettimo [37.96878882, 12.07227008]",
@@ -9756,6 +9756,10 @@
         "PA_04/13w34 :: Vicolo del Gran Cancelliere, Palermo [38.11518199, 13.36008789]",
         "PA_04/13w41 :: Corso Alberto Amedeo, Palermo [38.11192549, 13.35209507]"
       ],
+      "Palma": [
+        "TP_12/02e12 :: Strada Solfarello, Palma [37.95140166, 12.51412304]",
+        "TP_12/02e13 :: Pietretagliate, Palma [37.95784805, 12.5296722]"
+      ],
       "Palma Di Montechiaro": [
         "AG_13/01e11 :: Via Tenente Palma 117, Palma di Montechiaro [37.18435329, 13.77705814]",
         "AG_13/01e12 :: Via Grotte, Palma di Montechiaro [37.18898581, 13.77249064]",
@@ -9785,10 +9789,6 @@
         "AG_13/02w13 :: Via Ruggero Settimo, Palma di Montechiaro [37.1967236, 13.76105401]",
         "AG_13/03w11 :: Via Bahamas, Palma di Montechiaro [37.17195317, 13.72709371]",
         "AG_13/03w12 :: Via Bahamas, Palma di Montechiaro [37.17139495, 13.72488769]"
-      ],
-      "Palma": [
-        "TP_12/02e12 :: Strada Solfarello, Palma [37.95140166, 12.51412304]",
-        "TP_12/02e13 :: Pietretagliate, Palma [37.95784805, 12.5296722]"
       ],
       "Pantelleria": [
         "G315_CNO4 :: Via Kazen, Pantelleria [36.82593487, 11.93300067]",
@@ -10761,6 +10761,12 @@
         "I084_CNO4 :: Piazza Duomo, San Pier Niceto [38.15830795, 15.35133361]",
         "ME_29/01e11 :: Via Giacomo Matteotti, San Pier Niceto [38.16463428, 15.3451735]"
       ],
+      "San Piero": [
+        "F210_CNO1 :: Via Vittorio Emanuele, San Piero [38.04704598, 14.67827038]",
+        "F210_CNO2 :: Via Guglielmo Marconi, San Piero [38.04582926, 14.67597005]",
+        "F210_CNO3 :: Via Guglielmo Marconi, San Piero [38.04548543, 14.67590273]",
+        "ME_27/01w11 :: SP161/b, San Piero [38.05171893, 14.66691806]"
+      ],
       "San Piero Patti": [
         "I086_CNO10 :: Via Torquato Tasso, San Piero Patti [38.05233441, 14.96615025]",
         "I086_CNO11 :: Via Professor Profeta 4, San Piero Patti [38.05169364, 14.96751861]",
@@ -10772,12 +10778,6 @@
         "I086_CNO7 :: Salita Galileo Galilei, San Piero Patti [38.05220157, 14.96524636]",
         "I086_CNO8 :: Via Annunziata, San Piero Patti [38.05019617, 14.9664869]",
         "I086_CNO9 :: Via Argentina, San Piero Patti [38.05276055, 14.96749135]"
-      ],
-      "San Piero": [
-        "F210_CNO1 :: Via Vittorio Emanuele, San Piero [38.04704598, 14.67827038]",
-        "F210_CNO2 :: Via Guglielmo Marconi, San Piero [38.04582926, 14.67597005]",
-        "F210_CNO3 :: Via Guglielmo Marconi, San Piero [38.04548543, 14.67590273]",
-        "ME_27/01w11 :: SP161/b, San Piero [38.05171893, 14.66691806]"
       ],
       "San Pietro Clarenza": [
         "CT_02/14e11 :: ~Via Santa Margherita, San Pietro Clarenza [37.55853482, 15.02873014]"

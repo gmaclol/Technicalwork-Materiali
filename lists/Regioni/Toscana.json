@@ -2970,6 +2970,17 @@
       ]
     },
     "Comuni": {
+      "Bagnaia": [
+        "H297_CNO9 :: Strada della Falconaia 153, Bagnaia [42.81179612, 10.36622969]"
+      ],
+      "Barberino Val D'Elsa": [
+        "A633_CNO16 :: Via di Bustecca, Barberino Val d'Elsa [43.5482615, 11.17778108]",
+        "A633_CNO17 :: Piazza Giuseppe Mazzini, Barberino Val d'Elsa [43.54229576, 11.17091266]",
+        "A633_CNO18 :: Via 9 Novembre, Barberino Val d'Elsa [43.53968383, 11.16861133]",
+        "A633_CNO19 :: Via di Novoli, Barberino Val d'Elsa [43.54006003, 11.17132046]",
+        "A633_CNO20 :: Via di Novoli, Barberino Val d'Elsa [43.53747046, 11.17452336]",
+        "A633_CNO21 :: Via Venticinque Aprile, Barberino Val d'Elsa [43.53930302, 11.16984584]"
+      ],
       "Camaiore": [
         "LU_15/01w11 :: Via Bellosguardo, Camaiore [43.93289202, 10.30931065]",
         "LU_15/01w12 :: Via Pieve, Camaiore [43.93129879, 10.32637565]",
@@ -3720,6 +3731,13 @@
         "FI_16/01e24 :: Via di Carcheri, Lastra a Signa [43.74050862, 11.11551141]",
         "FI_16/01e25 :: Via San Romolo, Lastra a Signa [43.74772854, 11.10872607]"
       ],
+      "Laterina": [
+        "E468_CNO1 :: Via Sandro Pertini, Laterina [43.50295208, 11.71411636]",
+        "E468_CNO3 :: Via Vittorio Veneto, Laterina [43.50798317, 11.717157]",
+        "E468_CNO4 :: Via Fabbrica, Laterina [43.50526022, 11.71440267]",
+        "E468_CNO5 :: La Bregna, Laterina [43.50848974, 11.71970913]",
+        "E468_CNO6 :: Vicolo Vieri, Laterina [43.50852472, 11.70959535]"
+      ],
       "Lucca": [
         "LU_01/01e11 :: Via del Fosso, Lucca [43.84504414, 10.50962381]",
         "LU_01/01e12 :: Via della Zecca 26, Lucca [43.84694995, 10.5082084]",
@@ -3870,6 +3888,11 @@
         "GR_06/01e23 :: Via del Cancellone 2, Massa Marittima [43.00354412, 10.84880311]",
         "GR_06/01e24 :: Via delle Fonderie 1, Massa Marittima [43.00544999, 10.85183141]"
       ],
+      "Montalto": [
+        "G451_CNO1 :: SP2, Montalto [43.49965996, 11.66781462]",
+        "G451_CNO2 :: Via IV Novembre, Montalto [43.49722448, 11.66616457]",
+        "G451_CNO3 :: Via Vecchia Aretina, Montalto [43.49718327, 11.66116986]"
+      ],
       "Montespertoli": [
         "FI_10/01w11 :: Poggio Capponi, Montespertoli [43.68455228, 11.06837018]",
         "FI_10/01w12 :: Via Montelupo 101, Montespertoli [43.67021795, 11.0551725]",
@@ -3891,10 +3914,19 @@
         "FI_10/04w13 :: Via San Vincenzo 311, Montespertoli [43.68419162, 11.10504826]",
         "FI_10/04w14 :: Il Poggio, Montespertoli [43.64630116, 11.11800946]"
       ],
+      "Nisporto": [
+        "H297_CNO10 :: Via Nisporto 71, Nisporto [42.82408096, 10.3820111]"
+      ],
       "Orbetello": [
         "GR_19/01e11 :: Via Maremmana, Orbetello [42.49826017, 11.20675958]",
         "GR_19/01e21 :: Via Cala di Forno, Orbetello [42.5547708, 11.13157664]",
         "GR_19/01e22 :: Via Marsala, Orbetello [42.55431187, 11.13373125]"
+      ],
+      "Pergine Valdarno": [
+        "G451_CNO5 :: Ramarella, Pergine Valdarno [43.4682328, 11.68501305]"
+      ],
+      "Pieve A Presciano": [
+        "G451_CNO6 :: Poggio Bagnoli, Pieve a Presciano [43.47148573, 11.68559076]"
       ],
       "Pieve Santo Stefano": [
         "AR_15/01e11 :: Via della Casina, Pieve Santo Stefano [43.67281533, 12.03791463]",
@@ -4082,8 +4114,33 @@
         "PI_01/05w22 :: Via San Lorenzino, Pisa [43.71469074, 10.40164229]",
         "PI_01/05w23 :: Piazza Sant'Omobono 1, Pisa [43.71720517, 10.40124342]"
       ],
+      "Rio Marina": [
+        "H305_CNO1 :: Via Principe Amedeo 16, Rio Marina [42.81526356, 10.42613506]",
+        "H305_CNO11 :: Via Roma 1, Rio Marina [42.81544668, 10.42749142]",
+        "H305_CNO5 :: Via Roma 1, Rio Marina [42.81544212, 10.42747415]",
+        "H305_CNO6 :: Via Giuseppe Verdi 21, Rio Marina [42.81439604, 10.42876301]",
+        "H305_CNO8 :: via Carducci 32, Rio Marina [42.81461654, 10.42574897]",
+        "H305_CNO9 :: Via Principe Amedeo 64, Rio Marina [42.81402236, 10.42128318]"
+      ],
+      "Rio Nell'Elba": [
+        "H297_CNO1 :: Via degli Aranci 2, Rio nell'Elba [42.81308212, 10.40136165]",
+        "H297_CNO11 :: Strada Provinciale Bivio Boni Cavo 2, Rio nell'Elba [42.8089829, 10.40151878]",
+        "H297_CNO5 :: Strada Provinciale della Parata 6, Rio nell'Elba [42.81505538, 10.40109516]",
+        "H297_CNO6 :: La Ginestra, Rio nell'Elba [42.81033319, 10.40088405]",
+        "H297_CNO7 :: Via Sabba Galletti 81, Rio nell'Elba [42.81373091, 10.39867015]",
+        "H297_CNO8 :: Strada della Chiusa, Rio nell'Elba [42.82283634, 10.41321906]"
+      ],
+      "Sambuca": [
+        "L067_CNO3 :: Strada Provinciale di San Donato in Poggio, Sambuca [43.56145544, 11.20571571]"
+      ],
       "Suvereto": [
         "LI_09/01e11 :: Tabarò, Suvereto [43.07452029, 10.67880962]"
+      ],
+      "Tavarnelle Val Di Pesa": [
+        "L067_998 :: Via Roma, Tavarnelle Val di Pesa [43.55938913, 11.17338159]",
+        "L067_CNO11 :: Piazza della Repubblica, Tavarnelle Val di Pesa [43.56175035, 11.17181633]",
+        "L067_CNO6 :: Strada della Pieve, Tavarnelle Val di Pesa [43.56455439, 11.17937713]",
+        "L067_CNO8 :: Via Benedetto Naldini, Tavarnelle Val di Pesa [43.55678083, 11.16967351]"
       ],
       "Vagli Sotto": [
         "LU_14/01e11 :: Via Vandelli, Vagli Sotto [44.11730647, 10.26551997]",

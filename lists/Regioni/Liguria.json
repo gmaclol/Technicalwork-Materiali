@@ -490,13 +490,13 @@
         "A796_CNO8 :: Via Cristoforo Colombo, Bergeggi [44.24748704, 8.444566104]",
         "A796_CNO9 :: Via Aurelia, Bergeggi [44.23823964, 8.438361587]"
       ],
-      "Beverino Castello": [
-        "A836_CNO1 :: Santa Martina, Beverino Castello [44.19227433, 9.788686629]",
-        "A836_CNO4 :: SP10, Beverino Castello [44.20700953, 9.787451309]"
-      ],
       "Beverino": [
         "A836_CNO2 :: Bertogna [44.17021526, 9.732956859]",
         "A836_CNO6 :: Castiglione Vara [44.20388099, 9.818063126]"
+      ],
+      "Beverino Castello": [
+        "A836_CNO1 :: Santa Martina, Beverino Castello [44.19227433, 9.788686629]",
+        "A836_CNO4 :: SP10, Beverino Castello [44.20700953, 9.787451309]"
       ],
       "Bocca Di Magra": [
         "A261_CNO10 :: Via C. A. Fabbricotti, Bocca di Magra [44.04829941, 9.984315053]",
@@ -642,6 +642,10 @@
         "B748_CNO1 :: Autostrada A6 La Verdemare, Carcare [44.34655767, 8.304684711]",
         "B748_CNO2 :: Vispa, Carcare [44.34774138, 8.307932547]"
       ],
+      "Carpasio": [
+        "B814_CNO1 :: Via Gugliemo Marconi, Carpasio [43.96001991, 7.867738459]",
+        "B814_CNO2 :: Costa, Carpasio [43.95972255, 7.86673635]"
+      ],
       "Carro": [
         "B838_CNO2 :: Via Roma, Carro [44.27314899, 9.608272018]",
         "B838_CNO3 :: Ziona, Carro [44.27263553, 9.613496115]",
@@ -655,13 +659,13 @@
       "Casale": [
         "G664_CNO3 :: La Villa, Casale [44.18937276, 9.71282059]"
       ],
+      "Casanova": [
+        "I346_CNO9 :: Via A. Rossi 85, Casanova [44.46638264, 8.947153807]"
+      ],
       "Casanova Lerrone": [
         "B927_CNO1 :: Poggio, Casanova Lerrone [44.03090665, 8.04852339]",
         "B927_CNO2 :: Poggio, Casanova Lerrone [44.03121929, 8.058484124]",
         "B927_CNO3 :: SP6 4, Casanova Lerrone [44.03193356, 8.0492529]"
-      ],
-      "Casanova": [
-        "I346_CNO9 :: Via A. Rossi 85, Casanova [44.46638264, 8.947153807]"
       ],
       "Casella": [
         "B956_CNO1 :: Via Roma 66, Casella [44.53820389, 8.992518846]",
@@ -2820,6 +2824,10 @@
         "F354_CNO3 :: Località Roverano, Moneglia [44.25821235, 9.505377313]",
         "F354_CNO4 :: Località Tessi, Moneglia [44.2527753, 9.515704085]"
       ],
+      "Montalto Ligure": [
+        "F406_CNO1 :: Via Montà 1, Montalto Ligure [43.92825642, 7.842923302]",
+        "F406_CNO2 :: Via Vittorio Veneto, Montalto Ligure [43.92856865, 7.843436267]"
+      ],
       "Montebruno": [
         "F445_CNO1 :: Via Guglielmo Barbieri 41, Montebruno [44.52562083, 9.247545021]",
         "F445_CNO2 :: Via Guglielmo Barbieri 41, Montebruno [44.52591104, 9.24804008]"
@@ -2936,6 +2944,9 @@
         "G607_CNO2 :: SP46, Pietrabruna [43.87967186, 7.906004552]",
         "G607_CNO3 :: Piazza Giovanni XXIII, Pietrabruna [43.88990672, 7.90254686]"
       ],
+      "Pieve": [
+        "M177_CNO2 :: Vezzola, Pieve [44.27745267, 9.747220595]"
+      ],
       "Pieve Di Teco": [
         "G632_CNO1 :: Via Giuseppe Mazzini, Pieve di Teco [44.04376381, 7.919022543]",
         "G632_CNO2 :: Via Tenente Luigi Eula, Pieve di Teco [44.04632838, 7.915028061]",
@@ -2943,9 +2954,6 @@
         "G632_CNO4 :: Piazza Borelli, Pieve di Teco [44.04801164, 7.915925717]",
         "G632_CNO5 :: SS453, Pieve di Teco [44.03731784, 7.938915511]",
         "G632_CNO6 :: Strada Provinciale per Albenga, Pieve di Teco [44.03881435, 7.926332976]"
-      ],
-      "Pieve": [
-        "M177_CNO2 :: Vezzola, Pieve [44.27745267, 9.747220595]"
       ],
       "Pigna": [
         "G660_CNO3 :: Corso Lodovico Isnardi, Pigna [43.93294146, 7.662013315]",

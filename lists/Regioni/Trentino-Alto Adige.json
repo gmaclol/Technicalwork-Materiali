@@ -259,6 +259,15 @@
         "B697_CNO1 :: Via di Vara, Capriana [46.26601269, 11.34000994]",
         "B697_CNO2 :: Strada Provinciale 51 di Capriana, Capriana [46.2623057, 11.3391167]"
       ],
+      "Carano": [
+        "B723_CNO1 :: Via Val di Fiemme, Carano [46.28972097, 11.43263467]",
+        "B723_CNO10 :: Via Val di Fiemme, Carano [46.29036086, 11.43218097]",
+        "B723_CNO11 :: Via Coltura, Carano [46.29020195, 11.4394628]",
+        "B723_CNO3 :: Via Lagorai, Carano [46.29141993, 11.43162444]",
+        "B723_CNO6 :: Via Galinae, Carano [46.2921158, 11.4408019]",
+        "B723_CNO8 :: Via Nazionale - Strada Statale delle Dolomiti 10, Carano [46.2877, 11.44337354]",
+        "B723_CNO9 :: Villaggio Veronza, Carano [46.2917621, 11.43846737]"
+      ],
       "Carciato": [
         "M366_CNO5 :: Via Sasso Rosso, Carciato [46.32464926, 10.88010359]"
       ],
@@ -284,6 +293,10 @@
       "Castel Condino": [
         "C183_CNO1 :: SP70, Castel Condino [45.91676824, 10.60410526]",
         "C183_CNO2 :: Via Fabio Filzi, Castel Condino [45.9156983, 10.60262577]"
+      ],
+      "Castelfondo": [
+        "C103_CNO1 :: Via Clausure, Castelfondo [46.45623492, 11.11866768]",
+        "C103_CNO2 :: Via Madonna Pellegrina 5, Castelfondo [46.4565269, 11.11822807]"
       ],
       "Castello Di Fiemme": [
         "C189_CNO11 :: ~Via della Stazione, Castello di Fiemme [46.28145057, 11.4328961]",
@@ -442,6 +455,11 @@
         "M356_CNO7 :: ~Via Misseri, Cunevo [46.28715929, 11.03440069]",
         "M356_CNO8 :: Via Don Pierino Paoli, Cunevo [46.28583188, 11.03744369]"
       ],
+      "Daiano": [
+        "D243_CNO1 :: SP126 della Taoletta - Via Lunga, Daiano [46.30126767, 11.45257951]",
+        "D243_CNO2 :: Vicolo Scuole, Daiano [46.30090604, 11.44747293]",
+        "D243_CNO3 :: Via Colonia, Daiano [46.3012725, 11.44726908]"
+      ],
       "Dambel": [
         "D246_CNO1 :: Via Molini, Dambel [46.40516797, 11.09521945]",
         "D246_CNO2 :: Strada del Poz, Dambel [46.40294987, 11.09274646]"
@@ -541,6 +559,13 @@
         "M366_CNO16 :: Strada del Roccolo, Folgarida [46.30311675, 10.86478346]",
         "M366_CNO9 :: Strada dei Margeni, Folgarida [46.30537151, 10.86293007]"
       ],
+      "Fondo": [
+        "D663_CNO1 :: Via Cesare Battisti, Fondo [46.43714706, 11.13828163]",
+        "D663_CNO2 :: Via Virgilio Inama 29, Fondo [46.43990076, 11.13682859]",
+        "D663_CNO3 :: Via Quattro Novembre, Fondo [46.43948803, 11.13590923]",
+        "D663_CNO4 :: Via Santa Lucia 11, Fondo [46.44034748, 11.13581856]",
+        "D663_CNO5 :: Dovena, Fondo [46.44393968, 11.13649461]"
+      ],
       "Fornace": [
         "D714_CNO1 :: Via dei Pradolini, Fornace [46.11911975, 11.20594804]",
         "D714_CNO2 :: Via dei Sabbioni, Fornace [46.11935031, 11.21188943]",
@@ -605,6 +630,9 @@
         "E288_CNO3 :: Via Scarena, Imer [46.14776667, 11.78886724]",
         "E288_CNO4 :: Via Meatoli 7a, Imer [46.1504625, 11.79432874]",
         "E288_CNO5 :: Pezze, Imer [46.15067292, 11.79703516]"
+      ],
+      "Ivano-Fracena": [
+        "E378_CNO1 :: Piazza di Ivano 6, Ivano-Fracena [46.05692591, 11.52909084]"
       ],
       "Javrè": [
         "M358_CNO3 :: Via La Sportiva, Javrè [46.06811545, 10.71240823]",
@@ -678,6 +706,10 @@
       "Luserna": [
         "E757_CNO1 :: Piazza Guglielmo Marconi 2, Luserna [45.9218617, 11.3243073]",
         "E757_CNO2 :: Via Tezze, Luserna [45.9226333, 11.32201797]"
+      ],
+      "Malosco": [
+        "E866_CNO1 :: Via Guglielmo Marconi 21, Malosco [46.436291, 11.14338619]",
+        "E866_CNO2 :: Viale Belvedere, Malosco [46.43532428, 11.14450103]"
       ],
       "Malé": [
         "E850_CNO10 :: Via Guglielmo Marconi, Malé [46.3540547, 10.91546221]",
@@ -783,6 +815,7 @@
         "F263_CNO3 :: Strada de Prealon, Moena [46.36895437, 11.65177056]"
       ],
       "Molina Di Fiemme": [
+        "B723_CNO12 :: Ciclabile ex ferrovia della Val di Fiemme, Molina di Fiemme [46.28764304, 11.4196088]",
         "C189_CNO1 :: Via Segherie, Molina di Fiemme [46.27258075, 11.41855209]",
         "C189_CNO13 :: Via Aquilino Weber, Molina di Fiemme [46.27348527, 11.42469662]",
         "C189_CNO6 :: Via Aquilino Weber, Molina di Fiemme [46.27442495, 11.4160247]"
@@ -828,6 +861,11 @@
         "F835_CNO2 :: Strada Rivana 37, Nago [45.87793507, 10.89676047]",
         "F835_CNO8 :: Strada Vecchia, Nago [45.87575968, 10.88942764]"
       ],
+      "Nave San Rocco": [
+        "F853_CNO1 :: Località Novali, Nave San Rocco [46.16980452, 11.10380305]",
+        "F853_CNO3 :: Via Quattro Novembre 44a, Nave San Rocco [46.16680153, 11.10708225]",
+        "F853_CNO4 :: Via Quattro Novembre 44a, Nave San Rocco [46.16680296, 11.10704782]"
+      ],
       "Noarna": [
         "F920_CNO2 :: Via per Sasso, Noarna [45.91192146, 11.02229883]",
         "F920_CNO5 :: Via della Vittoria, Noarna [45.91186029, 11.02456444]"
@@ -841,6 +879,18 @@
       "Novaledo": [
         "F947_CNO1 :: Via Principale 83, Novaledo [46.02498919, 11.37069089]",
         "F947_CNO2 :: Via Valle 4, Novaledo [46.02214754, 11.36515558]"
+      ],
+      "Novella": [
+        "B165_CNO1 :: Via della Libertà, Novella [46.43117327, 11.10768395]",
+        "B165_CNO2 :: SP43dir, Novella [46.4323862, 11.10585507]",
+        "B360_CNO1 :: Via Nazionale 48, Novella [46.39332019, 11.04348396]",
+        "C797_CNO1 :: Via Santo Stefano, Novella [46.42003223, 11.08807372]",
+        "C797_CNO2 :: Via Santo Stefano, Novella [46.42002432, 11.08805555]",
+        "H254_CNO1 :: Via Augusto Rigatti, Novella [46.39246602, 11.05794047]",
+        "H254_CNO2 :: Via Carlo Antonio Martini, Novella [46.39099342, 11.05982768]",
+        "H254_CNO3 :: Via delle Maddalene 7, Novella [46.39432637, 11.05243927]",
+        "H506_CNO1 :: Via Quattro Novembre 22, Novella [46.39541336, 11.06429327]",
+        "H506_CNO2 :: Via Venticinque Aprile, Novella [46.39792962, 11.06745819]"
       ],
       "Obra": [
         "L588_CNO4 :: Strada Provinciale 89 Sinistra Leno, Obra [45.76616203, 11.11558207]"
@@ -1148,6 +1198,9 @@
         "H146_CNO3 :: Strada Provinciale 86 di Rabbi, San Bernardo [46.4013466, 10.84504027]",
         "H146_CNO5 :: Strada Provinciale 86 di Rabbi, San Bernardo [46.39616837, 10.85272197]"
       ],
+      "San Giovanni Di Fassa": [
+        "L893_CNO6 :: Strada de Sen Jan, San Giovanni di Fassa [46.42294143, 11.67745529]"
+      ],
       "San Lorenzo In Banale": [
         "M345_CNO3 :: Via della pieve, San Lorenzo in Banale [46.06485588, 10.89177057]",
         "M345_CNO4 :: Via nazionale, San Lorenzo in Banale [46.07325923, 10.8967357]",
@@ -1285,16 +1338,16 @@
         "M344_CNO34 :: Via Roma, Taio [46.31518663, 11.06977363]",
         "M344_CNO35 :: Via degli Alpini 10, Taio [46.32129335, 11.06849424]"
       ],
-      "Telve Di Sopra": [
-        "L090_CNO2 :: Vicolo chiuso 2, Telve di Sopra [46.07188963, 11.47145939]",
-        "L090_CNO3 :: Via delle Scuole 17, Telve di Sopra [46.0705362, 11.4715733]"
-      ],
       "Telve": [
         "L089_CNO1 :: Piazza Maggiore 2, Telve [46.07035335, 11.47786376]",
         "L089_CNO2 :: Strada Provinciale del Passo del Manghen, Telve [46.06804865, 11.48176661]",
         "L089_CNO4 :: Via Fabbri, Telve [46.07193129, 11.47767816]",
         "L089_CNO5 :: Via Aurora, Telve [46.07063811, 11.48332798]",
         "L089_CNO6 :: Via Montello 1a, Telve [46.06919057, 11.48073602]"
+      ],
+      "Telve Di Sopra": [
+        "L090_CNO2 :: Vicolo chiuso 2, Telve di Sopra [46.07188963, 11.47145939]",
+        "L090_CNO3 :: Via delle Scuole 17, Telve di Sopra [46.0705362, 11.4715733]"
       ],
       "Tenna": [
         "L096_CNO1 :: Via Venezia, Tenna [46.01289283, 11.26696233]",
@@ -1364,6 +1417,9 @@
         "M359_CNO41 :: Transacqua, Transacqua [46.17252466, 11.82781463]",
         "M359_CNO52 :: Via Sass Maor, Transacqua [46.18007287, 11.83253471]"
       ],
+      "Tre_Ville": [
+        "M361_CNO28 :: Via Vallesinella [46.22542573, 10.8275336]"
+      ],
       "Trento": [
         "TN_01/01e11 :: Via Dosso Dossi 12, Trento [46.07439982, 11.11874302]",
         "TN_01/01e12 :: Lungadige Giacomo Leopardi 73, Trento [46.07548882, 11.11687198]",
@@ -1385,9 +1441,6 @@
         "M344_CNO36 :: Via Temola 17, Tres [46.31948584, 11.09645631]",
         "M344_CNO37 :: Via Alcide Degasperi 2, Tres [46.32201742, 11.09686097]",
         "M344_CNO38 :: Via Casa Ina 1, Tres [46.32367103, 11.09805156]"
-      ],
-      "Tre_Ville": [
-        "M361_CNO28 :: Via Vallesinella [46.22542573, 10.8275336]"
       ],
       "Valda": [
         "M349_CNO4 :: Via Centrale - Strada Statale 612 della Val di Cembra, Valda [46.20719387, 11.26404607]"
@@ -1414,6 +1467,12 @@
         "M362_CNO8 :: SS45bis, Vallelaghi [46.07921492, 10.99867767]",
         "M362_CNO9 :: Lon, Vallelaghi [46.07490409, 10.99546167]"
       ],
+      "Varena": [
+        "L678_CNO1 :: Strada Statale 620 del Passo di Lavazè, Varena [46.30311698, 11.45525096]",
+        "L678_CNO2 :: Via Alpini - Strada Statale 620 del Passo di Lavazè, Varena [46.30646037, 11.45864169]",
+        "L678_CNO3 :: Via Alpini - Strada Statale 620 del Passo di Lavazè, Varena [46.30532268, 11.4581384]",
+        "L678_CNO4 :: Via Mercato 20, Varena [46.30331588, 11.45584808]"
+      ],
       "Vattaro": [
         "M350_CNO20 :: Via Uscel, Vattaro [45.9942336, 11.22070858]",
         "M350_CNO21 :: Via Dante Alighieri 63,67,57, Vattaro [45.994133, 11.21882639]",
@@ -1432,6 +1491,13 @@
         "M344_CNO44 :: Via Castel Vervassium 3, Vervò [46.30763737, 11.1206019]",
         "M344_CNO52 :: Via del Rio Ponticelli 15, Vervò [46.31257172, 11.11964937]"
       ],
+      "Vigo Di Fassa": [
+        "L893_CNO10 :: Strada Veia, Vigo di Fassa [46.41524423, 11.66826262]",
+        "L893_CNO5 :: Strada Neva 97, Vigo di Fassa [46.418357, 11.67703239]",
+        "L893_CNO7 :: Strada Neva 40, Vigo di Fassa [46.4187195, 11.67502417]",
+        "L893_CNO8 :: Strada Murada, Vigo di Fassa [46.4193162, 11.66888221]",
+        "L893_CNO9 :: Strada Rezia, Vigo di Fassa [46.42032735, 11.6729855]"
+      ],
       "Vigo Di Ton": [
         "L200_CNO1 :: Piazza Francesco Guardi, Vigo di Ton [46.26595988, 11.08546256]",
         "L200_CNO2 :: Via Rinassico 6a, Vigo di Ton [46.26303008, 11.07896701]"
@@ -1447,6 +1513,9 @@
         "M350_CNO27 :: Via Al Castello, Vigolo Vattaro [46.0048571, 11.20213628]",
         "M350_CNO29 :: Via Giuseppe Garibaldi, Vigolo Vattaro [46.00447263, 11.19612517]"
       ],
+      "Villa": [
+        "M354_CNO8 :: Via dei Fedeli, Villa [46.05693015, 11.52245792]"
+      ],
       "Villa Lagarina": [
         "L957_CNO10 :: Via Quattordici Agosto 20, Villa Lagarina [45.92322306, 11.03433301]",
         "L957_CNO2 :: ~Via Antonio Pesenti, Villa Lagarina [45.91790686, 11.03513755]",
@@ -1461,9 +1530,6 @@
       "Villa Rendena": [
         "M358_CNO4 :: Via Nazionale, Villa Rendena [46.0623289, 10.71238019]",
         "M358_CNO5 :: Via del Municipio, Villa Rendena [46.06143823, 10.71215201]"
-      ],
-      "Villa": [
-        "M354_CNO8 :: Via dei Fedeli, Villa [46.05693015, 11.52245792]"
       ],
       "Ville D'Anaunia": [
         "M363_CNO24 :: Via Enrico Bergamo, Ville d'Anaunia [46.31426292, 11.04792468]",

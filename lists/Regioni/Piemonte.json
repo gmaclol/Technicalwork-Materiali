@@ -1270,6 +1270,12 @@
         "A198_CNO5 :: Viale Cavalieri di Vittorio Veneto, Alice Castello [45.36490752, 8.086473032]",
         "A198_CNO6 :: Via Borgo d'Ale 1, Alice Castello [45.36503783, 8.071298894]"
       ],
+      "Alice Superiore": [
+        "A199_CNO1 :: Via Maestra, Alice Superiore [45.45975088, 7.777807395]"
+      ],
+      "Alluvioni Cambiò": [
+        "A211_CNO1 :: SP85, Alluvioni Cambiò [44.9997784, 8.796549844]"
+      ],
       "Almese": [
         "A218_CNO1 :: Via della Chiesa, Almese [45.10302422, 7.436436877]",
         "A218_CNO2 :: Via Benne, Almese [45.10310108, 7.437398819]",
@@ -1544,6 +1550,11 @@
       "Aurano": [
         "A497_CNO1 :: La Selva, Aurano [45.9997766, 8.58832245]",
         "A497_CNO2 :: Via Vittorio Veneto, Aurano [46.01068023, 8.5855351]"
+      ],
+      "Aviè": [
+        "L606_CNO10 :: Valle Mosso, Aviè [45.64050938, 8.151473192]",
+        "L606_CNO15 :: Via Mazzini 27, Aviè [45.64115565, 8.153465451]",
+        "L606_CNO17 :: SP232, Aviè [45.64534926, 8.15163247]"
       ],
       "Avolasca": [
         "A523_CNO1 :: Valle Scura, Avolasca [44.80299494, 8.965549867]"
@@ -2054,17 +2065,17 @@
         "A990_CNO8 :: Via Lanzo, Borgaro Torinese [45.15474354, 7.653629368]",
         "A990_CNO9 :: Via San Cosma e Damiano, Borgaro Torinese [45.15520383, 7.659670901]"
       ],
+      "Borghetto": [
+        "A953_CNO1 :: Via per Gozzano, Borghetto [45.75950382, 8.440286104]",
+        "A953_CNO2 :: Via Rimembranze 2, Borghetto [45.7628866, 8.44541181]",
+        "A953_CNO3 :: Via Borghetto, Borghetto [45.76920358, 8.442375903]"
+      ],
       "Borghetto Di Borbera": [
         "A998_CNO3 :: Strada provinciale 140 della Val Borbera 169,171, Borghetto di Borbera [44.72960617, 8.968140847]",
         "A998_CNO4 :: Via Roma 191, Borghetto di Borbera [44.73061947, 8.952508576]",
         "A998_CNO5 :: Via Santuario Ca Del Bello, Borghetto di Borbera [44.73089375, 8.945477479]",
         "A998_CNO6 :: Via Roma, Borghetto di Borbera [44.73045659, 8.942172293]",
         "A998_CNO7 :: Strada provinciale 140 della Val Borbera, Borghetto di Borbera [44.7292765, 8.973974153]"
-      ],
-      "Borghetto": [
-        "A953_CNO1 :: Via per Gozzano, Borghetto [45.75950382, 8.440286104]",
-        "A953_CNO2 :: Via Rimembranze 2, Borghetto [45.7628866, 8.44541181]",
-        "A953_CNO3 :: Via Borghetto, Borghetto [45.76920358, 8.442375903]"
       ],
       "Borgiallo": [
         "B003_CNO1 :: Via Pietro Bertolero, Borgiallo [45.41784189, 7.667766726]"
@@ -2160,6 +2171,9 @@
         "B084_CNO1 :: Circonvallazione Provinciale, Bossolasco [44.52899635, 8.049382351]",
         "B084_CNO2 :: Piazza Ragazzi del 99, Bossolasco [44.52852712, 8.053030781]",
         "B084_CNO3 :: Via non definita, Bossolasco [44.53236754, 8.0461396]"
+      ],
+      "Botto": [
+        "L436_CNO1 :: Trivero, Botto [45.65638045, 8.156371965]"
       ],
       "Boves": [
         "B101_CNO3 :: Via Santuario, Boves [44.33159348, 7.52016811]",
@@ -2260,6 +2274,9 @@
         "B236_CNO1 :: Via Roma, Bubbio [44.66408576, 8.293832822]",
         "B236_CNO2 :: Via Circonvallazione, Bubbio [44.66376652, 8.296206904]"
       ],
+      "Bulliana": [
+        "L436_CNO11 :: SP109, Bulliana [45.66034539, 8.152506286]"
+      ],
       "Buriasco": [
         "B278_CNO1 :: Via del Cimitero, Buriasco [44.87504239, 7.412624586]",
         "B278_CNO2 :: SP160, Buriasco [44.87071805, 7.413822886]",
@@ -2285,7 +2302,8 @@
       "Busca": [
         "B285_CNO1 :: Via Ferrera, Busca [44.4748117, 7.50610045]",
         "B285_CNO2 :: Corso Venticinque Aprile 14, Busca [44.5197061, 7.472683907]",
-        "B285_CNO3 :: Corso Papa Giovanni Ventitreesimo 80, Busca [44.50818737, 7.486018377]"
+        "B285_CNO3 :: Corso Papa Giovanni Ventitreesimo 80, Busca [44.50818737, 7.486018377]",
+        "L636_CNO1 :: SP109, Busca [44.54478711, 7.345495505]"
       ],
       "Buttigliera D'Asti": [
         "B306_CNO4 :: Via Vittorio Emanuele, Buttigliera d'Asti [45.01942181, 7.94967827]"
@@ -2767,6 +2785,13 @@
         "B955_CNO6 :: Strada dei Prati, Caselette [45.1045832, 7.476512064]",
         "B955_CNO7 :: Via Alpignano, Caselette [45.10731264, 7.494129542]"
       ],
+      "Cassano Spinola": [
+        "C005_CNO1 :: Via Arzani, Cassano Spinola [44.76386984, 8.862893016]",
+        "C005_CNO2 :: Strada statale 35 dei Giovi, Cassano Spinola [44.76666552, 8.862851348]",
+        "C005_CNO3 :: Strada statale 35 dei Giovi, Cassano Spinola [44.76825258, 8.865282183]",
+        "C005_CNO4 :: Via Roma, Cassano Spinola [44.7650721, 8.861868224]",
+        "D941_CNO1 :: SP139, Cassano Spinola [44.77146201, 8.884669287]"
+      ],
       "Cassinasco": [
         "C022_CNO1 :: ~Strada Poma-Roveta, Cassinasco [44.68966995, 8.303970569]"
       ],
@@ -2853,12 +2878,12 @@
         "C142_CNO1 :: Corso Roma 29, Castellar Guidobono [44.90493564, 8.946673801]",
         "C142_CNO2 :: Corso Roma 15, Castellar Guidobono [44.90497623, 8.94555702]"
       ],
-      "Castellazzo Novarese": [
-        "C149_CNO1 :: Via Regina Elena, Castellazzo Novarese [45.51060721, 8.482700572]"
-      ],
       "Castellazzo": [
         "I645_CNO1 :: Strada Madonnina-Crea, Castellazzo [45.10239496, 8.306449641]",
         "I645_CNO2 :: Via Roma, Castellazzo [45.10000258, 8.283904643]"
+      ],
+      "Castellazzo Novarese": [
+        "C149_CNO1 :: Via Regina Elena, Castellazzo Novarese [45.51060721, 8.482700572]"
       ],
       "Castellero": [
         "C154_CNO1 :: Via Castellero, Castellero [44.92636957, 8.070003824]"
@@ -2906,13 +2931,13 @@
       "Castellino Tanaro": [
         "C176_CNO1 :: SP115, Castellino Tanaro [44.42768904, 7.982396316]"
       ],
-      "Castello Di Annone": [
-        "A300_CNO1 :: Alberoni, Castello di Annone [44.89697605, 8.354570495]",
-        "A300_CNO2 :: Alberoni, Castello di Annone [44.90136566, 8.357072941]"
-      ],
       "Castello": [
         "H553_CNO1 :: Via Viverone 10a, Castello [45.42228418, 8.062034696]",
         "H553_CNO2 :: Pioglio, Castello [45.42130927, 8.070659011]"
+      ],
+      "Castello Di Annone": [
+        "A300_CNO1 :: Alberoni, Castello di Annone [44.89697605, 8.354570495]",
+        "A300_CNO2 :: Alberoni, Castello di Annone [44.90136566, 8.357072941]"
       ],
       "Castelmagno": [
         "C205_CNO1 :: Strada per Colletto, Castelmagno [44.41134622, 7.218351438]"
@@ -2964,6 +2989,9 @@
         "C365_CNO3 :: Via Martiri, Cavaglio d'Agogna [45.61036729, 8.482994652]",
         "C365_CNO4 :: Piazza Primo Maggio, Cavaglio d'Agogna [45.6108328, 8.482911516]"
       ],
+      "Cavaglio San Donnino": [
+        "C367_CNO5 :: Via Provinciale, Cavaglio San Donnino [46.06798635, 8.617801425]"
+      ],
       "Cavaglià": [
         "C363_CNO1 :: Via Campasso, Cavaglià [45.40264046, 8.089896915]",
         "C363_CNO2 :: Via Avvocato Ferdinando Rondolino, Cavaglià [45.40878618, 8.095247796]",
@@ -3014,6 +3042,11 @@
       ],
       "Celle Enomondo": [
         "C440_CNO1 :: Strada Ronco 2, Celle Enomondo [44.85562138, 8.120476975]"
+      ],
+      "Cellio Con Breia": [
+        "B136_CNO2 :: SP102, Cellio con Breia [45.78401885, 8.292959845]",
+        "C450_CNO1 :: Carega, Cellio con Breia [45.74803348, 8.300698226]",
+        "C450_CNO2 :: Via Don Paolo Gianoli, Cellio con Breia [45.7567312, 8.311437549]"
       ],
       "Centallo": [
         "C466_CNO1 :: Via Murazzo, Centallo [44.48301356, 7.606613722]",
@@ -3700,6 +3733,10 @@
       "Crova": [
         "D187_CNO1 :: Via Roma, Crova [45.33125722, 8.207587932]"
       ],
+      "Cuccaro Monferrato": [
+        "D194_CNO1 :: Via Cristoforo Colombo, Cuccaro Monferrato [44.99039844, 8.457663509]",
+        "D194_CNO2 :: Via Alessandria 6, Cuccaro Monferrato [44.99318321, 8.456861929]"
+      ],
       "Cuceglio": [
         "D197_CNO1 :: Via Regina Margherita, Cuceglio [45.3591369, 7.815419655]",
         "D197_CNO2 :: Via San Pietro, Cuceglio [45.35659068, 7.817090678]",
@@ -3836,6 +3873,9 @@
         "D219_CNO1 :: Montangero, Curino [45.61008531, 8.24299252]",
         "D219_CNO2 :: SP234, Curino [45.62598104, 8.236846329]"
       ],
+      "Cursolo": [
+        "D225_CNO1 :: Via Vittorio Emanuele III, Cursolo [46.0971119, 8.565550284]"
+      ],
       "Cuzzago": [
         "H037_CNO1 :: Via Nazionale, Cuzzago [45.99510902, 8.372295182]",
         "H037_CNO6 :: ~Via Nazionale, Cuzzago [45.99559043, 8.370196271]"
@@ -3928,6 +3968,10 @@
         "D374_CNO8 :: Via Circonvallazione, Druogno [46.13634929, 8.430972538]",
         "D374_CNO9 :: Via Colonia, Druogno [46.13210641, 8.435419896]"
       ],
+      "Drusacco": [
+        "L338_CNO1 :: SP64, Drusacco [45.49163016, 7.764556514]",
+        "L548_CNO5 :: Via Cairoli, Drusacco [45.49720974, 7.768036022]"
+      ],
       "Dubbione": [
         "G672_CNO1 :: Via Alessandro Manzoni, Dubbione [44.942159, 7.227642705]",
         "G672_CNO2 :: Via Nino Costa, Dubbione [44.95442044, 7.206748958]",
@@ -3977,6 +4021,11 @@
       "Falicetto": [
         "L804_CNO1 :: Via Saluzzo, Falicetto [44.59880356, 7.513797121]",
         "L804_CNO4 :: Via Saluzzo, Falicetto [44.59879114, 7.513798473]"
+      ],
+      "Falmenta": [
+        "C367_CNO4 :: Via per Gurrone, Falmenta [46.0719311, 8.606216657]",
+        "D481_CNO1 :: Via Grè, Falmenta [46.07395294, 8.592635551]",
+        "D481_CNO2 :: Via Provinciale, Falmenta [46.0749081, 8.59715187]"
       ],
       "Fara Novarese": [
         "D492_CNO2 :: Via Cesare Battisti, Fara Novarese [45.55427622, 8.459920591]",
@@ -4063,6 +4112,9 @@
         "D712_CNO1 :: Strada Provinciale 230, Formigliana [45.44560851, 8.23293664]",
         "D712_CNO3 :: Via Roma 5a, Formigliana [45.42814831, 8.294887833]"
       ],
+      "Forno": [
+        "L651_CNO1 :: Via Principale, Forno [45.93250495, 8.290984375]"
+      ],
       "Forno Canavese": [
         "D725_CNO1 :: SP42, Forno Canavese [45.33818835, 7.601193279]",
         "D725_CNO10 :: Bosonetti, Forno Canavese [45.34989366, 7.579948886]",
@@ -4074,9 +4126,6 @@
         "D725_CNO7 :: Via Francesco Cannella, Forno Canavese [45.34606917, 7.590807422]",
         "D725_CNO8 :: SP42, Forno Canavese [45.3484575, 7.587326869]",
         "D725_CNO9 :: Via Levone, Forno Canavese [45.33868704, 7.586621105]"
-      ],
-      "Forno": [
-        "L651_CNO1 :: Via Principale, Forno [45.93250495, 8.290984375]"
       ],
       "Fossano": [
         "D742_CNO1 :: Via Castelvecchio, Fossano [44.5471294, 7.783440313]",
@@ -4232,14 +4281,14 @@
       "Gambasca": [
         "D894_CNO1 :: Via Borgata Barra, Gambasca [44.62840616, 7.347878759]"
       ],
+      "Garbagna": [
+        "D910_CNO1 :: Via 24 marzo, Garbagna [44.78219487, 8.998696916]",
+        "D910_CNO2 :: Santa Cristina, Garbagna [44.78082742, 8.9967127]"
+      ],
       "Garbagna Novarese": [
         "D911_CNO1 :: Piazza del Municipio, Garbagna Novarese [45.3867919, 8.660099258]",
         "D911_CNO2 :: Via Giacomo Matteotti, Garbagna Novarese [45.3906092, 8.659813557]",
         "D911_CNO3 :: Via Tredici Martiri, Garbagna Novarese [45.38854682, 8.659977889]"
-      ],
-      "Garbagna": [
-        "D910_CNO1 :: Via 24 marzo, Garbagna [44.78219487, 8.998696916]",
-        "D910_CNO2 :: Santa Cristina, Garbagna [44.78082742, 8.9967127]"
       ],
       "Garessio": [
         "D920_CNO10 :: ~SP213, Garessio [44.20298272, 8.033246836]",
@@ -4268,6 +4317,13 @@
       ],
       "Gassino Torinese": [
         "D933_CNO1 :: Via Mario Caudana, Gassino Torinese [45.08950237, 7.844930568]"
+      ],
+      "Gattico": [
+        "D937_CNO1 :: Via Leonardi 1, Gattico [45.71014262, 8.518978155]",
+        "D937_CNO3 :: Strada Vicinale della Malghera, Gattico [45.71396751, 8.520315837]",
+        "D937_CNO5 :: Via Giuseppe Mazzini 66, Gattico [45.71021562, 8.50975373]",
+        "D937_CNO6 :: Via Risorgimento, Gattico [45.70637855, 8.520743328]",
+        "D937_CNO7 :: Via Don E. Pirali, Gattico [45.70881653, 8.520467112]"
       ],
       "Gavi": [
         "D944_CNO1 :: S.P. 170 Ovada-Gavi, Gavi [44.66364395, 8.804714489]",
@@ -4381,6 +4437,9 @@
         "E143_CNO1 :: Via Gerolamo Carrera, Granozzo [45.36026343, 8.57436846]",
         "E143_CNO2 :: Via Campo Sportivo, Granozzo [45.36073859, 8.569601856]"
       ],
+      "Grava": [
+        "A211_CNO2 :: Baracconi, Grava [44.98884525, 8.767098539]"
+      ],
       "Gravere": [
         "E154_CNO1 :: Via Belvedere, Gravere [45.12190263, 7.040938759]"
       ],
@@ -4489,6 +4548,11 @@
         "TOH_1/09e41 :: Via Paolo Gaidano 179 int. 5/B, Grugliasco [45.04346653, 7.618227433]",
         "TOH_1/09e42 :: Via Paolo Gaidano 179 int. 23, Grugliasco [45.04251869, 7.617868393]",
         "TOH_1/09e43 :: Via Paolo Gaidano, Grugliasco [45.04167182, 7.617036663]"
+      ],
+      "Guala": [
+        "L436_CNO15 :: SP112, Guala [45.66797959, 8.161822599]",
+        "L436_CNO2 :: Trivero, Guala [45.66908002, 8.16218911]",
+        "L436_CNO8 :: Via Guglielmo Marconi 30b, Guala [45.67071251, 8.15803958]"
       ],
       "Guardabosone": [
         "E237_CNO1 :: Via Monte Barone, Guardabosone [45.70101387, 8.249030233]",
@@ -4741,6 +4805,9 @@
         "E711_CNO1 :: Via alla Valle, Lozzolo [45.62114248, 8.32254685]",
         "E711_CNO2 :: Via Circonvalazione Ovest, Lozzolo [45.62335093, 8.32151395]"
       ],
+      "Lugnacco": [
+        "E727_CNO1 :: Lugnacco, Lugnacco [45.44814966, 7.78210282]"
+      ],
       "Lusernetta": [
         "E759_CNO1 :: Via Giovanni Falcone, Lusernetta [44.80294377, 7.249136561]"
       ],
@@ -4764,6 +4831,11 @@
         "A074_CNO3 :: Vicolo Campodoneo 9, Madonna delle Grazie [45.36544415, 7.767250671]",
         "A074_CNO4 :: Via Duchessa Isabella, Madonna delle Grazie [45.36657761, 7.766656549]",
         "A074_CNO5 :: Corso Camillo Benso Conte di Cavour 2, Madonna delle Grazie [45.36911918, 7.765177083]"
+      ],
+      "Maggiate Inferiore": [
+        "D937_CNO2 :: Via Abate Scolari, Maggiate Inferiore [45.70662277, 8.495353551]",
+        "D937_CNO4 :: Corso Giuseppe Garibaldi, Maggiate Inferiore [45.70779183, 8.499139777]",
+        "D937_CNO8 :: Via Mirabella 9, Maggiate Inferiore [45.71804174, 8.489965003]"
       ],
       "Maggiora": [
         "E803_CNO1 :: Via Alessandro Manzoni, Maggiora [45.69108604, 8.418986443]",
@@ -5392,15 +5464,15 @@
         "F666_CNO1 :: Via Padre Giovanni Secco 32, Montezemolo [44.37579657, 8.140582186]",
         "F666_CNO2 :: SP209, Montezemolo [44.37228542, 8.134244744]"
       ],
+      "Monticello": [
+        "E143_CNO3 :: Via Granozzo, Monticello [45.37338147, 8.595368065]"
+      ],
       "Monticello D'Alba": [
         "F669_CNO1 :: Strada Nairole, Monticello d'Alba [44.7132576, 7.957623855]",
         "F669_CNO2 :: Strada Vallumbria, Monticello d'Alba [44.71571386, 7.954466709]",
         "F669_CNO3 :: Via Stazione 4, Monticello d'Alba [44.71557894, 7.95209661]",
         "F669_CNO4 :: Via Sommariva Perno, Monticello d'Alba [44.71800491, 7.941471858]",
         "F669_CNO5 :: Frazione Sant'Antonio, Monticello d'Alba [44.71395748, 7.924624099]"
-      ],
-      "Monticello": [
-        "E143_CNO3 :: Via Granozzo, Monticello [45.37338147, 8.595368065]"
       ],
       "Montiglio Monferrato": [
         "M302_CNO1 :: SP2, Montiglio Monferrato [45.04568586, 8.133704915]",
@@ -5443,14 +5515,14 @@
         "F723_CNO8 :: Via Santuario, Moretta [44.76416736, 7.533398116]",
         "F723_CNO9 :: Via Po, Moretta [44.76563581, 7.533216079]"
       ],
-      "Moriondo Torinese": [
-        "F733_CNO1 :: Via Roma, Moriondo Torinese [45.03949775, 7.944198146]",
-        "F733_CNO2 :: Via Roma, Moriondo Torinese [45.03889433, 7.939537494]"
-      ],
       "Moriondo": [
         "I152_CNO1 :: Via Chivasso, Moriondo [45.16658803, 7.956157425]",
         "I152_CNO2 :: Colombaro, Moriondo [45.16864672, 7.957425545]",
         "I152_CNO3 :: Via Colombaro, Moriondo [45.15823973, 7.953972432]"
+      ],
+      "Moriondo Torinese": [
+        "F733_CNO1 :: Via Roma, Moriondo Torinese [45.03949775, 7.944198146]",
+        "F733_CNO2 :: Via Roma, Moriondo Torinese [45.03889433, 7.939537494]"
       ],
       "Mornese": [
         "F737_CNO1 :: Via Andrea Doria 49, Mornese [44.63983438, 8.756393902]",
@@ -5467,13 +5539,19 @@
         "F751_CNO1 :: Via San Sebastiano, Morsasco [44.66486363, 8.549737746]",
         "F751_CNO2 :: Via San Pasquale 26, Morsasco [44.66470932, 8.551129423]"
       ],
-      "Motta De' Conti": [
-        "F774_CNO1 :: Via Vittorio Veneto, Motta de' Conti [45.19461746, 8.520450189]",
-        "F774_CNO2 :: Via Giuseppe Mazzini 3, Motta de' Conti [45.19315975, 8.518325093]"
+      "Mosso Santa Maria": [
+        "M304_CNO1 :: Mosso, Mosso Santa Maria [45.64277348, 8.137441339]",
+        "M304_CNO2 :: Via Quintino Sella, Mosso Santa Maria [45.64660231, 8.13690083]",
+        "M304_CNO3 :: Mosso, Mosso Santa Maria [45.65105404, 8.138356281]",
+        "M304_CNO4 :: SP109, Mosso Santa Maria [45.65172692, 8.138452523]"
       ],
       "Motta": [
         "D119_CNO14 :: Via Giacomo Scotti 58, Motta [44.80871153, 8.146515321]",
         "D119_CNO9 :: Santa Margherita, Motta [44.80479546, 8.151786368]"
+      ],
+      "Motta De' Conti": [
+        "F774_CNO1 :: Via Vittorio Veneto, Motta de' Conti [45.19461746, 8.520450189]",
+        "F774_CNO2 :: Via Giuseppe Mazzini 3, Motta de' Conti [45.19315975, 8.518325093]"
       ],
       "Mottalciata": [
         "F776_CNO1 :: Via Martiri della Libertà 15, Mottalciata [45.50850005, 8.207248623]",
@@ -5945,13 +6023,6 @@
       "Oldenico": [
         "G018_CNO1 :: Via Amedeo De Rege, Oldenico [45.40114655, 8.379436907]"
       ],
-      "Oleggio Castello": [
-        "G020_CNO1 :: Via Vittorio Veneto 56, Oleggio Castello [45.74742667, 8.52552213]",
-        "G020_CNO2 :: Via Don Giancarlo Rolando 2, Oleggio Castello [45.74868617, 8.530133132]",
-        "G020_CNO3 :: Via Monte Oleggiasco, Oleggio Castello [45.75103602, 8.527170992]",
-        "G020_CNO4 :: Via Don Giancarlo Rolando 2, Oleggio Castello [45.74870372, 8.530128395]",
-        "G020_CNO5 :: Via Campagna, Oleggio Castello [45.74698012, 8.524659384]"
-      ],
       "Oleggio": [
         "G019_CNO1 :: Via Gallarate, Oleggio [45.59211723, 8.65231928]",
         "G019_CNO2 :: Via Raccordo Fornaci Momo, Oleggio [45.59257717, 8.607787051]",
@@ -5959,6 +6030,13 @@
         "G019_CNO5 :: Via Lanca, Oleggio [45.58021706, 8.654804319]",
         "G019_CNO6 :: Via Raccordo Fornaci Momo, Oleggio [45.59726822, 8.612963457]",
         "G019_CNO7 :: Via M. Bonalanza, Oleggio [45.58040653, 8.645801074]"
+      ],
+      "Oleggio Castello": [
+        "G020_CNO1 :: Via Vittorio Veneto 56, Oleggio Castello [45.74742667, 8.52552213]",
+        "G020_CNO2 :: Via Don Giancarlo Rolando 2, Oleggio Castello [45.74868617, 8.530133132]",
+        "G020_CNO3 :: Via Monte Oleggiasco, Oleggio Castello [45.75103602, 8.527170992]",
+        "G020_CNO4 :: Via Don Giancarlo Rolando 2, Oleggio Castello [45.74870372, 8.530128395]",
+        "G020_CNO5 :: Via Campagna, Oleggio Castello [45.74698012, 8.524659384]"
       ],
       "Olivola": [
         "G042_CNO1 :: Regione Costabella, Olivola [45.03754325, 8.366527391]"
@@ -6009,13 +6087,13 @@
         "TOH_1/05w33 :: Via Luigi Einaudi 59, Orbassano [44.99950632, 7.535536787]",
         "TOH_1/05w34 :: Via Pietro Nenni 1, Orbassano [44.99917256, 7.533946189]"
       ],
+      "Orio": [
+        "E314_CNO7 :: Viale Europa 22, Orio [45.75391329, 8.484994156]"
+      ],
       "Orio Canavese": [
         "G109_CNO1 :: Via San Giovanni Bosco, Orio Canavese [45.32807991, 7.859572806]",
         "G109_CNO2 :: Piazza Giuseppe Ponzetto 14, Orio Canavese [45.32807705, 7.86268379]",
         "G109_CNO3 :: Via Patrioti, Orio Canavese [45.33237942, 7.853687348]"
-      ],
-      "Orio": [
-        "E314_CNO7 :: Viale Europa 22, Orio [45.75391329, 8.484994156]"
       ],
       "Ormea": [
         "G114_CNO1 :: Borganza, Ormea [44.15453474, 7.914481728]",
@@ -6182,6 +6260,10 @@
       "Pavone D'Alessandria": [
         "G619_CNO2 :: Via Roma, Pavone d'Alessandria [44.94315951, 8.669702467]",
         "G619_CNO3 :: San Defendente, Pavone d'Alessandria [44.93685261, 8.665939341]"
+      ],
+      "Pecco": [
+        "A199_CNO2 :: SP64, Pecco [45.45913851, 7.767175039]",
+        "G396_CNO1 :: Via Aosta, Pecco [45.45249256, 7.776237154]"
       ],
       "Pecetto Di Valenza": [
         "G397_CNO1 :: Strada delle Oche, Pecetto di Valenza [44.99801005, 8.68018291]",
@@ -6519,6 +6601,9 @@
         "G800_CNO2 :: Via Guglielmo Marconi, Polonghera [44.80505243, 7.594816329]",
         "G800_CNO3 :: Via Fossati, Polonghera [44.80357516, 7.596974437]"
       ],
+      "Polto": [
+        "L436_CNO19 :: Trivero, Polto [45.6479624, 8.175496149]"
+      ],
       "Pomaretto": [
         "G805_CNO1 :: Via Carlo Alberto, Pomaretto [44.95416091, 7.178254103]",
         "G805_CNO2 :: Fortino, Pomaretto [44.95581534, 7.182482638]",
@@ -6591,7 +6676,12 @@
         "G877_CNO1 :: Pille, Ponzone [44.58826856, 8.459173205]",
         "G877_CNO2 :: Frazione Ciglione, Ponzone [44.61013057, 8.480426838]",
         "G877_CNO3 :: SP210, Ponzone [44.57236557, 8.469009266]",
-        "G877_CNO4 :: Strada provinciale Ponzone-Piancastagna, Ponzone [44.55568722, 8.504529073]"
+        "G877_CNO4 :: Strada provinciale Ponzone-Piancastagna, Ponzone [44.55568722, 8.504529073]",
+        "I835_CNO2 :: Soprana, Ponzone [45.64598256, 8.192174098]",
+        "L436_CNO17 :: SP112, Ponzone [45.6521696, 8.182350148]",
+        "L436_CNO20 :: SP112, Ponzone [45.65240941, 8.180243982]",
+        "L436_CNO3 :: Piazza Venticinque Aprile, Ponzone [45.65307618, 8.189080217]",
+        "L436_CNO6 :: SP112, Ponzone [45.6553444, 8.18834835]"
       ],
       "Portacomaro": [
         "G894_CNO1 :: Valfea, Portacomaro [44.94451354, 8.28223949]",
@@ -6719,6 +6809,12 @@
         "G520_CNO5 :: Via alla Chiesa, Pratolungo [45.82826662, 8.402247746]",
         "G520_CNO6 :: Via Francisca, Pratolungo [45.82319112, 8.405133426]"
       ],
+      "Pratrivero": [
+        "L436_CNO10 :: Trivero, Pratrivero [45.66324941, 8.181823733]",
+        "L436_CNO12 :: SP112, Pratrivero [45.6668929, 8.173817699]",
+        "L436_CNO13 :: Trivero, Pratrivero [45.66638452, 8.179023989]",
+        "L436_CNO18 :: Trivero, Pratrivero [45.66239886, 8.175764377]"
+      ],
       "Pray": [
         "G974_CNO1 :: Via Bartolomeo Sella 34, Pray [45.67515939, 8.218146254]",
         "G974_CNO2 :: Via Giuseppe Garibaldi 1, Pray [45.68154926, 8.215463662]",
@@ -6773,6 +6869,13 @@
       ],
       "Quare": [
         "B505_CNO2 :: Va San Rocco, Quare [45.79309386, 8.03627987]"
+      ],
+      "Quaregna Cerreto": [
+        "H103_CNO1 :: Via Guglielmo Marconi, Quaregna Cerreto [45.56543829, 8.166929479]",
+        "H103_CNO2 :: Via Guglielmo Marconi 54, Quaregna Cerreto [45.56921939, 8.166988932]",
+        "H103_CNO3 :: Via Guglielmo Marconi 61, Quaregna Cerreto [45.57094412, 8.167142934]",
+        "H103_CNO4 :: Via per Cossato 16, Quaregna Cerreto [45.57720564, 8.167138393]",
+        "H103_CNO5 :: ~Via Martiri della Libertà, Quaregna Cerreto [45.56383527, 8.164166836]"
       ],
       "Quargnento": [
         "H104_CNO1 :: Strada Alessandria, Quargnento [44.94429527, 8.492443089]",
@@ -6863,6 +6966,10 @@
         "H250_CNO1 :: Via Bertolotti, Revigliasco d'Asti [44.85889951, 8.158429829]",
         "H250_CNO2 :: Piazza Vittorio Veneto 8 a b c, Revigliasco d'Asti [44.85878967, 8.159180257]"
       ],
+      "Revislate": [
+        "L798_CNO2 :: Via Montriolo, Revislate [45.69395374, 8.551123684]",
+        "L798_CNO5 :: Via Giuseppe Nobile, Revislate [45.69039346, 8.550224558]"
+      ],
       "Ribordone": [
         "H270_CNO1 :: Sentiero per la palestra di roccia, Ribordone [45.44485672, 7.494623412]",
         "H270_CNO2 :: Verlucca, Ribordone [45.430506, 7.50829062]"
@@ -6878,6 +6985,10 @@
         "H285_CNO1 :: Via Monbracco, Rifreddo [44.64974089, 7.349017814]",
         "H285_CNO2 :: Via Monbracco, Rifreddo [44.64973833, 7.34899722]",
         "H285_CNO3 :: Via Monbracco, Rifreddo [44.64973759, 7.348975503]"
+      ],
+      "Rimasco": [
+        "H292_CNO1 :: Oro di Munca, Rimasco [45.85506696, 8.064103966]",
+        "H292_CNO2 :: SP124, Rimasco [45.86076845, 8.063684938]"
       ],
       "Rimella": [
         "H293_CNO1 :: GTA Variante Walser, Rimella [45.91069021, 8.200224105]",
@@ -6897,7 +7008,10 @@
         "H337_CNO9 :: Via Buttigliera, Riva presso Chieri [44.99067555, 7.879288005]"
       ],
       "Riva Valdobbia": [
-        "A119_CNO3 :: Via dei Walser, Riva Valdobbia [45.84863469, 7.938445785]"
+        "A119_CNO3 :: Via dei Walser, Riva Valdobbia [45.84863469, 7.938445785]",
+        "H329_CNO1 :: Via Melchiorre Real, Riva Valdobbia [45.83376278, 7.952068084]",
+        "H329_CNO3 :: Via Melchiorre Real 2, Riva Valdobbia [45.83308696, 7.952830475]",
+        "H329_CNO4 :: Via Giacomo Antonio Matolo, Riva Valdobbia [45.83119196, 7.953663392]"
       ],
       "Rivalba": [
         "H333_CNO1 :: Via Vaudamus, Rivalba [45.11540594, 7.887334528]",
@@ -7030,17 +7144,17 @@
       "Roascio": [
         "H363_CNO1 :: Roascio, Roascio [44.41747147, 8.022635582]"
       ],
+      "Roasio": [
+        "H365_CNO10 :: Via Camino, Roasio [45.59367417, 8.270903251]",
+        "H365_CNO3 :: Via Vittorio Veneto, Roasio [45.60338208, 8.267864362]",
+        "H365_CNO6 :: Via Cà d'Sola, Roasio [45.60364693, 8.27152692]"
+      ],
       "Roasio Santa Maria": [
         "H365_CNO2 :: Cascina Biellese, Roasio Santa Maria [45.60103449, 8.300443129]",
         "H365_CNO4 :: Via Torino, Roasio Santa Maria [45.60092027, 8.291047007]",
         "H365_CNO7 :: Via Carazzo 13, Roasio Santa Maria [45.6087595, 8.28890224]",
         "H365_CNO8 :: Via Torino, Roasio Santa Maria [45.6046851, 8.289408805]",
         "H365_CNO9 :: Via Pietro Micca 44, Roasio Santa Maria [45.60967212, 8.301693077]"
-      ],
-      "Roasio": [
-        "H365_CNO10 :: Via Camino, Roasio [45.59367417, 8.270903251]",
-        "H365_CNO3 :: Via Vittorio Veneto, Roasio [45.60338208, 8.267864362]",
-        "H365_CNO6 :: Via Cà d'Sola, Roasio [45.60364693, 8.27152692]"
       ],
       "Roatta": [
         "L241_CNO1 :: SP35, Roatta [44.35487115, 7.899927657]",
@@ -7179,6 +7293,11 @@
         "H502_CNO8 :: Via Professor Gerolamo Raffagni, Romagnano Sesia [45.63722988, 8.385240464]",
         "H502_CNO9 :: Via Novara, Romagnano Sesia [45.62362641, 8.398454751]"
       ],
+      "Ronco": [
+        "E003_CNO10 :: Via Cerutti, Ronco [45.96211559, 8.619920774]",
+        "E003_CNO14 :: Via Cerutti, Ronco [45.96212941, 8.619932735]",
+        "L436_CNO4 :: Trivero, Ronco [45.66240772, 8.158005799]"
+      ],
       "Ronco Biellese": [
         "H538_CNO1 :: Via Roma 20, Ronco Biellese [45.5812149, 8.097536379]",
         "H538_CNO2 :: Via Libertà 10, Ronco Biellese [45.58172793, 8.099539549]",
@@ -7190,10 +7309,6 @@
         "H539_CNO2 :: Betassa, Ronco Canavese [45.49299802, 7.539500055]",
         "H539_CNO3 :: Via Roma, Ronco Canavese [45.49798219, 7.546057082]",
         "H539_CNO4 :: SP47, Ronco Canavese [45.4931021, 7.532239984]"
-      ],
-      "Ronco": [
-        "E003_CNO10 :: Via Cerutti, Ronco [45.96211559, 8.619920774]",
-        "E003_CNO14 :: Via Cerutti, Ronco [45.96212941, 8.619932735]"
       ],
       "Rondissone": [
         "H547_CNO1 :: Via Carpi, Rondissone [45.24207031, 7.954545502]",
@@ -7285,6 +7400,9 @@
       "Salbertrand": [
         "H684_CNO1 :: Rival, Salbertrand [45.05897434, 6.862899756]"
       ],
+      "Sale": [
+        "H694_CNO1 :: Via non definita, Sale [44.96993143, 8.833425918]"
+      ],
       "Sale Castelnuovo": [
         "C241_CNO1 :: Via Roma, Sale Castelnuovo [45.43934672, 7.695051501]",
         "C241_CNO2 :: Pontiglia, Sale Castelnuovo [45.43651426, 7.691271918]"
@@ -7292,9 +7410,6 @@
       "Sale Delle Langhe": [
         "H695_CNO1 :: Via Roma, Sale delle Langhe [44.39467679, 8.079016377]",
         "H704_CNO1 :: SP149, Sale delle Langhe [44.39879984, 8.082138109]"
-      ],
-      "Sale": [
-        "H694_CNO1 :: Via non definita, Sale [44.96993143, 8.833425918]"
       ],
       "Salerano Canavese": [
         "H702_CNO1 :: Via Giovanni Falcone, Salerano Canavese [45.45929954, 7.851498391]",
@@ -7325,6 +7440,7 @@
         "H725_CNO9 :: ~Largo Stazione, Saluggia [45.23348325, 8.016531974]"
       ],
       "Saluzzo": [
+        "C140_CNO1 :: Via Maestra, Saluzzo [44.62038192, 7.438538472]",
         "H727_CNO1 :: Frazione Cervignasco, Saluzzo [44.6917837, 7.493277442]"
       ],
       "Salza Di Pinerolo": [
@@ -7360,6 +7476,10 @@
       "San Benedetto Belbo": [
         "H770_CNO1 :: SP31, San Benedetto Belbo [44.49121039, 8.057944225]"
       ],
+      "San Bernardino": [
+        "L327_CNO1 :: Strada Giaveno, San Bernardino [45.03522772, 7.402285315]",
+        "L327_CNO2 :: Via Combaluetto, San Bernardino [45.03684288, 7.393961083]"
+      ],
       "San Bernardino Verbano": [
         "H777_CNO1 :: Via Fondotoce, San Bernardino Verbano [45.94844391, 8.496116333]",
         "H777_CNO2 :: Via San Gaudenzio 2, San Bernardino Verbano [45.96263328, 8.496963242]",
@@ -7367,9 +7487,8 @@
         "H777_CNO4 :: Via Guglielmo Marconi, San Bernardino Verbano [45.95289217, 8.512084807]",
         "H777_CNO5 :: Via Europa, San Bernardino Verbano [45.94998954, 8.511432387]"
       ],
-      "San Bernardino": [
-        "L327_CNO1 :: Strada Giaveno, San Bernardino [45.03522772, 7.402285315]",
-        "L327_CNO2 :: Via Combaluetto, San Bernardino [45.03684288, 7.393961083]"
+      "San Carlo": [
+        "L666_CNO1 :: Via Monte Rosa, San Carlo [45.98723772, 8.129779533]"
       ],
       "San Carlo Canavese": [
         "H789_CNO1 :: Strada Corio 78, San Carlo Canavese [45.25114606, 7.59260419]",
@@ -7381,9 +7500,6 @@
         "H789_CNO7 :: Spinerano, San Carlo Canavese [45.24029923, 7.607775027]",
         "H789_CNO8 :: Strada nuova di Spinerano 40, San Carlo Canavese [45.24168077, 7.605715469]",
         "H789_CNO9 :: Strada Girolera, San Carlo Canavese [45.23658627, 7.633946737]"
-      ],
-      "San Carlo": [
-        "L666_CNO1 :: Via Monte Rosa, San Carlo [45.98723772, 8.129779533]"
       ],
       "San Cristoforo": [
         "H810_CNO1 :: Via Macallè, San Cristoforo [44.69183188, 8.751755472]"
@@ -7469,6 +7585,9 @@
       "San Giuseppe": [
         "I823_CNO2 :: Via Roma, San Giuseppe [44.74555508, 7.90145099]"
       ],
+      "San Martino": [
+        "H406_CNO1 :: SP144, San Martino [44.67725719, 9.02652647]"
+      ],
       "San Martino Alfieri": [
         "H987_CNO1 :: Via Tanaro 6, San Martino Alfieri [44.81765797, 8.109758317]",
         "H987_CNO2 :: ~Via Alfieri, San Martino Alfieri [44.8205143, 8.107071169]"
@@ -7476,12 +7595,14 @@
       "San Martino Canavese": [
         "H997_CNO1 :: Via Roma, San Martino Canavese [45.3939622, 7.815370337]"
       ],
-      "San Martino": [
-        "H406_CNO1 :: SP144, San Martino [44.67725719, 9.02652647]"
-      ],
       "San Marzano Oliveto": [
         "I017_CNO1 :: Via Monte Oliveto, San Marzano Oliveto [44.75141477, 8.299676384]",
         "I017_CNO2 :: Regione Leiso, San Marzano Oliveto [44.75653782, 8.282184717]"
+      ],
+      "San Maurizio": [
+        "E003_CNO13 :: Via Magazzeno 2, San Maurizio [45.95428213, 8.610211463]",
+        "E003_CNO16 :: Corso Risorgimento, San Maurizio [45.95275623, 8.606710488]",
+        "E003_CNO17 :: Via Moriggia, San Maurizio [45.95660527, 8.613393881]"
       ],
       "San Maurizio D'Opaglio": [
         "I025_CNO1 :: Via per Alzo, San Maurizio d'Opaglio [45.78093441, 8.38603896]",
@@ -7491,11 +7612,6 @@
         "I025_CNO5 :: Via Pietro Nenni, San Maurizio d'Opaglio [45.77107831, 8.395583112]",
         "I025_CNO7 :: Via Roma, San Maurizio d'Opaglio [45.77261739, 8.395177825]",
         "I025_CNO8 :: Via Venticinque Aprile, San Maurizio d'Opaglio [45.76986316, 8.405273822]"
-      ],
-      "San Maurizio": [
-        "E003_CNO13 :: Via Magazzeno 2, San Maurizio [45.95428213, 8.610211463]",
-        "E003_CNO16 :: Corso Risorgimento, San Maurizio [45.95275623, 8.606710488]",
-        "E003_CNO17 :: Via Moriggia, San Maurizio [45.95660527, 8.613393881]"
       ],
       "San Mauro Torinese": [
         "C307_CNO5 :: Via Lunga, San Mauro Torinese [45.10632376, 7.792176973]",
@@ -7593,9 +7709,6 @@
         "A189_CNO1 :: SP13, Sanico [45.05107074, 8.200121132]",
         "A189_CNO2 :: Via Castello, Sanico [45.0498359, 8.208317026]"
       ],
-      "Sant'Agata Fossili": [
-        "I190_CNO1 :: Via Villalvernia, Sant'Agata Fossili [44.78594334, 8.9184231]"
-      ],
       "Sant'Agata": [
         "B615_CNO1 :: Via Casali Masserecci 7, Sant'Agata [46.06250282, 8.690252382]",
         "B615_CNO12 :: Via Casali Darbedo 20/22, Sant'Agata [46.07080441, 8.693467908]",
@@ -7609,6 +7722,9 @@
         "B615_CNO3 :: Vicolo Ospedale, Sant'Agata [46.06035007, 8.693243684]",
         "B615_CNO5 :: Via Giuseppe Verdi, Sant'Agata [46.07302049, 8.686694508]",
         "B615_CNO9 :: Via Paolo Zaccheo, Sant'Agata [46.06298223, 8.697827407]"
+      ],
+      "Sant'Agata Fossili": [
+        "I190_CNO1 :: Via Villalvernia, Sant'Agata Fossili [44.78594334, 8.9184231]"
       ],
       "Sant'Albano Stura": [
         "I210_CNO1 :: Piazza Europa, Sant'Albano Stura [44.50793463, 7.723410297]",
@@ -7634,6 +7750,7 @@
         "I316_CNO2 :: Via Alba, Santa Vittoria d'Alba [44.69918292, 7.935781952]"
       ],
       "Santo Stefano Belbo": [
+        "B489_CNO1 :: Via Roma, Santo Stefano Belbo [44.69490561, 8.193525939]",
         "I367_CNO1 :: Via Cesare Battisti, Santo Stefano Belbo [44.70827284, 8.232413655]",
         "I367_CNO2 :: Viale San Maurizio, Santo Stefano Belbo [44.70906205, 8.226982526]",
         "I367_CNO3 :: Corso Sabotino 4, Santo Stefano Belbo [44.70917475, 8.233542108]",
@@ -7959,6 +8076,9 @@
         "I823_CNO4 :: Piazza Don Giovanni Culasso \"Zio John\", Sommariva Perno [44.72983473, 7.923551502]",
         "I823_CNO5 :: Via San Giovanni, Sommariva Perno [44.74831128, 7.902165142]"
       ],
+      "Soprana": [
+        "I835_CNO1 :: Soprana 26 [45.65167956, 8.199635327]"
+      ],
       "Sordevolo": [
         "I847_CNO1 :: Via Adele Bona de Valle, Sordevolo [45.57051445, 7.975042866]",
         "I847_CNO2 :: Via Rubino 11, Sordevolo [45.57492482, 7.97444314]",
@@ -7999,6 +8119,9 @@
       "Spinosa Alta": [
         "G193_CNO2 :: ~Via Mazza, Spinosa Alta [45.05124742, 8.338487307]",
         "G193_CNO3 :: Via Guglielmo Marconi, Spinosa Alta [45.053491, 8.339300691]"
+      ],
+      "Spoccia": [
+        "D481_CNO3 :: SS631, Spoccia [46.08719121, 8.596895321]"
       ],
       "Staffa": [
         "E790_CNO2 :: Via Monte Rosa, Staffa [45.96038957, 7.992545672]",
@@ -8611,6 +8734,15 @@
       "Vallanzengo": [
         "L586_CNO1 :: Trabbia, Vallanzengo [45.60410777, 8.149059122]"
       ],
+      "Valle Mosso": [
+        "L606_CNO1 :: Corso Roma 50, Valle Mosso [45.63513404, 8.139974618]",
+        "L606_CNO11 :: SP232, Valle Mosso [45.62241019, 8.153763816]",
+        "L606_CNO12 :: Piazza Dante Alighieri, Valle Mosso [45.6352135, 8.142191434]",
+        "L606_CNO13 :: Via Scuole, Valle Mosso [45.63597041, 8.139611568]",
+        "L606_CNO14 :: Via Bartolomeo Sella 30, Valle Mosso [45.63435715, 8.144196718]",
+        "L606_CNO16 :: Valle Mosso, Valle Mosso [45.63094673, 8.151057221]",
+        "L606_CNO9 :: Via Pradonne, Valle Mosso [45.6320331, 8.148058169]"
+      ],
       "Valle San Nicolao": [
         "L620_CNO1 :: SP215, Valle San Nicolao [45.60909984, 8.142161219]",
         "L620_CNO2 :: Strona, Valle San Nicolao [45.6177425, 8.156575096]"
@@ -8648,6 +8780,7 @@
         "L668_CNO1 :: Strada statale 229 del Lago d'Orta, Vaprio d'Agogna [45.60397088, 8.527757951]"
       ],
       "Varallo": [
+        "H648_CNO1 :: Piazza Giovanni Regis, Varallo [45.85682709, 8.236494282]",
         "L669_CNO1 :: Mollinaccio, Varallo [45.84172479, 8.268049488]",
         "L669_CNO2 :: Oro, Varallo [45.83365205, 8.277852181]"
       ],
@@ -8874,6 +9007,11 @@
       "Verrua Savoia": [
         "L787_CNO1 :: Strada comunale del Gerbasso 112, Verrua Savoia [45.15454462, 8.095196812]"
       ],
+      "Veruno": [
+        "L798_CNO1 :: Via Scella, Veruno [45.69117278, 8.53184406]",
+        "L798_CNO3 :: Via Guglielmo Marconi, Veruno [45.68722466, 8.5278277]",
+        "L798_CNO4 :: Via Roma, Veruno [45.69251553, 8.529847729]"
+      ],
       "Vesime": [
         "L807_CNO1 :: ~Via Roma, Vesime [44.63581067, 8.228797346]"
       ],
@@ -8907,6 +9045,12 @@
         "L834_CNO1 :: Via A. Calvi, Viarigi [44.97800326, 8.361129766]",
         "L834_CNO2 :: Via Venti Settembre, Viarigi [44.97989061, 8.356920046]",
         "L834_CNO3 :: Via Venti Settembre, Viarigi [44.97716626, 8.360821322]"
+      ],
+      "Vico Canavese": [
+        "L548_CNO1 :: Via Don Pietro Aimino, Vico Canavese [45.49292, 7.782701693]",
+        "L548_CNO2 :: Meugliano, Vico Canavese [45.49435384, 7.778344182]",
+        "L548_CNO3 :: Via Novareglia 5, Vico Canavese [45.49344034, 7.777998078]",
+        "L548_CNO4 :: SP64, Vico Canavese [45.49290143, 7.77519824]"
       ],
       "Vicoforte": [
         "L841_CNO1 :: Via Ermena, Vicoforte [44.36292671, 7.861245838]",
