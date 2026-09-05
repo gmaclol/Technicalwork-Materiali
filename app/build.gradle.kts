@@ -113,6 +113,7 @@ dependencies {
     // Firebase
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.auth.ktx)
 
     // GPS: FusedLocationProviderClient per posizione affidabile
     implementation("com.google.android.gms:play-services-location:21.3.0")

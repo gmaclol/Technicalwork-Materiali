@@ -56,17 +56,24 @@ class MyApplication : Application(), Application.ActivityLifecycleCallbacks {
         
         ProcessLifecycleOwner.get().lifecycle.addObserver(object : DefaultLifecycleObserver {
             override fun onStart(owner: LifecycleOwner) {
-                // Avvia il listener Firestore in tempo reale per Forza Aggiornamento
-                startDashboardListener()
+                appScope.launch(Dispatchers.IO) {
+                    // Garantisce l'autenticazione anonima Firebase prima di qualsiasi operazione su Firestore
+                    AuthManager.ensureAuthenticated()
+
+                    // Avvia il listener Firestore in tempo reale per Forza Aggiornamento (solo se ancora in foreground)
+                    if (ProcessLifecycleOwner.get().lifecycle.currentState.isAtLeast(androidx.lifecycle.Lifecycle.State.STARTED)) {
+                        startDashboardListener()
+                    }
+
+                    // Aggiornamento telemetria dispositivo se cambiata
+                    syncDeviceTelemetryIfNeeded()
+                }
 
                 // Aggiornamento GPS e presenza
                 SyncWorker.enqueue(this@MyApplication, isFullSync = false)
                 
                 // Controllo aggiornamenti globale
                 checkUpdatesGlobally()
-
-                // Aggiornamento telemetria dispositivo se cambiata
-                syncDeviceTelemetryIfNeeded()
             }
 
             override fun onStop(owner: LifecycleOwner) {

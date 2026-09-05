@@ -432,29 +432,35 @@ class MainActivity : AppCompatActivity() {
 
         // L'aggiornamento posizione e presenza all'avvio è ora gestito globalmente da MyApplication
 
-        // Listener per rinomina remota e aggiornamento preferiti PFS dalla Dashboard
-        favoritesListenerRegistration = FavoriteManager.attachDashboardListener(
-            context = this,
-            settingsRepo = settingsRepository
-        ) { newName, newFavorites ->
-            var updated = false
-            if (!newName.isNullOrBlank() && newName != getTechnicianName()) {
-                saveTechnicianName(newName)
-                tvTechName.text = newName
-                updated = true
-            }
-            if (newFavorites != null) {
-                setupDynamicDrawer()
-                updated = true
-            }
-            if (updated) {
-                lifecycleScope.launch { performTotalSync(force = true) }
+        // Listener per rinomina remota e aggiornamento preferiti PFS dalla Dashboard + Scambi materiale (dopo autenticazione)
+        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
+        lifecycleScope.launch(Dispatchers.IO) {
+            AuthManager.ensureAuthenticated()
+            withContext(Dispatchers.Main) {
+                if (!isFinishing && !isDestroyed) {
+                    favoritesListenerRegistration = FavoriteManager.attachDashboardListener(
+                        context = this@MainActivity,
+                        settingsRepo = settingsRepository
+                    ) { newName, newFavorites ->
+                        var updated = false
+                        if (!newName.isNullOrBlank() && newName != getTechnicianName()) {
+                            saveTechnicianName(newName)
+                            tvTechName.text = newName
+                            updated = true
+                        }
+                        if (newFavorites != null) {
+                            setupDynamicDrawer()
+                            updated = true
+                        }
+                        if (updated) {
+                            lifecycleScope.launch { performTotalSync(force = true) }
+                        }
+                    }
+
+                    setupExchangeListener(deviceId)
+                }
             }
         }
-
-        // Listener real-time per scambi materiale in arrivo
-        val deviceId = android.provider.Settings.Secure.getString(contentResolver, android.provider.Settings.Secure.ANDROID_ID)
-        setupExchangeListener(deviceId)
     }
     
 
@@ -467,13 +473,16 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         
-        // Svuota la coda offline; il sync periodico è già gestito da performTotalSync()
+        // Svuota la coda offline e processa scambi pendenti dopo autenticazione
         lifecycleScope.launch(Dispatchers.IO) {
+            AuthManager.ensureAuthenticated()
             SyncQueue().flush(this@MainActivity, FirebaseRepository())
+            withContext(Dispatchers.Main) {
+                if (!isFinishing && !isDestroyed) {
+                    processPendingExchanges()
+                }
+            }
         }
-
-        // Check scambi pendenti al resume
-        processPendingExchanges()
         
         // Controlla se le liste sono state aggiornate da MyApplication (Forza Aggiornamento)
         checkForListsUpdate()

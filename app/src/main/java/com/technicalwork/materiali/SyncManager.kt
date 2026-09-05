@@ -39,6 +39,8 @@ class SyncManager(private val context: Context) {
     fun performFullSync(scope: CoroutineScope, passedLat: Double? = null, passedLng: Double? = null, isFullSync: Boolean = true) {
         scope.launch(Dispatchers.IO) {
             Log.d(TAG, "Avvio performFullSync: isFullSync=$isFullSync")
+            // Garantisce l'autenticazione anonima Firebase prima di qualsiasi operazione Firestore
+            AuthManager.ensureAuthenticated()
             val settingsRepo = SettingsRepository(context)
             val configManager = ConfigManager(context)
             val techName = settingsRepo.technicianName ?: run {

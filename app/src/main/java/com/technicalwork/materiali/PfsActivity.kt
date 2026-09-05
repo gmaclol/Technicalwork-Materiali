@@ -148,12 +148,19 @@ class PfsActivity : AppCompatActivity() {
     }
 
     private fun setupDashboardListener() {
-        dashboardListener = FavoriteManager.attachDashboardListener(
-            context = this,
-            settingsRepo = settingsRepository
-        ) { _, newFavorites ->
-            if (newFavorites != null) {
-                runOnUiThread { setupDynamicDrawer() }
+        lifecycleScope.launch(Dispatchers.IO) {
+            AuthManager.ensureAuthenticated()
+            runOnUiThread {
+                if (!isFinishing && !isDestroyed) {
+                    dashboardListener = FavoriteManager.attachDashboardListener(
+                        context = this@PfsActivity,
+                        settingsRepo = settingsRepository
+                    ) { _, newFavorites ->
+                        if (newFavorites != null) {
+                            runOnUiThread { setupDynamicDrawer() }
+                        }
+                    }
+                }
             }
         }
     }
@@ -458,6 +465,7 @@ class PfsActivity : AppCompatActivity() {
             }
 
             try {
+                AuthManager.ensureAuthenticated()
                 cleanupOldEntries("pfs_segnalati", techName)
 
                 Firebase.firestore

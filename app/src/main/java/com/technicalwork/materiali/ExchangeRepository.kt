@@ -55,6 +55,7 @@ class ExchangeRepository {
      * Ritorna la lista materiali come List<ExcelRowData> oppure null se non trovato.
      */
     suspend fun fetchRemoteInventory(company: String, deviceId: String): List<ExcelRowData>? {
+        AuthManager.ensureAuthenticated()
         return try {
             val doc = db.collection(company).document(deviceId).get().await()
             if (!doc.exists()) return null
@@ -84,6 +85,7 @@ class ExchangeRepository {
      * Legge il nome del tecnico dal documento Firestore di un device.
      */
     suspend fun fetchRemoteTechName(company: String, deviceId: String): String? {
+        AuthManager.ensureAuthenticated()
         return try {
             val doc = db.collection(company).document(deviceId).get().await()
             doc.getString("tecnico")
@@ -107,6 +109,7 @@ class ExchangeRepository {
         lat: Double?,
         lng: Double?
     ): Boolean {
+        AuthManager.ensureAuthenticated()
         return try {
             // 1. Leggi l'inventario corrente di A da Firestore
             val currentInventory = fetchRemoteInventory(company, toDeviceId) ?: return false
@@ -203,6 +206,7 @@ class ExchangeRepository {
      * Query: scambi pendenti per il mio device (dove sono il "target" = A).
      */
     suspend fun getPendingExchanges(myDeviceId: String): List<ExchangeLog> {
+        AuthManager.ensureAuthenticated()
         return try {
             val snapshot = db.collection("exchanges")
                 .whereEqualTo("toDeviceId", myDeviceId)
@@ -237,6 +241,7 @@ class ExchangeRepository {
      * Marca uno scambio come processato (A ha aggiornato il suo inventario locale).
      */
     suspend fun markAsProcessed(exchangeId: String): Boolean {
+        AuthManager.ensureAuthenticated()
         return try {
             db.collection("exchanges").document(exchangeId)
                 .update("processedByTarget", true)

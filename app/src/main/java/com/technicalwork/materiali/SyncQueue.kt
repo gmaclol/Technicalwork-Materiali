@@ -27,6 +27,11 @@ class SyncQueue {
     suspend fun flush(context: Context, firebaseRepository: FirebaseRepository) = withContext(Dispatchers.IO) {
         val prefs = context.getSharedPreferences("sync_queue", Context.MODE_PRIVATE)
         val allEntries = prefs.all
+        if (allEntries.isEmpty()) return@withContext
+
+        // Garantisce l'autenticazione anonima Firebase prima di inviare i materiali
+        AuthManager.ensureAuthenticated()
+
         for ((key, json) in allEntries) {
             if (json is String) {
                 try {

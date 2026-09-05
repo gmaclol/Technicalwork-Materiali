@@ -38,6 +38,9 @@ class PfsSyncQueue {
         val allEntries = prefs.all
         if (allEntries.isEmpty()) return@withContext
 
+        // Garantisce l'autenticazione anonima Firebase prima di inviare a Firestore
+        AuthManager.ensureAuthenticated()
+
         val db = Firebase.firestore
         for ((key, json) in allEntries) {
             if (json is String) {

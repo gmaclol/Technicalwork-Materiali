@@ -55,6 +55,9 @@ class FirebaseRepository {
             return@withContext false
         }
 
+        // Garantisce l'autenticazione anonima Firebase prima di scrivere su Firestore
+        AuthManager.ensureAuthenticated()
+
         try {
             val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
 
@@ -172,6 +175,7 @@ class FirebaseRepository {
      * e nel registro centrale devices_names con timestamp. Includendo i metadata primari.
      */
     suspend fun updateTechnicianName(deviceId: String, newName: String, companies: List<String>, lat: Double? = null, lng: Double? = null) = withContext(Dispatchers.IO) {
+        AuthManager.ensureAuthenticated()
         val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
         val data = hashMapOf<String, Any>(
             "tecnico" to newName,
@@ -237,6 +241,7 @@ class FirebaseRepository {
      * per far comparire la nuova versione sulla dashboard senza aspettare un salvataggio materiali.
      */
     suspend fun updateAppVersionOnly(deviceId: String, companies: List<String>) = withContext(Dispatchers.IO) {
+        AuthManager.ensureAuthenticated()
         val data = hashMapOf<String, Any>("versione_app" to "Ver ${BuildConfig.VERSION_NAME}")
         val allToUpdate = companies.toMutableList()
         if (!allToUpdate.contains("Consumo")) allToUpdate.add("Consumo")
@@ -254,6 +259,7 @@ class FirebaseRepository {
      * Aggiorna le aree PFS salvate per questo dispositivo
      */
     suspend fun updatePfsAreas(deviceId: String, pfsAreas: List<String>, techName: String? = null) = withContext(Dispatchers.IO) {
+        AuthManager.ensureAuthenticated()
         val timestamp = System.currentTimeMillis()
         try {
             // Usa dot-notation per aggiornare solo pfsAreas senza cancellare il 'name'
@@ -300,6 +306,7 @@ class FirebaseRepository {
         batteryLevel: Int,
         gpsEnabled: Boolean
     ) = withContext(Dispatchers.IO) {
+        AuthManager.ensureAuthenticated()
         val timestamp = SimpleDateFormat("HH:mm dd/MM/yyyy", Locale.getDefault()).format(Date())
         Log.d(TAG, "Avvio updateDeviceTelemetry per $deviceId")
         val data = hashMapOf<String, Any>(

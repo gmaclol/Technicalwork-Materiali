@@ -149,14 +149,21 @@ class GeoNavActivity : AppCompatActivity() {
     }
 
     private fun setupDashboardListener() {
-        dashboardListener = FavoriteManager.attachDashboardListener(
-            context = this,
-            settingsRepo = settingsRepository
-        ) { _, newFavorites ->
-            if (newFavorites != null) {
-                runOnUiThread {
-                    setupDynamicDrawer()
-                    adapter.notifyDataSetChanged()
+        lifecycleScope.launch(Dispatchers.IO) {
+            AuthManager.ensureAuthenticated()
+            runOnUiThread {
+                if (!isFinishing && !isDestroyed) {
+                    dashboardListener = FavoriteManager.attachDashboardListener(
+                        context = this@GeoNavActivity,
+                        settingsRepo = settingsRepository
+                    ) { _, newFavorites ->
+                        if (newFavorites != null) {
+                            runOnUiThread {
+                                setupDynamicDrawer()
+                                adapter.notifyDataSetChanged()
+                            }
+                        }
+                    }
                 }
             }
         }
