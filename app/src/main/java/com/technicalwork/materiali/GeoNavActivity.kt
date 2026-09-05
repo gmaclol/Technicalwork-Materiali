@@ -67,6 +67,19 @@ class GeoNavActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
+
+        if (!FavoriteManager.isPfsEnabled(this)) {
+            val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+            prefs.edit().putString("last_activity", "MainActivity").apply()
+            val resetIntent = Intent(this, MainActivity::class.java).apply {
+                putExtra("skip_routing", true)
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            }
+            startActivity(resetIntent)
+            finish()
+            return
+        }
+
         setContentView(R.layout.activity_geo_nav)
 
         toolbar = findViewById(R.id.toolbar)
@@ -156,7 +169,19 @@ class GeoNavActivity : AppCompatActivity() {
                     dashboardListener = FavoriteManager.attachDashboardListener(
                         context = this@GeoNavActivity,
                         settingsRepo = settingsRepository
-                    ) { _, newFavorites ->
+                    ) { _, newFavorites, isPfsEnabled ->
+                        if (!isPfsEnabled) {
+                            Toast.makeText(this@GeoNavActivity, "Accesso PFS non abilitato o revocato.", Toast.LENGTH_SHORT).show()
+                            val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+                            prefs.edit().putString("last_activity", "MainActivity").apply()
+                            val resetIntent = Intent(this@GeoNavActivity, MainActivity::class.java).apply {
+                                putExtra("skip_routing", true)
+                                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                            }
+                            startActivity(resetIntent)
+                            finish()
+                            return@attachDashboardListener
+                        }
                         if (newFavorites != null) {
                             runOnUiThread {
                                 setupDynamicDrawer()

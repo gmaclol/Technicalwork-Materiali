@@ -188,11 +188,15 @@ class MainActivity : AppCompatActivity() {
         val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
         val lastActivity = prefs.getString("last_activity", "MainActivity")
         if (lastActivity == "PfsActivity" && !intent.getBooleanExtra("skip_routing", false)) {
-            val routingIntent = Intent(this, PfsActivity::class.java)
-            routingIntent.putExtra("skip_routing", true)
-            startActivity(routingIntent)
-            finish()
-            return
+            if (FavoriteManager.isPfsEnabled(this)) {
+                val routingIntent = Intent(this, PfsActivity::class.java)
+                routingIntent.putExtra("skip_routing", true)
+                startActivity(routingIntent)
+                finish()
+                return
+            } else {
+                prefs.edit { putString("last_activity", "MainActivity") }
+            }
         }
 
         setContentView(R.layout.activity_main)
@@ -441,7 +445,7 @@ class MainActivity : AppCompatActivity() {
                     favoritesListenerRegistration = FavoriteManager.attachDashboardListener(
                         context = this@MainActivity,
                         settingsRepo = settingsRepository
-                    ) { newName, newFavorites ->
+                    ) { newName, newFavorites, isPfsEnabled ->
                         var updated = false
                         if (!newName.isNullOrBlank() && newName != getTechnicianName()) {
                             saveTechnicianName(newName)
@@ -449,9 +453,9 @@ class MainActivity : AppCompatActivity() {
                             updated = true
                         }
                         if (newFavorites != null) {
-                            setupDynamicDrawer()
                             updated = true
                         }
+                        setupDynamicDrawer()
                         if (updated) {
                             lifecycleScope.launch { performTotalSync(force = true) }
                         }
@@ -1804,6 +1808,10 @@ class MainActivity : AppCompatActivity() {
                 drawerLayout.closeDrawer(GravityCompat.START)
             },
             onPfsLogoClick = {
+                if (!FavoriteManager.isPfsEnabled(this)) {
+                    Toast.makeText(this, "Sezione PFS non abilitata per questo dispositivo.", Toast.LENGTH_SHORT).show()
+                    return@bindDrawer
+                }
                 val p = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
                 p.edit { putString("last_activity", "PfsActivity") }
                 val forwardIntent = Intent(this, PfsActivity::class.java)

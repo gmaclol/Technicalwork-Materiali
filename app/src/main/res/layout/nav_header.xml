@@ -33,6 +33,7 @@
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:src="@drawable/pfs"
+            android:visibility="gone"
             android:contentDescription="PFS Logo"
             android:scaleType="centerInside"
             android:background="?attr/selectableItemBackgroundBorderless"

@@ -57,6 +57,19 @@ class PfsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
+
+        if (!FavoriteManager.isPfsEnabled(this)) {
+            val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+            prefs.edit { putString("last_activity", "MainActivity") }
+            val intent = Intent(this, MainActivity::class.java).apply {
+                putExtra("skip_routing", true)
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            }
+            startActivity(intent)
+            finish()
+            return
+        }
+
         setContentView(R.layout.activity_pfs)
 
         WindowCompat.setDecorFitsSystemWindows(window, false)
@@ -155,7 +168,19 @@ class PfsActivity : AppCompatActivity() {
                     dashboardListener = FavoriteManager.attachDashboardListener(
                         context = this@PfsActivity,
                         settingsRepo = settingsRepository
-                    ) { _, newFavorites ->
+                    ) { _, newFavorites, isPfsEnabled ->
+                        if (!isPfsEnabled) {
+                            Toast.makeText(this@PfsActivity, "Accesso PFS non abilitato o revocato.", Toast.LENGTH_SHORT).show()
+                            val prefs = getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+                            prefs.edit { putString("last_activity", "MainActivity") }
+                            val intent = Intent(this@PfsActivity, MainActivity::class.java).apply {
+                                putExtra("skip_routing", true)
+                                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+                            }
+                            startActivity(intent)
+                            finish()
+                            return@attachDashboardListener
+                        }
                         if (newFavorites != null) {
                             runOnUiThread { setupDynamicDrawer() }
                         }

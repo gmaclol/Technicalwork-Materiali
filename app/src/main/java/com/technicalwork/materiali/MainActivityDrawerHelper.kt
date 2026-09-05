@@ -28,12 +28,17 @@ object MainActivityDrawerHelper {
         val appLogo = headerView.findViewById<ImageView>(R.id.app_logo)
         val pfsLogo = headerView.findViewById<ImageView>(R.id.pfs_logo)
         
+        val isPfsEnabled = FavoriteManager.isPfsEnabled(activity)
+        pfsLogo?.visibility = if (isPfsEnabled) View.VISIBLE else View.GONE
+
         appLogo?.setOnClickListener {
             onLogoClick()
         }
         
         pfsLogo?.setOnClickListener {
-            onPfsLogoClick()
+            if (FavoriteManager.isPfsEnabled(activity)) {
+                onPfsLogoClick()
+            }
         }
 
         // 2. Setup Bottoni Aziendali Dinamici

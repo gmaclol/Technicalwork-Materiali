@@ -66,28 +66,41 @@ object FavoriteManager {
         editor.apply()
     }
 
+    // ── Abilitazione PFS da Dashboard ──────────────────────────────────────
+
+    /** Restituisce true se l'accesso alla sezione PFS è abilitato dall'amministratore (default: false). */
+    fun isPfsEnabled(context: Context): Boolean {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getBoolean("is_pfs_enabled", false)
+    }
+
+    /** Salva localmente lo stato di abilitazione PFS. */
+    fun setPfsEnabled(context: Context, enabled: Boolean) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putBoolean("is_pfs_enabled", enabled).apply()
+    }
+
     // ── Firebase: sincronizzazione remota ─────────────────────────────────
 
     /**
      * Registra un SnapshotListener su settings/devices_names.
-     * Quando il timestamp remoto è più recente di quello locale:
-     *  - aggiorna il nome tecnico (se cambiato)
-     *  - aggiorna i preferiti PFS
-     * e invoca [onUpdate] con (nuovoNome, nuoviPreferiti) per permettere
-     * all'Activity di aggiornare la UI.
+     * Quando arrivano aggiornamenti remoti:
+     *  - aggiorna lo stato di abilitazione PFS (pfs_enabled, default false)
+     *  - aggiorna il killswitch ban
+     *  - aggiorna il nome tecnico e le aree preferite PFS (se timestamp più recente)
+     * e invoca [onUpdate] con (nuovoNome?, nuoviPreferiti?, isPfsEnabled) per aggiornare la UI.
      *
      * Ricordati di chiamare .remove() sul [ListenerRegistration] restituito
      * in onDestroy() dell'Activity.
      *
      * @param context   Context dell'Activity (per prefs e contentResolver)
      * @param settingsRepo  SettingsRepository per leggere/scrivere lastNameUpdateTimestamp
-     * @param onUpdate  Callback eseguita sul Main thread con (nuovoNome?, nuoviPreferiti?)
-     *                  – null significa "nessun cambiamento per quel campo"
+     * @param onUpdate  Callback eseguita sul Main thread con (nuovoNome?, nuoviPreferiti?, isPfsEnabled)
      */
     fun attachDashboardListener(
         context: Context,
         settingsRepo: SettingsRepository,
-        onUpdate: (newName: String?, newFavorites: List<String>?) -> Unit
+        onUpdate: (newName: String?, newFavorites: List<String>?, isPfsEnabled: Boolean) -> Unit
     ): ListenerRegistration {
         val deviceId = Settings.Secure.getString(
             context.contentResolver,
@@ -102,10 +115,12 @@ object FavoriteManager {
 
                 val raw = snapshot.get(deviceId) ?: return@addSnapshotListener
                 val localTimestamp = settingsRepo.lastNameUpdateTimestamp
+                val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
                 var remoteName: String? = null
                 var remoteTimestamp = 0L
                 var remotePfsAreas: List<String>? = null
+                var newPfsEnabled = prefs.getBoolean("is_pfs_enabled", false)
 
                 when (raw) {
                     is String -> {
@@ -120,7 +135,6 @@ object FavoriteManager {
                         
                         // Check per Killswitch
                         val isBanned = raw["banned"] as? Boolean ?: false
-                        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
                         prefs.edit().putBoolean("is_banned", isBanned).apply()
                         
                         if (isBanned) {
@@ -130,7 +144,17 @@ object FavoriteManager {
                             context.startActivity(intent)
                             return@addSnapshotListener
                         }
+
+                        // Check abilitazione PFS da Dashboard (default false se assente)
+                        newPfsEnabled = (raw["pfs_enabled"] as? Boolean)
+                            ?: (raw["pfsEnabled"] as? Boolean)
+                            ?: false
                     }
+                }
+
+                val prevPfsEnabled = prefs.getBoolean("is_pfs_enabled", false)
+                if (newPfsEnabled != prevPfsEnabled) {
+                    prefs.edit().putBoolean("is_pfs_enabled", newPfsEnabled).apply()
                 }
 
                 if (remoteTimestamp > localTimestamp) {
@@ -139,7 +163,10 @@ object FavoriteManager {
                         replaceFavorites(context, remotePfsAreas)
                     }
                     settingsRepo.lastNameUpdateTimestamp = remoteTimestamp
-                    onUpdate(remoteName, remotePfsAreas)
+                    onUpdate(remoteName, remotePfsAreas, newPfsEnabled)
+                } else {
+                    // Notifica comunque lo stato PFS attuale alla UI
+                    onUpdate(null, null, newPfsEnabled)
                 }
             }
     }
