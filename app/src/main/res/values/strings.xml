@@ -103,4 +103,11 @@
     <string name="exchange_pending_applied">Scambio ricevuto da %s applicato</string>
     <string name="exchange_no_file">Nessun file aperto. Apri un appalto prima.</string>
 
+    <!-- Condivisione Multipla Liste -->
+    <string name="btn_yes">Sì</string>
+    <string name="dialog_title_share_all">Condividi liste</string>
+    <string name="dialog_msg_share_all">Vuoi condividere tutte le liste modem?</string>
+    <string name="toast_no_compiled_lists">Nessuna lista compilata da condividere</string>
+    <string name="intent_chooser_send_multiple">Invia liste compilate</string>
+
 </resources>

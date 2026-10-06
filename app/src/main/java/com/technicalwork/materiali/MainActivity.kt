@@ -3,6 +3,7 @@ package com.technicalwork.materiali
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DownloadManager
+import android.content.ClipData
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -781,30 +782,240 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleCompanyClick(company: String) {
-        lastSelectedCompany = company
-        val uri = getCompanyFileUri(company)
-        if (uri != null && fileStorageManager.isUriAccessible(uri)) {
-            saveLastFileUri(uri)
-            openExcelFile(uri)
-            drawerLayout.closeDrawer(GravityCompat.START)
+    private fun showShareAllConfirmationDialog() {
+        MainActivityDialogs.showShareAllConfirmationDialog(
+            activity = this,
+            onConfirm = { handleShareAll() }
+        )
+    }
+
+    private fun handleShareAll() {
+        val uri = currentFileUri
+        if (uri != null) {
+            saveExcelFile(silent = true) {
+                executeShareAll()
+            }
         } else {
-            showChoiceDialog(company)
+            executeShareAll()
+        }
+    }
+
+    private fun executeShareAll() {
+        progressBar.visibility = View.VISIBLE
+        val includeTechName = cbIncludeTechName.isChecked
+        val includeDate = cbIncludeDate.isChecked
+        val techName = getTechnicianName()
+        val sdf = SimpleDateFormat("dd-MM-yyyy", Locale.ITALY)
+        val currentDateStr = sdf.format(Date())
+
+        val currentOpenCompany = if (!isConsumoMode) lastSelectedCompany else null
+        val currentOpenData = if (currentOpenCompany != null) {
+            adapter.getData().map { ExcelRowData(it.label, it.value) }
+        } else null
+
+        lifecycleScope.launch {
+            try {
+                val compiledFiles = withContext(Dispatchers.IO) {
+                    val companies = configManager.getCompanies()
+                    val excelRepo = ExcelRepository(this@MainActivity)
+                    val filesList = mutableListOf<Pair<File, String>>()
+
+                    for (company in companies) {
+                        try {
+                            val uri = getCompanyFileUri(company) ?: continue
+                            if (!fileStorageManager.isUriAccessible(uri)) continue
+
+                            // 1. Lettura dati (memoria se correntemente aperto, altrimenti lettura da disco)
+                            val isCurrent = (company == currentOpenCompany && currentOpenData != null)
+                            val rows: List<ExcelRowData> = if (isCurrent) {
+                                currentOpenData!!
+                            } else {
+                                val readRes = excelRepo.readExcelFile(uri, company)
+                                readRes.getOrNull() ?: continue
+                            }
+
+                            // 2. Check intelligente: verifica se la lista contiene materiali compilati
+                            if (!isListCompiled(rows)) {
+                                continue
+                            }
+
+                            // 3. Determina nome file finale
+                            var finalName = company
+                            if (includeTechName && !techName.isNullOrBlank()) {
+                                finalName += " $techName"
+                            }
+                            if (includeDate) {
+                                finalName += " $currentDateStr"
+                            }
+                            val finalFullName = "$finalName.xlsx"
+
+                            // 4. Prepara coppie per ExcelWriter
+                            val pairs: List<Pair<String, String>> = if (isCurrent) {
+                                val techPairs = rows.map { Pair(it.label, it.value) }
+                                val masterList = AssetsHelper().loadMasterList(this@MainActivity, company)
+                                MaterialMerger().merge(techPairs, masterList)
+                            } else {
+                                rows.map { Pair(it.label, it.value) }
+                            }
+
+                            // 5. Scrive il nuovo file Excel basato sul template Sample.xlsx
+                            val generatedFile = ExcelWriter().writeOutput(this@MainActivity, pairs)
+                            val finalFile = File(cacheDir, finalFullName)
+                            if (generatedFile.exists()) {
+                                if (finalFile.exists()) finalFile.delete()
+                                generatedFile.renameTo(finalFile)
+                            }
+
+                            if (finalFile.exists()) {
+                                filesList.add(Pair(finalFile, finalFullName))
+                            }
+                        } catch (e: Exception) {
+                            Log.e("TW_MainActivity", "Errore elaborazione lista per $company: ${e.message}", e)
+                        }
+                    }
+                    filesList
+                }
+
+                progressBar.visibility = View.GONE
+
+                if (compiledFiles.isEmpty()) {
+                    Toast.makeText(this@MainActivity, getString(R.string.toast_no_compiled_lists), Toast.LENGTH_SHORT).show()
+                    return@launch
+                }
+
+                val contentUris = ArrayList<Uri>()
+                for ((file, _) in compiledFiles) {
+                    val contentUri = FileProvider.getUriForFile(
+                        this@MainActivity,
+                        "${applicationContext.packageName}.fileprovider",
+                        file
+                    )
+                    contentUris.add(contentUri)
+                }
+
+                val shareIntent = if (contentUris.size == 1) {
+                    Intent(Intent.ACTION_SEND).apply {
+                        type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        putExtra(Intent.EXTRA_STREAM, contentUris.first())
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                } else {
+                    Intent(Intent.ACTION_SEND_MULTIPLE).apply {
+                        type = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        putParcelableArrayListExtra(Intent.EXTRA_STREAM, contentUris)
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                }
+
+                val clipData = ClipData.newUri(contentResolver, "Excel Files", contentUris.first())
+                for (i in 1 until contentUris.size) {
+                    clipData.addItem(ClipData.Item(contentUris[i]))
+                }
+                shareIntent.clipData = clipData
+
+                val chooserTitle = if (contentUris.size == 1) {
+                    getString(R.string.intent_chooser_send, compiledFiles.first().second)
+                } else {
+                    getString(R.string.intent_chooser_send_multiple)
+                }
+
+                Toast.makeText(this@MainActivity, getString(R.string.toast_file_ready_share), Toast.LENGTH_SHORT).show()
+                startActivity(Intent.createChooser(shareIntent, chooserTitle))
+                SyncWorker.enqueue(this@MainActivity)
+
+            } catch (e: Exception) {
+                progressBar.visibility = View.GONE
+                Log.e("TW_MainActivity", "Errore durante la condivisione cumulativa: ${e.message}", e)
+                Toast.makeText(this@MainActivity, getString(R.string.toast_share_error), Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+    private fun isListCompiled(rows: List<ExcelRowData>): Boolean {
+        val separatorRegex = Regex("^::.*::$")
+        val separatorExtraRegex = Regex("^;;.*;;$")
+        val stockParser = StockParser()
+
+        return rows.any { row ->
+            val trimmedLabel = row.label.trim()
+            if (trimmedLabel.matches(separatorRegex) || trimmedLabel.matches(separatorExtraRegex)) {
+                false
+            } else {
+                val trimmedVal = row.value.trim()
+                if (trimmedVal.isEmpty() || trimmedVal == "0") {
+                    false
+                } else {
+                    val stock = stockParser.parse(trimmedLabel, trimmedVal)
+                    if (stockParser.hasUsedPart(trimmedVal)) {
+                        stock.free > 0 || stock.used > 0
+                    } else {
+                        val num = trimmedVal.replace(',', '.').toDoubleOrNull()
+                        if (num != null) num > 0.0 else (trimmedVal.isNotEmpty() && trimmedVal != "0")
+                    }
+                }
+            }
+        }
+    }
+
+    private fun handleCompanyClick(company: String) {
+        if (company == lastSelectedCompany && !isConsumoMode) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+            return
+        }
+
+        val previousUri = currentFileUri
+        val hasChanges = viewModel.hasUnsavedChanges.value
+
+        fun proceedOpen() {
+            lastSelectedCompany = company
+            val uri = getCompanyFileUri(company)
+            if (uri != null && fileStorageManager.isUriAccessible(uri)) {
+                saveLastFileUri(uri)
+                openExcelFile(uri)
+                drawerLayout.closeDrawer(GravityCompat.START)
+            } else {
+                showChoiceDialog(company)
+            }
+        }
+
+        if (hasChanges && previousUri != null) {
+            saveExcelFile(silent = true) {
+                proceedOpen()
+            }
+        } else {
+            proceedOpen()
         }
     }
 
     private fun handleConsumoClick() {
-        val uriString = settingsRepository.consumoFileUri
-        if (uriString != null) {
-            val uri = uriString.toUri()
-            if (fileStorageManager.isUriAccessible(uri)) {
-                openConsumoFile(uri)
-                drawerLayout.closeDrawer(GravityCompat.START)
-                return
-            }
+        if (isConsumoMode) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+            return
         }
-        
-        showConsumoChoiceDialog()
+
+        val previousUri = currentFileUri
+        val hasChanges = viewModel.hasUnsavedChanges.value
+
+        fun proceedOpenConsumo() {
+            val uriString = settingsRepository.consumoFileUri
+            if (uriString != null) {
+                val uri = uriString.toUri()
+                if (fileStorageManager.isUriAccessible(uri)) {
+                    openConsumoFile(uri)
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    return
+                }
+            }
+            showConsumoChoiceDialog()
+        }
+
+        if (hasChanges && previousUri != null) {
+            saveExcelFile(silent = true) {
+                proceedOpenConsumo()
+            }
+        } else {
+            proceedOpenConsumo()
+        }
     }
 
     private fun showConsumoChoiceDialog() {
@@ -1062,6 +1273,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: android.view.Menu?): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
+
+        val shareItem = menu?.findItem(R.id.action_share)
+        val shareView = shareItem?.actionView ?: LayoutInflater.from(this).inflate(R.layout.menu_share_button, recyclerView, false).also {
+            shareItem?.actionView = it
+        }
+        shareView.setOnClickListener { handleShare() }
+        shareView.setOnLongClickListener {
+            showShareAllConfirmationDialog()
+            true
+        }
+
         saveMenuItem = menu?.findItem(R.id.action_save)
         saveMenuItem?.actionView?.setOnClickListener { saveMenuItem?.let { onOptionsItemSelected(it) } }
         updateSaveButtonLook(viewModel.hasUnsavedChanges.value)

@@ -6,6 +6,7 @@
         android:id="@+id/action_share"
         android:icon="@android:drawable/ic_menu_share"
         android:title="Condividi"
+        app:actionLayout="@layout/menu_share_button"
         app:showAsAction="always" />
 
     <item

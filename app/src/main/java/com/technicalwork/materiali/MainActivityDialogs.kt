@@ -225,4 +225,21 @@ object MainActivityDialogs {
         dialog.setContentView(view)
         dialog.show()
     }
+
+    /**
+     * Dialog di conferma per la condivisione cumulativa di tutte le liste compilate.
+     */
+    fun showShareAllConfirmationDialog(
+        activity: Activity,
+        onConfirm: () -> Unit
+    ) {
+        AlertDialog.Builder(activity)
+            .setTitle(activity.getString(R.string.dialog_title_share_all))
+            .setMessage(activity.getString(R.string.dialog_msg_share_all))
+            .setPositiveButton(activity.getString(R.string.btn_yes)) { _, _ ->
+                onConfirm()
+            }
+            .setNegativeButton(activity.getString(R.string.btn_no), null)
+            .show()
+    }
 }
